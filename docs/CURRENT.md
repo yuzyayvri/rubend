@@ -28,7 +28,15 @@ the hidden tab was closed, and direct inspection found no remaining preview or
 native child. No subagent, Astra, visible window, push, or deployment was used.
 
 Yuzy resumed work after replenishing limits on 2026-10-18. Continue solo from
-the approved roadmap, next with the R03 coordinate-only phase-two pilot. Keep
+the approved roadmap. The R03 coordinate-only phase-two pilot is now rejected.
+Both correct implementations take about fifteen to nineteen percent more CPU
+time than R01 for identical work. A same-source legacy-frame comparison gives
+no useful gain, and an ownership variation does not recover the regression.
+No slower frame code was integrated into main. The source is preserved in a
+local experiment branch and a portable recovery patch alongside all evidence.
+Read [the rejected pilot](verification/R03-SUBGROUP.md). The runtime cause is
+not yet isolated. Do not repeat the same field-deletion premise without a new
+direct test. Next pilot the independent packed-small-table memory layout. Keep
 using the expanded resource policy and frequent verified local commits.
 
 ## Whole-engine execution

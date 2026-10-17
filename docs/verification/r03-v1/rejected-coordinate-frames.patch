@@ -1,0 +1,347 @@
+diff --git a/bench/build-fixed-timer.mjs b/bench/build-fixed-timer.mjs
+index 60373b6..57606ec 100644
+--- a/bench/build-fixed-timer.mjs
++++ b/bench/build-fixed-timer.mjs
+@@ -5,7 +5,9 @@ import {createHash} from "node:crypto";
+ import {spawnSync} from "node:child_process";
+ import {fileURLToPath} from "node:url";
+ 
+-assert.equal(process.argv.length,4,"Expected source-build.json output");
++assert.ok([4,5].includes(process.argv.length),"Expected source-build.json output [RawJoint|RawCoordinates]");
++const selectedProfile=process.argv[4]??"RawJoint";
++assert.ok(["RawJoint","RawCoordinates"].includes(selectedProfile));
+ const hash=bytes=>createHash("sha256").update(bytes).digest("hex");
+ const metadata=JSON.parse(readFileSync(process.argv[2],"utf8")),output=resolve(process.argv[3]),directory=output+"-sources";
+ assert.equal(metadata.format,"rubend-experiment-build-v1");
+@@ -21,9 +23,10 @@ for(const [name,expected] of Object.entries(metadata.sourceHashes)){
+ }
+ const search=readFileSync(resolve(directory,"src/search.bend"),"utf8"),typed=search.includes("type Goal is Data:");
+ assert.equal(search.includes("type Profile is Data:"),typed,"Unsupported partial contract revision");
++assert.ok(selectedProfile==="RawJoint"||(typed&&search.includes("  RawCoordinates{}")),"Requested kernel is absent from frozen source");
+ const templatePath=fileURLToPath(new URL("./fixed-timer.bend.in",import.meta.url)),template=readFileSync(templatePath,"utf8");
+ const replacements={
+-  INITIALIZER_BODY:typed?"P.initialize(table, original, root, P.request_mode(U32.is_eq(request, 2)), S.RawJoint{})":"P.initialize(table, original, root, request)",
++  INITIALIZER_BODY:typed?"P.initialize(table, original, root, P.request_mode(U32.is_eq(request, 2)), S."+selectedProfile+"{})":"P.initialize(table, original, root, request)",
+   COMPLETION_TYPE:typed?"S.Completion":"U32",
+   OPTIMAL_BODY:typed?"S.is_optimal(status)":"U32.is_eq(status, 1)"
+ };
+@@ -37,6 +40,6 @@ for(const name of Object.keys(metadata.sourceHashes))sourceHashes[name]=hash(rea
+ assert.deepEqual(sourceHashes,metadata.sourceHashes,"Frozen sources changed");
+ assert.equal(readFileSync(entry,"utf8"),source);
+ const clang=spawnSync("clang",["--version"],{encoding:"utf8"});assert.equal(clang.status,0);
+-const record={format:"rubend-fixed-timer-build-v1",sourceBuild:metadata,sourceHashes,binarySha256:hash(readFileSync(output)),templateSha256:hash(Buffer.from(template)),entrySha256:hash(Buffer.from(source)),typed,selectedProfile:"Raw joint only, through frozen fixed-work loader",fixedSlices:500,clock:"Native monotonic milliseconds around initialization and fixed portfolio work only. Host separately records process CPU ticks including output.",node:process.version,bend:version.stdout.trim(),clang:clang.stdout.split("\n")[0]};
++const record={format:"rubend-fixed-timer-build-v1",sourceBuild:metadata,sourceHashes,binarySha256:hash(readFileSync(output)),templateSha256:hash(Buffer.from(template)),entrySha256:hash(Buffer.from(source)),typed,selectedProfile,fixedSlices:500,clock:"Native monotonic milliseconds around initialization and fixed portfolio work only. Host separately records process CPU ticks including output.",node:process.version,bend:version.stdout.trim(),clang:clang.stdout.split("\n")[0]};
+ writeFileSync(output+".json",JSON.stringify(record,null,2)+"\n",{flag:"wx"});
+ console.log(JSON.stringify({passed:true,output,binarySha256:record.binarySha256,typed,fixedSlices:500}));
+diff --git a/bench/coordinate-fixed.bend b/bench/coordinate-fixed.bend
+new file mode 100644
+index 0000000..6129e09
+--- /dev/null
++++ b/bench/coordinate-fixed.bend
+@@ -0,0 +1,25 @@
++import Base
++import ./fixed-work.bend as F
++import ../src/search.bend as S
++
++def profile(raw: Bool) -> S.Profile:
++  match raw:
++    case True{}: S.RawCoordinates{}
++    case False{}: S.LightCoordinates{}
++
++def start(args: List<String>) -> IO(Unit):
++  match args:
++    case Con{program, Con{+tier, Con{path, Nil{}}}}:
++      do IO<Unit>:
++        table : Array<U32> <- F.load(String.eq(tier, "raw"))
++        file : File <- IO.try(File, File.open(path, "r"))
++        read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
++        text : String <- F.read_requests(16n, "", read)
++        table : Array<U32> <- F.commands(String.split(text, Chr{10}), table, profile(String.eq(tier, "raw")))
++        IO.pure(Unit, Unit{})
++    case _: IO.die(Unit, 2, "Expected light|raw and request file")
++
++def main() -> IO(Unit):
++  do IO<Unit>:
++    args : List<String> <- IO.args()
++    start(args)
+diff --git a/bench/fixed-work.bend b/bench/fixed-work.bend
+index dbb0b37..f069efe 100644
+--- a/bench/fixed-work.bend
++++ b/bench/fixed-work.bend
+@@ -14,17 +14,29 @@ def cube(value: C.Cubie) -> String:
+   match value:
+     case C.Cubie{a, b, c, d, e}: numbers([a, b, c, d, e])
+ 
+-def frame(value: S.Frame) -> String:
++def replay(moves: +List<U32>, root: C.Cubie) -> C.Cubie:
++  match moves:
++    case Nil{}: root
++    case Con{move, rest}: replay(rest, C.turn(move, root))
++
++def frame(+task_root: C.Cubie, value: S.Frame) -> String:
+   match value:
+     case S.Node{root, a, b, c, left, previous, next, phase, path, length}:
+       "[0," ++ cube(root) ++ "," ++ numbers([a, b, c, left, previous, next, S.goal_code(phase), length]) ++ "," ++ numbers(path) ++ "]"
+     case S.Retry{root, a, b, c, depth, previous, path, length}:
+       "[1," ++ cube(root) ++ "," ++ numbers([a, b, c, depth, previous, length]) ++ "," ++ numbers(path) ++ "]"
++    case S.SubNode{a, b, c, left, previous, next, +path, length}:
++      "[0," ++ cube(replay(List.reverse(&2, U32, path), task_root)) ++ "," ++ numbers([a, b, c, left, previous, next, 1, length]) ++ "," ++ numbers(path) ++ "]"
+ 
+-def frames(xs: +List<S.Frame>) -> +List<String>:
++def frames(+task_root: C.Cubie, xs: +List<S.Frame>) -> +List<String>:
+   match xs:
+     case Nil{}: Nil{}
+-    case Con{x, rest}: frame(x) <> frames(rest)
++    case Con{x, rest}: frame(task_root, x) <> frames(task_root, rest)
++
++def task_frames(meta: S.Meta, stack: +List<S.Frame>) -> +List<String>:
++  match meta:
++    case S.Meta{root, p1, ceiling, best, length, mode, bound, lower, nodes, status, profile}:
++      frames(root, stack)
+ 
+ def meta(value: S.Meta) -> String:
+   match value:
+@@ -34,8 +46,8 @@ def meta(value: S.Meta) -> String:
+ def tasks(xs: +List<P.Task>) -> +List<String>:
+   match xs:
+     case Nil{}: Nil{}
+-    case Con{P.Task{axis, stack, state}, rest}:
+-      ("[" ++ U32.show(axis) ++ "," ++ meta(state) ++ ",[" ++ String.join(frames(stack), ",") ++ "]]") <> tasks(rest)
++    case Con{P.Task{axis, stack, +state}, rest}:
++      ("[" ++ U32.show(axis) ++ "," ++ meta(state) ++ ",[" ++ String.join(task_frames(state, stack), ",") ++ "]]") <> tasks(rest)
+ 
+ def snapshot(+id: String, +original: M.Cube, initial_request: U32, slice: U32, entries: +List<P.Task>, root: C.Cubie, +best: +List<U32>, +length: U32, +lower: U32, +nodes: U32, request: P.Request, +status: S.Completion) -> IO(Unit):
+   do IO<Unit>:
+diff --git a/bench/frame-refinement.mjs b/bench/frame-refinement.mjs
+new file mode 100644
+index 0000000..83dd40b
+--- /dev/null
++++ b/bench/frame-refinement.mjs
+@@ -0,0 +1,42 @@
++import assert from "node:assert/strict";
++import {readFileSync} from "node:fs";
++import {resolve} from "node:path";
++import {fileURLToPath} from "node:url";
++import {createHash} from "node:crypto";
++import Cubie from "../build/cubie.mjs";
++import Coordinates from "../build/coordinates.mjs";
++import {encode,validate} from "../apps/model.mjs";
++import {apply} from "./fixed-work-model.mjs";
++
++const words=c=>[c.cp,c.co,c.ep,c.eh,c.eo];
++const unpack=v=>{assert.ok(Array.isArray(v)&&v.length===5);assert.ok(v.every(n=>Number.isSafeInteger(n)&&n>=0&&n<=4294967295));const [cp,co,ep,eh,eo]=v;return {$:"Cubie",cp,co,ep,eh,eo};};
++export function refineFrame(frame,root){
++  assert.ok(Array.isArray(frame)&&frame.length===4);assert.ok([0,1].includes(frame[0]));
++  const [,actual,fields,path]=frame;assert.ok(Array.isArray(path));assert.ok(Array.isArray(fields));
++  const retry=frame[0]===1;assert.equal(fields.length,retry?6:8);
++  const phase=retry?1:fields[6];assert.ok([0,1,2].includes(phase));
++  assert.equal(path.length,fields[retry?5:7],"Frame path length differs");
++  const expected=validate(apply(encode(Cubie.to_facelets(unpack(root))),[...path].reverse()));
++  assert.deepEqual(actual,words(expected),"Frame abstract cube differs from independent path replay");
++  const kinds=phase===1?["Corners","Edges","Middle"]:["Twist","Flip","Slice"];
++  if(phase===1){assert.equal(expected.co,0,"Subgroup corner orientation");assert.equal(expected.eo,0,"Subgroup edge orientation");assert.equal(Coordinates.encode({$:"Slice"},expected),0,"Subgroup slice membership");}
++  assert.deepEqual(fields.slice(0,3),kinds.map(k=>Coordinates.encode({$:k},expected)),"Frame coordinates differ from independent path replay");
++  return {phase,retry};
++}
++export function checkFrameRefinement(snapshots){
++  const result={snapshots:0,frames:0,subgroupNodes:0,retries:0,otherNodes:0};
++  for(const snapshot of snapshots){
++    assert.equal(snapshot.type,"snapshot");assert.equal(snapshot.state.length,3);result.snapshots++;
++    for(const [axis,meta,frames] of snapshot.state[2]){
++      assert.ok(Number.isInteger(axis)&&axis>=0&&axis<=5);
++      for(const frame of frames){const r=refineFrame(frame,meta[0]);result.frames++;if(r.retry)result.retries++;else if(r.phase===1)result.subgroupNodes++;else result.otherNodes++;}
++    }
++  }
++  assert.ok(result.subgroupNodes>0,"No subgroup frame was checked");
++  return result;
++}
++if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
++  assert.equal(process.argv.length,3,"Expected fixed-work report");const bytes=readFileSync(process.argv[2]),report=JSON.parse(bytes);
++  assert.equal(report.passed,true);assert.equal(report.format,"rubend-fixed-work-v1");
++  console.log(JSON.stringify({passed:true,inputSha256:createHash("sha256").update(bytes).digest("hex"),...checkFrameRefinement(report.snapshots),scope:"Independent facelet replay plus generated Bend coordinate ranking. Abstraction reconstruction is outside timed search."}));
++}
+diff --git a/bench/search-observer.bend b/bench/search-observer.bend
+index 2bd29b5..1272fba 100644
+--- a/bench/search-observer.bend
++++ b/bench/search-observer.bend
+@@ -161,6 +161,7 @@ def inspect(table: Array<U32>, +stack: +List<S.Frame>, meta: S.Meta) -> Array<U3
+     case Nil{} S.Meta{root, p1, ceiling, best, length, S.ExactContour{}, bound, lower, nodes, status, profile}: event(S.FullCube{}, False{}, Contour{}, table)
+     case Nil{} _: event(S.Reduction{}, False{}, Quiet{}, table)
+     case Con{S.Retry{cube, a, b, c, depth, previous, path, length}, rest} _: event(S.Subgroup{}, False{}, Quiet{}, table)
++    case Con{S.SubNode{a, b, c, left, previous, next, path, length}, rest} _: event(S.Subgroup{}, False{}, Unsupported{}, table)
+     case Con{S.Node{+cube, +a, +b, +c, left, previous, next, +phase, path, length}, rest} S.Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}:
+       node_goal((S.is_subgroup(phase) && U32.is_eq(a, 0) && U32.is_eq(b, 0) && U32.is_eq(c, 0)) || (Bool.not(S.is_subgroup(phase)) && S.solved(cube)), table, S.Node{cube, a, b, c, left, previous, next, phase, path, length}, best_len, profile)
+ 
+diff --git a/justfile b/justfile
+index d069733..edef034 100644
+--- a/justfile
++++ b/justfile
+@@ -40,6 +40,7 @@ test: build
+     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
+     node tests/inverse-bound.mjs
+     node tests/contour-compare.mjs
++    node tests/frame-refinement.mjs
+     node tests/startup-measure.mjs
+     node tests/warm-compare.mjs
+ 
+diff --git a/src/search.bend b/src/search.bend
+index ef8f0f7..860a540 100644
+--- a/src/search.bend
++++ b/src/search.bend
+@@ -13,6 +13,8 @@ type Profile is Data:
+   RawInverseOne{}
+   RawInverseThree{}
+   BlockJoint{}
++  LightCoordinates{}
++  RawCoordinates{}
+ 
+ def profile_words(profile: Profile) -> U32:
+   match profile:
+@@ -21,6 +23,8 @@ def profile_words(profile: Profile) -> U32:
+     case RawInverseOne{}: 536870912
+     case RawInverseThree{}: 536870912
+     case BlockJoint{}: 268435456
++    case LightCoordinates{}: 8388608
++    case RawCoordinates{}: 536870912
+ 
+ def profile_matches(profile: Profile, words: U32) -> Bool:
+   U32.is_eq(profile_words(profile), words)
+@@ -123,6 +127,7 @@ type Meta is Data:
+ 
+ type Frame is Data:
+   Node{cube: C.Cubie, a: U32, b: U32, c: U32, left: U32, previous: U32, next: U32, phase: Goal, path: +List<U32>, length: U32}
++  SubNode{a: U32, b: U32, c: U32, left: U32, previous: U32, next: U32, path: +List<U32>, length: U32}
+   Retry{cube: C.Cubie, a: U32, b: U32, c: U32, depth: U32, previous: U32, path: +List<U32>, length: U32}
+ 
+ type Search is Type:
+@@ -263,6 +268,8 @@ def joint_profile(profile: Profile, table: Array<U32>, +parent: Frame, rest: +Li
+     case RawInverseOne{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+     case RawInverseThree{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+     case Light{}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
++    case RawCoordinates{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
++    case LightCoordinates{}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
+ 
+ def joint_meta(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+   match meta:
+@@ -377,10 +384,76 @@ def node_goal(goal: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>,
+     case _ _ meta:
+       Search{table, rest, meta}
+ 
++def sub_push(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta, +move: U32, nx: U32, ny: U32, nz: U32) -> Search:
++  match ok frame:
++    case True{} SubNode{a, b, c, +left, previous, next, +path, +length}:
++      Search{table, SubNode{nx, ny, nz, (left - 1 : U32), (move / 3 : U32), 0, move <> path, (length + 1 : U32)} <> SubNode{a, b, c, left, previous, next, path, length} <> rest, meta}
++    case _ frame: Search{table, frame <> rest, meta}
++
++def sub_hy(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, ny: U32, nz: U32, hx: U32) -> Search:
++  match read frame:
++    case Tuple{table, hy} SubNode{a, b, c, +left, previous, next, path, length}:
++      sub_push(U32.is_lt(maximum(hx, hy), left), table, SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, ny, nz)
++    case Tuple{table, hy} frame: Search{table, frame <> rest, meta}
++
++def sub_hx(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, +ny: U32, +nz: U32) -> Search:
++  match read:
++    case Tuple{table, hx}: sub_hy(table[(3955785 + ny * 24 + nz : U32)], frame, rest, meta, move, nx, ny, nz, hx)
++
++def sub_z(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +nx: U32, ny: U32) -> Search:
++  match read:
++    case Tuple{table, +nz}: sub_hx(table[(2988105 + nx * 24 + nz : U32)], frame, rest, meta, move, nx, ny, nz)
++
++def sub_y(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, +column: U32) -> Search:
++  match read frame:
++    case Tuple{table, ny} SubNode{a, b, +c, left, previous, next, path, length}:
++      sub_z(table[(891540 + c * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, ny)
++    case Tuple{table, ny} frame: Search{table, frame <> rest, meta}
++
++def sub_x(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
++  match read frame:
++    case Tuple{table, nx} SubNode{a, +b, c, left, previous, next, path, length}:
++      sub_y(table[(488340 + b * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, column)
++    case Tuple{table, nx} frame: Search{table, frame <> rest, meta}
++
++def sub_child(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
++  match ok frame:
++    case True{} SubNode{+a, b, c, left, previous, next, path, length}:
++      sub_x(table[(85140 + a * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, column)
++    case _ frame: Search{table, frame <> rest, meta}
++
++def sub_enumerate(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta) -> Search:
++  match ok frame:
++    case True{} SubNode{a, b, c, left, +previous, +next, path, length}:
++      +move = Q.phase2_move(next)
++      +face = (move / 3 : U32)
++      sub_child(root_allowed(previous, face) && U32.is_ne(face, previous) && (U32.is_ne(((face + 3) % 6 : U32), previous) || U32.is_lt(previous, face)), table, SubNode{a, b, c, left, previous, (next + 1 : U32), path, length}, rest, meta, move, next)
++    case _ _: Search{table, rest, meta}
++
++def sub_open(goal: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta) -> Search:
++  match goal frame meta:
++    case True{} SubNode{a, b, c, left, previous, next, +path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, profile}:
++      maybe_record(U32.is_lt(length, best_len), table, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}, path, length)
++    case False{} SubNode{a, b, c, 0, previous, next, path, length} meta: Search{table, rest, meta}
++    case False{} SubNode{a, b, c, left, previous, +next, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, profile}:
++      sub_enumerate(U32.is_lt(next, 10) && U32.is_lt(length, best_len), table, SubNode{a, b, c, left, previous, next, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
++    case _ _ meta: Search{table, rest, meta}
++
++def retry_frame(profile: Profile, cube: C.Cubie, a: U32, b: U32, c: U32, depth: U32, previous: U32, path: +List<U32>, length: U32) -> Frame:
++  match profile:
++    case LightCoordinates{}: SubNode{a, b, c, depth, previous, 0, path, length}
++    case RawCoordinates{}: SubNode{a, b, c, depth, previous, 0, path, length}
++    case _: Node{cube, a, b, c, depth, previous, 0, Subgroup{}, path, length}
++
++def retry_meta(meta: Meta, cube: C.Cubie, a: U32, b: U32, c: U32, depth: U32, previous: U32, path: +List<U32>, length: U32) -> Frame:
++  match meta:
++    case Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}:
++      retry_frame(profile, cube, a, b, c, depth, previous, path, length)
++
+ def retry(ok: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, +meta: Meta) -> Search:
+   match ok frame:
+     case True{} Retry{+cube, +a, +b, +c, +depth, +previous, +path, +length}:
+-      Search{table, Node{cube, a, b, c, depth, previous, 0, Subgroup{}, path, length} <> Retry{cube, a, b, c, (depth + 1 : U32), previous, path, length} <> rest, meta}
++      Search{table, retry_meta(meta, cube, a, b, c, depth, previous, path, length) <> Retry{cube, a, b, c, (depth + 1 : U32), previous, path, length} <> rest, meta}
+     case _ _:
+       Search{table, rest, meta}
+ 
+@@ -401,6 +474,8 @@ def next(table: Array<U32>, stack: +List<Frame>, +meta: Meta) -> Search:
+       next_root((is_exact(mode) && U32.is_ge((bound + 1 : U32), best_len)) || (is_improving(mode) && U32.is_ge(ceiling, 31)), table, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
+     case Con{Node{+cube, +a, +b, +c, left, previous, next, +phase, path, length}, rest} meta:
+       node_goal((is_subgroup(phase) && U32.is_eq(a, 0) && U32.is_eq(b, 0) && U32.is_eq(c, 0)) || (Bool.not(is_subgroup(phase)) && solved(cube)), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta)
++    case Con{SubNode{+a, +b, +c, left, previous, next, path, length}, rest} meta:
++      sub_open(U32.is_eq(a, 0) && U32.is_eq(b, 0) && U32.is_eq(c, 0), table, SubNode{a, b, c, left, previous, next, path, length}, rest, meta)
+     case Con{Retry{cube, a, b, c, +depth, previous, path, +length}, rest} Meta{root, p1, +ceiling, best, +best_len, mode, bound, lower, nodes, status, +profile}:
+       retry(U32.is_le(depth, C.pick(U32.is_eq(best_len, 31) && U32.is_le(ceiling, 24), 12, 18)) && U32.is_le((depth + length : U32), ceiling) && U32.is_lt((depth + length : U32), best_len), table, Retry{cube, a, b, c, depth, previous, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
+ 
+diff --git a/tests/frame-refinement.mjs b/tests/frame-refinement.mjs
+new file mode 100644
+index 0000000..78d3324
+--- /dev/null
++++ b/tests/frame-refinement.mjs
+@@ -0,0 +1,16 @@
++import assert from "node:assert/strict";
++import {refineFrame} from "../bench/frame-refinement.mjs";
++import {apply,solved,validate} from "../apps/model.mjs";
++import Coordinates from "../build/coordinates.mjs";
++
++const words=c=>[c.cp,c.co,c.ep,c.eh,c.eo],root=words(validate(solved));
++const moves=[0,4,9],cube=validate(apply(solved,moves)),coordinates=["Corners","Edges","Middle"].map(k=>Coordinates.encode({$:k},cube));
++const frame=[0,words(cube),[...coordinates,4,3,0,1,3],[...moves].reverse()];
++assert.deepEqual(refineFrame(frame,root),{phase:1,retry:false});
++const retry=[1,words(cube),[...coordinates,4,3,3],[...moves].reverse()];
++assert.deepEqual(refineFrame(retry,root),{phase:1,retry:true});
++let rejected=0;
++for(const change of [f=>f[1][0]^=1,f=>f[2][0]++,f=>f[2][1]++,f=>f[2][2]++,f=>f[2][7]++,f=>f[3][0]=0,f=>f[2][6]=2]){
++  const changed=structuredClone(frame);change(changed);assert.throws(()=>refineFrame(changed,root));rejected++;
++}
++console.log(JSON.stringify({passed:true,subgroupNodeAndRetry:true,rejectedFixtures:rejected}));
+diff --git a/tests/search-profile.bend b/tests/search-profile.bend
+index 923ff5a..1edbeba 100644
+--- a/tests/search-profile.bend
++++ b/tests/search-profile.bend
+@@ -17,6 +17,8 @@ def checks() -> Bool:
+   S.profile_matches(S.Light{}, 8388608) &&
+   S.profile_matches(S.RawJoint{}, 536870912) &&
+   S.profile_matches(S.BlockJoint{}, 268435456) &&
++  S.profile_matches(S.LightCoordinates{}, 8388608) &&
++  S.profile_matches(S.RawCoordinates{}, 536870912) &&
+   Bool.not(S.profile_matches(S.Light{}, 536870912)) &&
+   Bool.not(S.profile_matches(S.RawJoint{}, 268435456)) &&
+   Bool.not(S.profile_matches(S.BlockJoint{}, 536870912)) &&
