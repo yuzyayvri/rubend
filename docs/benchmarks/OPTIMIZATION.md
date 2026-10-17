@@ -71,3 +71,23 @@ WIP. Word-reader fixtures passed 32 cases, including native sanitizers and
 forced partial reads and interruptions. The architecture cross-judge and full
 regression gates remain open. Follow `.audit/rubend-startup.todo.md` and the
 canonical `.audit/rubend-startup.tsv` trail on resume.
+
+## Resumed measurement
+
+The measurement harness is frozen after independent Luna review and 30 fixture
+cases, including 97 worker cleanup checks. A known 100-ms ready delay separates
+the fixture distributions. Measurement errors and failed shutdowns cannot enter
+the successful medians.
+
+Five fresh raw baseline workers reproduced the startup cost. Median ready time
+was 9,212.97 ms, range 9,135.33 to 9,280.56 ms. All five checked solved replays
+passed with zero run or batch errors. Native observed peak RSS was 2,147,348 KiB
+in every run. The complete host SHA256 pass before each worker intentionally
+warms the file cache. Including that validation, median time was 10,156.58 ms.
+This is a reproduction baseline, not a comparison with a tuned alternative.
+
+The bounded batch used one low-priority core, took 53.8 seconds, and peaked at
+2,273,780 KiB aggregate RSS under its 3-GiB ceiling. The profile identifies
+byte-list construction, decoding, and reference-count operations as the main CPU
+work. Instrumented profile times are not included in the five-run median.
+Raw evidence is `docs/verification/optimization-v1/startup-baseline-five.json`.
