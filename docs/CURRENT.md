@@ -15,6 +15,14 @@ R01 grounding and architecture are in progress. Push authority does not include
 PR creation, merges, releases, deployment, or global system changes. Existing
 resource, model, and hidden-window boundaries still apply.
 
+R01a is implemented with solo checks. The pilot/development/release sets contain
+128, 1,000, and 10,000 disjoint frozen states. Coverage-first scoring preserves
+missing answers, exact lower-bound losses, and censored exact times. Six positive
+families and twenty rejecting fixtures pass. Re-scoring existing warm evidence
+reproduces its 180 paired ties. No new solver performance result is claimed.
+See [R01 progress](verification/R01.md). Independent review has not run under
+the user's explicit no-subagents instruction. R01 as a whole remains incomplete.
+
 ## Accepted experimental raw startup
 
 The raw-profile initialization change is accepted after independent review of

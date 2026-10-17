@@ -34,7 +34,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 
 ## Units
 
-- [ ] R01a. Frozen corpus and coverage-first scoring contracts.
+- [x] R01a. Frozen corpus and coverage-first scoring contracts. Six positive families, twenty rejecting fixtures, historical-data reproduction, and sixteen toolchain/proof checks pass. Solo verification only.
 - [ ] R01b. Explicit goal/profile/completion with fixed-work semantic equality.
 - [ ] R01c. Diagnostic attribution, sensitivity/control, and measured overhead.
 - [ ] R02. Exact-bound pilots, independently measured.
