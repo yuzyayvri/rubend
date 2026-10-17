@@ -30,18 +30,33 @@ The numeric protocol is unchanged. Native/generated-JS codec checks and a
 negative numeric-goal type fixture pass. The complete development regression
 suite also passes. This is behavior-preservation evidence, not a speed claim.
 
-The identical-binary noise control passed 1,990 jobs with zero errors. Its median
-rate offsets were about 1.93%, 3.20%, and 2.08% across fast/exact/Superflip groups.
-One of 180 quality pairs differed despite identical binaries. These are noise
-observations, not improvements. Raw data is archived in the roadmap-r01 worktree.
+R01's noise control and typed-contract deadline comparison are complete. Each
+passed 1,990 jobs without error. The typed comparison has all 180 deadline
+quality pairs tied. Rate ranges overlap widely. Exact first-answer p95 on
+fifteen jobs is 25 versus 32 ms, an unresolved small-sample latency observation.
+No speed gain is claimed.
 
-The five-round typed-contract comparison has been launched there with
-docs/verification/r01-v1/typed-config.json, one nice-10 core, six GiB, and a
-900-second cap. Check its resource record before starting any large job. A
-separate observational diagnostic program is WIP in that checkout. It leaves
-release sources untouched, predicts logical cuts/probes, checks actual child
-coordinates, and uses nonwrapping counters. Pure type checks and counter-fixture
-tests pass; its native semantic-trace verification has not run yet.
+A separate equal-work check used five fresh pairs, 1,630 shallow warmups, and
+110 measurements with exactly 500 portfolio slices each. Complete native states
+match. Geometric typed/before CPU-time ratios are 1.0073 fast and 1.0096 exact.
+Five-cohort bootstrap upper limits are 1.0219 and 1.0266, below the 1.05 overhead
+gate on this finite sample. All measured workers are stopped.
+
+The separate diagnostic observer also passes native light/raw semantic-trace
+checks and twelve rejecting counter fixtures. It leaves release sources
+untouched, recomputes logical cuts/probes, checks actual child coordinates, and
+uses nonwrapping counters. Its timing is intentionally not a release metric.
+Read [R01 measurements](verification/R01-MEASUREMENTS.md) and the compressed raw
+records under docs/verification/r01-v1/. The implementation/finite-check portion
+of R01 is complete. Independent review, separate browser coverage, and package
+rollout are not claimed. Next run the R02 exact-bound pilots.
+
+Yuzy extended local CPU/RAM authority after inspection. Read the current
+[resource policy](benchmarks/RESOURCE-POLICY.md). It allows inspected development
+up to four low-priority CPU lanes and a sixteen-GiB per-batch ceiling, subject to
+eight GiB of remaining desktop headroom. The thirty-minute wall cap remains.
+Actual admissible RAM can be much lower. No subagents, visible windows, cloud,
+GPU installation, global system changes, PRs, or merges are authorized.
 
 ## Accepted experimental raw startup
 

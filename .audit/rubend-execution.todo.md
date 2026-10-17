@@ -20,15 +20,15 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [x] Ground.
   - [x] Read live source/state and approved architecture findings.
   - [x] Frame the data shape. Explicit search goal/profile/completion and diagnostic counters, preserving existing traversal and protocol.
-- [ ] Sketch.
+- [x] Sketch.
   - [x] Dispatch independent Sol candidate.
   - [x] Attempt Luna candidate.
   - skip: Host rejected the second dispatch for thread capacity. No further spawns.
-  - [ ] Produce a labeled sequential alternative and compare the sketches.
+  - [x] Produce a labeled sequential alternative and compare the sketches.
   - skip: The user explicitly prohibited all further subagents. Work and review are solo. Do not claim an independent verdict.
 - [ ] Agree.
   - skip: Approved autonomous work needs no design checkpoint for reversible steps.
-- [ ] Implement.
+- [x] Implement R01's scoped foundation.
 - [ ] Scrap.
   - skip: Conditional. Reopen architecture if repeated structural deviations appear.
 
@@ -36,7 +36,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 
 - [x] R01a. Frozen corpus and coverage-first scoring contracts. Six positive families, twenty rejecting fixtures, historical-data reproduction, and sixteen toolchain/proof checks pass. Solo verification only.
 - [x] R01b implementation. Explicit goal/profile/completion and fixed-work semantic equality pass. Timed overhead and independent-review gates are not closed.
-- [ ] R01c. Diagnostic attribution, sensitivity/control, and measured overhead.
+- [x] R01c implementation/checks. Observer traces match; counter negatives pass; five-cohort deadline quality ties and equal-work overhead check complete. Independent review/browser/package gates remain unrun.
 - [ ] R02. Exact-bound pilots, independently measured.
 - [ ] R03. Kernel and memory pilots, independently measured.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
