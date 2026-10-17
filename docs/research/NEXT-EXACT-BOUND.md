@@ -1,5 +1,9 @@
 # Next exact-bound candidate
 
+Current update. The all-eighteen-move full byte table is now built and audited.
+Search integration remains pending. Read [the result](../verification/R02-CORNER.md).
+The proposal below is retained as the original decision record.
+
 Status is a research proposal only. No new table, heuristic, or law is
 implemented or accepted by this note. The warm results show matching quality
 and overlapping rate ranges. Hard exact cases remain unfinished, so more

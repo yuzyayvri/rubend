@@ -38,6 +38,9 @@ test: build
     node tests/small-profile-generator.mjs
     bend bench/small-table-audit.bend -o build/small-table-audit
     build/small-table-audit --threads 1
+    bend bench/corner-pilot.bend -o build/corner-pilot-test
+    bend tests/corner-table.bend -o build/corner-table-test
+    node tests/corner-pilot.mjs build/corner-pilot-test build/corner-table-test
     bend tests/inverse-bound.bend -o build/inverse-bound-test
     build/inverse-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
