@@ -28,7 +28,7 @@ def frames(xs: +List<S.Frame>) -> +List<String>:
 
 def meta(value: S.Meta) -> String:
   match value:
-    case S.Meta{root, p1, ceiling, best, length, mode, bound, lower, nodes, status}:
+    case S.Meta{root, p1, ceiling, best, length, mode, bound, lower, nodes, status, +profile}:
       "[" ++ cube(root) ++ "," ++ numbers([p1, ceiling, length, mode, bound, lower, nodes, status]) ++ "," ++ numbers(best) ++ "]"
 
 def tasks(xs: +List<P.Task>) -> +List<String>:
@@ -53,19 +53,19 @@ def snapshots(fuel: Nat, +id: String, +original: M.Cube, +initial_request: U32, 
         snapshot(id, original, initial_request, slice, entries, root, best, length, lower, nodes, request, status)
         snapshots(p, id, original, initial_request, (slice + 1 : U32), P.advance(P.Session{table, entries, root, best, length, lower, nodes, request, status}))
 
-def solve(valid: C.Validation, +original: M.Cube, id: String, +request: U32, slices: U32, table: Array<U32>) -> IO(Array<U32>):
+def solve(valid: C.Validation, +original: M.Cube, id: String, +request: U32, slices: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match valid:
-    case C.Valid{root}: snapshots(U32.to_nat(slices), id, original, request, 0, P.initialize(table, original, root, request))
+    case C.Valid{root}: snapshots(U32.to_nat(slices), id, original, request, 0, P.initialize(table, original, root, request, profile))
     case _: IO.die(Array<U32>, 2, "Invalid fixed-work cube")
 
-def parsed(value: Maybe<&2, M.Cube>, id: String, request: Maybe<&2, U32>, slices: Maybe<&2, U32>, table: Array<U32>) -> IO(Array<U32>):
+def parsed(value: Maybe<&2, M.Cube>, id: String, request: Maybe<&2, U32>, slices: Maybe<&2, U32>, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match value request slices:
-    case Some{+original} Some{request} Some{slices}: solve(C.validate(original), original, id, request, slices, table)
+    case Some{+original} Some{request} Some{slices}: solve(C.validate(original), original, id, request, slices, table, profile)
     case _ _ _: IO.die(Array<U32>, 2, "Invalid fixed-work request")
 
-def command(args: +List<String>, table: Array<U32>) -> IO(Array<U32>):
+def command(args: +List<String>, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match args:
-    case Con{id, Con{text, Con{request, Con{slices, Nil{}}}}}: parsed(M.from_list(H.colors(text)), id, U32.read(request), U32.read(slices), table)
+    case Con{id, Con{text, Con{request, Con{slices, Nil{}}}}}: parsed(M.from_list(H.colors(text)), id, U32.read(request), U32.read(slices), table, profile)
     case _: IO.die(Array<U32>, 2, "Expected id, facelets, request, slices")
 
 def read_requests(fuel: Nat, acc: String, read: File & Result<&1, &1, U32 & String, String>) -> IO(String):
@@ -83,14 +83,14 @@ def read_requests(fuel: Nat, acc: String, read: File & Result<&1, &1, U32 & Stri
         File.close(file)
         IO.die(String, 2, "Fixed-work request file read failed or exceeded 64 KiB")
 
-def commands(lines: +List<String>, table: Array<U32>) -> IO(Array<U32>):
+def commands(lines: +List<String>, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match lines:
     case Nil{}: IO.pure(Array<U32>, table)
-    case Con{SNil{}, rest}: commands(rest, table)
+    case Con{SNil{}, rest}: commands(rest, table, profile)
     case Con{line, rest}:
       do IO<Array<U32>>:
-        table : Array<U32> <- command(String.split(line, Chr{9}), table)
-        commands(rest, table)
+        table : Array<U32> <- command(String.split(line, Chr{9}), table, profile)
+        commands(rest, table, profile)
 
 def load(raw: Bool) -> IO(Array<U32>):
   match raw:
@@ -99,13 +99,13 @@ def load(raw: Bool) -> IO(Array<U32>):
 
 def start(args: List<String>) -> IO(Unit):
   match args:
-    case Con{program, Con{tier, Con{path, Nil{}}}}:
+    case Con{program, Con{+tier, Con{path, Nil{}}}}:
       do IO<Unit>:
         table : Array<U32> <- load(String.eq(tier, "raw"))
         file : File <- IO.try(File, File.open(path, "r"))
         read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
         text : String <- read_requests(16n, "", read)
-        table : Array<U32> <- commands(String.split(text, Chr{10}), table)
+        table : Array<U32> <- commands(String.split(text, Chr{10}), table, S.raw_profile(String.eq(tier, "raw")))
         IO.pure(Unit, Unit{})
     case _: IO.die(Unit, 2, "Expected light|raw and request file")
 
