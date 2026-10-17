@@ -79,3 +79,25 @@ cd .cache/nissy-reference
 
 Do not run `gendata` or `solve` there without checking their resource behavior:
 the reference CLI can automatically generate missing solver data.
+
+## Optional packed small tier
+
+The packed small backend keeps the small solver's bounds and move order. Its
+native process uses about fifteen MiB instead of forty-three in the five-pair
+check. Its table allocation is four MiB instead of thirty-two. Startup takes
+about ninety-two milliseconds longer at the median. The sixty deadline-quality
+pairs tie. This is an experimental memory option, not a stronger solver or a
+default change. Read [the evidence](../verification/R03-SMALL.md).
+
+Build and run it locally without opening a window:
+
+```sh
+nix develop --command just build
+nix develop --command node bench/build-experiment.mjs src/small/main.bend build/rubend-small
+RUBEND_BINARY="$PWD/build/rubend-small" nix develop --command node apps/server.mjs
+```
+
+It generates its own packed table. It needs no joint-table cache. Stop the
+server normally when finished. Current development resource authority is in
+[the resource policy](RESOURCE-POLICY.md), which supersedes the older envelope
+recorded above. Browser/package rollout and independent review remain separate.

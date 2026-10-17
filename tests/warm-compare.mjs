@@ -33,6 +33,12 @@ async function run(mode="ok",mutatePath=null,measure=compareWarm,sourcePath=null
 }
 try{
   const ok=await run();assert.equal(ok.passed,true,JSON.stringify(ok.errors));assert.equal(ok.counts.successfulJobs,40);assert.equal(ok.rounds.length,5);
+  const generated=structuredClone(base);
+  for(const p of generated.profiles){p.tableSource="generated";delete p.cache;delete p.cacheBytes;delete p.cacheSha256;p.env={};}
+  const generatedResult=await compareWarm(generated);assert.equal(generatedResult.passed,true,JSON.stringify(generatedResult.errors));assert.equal(generatedResult.counts.successfulJobs,40);
+  for(const change of [c=>c.profiles[0].cache=cache,c=>c.profiles[0].env.RUBEND_JOINT_CACHE=cache,c=>c.profiles[0]=structuredClone(base.profiles[0])]){
+    const bad=structuredClone(generated);change(bad);const r=await compareWarm(bad);assert.equal(r.passed,false);assert.equal(r.counts.workers,0);
+  }
   const sf=ok.rounds[0].jobs.find(j=>j.group==="superflip");assert.equal(apply(sf.facelets,sf.terminalBest.moves),solved);
   const late=await run("late");assert.equal(late.passed,true);assert.equal(late.summary.fast.paired.noAnswer,5);assert.equal(late.summary.fast.profiles.candidate.meanDeadlineLength,null);assert.equal(late.summary.fast.profiles.candidate.meanTerminalLength,0);
   for(const mode of ["wrong","unknown","missing","falseoptimal","fallback","fallback-forced","native-time-limit","exit","forced"]){const bad=await run(mode);assert.equal(bad.passed,false,mode);assert.ok(bad.counts.failedJobs>0||bad.rounds.some(r=>r.status==="error"),mode);}
