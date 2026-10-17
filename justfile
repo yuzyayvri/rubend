@@ -24,6 +24,9 @@ test: build
     node tests/engine.mjs
     node tests/http.mjs
     node tests/export.mjs
+    node bench/corpus.mjs --check
+    node tests/corpus.mjs
+    node tests/scorecard.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
 
