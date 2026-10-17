@@ -1,0 +1,26 @@
+{
+  "sourceHashes": {
+    "src/search.bend": "83c49119bae1eb53dd324327ce4ebd7b2ec58fa2a09897cc9347719e4eeae450",
+    "src/portfolio.bend": "3f2dbeffd6fbb40bab43a2acbc3f6e45a03ade914427301cbdf5e6b607612b6b"
+  },
+  "fields": [
+    "workSteps",
+    "reductionSteps",
+    "subgroupSteps",
+    "exactSteps",
+    "expanded",
+    "considered",
+    "canonicalRejected",
+    "legalAttempts",
+    "admitted",
+    "pairCuts",
+    "jointFirstCuts",
+    "jointSecondCuts",
+    "jointThirdCuts",
+    "phaseTwoLaunches",
+    "completedExactContours",
+    "logicalTransitionReads",
+    "logicalPairReads",
+    "logicalJointEstimates"
+  ]
+}

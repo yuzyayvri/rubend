@@ -1,0 +1,23 @@
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+import {spawnSync} from "node:child_process";
+import {performance} from "node:perf_hooks";
+import {parseCpu} from "../bench/fixed-time-compare.mjs";
+
+const fields=Array(20).fill("0");fields[0]="R";fields[11]="17";fields[12]="3";fields[19]="200";
+const text="1234 (name with ) parentheses) "+fields.join(" ");
+assert.deepEqual(parseCpu(text,1234),{pid:1234,startTicks:"200",ticks:20});
+assert.throws(()=>parseCpu(text,1235));
+assert.throws(()=>parseCpu("1234 (x) R",1234));
+const bad=[...fields];bad[11]="-1";
+assert.throws(()=>parseCpu("1234 (x) "+bad.join(" "),1234));
+const hz=Number(spawnSync("getconf",["CLK_TCK"],{encoding:"utf8"}).stdout.trim());
+assert.ok(Number.isInteger(hz)&&hz>0);
+const own=()=>parseCpu(readFileSync("/proc/"+process.pid+"/stat","utf8"),process.pid);
+const started=process.cpuUsage(),before=own(),until=performance.now()+150;
+let value=1;while(performance.now()<until)value=(Math.imul(value,1664525)+1013904223)>>>0;
+assert.ok(Number.isInteger(value));
+const after=own(),used=process.cpuUsage(started),procMicros=(after.ticks-before.ticks)*1000000/hz;
+assert.equal(after.startTicks,before.startTicks);assert.ok(after.ticks>before.ticks);
+assert.ok(Math.abs(procMicros-used.user-used.system)<=2000000/hz+5000,"Process CPU ticks disagree with independent Node CPU usage");
+console.log(JSON.stringify({passed:true,hz,procMicros,nodeCpuMicros:used.user+used.system,fieldParsing:true,identityChecked:true}));
