@@ -1,0 +1,30 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "layout-compare-v1",
+  "startedAt": "2026-10-17T02:41:29.032Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+    "bench/layout-compare.mjs"
+  ],
+  "limits": {
+    "memoryMiB": 6144,
+    "seconds": 300,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+  "availableMiB": 15256,
+  "peakTreeRssKiB": 3367456,
+  "samples": 476,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"id\":0,\"raw\":19,\"block\":19,\"rawSteps\":8927172,\"blockSteps\":8927172}\n{\"id\":1,\"raw\":19,\"block\":19,\"rawSteps\":15940000,\"blockSteps\":14400000}\n{\"id\":2,\"raw\":20,\"block\":20,\"rawSteps\":16142702,\"blockSteps\":12642702}\n{\"id\":3,\"raw\":18,\"block\":18,\"rawSteps\":17193852,\"blockSteps\":13840000}\n{\"id\":4,\"raw\":17,\"block\":19,\"rawSteps\":14800000,\"blockSteps\":10260000}\n{\"id\":5,\"raw\":20,\"block\":20,\"rawSteps\":13260000,\"blockSteps\":12040000}\n{\"id\":6,\"raw\":18,\"block\":18,\"rawSteps\":13700000,\"blockSteps\":11660000}\n{\"id\":7,\"raw\":18,\"block\":18,\"rawSteps\":12180000,\"blockSteps\":10360000}\n{\"id\":8,\"raw\":17,\"block\":17,\"rawSteps\":13160000,\"blockSteps\":11780000}\n{\"id\":9,\"raw\":19,\"block\":19,\"rawSteps\":16560000,\"blockSteps\":12200000}\n{\"id\":10,\"raw\":20,\"block\":20,\"rawSteps\":13716712,\"blockSteps\":14096712}\n{\"id\":11,\"raw\":18,\"block\":18,\"rawSteps\":14700000,\"blockSteps\":13600000}\n{\"id\":12,\"raw\":17,\"block\":17,\"rawSteps\":13720000,\"blockSteps\":11900000}\n{\"id\":13,\"raw\":19,\"block\":19,\"rawSteps\":18020000,\"blockSteps\":14660000}\n{\"id\":14,\"raw\":20,\"block\":20,\"rawSteps\":17933084,\"blockSteps\":13660000}\n{\"id\":15,\"raw\":19,\"block\":19,\"rawSteps\":16328464,\"blockSteps\":12101962}\n{\"id\":16,\"raw\":18,\"block\":18,\"rawSteps\":17300000,\"blockSteps\":14880000}\n{\"id\":17,\"raw\":19,\"block\":19,\"rawSteps\":18340000,\"blockSteps\":14120000}\n{\"id\":18,\"raw\":20,\"block\":20,\"rawSteps\":18596814,\"blockSteps\":14053026}\n{\"id\":19,\"raw\":18,\"block\":18,\"rawSteps\":16613802,\"blockSteps\":14280000}\n{\"id\":20,\"raw\":18,\"block\":18,\"rawSteps\":15160000,\"blockSteps\":11920000}\n{\"id\":21,\"raw\":19,\"block\":19,\"rawSteps\":15840000,\"blockSteps\":12260000}\n{\"id\":22,\"raw\":19,\"block\":19,\"rawSteps\":17380000,\"blockSteps\":11540000}\n{\"id\":23,\"raw\":19,\"block\":19,\"rawSteps\":18966576,\"blockSteps\":14740762}\n{\"id\":24,\"raw\":17,\"block\":17,\"rawSteps\":20280000,\"blockSteps\":15240000}\n{\"id\":25,\"raw\":19,\"block\":19,\"rawSteps\":21020000,\"blockSteps\":17140000}\n{\"id\":26,\"raw\":19,\"block\":19,\"rawSteps\":17200000,\"blockSteps\":13980000}\n{\"id\":27,\"raw\":20,\"block\":20,\"rawSteps\":16303092,\"blockSteps\":14163092}\n{\"id\":28,\"raw\":18,\"block\":18,\"rawSteps\":20760000,\"blockSteps\":16860000}\n{\"id\":29,\"raw\":20,\"block\":20,\"rawSteps\":20600000,\"blockSteps\":16620000}\n{\"id\":30,\"raw\":20,\"block\":20,\"rawSteps\":20042960,\"blockSteps\":15660146}\n{\"id\":31,\"raw\":19,\"block\":19,\"rawSteps\":20834609,\"blockSteps\":16220000}\n{\"summary\":{\"raw\":{\"cases\":32,\"meanBestLength\":18.75,\"p95FirstMs\":36,\"totalWorkSteps\":531519839},\"block\":{\"cases\":32,\"meanBestLength\":18.8125,\"p95FirstMs\":41,\"totalWorkSteps\":431805574}},\"initializationMs\":{\"raw\":9350,\"block\":6100},\"nativePeakRssKiB\":{\"raw\":2147532,\"block\":1098956},\"exact\":[{\"id\":\"exact-0\",\"facelets\":\"RBDRURUFDFUBDRFLDRFLRFFLBBBULDDDFLBBFBLULRDRLRDUUBLUUF\",\"mode\":\"exact\",\"budgetMs\":2000,\"order\":[\"raw\",\"block\"],\"raw\":{\"firstMs\":12,\"firstLength\":21,\"length\":19,\"lower\":15,\"optimal\":false,\"nodes\":25874316,\"moves\":[10,16,0,7,2,13,0,15,14,2,3,15,9,17,8,9,15,6,5]},\"block\":{\"firstMs\":13,\"firstLength\":21,\"length\":19,\"lower\":15,\"optimal\":false,\"nodes\":17360000,\"moves\":[10,16,0,7,2,13,0,15,14,2,3,15,9,17,8,9,15,6,5]}},{\"id\":\"exact-1\",\"facelets\":\"DDLDURFRRBFUURLBLBLBDLFBRFUFDRDDFRFDLLUULBFRUBBFUBRLUD\",\"mode\":\"exact\",\"budgetMs\":2000,\"order\":[\"block\",\"raw\"],\"block\":{\"firstMs\":19,\"firstLength\":21,\"length\":18,\"lower\":15,\"optimal\":false,\"nodes\":17720000,\"moves\":[16,0,7,15,0,17,3,0,14,1,7,3,13,15,4,10,6,10]},\"raw\":{\"firstMs\":22,\"firstLength\":21,\"length\":18,\"lower\":15,\"optimal\":false,\"nodes\":26900000,\"moves\":[16,0,7,15,0,17,3,0,14,1,7,3,13,15,4,10,6,10]}},{\"id\":\"exact-2\",\"facelets\":\"DRBRUFFBFURUDRDRLDLDRFFRFBDDUBUDBLFLFBUFLUULLRURLBDBLB\",\"mode\":\"exact\",\"budgetMs\":2000,\"order\":[\"raw\",\"block\"],\"raw\":{\"firstMs\":12,\"firstLength\":20,\"length\":20,\"lower\":15,\"optimal\":false,\"nodes\":24347192,\"moves\":[4,10,7,4,16,13,11,4,11,8,2,4,1,15,12,6,2,3,9,6]},\"block\":{\"firstMs\":12,\"firstLength\":20,\"length\":20,\"lower\":15,\"optimal\":false,\"nodes\":17107192,\"moves\":[4,10,7,4,16,13,11,4,11,8,2,4,1,15,12,6,2,3,9,6]}}]}\n",
+  "stderr": "",
+  "elapsedMs": 95280,
+  "finishedAt": "2026-10-17T02:43:04.401Z"
+}

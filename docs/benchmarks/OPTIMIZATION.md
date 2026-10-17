@@ -52,3 +52,22 @@ mixed-block fixture checks all lookups at a nonzero storage base, metadata
 addresses, capacity rejection, and invalid-distance rejection. These are finite
 tests and a successful independent type/proof gate, not a new universal law or
 the full-table acceptance check. The existing 18 laws are unchanged.
+
+## Pause state
+
+The full conversion matched every raw entry and retained entry fingerprint
+1448581281. The block cache is 742,502,016 bytes with word fingerprint 3919871918
+and SHA256 `ed938e76a8d21ba7d6bb95cee1b3eb26fbaa48897c86d986bb044fb01bb7fc3e`.
+
+The preliminary one-pass layout comparison measured fewer search steps and one
+worse answer for the block format. It is not promoted for speed. Pstack routing
+arrived afterward and requires repeated measurements before a final verdict.
+An unreported gprof run identified byte-list construction, reference-count
+wrapping, and decoding as hot routines. The instrumented profile is not a
+startup speedup measurement.
+
+The user paused the work at 7% usage. The word-reader and search refinements are
+WIP. Word-reader fixtures passed 32 cases, including native sanitizers and
+forced partial reads and interruptions. The architecture cross-judge and full
+regression gates remain open. Follow `.audit/rubend-startup.todo.md` and the
+canonical `.audit/rubend-startup.tsv` trail on resume.

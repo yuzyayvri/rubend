@@ -1,4 +1,5 @@
 import Base
+import ./word-io.bend as W
 
 type Block is Type:
   Block{table: Array<U32>, bytes: +List<U32>, words: U32, valid: Bool}
@@ -108,6 +109,37 @@ def load(path: String, table: Array<U32>, index: U32, +count: U32) -> IO(Array<U
     file : File <- sized(size, count)
     read_chunks(8192n, (file, Block{table, Nil{}, 0, True{}}), index, count, 0)
 
+def word_limit(large: Bool, value: U32) -> U32:
+  match large:
+    case True{}: 262144
+    case False{}: value
+
+def read_words_result(result: File & (Array<U32> & Result<&1, &1, U32 & String, Unit>)) -> IO(File & Array<U32>):
+  match result:
+    case Tuple{file, Tuple{table, Done{unit}}}: IO.pure(File & Array<U32>, (file, table))
+    case _: IO.die(File & Array<U32>, 2, "Joint cache word read failed")
+
+def word_chunks(fuel: Nat, state: File & Array<U32>, +index: U32, +remaining: U32) -> IO(Array<U32>):
+  match fuel state remaining:
+    case _ Tuple{file, table} 0:
+      do IO<Array<U32>>:
+        File.close(file)
+        return table
+    case 1n+p Tuple{file, table} remaining:
+      do IO<Array<U32>>:
+        +count : U32 = word_limit(U32.is_gt(remaining, 262144), remaining)
+        result : File & (Array<U32> & Result<&1, &1, U32 & String, Unit>) <- W.read_words(file, table, index, count)
+        state : File & Array<U32> <- read_words_result(result)
+        word_chunks(p, state, (index + count : U32), (remaining - count : U32))
+    case _ _ _: IO.die(Array<U32>, 2, "Joint cache word read fuel exhausted")
+
+def load_words(path: String, table: Array<U32>, index: U32, +count: U32) -> IO(Array<U32>):
+  do IO<Array<U32>>:
+    file : File <- IO.try(File, File.open(path, "r"))
+    size : File & Result<&1, &1, U32 & String, U32> <- File.size(file)
+    file : File <- sized(size, count)
+    word_chunks(8192n, (file, table), index, count)
+
 type Digest is Type:
   Digest{table: Array<U32>, hash: U32}
 
@@ -115,10 +147,13 @@ def hashed(read: Array<U32> & U32, hash: U32, index: U32) -> Digest:
   match read:
     case Tuple{table, word}: Digest{table, ((hash * 16777619) .^. word .^. index : U32)}
 
-def fingerprint(fuel: Nat, state: Digest, +index: U32) -> Digest:
+def fingerprint_at(fuel: Nat, state: Digest, +base: U32, +index: U32) -> Digest:
   match fuel state:
-    case 1n+p Digest{table, hash}: fingerprint(p, hashed(table[index], hash, index), (index + 1 : U32))
+    case 1n+p Digest{table, hash}: fingerprint_at(p, hashed(table[(base + index : U32)], hash, index), base, (index + 1 : U32))
     case _ state: state
+
+def fingerprint(fuel: Nat, state: Digest, index: U32) -> Digest:
+  fingerprint_at(fuel, state, 0, index)
 
 def moved(read: Array<U32> & U32, index: U32, base: U32) -> Array<U32>:
   match read:

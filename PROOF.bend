@@ -5,6 +5,8 @@ import ./src/packed-symmetry.bend as PackedSymmetry
 import ./src/joint-table.bend as JointTable
 import ./src/joint-audit.bend as JointAudit
 import ./src/block-table.bend as BlockTable
+import ./src/search.bend as Search
+import ./src/portfolio.bend as Portfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:
