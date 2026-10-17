@@ -6,7 +6,7 @@ import {createHash} from "node:crypto";
 const [entry,output]=process.argv.slice(2);
 if(!entry||!output)throw Error("Usage: node bench/build-experiment.mjs ENTRY.bend OUTPUT");
 const sources={};
-function visit(path){path=resolve(path);if(sources[path])return;const text=readFileSync(path,"utf8");sources[path]=text;for(const match of text.matchAll(/^import (\.[^\s]+\.bend)(?: as [^\s]+)?$/gm))visit(resolve(dirname(path),match[1]));}
+function visit(path){path=resolve(path);if(sources[path])return;const text=readFileSync(path,"utf8");sources[path]=text;for(const match of text.matchAll(/^import (\.[^\s]+\.bend)(?: as [^\s]+)?$/gm))visit(resolve(dirname(path),match[1]));for(const match of text.matchAll(/^\s+import "(\.[^"\n]+\.(?:c|js))"$/gm))visit(resolve(dirname(path),match[1]));}
 visit(entry);const hashes=()=>Object.fromEntries(Object.keys(sources).sort().map(path=>[relative(process.cwd(),path),createHash("sha256").update(readFileSync(path)).digest("hex")]));
 const before=hashes(),version=spawnSync("bend",["version"],{encoding:"utf8"});
 mkdirSync(dirname(output),{recursive:true});

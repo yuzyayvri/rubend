@@ -71,3 +71,17 @@ store credentials or personal machine inventories.
 Yuzy requested frequent commits on 2026-10-17. Make focused local commits after
 verified improvements and preserve the configured GitHub author identity.
 This does not authorize pushes, releases, or deployment.
+
+## Pstack routing and model limit
+
+The user's 2026-10-17 routing update requires the installed pstack poteto-mode
+workflow for nontrivial implementation, architecture, unknown-cause bugs, and
+performance work. Read its full skill and Codex tool mapping. Use native
+collaboration, isolated writer worktrees, and read-only independent reviewers.
+Keep required review gates closed when a reviewer cannot run.
+
+The latest user instruction prohibits Astra. Do not invoke gpt-6-astra.
+Use gpt-6.1-sol for ordinary implementation and analysis. Use gpt-6-sol or
+gpt-6-luna when an independent or model-diverse review is required. This overrides
+earlier pstack configuration entries naming Astra. Keep delegation scoped.
+Use fresh or bounded forks for any model override. Default effort is session.

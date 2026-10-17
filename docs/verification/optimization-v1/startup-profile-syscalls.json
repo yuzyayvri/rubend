@@ -1,0 +1,39 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "startup-profile-syscalls",
+  "startedAt": "2026-10-17T02:56:01.760Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/strace",
+    "-f",
+    "-c",
+    "-o",
+    "/home/yuzy/rubend/build/profile/baseline-syscalls.txt",
+    "/home/yuzy/rubend/build/rubend-raw-baseline",
+    "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+    "fast",
+    "50",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 4096,
+    "seconds": 120,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "240105bb138057f40adf9e0603ae42544424447b76b5c43839d09662ecbfad41",
+  "availableMiB": 13034,
+  "peakTreeRssKiB": 2154976,
+  "samples": 48,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"type\":\"progress\",\"nodes\":0,\"lower\":0,\"elapsedMs\":4}\n{\"type\":\"candidate\",\"moves\":[],\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n{\"type\":\"progress\",\"nodes\":262,\"lower\":0,\"elapsedMs\":4}\n{\"type\":\"candidate\",\"moves\":[],\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n{\"type\":\"done\",\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n",
+  "stderr": "",
+  "elapsedMs": 9792,
+  "finishedAt": "2026-10-17T02:56:11.558Z"
+}

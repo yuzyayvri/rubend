@@ -1,5 +1,36 @@
 # Current state — light app verified; larger Bend bound measured
 
+## Optimization resume checkpoint
+
+The user requested a safe pause on 2026-10-17 with 7% usage remaining, then
+explicitly resumed. They now prohibit Astra calls. Use the scoped Sol and Luna
+roles recorded in AGENTS.md. The local `wip:` commit preserves the current
+prototypes. It is not an accepted performance improvement or a release.
+
+The verified commits in this batch are `97974c6`, full-table layout statistics,
+and `3f9913d`, the pure lossless block codec and its unit checks. Conversion then
+checked all 2,217,093,120 decoded values against the audited raw table. The
+1-GiB block variant's preliminary search comparison did less work and missed one
+shorter answer, so it is not selected for the speed profile.
+
+The remaining prototypes add bounded word IO, direct array writes outside the
+proof graph, offset fingerprinting, specialized getters, and reuse of an exact
+search child. Word IO passed 32 native, JS, injected-read, and sanitizer cases.
+The expanded pure proof entrypoint passed BendTT. Full regression, repeated
+startup measurements, fixed-work comparisons, and independent approval remain
+incomplete. Earlier Nix package evidence does not cover this WIP.
+
+Pstack routing arrived during this batch. Read the latest user-provided AGENTS
+instructions, `.audit/rubend-startup.todo.md`, and `.audit/rubend-startup.tsv`.
+The How trace and three architecture candidates are saved under `.audit/`.
+The design cross-judge was interrupted at the pause. Its gate remains closed.
+The generic cache-size arithmetic issue in `docs/issues/` remains open.
+
+Resume through the project-local pstack checkpoint locator. The first action is
+to finish the independent design judgment, then freeze a five-repeat startup
+measurement before accepting any prototype. No benchmark, server, or worker was
+left running. Large caches and frozen baseline binaries remain ignored on disk.
+
 The user resumed autonomous implementation after a usage-limit pause. Keep all
 browser previews hidden: no visible windows may obstruct their work. The
 small-memory app and solver are implemented; do not claim the full world-class
@@ -82,8 +113,8 @@ not all formally proved. See [PROOF-COVERAGE.md](architecture/PROOF-COVERAGE.md)
 Hard random exact positions remain incomplete within short budgets. Superflip
 still returns a non-optimal 21-move answer near 1.5–2 seconds in the small profile.
 
-On 2026-10-17 the updated package passed all three Nix sandbox checks. Packaged
-and final development runtime source hashes agree; the exact derivations and
+Before this optimization batch, the package passed all three Nix sandbox checks.
+Those packaged and development runtime source hashes agreed; the derivations and
 raw packaged HTTP/native records are in `docs/verification/joint-v1/`.
 
 ## Advanced profile

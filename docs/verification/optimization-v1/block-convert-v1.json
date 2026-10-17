@@ -1,0 +1,49 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "block-convert-v1",
+  "startedAt": "2026-10-17T02:37:42.503Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/block-convert",
+    "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+    "/home/yuzy/rubend/.cache/joint/block64-v1.raw",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 6144,
+    "seconds": 600,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "a8ae72af9ebad4856a69463bc18e8afe30f5b01232205ddb924f80244bfa34a1",
+  "availableMiB": 15319,
+  "peakTreeRssKiB": 3155644,
+  "samples": 80,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"type\":\"rawLoaded\",\"elapsedMs\":4462}\n{\"type\":\"packed\",\"elapsedMs\":5992}\n{\"type\":\"losslessEquality\",\"entries\":2217093120,\"passed\":true,\"entryFingerprint\":1448581281}\n{\"type\":\"blockIdentity\",\"wordFingerprint\":3919871918,\"words\":185625504,\"bytes\":742502016}\n{\"type\":\"blockCacheWritten\",\"elapsedMs\":15929}\n",
+  "stderr": "",
+  "build": {
+    "format": "rubend-experiment-build-v1",
+    "entry": "bench/block-convert.bend",
+    "sourceHashes": {
+      "bench/block-convert.bend": "d9a648895e6cb6cedc5ddc886e199413273139b8a89a0ff3aba1fb39ff9cf92b",
+      "bench/block-verify.bend": "d2fdc9fece3168ec988d253fb20b9f3bde54ab92503edc1c7c386cd2ad6a9070",
+      "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+      "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+      "src/joint-cache.bend": "1afed8ff472e72fe18fa420836a5ea91a48802eae87bc9b649656d84001673fb",
+      "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+      "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9"
+    },
+    "binarySha256": "a8ae72af9ebad4856a69463bc18e8afe30f5b01232205ddb924f80244bfa34a1",
+    "bend": "bend 2.0.37",
+    "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+  },
+  "elapsedMs": 16180,
+  "finishedAt": "2026-10-17T02:37:58.685Z"
+}

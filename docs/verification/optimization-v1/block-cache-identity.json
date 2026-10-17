@@ -1,0 +1,16 @@
+{
+  "format": "rubend-block64-cache-v1",
+  "entries": 2217093120,
+  "blockEntries": 64,
+  "metadataWords": 34642080,
+  "payloadWords": 150983424,
+  "words": 185625504,
+  "bytes": 742502016,
+  "byteOrder": "little-endian",
+  "sha256": "ed938e76a8d21ba7d6bb95cee1b3eb26fbaa48897c86d986bb044fb01bb7fc3e",
+  "wordFingerprint": 3919871918,
+  "referenceSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+  "entryFingerprint": 1448581281,
+  "everyEntryEqualToReference": true,
+  "formalRefinementProof": false
+}

@@ -4,6 +4,7 @@ import ./coordinates.bend as Q
 import ./symmetry.bend as Y
 import ./packed-symmetry.bend as R
 import ./joint-table.bend as J
+import ./block-table.bend as B
 
 type Meta is Data:
   Meta{root: C.Cubie, p1: U32, ceiling: U32, best: +List<U32>, best_len: U32, mode: U32, bound: U32, lower: U32, nodes: U32, status: U32}
@@ -62,56 +63,72 @@ def maybe_record(better: Bool, table: Array<U32>, rest: +List<Frame>, +meta: Met
     case False{}:
       Search{table, rest, meta}
 
+def push_child(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, +move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+  match parent:
+    case Node{cube, a, b, c, +left, previous, next, +phase, +path, +length}:
+      Search{table, Node{child, nx, ny, nz, (left - 1 : U32), (move / 3 : U32), 0, phase, move <> path, (length + 1 : U32)} <> Node{cube, a, b, c, left, previous, next, phase, path, length} <> rest, meta}
+    case parent: Search{table, parent <> rest, meta}
+
 def push(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match ok parent:
-    case False{} parent:
-      Search{table, parent <> rest, meta}
-    case True{} Node{+cube, a, b, c, left, previous, next, +phase, +path, length}:
-      Search{table, Node{C.turn(move, cube), nx, ny, nz, (left - 1 : U32), (move / 3 : U32), 0, phase, move <> path, (length + 1 : U32)} <> Node{cube, a, b, c, left, previous, next, phase, path, length} <> rest, meta}
-    case _ parent:
-      Search{table, parent <> rest, meta}
+    case True{} Node{+cube, a, b, c, left, previous, next, phase, path, length}:
+      push_child(table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, C.turn(move, cube), move, nx, ny, nz)
+    case _ parent: Search{table, parent <> rest, meta}
 
 def joint_index(+cube: C.Cubie) -> U32:
   ((Q.encode(Q.Twist{}, cube) * 2048 + Q.encode(Q.Flip{}, cube)) * 495 + Q.encode(Q.Slice{}, cube) : U32)
 
-def last_joint(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+def raw_lookup(table: Array<U32>, index: U32) -> Array<U32> & U32:
+  J.get_at(table, 8388608, index)
+
+def block_lookup(table: Array<U32>, index: U32) -> Array<U32> & U32:
+  B.get_at(table, 8388608, index, 34642080)
+
+def accept_child(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+  match ok:
+    case True{}: push_child(table, parent, rest, meta, child, move, nx, ny, nz)
+    case False{}: Search{table, parent <> rest, meta}
+
+def last_joint(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
   match read parent:
     case Tuple{table, bound} Node{cube, a, b, c, +left, previous, next, phase, path, length}:
-      push(U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz)
+      accept_child(U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, child, move, nx, ny, nz)
     case Tuple{table, bound} parent: Search{table, parent <> rest, meta}
 
-def second_allowed(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32, rotated: C.Cubie) -> Search:
+def second_allowed(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, +move: U32, +nx: U32, +ny: U32, +nz: U32, rotated: C.Cubie) -> Search:
   match ok:
     case False{}: push(False{}, table, parent, rest, meta, move, nx, ny, nz)
-    case True{}: last_joint(J.get_at(table, 8388608, joint_index(R.rotate(rotated))), parent, rest, meta, move, nx, ny, nz)
+    case True{}: last_joint(lookup(table, joint_index(R.rotate(rotated))), parent, rest, meta, child, move, nx, ny, nz)
 
-def second_joint(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32, rotated: C.Cubie) -> Search:
+def second_joint(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, +move: U32, +nx: U32, +ny: U32, +nz: U32, rotated: C.Cubie) -> Search:
   match read parent:
     case Tuple{table, bound} Node{cube, a, b, c, +left, previous, next, phase, path, length}:
-      second_allowed(U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz, rotated)
+      second_allowed(~lookup, U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, child, move, nx, ny, nz, rotated)
     case Tuple{table, bound} parent: Search{table, parent <> rest, meta}
 
-def other_axes(exact: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+def other_axes(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), exact: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match exact parent:
     case True{} Node{+cube, a, b, c, left, previous, next, phase, path, length}:
-      +rotated = R.rotate(C.turn(move, cube))
-      second_joint(J.get_at(table, 8388608, joint_index(rotated)), Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz, rotated)
+      +child = C.turn(move, cube)
+      +rotated = R.rotate(child)
+      second_joint(~lookup, lookup(table, joint_index(rotated)), Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, child, move, nx, ny, nz, rotated)
     case _ parent: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
 
-def joint_allowed(ok: Bool, exact: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+def joint_allowed(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), ok: Bool, exact: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match ok:
     case False{}: push(False{}, table, parent, rest, meta, move, nx, ny, nz)
-    case True{}: other_axes(exact, table, parent, rest, meta, move, nx, ny, nz)
+    case True{}: other_axes(~lookup, exact, table, parent, rest, meta, move, nx, ny, nz)
 
-def first_joint(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+def first_joint(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match read parent:
     case Tuple{table, bound} Node{cube, a, b, c, +left, previous, next, +phase, path, length}:
-      joint_allowed(U32.is_lt(bound, left), U32.is_eq(phase, 2), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz)
+      joint_allowed(~lookup, U32.is_lt(bound, left), U32.is_eq(phase, 2), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz)
     case Tuple{table, bound} parent: Search{table, parent <> rest, meta}
 
 def joint_size(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match read:
-    case Tuple{table, 536870912}: first_joint(J.get_at(table, 8388608, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case Tuple{table, 268435456}: first_joint(~block_lookup, block_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case Tuple{table, 536870912}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case Tuple{table, size}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
 
 def stronger(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
