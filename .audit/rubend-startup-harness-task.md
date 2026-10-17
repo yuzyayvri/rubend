@@ -1,12 +1,16 @@
 # Startup measurement implementation contract
 
-The writer owns an isolated worktree at
+The original writer owned an isolated worktree at
 `/home/yuzy/.codex/worktrees/startup-harness/rubend`, branch
 `codex/startup-harness`, based on `a6d3592`. Do not modify the main checkout or
 any cache or baseline binary. Do not run a full-size benchmark yet.
 
 The accepted design is `.audit/rubend-startup-synthesis.md` in the main checkout.
 The next implementation unit is measurement code, not an optimization.
+
+This contract is historical. The reviewed implementation was integrated in
+`7fd975c`. Its owner is stopped. The main checkout now holds the canonical code
+and durable evidence. Do not dispatch new work against the old owner checkout.
 
 ## Data shape
 
