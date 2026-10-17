@@ -35,6 +35,11 @@ test: build
     build/search-profile-test --threads 1
     bend tests/search-profile.bend -o build/search-profile-test.mjs
     node tests/search-domain.mjs
+    bend tests/inverse-bound.bend -o build/inverse-bound-test
+    build/inverse-bound-test --threads 1
+    bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
+    node tests/inverse-bound.mjs
+    node tests/contour-compare.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
 
