@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "wordCases": 851968,
+  "decodedFields": 13631488,
+  "fixtureEntries": 65536,
+  "fixtureBlocks": 1024,
+  "nonzeroBase": 37,
+  "capacityRejected": true,
+  "invalidDistanceRejected": true
+}

@@ -39,3 +39,16 @@ or faster solver. Blocks of 128 are a close alternative and remain an experiment
 if two-read lookup locality is unfavorable.
 
 Raw statistics and resource records are in `docs/verification/optimization-v1/`.
+
+## Codec checks
+
+`src/block-table.bend` encodes narrow blocks with a base and two-bit deltas;
+wide blocks retain the original nibbles. A metadata word stores the base, width,
+and word-aligned payload address. The codec remains pure affine Bend.
+
+851,968 word patterns cover all 65,536 two-bit patterns at 13 bases. Native and
+generated-JS checks pass, including 13,631,488 decoded fields. A 65,536-entry
+mixed-block fixture checks all lookups at a nonzero storage base, metadata
+addresses, capacity rejection, and invalid-distance rejection. These are finite
+tests and a successful independent type/proof gate, not a new universal law or
+the full-table acceptance check. The existing 18 laws are unchanged.
