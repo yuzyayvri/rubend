@@ -23,6 +23,19 @@ reproduces its 180 paired ties. No new solver performance result is claimed.
 See [R01 progress](verification/R01.md). Independent review has not run under
 the user's explicit no-subagents instruction. R01 as a whole remains incomplete.
 
+Explicit table profiles and named Bend Goal, Stage, Completion, and portfolio
+Request types are implemented in focused commits. Baseline/current fixed-work
+records match all 163 shallow optima, 4,075 raw snapshots, and 3,911 candidates.
+The numeric protocol is unchanged. Native/generated-JS codec checks and a
+negative numeric-goal type fixture pass. The complete development regression
+suite also passes. This is behavior-preservation evidence, not a speed claim.
+
+A five-round identical-binary noise-control run is active in the managed
+roadmap-r01 worktree. Its sealed configuration is
+docs/verification/r01-v1/control-config.json in that checkout. It uses one
+nice-10 core, six GiB, and a 900-second cap. Do not start a second large table
+batch concurrently. Typed-contract overhead comparison and diagnostics follow.
+
 ## Accepted experimental raw startup
 
 The raw-profile initialization change is accepted after independent review of
