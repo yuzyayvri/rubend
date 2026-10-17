@@ -35,7 +35,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 ## Units
 
 - [x] R01a. Frozen corpus and coverage-first scoring contracts. Six positive families, twenty rejecting fixtures, historical-data reproduction, and sixteen toolchain/proof checks pass. Solo verification only.
-- [ ] R01b. Explicit goal/profile/completion with fixed-work semantic equality.
+- [x] R01b implementation. Explicit goal/profile/completion and fixed-work semantic equality pass. Timed overhead and independent-review gates are not closed.
 - [ ] R01c. Diagnostic attribution, sensitivity/control, and measured overhead.
 - [ ] R02. Exact-bound pilots, independently measured.
 - [ ] R03. Kernel and memory pilots, independently measured.
