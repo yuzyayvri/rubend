@@ -54,8 +54,14 @@ With RUBEND_BINARY explicitly selecting build/r03-small-direct-v2, the existing
 15,280 KiB native peak RSS, eight-millisecond cancellation, and 318-millisecond
 worker recovery. These are a single integration run, not latency distributions.
 The default-backend regression and this opt-in integration are separate checks.
+A hidden GUI smoke check also renders the 3D cube, establishes the expected
+four-move optimum, seeks to the solved cube, and exports the matching four/four
+interval. Its text, screenshot, and bounded server receipt are retained. The
+temporary tab, server, and native child are stopped. This is not full browser
+coverage or a package rollout.
 Sixteen toolchain checks and the independent BendTT verdict pass. The pure codec
-and packed search/portfolio are in PROOF.bend. Runtime IO remains outside it.
+and packed search/portfolio and direct table builder are in PROOF.bend.
+Runtime IO remains outside it.
 No existing law changes and no new domain law is added. Eighteen laws still
 check. Full admissibility, refinement, and traversal/data proof bridges remain
 unfinished as described in PROOF-COVERAGE.md. Source generation is not a formal
