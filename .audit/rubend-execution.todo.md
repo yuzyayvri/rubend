@@ -38,10 +38,16 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [x] R01b implementation. Explicit goal/profile/completion and fixed-work semantic equality pass. Timed overhead and independent-review gates are not closed.
 - [x] R01c implementation/checks. Observer traces match; counter negatives pass; five-cohort deadline quality ties and equal-work overhead check complete. Independent review/browser/package gates remain unrun.
 - [ ] R02. Exact-bound pilots, independently measured.
+  - [x] Solo lazy inverse one/three-axis implementation and goal guards.
+  - [x] Independent inverse oracle, shallow optima, real-table cutoffs, and full regression.
+  - [x] Five-cohort pilot and disjoint development completed-depth measurements.
+  - [x] Five-cohort application canaries against frozen R01. Sixty quality pairs tie.
+  - [ ] Corner database, combination, full rollout, and independent review.
 - [ ] R03. Kernel and memory pilots, independently measured.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
+  - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
 - [ ] Push verified accepted commits to the existing repository without force.
 
 Throughput checkpoint. Two design seats were planned, only one ran. The user then
