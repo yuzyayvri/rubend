@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,statSync,mkdirSync} from "node:fs";
+import {resolve,dirname} from "node:path";
+import {createHash} from "node:crypto";
+import {gzipSync,gunzipSync} from "node:zlib";
+
+assert.equal(process.argv.length,4,"Expected source.json destination.json.gz");
+const source=resolve(process.argv[2]),destination=resolve(process.argv[3]);
+assert.ok(destination.endsWith(".json.gz"));
+const identity=()=>{const s=statSync(source,{bigint:true});assert.ok(s.isFile());assert.ok(s.size<=33554432n,"Evidence exceeds 32 MiB");return ["dev","ino","size","mtimeNs","ctimeNs"].map(k=>String(s[k]));};
+const before=identity(),bytes=readFileSync(source);
+assert.deepEqual(identity(),before,"Evidence changed while reading");
+JSON.parse(bytes.toString("utf8"));
+const compressed=gzipSync(bytes,{level:9});
+mkdirSync(dirname(destination),{recursive:true});
+writeFileSync(destination,compressed,{flag:"wx"});
+const saved=readFileSync(destination);
+assert.deepEqual(saved,compressed);
+assert.deepEqual(gunzipSync(saved),bytes);
+const hash=x=>createHash("sha256").update(x).digest("hex");
+console.log(JSON.stringify({source,destination,bytes:bytes.length,compressedBytes:saved.length,sha256:hash(bytes),compressedSha256:hash(saved),roundtripPassed:true}));

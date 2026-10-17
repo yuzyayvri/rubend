@@ -1,0 +1,54 @@
+{
+  "format": "rubend-r01-archive-identities-v1",
+  "artifacts": [
+    {
+      "file": "fixed-time-details.json.gz",
+      "compressedBytes": 119857,
+      "rawBytes": 638109,
+      "compressedSha256": "c3989d6a37feebe15b060f44216a8e94db8b1a358c92477eede7337baf5530ef",
+      "rawSha256": "ee7ebeb1b015fa897dfcc7635f0f8f7e564ef2e97c9ce9e710539eaaf7555a43"
+    },
+    {
+      "file": "fixed-time-resource.json.gz",
+      "compressedBytes": 942,
+      "rawBytes": 1962,
+      "compressedSha256": "f775e0b7750530580102ad8da569dcaa7f4cbcc39c44ac0e380ef0edb61308f6",
+      "rawSha256": "90b4be26a6dddd99ab6c4ef97cae7ab39697e127a3faff918f8ac9b71f5f50fd"
+    },
+    {
+      "file": "full-regression.json.gz",
+      "compressedBytes": 4161,
+      "rawBytes": 24560,
+      "compressedSha256": "453dfd6e072c34c640f9e3b06a788c44c9c519232856878f060aca85906490ac",
+      "rawSha256": "f424f3900a5d7a46bec0b99e1fe162799e3b31a0dd619732ae0343f2c9e89aed"
+    },
+    {
+      "file": "noise-control.json.gz",
+      "compressedBytes": 324476,
+      "rawBytes": 10518512,
+      "compressedSha256": "8b9f5ce19da82200e59c85e8d8170bf1c8b1674135ad24f7279dc0e3b9768f63",
+      "rawSha256": "a0224418f0c46a0e8fe36e214b7ab6853bfca5766823447785c783455928e3d2"
+    },
+    {
+      "file": "observer-light.json.gz",
+      "compressedBytes": 2148,
+      "rawBytes": 16893,
+      "compressedSha256": "16cf93f29ae6feb7b1290c3f7d4a0cf560644fb9c8b06d26a6ca09187f582ede",
+      "rawSha256": "e231dd15352c1c96802d51926e666eddb31d9f2b58df6d5a183f4a350ce6b989"
+    },
+    {
+      "file": "observer-raw.json.gz",
+      "compressedBytes": 2386,
+      "rawBytes": 17129,
+      "compressedSha256": "c2d29bfcba2a2ef5efa4c83debb9f54b85805ccbf706dcfe8df89f3cdcbb810e",
+      "rawSha256": "e039eaab4b7214faf2db6323f51b866daa916776645e9c0dfb0f34cccb0523bd"
+    },
+    {
+      "file": "typed-warm.json.gz",
+      "compressedBytes": 322351,
+      "rawBytes": 10498013,
+      "compressedSha256": "6be2ba7418a7272d7ce157d665275916a9e6d8c34d39e4386530102cc57cdd24",
+      "rawSha256": "5040535018af216f63ee2964a8f2e892b99fd0be245fa9f5e355e5fad75abfba"
+    }
+  ]
+}

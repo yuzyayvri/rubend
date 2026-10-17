@@ -28,6 +28,9 @@ test: build
     node tests/corpus.mjs
     node tests/scorecard.mjs
     node tests/resource-policy.mjs
+    node tests/archive-evidence.mjs
+    node tests/search-observer.mjs
+    node tests/process-cpu.mjs
     bend tests/search-profile.bend -o build/search-profile-test
     build/search-profile-test --threads 1
     bend tests/search-profile.bend -o build/search-profile-test.mjs

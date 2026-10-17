@@ -1,0 +1,47 @@
+{
+  "iterations": 5,
+  "readyTimeoutMs": 120000,
+  "rssSampleMs": 100,
+  "shutdownTimeoutMs": 1000,
+  "profiles": [
+    {
+      "id": "before-r01",
+      "binary": "/home/yuzy/rubend/build/startup-word-direct-262144",
+      "buildMetadata": "/home/yuzy/rubend/build/startup-word-direct-262144.json",
+      "cache": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+      "cacheSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+      "cacheBytes": 1108546560,
+      "env": {
+        "RUBEND_JOINT_CACHE": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw"
+      }
+    },
+    {
+      "id": "typed-r01",
+      "binary": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/r01-domain-raw",
+      "buildMetadata": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/r01-domain-raw.json",
+      "cache": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+      "cacheSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+      "cacheBytes": 1108546560,
+      "env": {
+        "RUBEND_JOINT_CACHE": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw"
+      }
+    }
+  ],
+  "corpora": {
+    "warmup": {
+      "path": "/home/yuzy/rubend/docs/verification/portfolio-v1/exact.json",
+      "count": 163,
+      "budgetMs": 1000
+    },
+    "fast": {
+      "path": "/home/yuzy/rubend/docs/verification/portfolio-v1/comparison.json",
+      "count": 32,
+      "budgetMs": 1000
+    },
+    "exact": {
+      "path": "/home/yuzy/rubend/docs/verification/portfolio-v1/exact-profile.json",
+      "count": 3,
+      "budgetMs": 2000
+    }
+  }
+}

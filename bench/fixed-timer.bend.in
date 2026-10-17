@@ -1,0 +1,77 @@
+import Base
+import ./fixed-work.bend as F
+import ../src/main.bend as H
+import ../src/model.bend as M
+import ../src/cubie.bend as C
+import ../src/search.bend as S
+import ../src/portfolio.bend as P
+
+def initialize(table: Array<U32>, original: M.Cube, root: C.Cubie, +request: U32) -> P.Session:
+  INITIALIZER_BODY
+
+def optimal(status: COMPLETION_TYPE) -> Bool:
+  OPTIMAL_BODY
+
+def work(fuel: Nat, state: P.Session) -> P.Session:
+  match fuel:
+    case 0n: state
+    case 1n+p: work(p, P.advance(state))
+
+def finish(state: P.Session, original: M.Cube, +request: U32, started: Nat) -> IO(Array<U32>):
+  match state:
+    case P.Session{table, entries, root, best, +length, +lower, +nodes, mode, +status}:
+      do IO<Array<U32>>:
+        ended : Nat <- IO.now()
+        F.snapshot("fixed-timer", original, request, 500, entries, root, best, length, lower, nodes, mode, status)
+        IO.print("{\"type\":\"measurement\",\"nativeMs\":" ++ Nat.show(Nat.sub(ended, started)) ++ ",\"slices\":500}")
+        IO.print("{\"type\":\"done\",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(optimal(status), 1, 0)) ++ "}")
+        return table
+
+def solve(valid: C.Validation, +original: M.Cube, +request: U32, table: Array<U32>) -> IO(Array<U32>):
+  match valid:
+    case C.Valid{root}:
+      do IO<Array<U32>>:
+        started : Nat <- IO.now()
+        finish(work(500n, initialize(table, original, root, request)), original, request, started)
+    case _: IO.die(Array<U32>, 2, "Invalid fixed-time cube")
+
+def parsed(value: Maybe<&2, M.Cube>, request: U32, table: Array<U32>) -> IO(Array<U32>):
+  match value:
+    case Some{+original}: solve(C.validate(original), original, request, table)
+    case _: IO.die(Array<U32>, 2, "Invalid fixed-time facelets")
+
+def command(args: +List<String>, table: Array<U32>) -> IO(Array<U32>):
+  match args:
+    case Con{text, Con{mode, Con{budget, Nil{}}}}:
+      parsed(M.from_list(H.colors(text)), C.pick(String.eq(mode, "exact"), 2, 0), table)
+    case _: IO.die(Array<U32>, 2, "Expected fixed-time request")
+
+def loop(fuel: Nat, table: Array<U32>, read: File & Result<&1, &1, U32 & String, String>) -> IO(Unit):
+  match fuel read:
+    case 1n+p Tuple{file, Done{SCon{head, rest}}}:
+      do IO<Unit>:
+        table : Array<U32> <- command(String.split(String.trim(SCon{head, rest}), Chr{9}), table)
+        read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
+        loop(p, table, read)
+    case _ Tuple{file, result}: File.close(file)
+
+def worker(file: File) -> IO(Unit):
+  do IO<Unit>:
+    IO.print("{\"type\":\"initializing\"}")
+    table : Array<U32> <- F.load(True{})
+    IO.print("{\"type\":\"ready\"}")
+    read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
+    loop(1000000n, table, read)
+
+def start(args: List<String>) -> IO(Unit):
+  match args:
+    case Con{program, Con{path, Nil{}}}:
+      do IO<Unit>:
+        file : File <- IO.try(File, File.open(path, "r"))
+        worker(file)
+    case _: IO.die(Unit, 2, "Expected fixed-time worker pipe")
+
+def main() -> IO(Unit):
+  do IO<Unit>:
+    args : List<String> <- IO.args()
+    start(args)
