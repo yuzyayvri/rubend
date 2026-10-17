@@ -5,16 +5,21 @@ import ./symmetry.bend as Y
 import ./packed-symmetry.bend as R
 import ./joint-table.bend as J
 import ./block-table.bend as B
+import ./inverse-bound.bend as I
 
 type Profile is Data:
   Light{}
   RawJoint{}
+  RawInverseOne{}
+  RawInverseThree{}
   BlockJoint{}
 
 def profile_words(profile: Profile) -> U32:
   match profile:
     case Light{}: 8388608
     case RawJoint{}: 536870912
+    case RawInverseOne{}: 536870912
+    case RawInverseThree{}: 536870912
     case BlockJoint{}: 268435456
 
 def profile_matches(profile: Profile, words: U32) -> Bool:
@@ -196,10 +201,29 @@ def accept_child(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>
     case True{}: push_child(table, parent, rest, meta, child, move, nx, ny, nz)
     case False{}: Search{table, parent <> rest, meta}
 
+def inverse_result(read: Array<U32> & I.CubeBound, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+  match read parent:
+    case Tuple{table, I.CubeBound{bound}} Node{cube, a, b, c, +left, previous, next, FullCube{}, path, length}:
+      accept_child(U32.is_lt(bound, left), table, parent, rest, meta, child, move, nx, ny, nz)
+    case Tuple{table, bound} parent: accept_child(True{}, table, parent, rest, meta, child, move, nx, ny, nz)
+
+def inverse_policy(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+  match parent meta:
+    case Node{cube, a, b, c, left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, RawInverseOne{}}:
+      inverse_result(I.full_cube_one(table, child), parent, rest, meta, child, move, nx, ny, nz)
+    case Node{cube, a, b, c, +left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, RawInverseThree{}}:
+      inverse_result(I.full_cube_three(table, child, left), parent, rest, meta, child, move, nx, ny, nz)
+    case _ _: accept_child(True{}, table, parent, rest, meta, child, move, nx, ny, nz)
+
+def forward_allowed(allowed: Bool, table: Array<U32>, parent: Frame, rest: +List<Frame>, meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+  match allowed:
+    case True{}: inverse_policy(table, parent, rest, meta, child, move, nx, ny, nz)
+    case False{}: accept_child(False{}, table, parent, rest, meta, child, move, nx, ny, nz)
+
 def last_joint(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
   match read parent:
     case Tuple{table, bound} Node{cube, a, b, c, +left, previous, next, phase, path, length}:
-      accept_child(U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, child, move, nx, ny, nz)
+      forward_allowed(U32.is_lt(bound, left), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, child, move, nx, ny, nz)
     case Tuple{table, bound} parent: Search{table, parent <> rest, meta}
 
 def second_allowed(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, +move: U32, +nx: U32, +ny: U32, +nz: U32, rotated: C.Cubie) -> Search:
@@ -236,6 +260,8 @@ def joint_profile(profile: Profile, table: Array<U32>, +parent: Frame, rest: +Li
   match profile:
     case BlockJoint{}: first_joint(~block_lookup, block_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case RawJoint{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case RawInverseOne{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case RawInverseThree{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case Light{}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
 
 def joint_meta(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:

@@ -15,6 +15,7 @@ type Cut is Data:
 
 type Action is Data:
   Quiet{}
+  Unsupported{}
   CanonicalReject{}
   Tried{a: U32, b: U32, c: U32, move: U32, cut: Cut, probes: U32}
   PhaseTwo{}
@@ -87,6 +88,7 @@ def joint_profile(profile: S.Profile, table: Array<U32>, +frame: S.Frame, expand
     case S.Light{}: tried(table, frame, expanded, a, b, c, move, Admitted{}, 0)
     case S.RawJoint{}: joint_one(~S.raw_lookup, S.raw_lookup(table, ((a * 2048 + b) * 495 + c : U32)), frame, expanded, a, b, c, move)
     case S.BlockJoint{}: joint_one(~S.block_lookup, S.block_lookup(table, ((a * 2048 + b) * 495 + c : U32)), frame, expanded, a, b, c, move)
+    case _: event(S.FullCube{}, False{}, Unsupported{}, table)
 
 def pair_result(allowed: Bool, table: Array<U32>, +frame: S.Frame, expanded: Bool, a: U32, b: U32, c: U32, move: U32, profile: S.Profile) -> Array<U32> & Observation:
   match allowed frame:
@@ -165,6 +167,7 @@ def inspect(table: Array<U32>, +stack: +List<S.Frame>, meta: S.Meta) -> Array<U3
 def action_values(action: Action) -> +List<U32>:
   match action:
     case Quiet{}: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    case Unsupported{}: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     case CanonicalReject{}: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     case PhaseTwo{}: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0]
     case Contour{}: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
@@ -202,6 +205,7 @@ def checked_child(yes: Bool, before: S.Frame, after: +List<S.Frame>, a: U32, b: 
 
 def verified(action: Action, before: +List<S.Frame>, after: +List<S.Frame>) -> Bool:
   match action before:
+    case Unsupported{} _: False{}
     case Tried{a, b, c, move, cut, probes} Con{frame, rest}: checked_child(admitted(cut), frame, after, a, b, c, move)
     case CanonicalReject{} Con{frame, rest}: checked_child(False{}, frame, after, 0, 0, 0, 0)
     case _ _: True{}
