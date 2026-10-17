@@ -6,8 +6,27 @@ import ./packed-symmetry.bend as R
 import ./joint-table.bend as J
 import ./block-table.bend as B
 
+type Profile is Data:
+  Light{}
+  RawJoint{}
+  BlockJoint{}
+
+def profile_words(profile: Profile) -> U32:
+  match profile:
+    case Light{}: 8388608
+    case RawJoint{}: 536870912
+    case BlockJoint{}: 268435456
+
+def profile_matches(profile: Profile, words: U32) -> Bool:
+  U32.is_eq(profile_words(profile), words)
+
+def raw_profile(raw: Bool) -> Profile:
+  match raw:
+    case True{}: RawJoint{}
+    case False{}: Light{}
+
 type Meta is Data:
-  Meta{root: C.Cubie, p1: U32, ceiling: U32, best: +List<U32>, best_len: U32, mode: U32, bound: U32, lower: U32, nodes: U32, status: U32}
+  Meta{root: C.Cubie, p1: U32, ceiling: U32, best: +List<U32>, best_len: U32, mode: U32, bound: U32, lower: U32, nodes: U32, status: U32, profile: Profile}
 
 type Frame is Data:
   Node{cube: C.Cubie, a: U32, b: U32, c: U32, left: U32, previous: U32, next: U32, phase: U32, path: +List<U32>, length: U32}
@@ -51,10 +70,10 @@ def root_frame(+root: C.Cubie, +depth: U32, +phase: U32) -> Frame:
 
 def record(table: Array<U32>, rest: +List<Frame>, +meta: Meta, path: +List<U32>, +length: U32) -> Search:
   match meta:
-    case Meta{+root, p1, ceiling, best, best_len, 2, bound, lower, nodes, status}:
-      Search{table, root_frame(root, 0, 2) <> Nil{}, Meta{root, p1, ceiling, path, length, 1, 0, 0, nodes, 0}}
-    case Meta{+root, p1, ceiling, best, best_len, +mode, bound, lower, nodes, status}:
-      Search{table, rest, Meta{root, p1, ceiling, path, length, mode, bound, C.pick(U32.is_eq(mode, 1), length, lower), nodes, C.pick(U32.is_eq(mode, 1), 1, 0)}}
+    case Meta{+root, p1, ceiling, best, best_len, 2, bound, lower, nodes, status, +profile}:
+      Search{table, root_frame(root, 0, 2) <> Nil{}, Meta{root, p1, ceiling, path, length, 1, 0, 0, nodes, 0, profile}}
+    case Meta{+root, p1, ceiling, best, best_len, +mode, bound, lower, nodes, status, +profile}:
+      Search{table, rest, Meta{root, p1, ceiling, path, length, mode, bound, C.pick(U32.is_eq(mode, 1), length, lower), nodes, C.pick(U32.is_eq(mode, 1), 1, 0), profile}}
 
 def maybe_record(better: Bool, table: Array<U32>, rest: +List<Frame>, +meta: Meta, path: +List<U32>, +length: U32) -> Search:
   match better:
@@ -125,16 +144,21 @@ def first_joint(~lookup: Array<U32> -> U32 -> (Array<U32> & U32), read: Array<U3
       joint_allowed(~lookup, U32.is_lt(bound, left), U32.is_eq(phase, 2), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta, move, nx, ny, nz)
     case Tuple{table, bound} parent: Search{table, parent <> rest, meta}
 
-def joint_size(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
-  match read:
-    case Tuple{table, 268435456}: first_joint(~block_lookup, block_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
-    case Tuple{table, 536870912}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
-    case Tuple{table, size}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
+def joint_profile(profile: Profile, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+  match profile:
+    case BlockJoint{}: first_joint(~block_lookup, block_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case RawJoint{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case Light{}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
+
+def joint_meta(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
+  match meta:
+    case Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}:
+      joint_profile(profile, table, parent, rest, meta, move, nx, ny, nz)
 
 def stronger(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32) -> Search:
   match ok parent:
     case True{} Node{cube, a, b, c, left, previous, next, 1, path, length}: push(True{}, table, Node{cube, a, b, c, left, previous, next, 1, path, length}, rest, meta, move, nx, ny, nz)
-    case True{} parent: joint_size(Array.size(U32, table), parent, rest, meta, move, nx, ny, nz)
+    case True{} parent: joint_meta(table, parent, rest, meta, move, nx, ny, nz)
     case False{} parent: push(False{}, table, parent, rest, meta, move, nx, ny, nz)
 
 def bound_y(read: Array<U32> & U32, +parent: Frame, rest: +List<Frame>, +meta: Meta, +move: U32, +nx: U32, +ny: U32, +nz: U32, +hx: U32) -> Search:
@@ -225,15 +249,15 @@ def node_open(leaf_node: Bool, table: Array<U32>, +frame: Frame, rest: +List<Fra
   match leaf_node frame meta:
     case True{} Node{cube, +a, +b, +c, left, previous, next, +phase, path, length} meta:
       leaf(U32.is_eq(phase, 0) && U32.is_eq(a, 0) && U32.is_eq(b, 0) && U32.is_eq(c, 0), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta)
-    case False{} Node{cube, a, b, c, left, previous, +next, +phase, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status}:
-      enumerate(U32.is_lt(next, C.pick(U32.is_eq(phase, 1), 10, 18)) && U32.is_lt(length, best_len), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status})
+    case False{} Node{cube, a, b, c, left, previous, +next, +phase, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, +profile}:
+      enumerate(U32.is_lt(next, C.pick(U32.is_eq(phase, 1), 10, 18)) && U32.is_lt(length, best_len), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
     case _ _ meta:
       Search{table, rest, meta}
 
 def node_goal(goal: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, +meta: Meta) -> Search:
   match goal frame meta:
-    case True{} Node{cube, a, b, c, left, previous, next, phase, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status}:
-      maybe_record(U32.is_lt(length, best_len), table, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status}, path, length)
+    case True{} Node{cube, a, b, c, left, previous, next, phase, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, +profile}:
+      maybe_record(U32.is_lt(length, best_len), table, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}, path, length)
     case False{} Node{cube, a, b, c, +left, previous, next, phase, path, length} meta:
       node_open(U32.is_eq(left, 0), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta)
     case _ _ meta:
@@ -248,37 +272,46 @@ def retry(ok: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, +meta:
 
 def next_root(done: Bool, table: Array<U32>, +meta: Meta) -> Search:
   match done meta:
-    case True{} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status}:
-      Search{table, Nil{}, Meta{root, p1, ceiling, best, best_len, mode, bound, C.pick(U32.is_eq(mode, 1), best_len, lower), nodes, C.pick(U32.is_eq(mode, 1), 1, 3)}}
-    case False{} Meta{+root, +p1, +ceiling, best, best_len, +mode, +bound, +lower, nodes, status}:
+    case True{} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, +profile}:
+      Search{table, Nil{}, Meta{root, p1, ceiling, best, best_len, mode, bound, C.pick(U32.is_eq(mode, 1), best_len, lower), nodes, C.pick(U32.is_eq(mode, 1), 1, 3), profile}}
+    case False{} Meta{+root, +p1, +ceiling, best, best_len, +mode, +bound, +lower, nodes, status, +profile}:
       +next_p1 = C.pick(U32.is_lt(p1, 12), (p1 + 1 : U32), 0)
       +next_ceiling = C.pick(U32.is_lt(p1, 12), ceiling, (ceiling + 1 : U32))
       +exact = U32.is_eq(mode, 1)
       +next_bound = (bound + 1 : U32)
-      Search{table, root_frame(root, C.pick(exact, next_bound, next_p1), C.pick(exact, 2, 0)) <> Nil{}, Meta{root, next_p1, next_ceiling, best, best_len, mode, next_bound, C.pick(exact, next_bound, lower), nodes, 0}}
+      Search{table, root_frame(root, C.pick(exact, next_bound, next_p1), C.pick(exact, 2, 0)) <> Nil{}, Meta{root, next_p1, next_ceiling, best, best_len, mode, next_bound, C.pick(exact, next_bound, lower), nodes, 0, profile}}
 
 def next(table: Array<U32>, stack: +List<Frame>, +meta: Meta) -> Search:
   match stack meta:
-    case Nil{} Meta{root, p1, +ceiling, best, +best_len, +mode, +bound, lower, nodes, status}:
-      next_root((U32.is_eq(mode, 1) && U32.is_ge((bound + 1 : U32), best_len)) || (U32.is_eq(mode, 0) && U32.is_ge(ceiling, 31)), table, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status})
+    case Nil{} Meta{root, p1, +ceiling, best, +best_len, +mode, +bound, lower, nodes, status, +profile}:
+      next_root((U32.is_eq(mode, 1) && U32.is_ge((bound + 1 : U32), best_len)) || (U32.is_eq(mode, 0) && U32.is_ge(ceiling, 31)), table, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
     case Con{Node{+cube, +a, +b, +c, left, previous, next, +phase, path, length}, rest} meta:
       node_goal((U32.is_eq(phase, 1) && U32.is_eq(a, 0) && U32.is_eq(b, 0) && U32.is_eq(c, 0)) || (U32.is_ne(phase, 1) && solved(cube)), table, Node{cube, a, b, c, left, previous, next, phase, path, length}, rest, meta)
-    case Con{Retry{cube, a, b, c, +depth, previous, path, +length}, rest} Meta{root, p1, +ceiling, best, +best_len, mode, bound, lower, nodes, status}:
-      retry(U32.is_le(depth, C.pick(U32.is_eq(best_len, 31) && U32.is_le(ceiling, 24), 12, 18)) && U32.is_le((depth + length : U32), ceiling) && U32.is_lt((depth + length : U32), best_len), table, Retry{cube, a, b, c, depth, previous, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status})
+    case Con{Retry{cube, a, b, c, +depth, previous, path, +length}, rest} Meta{root, p1, +ceiling, best, +best_len, mode, bound, lower, nodes, status, +profile}:
+      retry(U32.is_le(depth, C.pick(U32.is_eq(best_len, 31) && U32.is_le(ceiling, 24), 12, 18)) && U32.is_le((depth + length : U32), ceiling) && U32.is_lt((depth + length : U32), best_len), table, Retry{cube, a, b, c, depth, previous, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
 
 def advance(state: Search) -> Search:
   match state:
-    case Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status}}:
-      next(table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, (nodes + 1 : U32), status})
+    case Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, +profile}}:
+      next(table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, (nodes + 1 : U32), status, profile})
 
 def run(fuel: Nat, state: Search) -> Search:
   match fuel state:
     case 0n state:
       state
-    case 1n+p Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, 0}}:
-      run(p, advance(Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, 0}}))
+    case 1n+p Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, 0, +profile}}:
+      run(p, advance(Search{table, stack, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, 0, profile}}))
     case _ state:
       state
 
-def initialize(table: Array<U32>, +root: C.Cubie, request: U32) -> Search:
-  Search{table, root_frame(root, 0, 0) <> Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, 0}}
+def initialize_checked(accepted: Bool, table: Array<U32>, +root: C.Cubie, request: U32, profile: Profile) -> Search:
+  match accepted:
+    case True{}: Search{table, root_frame(root, 0, 0) <> Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, 0, profile}}
+    case False{}: Search{table, Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, 5, profile}}
+
+def initialize_size(read: Array<U32> & U32, root: C.Cubie, request: U32, +profile: Profile) -> Search:
+  match read:
+    case Tuple{table, size}: initialize_checked(profile_matches(profile, size), table, root, request, profile)
+
+def initialize(table: Array<U32>, root: C.Cubie, request: U32, profile: Profile) -> Search:
+  initialize_size(Array.size(U32, table), root, request, profile)

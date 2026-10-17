@@ -1,0 +1,428 @@
+{
+  "format": "rubend-explicit-profile-verification-v1",
+  "checkedAt": "2026-10-17T12:58:27.001Z",
+  "sourceHashes": {
+    "src/search.bend": "28211c0ce189726fd8205e4cf60bd38c19055e542b76e10238925d2e8c640bca",
+    "src/portfolio.bend": "c0bcb6c329745258293908f7f9ac0a98975511af3d4d22985f46d6a9f632f619",
+    "src/main.bend": "568554dfd189dfd3cfa4ade183bd04a3ca3337e26199290df02b0e1c85f98279",
+    "bench/fixed-work.bend": "0ab1d3b5ecb436c9a9d82c3b59790d05a9de5cc5d68153a6a96467d36b085eb3",
+    "tests/search-profile.bend": "c2edb920a5712ea46cd42dbd5bb161b926990bf4b6e059af3e9541dff27a2798"
+  },
+  "builds": [
+    {
+      "format": "rubend-experiment-build-v1",
+      "entry": "bench/fixed-work.bend",
+      "sourceHashes": {
+        "bench/advanced-main.bend": "b6c64eb78029b8e61577e4ab758d25a8be80ee9d21284c3ed61a572c8b9598bf",
+        "bench/fixed-work.bend": "514d5d0c49f213bb63a212fec2a03665cf53899e4499cddf7c32bfc3efeb7a48",
+        "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+        "src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+        "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+        "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+        "src/joint-cache.bend": "920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee",
+        "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+        "src/main.bend": "e0ada028b3ce649ba21282a4d4f9a816039a844ca9b72a7cf72ad16d6cd22a75",
+        "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+        "src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+        "src/portfolio.bend": "778a0dfe288732e3be7837b00f29e13b2110769322c19be6814822e034da3df1",
+        "src/raw-table-io.bend": "c4e9722505b11ce4de4336e7c3ed6fd330dd6ba35c4d3dced358202644b09f5d",
+        "src/search.bend": "4734547b7c9648153113eaa7151ac4f0326171fe5ff8ef4b4d01243f0edd8841",
+        "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+        "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+        "src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+        "src/word-read.c": "b5e663644a48e15f5f81cc6129da7c1d3d8e200a34de6c66a81d5a01de1ac6d5",
+        "src/word-read.js": "c285128cc158ee58487af36bb4a6527cf9168dc36bbbc45b3a6fbea6b4ebba96"
+      },
+      "binarySha256": "9fa98b93a0a9fd440401c0ce1f31af0847096efdc93dda01192c700cd2dc0cb1",
+      "bend": "bend 2.0.37",
+      "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+    },
+    {
+      "format": "rubend-experiment-build-v1",
+      "entry": "bench/fixed-work.bend",
+      "sourceHashes": {
+        "bench/advanced-main.bend": "d0936204ffcac2aebeee7180dc491aa780df46ec3da7f7690d8d30fdca5b72d8",
+        "bench/fixed-work.bend": "0ab1d3b5ecb436c9a9d82c3b59790d05a9de5cc5d68153a6a96467d36b085eb3",
+        "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+        "src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+        "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+        "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+        "src/joint-cache.bend": "920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee",
+        "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+        "src/main.bend": "568554dfd189dfd3cfa4ade183bd04a3ca3337e26199290df02b0e1c85f98279",
+        "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+        "src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+        "src/portfolio.bend": "c0bcb6c329745258293908f7f9ac0a98975511af3d4d22985f46d6a9f632f619",
+        "src/raw-table-io.bend": "c4e9722505b11ce4de4336e7c3ed6fd330dd6ba35c4d3dced358202644b09f5d",
+        "src/search.bend": "28211c0ce189726fd8205e4cf60bd38c19055e542b76e10238925d2e8c640bca",
+        "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+        "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+        "src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+        "src/word-read.c": "b5e663644a48e15f5f81cc6129da7c1d3d8e200a34de6c66a81d5a01de1ac6d5",
+        "src/word-read.js": "c285128cc158ee58487af36bb4a6527cf9168dc36bbbc45b3a6fbea6b4ebba96"
+      },
+      "binarySha256": "2bea7801c5ff76b0d05adc33cc6b6f8eb8ef974b9e967d1019c1fd151d308c5c",
+      "bend": "bend 2.0.37",
+      "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+    }
+  ],
+  "runs": [
+    {
+      "id": "r01-profile-light",
+      "resource": {
+        "format": "rubend-local-experiment-v1",
+        "name": "r01-profile-light",
+        "startedAt": "2026-10-17T12:53:42.205Z",
+        "cwd": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend",
+        "command": [
+          "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+          "bench/fixed-work.mjs",
+          "--reference",
+          "build/r01-baseline-fixed",
+          "--candidate",
+          "build/r01-profile-fixed",
+          "--tier",
+          "light",
+          "--slices",
+          "6",
+          "--output",
+          "build/evidence/r01-profile-light-semantic.json"
+        ],
+        "limits": {
+          "memoryMiB": 1024,
+          "seconds": 180,
+          "cpus": [
+            0
+          ],
+          "nice": 10,
+          "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+        },
+        "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+        "availableMiB": 16529,
+        "peakTreeRssKiB": 110112,
+        "samples": 3,
+        "exitCode": 0,
+        "signal": null,
+        "stoppedFor": null,
+        "stdout": "{\"passed\":true,\"tier\":\"light\",\"cases\":14,\"slices\":6,\"snapshots\":98,\"candidates\":36,\"nodes\":1260818,\"output\":\"/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r01-profile-light-semantic.json\"}\n",
+        "stderr": "",
+        "elapsedMs": 769,
+        "finishedAt": "2026-10-17T12:53:43.064Z"
+      },
+      "semantic": {
+        "sha256": "f854c07de0255764477f1d7edebccb120736499a3495ca6d8b416dadf58a5c92",
+        "passed": true,
+        "tier": "light",
+        "slices": 6,
+        "cases": 14,
+        "counts": {
+          "snapshots": 98,
+          "candidates": 36,
+          "nodes": 1260818
+        },
+        "snapshotSha256": "c14c7edc89aa794796581bf23513ca24c2229a42327394efe0e70fe32446aa50",
+        "referenceBinarySha256": "9fa98b93a0a9fd440401c0ce1f31af0847096efdc93dda01192c700cd2dc0cb1",
+        "candidateBinarySha256": "2bea7801c5ff76b0d05adc33cc6b6f8eb8ef974b9e967d1019c1fd151d308c5c"
+      }
+    },
+    {
+      "id": "r01-profile-raw",
+      "resource": {
+        "format": "rubend-local-experiment-v1",
+        "name": "r01-profile-raw",
+        "startedAt": "2026-10-17T12:54:32.894Z",
+        "cwd": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend",
+        "command": [
+          "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+          "bench/fixed-work.mjs",
+          "--reference",
+          "build/r01-baseline-fixed",
+          "--candidate",
+          "build/r01-profile-fixed",
+          "--tier",
+          "raw",
+          "--slices",
+          "6",
+          "--output",
+          "build/evidence/r01-profile-raw-semantic.json"
+        ],
+        "limits": {
+          "memoryMiB": 6144,
+          "seconds": 240,
+          "cpus": [
+            0
+          ],
+          "nice": 10,
+          "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+        },
+        "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+        "availableMiB": 16870,
+        "peakTreeRssKiB": 2209348,
+        "samples": 23,
+        "exitCode": 0,
+        "signal": null,
+        "stoppedFor": null,
+        "stdout": "{\"passed\":true,\"tier\":\"raw\",\"cases\":14,\"slices\":6,\"snapshots\":98,\"candidates\":36,\"nodes\":1260818,\"output\":\"/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r01-profile-raw-semantic.json\"}\n",
+        "stderr": "",
+        "elapsedMs": 4706,
+        "finishedAt": "2026-10-17T12:54:37.700Z"
+      },
+      "semantic": {
+        "sha256": "71ed8bad2bc75a5704b4bec0824250c4c093bfd226507ba9cb406befbcf90463",
+        "passed": true,
+        "tier": "raw",
+        "slices": 6,
+        "cases": 14,
+        "counts": {
+          "snapshots": 98,
+          "candidates": 36,
+          "nodes": 1260818
+        },
+        "snapshotSha256": "57df89cd48a2e9a9dee965985cb3f37ef4cc549943861f94839eaaec8e3f7ecb",
+        "referenceBinarySha256": "9fa98b93a0a9fd440401c0ce1f31af0847096efdc93dda01192c700cd2dc0cb1",
+        "candidateBinarySha256": "2bea7801c5ff76b0d05adc33cc6b6f8eb8ef974b9e967d1019c1fd151d308c5c"
+      }
+    },
+    {
+      "id": "r01-profile-shallow",
+      "resource": {
+        "format": "rubend-local-experiment-v1",
+        "name": "r01-profile-shallow",
+        "startedAt": "2026-10-17T12:55:46.834Z",
+        "cwd": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend",
+        "command": [
+          "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+          "bench/fixed-work.mjs",
+          "--reference",
+          "build/r01-baseline-fixed",
+          "--candidate",
+          "build/r01-profile-fixed",
+          "--tier",
+          "raw",
+          "--slices",
+          "6",
+          "--corpus",
+          "/home/yuzy/rubend/docs/verification/portfolio-v1/exact.json",
+          "--output",
+          "build/evidence/r01-profile-shallow-semantic.json"
+        ],
+        "limits": {
+          "memoryMiB": 6144,
+          "seconds": 240,
+          "cpus": [
+            0
+          ],
+          "nice": 10,
+          "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+        },
+        "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+        "availableMiB": 16775,
+        "peakTreeRssKiB": 2209128,
+        "samples": 15,
+        "exitCode": 1,
+        "signal": null,
+        "stoppedFor": null,
+        "stdout": "",
+        "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: shallow-1 did not establish its shallow optimum within fixed work\n\n0 !== 1\n\n    at validateRecords (file:///home/yuzy/.codex/worktrees/roadmap-r01/rubend/bench/fixed-work-model.mjs:66:14)\n    at run (file:///home/yuzy/.codex/worktrees/roadmap-r01/rubend/bench/fixed-work.mjs:47:19)\n    at file:///home/yuzy/.codex/worktrees/roadmap-r01/rubend/bench/fixed-work.mjs:51:19\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 0,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.21.0\n",
+        "elapsedMs": 3197,
+        "finishedAt": "2026-10-17T12:55:50.132Z"
+      },
+      "semantic": null
+    },
+    {
+      "id": "r01-profile-shallow-24",
+      "resource": {
+        "format": "rubend-local-experiment-v1",
+        "name": "r01-profile-shallow-24",
+        "startedAt": "2026-10-17T12:56:24.203Z",
+        "cwd": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend",
+        "command": [
+          "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+          "bench/fixed-work.mjs",
+          "--reference",
+          "build/r01-baseline-fixed",
+          "--candidate",
+          "build/r01-profile-fixed",
+          "--tier",
+          "raw",
+          "--slices",
+          "24",
+          "--corpus",
+          "/home/yuzy/rubend/docs/verification/portfolio-v1/exact.json",
+          "--output",
+          "build/evidence/r01-profile-shallow-24-semantic.json"
+        ],
+        "limits": {
+          "memoryMiB": 6144,
+          "seconds": 240,
+          "cpus": [
+            0
+          ],
+          "nice": 10,
+          "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+        },
+        "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+        "availableMiB": 16731,
+        "peakTreeRssKiB": 2304944,
+        "samples": 41,
+        "exitCode": 0,
+        "signal": null,
+        "stoppedFor": null,
+        "stdout": "{\"passed\":true,\"tier\":\"raw\",\"cases\":163,\"slices\":24,\"snapshots\":4075,\"candidates\":3911,\"nodes\":20450223,\"output\":\"/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r01-profile-shallow-24-semantic.json\"}\n",
+        "stderr": "",
+        "elapsedMs": 8384,
+        "finishedAt": "2026-10-17T12:56:32.681Z"
+      },
+      "semantic": {
+        "sha256": "c33e171d3aed1a712f6f10a39356aa0cfde1c05c5416165a62c8f03dfd89793b",
+        "passed": true,
+        "tier": "raw",
+        "slices": 24,
+        "cases": 163,
+        "counts": {
+          "snapshots": 4075,
+          "candidates": 3911,
+          "nodes": 20450223
+        },
+        "snapshotSha256": "f7e30c10523250573a792884418d5c1c04befdb5943af60bd148daed879a792f",
+        "referenceBinarySha256": "9fa98b93a0a9fd440401c0ce1f31af0847096efdc93dda01192c700cd2dc0cb1",
+        "candidateBinarySha256": "2bea7801c5ff76b0d05adc33cc6b6f8eb8ef974b9e967d1019c1fd151d308c5c"
+      }
+    }
+  ],
+  "toolchain": {
+    "kind": "toolchain-and-proof-gate",
+    "solverImplemented": true,
+    "checkedAt": "2026-10-17T12:55:15.412Z",
+    "node": "v24.21.0",
+    "bend": "bend 2.0.37",
+    "sourceHashes": {
+      "flake.nix": "4a14e2c979e9d7f5ad0335817c7ecb41cf85cb7964120b29391b12740c511dd5",
+      "flake.lock": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698",
+      "scripts/check.mjs": "8cf5269b2e7aa63042d48f5845ac82da86818a984a1bac596e3db654a4045d69",
+      "LAWS.bend": "af97a1357000e37e9ab2e6421a16734340ab9618c4245ba1f9b353d78fb53d7d",
+      "PROOF.bend": "de40a629eabe5d214a2b0a37b99799b9d4caeeca83cf4cfb273345e10f582f7a",
+      "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+      "src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+      "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+      "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+      "src/joint-audit.bend": "b32aa90bea2c86906268bb89a9d24e39b106a6952898fda29c2723abe032d3de",
+      "src/joint-cache.bend": "920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee",
+      "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+      "src/main.bend": "568554dfd189dfd3cfa4ade183bd04a3ca3337e26199290df02b0e1c85f98279",
+      "src/model-laws.bend": "70652c08b10e5b07f413a39985df1eb80aeba55c8d6c39601b59e9705e3d6dad",
+      "src/model-proof.bend": "7fb85129cc6b156e6f3c4ac7c22584883d613b0e674edc718310b1efea31b09f",
+      "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+      "src/notation.bend": "9fcd7e7cac6eaa57adad857e676bb02d719f0ee101259d4cc4652f5e24d6715f",
+      "src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+      "src/portfolio.bend": "c0bcb6c329745258293908f7f9ac0a98975511af3d4d22985f46d6a9f632f619",
+      "src/pruning-laws.bend": "2cb78a8063a804a62769772f1c3490ccea76ee047424f3bdd80b8f80950fe55c",
+      "src/raw-table-io.bend": "c4e9722505b11ce4de4336e7c3ed6fd330dd6ba35c4d3dced358202644b09f5d",
+      "src/search.bend": "28211c0ce189726fd8205e4cf60bd38c19055e542b76e10238925d2e8c640bca",
+      "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+      "src/table-audit.bend": "4b92f861564b1a50cd2d2f8f0e6a2c2ddc6e86ace4a8e6fac82f9b1e330ef869",
+      "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+      "src/toolchain.bend": "c34b475dcd733da3eb8be20bad08d39d36058a3268ef1a27730449855a327d0a",
+      "src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+      "tests/toolchain/rejected/false.bend": "a969249d4e7e74a1a97106a5def78477a616e2858cd1ef94ebe7a7cda28fb7fa",
+      "tests/toolchain/rejected/open.bend": "2f0b85b7c9cae12b489c46ba952f9f931bd657f84107b135e0be311324d1f800",
+      "tests/toolchain/rejected/unsafe.bend": "6bab71152aea9efc13456d99dd7294c1f3d57fd7ad1dd81e316c1d401c57c669"
+    },
+    "results": [
+      {
+        "name": "pinned Bend version",
+        "status": "pass",
+        "durationMs": 30,
+        "output": "bend 2.0.37"
+      },
+      {
+        "name": "pinned Lean version",
+        "status": "pass",
+        "durationMs": 34,
+        "output": "Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)"
+      },
+      {
+        "name": "Bend proof checker",
+        "status": "pass",
+        "durationMs": 1186,
+        "output": "ALL PROOFS CHECK\nUse --verdict for mathematical validity."
+      },
+      {
+        "name": "independent BendTT verdict",
+        "status": "pass",
+        "durationMs": 18055,
+        "output": "ALL PROOFS CHECK"
+      },
+      {
+        "name": "reject false proof",
+        "status": "pass",
+        "durationMs": 124,
+        "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+      },
+      {
+        "name": "verdict rejects false proof",
+        "status": "pass",
+        "durationMs": 123,
+        "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+      },
+      {
+        "name": "reject open proof",
+        "status": "pass",
+        "durationMs": 121,
+        "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+      },
+      {
+        "name": "verdict rejects open proof",
+        "status": "pass",
+        "durationMs": 109,
+        "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+      },
+      {
+        "name": "reject unsafe proof",
+        "status": "pass",
+        "durationMs": 111,
+        "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+      },
+      {
+        "name": "verdict rejects unsafe proof",
+        "status": "pass",
+        "durationMs": 113,
+        "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+      },
+      {
+        "name": "Bend IO execution",
+        "status": "pass",
+        "durationMs": 2211,
+        "output": "Rubend: pass 54 URFDLB facelets, fast|exact, and a millisecond budget."
+      },
+      {
+        "name": "native compilation",
+        "status": "pass",
+        "durationMs": 18976,
+        "output": ""
+      },
+      {
+        "name": "native execution",
+        "status": "pass",
+        "durationMs": 2,
+        "output": "Rubend: pass 54 URFDLB facelets, fast|exact, and a millisecond budget."
+      },
+      {
+        "name": "JavaScript module compilation",
+        "status": "pass",
+        "durationMs": 136,
+        "output": ""
+      },
+      {
+        "name": "generated JavaScript interop",
+        "status": "pass"
+      },
+      {
+        "name": "safe production Bend sources",
+        "status": "pass"
+      }
+    ]
+  },
+  "independentReview": "Not run. Solo work required.",
+  "performanceClaim": null
+}

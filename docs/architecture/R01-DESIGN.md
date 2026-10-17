@@ -73,6 +73,18 @@ Start with R01a independently of the kernel refactor. A scorecard must not
 require the historical warm runner's exact 1,990-job shape. It validates a
 general finite event-record contract and leaves its source artifact intact.
 
+R01b is staged. Its first change carries an immutable explicit Profile in search
+metadata. Checked IO loaders supply Light, RawJoint, or BlockJoint explicitly.
+Portfolio and direct-search initializers validate geometry once. The hot search
+never infers feature presence from Array.size. A profile/storage mismatch fails
+closed. No loaded-data theorem is claimed from this geometry check.
+
+This is smaller than replacing every owned-array interface at once. The single
+array still has one owner. The metadata tag describes the loader-selected
+capability and is preserved through restarts and exact-task creation. Goal and
+completion enums remain the next separate change. The fixed-work serializer
+omits the new immutable tag and retains all previous semantic fields.
+
 ## Open questions and risks
 
 All new speed targets are unmeasured. Typed contracts alone do not prove
