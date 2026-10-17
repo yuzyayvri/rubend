@@ -1,0 +1,80 @@
+{
+  "format": "rubend-startup-acceptance-v1",
+  "accepted": false,
+  "status": "BLOCKED: independent review",
+  "metric": "warm-file-cache fresh-worker constructor-to-ready median",
+  "targetReductionPercent": 50,
+  "attemptFloor": 3,
+  "measuredReductionPercent": 80.35671299307359,
+  "targetAndAttemptFloorMet": true,
+  "comparisonRuns": 55,
+  "comparisonErrors": 0,
+  "correctness": {
+    "developmentRegression": true,
+    "bendTT": true,
+    "semanticSnapshotPairs": 4591,
+    "candidateSnapshotPairs": 3907,
+    "rawShallowOptima": 163,
+    "cacheIdentitiesUnchanged": true,
+    "nixPackageRechecked": false,
+    "universalForeignIOProof": false,
+    "universalCompletenessProof": false,
+    "worldClassStrengthEstablished": false
+  },
+  "acceptedNewPerformanceFixes": 0,
+  "remainingGates": [
+    "independent loader and FFI correctness review",
+    "independent fixed-work lever review",
+    "new no-comments review",
+    "cross-model trail review"
+  ],
+  "completedIndependentReviews": [
+    "gpt-6-luna architecture selection",
+    "gpt-6-luna measurement harness and process-identity follow-up"
+  ],
+  "attempts": [
+    {
+      "id": "block-layout",
+      "hypothesis": "Lossless two-width blocks reduce storage without weakening distances",
+      "verdict": "rejected for speed",
+      "reason": "Preliminary fixed-budget search did less work and missed one shorter answer; not a new repeated-performance verdict",
+      "evidence": "docs/verification/optimization-v1/layout-compare.json"
+    },
+    {
+      "id": "direct-placement",
+      "hypothesis": "Read at final array positions to avoid a whole-table relocation",
+      "beforeMs": 9538.02972500003,
+      "afterMs": 9435.505992999999,
+      "reductionPercent": 1.0748942387053706,
+      "verdict": "measured isolated improvement; not independently accepted",
+      "reason": "Confirmation does not establish a separate win over the untouched original"
+    },
+    {
+      "id": "word-transport",
+      "hypothesis": "Eliminate per-byte lists and decode directly into the owned U32 array",
+      "beforeMs": 9435.505992999999,
+      "afterMs": 1864.6186349999916,
+      "reductionPercent": 80.23827618377528,
+      "verdict": "measured improvement; independent review blocked"
+    },
+    {
+      "id": "chunk-tuning",
+      "hypothesis": "Larger bounded word chunks reduce IO scheduling overhead",
+      "beforeMs": 1864.6186349999916,
+      "afterMs": 1835.1500379999925,
+      "reductionPercent": 1.580408800322819,
+      "verdict": "retain existing 262144-word prototype setting; independent review blocked"
+    }
+  ],
+  "principleDecisions": {
+    "Boundary Discipline": "checked geometry before opening files; foreign transport remains outside pure proof graph",
+    "Model the Domain": "one raw initializer owns geometry, digest, allocation and prefix",
+    "Build the Lever": "reusable startup and deterministic full-state comparison tools",
+    "Explain the Number": "profile outside reported runs and tune every comparison side",
+    "Sequence Work into Verifiable Units": "separate measurement freeze, optimization experiments and acceptance",
+    "Separate Before Serializing Shared State": "isolated writer worktrees; root alone integrates and commits",
+    "Prove It Works": "native artifact checks, independent replay and frozen-state equality"
+  },
+  "publicationAuthorized": false,
+  "publicationPerformed": false
+}

@@ -1,0 +1,249 @@
+{
+  "format": "rubend-startup-comparison-summary-v1",
+  "passed": true,
+  "counts": {
+    "plannedRuns": 40,
+    "attemptedRuns": 40,
+    "launchedWorkers": 40,
+    "readyEvents": 40,
+    "checkedSolvedReplays": 40,
+    "successfulRuns": 40,
+    "runErrors": 0,
+    "batchErrors": 0,
+    "hostHashBytes": 62078607360
+  },
+  "conditions": {
+    "timer": "Before Engine construction through observed real ready event; includes FIFO and process construction, excludes host SHA256",
+    "fileCache": "Complete host SHA256 streams warm the file cache before every worker; not cold disk startup",
+    "rss": "Linux native worker /proc RSS and HWM samples including immediate ready read; excludes host and browser; sampled peak is not a guaranteed lifetime peak",
+    "geometry": "Declared cache bytes and U32 word counts are input geometry, not native read counters",
+    "nativeReadBytes": null
+  },
+  "summary": {
+    "legacy-shift-16384": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9686.298741000006,
+        "minimum": 9639.948891999986,
+        "maximum": 9694.535483999993
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10612.692787000036,
+        "minimum": 10572.996661000012,
+        "maximum": 10624.811716000026
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 926.3940460000304,
+        "minimum": 906.5180380000093,
+        "maximum": 968.9764729999879
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2142664,
+        "minimum": 2142664,
+        "maximum": 2142664
+      }
+    },
+    "legacy-direct-16384": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9535.354801000009,
+        "minimum": 9529.957180000027,
+        "maximum": 9570.253671000013
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10496.937685000012,
+        "minimum": 10458.261880999999,
+        "maximum": 10517.06713900005
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 948.4330719999998,
+        "minimum": 904.0593519999966,
+        "maximum": 987.1099590000231
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2142664,
+        "minimum": 2142664,
+        "maximum": 2142664
+      }
+    },
+    "legacy-shift-65536": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9538.02972500003,
+        "minimum": 9504.363285999978,
+        "maximum": 9551.272347000006
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10449.04651900001,
+        "minimum": 10410.679368000001,
+        "maximum": 10476.765117000032
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 920.942876999994,
+        "minimum": 897.7741720000049,
+        "maximum": 938.7353920000023
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2147464,
+        "minimum": 2147464,
+        "maximum": 2147464
+      }
+    },
+    "legacy-direct-65536": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9435.505992999999,
+        "minimum": 9403.496012999996,
+        "maximum": 9471.270027999999
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10363.982808,
+        "minimum": 10354.456808000003,
+        "maximum": 10418.177565999998
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 931.8047859999933,
+        "minimum": 918.9508150000038,
+        "maximum": 958.1830820000032
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2147464,
+        "minimum": 2147464,
+        "maximum": 2147464
+      }
+    },
+    "legacy-shift-262144": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9686.104603,
+        "minimum": 9678.405055999989,
+        "maximum": 9702.030687999999
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10609.53140799998,
+        "minimum": 10585.940738999998,
+        "maximum": 10628.86310300001
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 926.8324150000117,
+        "minimum": 899.8361359999981,
+        "maximum": 931.126351999992
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2166664,
+        "minimum": 2166664,
+        "maximum": 2166664
+      }
+    },
+    "legacy-direct-262144": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9556.272593000002,
+        "minimum": 9546.196049000006,
+        "maximum": 9570.332212999987
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10482.526993000007,
+        "minimum": 10460.388152,
+        "maximum": 10511.93423600003
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 924.9270690000267,
+        "minimum": 905.9174050000001,
+        "maximum": 961.0220330000157
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2166664,
+        "minimum": 2166664,
+        "maximum": 2166664
+      }
+    },
+    "word-direct-65536": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 1864.6186349999916,
+        "minimum": 1862.1099380000087,
+        "maximum": 1872.492843999993
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 2791.1321990000433,
+        "minimum": 2766.399105999997,
+        "maximum": 2812.0971819999977
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 919.7709420000319,
+        "minimum": 902.977893000003,
+        "maximum": 939.6043380000046
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2141304,
+        "minimum": 2141304,
+        "maximum": 2141304
+      }
+    },
+    "word-direct-262144": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 1835.1500379999925,
+        "minimum": 1827.65661299997,
+        "maximum": 1837.956720000002
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 2754.0437290000264,
+        "minimum": 2739.8791869999986,
+        "maximum": 2764.6671429999988
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 920.4688060000044,
+        "minimum": 904.7291490000061,
+        "maximum": 928.3095570000005
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2142072,
+        "minimum": 2142072,
+        "maximum": 2142072
+      }
+    }
+  },
+  "resource": {
+    "elapsedMs": 364986,
+    "peakTreeRssKiB": 2292996,
+    "exitCode": 0,
+    "limits": {
+      "memoryMiB": 3072,
+      "seconds": 900,
+      "cpus": [
+        0
+      ],
+      "nice": 10,
+      "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+    }
+  },
+  "evidence": "docs/verification/optimization-v1/startup-eight-profile-comparison.json.gz",
+  "rawSha256": "395ac90cdf1428221f18b25980ffa35402f38b864be2cc4c0b44049f9cb0740e",
+  "compressedSha256": "d25895ecd949a401471cd733a88e94372e4eace0f53854221b2ec64b650b1f63"
+}

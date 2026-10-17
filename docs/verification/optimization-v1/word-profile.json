@@ -1,0 +1,34 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "startup-word-profile",
+  "startedAt": "2026-10-17T06:45:13.698Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/profile/word-direct-v1",
+    "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+    "fast",
+    "50",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 3072,
+    "seconds": 60,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "f0a9271be3a9eac417d1fb5dbde1bf9302813e5562c652a5c981d831949283d4",
+  "availableMiB": 16868,
+  "peakTreeRssKiB": 2145068,
+  "samples": 10,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"type\":\"progress\",\"nodes\":0,\"lower\":0,\"elapsedMs\":0}\n{\"type\":\"candidate\",\"moves\":[],\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n{\"type\":\"progress\",\"nodes\":262,\"lower\":0,\"elapsedMs\":1}\n{\"type\":\"candidate\",\"moves\":[],\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n{\"type\":\"done\",\"length\":0,\"lower\":0,\"nodes\":262,\"optimal\":1}\n",
+  "stderr": "",
+  "elapsedMs": 2062,
+  "finishedAt": "2026-10-17T06:45:15.765Z"
+}

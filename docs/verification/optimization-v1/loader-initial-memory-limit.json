@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "loader-check-build",
+  "startedAt": "2026-10-17T06:32:13.796Z",
+  "cwd": "/home/yuzy/.codex/worktrees/startup-loader/rubend",
+  "command": [
+    "/nix/store/10dxp0qxqxxsyiljrh2kp0xqhz6arhcx-bash-5.3p15/bin/bash",
+    "-c",
+    "bend tests/loader-boundary.bend -o build/loader-boundary-test.c && clang -O2 build/loader-boundary-test.c tests/loader-growth.c -Wl,--wrap=read -Wl,--wrap=close -o build/loader-boundary-wrapped-test -lpthread -lm && bend bench/advanced-main.bend -o build/advanced-main"
+  ],
+  "limits": {
+    "memoryMiB": 512,
+    "seconds": 120,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "5aef0c87ea235a61a901c799eff3394bd463aaef391054d34b4c9942f38e8a9a",
+  "availableMiB": 14618,
+  "peakTreeRssKiB": 646720,
+  "samples": 166,
+  "exitCode": null,
+  "signal": "SIGKILL",
+  "stoppedFor": "aggregate-rss-limit",
+  "stdout": "",
+  "stderr": "",
+  "elapsedMs": 33260,
+  "finishedAt": "2026-10-17T06:32:47.059Z"
+}

@@ -26,3 +26,10 @@ It approved the harness for freeze. Thirty fixture cases and 97 worker cleanup
 checks passed in 10.6 seconds with 144,812 KiB peak aggregate RSS. The known
 100-ms delay separated fixture medians by about 98 ms. This is sensitivity
 evidence, not a product speed verdict.
+
+After integration, the root requested a new independent IO reviewer. The host
+rejected that dispatch at its agent limit. It also rejected the permitted
+follow-up to the finished independent reviewer. No close-agent tool is exposed.
+The new loader, fixed-work lever, and search refinements therefore retain an
+open independent-review gate. The root's inspection, owner tests, and future
+measurements do not replace that gate.

@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "startup-fixed-work-comparison",
+  "startedAt": "2026-10-17T06:44:09.813Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/bash",
+    "-c",
+    "set -e\nnode bench/fixed-work.mjs --reference build/startup-fixed-reference --candidate build/startup-fixed-current --tier light --slices 64 --output build/evidence/startup-fixed-light.json\nnode bench/fixed-work.mjs --reference build/startup-fixed-reference --candidate build/startup-fixed-current --tier raw --slices 64 --output build/evidence/startup-fixed-raw.json\nnode bench/fixed-work.mjs --reference build/startup-fixed-reference --candidate build/startup-fixed-current --tier raw --slices 16 --corpus docs/verification/optimization-v1/resume-exact.json --output build/evidence/startup-fixed-raw-shallow.json"
+  ],
+  "limits": {
+    "memoryMiB": 4096,
+    "seconds": 240,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "80b557096c168920d1e77d7c064c92ee66b862d1f38be7efbe7bf254558d1c04",
+  "availableMiB": 16728,
+  "peakTreeRssKiB": 2283068,
+  "samples": 155,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"passed\":true,\"tier\":\"light\",\"cases\":14,\"slices\":64,\"snapshots\":910,\"candidates\":612,\"nodes\":12320882,\"output\":\"/home/yuzy/rubend/build/evidence/startup-fixed-light.json\"}\n{\"passed\":true,\"tier\":\"raw\",\"cases\":14,\"slices\":64,\"snapshots\":910,\"candidates\":688,\"nodes\":12520882,\"output\":\"/home/yuzy/rubend/build/evidence/startup-fixed-raw.json\"}\n{\"passed\":true,\"tier\":\"raw\",\"cases\":163,\"slices\":16,\"snapshots\":2771,\"candidates\":2607,\"nodes\":20450223,\"output\":\"/home/yuzy/rubend/build/evidence/startup-fixed-raw-shallow.json\"}\n",
+  "stderr": "",
+  "elapsedMs": 31138,
+  "finishedAt": "2026-10-17T06:44:40.955Z"
+}

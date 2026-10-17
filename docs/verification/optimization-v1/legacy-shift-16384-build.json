@@ -1,0 +1,27 @@
+{
+  "format": "rubend-experiment-build-v1",
+  "entry": "build/startup-variants-v1/legacy-16384/bench/advanced-legacy-shift.bend",
+  "sourceHashes": {
+    "build/startup-variants-v1/legacy-16384/bench/advanced-legacy-shift.bend": "7cabc975ab8f38b5988279ca1d6bc713e900d7894ccdefb9e317c29db3fc6a39",
+    "build/startup-variants-v1/legacy-16384/bench/raw-legacy-table-io.bend": "ca56f1b4d27ad8de9a40ad852e2bfac7ff465ca960a3bd2ea0d25727fe033e6b",
+    "build/startup-variants-v1/legacy-16384/src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+    "build/startup-variants-v1/legacy-16384/src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+    "build/startup-variants-v1/legacy-16384/src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+    "build/startup-variants-v1/legacy-16384/src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+    "build/startup-variants-v1/legacy-16384/src/joint-cache.bend": "f12a82aa9b89db0b6e468635b156fab5bcf4ece9dec15a81ae53f0494888290b",
+    "build/startup-variants-v1/legacy-16384/src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+    "build/startup-variants-v1/legacy-16384/src/main.bend": "e0ada028b3ce649ba21282a4d4f9a816039a844ca9b72a7cf72ad16d6cd22a75",
+    "build/startup-variants-v1/legacy-16384/src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    "build/startup-variants-v1/legacy-16384/src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+    "build/startup-variants-v1/legacy-16384/src/portfolio.bend": "778a0dfe288732e3be7837b00f29e13b2110769322c19be6814822e034da3df1",
+    "build/startup-variants-v1/legacy-16384/src/search.bend": "4734547b7c9648153113eaa7151ac4f0326171fe5ff8ef4b4d01243f0edd8841",
+    "build/startup-variants-v1/legacy-16384/src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+    "build/startup-variants-v1/legacy-16384/src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+    "build/startup-variants-v1/legacy-16384/src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+    "build/startup-variants-v1/legacy-16384/src/word-read.c": "b5e663644a48e15f5f81cc6129da7c1d3d8e200a34de6c66a81d5a01de1ac6d5",
+    "build/startup-variants-v1/legacy-16384/src/word-read.js": "c285128cc158ee58487af36bb4a6527cf9168dc36bbbc45b3a6fbea6b4ebba96"
+  },
+  "binarySha256": "05387f2586242caf809ac4338833a70ceeb19987e8134e242d31236a40d7223d",
+  "bend": "bend 2.0.37",
+  "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+}

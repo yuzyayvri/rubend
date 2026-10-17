@@ -1,0 +1,62 @@
+{
+  "format": "rubend-fixed-work-comparison-evidence-v1",
+  "records": [
+    {
+      "tier": "light",
+      "passed": true,
+      "cases": 14,
+      "slices": 64,
+      "counts": {
+        "snapshots": 910,
+        "candidates": 612,
+        "nodes": 12320882
+      },
+      "referenceBinarySha256": "929b9c8dcaf860ec92ff631a39baadd45096252e2d92fdd790d025f83e6eb8cb",
+      "candidateBinarySha256": "50a0f36074fdcb1ee343be43d7f16dad39ceb6d5b8eb4d338edf7b94142d2b42",
+      "snapshotSha256": "f8a0a07d373997b554f87600912e9b459d4518efc7ad1a0ce9b78931e6122d91",
+      "rawSha256": "d147241331fac4b76e8760f5c0f9e8ef59a4772a5cebff3d04c6d42fbe22c3db",
+      "compressedSha256": "3910589ac84e18ea88acf6e639a8d103acbbf5bc5c54167b7b8d37d39db378e2",
+      "rawBytes": 14548132,
+      "compressedBytes": 449024,
+      "evidence": "docs/verification/fixed-work-v1/light.json.gz"
+    },
+    {
+      "tier": "raw",
+      "passed": true,
+      "cases": 14,
+      "slices": 64,
+      "counts": {
+        "snapshots": 910,
+        "candidates": 688,
+        "nodes": 12520882
+      },
+      "referenceBinarySha256": "929b9c8dcaf860ec92ff631a39baadd45096252e2d92fdd790d025f83e6eb8cb",
+      "candidateBinarySha256": "50a0f36074fdcb1ee343be43d7f16dad39ceb6d5b8eb4d338edf7b94142d2b42",
+      "snapshotSha256": "fe4898e8c7378c8285e19413ebd0e64e30ae55fc7df35dc1f1fde423a7e0db03",
+      "rawSha256": "37fae81ef038e3de7d0232105770137001e676816d84b55b72cf58092c3ac9d8",
+      "compressedSha256": "219bb03c4f398605b122c11fd126ff24453d24e7f407ade28f2bfde91d0b3be7",
+      "rawBytes": 19164104,
+      "compressedBytes": 899782,
+      "evidence": "docs/verification/fixed-work-v1/raw.json.gz"
+    },
+    {
+      "tier": "raw-shallow",
+      "passed": true,
+      "cases": 163,
+      "slices": 16,
+      "counts": {
+        "snapshots": 2771,
+        "candidates": 2607,
+        "nodes": 20450223
+      },
+      "referenceBinarySha256": "929b9c8dcaf860ec92ff631a39baadd45096252e2d92fdd790d025f83e6eb8cb",
+      "candidateBinarySha256": "50a0f36074fdcb1ee343be43d7f16dad39ceb6d5b8eb4d338edf7b94142d2b42",
+      "snapshotSha256": "59bd09ef7da714b0e3e369228fe8e202313177f6dcb3f8ddba7a4b15e60c2669",
+      "rawSha256": "b33643c7589d10b5414e1daf4332db550e9b6f8cc4ed42d5f86924bdf56ce1a1",
+      "compressedSha256": "475245ec5af3d92e729e8b9b633ea6fefd7b54d8de3a459cd406b0d13ab09fb3",
+      "rawBytes": 29044974,
+      "compressedBytes": 553975,
+      "evidence": "docs/verification/fixed-work-v1/raw-shallow.json.gz"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "backend": "native",
+      "offset": 17,
+      "count": 70001,
+      "loaded": true
+    },
+    {
+      "backend": "native",
+      "offset": 13,
+      "count": 262144,
+      "loaded": true
+    },
+    {
+      "backend": "native",
+      "offset": 0,
+      "count": 5,
+      "loaded": false
+    },
+    {
+      "backend": "native",
+      "offset": 0,
+      "count": 1,
+      "loaded": false
+    },
+    {
+      "backend": "native",
+      "offset": 0,
+      "count": 0,
+      "loaded": false
+    },
+    {
+      "backend": "native",
+      "offset": 0,
+      "count": 262145,
+      "loaded": false
+    },
+    {
+      "backend": "native",
+      "offset": 4294967295,
+      "count": 17,
+      "loaded": false
+    },
+    {
+      "backend": "native",
+      "offset": 524288,
+      "count": 1,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 17,
+      "count": 70001,
+      "loaded": true
+    },
+    {
+      "backend": "javascript",
+      "offset": 13,
+      "count": 262144,
+      "loaded": true
+    },
+    {
+      "backend": "javascript",
+      "offset": 0,
+      "count": 5,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 0,
+      "count": 1,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 0,
+      "count": 0,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 0,
+      "count": 262145,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 4294967295,
+      "count": 17,
+      "loaded": false
+    },
+    {
+      "backend": "javascript",
+      "offset": 524288,
+      "count": 1,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 17,
+      "count": 70001,
+      "loaded": true
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 13,
+      "count": 262144,
+      "loaded": true
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 0,
+      "count": 5,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 0,
+      "count": 1,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 0,
+      "count": 0,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 0,
+      "count": 262145,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 4294967295,
+      "count": 17,
+      "loaded": false
+    },
+    {
+      "backend": "native-interrupted-short-reads",
+      "offset": 524288,
+      "count": 1,
+      "loaded": false
+    }
+  ],
+  "javascriptFaultInjection": true
+}

@@ -1,0 +1,41 @@
+{
+  "iterations": 5,
+  "readyTimeoutMs": 120000,
+  "solveTimeoutMs": 3000,
+  "rssSampleMs": 25,
+  "profiles": [
+    {
+      "id": "frozen-raw-baseline",
+      "binary": "/home/yuzy/rubend/build/rubend-raw-baseline",
+      "cache": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+      "cacheSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+      "cacheBytes": 1108546560,
+      "cacheWords": 277136640,
+      "env": {
+        "RUBEND_JOINT_CACHE": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw"
+      }
+    },
+    {
+      "id": "legacy-direct-65536",
+      "binary": "/home/yuzy/rubend/build/startup-legacy-direct-65536",
+      "cache": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+      "cacheSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+      "cacheBytes": 1108546560,
+      "cacheWords": 277136640,
+      "env": {
+        "RUBEND_JOINT_CACHE": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw"
+      }
+    },
+    {
+      "id": "word-direct-262144",
+      "binary": "/home/yuzy/rubend/build/startup-word-direct-262144",
+      "cache": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+      "cacheSha256": "2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5",
+      "cacheBytes": 1108546560,
+      "cacheWords": 277136640,
+      "env": {
+        "RUBEND_JOINT_CACHE": "/home/yuzy/rubend/.cache/joint/phase1-v1.raw"
+      }
+    }
+  ]
+}

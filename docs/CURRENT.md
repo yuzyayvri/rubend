@@ -16,11 +16,20 @@ shorter answer, so it is not selected for the speed profile.
 The remaining prototypes add bounded word IO, direct array writes outside the
 proof graph, offset fingerprinting, specialized getters, and reuse of an exact
 search child. Word IO passed 32 native, JS, injected-read, and sanitizer cases.
+The resumed loader adds checked count/capacity arithmetic before open, explicit
+file cleanup, final size checks, and one fixed raw initializer. Fifty synthetic
+boundary cases passed in its isolated worktree. It remains unapproved pending
+independent correctness review, which is blocked by the host's agent limit.
 The expanded pure proof entrypoint passed BendTT. The complete development
 regression passed again on 2026-10-17, including 163 shallow native optima,
 34 engine cases, HTTP protection, and export checks. Repeated startup
-measurements, raw-profile fixed-work comparisons, and independent implementation
-approval remain incomplete. Earlier Nix package evidence does not cover this WIP.
+measurements and frozen-reference fixed-work comparisons now pass. In a separate
+five-run alternating confirmation, ready latency fell from 9.41 to 1.85 seconds,
+80.36% lower. All 55 tuning/confirmation workers passed with zero errors. Both
+tiers match full search states, including all 163 raw-profile shallow optima.
+Independent implementation approval remains blocked by the host's agent cap.
+Earlier Nix package evidence does not cover this WIP. See
+`docs/benchmarks/OPTIMIZATION.md` and `docs/verification/FIXED-WORK.md`.
 
 Pstack routing arrived during this batch. Read the latest user-provided AGENTS
 instructions, `.audit/rubend-startup.todo.md`, and `.audit/rubend-startup.tsv`.
@@ -28,13 +37,15 @@ The How trace and three architecture candidates are saved under `.audit/`.
 The interrupted design cross-judge was replaced with a fresh Luna review.
 Candidate A was selected, with bounded IO into the final owned array positions.
 The decision and reconciled scores are in `.audit/rubend-startup-synthesis.md`.
-The generic cache-size arithmetic issue in `docs/issues/` remains open.
+The generic cache-size arithmetic issue has an implemented and tested boundary
+fix in the current prototype. Its independent approval remains open.
 
-Resume through the project-local pstack checkpoint locator. Freeze the reviewed
-five-repeat startup measurement before accepting any prototype. The first
+Resume through the project-local pstack checkpoint locator. The reviewed
+five-repeat startup measurement is frozen. The first
 measurement review found unsafe fixture cleanup by PID alone. The owner fixed
-it and independent re-review approved freezing. Large caches and frozen baseline binaries
-remain ignored on disk.
+it and independent re-review approved freezing. Large caches and frozen baseline
+binaries remain ignored on disk. New loader, fixed-work lever, comments, and
+trail review are the next gate. Tests do not substitute for that review.
 
 The user resumed autonomous implementation after a usage-limit pause. Keep all
 browser previews hidden: no visible windows may obstruct their work. The
