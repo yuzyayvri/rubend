@@ -45,7 +45,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [ ] Corner database, combination, full rollout, and independent review.
 - [ ] R03. Kernel and memory pilots, independently measured.
   - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
-  - [ ] Packed small-table memory pilot, then raw segmentation and owned stacks as separate hypotheses.
+  - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.
+  - [ ] Raw segmentation and owned stacks as separate hypotheses. Independent review and package rollout remain open.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
