@@ -18,6 +18,14 @@ never invent success.
 
 ## Current boundary
 
+On 2026-10-17 Yuzy approved `docs/architecture/OPTIMIZATION-ROADMAP.md`, requested
+autonomous implementation, and authorized pushing verified changes when done.
+This supersedes the older no-push boundary below. It does not authorize PR
+creation, merges, releases, deployment, system changes, or larger resource use.
+Yuzy subsequently required solo work. Do not spawn, resume, or delegate to any
+subagent. Perform implementation and checks directly. Do not claim independent
+review for solo work; record any resulting review gate as not run.
+
 Yuzy resumed autonomous implementation on 2026-10-16 after replenishing usage
 limits. Read `docs/CURRENT.md` before doing further work. All browser previews
 must stay hidden; do not obstruct the user's screen.
