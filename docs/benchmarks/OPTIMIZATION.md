@@ -94,9 +94,10 @@ Raw evidence is `docs/verification/optimization-v1/startup-baseline-five.json`.
 
 ## Repeated startup result
 
-The prototype is faster on this machine, but remains unapproved because the
-host could not allocate an independent reviewer. No performance change is
-promoted into the default small-memory application.
+The experimental raw initializer is accepted after independent correctness,
+evidence, trail, and comment reviews of `e6d5e6f`. No performance change is
+promoted into the default small-memory application. The review record is
+`.audit/rubend-startup-approval.md`.
 
 After tuning eight configurations, a separate alternating confirmation compared
 the untouched original, the best tuned byte loader, and the word loader. Each
@@ -140,10 +141,10 @@ counts, conditions, limits, and distributions. Binary build manifests preserve
 the exact source graphs. Reproduce with `bench/startup-compare.json` and
 `bench/startup-confirm.json` through the bounded runner.
 
-Block compression remains rejected for the speed profile. Direct placement,
-word transport, and chunk tuning have measured decisions but await independent
-acceptance. New performance fixes accepted in this resumed batch remain zero.
-The next required action is independent loader, lever, comments, and trail
-review with Sol/Luna reviewers and no Astra calls. The next performance idea,
-after approval, is to measure the remaining fingerprint and small-table startup
-cost without weakening validation or moving search mathematics into foreign code.
+Block compression remains rejected for the speed profile. One new performance
+unit is accepted, bounded word transport into the final raw-table positions.
+Chunk tuning retains the existing one-MiB scratch setting. The Sol correctness
+review and Luna evidence/comment review close the four startup gates.
+The next experiment checks matched-budget warm solving quality and work rate.
+Any later startup work must preserve validation and keep search mathematics in
+Bend. Packaged-app performance still needs its separate package checks.

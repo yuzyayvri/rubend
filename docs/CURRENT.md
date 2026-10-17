@@ -1,56 +1,50 @@
-# Current state — light app verified; larger Bend bound measured
+# Current state of Rubend
 
-## Optimization resume checkpoint
+## Accepted experimental raw startup
 
-The user requested a safe pause on 2026-10-17 with 7% usage remaining, then
-explicitly resumed. They now prohibit Astra calls. Use the scoped Sol and Luna
-roles recorded in AGENTS.md. The local `wip:` commit preserves the current
-prototypes. It is not an accepted performance improvement or a release.
+The raw-profile initialization change is accepted after independent review of
+code at `e6d5e6f`. It reads bounded little-endian word chunks into their final
+positions in one owned array. Search, table generation, fingerprint mathematics,
+and candidate certificates remain Bend code. The default small-memory app is
+not switched to this experimental profile.
 
-The verified commits in this batch are `97974c6`, full-table layout statistics,
-and `3f9913d`, the pure lossless block codec and its unit checks. Conversion then
-checked all 2,217,093,120 decoded values against the audited raw table. The
-1-GiB block variant's preliminary search comparison did less work and missed one
-shorter answer, so it is not selected for the speed profile.
+A separate five-run alternating confirmation measured median ready latency of
+9.41 seconds for the untouched original and 1.85 seconds for the candidate,
+80.36% lower. All 55 tuning and confirmation workers passed with zero errors.
+The complete fixed-work comparisons matched 4,591 semantic snapshots per side,
+including all 163 raw-profile shallow optima and 3,907 candidate snapshots.
+Both large caches and the frozen baseline and candidate binaries still match
+their saved SHA256 values after the interruption.
 
-The remaining prototypes add bounded word IO, direct array writes outside the
-proof graph, offset fingerprinting, specialized getters, and reuse of an exact
-search child. Word IO passed 32 native, JS, injected-read, and sanitizer cases.
-The resumed loader adds checked count/capacity arithmetic before open, explicit
-file cleanup, final size checks, and one fixed raw initializer. Fifty synthetic
-boundary cases passed in its isolated worktree. It remains unapproved pending
-independent correctness review, which is blocked by the host's agent limit.
-The expanded pure proof entrypoint passed BendTT. The complete development
-regression passed again on 2026-10-17, including 163 shallow native optima,
-34 engine cases, HTTP protection, and export checks. Repeated startup
-measurements and frozen-reference fixed-work comparisons now pass. In a separate
-five-run alternating confirmation, ready latency fell from 9.41 to 1.85 seconds,
-80.36% lower. All 55 tuning/confirmation workers passed with zero errors. Both
-tiers match full search states, including all 163 raw-profile shallow optima.
-Independent implementation approval remains blocked by the host's agent cap.
-Earlier Nix package evidence does not cover this WIP. See
-`docs/benchmarks/OPTIMIZATION.md` and `docs/verification/FIXED-WORK.md`.
+The `gpt-6-sol` reviewer approved loader/FFI and fixed-work correctness. The
+`gpt-6-luna` reviewer approved evidence, trail, and the scoped comment scan.
+Neither found an actionable defect. The earlier review-capacity blocker is
+resolved. Read `.audit/rubend-startup-approval.md` and
+`docs/verification/optimization-v1/acceptance.json` for the exact scope.
 
-Pstack routing arrived during this batch. Read the latest user-provided AGENTS
-instructions, `.audit/rubend-startup.todo.md`, and `.audit/rubend-startup.tsv`.
-The How trace and three architecture candidates are saved under `.audit/`.
-The interrupted design cross-judge was replaced with a fresh Luna review.
-Candidate A was selected, with bounded IO into the final owned array positions.
-The decision and reconciled scores are in `.audit/rubend-startup-synthesis.md`.
-The generic cache-size arithmetic issue has an implemented and tested boundary
-fix in the current prototype. Its independent approval remains open.
+The result is warm-file-cache native startup, not cold disk, browser, or
+packaged-app performance. The raw array still occupies two GiB. Nix package
+checks have not been rerun for this source. The reviewer explicitly confirmed
+that package rechecking is a separate rollout requirement, not a gate for this
+experimental-binary measurement. No universal foreign-IO or completeness proof,
+world-class strength, or equal quality at every time budget is claimed.
 
-Resume through the project-local pstack checkpoint locator. The reviewed
-five-repeat startup measurement is frozen. The first
-measurement review found unsafe fixture cleanup by PID alone. The owner fixed
-it and independent re-review approved freezing. Large caches and frozen baseline
-binaries remain ignored on disk. New loader, fixed-work lever, comments, and
-trail review are the next gate. Tests do not substitute for that review.
+The lossless block codec passed full entry equality but remains rejected for the
+speed profile. Search specializations and exact-child reuse remain a separate
+warm-solve experiment. The next check compares solving quality and search work
+under matched budgets, not only startup or fixed-work equality.
 
-The user resumed autonomous implementation after a usage-limit pause. Keep all
-browser previews hidden: no visible windows may obstruct their work. The
-small-memory app and solver are implemented; do not claim the full world-class
-objective is complete.
+The complete development regression and BendTT checks pass. Preserve the source
+and evidence in Git, and the ignored sealed caches and frozen binaries on disk.
+The active checklist is `.audit/rubend-startup.todo.md`; the append-only trail is
+`.audit/rubend-startup.tsv`. The old checkpoint pointer reports intentional
+artifact changes after resumed progress. Publish a new verified checkpoint at
+handoff rather than treating the old hash mismatch as lost data.
+
+Continue without visible windows or Astra calls. Local experiment batches stay
+within eight GiB including scratch, two low-priority cores, and thirty minutes.
+Keep configured local Git authorship and commit verified units frequently.
+Publication, merges, pushes, deployment, and system changes are not authorized.
 
 ## Run and verify
 

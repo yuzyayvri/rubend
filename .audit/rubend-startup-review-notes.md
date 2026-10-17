@@ -33,3 +33,11 @@ follow-up to the finished independent reviewer. No close-agent tool is exposed.
 The new loader, fixed-work lever, and search refinements therefore retain an
 open independent-review gate. The root's inspection, owner tests, and future
 measurements do not replace that gate.
+
+The user resumed work at unchanged code revision `e6d5e6f`. Fresh native review
+dispatches succeeded. The `gpt-6-sol` reviewer independently approved scoped
+loader/FFI correctness and the fixed-work tool. The `gpt-6-luna` reviewer approved
+the evidence/trail and scoped comment scan. Both found zero comments or
+suppressions and no actionable defect. Their exact scopes and the corrected
+package-check caveat are recorded in `.audit/rubend-startup-approval.md`.
+The prior capacity blocker is historical, not an open startup gate.
