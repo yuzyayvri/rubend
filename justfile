@@ -27,6 +27,7 @@ test: build
     node bench/corpus.mjs --check
     node tests/corpus.mjs
     node tests/scorecard.mjs
+    node tests/resource-policy.mjs
     bend tests/search-profile.bend -o build/search-profile-test
     build/search-profile-test --threads 1
     bend tests/search-profile.bend -o build/search-profile-test.mjs

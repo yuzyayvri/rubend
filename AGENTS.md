@@ -21,10 +21,15 @@ never invent success.
 On 2026-10-17 Yuzy approved `docs/architecture/OPTIMIZATION-ROADMAP.md`, requested
 autonomous implementation, and authorized pushing verified changes when done.
 This supersedes the older no-push boundary below. It does not authorize PR
-creation, merges, releases, deployment, system changes, or larger resource use.
+creation, merges, releases, deployment, or system changes.
 Yuzy subsequently required solo work. Do not spawn, resume, or delegate to any
 subagent. Perform implementation and checks directly. Do not claim independent
 review for solo work; record any resulting review gate as not run.
+
+Yuzy later authorized more local CPU and RAM after inspecting headroom. Use
+docs/benchmarks/RESOURCE-POLICY.md instead of the older two-core/eight-GiB
+allocation ceiling below. Keep desktop headroom, low priority, matched benchmark
+resources, and the thirty-minute per-batch limit. No cloud or GPU installation.
 
 Yuzy resumed autonomous implementation on 2026-10-16 after replenishing usage
 limits. Read `docs/CURRENT.md` before doing further work. All browser previews
