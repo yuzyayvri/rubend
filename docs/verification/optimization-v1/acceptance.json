@@ -1,7 +1,7 @@
 {
   "format": "rubend-startup-acceptance-v1",
-  "accepted": false,
-  "status": "BLOCKED: independent review",
+  "accepted": true,
+  "status": "accepted scoped experimental raw startup",
   "metric": "warm-file-cache fresh-worker constructor-to-ready median",
   "targetReductionPercent": 50,
   "attemptFloor": 3,
@@ -21,16 +21,13 @@
     "universalCompletenessProof": false,
     "worldClassStrengthEstablished": false
   },
-  "acceptedNewPerformanceFixes": 0,
-  "remainingGates": [
-    "independent loader and FFI correctness review",
-    "independent fixed-work lever review",
-    "new no-comments review",
-    "cross-model trail review"
-  ],
+  "acceptedNewPerformanceFixes": 1,
+  "remainingGates": [],
   "completedIndependentReviews": [
     "gpt-6-luna architecture selection",
-    "gpt-6-luna measurement harness and process-identity follow-up"
+    "gpt-6-luna measurement harness and process-identity follow-up",
+    "gpt-6-sol loader/FFI and fixed-work correctness at e6d5e6f",
+    "gpt-6-luna evidence/trail and scoped no-comments review at e6d5e6f"
   ],
   "attempts": [
     {
@@ -46,7 +43,7 @@
       "beforeMs": 9538.02972500003,
       "afterMs": 9435.505992999999,
       "reductionPercent": 1.0748942387053706,
-      "verdict": "measured isolated improvement; not independently accepted",
+      "verdict": "included in accepted initializer; not a separate original-baseline win",
       "reason": "Confirmation does not establish a separate win over the untouched original"
     },
     {
@@ -55,7 +52,7 @@
       "beforeMs": 9435.505992999999,
       "afterMs": 1864.6186349999916,
       "reductionPercent": 80.23827618377528,
-      "verdict": "measured improvement; independent review blocked"
+      "verdict": "accepted as bounded experimental raw initialization"
     },
     {
       "id": "chunk-tuning",
@@ -63,7 +60,7 @@
       "beforeMs": 1864.6186349999916,
       "afterMs": 1835.1500379999925,
       "reductionPercent": 1.580408800322819,
-      "verdict": "retain existing 262144-word prototype setting; independent review blocked"
+      "verdict": "retain tested 262144-word setting; no separate source-setting change"
     }
   ],
   "principleDecisions": {
@@ -76,5 +73,18 @@
     "Prove It Works": "native artifact checks, independent replay and frozen-state equality"
   },
   "publicationAuthorized": false,
-  "publicationPerformed": false
+  "publicationPerformed": false,
+  "acceptanceRecord": ".audit/rubend-startup-approval.md",
+  "acceptedScope": {
+    "experimentalRawInitialization": true,
+    "defaultAppRollout": false,
+    "packagedAppPerformance": false,
+    "coldDiskPerformance": false,
+    "warmSearchPerformance": false
+  },
+  "followups": [
+    "recheck Nix package before packaged-app claims or rollout",
+    "measure warm solving under matched resource and time budgets",
+    "retain formal coverage limits"
+  ]
 }
