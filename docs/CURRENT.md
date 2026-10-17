@@ -16,20 +16,25 @@ shorter answer, so it is not selected for the speed profile.
 The remaining prototypes add bounded word IO, direct array writes outside the
 proof graph, offset fingerprinting, specialized getters, and reuse of an exact
 search child. Word IO passed 32 native, JS, injected-read, and sanitizer cases.
-The expanded pure proof entrypoint passed BendTT. Full regression, repeated
-startup measurements, fixed-work comparisons, and independent approval remain
-incomplete. Earlier Nix package evidence does not cover this WIP.
+The expanded pure proof entrypoint passed BendTT. The complete development
+regression passed again on 2026-10-17, including 163 shallow native optima,
+34 engine cases, HTTP protection, and export checks. Repeated startup
+measurements, raw-profile fixed-work comparisons, and independent implementation
+approval remain incomplete. Earlier Nix package evidence does not cover this WIP.
 
 Pstack routing arrived during this batch. Read the latest user-provided AGENTS
 instructions, `.audit/rubend-startup.todo.md`, and `.audit/rubend-startup.tsv`.
 The How trace and three architecture candidates are saved under `.audit/`.
-The design cross-judge was interrupted at the pause. Its gate remains closed.
+The interrupted design cross-judge was replaced with a fresh Luna review.
+Candidate A was selected, with bounded IO into the final owned array positions.
+The decision and reconciled scores are in `.audit/rubend-startup-synthesis.md`.
 The generic cache-size arithmetic issue in `docs/issues/` remains open.
 
-Resume through the project-local pstack checkpoint locator. The first action is
-to finish the independent design judgment, then freeze a five-repeat startup
-measurement before accepting any prototype. No benchmark, server, or worker was
-left running. Large caches and frozen baseline binaries remain ignored on disk.
+Resume through the project-local pstack checkpoint locator. Freeze the reviewed
+five-repeat startup measurement before accepting any prototype. The first
+measurement review found unsafe fixture cleanup by PID alone. The owner fixed
+it and independent re-review approved freezing. Large caches and frozen baseline binaries
+remain ignored on disk.
 
 The user resumed autonomous implementation after a usage-limit pause. Keep all
 browser previews hidden: no visible windows may obstruct their work. The
