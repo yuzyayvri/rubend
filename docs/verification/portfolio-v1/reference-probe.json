@@ -1,0 +1,41 @@
+{
+  "source": "https://github.com/sebastianotronto/nissy-core",
+  "revision": "1f7e8e937d0e71e7eb3b5deab38b34d0a0159d88",
+  "compiler": "clang from the pinned Nix development environment",
+  "architecture": "AVX2",
+  "buildThreads": 1,
+  "role": "independent reference only; not a product backend",
+  "profiles": [
+    {
+      "id": "h48h0",
+      "bytes": 31683944
+    },
+    {
+      "id": "h48h7",
+      "bytes": 3793842344
+    },
+    {
+      "id": "h48h8",
+      "bytes": 7585624040
+    }
+  ],
+  "largeProfileMetadataOnly": true,
+  "referenceSolveBenchmarksCompleted": false,
+  "pilot": {
+    "profile": "h48h0",
+    "timeLimitSeconds": 10,
+    "virtualMemoryLimitMiB": 256,
+    "nice": 10,
+    "exitCode": 124,
+    "computedShortPositions": 7437855,
+    "completed": false,
+    "emptyPlaceholderRemoved": true
+  },
+  "largeProfileAuthorized": false,
+  "proposedLimits": {
+    "memoryGiB": 8,
+    "cpuCores": 2,
+    "wallMinutesPerBatch": 30,
+    "localOnly": true
+  }
+}

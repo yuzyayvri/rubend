@@ -1,0 +1,171 @@
+{
+  "researchedOn": "2026-10-16",
+  "timezone": "Asia/Manila",
+  "method": "Primary papers, author explanations, repository documentation and selected implementation files; no solver performance reproduction yet.",
+  "sources": [
+    {
+      "id": "bend",
+      "title": "Bend 2 repository, guide, base, compiler, and runtime papers",
+      "url": "https://github.com/bendlang/bend",
+      "revision": "7e120d5bd257ed3704daf1301b02fd17f5d1fb9d",
+      "release": "2.0.37",
+      "releaseRevision": "4ff8545f19b09b7d2b8ca2303668100eac8efd66",
+      "inspected": ["README.md", "AGENTS.md", "flake.nix", "guide/GUIDE.md", "guide/SHADERS.md", "guide/EFFECTS.md", "bend2/base.bend", "bend2/main.ts", "bend2/safe.ts", "bend2/docs/BendTT/main.typ", "bend2/docs/BendRT/main.typ"],
+      "license": "Apache-2.0",
+      "role": "Language constraints, native/JS backends, proof boundary, reproducible Nix packaging. Release binaries and reviewed checkout are explicitly distinguished."
+    },
+    {
+      "id": "lean",
+      "title": "Lean 4.34.0 official release",
+      "url": "https://github.com/leanprover/lean4/releases/tag/v4.34.0",
+      "artifact": "lean-4.34.0-linux.tar.zst",
+      "sha256": "caaa98356098c85dc0fcbbd28e1ec66f39eb6551829972b752ff20e1286b646b",
+      "role": "Exact compiler version required to build the release's independent BendTT kernel."
+    },
+    {
+      "id": "korf1997",
+      "title": "Finding Optimal Solutions to Rubik's Cube Using Pattern Databases",
+      "authors": ["Richard E. Korf"],
+      "year": 1997,
+      "venue": "AAAI, pages 700–705",
+      "url": "https://cdn.aaai.org/AAAI/1997/AAAI97-109.pdf",
+      "role": "IDA* and admissible pattern-database foundation; overlapping heuristics are combined by maximum rather than an unjustified sum."
+    },
+    {
+      "id": "diameter2013",
+      "title": "The Diameter of the Rubik's Cube Group Is Twenty",
+      "authors": ["Tomas Rokicki", "Herbert Kociemba", "Morley Davidson", "John Dethridge"],
+      "year": 2013,
+      "doi": "10.1137/120867366",
+      "url": "https://kociemba.org/math/papers/rubik20.pdf",
+      "role": "20-move HTM diameter, symmetry/coset methods, and independent computational verification."
+    },
+    {
+      "id": "cube20",
+      "title": "God's Number is 20",
+      "url": "https://www.cube20.org/",
+      "role": "Original computational project and metric definition."
+    },
+    {
+      "id": "kociemba-two-phase",
+      "title": "The Two-Phase Algorithm Coordinates",
+      "url": "https://kociemba.org/math/twophase.htm",
+      "role": "Subgroup transition, twist/flip/slice domains, and phase-two coordinates."
+    },
+    {
+      "id": "kociemba-cubies",
+      "title": "The Cubie Level",
+      "url": "https://kociemba.org/math/cubielevel.htm",
+      "role": "Explicit corner/edge order and orientation convention."
+    },
+    {
+      "id": "kociemba-pruning",
+      "title": "Pruning Tables",
+      "url": "https://kociemba.org/math/pruning.htm",
+      "role": "Lower-bound interpretation and coordinate-indexed pruning."
+    },
+    {
+      "id": "kociemba-optimal",
+      "title": "The Optimal Solvers",
+      "url": "https://kociemba.org/math/optimal.htm",
+      "role": "Multiple-axis admissible estimates and exact-search background."
+    },
+    {
+      "id": "min2phase",
+      "title": "min2phase",
+      "url": "https://github.com/cs0x7f/min2phase",
+      "revision": "4d183b9eff8119cac72bc50ef35a7d8990740e06",
+      "inspected": ["README.md", "Algorithm.md", "src/Search.java"],
+      "licenseNote": "README includes GPL and MIT texts; inspected Search.java carries GPL-3.0-or-later. Preserve file-level notices for adaptations.",
+      "role": "Compact two-phase reference and first-answer competitor."
+    },
+    {
+      "id": "kociemba-python",
+      "title": "RubiksCube-TwophaseSolver",
+      "url": "https://github.com/hkociemba/RubiksCube-TwophaseSolver",
+      "revision": "0c1ea6233cb2d4f294bc97077b60265ba76f3616",
+      "license": "GPL-3.0",
+      "role": "Independent reference API, anytime behavior, facelet format, and initialization cost. Upstream benchmarks were not reproduced."
+    },
+    {
+      "id": "nxopt",
+      "title": "Nxopt optimal solver design",
+      "url": "https://github.com/rokicki/cube20src/blob/master/nxopt.md",
+      "revision": "f430921a48306874864b9f2ac8a059b43492fd3a",
+      "license": "GPL-3.0",
+      "role": "Compressed coset tables, inverse estimates, table sizes, and batch parallelism."
+    },
+    {
+      "id": "vcube",
+      "title": "vcube",
+      "url": "https://github.com/Voltara/vcube",
+      "revision": "9f5bc2cce18f29437879ace825f22917f6705378",
+      "license": "GPL-3.0",
+      "role": "Native optimal competitor, SIMD/memory constraints, and published throughput. Do not adopt suggestions to disable security mitigations."
+    },
+    {
+      "id": "h48",
+      "title": "Nissy H48 optimal solver design and supported profiles",
+      "url": "https://github.com/sebastianotronto/nissy-core/blob/master/doc/h48.md",
+      "revision": "1f7e8e937d0e71e7eb3b5deab38b34d0a0159d88",
+      "inspected": ["README.md", "LICENSE", "doc/h48.md", "doc/solvers.md", "benchmarks/benchmarks.md"],
+      "licenseNote": "C sources and headers are GPL-3.0-or-later under the inspected LICENSE, despite inconclusive repository API metadata.",
+      "role": "Symmetry-reduced exact search, stabilizer caveats, compressed bounds, inverse switching, and per-cube multithreading."
+    },
+    {
+      "id": "h48-benchmarks",
+      "title": "Benchmarks for the H48 optimal solver and comparison with vcube",
+      "url": "https://github.com/sebastianotronto/nissy-core/blob/master/benchmarks/benchmarks.md",
+      "revision": "1f7e8e937d0e71e7eb3b5deab38b34d0a0159d88",
+      "role": "Author-reported, depth-stratified latency and resource comparisons; not Rubend measurements."
+    },
+    {
+      "id": "jaap",
+      "title": "Computer Puzzling",
+      "url": "https://www.jaapsch.net/puzzles/compcube.htm",
+      "role": "Search, coordinates, and pattern-database conceptual cross-check."
+    },
+    {
+      "id": "deepcubea",
+      "title": "Solving the Rubik's cube with deep reinforcement learning and search",
+      "authors": ["Forest Agostinelli", "Stephen McAleer", "Alexander Shmakov", "Pierre Baldi"],
+      "year": 2019,
+      "doi": "10.1038/s42256-019-0070-z",
+      "url": "https://www.nature.com/articles/s42256-019-0070-z",
+      "accessNote": "Publisher abstract/search record accessible; full publisher fetch was unreliable. Only abstract-level findings are used.",
+      "role": "Learning-plus-search comparison; reported success does not imply universal optimality."
+    },
+    {
+      "id": "cayleypy",
+      "title": "A Machine Learning Approach That Beats Large Rubik's Cubes: The CayleyPy Project",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2502.13266v1",
+      "version": "arXiv:2502.13266v1",
+      "role": "Later learned beam-search approach; reported 3×3 results are dataset-specific and not a complete exactness guarantee."
+    },
+    {
+      "id": "cubing-js",
+      "title": "cubing.js and Twizzle",
+      "url": "https://github.com/cubing/cubing.js",
+      "revision": "3555e72686a7e48beb4f068cfc95e671192913c4",
+      "licenseNote": "README: original code dual MPL/GPL, with separately licensed vendored components. Do not rely solely on the GitHub license label.",
+      "role": "Playback/UI reference, possible renderer dependency, and independent test oracle."
+    },
+    {
+      "id": "three-js",
+      "title": "Three.js renderer and orbit controls",
+      "url": "https://threejs.org/docs/pages/WebGLRenderer.html",
+      "relatedUrl": "https://threejs.org/docs/pages/OrbitControls.html",
+      "repository": "https://github.com/mrdoob/three.js",
+      "observedRepositoryRevision": "121e626bb5d58ddd4f1d975010997f73688e665f",
+      "license": "MIT",
+      "role": "Provisional presentation renderer; its license is retained within a GPL application. No frontend dependency is installed yet."
+    },
+    {
+      "id": "web-workers",
+      "title": "Using Web Workers",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+      "role": "Browser concurrency boundary for model/replay work, separate from DOM rendering."
+    }
+  ]
+}

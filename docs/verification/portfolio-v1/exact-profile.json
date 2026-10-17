@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-16T16:34:25.149Z",
+  "purpose": "Bounded diagnosis, not a competitive exact-solver benchmark",
+  "records": [
+    {
+      "id": 0,
+      "facelets": "RBDRURUFDFUBDRFLDRFLRFFLBBBULDDDFLBBFBLULRDRLRDUUBLUUF",
+      "budgetMs": 2000,
+      "length": 20,
+      "lower": 12,
+      "optimal": false,
+      "nodes": 36640000
+    },
+    {
+      "id": 1,
+      "facelets": "DDLDURFRRBFUURLBLBLBDLFBRFUFDRDDFRFDLLUULBFRUBBFUBRLUD",
+      "budgetMs": 2000,
+      "length": 19,
+      "lower": 12,
+      "optimal": false,
+      "nodes": 39300000
+    },
+    {
+      "id": 2,
+      "facelets": "DRBRUFFBFURUDRDRLDLDRFFRFBDDUBUDBLFLFBUFLUULLRURLBDBLB",
+      "budgetMs": 2000,
+      "length": 20,
+      "lower": 12,
+      "optimal": false,
+      "nodes": 39700000
+    }
+  ]
+}

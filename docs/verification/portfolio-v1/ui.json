@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-16T16:36:33.121Z",
+  "browser": "hidden Codex in-app browser",
+  "visibleWindowsOpened": false,
+  "desktop": {
+    "cube": "Scrambled position",
+    "height": 1080,
+    "layoutWidth": 1905,
+    "render": "Rendering: 60 fps · p95 16.8 ms · 300 recent frames.",
+    "scrollWidth": 1905,
+    "step": "0 / 4",
+    "width": 1920
+  },
+  "mobile": {
+    "height": 800,
+    "layoutWidth": 345,
+    "scrollWidth": 345,
+    "width": 360
+  },
+  "verified": {
+    "notationInput": true,
+    "exactFourAndSevenMoveSolves": true,
+    "playbackToSolved": true,
+    "pauseDuringAnimation": true,
+    "timelineSeekAndBackstep": true,
+    "invalidStickerRejection": true,
+    "stopAndStaleReset": true,
+    "selectableJsonExport": true,
+    "lightAndDarkAppearance": true
+  },
+  "reset": {
+    "cube": "Solved position",
+    "nodes": "No positions searched yet.",
+    "solution": "Your solution will appear here."
+  },
+  "limits": [
+    "Blob download-event automation was unavailable; selectable JSON fallback was verified.",
+    "Active clipboard writes and real GPU context loss were not tested."
+  ]
+}

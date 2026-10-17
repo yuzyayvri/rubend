@@ -1,0 +1,91 @@
+{
+  "binaries": {
+    "previous": "/nix/store/s311kgxih8099dfipjscl3p6jsfwhzqq-rubend-0.0.0/share/rubend/build/rubend",
+    "current": "build/rubend"
+  },
+  "conditions": "One low-priority core; includes process startup, table generation, and solved input",
+  "records": [
+    {
+      "iteration": 0,
+      "version": "previous",
+      "elapsedMs": 271
+    },
+    {
+      "iteration": 0,
+      "version": "current",
+      "elapsedMs": 265
+    },
+    {
+      "iteration": 1,
+      "version": "previous",
+      "elapsedMs": 261
+    },
+    {
+      "iteration": 1,
+      "version": "current",
+      "elapsedMs": 264
+    },
+    {
+      "iteration": 2,
+      "version": "previous",
+      "elapsedMs": 282
+    },
+    {
+      "iteration": 2,
+      "version": "current",
+      "elapsedMs": 296
+    },
+    {
+      "iteration": 3,
+      "version": "previous",
+      "elapsedMs": 287
+    },
+    {
+      "iteration": 3,
+      "version": "current",
+      "elapsedMs": 280
+    },
+    {
+      "iteration": 4,
+      "version": "previous",
+      "elapsedMs": 279
+    },
+    {
+      "iteration": 4,
+      "version": "current",
+      "elapsedMs": 267
+    },
+    {
+      "iteration": 5,
+      "version": "previous",
+      "elapsedMs": 277
+    },
+    {
+      "iteration": 5,
+      "version": "current",
+      "elapsedMs": 294
+    },
+    {
+      "iteration": 6,
+      "version": "previous",
+      "elapsedMs": 270
+    },
+    {
+      "iteration": 6,
+      "version": "current",
+      "elapsedMs": 269
+    }
+  ],
+  "summary": {
+    "previous": {
+      "medianMs": 277,
+      "minimumMs": 261,
+      "maximumMs": 287
+    },
+    "current": {
+      "medianMs": 269,
+      "minimumMs": 264,
+      "maximumMs": 296
+    }
+  }
+}

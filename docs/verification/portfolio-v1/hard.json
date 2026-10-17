@@ -1,0 +1,10 @@
+{
+  "position": "superflip",
+  "knownOptimalHTM": 20,
+  "budgetMs": 2000,
+  "firstAnswerMs": 1979,
+  "length": 21,
+  "optimal": false,
+  "source": "https://www.cube20.org/",
+  "note": "A hard-tail measurement; a timeout is not an invalid-cube result."
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "words": 70001,
+  "byteOrder": "little-endian",
+  "chunkBoundaryWords": 65536,
+  "truncationRejected": true,
+  "trailingBytesRejected": true,
+  "overwriteRejected": true,
+  "missingRejected": true,
+  "overlapRelocationAndPrefix": true
+}

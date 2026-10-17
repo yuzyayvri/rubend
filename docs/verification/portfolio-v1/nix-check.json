@@ -1,0 +1,15 @@
+{
+  "command": "nix flake check --no-update-lock-file",
+  "passed": true,
+  "packageDerivation": "/nix/store/as09vng82zxjcr31bhjhl8sl9w53mr6f-rubend-0.0.0.drv",
+  "runtimeDerivation": "/nix/store/ias2faf5dr75qvg9lawssydzpskjcgi6-rubend-runtime-check.drv",
+  "scope": [
+    "proof/toolchain gate",
+    "packaged model and exact-oracle checks",
+    "projected-table audits",
+    "native/module manifest integrity after ELF fixup",
+    "packaged HTTP/cancellation tests",
+    "native engine/startup/IPC cleanup suite"
+  ],
+  "note": "This result identifies the tested code snapshot. Documentation/evidence snapshots were added afterward without runtime-code changes."
+}

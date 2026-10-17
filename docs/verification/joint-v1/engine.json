@@ -1,0 +1,349 @@
+{
+  "checkedAt": "2026-10-17T00:58:29.963Z",
+  "records": [
+    {
+      "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 0,
+      "optimal": true,
+      "totalMs": 3,
+      "nodes": 262
+    },
+    {
+      "facelets": "UUUUUUUUUBBBRRRRRRRRRFFFFFFDDDDDDDDDFFFLLLLLLLLLBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 3,
+      "nodes": 23089
+    },
+    {
+      "facelets": "UUUUUUUUULLLRRRRRRBBBFFFFFFDDDDDDDDDRRRLLLLLLFFFBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 12034
+    },
+    {
+      "facelets": "UUUUUUUUUFFFRRRRRRLLLFFFFFFDDDDDDDDDBBBLLLLLLRRRBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23089
+    },
+    {
+      "facelets": "UUFUUFUUFRRRRRRRRRFFDFFDFFDDDBDDBDDBLLLLLLLLLUBBUBBUBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 3,
+      "nodes": 30149
+    },
+    {
+      "facelets": "UUDUUDUUDRRRRRRRRRFFBFFBFFBDDUDDUDDULLLLLLLLLFBBFBBFBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 1,
+      "nodes": 12034
+    },
+    {
+      "facelets": "UUBUUBUUBRRRRRRRRRFFUFFUFFUDDFDDFDDFLLLLLLLLLDBBDBBDBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23076
+    },
+    {
+      "facelets": "UUUUUULLLURRURRURRFFFFFFFFFRRRDDDDDDLLDLLDLLDBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 30149
+    },
+    {
+      "facelets": "UUUUUUDDDLRRLRRLRRFFFFFFFFFUUUDDDDDDLLRLLRLLRBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 12034
+    },
+    {
+      "facelets": "UUUUUURRRDRRDRRDRRFFFFFFFFFLLLDDDDDDLLULLULLUBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23076
+    },
+    {
+      "facelets": "UUUUUUUUURRRRRRFFFFFFFFFLLLDDDDDDDDDLLLLLLBBBBBBBBBRRR",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23089
+    },
+    {
+      "facelets": "UUUUUUUUURRRRRRLLLFFFFFFBBBDDDDDDDDDLLLLLLRRRBBBBBBFFF",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 1,
+      "nodes": 12034
+    },
+    {
+      "facelets": "UUUUUUUUURRRRRRBBBFFFFFFRRRDDDDDDDDDLLLLLLFFFBBBBBBLLL",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23089
+    },
+    {
+      "facelets": "BUUBUUBUURRRRRRRRRUFFUFFUFFFDDFDDFDDLLLLLLLLLBBDBBDBBD",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 29168
+    },
+    {
+      "facelets": "DUUDUUDUURRRRRRRRRBFFBFFBFFUDDUDDUDDLLLLLLLLLBBFBBFBBF",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 0,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 1,
+      "nodes": 12034
+    },
+    {
+      "facelets": "FUUFUUFUURRRRRRRRRDFFDFFDFFBDDBDDBDDLLLLLLLLLBBUBBUBBU",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23076
+    },
+    {
+      "facelets": "RRRUUUUUURRDRRDRRDFFFFFFFFFDDDDDDLLLULLULLULLBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 2,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 29168
+    },
+    {
+      "facelets": "DDDUUUUUURRLRRLRRLFFFFFFFFFDDDDDDUUURLLRLLRLLBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 1,
+      "nodes": 12034
+    },
+    {
+      "facelets": "LLLUUUUUURRURRURRUFFFFFFFFFDDDDDDRRRDLLDLLDLLBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 1,
+      "length": 1,
+      "optimal": true,
+      "totalMs": 2,
+      "nodes": 23076
+    },
+    {
+      "facelets": "UULUUFUUFRRUBRRURRFFDFFUFFFDDRDDDDDDBLLLLLLLLBRRBBBBBB",
+      "mode": "exact",
+      "budgetMs": 1000,
+      "firstAnswerMs": 4,
+      "length": 4,
+      "optimal": true,
+      "totalMs": 8,
+      "nodes": 140062
+    },
+    {
+      "facelets": "FLLBURUURDBBURRRRLFFFFFLUUDBBBBDUURDUDLFLLBLRDDRFBDFDL",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 7,
+      "length": 19,
+      "optimal": false,
+      "totalMs": 1502,
+      "nodes": 29320000
+    },
+    {
+      "facelets": "ULBBUBFFBDLDURBUDBDURUFBLFFURRUDFRDLBDLFLRFLFLDRRBLURD",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 43,
+      "length": 19,
+      "optimal": false,
+      "totalMs": 1503,
+      "nodes": 28360000
+    },
+    {
+      "facelets": "RLUUULLBDLBFFRLBULBUFFFDRLDDFLRDRDDFUFUBLRBDFRDBUBRUBR",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 3,
+      "length": 20,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 29520000
+    },
+    {
+      "facelets": "FUUBUDDDURBLRRLRRBLLFDFDBRDUUBUDFUUDRRFLLFRLLFFDBBFLBB",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 7,
+      "length": 17,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 33900000
+    },
+    {
+      "facelets": "LUFRUUFDDLLRDRLUBDRBFBFLRULURFDDLLDBBFDFLRBRBUBUFBURFD",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 30,
+      "length": 15,
+      "optimal": false,
+      "totalMs": 1502,
+      "nodes": 26880000
+    },
+    {
+      "facelets": "UBLFUUBLUBLDRRDLDLDFRUFUFBBURDLDFRUFLRRDLFFDRFLBBBRUBD",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 14,
+      "length": 20,
+      "optimal": false,
+      "totalMs": 1502,
+      "nodes": 27100000
+    },
+    {
+      "facelets": "RRFBUUFLDBFURRLDFFUDLFFUBBRUDFUDRUULBLRRLDRLLLDDFBBDBB",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 12,
+      "length": 18,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 36880000
+    },
+    {
+      "facelets": "DBBUUDFFURFULRDLRBLLFUFBUUDLBFRDFRRDFLULLFDUBRRRBBDLDB",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 11,
+      "length": 19,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 37480000
+    },
+    {
+      "facelets": "DUDFUDULBRRLFRFDDRFUULFUUFFLDLRDBDBUFRLBLDBUBBBRLBLFRR",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 76,
+      "length": 20,
+      "optimal": false,
+      "totalMs": 1502,
+      "nodes": 31440000
+    },
+    {
+      "facelets": "RRFLUFDUBRRRURLDRDFBUBFLLFFBULDDUUDLBDRDLLLBUUBDFBFBRF",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 12,
+      "length": 16,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 31380000
+    },
+    {
+      "facelets": "BDUUULLDBRBFRRLDDLFBUUFUUFRFRFDDRBRBDFDBLLLLLRFRFBUDBU",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 9,
+      "length": 19,
+      "optimal": false,
+      "totalMs": 1501,
+      "nodes": 35520000
+    },
+    {
+      "facelets": "RBUBUDDDFDRLFRFLDBRBLFFLRBBFUDLDLRRLULBFLDFUUFRBUBRUUD",
+      "mode": "fast",
+      "budgetMs": 1500,
+      "firstAnswerMs": 12,
+      "length": 18,
+      "optimal": false,
+      "totalMs": 1500,
+      "nodes": 39560000
+    },
+    {
+      "facelets": "RULBUFRLLURUURRFUDUFFUFFLLRFDUFDBLDRBLBBLLBDDBRDBBDFRD",
+      "mode": "exact",
+      "budgetMs": 1000,
+      "firstAnswerMs": 3,
+      "length": 7,
+      "optimal": true,
+      "totalMs": 5,
+      "nodes": 140122
+    },
+    {
+      "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+      "mode": "exact",
+      "budgetMs": 500,
+      "firstAnswerMs": 0,
+      "length": 0,
+      "optimal": true,
+      "totalMs": 1,
+      "nodes": 262
+    }
+  ],
+  "peakRssKiB": 43916,
+  "cancellationMs": 14,
+  "cancelAndRecoveryMs": 246,
+  "allReturnedSolutionsVerified": true
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "toolchain-smoke-only",
+  "solverImplemented": false,
+  "checkedAt": "2026-10-16T11:45:29.050Z",
+  "node": "v24.21.0",
+  "bend": "bend 2.0.37",
+  "sourceHashes": {
+    "flake.nix": "bed2a93232b3aadb7f8107bf1ff926f65e9f00e6fdf1babf711a47977a7be89e",
+    "flake.lock": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698",
+    "scripts/check.mjs": "056c40746a6cf9b8e73326b76cdc305e2dd14e7daac6a8b3f84224a11e46b839",
+    "LAWS.bend": "c4014352ba0b4b7530573f8c9bd23686a96700f391388c9ebdbf5f322d8f5dd6",
+    "PROOF.bend": "bb8e314c17f3112982814111d836f623a765531a34c80ecc3ee4cab7335c0b46",
+    "src/main.bend": "20564ab3ab165aa8a2487ee9908a9593b0152a79a8a4bf4a0faae06856e0c79f",
+    "src/toolchain.bend": "c34b475dcd733da3eb8be20bad08d39d36058a3268ef1a27730449855a327d0a",
+    "tests/toolchain/rejected/false.bend": "a969249d4e7e74a1a97106a5def78477a616e2858cd1ef94ebe7a7cda28fb7fa",
+    "tests/toolchain/rejected/open.bend": "2f0b85b7c9cae12b489c46ba952f9f931bd657f84107b135e0be311324d1f800",
+    "tests/toolchain/rejected/unsafe.bend": "6bab71152aea9efc13456d99dd7294c1f3d57fd7ad1dd81e316c1d401c57c669"
+  },
+  "results": [
+    {
+      "name": "pinned Bend version",
+      "status": "pass",
+      "durationMs": 33,
+      "output": "bend 2.0.37"
+    },
+    {
+      "name": "pinned Lean version",
+      "status": "pass",
+      "durationMs": 35,
+      "output": "Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)"
+    },
+    {
+      "name": "Bend proof checker",
+      "status": "pass",
+      "durationMs": 134,
+      "output": "ALL PROOFS CHECK\nUse --verdict for mathematical validity."
+    },
+    {
+      "name": "independent BendTT verdict",
+      "status": "pass",
+      "durationMs": 167,
+      "output": "ALL PROOFS CHECK"
+    },
+    {
+      "name": "reject false proof",
+      "status": "pass",
+      "durationMs": 131,
+      "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+    },
+    {
+      "name": "verdict rejects false proof",
+      "status": "pass",
+      "durationMs": 161,
+      "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+    },
+    {
+      "name": "reject open proof",
+      "status": "pass",
+      "durationMs": 150,
+      "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+    },
+    {
+      "name": "verdict rejects open proof",
+      "status": "pass",
+      "durationMs": 119,
+      "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+    },
+    {
+      "name": "reject unsafe proof",
+      "status": "pass",
+      "durationMs": 112,
+      "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+    },
+    {
+      "name": "verdict rejects unsafe proof",
+      "status": "pass",
+      "durationMs": 119,
+      "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+    },
+    {
+      "name": "Bend IO execution",
+      "status": "pass",
+      "durationMs": 119,
+      "output": "Rubend setup ready. Solver implementation has not started."
+    },
+    {
+      "name": "native compilation",
+      "status": "pass",
+      "durationMs": 564,
+      "output": ""
+    },
+    {
+      "name": "native execution",
+      "status": "pass",
+      "durationMs": 2,
+      "output": "Rubend setup ready. Solver implementation has not started."
+    },
+    {
+      "name": "JavaScript module compilation",
+      "status": "pass",
+      "durationMs": 120,
+      "output": ""
+    },
+    {
+      "name": "generated JavaScript interop",
+      "status": "pass"
+    },
+    {
+      "name": "safe production Bend sources",
+      "status": "pass"
+    }
+  ]
+}

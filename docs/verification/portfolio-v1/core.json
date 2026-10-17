@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-16T16:31:02.972Z",
+  "independentOracle": "cubing@0.66.0 KPuzzle",
+  "randomTransitions": 10000,
+  "arbitraryLegalStates": 1000,
+  "arbitraryStateTransitions": 18000,
+  "inverseRoundtrips": 1000,
+  "frameRoundtrips": 1000,
+  "portfolioPathMappings": 6,
+  "subgroupFrameChecks": 2000,
+  "coordinateRoundtrips": 85394,
+  "invalidFamilies": 6,
+  "notation": true,
+  "passed": true
+}

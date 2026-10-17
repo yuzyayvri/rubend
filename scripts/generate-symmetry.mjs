@@ -1,0 +1,24 @@
+import {readFileSync,writeFileSync} from "node:fs";
+
+const {stickers}=JSON.parse(readFileSync("tests/geometry.json","utf8"));
+const normals=[[0,1,0],[1,0,0],[0,0,1],[0,-1,0],[-1,0,0],[0,0,-1]];
+const rotate=p=>[p[1],p[2],p[0]],key=(p,n)=>`${p}/${n}`;
+const index=new Map(stickers.map(s=>[key(s.position,s.normal),s.index]));
+const permutation=Array(54);for(const s of stickers)permutation[index.get(key(rotate(s.position),rotate(s.normal)))]=s.index;
+const colors=normals.map(n=>normals.findIndex(m=>m.every((v,i)=>v===rotate(n)[i])));
+const moves=["U","U2","Ui","R","R2","Ri","F","F2","Fi","D","D2","Di","L","L2","Li","B","B2","Bi"];
+const mapped=moves.map((_,i)=>colors[Math.floor(i/3)]*3+i%3);
+const fields=Array.from({length:54},(_,i)=>`s${i}`),pat=`M.Cube{${fields.join(", ")}}`;
+const out=["import Base","import ./model.bend as M","", "def color(value: U32) -> U32:","  match value:",...colors.flatMap((v,i)=>[`    case ${i}:`,`      ${v}`]),"    case value:","      value","", "def rotate(cube: M.Cube) -> M.Cube:","  match cube:",`    case ${pat}:`,`      M.Cube{${permutation.map(i=>`color(s${i})`).join(", ")}}`,"", "def rotate_move(move: M.Move) -> M.Move:","  match move:",...moves.flatMap((m,i)=>[`    case M.${m}{}:`,`      M.${moves[mapped[i]]}{}`]),"", "def rotate_index(index: U32) -> U32:","  match index:",...mapped.flatMap((v,i)=>[`    case ${i}:`,`      ${v}`]),"    case value:","      value","", "def view(axis: U32, +cube: M.Cube) -> M.Cube:","  match axis:","    case 0: cube","    case 1: rotate(cube)","    case _: rotate(rotate(cube))","", "def map_move(axis: U32, move: U32) -> U32:","  match axis:","    case 0: move","    case 1: rotate_index(move)","    case _: rotate_index(rotate_index(move))","", "def map_path(moves: +List<U32>, +axis: U32) -> +List<U32>:","  match moves:","    case Nil{}: Nil{}","    case Con{move, rest}: map_move(axis, move) <> map_path(rest, axis)","", "law commutes:","  for +move: M.Move","  for +cube: M.Cube","  {rotate(M.turn(move, cube)) == M.turn(rotate_move(move), rotate(cube)) : M.Cube}","", "def commutes(move, cube):","  match move cube:",...moves.flatMap(m=>[`    case M.${m}{} ${pat}:`,"      {==}"]),"", "law solved_fixed:","  {rotate(M.solved()) == M.solved() : M.Cube}","", "def solved_fixed():","  {==}",""];
+const at=out.indexOf("law commutes:");
+out.splice(at,0,"def invert_moves(moves: +List<U32>) -> +List<U32>:","  match moves:","    case Nil{}: Nil{}","    case Con{+move, rest}: ((move / 3) * 3 + 2 - move % 3 : U32) <> invert_moves(rest)","", "def maybe_inverse(enabled: Bool, moves: +List<U32>) -> +List<U32>:","  match enabled:","    case False{}: moves","    case True{}: invert_moves(List.reverse(&2, U32, moves))","", "def to_local(+variant: U32, moves: +List<U32>) -> +List<U32>:","  map_path(maybe_inverse(U32.is_ge(variant, 3), moves), (variant % 3 : U32))","", "def to_global(+variant: U32, moves: +List<U32>) -> +List<U32>:","  maybe_inverse(U32.is_ge(variant, 3), map_path(moves, ((3 - variant % 3) % 3 : U32)))","");
+out.push("def finish_move(move: M.Move) -> Bool:","  match move:",...moves.flatMap((m,i)=>[`    case M.${m}{}:`,`      ${[0,1,2,4,7,9,10,11,13,16].includes(i)?"True":"False"}{}`]),"");
+for(const [name,transform] of [["ud",p=>[-p[2],p[1],p[0]]],["flip",p=>[p[0],-p[1],-p[2]]]]){
+  const perm=Array(54),cs=normals.map(n=>normals.findIndex(m=>m.every((v,i)=>v===transform(n)[i])));
+  for(const s of stickers)perm[index.get(key(transform(s.position),transform(s.normal)))]=s.index;
+  const mm=moves.map((_,i)=>cs[Math.floor(i/3)]*3+i%3);
+  out.push(`def ${name}_color(value: U32) -> U32:`,"  match value:",...cs.flatMap((v,i)=>[`    case ${i}:`,`      ${v}`]),"    case value: value","",`def ${name}(cube: M.Cube) -> M.Cube:`,"  match cube:",`    case ${pat}:`,`      M.Cube{${perm.map(i=>`${name}_color(s${i})`).join(", ")}}`,"",`def ${name}_move(move: M.Move) -> M.Move:`,"  match move:",...moves.flatMap((m,i)=>[`    case M.${m}{}:`,`      M.${moves[mm[i]]}{}`]),"",`law ${name}_commutes:`,"  for +move: M.Move","  for +cube: M.Cube",`  {${name}(M.turn(move, cube)) == M.turn(${name}_move(move), ${name}(cube)) : M.Cube}`,"",`def ${name}_commutes(move, cube):`,"  match move cube:",...moves.flatMap(m=>[`    case M.${m}{} ${pat}:`,"      {==}"]),"",`law ${name}_solved_fixed:`,`  {${name}(M.solved()) == M.solved() : M.Cube}`,"",`def ${name}_solved_fixed():`,"  {==}","");
+  out.push(`law ${name}_finish_moves_closed:`,"  for +move: M.Move",`  {finish_move(${name}_move(move)) == finish_move(move) : Bool}`,"",`def ${name}_finish_moves_closed(move):`,"  match move:",...moves.flatMap(m=>[`    case M.${m}{}:`,"      {==}"]),"");
+}
+const text=out.join("\n");
+if(process.argv.includes("--check")){if(readFileSync("src/symmetry.bend","utf8")!==text)throw Error("stale symmetry source");}else writeFileSync("src/symmetry.bend",text);

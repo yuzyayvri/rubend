@@ -1,0 +1,52 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "joint-full-cache-v1",
+  "startedAt": "2026-10-17T00:49:07.536Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/joint-cache",
+    "large",
+    "/home/yuzy/rubend/.cache/joint/phase1-v1.raw",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 3072,
+    "seconds": 1200,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "a95d85871c62a083b359b02637a8d0f6f5c1bf8f1097b56ac93bb48b04172ed7",
+  "availableMiB": 15584,
+  "peakTreeRssKiB": 2139860,
+  "samples": 1227,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"type\":\"layer\",\"depth\":0,\"count\":1,\"total\":1,\"elapsedMs\":1048}\n{\"type\":\"layer\",\"depth\":1,\"count\":4,\"total\":5,\"elapsedMs\":3169}\n{\"type\":\"layer\",\"depth\":2,\"count\":50,\"total\":55,\"elapsedMs\":5274}\n{\"type\":\"layer\",\"depth\":3,\"count\":592,\"total\":647,\"elapsedMs\":7387}\n{\"type\":\"layer\",\"depth\":4,\"count\":7156,\"total\":7803,\"elapsedMs\":9483}\n{\"type\":\"layer\",\"depth\":5,\"count\":87236,\"total\":95039,\"elapsedMs\":11591}\n{\"type\":\"layer\",\"depth\":6,\"count\":1043817,\"total\":1138856,\"elapsedMs\":13734}\n{\"type\":\"layer\",\"depth\":7,\"count\":12070278,\"total\":13209134,\"elapsedMs\":16130}\n{\"type\":\"layer\",\"depth\":8,\"count\":124946368,\"total\":138155502,\"elapsedMs\":20891}\n{\"type\":\"layer\",\"depth\":9,\"count\":821605960,\"total\":959761462,\"elapsedMs\":35441}\n{\"type\":\"layer\",\"depth\":10,\"count\":1199128738,\"total\":2158890200,\"elapsedMs\":80083}\n{\"type\":\"layer\",\"depth\":11,\"count\":58202444,\"total\":2217092644,\"elapsedMs\":124492}\n{\"type\":\"layer\",\"depth\":12,\"count\":476,\"total\":2217093120,\"elapsedMs\":131937}\n{\"type\":\"packedAudit\",\"passed\":true,\"maximum\":12,\"fingerprint\":1448581281}\n{\"type\":\"cacheWritten\",\"bytes\":1108546560}\n",
+  "stderr": "",
+  "build": {
+    "format": "rubend-experiment-build-v1",
+    "entry": "bench/joint.bend",
+    "sourceHashes": {
+      "bench/joint-reference.bend": "4c6a944b9b359334fde196f7fdf38828c2478cc523780d9bb5277225ba464b84",
+      "bench/joint.bend": "991e06059141e7ebf2cde83230e8337a049e23acbfa801c3ec2dc1679b4cdb95",
+      "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+      "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+      "src/joint-audit.bend": "b32aa90bea2c86906268bb89a9d24e39b106a6952898fda29c2723abe032d3de",
+      "src/joint-cache.bend": "b74d43dc8c05f6c013efef72b30e54215cd0865ba49f0139879b863929ee1e52",
+      "src/joint-table.bend": "0ceb8403a927daef9ed916bb1ac7f45bd30ee030748fc0abfd90bb21359426f2",
+      "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+      "src/table-audit.bend": "4b92f861564b1a50cd2d2f8f0e6a2c2ddc6e86ace4a8e6fac82f9b1e330ef869",
+      "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6"
+    },
+    "binarySha256": "a95d85871c62a083b359b02637a8d0f6f5c1bf8f1097b56ac93bb48b04172ed7",
+    "bend": "bend 2.0.37",
+    "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+  },
+  "elapsedMs": 245479,
+  "finishedAt": "2026-10-17T00:53:13.017Z"
+}

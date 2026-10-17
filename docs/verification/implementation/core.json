@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-10-16T12:12:55.300Z",
+  "independentOracle": "cubing@0.66.0 KPuzzle",
+  "randomTransitions": 10000,
+  "coordinateRoundtrips": 85394,
+  "invalidFamilies": 6,
+  "notation": true,
+  "passed": true
+}

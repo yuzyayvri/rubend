@@ -1,0 +1,512 @@
+{
+  "reference": "Nissy H48 h0",
+  "revision": "1f7e8e937d0e71e7eb3b5deab38b34d0a0159d88",
+  "patch": "docs/research/NISSY-REFERENCE.md",
+  "binarySha256": "6a0a2fceae91559a829685c7842402d79849d009120f17a3fa33a2527abb545d",
+  "tableSha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+  "conditions": "One low-priority core; 5-second per-process deadline includes table load. Not a matched warm anytime comparison. Every returned path replayed independently through Rubend's Bend model.",
+  "records": [
+    {
+      "id": "solved",
+      "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+      "scramble": [],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 0,
+      "moves": [],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 0 (-nan per node)\n[H48 solve] Table fallbacks: 0 (0.000%)\n"
+    },
+    {
+      "id": "single-0",
+      "facelets": "UUUUUUUUUBBBRRRRRRRRRFFFFFFDDDDDDDDDFFFLLLLLLLLLBBBBBB",
+      "scramble": [
+        0
+      ],
+      "elapsedMs": 33,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        2
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-1",
+      "facelets": "UUUUUUUUULLLRRRRRRBBBFFFFFFDDDDDDDDDRRRLLLLLLFFFBBBBBB",
+      "scramble": [
+        1
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        1
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5276 (inf per node)\n[H48 solve] Table fallbacks: 5276 (0.000%)\n"
+    },
+    {
+      "id": "single-2",
+      "facelets": "UUUUUUUUUFFFRRRRRRLLLFFFFFFDDDDDDDDDBBBLLLLLLRRRBBBBBB",
+      "scramble": [
+        2
+      ],
+      "elapsedMs": 34,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        0
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-3",
+      "facelets": "UUFUUFUUFRRRRRRRRRFFDFFDFFDDDBDDBDDBLLLLLLLLLUBBUBBUBB",
+      "scramble": [
+        3
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        5
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-4",
+      "facelets": "UUDUUDUUDRRRRRRRRRFFBFFBFFBDDUDDUDDULLLLLLLLLFBBFBBFBB",
+      "scramble": [
+        4
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        4
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5276 (inf per node)\n[H48 solve] Table fallbacks: 5276 (0.000%)\n"
+    },
+    {
+      "id": "single-5",
+      "facelets": "UUBUUBUUBRRRRRRRRRFFUFFUFFUDDFDDFDDFLLLLLLLLLDBBDBBDBB",
+      "scramble": [
+        5
+      ],
+      "elapsedMs": 34,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        3
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-6",
+      "facelets": "UUUUUULLLURRURRURRFFFFFFFFFRRRDDDDDDLLDLLDLLDBBBBBBBBB",
+      "scramble": [
+        6
+      ],
+      "elapsedMs": 37,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        8
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-7",
+      "facelets": "UUUUUUDDDLRRLRRLRRFFFFFFFFFUUUDDDDDDLLRLLRLLRBBBBBBBBB",
+      "scramble": [
+        7
+      ],
+      "elapsedMs": 40,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        7
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5276 (inf per node)\n[H48 solve] Table fallbacks: 5276 (0.000%)\n"
+    },
+    {
+      "id": "single-8",
+      "facelets": "UUUUUURRRDRRDRRDRRFFFFFFFFFLLLDDDDDDLLULLULLUBBBBBBBBB",
+      "scramble": [
+        8
+      ],
+      "elapsedMs": 31,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        6
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 9963 (inf per node)\n[H48 solve] Table fallbacks: 9963 (0.000%)\n"
+    },
+    {
+      "id": "single-9",
+      "facelets": "UUUUUUUUURRRRRRFFFFFFFFFLLLDDDDDDDDDLLLLLLBBBBBBBBBRRR",
+      "scramble": [
+        9
+      ],
+      "elapsedMs": 33,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        11
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "single-10",
+      "facelets": "UUUUUUUUURRRRRRLLLFFFFFFBBBDDDDDDDDDLLLLLLRRRBBBBBBFFF",
+      "scramble": [
+        10
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        10
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5345 (inf per node)\n[H48 solve] Table fallbacks: 5345 (0.000%)\n"
+    },
+    {
+      "id": "single-11",
+      "facelets": "UUUUUUUUURRRRRRBBBFFFFFFRRRDDDDDDDDDLLLLLLFFFBBBBBBLLL",
+      "scramble": [
+        11
+      ],
+      "elapsedMs": 34,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        9
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "single-12",
+      "facelets": "BUUBUUBUURRRRRRRRRUFFUFFUFFFDDFDDFDDLLLLLLLLLBBDBBDBBD",
+      "scramble": [
+        12
+      ],
+      "elapsedMs": 34,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        14
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "single-13",
+      "facelets": "DUUDUUDUURRRRRRRRRBFFBFFBFFUDDUDDUDDLLLLLLLLLBBFBBFBBF",
+      "scramble": [
+        13
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        13
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5345 (inf per node)\n[H48 solve] Table fallbacks: 5345 (0.000%)\n"
+    },
+    {
+      "id": "single-14",
+      "facelets": "FUUFUUFUURRRRRRRRRDFFDFFDFFBDDBDDBDDLLLLLLLLLBBUBBUBBU",
+      "scramble": [
+        14
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        12
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "single-15",
+      "facelets": "RRRUUUUUURRDRRDRRDFFFFFFFFFDDDDDDLLLULLULLULLBBBBBBBBB",
+      "scramble": [
+        15
+      ],
+      "elapsedMs": 32,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        17
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "single-16",
+      "facelets": "DDDUUUUUURRLRRLRRLFFFFFFFFFDDDDDDUUURLLRLLRLLBBBBBBBBB",
+      "scramble": [
+        16
+      ],
+      "elapsedMs": 30,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        16
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 5345 (inf per node)\n[H48 solve] Table fallbacks: 5345 (0.000%)\n"
+    },
+    {
+      "id": "single-17",
+      "facelets": "LLLUUUUUURRURRURRUFFFFFFFFFDDDDDDRRRDLLDLLDLLBBBBBBBBB",
+      "scramble": [
+        17
+      ],
+      "elapsedMs": 33,
+      "complete": true,
+      "length": 1,
+      "moves": [
+        15
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 10122 (inf per node)\n[H48 solve] Table fallbacks: 10122 (0.000%)\n"
+    },
+    {
+      "id": "walk-0",
+      "facelets": "UUUUUUBDDLBBLRRUBBDFFDFFDRRFBBFDDFDDFFRLLRRRRLLLUBBLLU",
+      "scramble": [
+        3,
+        0,
+        7,
+        11
+      ],
+      "elapsedMs": 41,
+      "complete": true,
+      "length": 4,
+      "moves": [
+        9,
+        7,
+        2,
+        5
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Nodes visited: 0\n[H48 solve] Lookups: 43244 (inf per node)\n[H48 solve] Table fallbacks: 43244 (0.000%)\n"
+    },
+    {
+      "id": "walk-1",
+      "facelets": "BBDBUFLLFURRURBDDLUFRUFRLLBFDRFDRUBBRLFULFBDDFUURBLDDL",
+      "scramble": [
+        0,
+        3,
+        6,
+        9,
+        12,
+        15
+      ],
+      "elapsedMs": 42,
+      "complete": true,
+      "length": 6,
+      "moves": [
+        17,
+        14,
+        11,
+        8,
+        5,
+        2
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Prepared 43254 tasks\n[h48 solve] Found solution: B' L' D' F' R' U'\n[H48 solve] Nodes visited: 86525\n[H48 solve] Lookups: 43257 (0.500 per node)\n[H48 solve] Table fallbacks: 11401 (26.356%)\n"
+    },
+    {
+      "id": "walk-2",
+      "facelets": "RRBBUDUUURBUBRLDBLLLFFFRUUBFFRDDUBRDDLBDLDDRLRFFFBLFUL",
+      "scramble": [
+        3,
+        0,
+        7,
+        11,
+        12,
+        17,
+        4,
+        8
+      ],
+      "elapsedMs": 49,
+      "complete": true,
+      "length": 8,
+      "moves": [
+        6,
+        4,
+        15,
+        14,
+        9,
+        7,
+        2,
+        5
+      ],
+      "exitCode": 0,
+      "signal": null,
+      "error": null,
+      "stderr": "[H48 solve] Prepared 43254 tasks\n[h48 solve] Found solution: F R2 B L' D F2 U' R'\n[H48 solve] Nodes visited: 173054\n[H48 solve] Lookups: 43265 (0.250 per node)\n[H48 solve] Table fallbacks: 2981 (6.890%)\n"
+    },
+    {
+      "id": "uniform-0",
+      "facelets": "DLBBULFFDBFUBRFBDLLDLRFDRURFBDRDRBLDFLUULBLUURURRBFFDU",
+      "scramble": [
+        7,
+        2,
+        7,
+        11,
+        16,
+        13,
+        4,
+        1,
+        8,
+        13,
+        3,
+        11,
+        8,
+        14,
+        9,
+        15,
+        3,
+        10,
+        3
+      ],
+      "elapsedMs": 5004,
+      "complete": false,
+      "length": null,
+      "moves": null,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "error": "ETIMEDOUT",
+      "stderr": "[H48 solve] Prepared 43254 tasks\n[H48 solve] Found 0 solutions, searching at depth 15\n[H48 solve] Found 0 solutions, searching at depth 16\n"
+    },
+    {
+      "id": "uniform-1",
+      "facelets": "LBBLURRBULFRRRDFLLULBBFUFRLRDDUDUUFFDFBDLUFFDDRBBBLUDR",
+      "scramble": [
+        7,
+        4,
+        0,
+        7,
+        11,
+        13,
+        11,
+        13,
+        10,
+        16,
+        11,
+        16,
+        12,
+        15,
+        9,
+        7,
+        11,
+        6,
+        0,
+        8,
+        1
+      ],
+      "elapsedMs": 5005,
+      "complete": false,
+      "length": null,
+      "moves": null,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "error": "ETIMEDOUT",
+      "stderr": "[H48 solve] Prepared 43254 tasks\n[H48 solve] Found 0 solutions, searching at depth 15\n[H48 solve] Found 0 solutions, searching at depth 16\n"
+    },
+    {
+      "id": "uniform-2",
+      "facelets": "FLLFUBUFLFDFRRBLFDLUDLFURBBULDBDDUDBRRBFLDFRBUUDUBLRRR",
+      "scramble": [
+        9,
+        4,
+        0,
+        16,
+        12,
+        15,
+        3,
+        7,
+        9,
+        13,
+        7,
+        4,
+        16,
+        10,
+        13,
+        8,
+        10,
+        13,
+        6,
+        4
+      ],
+      "elapsedMs": 5006,
+      "complete": false,
+      "length": null,
+      "moves": null,
+      "exitCode": null,
+      "signal": "SIGTERM",
+      "error": "ETIMEDOUT",
+      "stderr": "[H48 solve] Prepared 43254 tasks\n[H48 solve] Found 0 solutions, searching at depth 15\n[H48 solve] Found 0 solutions, searching at depth 16\n"
+    }
+  ]
+}
