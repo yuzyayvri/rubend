@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "nonzero-offset-multichunk"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "wrapped-count-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "index-overflow-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "capacity-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "sparse-wide-size"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "short"
+    },
+    {
+      "backend": "native",
+      "mode": "legacy",
+      "test": "trailing"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "nonzero-offset-multichunk"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "wrapped-count-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "index-overflow-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "capacity-before-open"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "sparse-wide-size"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "short"
+    },
+    {
+      "backend": "native",
+      "mode": "words",
+      "test": "trailing"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "nonzero-offset-multichunk"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "wrapped-count-before-open"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "index-overflow-before-open"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "capacity-before-open"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "sparse-wide-size"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "short"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "trailing"
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "grow-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 1200004
+    },
+    {
+      "backend": "javascript",
+      "mode": "words",
+      "test": "short-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 1048576
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "nonzero-offset-multichunk"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "wrapped-count-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "index-overflow-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "capacity-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "sparse-wide-size"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "short"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "trailing"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "grow-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 1200004
+    },
+    {
+      "backend": "native-injected",
+      "mode": "legacy",
+      "test": "short-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 262144
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "nonzero-offset-multichunk"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "wrapped-count-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "index-overflow-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "capacity-before-open"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "sparse-wide-size"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "short"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "trailing"
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "initial-size-failure-close",
+      "mutated": false,
+      "closed": true,
+      "total": 0
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "grow-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 1200004
+    },
+    {
+      "backend": "native-injected",
+      "mode": "words",
+      "test": "short-after-complete-chunk",
+      "mutated": true,
+      "closed": true,
+      "total": 1048576
+    }
+  ]
+}

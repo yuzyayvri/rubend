@@ -1,0 +1,30 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "fixed-input-repro",
+  "startedAt": "2026-10-17T06:58:42.916Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+    "tests/fixed-work-inputs.mjs"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "seconds": 30,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+  "availableMiB": 16806,
+  "peakTreeRssKiB": 122416,
+  "samples": 1,
+  "exitCode": 1,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: A mutated binary must not receive a successful comparison\n    at file:///home/yuzy/rubend/tests/fixed-work-inputs.mjs:18:37\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 0,\n  expected: 0,\n  operator: 'notStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.21.0\n",
+  "elapsedMs": 286,
+  "finishedAt": "2026-10-17T06:58:43.292Z"
+}

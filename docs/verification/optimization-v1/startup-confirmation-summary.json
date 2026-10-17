@@ -1,0 +1,121 @@
+{
+  "format": "rubend-startup-confirmation-summary-v1",
+  "passed": true,
+  "counts": {
+    "plannedRuns": 15,
+    "attemptedRuns": 15,
+    "launchedWorkers": 15,
+    "readyEvents": 15,
+    "checkedSolvedReplays": 15,
+    "successfulRuns": 15,
+    "runErrors": 0,
+    "batchErrors": 0,
+    "hostHashBytes": 23279477760
+  },
+  "conditions": {
+    "timer": "Before Engine construction through observed real ready event; includes FIFO and process construction, excludes host SHA256",
+    "fileCache": "Complete host SHA256 streams warm the file cache before every worker; not cold disk startup",
+    "rss": "Linux native worker /proc RSS and HWM samples including immediate ready read; excludes host and browser; sampled peak is not a guaranteed lifetime peak",
+    "geometry": "Declared cache bytes and U32 word counts are input geometry, not native read counters",
+    "nativeReadBytes": null
+  },
+  "summary": {
+    "frozen-raw-baseline": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9413.191628,
+        "minimum": 9226.220387000001,
+        "maximum": 9470.846226000001
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10337.255889000007,
+        "minimum": 10183.485587000001,
+        "maximum": 10460.744969
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 932.6752809999962,
+        "minimum": 924.0642610000068,
+        "maximum": 989.8987429999979
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2147348,
+        "minimum": 2147348,
+        "maximum": 2147348
+      }
+    },
+    "legacy-direct-65536": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 9487.656924000003,
+        "minimum": 9352.493762,
+        "maximum": 9574.626995999992
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 10410.143297000002,
+        "minimum": 10267.711262999997,
+        "maximum": 10569.024722999995
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 938.0474419999955,
+        "minimum": 907.0473039999997,
+        "maximum": 994.3977270000032
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2147464,
+        "minimum": 2147464,
+        "maximum": 2147464
+      }
+    },
+    "word-direct-262144": {
+      "workerToReadyMs": {
+        "count": 5,
+        "median": 1849.0602480000089,
+        "minimum": 1819.6845600000015,
+        "maximum": 1856.630818000005
+      },
+      "includingHostValidationMs": {
+        "count": 5,
+        "median": 2769.721825000015,
+        "minimum": 2731.4725590000016,
+        "maximum": 2816.0877000000037
+      },
+      "hostValidationMs": {
+        "count": 5,
+        "median": 930.0520829999878,
+        "minimum": 908.6163180000003,
+        "maximum": 964.4763660000026
+      },
+      "nativePeakObservedKiB": {
+        "count": 5,
+        "median": 2142072,
+        "minimum": 2142072,
+        "maximum": 2142072
+      }
+    }
+  },
+  "reductionPercent": 80.35671299307359,
+  "includingHostReductionPercent": 73.2064113074021,
+  "resource": {
+    "elapsedMs": 126250,
+    "peakTreeRssKiB": 2263344,
+    "exitCode": 0,
+    "limits": {
+      "memoryMiB": 3072,
+      "seconds": 360,
+      "cpus": [
+        0
+      ],
+      "nice": 10,
+      "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+    }
+  },
+  "evidence": "docs/verification/optimization-v1/startup-confirmation.json.gz",
+  "rawSha256": "5af8220428dc9c27a459b931d9a204b38f99d17cf0ffb72b808c2488c8e06b47",
+  "compressedSha256": "5f0a3a08c1761473c7fc6b2e945094e7c7ecb383b8cbd128af952a7051722960"
+}

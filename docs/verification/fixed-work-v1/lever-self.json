@@ -1,0 +1,50 @@
+{
+  "format": "rubend-fixed-work-lever-validation-v1",
+  "scope": "Self-comparison validates the lever only. Frozen baseline equality and raw tier remain unverified.",
+  "counts": {
+    "snapshots": 98,
+    "candidates": 36,
+    "nodes": 1260818
+  },
+  "cases": 14,
+  "slices": 6,
+  "binarySha256": "d1634a9e3c799ea19aabdf4e95d36f7b0bdac6624e8b843697423d6da69c07a8",
+  "snapshotSha256": "c14c7edc89aa794796581bf23513ca24c2229a42327394efe0e70fe32446aa50",
+  "sourceHashes": {
+    "bench/advanced-main.bend": "5bcab0e0e75da89e08d9cf143e8c4d68530935ecb34d54e9f8f06c2a9d8b58ee",
+    "bench/fixed-work.bend": "514d5d0c49f213bb63a212fec2a03665cf53899e4499cddf7c32bfc3efeb7a48",
+    "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+    "src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+    "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+    "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+    "src/joint-cache.bend": "710d29deb21542a0f913822d14a2b5b43a0323c9ec1bd1879bf9864008f2bdd7",
+    "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+    "src/main.bend": "e0ada028b3ce649ba21282a4d4f9a816039a844ca9b72a7cf72ad16d6cd22a75",
+    "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    "src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+    "src/portfolio.bend": "778a0dfe288732e3be7837b00f29e13b2110769322c19be6814822e034da3df1",
+    "src/search.bend": "4734547b7c9648153113eaa7151ac4f0326171fe5ff8ef4b4d01243f0edd8841",
+    "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+    "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+    "src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+    "src/word-read.c": "b5e663644a48e15f5f81cc6129da7c1d3d8e200a34de6c66a81d5a01de1ac6d5",
+    "src/word-read.js": "c285128cc158ee58487af36bb4a6527cf9168dc36bbbc45b3a6fbea6b4ebba96"
+  },
+  "resourceLimits": {
+    "memoryMiB": 512,
+    "seconds": 120,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "peakTreeRssKiB": 110312,
+  "exitCode": 0,
+  "unitTests": {
+    "transcriptCorruptionsRejected": 15,
+    "invalidInputsRejected": 2,
+    "geometricBendTransitionComparisons": 1800
+  },
+  "passed": true
+}

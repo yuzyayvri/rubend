@@ -1,0 +1,27 @@
+{
+  "format": "rubend-profile-source-map-v1",
+  "conditions": "One instrumented solved-input run, not included in uninstrumented startup medians; 70 ten-millisecond user-CPU samples are coarse",
+  "sourceSha256": "a341d31c22e129bad5257db319dced0303c97f7a18c9d62c29ce872d3ccc951e",
+  "symbolMap": {
+    "WL_FID_TABLE_C542": {
+      "generatedLine": 49658,
+      "source": "src/raw-table-io.bend",
+      "operation": "277136640-word fingerprint_at and checked_digest"
+    },
+    "WL_FID_TABLE_C544": {
+      "generatedLine": 49704,
+      "source": "src/raw-table-io.bend",
+      "operation": "T.generate and H.checked_table for the small prefix"
+    },
+    "rubend_word_read_pack": {
+      "source": "src/word-read.c",
+      "operation": "publish a complete chunk as little-endian U32 words"
+    },
+    "WL_FID_TABLE_C546": {
+      "generatedLine": 49752,
+      "source": "src/raw-table-io.bend",
+      "operation": "copy the 8388608-word small prefix"
+    }
+  },
+  "limiter": "The remaining sampled user CPU work lies in the Bend fingerprint, small-table generation, and complete-chunk array publication. Kernel allocation/page-fault time and helper waits are not represented by these percentages."
+}

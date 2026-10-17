@@ -1,0 +1,23 @@
+{
+  "format": "rubend-experiment-build-v1",
+  "entry": ".cache/fixed-work-reference-v1/bench/fixed-work.bend",
+  "sourceHashes": {
+    ".cache/fixed-work-reference-v1/bench/advanced-main.bend": "b3ba5409ac58ea15215d3593606e856a55f596eb2c983667bcf98c441cbb8f0e",
+    ".cache/fixed-work-reference-v1/bench/fixed-work.bend": "514d5d0c49f213bb63a212fec2a03665cf53899e4499cddf7c32bfc3efeb7a48",
+    ".cache/fixed-work-reference-v1/src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+    ".cache/fixed-work-reference-v1/src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+    ".cache/fixed-work-reference-v1/src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+    ".cache/fixed-work-reference-v1/src/joint-cache.bend": "1afed8ff472e72fe18fa420836a5ea91a48802eae87bc9b649656d84001673fb",
+    ".cache/fixed-work-reference-v1/src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+    ".cache/fixed-work-reference-v1/src/main.bend": "e0ada028b3ce649ba21282a4d4f9a816039a844ca9b72a7cf72ad16d6cd22a75",
+    ".cache/fixed-work-reference-v1/src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    ".cache/fixed-work-reference-v1/src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+    ".cache/fixed-work-reference-v1/src/portfolio.bend": "778a0dfe288732e3be7837b00f29e13b2110769322c19be6814822e034da3df1",
+    ".cache/fixed-work-reference-v1/src/search.bend": "af2e8c437b4dd7c045ad03431d90632a0a3f9829f1c9f3d32c7ae60d7fe4f2a0",
+    ".cache/fixed-work-reference-v1/src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+    ".cache/fixed-work-reference-v1/src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6"
+  },
+  "binarySha256": "929b9c8dcaf860ec92ff631a39baadd45096252e2d92fdd790d025f83e6eb8cb",
+  "bend": "bend 2.0.37",
+  "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+}

@@ -1,0 +1,38 @@
+{
+  "format": "rubend-fixed-work-cases-v1",
+  "provenance": {
+    "holdout": "rubend-uniform-holdout-v1 first three records",
+    "holdoutArtifact": "build/evidence/compare-rubend-uniform-holdout-v1-32-1000.json",
+    "superflip": "U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2"
+  },
+  "cases": [
+    {
+      "id": "solved",
+      "facelets": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB"
+    },
+    {
+      "id": "one-turn",
+      "facelets": "UUFUUFUUFRRRRRRRRRFFDFFDFFDDDBDDBDDBLLLLLLLLLUBBUBBUBB"
+    },
+    {
+      "id": "short",
+      "facelets": "UULUUFUUFRRUBRRURRFFDFFUFFFDDRDDDDDDBLLLLLLLLBRRBBBBBB"
+    },
+    {
+      "id": "holdout-0",
+      "facelets": "RBDRURUFDFUBDRFLDRFLRFFLBBBULDDDFLBBFBLULRDRLRDUUBLUUF"
+    },
+    {
+      "id": "holdout-1",
+      "facelets": "DDLDURFRRBFUURLBLBLBDLFBRFUFDRDDFRFDLLUULBFRUBBFUBRLUD"
+    },
+    {
+      "id": "holdout-2",
+      "facelets": "DRBRUFFBFURUDRDRLDLDRFFRFBDDUBUDBLFLFBUFLUULLRURLBDBLB"
+    },
+    {
+      "id": "superflip",
+      "facelets": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB"
+    }
+  ]
+}

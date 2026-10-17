@@ -91,3 +91,59 @@ The bounded batch used one low-priority core, took 53.8 seconds, and peaked at
 byte-list construction, decoding, and reference-count operations as the main CPU
 work. Instrumented profile times are not included in the five-run median.
 Raw evidence is `docs/verification/optimization-v1/startup-baseline-five.json`.
+
+## Repeated startup result
+
+The prototype is faster on this machine, but remains unapproved because the
+host could not allocate an independent reviewer. No performance change is
+promoted into the default small-memory application.
+
+After tuning eight configurations, a separate alternating confirmation compared
+the untouched original, the best tuned byte loader, and the word loader. Each
+profile used five fresh workers with the same sealed raw cache. The original's
+median was 9,413.19 ms, range 9,226.22 to 9,470.85 ms. The word loader's median
+was 1,849.06 ms, range 1,819.68 to 1,856.63 ms. That is 80.36% lower ready latency,
+exceeding the 50% target. Including host SHA256 validation, the medians were
+10,337.26 and 2,769.72 ms, a 73.21% reduction. These are warm-file-cache native
+engine timings, not cold disk or browser startup.
+
+All 55 tuning and confirmation runs returned checked solved answers with zero
+run or batch errors. Cache, binary, metadata, and measurement-source identities
+remained stable. The confirmation batch took 126.25 seconds and peaked at
+2,263,344 KiB aggregate RSS under its 3-GiB ceiling. Native observed peak RSS for
+the word profile was 2,142,072 KiB. Its owned lookup array still occupies 2 GiB.
+
+The eight-profile matrix found 65,536-word byte chunks best among 16,384,
+65,536, and 262,144. At 65,536 words, direct placement reduced the median from
+9,538.03 to 9,435.51 ms. The small isolated placement gain is not a demonstrated
+win over the untouched original. Holding direct placement and chunk size fixed,
+word transport reduced 9,435.51 to 1,864.62 ms. Increasing word chunks to 262,144
+reduced that median to 1,835.15 ms. The existing 1-MiB scratch cap is retained.
+
+The separate instrumented word-loader profile shifts sampled user CPU work to
+the Bend fingerprint, small-table generation, and complete-chunk publication.
+It does not provide precise wall-time fractions for kernel allocation or waits.
+No profile-instrumented timing enters the medians.
+
+The full development and independent proof checks pass. Frozen/current
+fixed-work comparisons match all 4,591 semantic snapshots per side, including
+all 163 raw-profile shallow optima and 3,907 certified, independently replayed
+candidate snapshots. See `docs/verification/FIXED-WORK.md`. These finite checks
+do not prove general search completeness, foreign IO correctness, or equal
+solution quality under every wall-time budget. This batch does not establish
+world-class strength. The Nix package checks have not been rerun for this WIP.
+
+Raw runs are preserved as compressed JSON next to
+`startup-eight-profile-summary.json` and `startup-confirmation-summary.json`
+under `docs/verification/optimization-v1/`. Each summary records archive hashes,
+counts, conditions, limits, and distributions. Binary build manifests preserve
+the exact source graphs. Reproduce with `bench/startup-compare.json` and
+`bench/startup-confirm.json` through the bounded runner.
+
+Block compression remains rejected for the speed profile. Direct placement,
+word transport, and chunk tuning have measured decisions but await independent
+acceptance. New performance fixes accepted in this resumed batch remain zero.
+The next required action is independent loader, lever, comments, and trail
+review with Sol/Luna reviewers and no Astra calls. The next performance idea,
+after approval, is to measure the remaining fingerprint and small-table startup
+cost without weakening validation or moving search mathematics into foreign code.

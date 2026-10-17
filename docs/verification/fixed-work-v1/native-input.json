@@ -1,0 +1,24 @@
+{
+  "format": "rubend-fixed-work-native-validation-v1",
+  "cases": 100,
+  "snapshots": 200,
+  "checks": [
+    "multi-read request file crossing 4096 bytes",
+    "unterminated final line",
+    "malformed field count rejection",
+    "greater-than-64-KiB rejection"
+  ],
+  "limits": {
+    "memoryMiB": 512,
+    "seconds": 120,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "peakTreeRssKiB": 106572,
+  "exitCode": 0,
+  "stdout": "Fixed-work native bytechunk, unterminated-last-line, malformed request, and 64-KiB boundary checks passed.\n",
+  "passed": true
+}

@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "startup-variant-builds",
+  "startedAt": "2026-10-17T06:40:10.607Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/bash",
+    "-c",
+    "set -e\nnode bench/freeze-startup-variants.mjs build/startup-variants-v1\nfor startup_words in 16384 65536 262144; do\n  for startup_layout in shift direct; do\n    node bench/build-experiment.mjs build/startup-variants-v1/legacy-$startup_words/bench/advanced-legacy-$startup_layout.bend build/startup-legacy-$startup_layout-$startup_words\n  done\ndone\nfor startup_words in 65536 262144; do\n  node bench/build-experiment.mjs build/startup-variants-v1/word-$startup_words/bench/advanced-main.bend build/startup-word-direct-$startup_words\ndone\nnode bench/build-experiment.mjs bench/fixed-work.bend build/startup-fixed-current\nnode tests/fixed-work-native.mjs build/startup-fixed-current"
+  ],
+  "limits": {
+    "memoryMiB": 2048,
+    "seconds": 600,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "80b557096c168920d1e77d7c064c92ee66b862d1f38be7efbe7bf254558d1c04",
+  "availableMiB": 16408,
+  "peakTreeRssKiB": 1019844,
+  "samples": 1005,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"output\":\"/home/yuzy/rubend/build/startup-variants-v1\",\"records\":[{\"transport\":\"legacy\",\"words\":16384,\"chunks\":16916,\"fuel\":65536,\"loaderSha256\":\"f12a82aa9b89db0b6e468635b156fab5bcf4ece9dec15a81ae53f0494888290b\",\"entries\":[\"bench/advanced-legacy-shift.bend\",\"bench/advanced-legacy-direct.bend\"]},{\"transport\":\"legacy\",\"words\":65536,\"chunks\":4229,\"fuel\":65536,\"loaderSha256\":\"920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee\",\"entries\":[\"bench/advanced-legacy-shift.bend\",\"bench/advanced-legacy-direct.bend\"]},{\"transport\":\"legacy\",\"words\":262144,\"chunks\":1058,\"fuel\":65536,\"loaderSha256\":\"30c3fc2eea909765c56c85df980c8b49c7b9ae1d031b3c56aca954282d8e0fca\",\"entries\":[\"bench/advanced-legacy-shift.bend\",\"bench/advanced-legacy-direct.bend\"]},{\"transport\":\"word\",\"words\":65536,\"chunks\":4229,\"fuel\":8192,\"loaderSha256\":\"3ce80f9947251d4603875726d831c77d4bb0427e4aa905318899b9163af1fa7b\",\"entries\":[\"bench/advanced-main.bend\"]},{\"transport\":\"word\",\"words\":262144,\"chunks\":1058,\"fuel\":8192,\"loaderSha256\":\"920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee\",\"entries\":[\"bench/advanced-main.bend\"]}]}\nFixed-work native bytechunk, unterminated-last-line, malformed request, and 64-KiB boundary checks passed.\n",
+  "stderr": "",
+  "elapsedMs": 201628,
+  "finishedAt": "2026-10-17T06:43:32.243Z"
+}

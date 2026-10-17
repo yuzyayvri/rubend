@@ -1,0 +1,37 @@
+{
+  "format": "rubend-fixed-work-build-limits-v1",
+  "attempts": [
+    {
+      "name": "fixed-work-build",
+      "limits": {
+        "memoryMiB": 512,
+        "seconds": 120,
+        "cpus": [
+          1
+        ],
+        "nice": 10,
+        "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+      },
+      "peakTreeRssKiB": 643316,
+      "exitCode": null,
+      "signal": "SIGKILL",
+      "stoppedFor": "aggregate-rss-limit"
+    },
+    {
+      "name": "fixed-work-build-2g",
+      "limits": {
+        "memoryMiB": 2048,
+        "seconds": 180,
+        "cpus": [
+          1
+        ],
+        "nice": 10,
+        "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+      },
+      "peakTreeRssKiB": 980168,
+      "exitCode": 0,
+      "signal": null,
+      "stoppedFor": null
+    }
+  ]
+}
