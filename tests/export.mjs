@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {solveRecord} from "../apps/export.mjs";
 import {apply,solved} from "../apps/model.mjs";
+import {refineSolution} from "../apps/solve-state.mjs";
 
 const solution={origin:apply(solved,[3,0,5,2]),moves:[0,3,2,5],lower:4,optimal:true};
 const record=solveRecord(solution,{mode:"exact",budgetMs:1000});
@@ -9,4 +10,18 @@ assert.deepEqual(JSON.parse(JSON.stringify(record)),record);
 assert.throws(()=>solveRecord({...solution,moves:[0]}),/unverified/);
 assert.throws(()=>solveRecord({...solution,lower:3}),/bound mismatch/);
 assert.throws(()=>solveRecord({...solution,lower:5}),/Invalid solution bound/);
-console.log("Export: validated solution records and rejection of false claims passed.");
+const first={...solution,lower:1,optimal:false};
+const progress=refineSolution(first,{type:"progress",lower:3});
+const incomplete=refineSolution(progress,{type:"done",lower:3,optimal:0});
+assert.equal(solveRecord(incomplete,{mode:"exact",budgetMs:2000}).lowerBound,3);
+assert.equal(incomplete.optimal,false);
+const optimum=refineSolution(first,{type:"done",lower:4,optimal:1});
+assert.equal(solveRecord(optimum).lowerBound,4);
+assert.equal(solveRecord(optimum).searchOptimal,true);
+assert.equal(first.lower,1);
+assert.equal(refineSolution(null,{type:"done",lower:4,optimal:0}),null);
+assert.equal(refineSolution(progress,{type:"done",optimal:0}).lower,3);
+assert.throws(()=>refineSolution(progress,{type:"progress",lower:2}),/Invalid solution progress bound/);
+assert.throws(()=>refineSolution(progress,{type:"progress",lower:5}),/Invalid solution progress bound/);
+assert.throws(()=>refineSolution(progress,{type:"done",lower:3,optimal:1}),/Optimality progress bound mismatch/);
+console.log("Export: replay, progress-only bounds, final optimality, and rejection of false claims passed.");
