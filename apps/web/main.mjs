@@ -1,5 +1,6 @@
 import { CubeScene, faceColors } from "./scene.mjs";
 import {solveRecord} from "../export.mjs";
+import {refineSolution} from "../solve-state.mjs";
 
 const $=id=>document.getElementById(id),faces="URFDLB",moveNames=[...faces].flatMap(f=>[f,`${f}2`,`${f}'`]),solved=[...faces].map(f=>f.repeat(9)).join("");
 const worker=new Worker(new URL("./worker.js",import.meta.url),{type:"module"});
@@ -61,11 +62,12 @@ async function solve(){
     for(;;){const {done,value}=await reader.read();if(done)break;buffer+=decoder.decode(value,{stream:true});let cut;while((cut=buffer.indexOf("\n\n"))>=0){const packet=buffer.slice(0,cut);buffer=buffer.slice(cut+2);if(!packet.startsWith("data: "))continue;const event=JSON.parse(packet.slice(6));if(revision!==rev||searchController!==controller)continue;lastRun.events.push(event);
       if(event.type==="error"||event.type==="invalid")throw Error(event.message??"The engine rejected this position.");
       if(event.type==="candidate")showSolution(event,origin);
+      solution=refineSolution(solution,event);
       if(event.lower!==undefined)$("lower-bound").textContent=String(event.lower);
       if(event.nodes!==undefined)$("node-count").textContent=`${event.nodes.toLocaleString()} search steps. One native CPU worker.`;
       const elapsed=performance.now()-started;$("search-time").textContent=`${(elapsed/1000).toFixed(2)}s`;$("search-progress").style.width=`${Math.min(99,elapsed/budgetMs*100)}%`;
       if(event.type==="candidate")message(event.optimal?"Shortest length established by complete search.":"Verified answer found. Looking for fewer turns…");
-      if(event.type==="done"){if(solution){solution.optimal=Boolean(event.optimal);message(event.optimal?"Shortest length established by complete search.":"Time well spent. Your best verified answer is ready.");}else message("No answer within this budget. Try more thinking time.");}
+      if(event.type==="done"){if(solution){message(event.optimal?"Shortest length established by complete search.":"Time well spent. Your best verified answer is ready.");}else message("No answer within this budget. Try more thinking time.");}
     }}
   }catch(e){if(e.name!=="AbortError")message(e.message,true);}finally{if(searchController===controller){searchController=null;searching=false;$("search-progress").style.width=solution?"100%":"0%";sync();}}
 }

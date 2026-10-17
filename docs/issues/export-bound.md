@@ -1,6 +1,6 @@
 # Export loses later lower-bound progress
 
-Status is reproduced and open. Found during the hidden R02 browser check on
+Status is fixed with solo verification. Found during the hidden R02 browser check on
 2026-10-17, after the solver pilot commit 8802d45, main equivalent 4fe900c.
 No visible window opened.
 
@@ -22,3 +22,24 @@ Keep replay verification and the bound/optimality checks. Test a candidate follo
 by progress and completion without another candidate. The exported interval must
 match the last established bound. A timeout or cancellation must never manufacture
 an optimal label. Recheck the real hidden GUI after rebuilding its bundle.
+
+The browser now uses apps/solve-state.mjs to refine the canonical solution on
+each current-job event. Bounds cannot regress or exceed the verified move count.
+An optimal flag still requires equality. apps/export.mjs keeps its replay and
+bound checks. No engine, domain law, or file-format change is required.
+
+After extracting the old done-only update without changing its behavior, the
+focused regression fails with actual bound one versus expected bound three.
+After the fix, tests/export.mjs passes progress-only, done-only optimality,
+incomplete, missing-bound, immutable-input, and invalid-bound cases. The complete
+build, package-manifest check, and sixteen toolchain/proof checks pass.
+
+The rebuilt hidden GUI repeats the exact same pilot-0 request. Its final display
+and export both retain lower bound fifteen, upper bound nineteen, and false
+optimality. Text, screenshot, build provenance, and before/after check receipts
+are under docs/verification/r06-export-v1/. The preview's enforced 300-second
+lease expires during the usage-limit interruption with exit 124. This is the
+server lease ending, not a solver/test success or a solver timeout. The completed
+UI result remains in the hidden tab and is captured after resumption. The tab is
+then closed, and direct process inspection finds no preview or native child.
+No independent review or Nix package rollout is claimed.
