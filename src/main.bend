@@ -74,23 +74,23 @@ def emit(changed: Bool, +original: M.Cube, +best: +List<U32>, length: U32, lower
 
 def service(fuel: Nat, active: Bool, state: P.Session, +original: M.Cube, +started: Nat, +budget: Nat, previous: U32, +profile: S.Profile) -> IO(Array<U32>):
   match fuel active state:
-    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, 4}:
+    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, S.InvalidTransform{}}:
       IO.die(Array<U32>, 2, "Transformed cube failed validation")
-    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, 5}:
+    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, S.ProfileMismatch{}}:
       IO.die(Array<U32>, 2, "Lookup profile does not match loaded storage")
     case 1n+p True{} P.Session{table, tasks, root, +best, +length, +lower, +nodes, request, +status}:
       do IO<Array<U32>>:
-        emit(U32.is_lt(length, previous) || U32.is_eq(status, 1), original, best, length, lower, nodes, U32.is_eq(status, 1))
+        emit(U32.is_lt(length, previous) || S.is_optimal(status), original, best, length, lower, nodes, S.is_optimal(status))
         +now : Nat <- IO.now()
         IO.print("{\"type\":\"progress\",\"nodes\":" ++ U32.show(nodes) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"elapsedMs\":" ++ Nat.show(Nat.sub(now, started)) ++ "}")
-        service(p, Nat.is_lt(now, Nat.add(started, budget)) && U32.is_eq(status, 0), P.advance(P.Session{table, tasks, root, best, length, lower, nodes, request, status}), original, started, budget, length, profile)
+        service(p, Nat.is_lt(now, Nat.add(started, budget)) && S.is_running(status), P.advance(P.Session{table, tasks, root, best, length, lower, nodes, request, status}), original, started, budget, length, profile)
     case _ _ P.Session{table, tasks, root, best, +length, +lower, +nodes, request, +status}:
       do IO<Array<U32>>:
-        emit(U32.is_lt(length, previous) || U32.is_eq(status, 1), original, best, length, lower, nodes, U32.is_eq(status, 1))
-        IO.print("{\"type\":\"done\",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(U32.is_eq(status, 1), 1, 0)) ++ "}")
+        emit(U32.is_lt(length, previous) || S.is_optimal(status), original, best, length, lower, nodes, S.is_optimal(status))
+        IO.print("{\"type\":\"done\",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(S.is_optimal(status), 1, 0)) ++ "}")
         return table
 
-def solve(valid: C.Validation, +original: M.Cube, +request: U32, budget: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
+def solve(valid: C.Validation, +original: M.Cube, +request: P.Request, budget: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match valid:
     case C.Invalid{code}:
       do IO<Array<U32>>:
@@ -99,9 +99,9 @@ def solve(valid: C.Validation, +original: M.Cube, +request: U32, budget: U32, ta
     case C.Valid{cube}:
       do IO<Array<U32>>:
         started : Nat <- IO.now()
-        service(U32.to_nat(C.pick(U32.is_eq(request, 0), 180000, 60000)), True{}, P.initialize(table, original, cube, request, profile), original, started, U32.to_nat(budget), 31, profile)
+        service(U32.to_nat(C.pick(P.is_fast(request), 180000, 60000)), True{}, P.initialize(table, original, cube, request, profile), original, started, U32.to_nat(budget), 31, profile)
 
-def parsed(result: Maybe<&2, M.Cube>, request: U32, budget: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
+def parsed(result: Maybe<&2, M.Cube>, request: P.Request, budget: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match result:
     case None{}:
       do IO<Array<U32>>:
@@ -117,7 +117,7 @@ def command_budget(limit: Maybe<&2, U32>, text: String, mode: String, table: Arr
         IO.print("{\"type\":\"invalid\",\"code\":7}")
         return table
     case Some{+budget}:
-      parsed(M.from_list(colors(text)), C.pick(String.eq(mode, "exact"), 2, 0), C.pick(U32.is_ge(budget, 1) && U32.is_le(budget, 60000), budget, 5000), table, profile)
+      parsed(M.from_list(colors(text)), P.request_mode(String.eq(mode, "exact")), C.pick(U32.is_ge(budget, 1) && U32.is_le(budget, 60000), budget, 5000), table, profile)
 
 def worker_command(args: +List<String>, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match args:

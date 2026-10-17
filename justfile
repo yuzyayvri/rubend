@@ -29,6 +29,8 @@ test: build
     node tests/scorecard.mjs
     bend tests/search-profile.bend -o build/search-profile-test
     build/search-profile-test --threads 1
+    bend tests/search-profile.bend -o build/search-profile-test.mjs
+    node tests/search-domain.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
 

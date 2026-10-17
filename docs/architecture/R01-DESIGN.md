@@ -82,8 +82,16 @@ closed. No loaded-data theorem is claimed from this geometry check.
 This is smaller than replacing every owned-array interface at once. The single
 array still has one owner. The metadata tag describes the loader-selected
 capability and is preserved through restarts and exact-task creation. Goal and
-completion enums remain the next separate change. The fixed-work serializer
+completion enums are now a second separate change. The fixed-work serializer
 omits the new immutable tag and retains all previous semantic fields.
+
+Goal distinguishes Reduction, Subgroup, and FullCube. Stage distinguishes Improve,
+ExactContour, and FirstThenExact. Completion and portfolio Request use named
+constructors. The numeric protocol and old fixed-work format use explicit codecs
+at their serialization boundary. Reaching the reduction subgroup still launches
+phase two at the original leaf. It is never recorded as a solved cube.
+These types prevent numeric flag confusion, not all illegal combinations of
+search fields. A traversal-exhaustion proof remains future work.
 
 ## Open questions and risks
 

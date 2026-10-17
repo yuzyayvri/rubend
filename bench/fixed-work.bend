@@ -17,7 +17,7 @@ def cube(value: C.Cubie) -> String:
 def frame(value: S.Frame) -> String:
   match value:
     case S.Node{root, a, b, c, left, previous, next, phase, path, length}:
-      "[0," ++ cube(root) ++ "," ++ numbers([a, b, c, left, previous, next, phase, length]) ++ "," ++ numbers(path) ++ "]"
+      "[0," ++ cube(root) ++ "," ++ numbers([a, b, c, left, previous, next, S.goal_code(phase), length]) ++ "," ++ numbers(path) ++ "]"
     case S.Retry{root, a, b, c, depth, previous, path, length}:
       "[1," ++ cube(root) ++ "," ++ numbers([a, b, c, depth, previous, length]) ++ "," ++ numbers(path) ++ "]"
 
@@ -29,7 +29,7 @@ def frames(xs: +List<S.Frame>) -> +List<String>:
 def meta(value: S.Meta) -> String:
   match value:
     case S.Meta{root, p1, ceiling, best, length, mode, bound, lower, nodes, status, +profile}:
-      "[" ++ cube(root) ++ "," ++ numbers([p1, ceiling, length, mode, bound, lower, nodes, status]) ++ "," ++ numbers(best) ++ "]"
+      "[" ++ cube(root) ++ "," ++ numbers([p1, ceiling, length, S.stage_code(mode), bound, lower, nodes, S.completion_code(status)]) ++ "," ++ numbers(best) ++ "]"
 
 def tasks(xs: +List<P.Task>) -> +List<String>:
   match xs:
@@ -37,10 +37,10 @@ def tasks(xs: +List<P.Task>) -> +List<String>:
     case Con{P.Task{axis, stack, state}, rest}:
       ("[" ++ U32.show(axis) ++ "," ++ meta(state) ++ ",[" ++ String.join(frames(stack), ",") ++ "]]") <> tasks(rest)
 
-def snapshot(+id: String, +original: M.Cube, initial_request: U32, slice: U32, entries: +List<P.Task>, root: C.Cubie, +best: +List<U32>, +length: U32, +lower: U32, +nodes: U32, request: U32, +status: U32) -> IO(Unit):
+def snapshot(+id: String, +original: M.Cube, initial_request: U32, slice: U32, entries: +List<P.Task>, root: C.Cubie, +best: +List<U32>, +length: U32, +lower: U32, +nodes: U32, request: P.Request, +status: S.Completion) -> IO(Unit):
   do IO<Unit>:
-    H.emit(U32.is_lt(length, 31), original, best, length, lower, nodes, U32.is_eq(status, 1))
-    IO.print("{\"type\":\"snapshot\",\"id\":\"" ++ id ++ "\",\"request\":" ++ U32.show(initial_request) ++ ",\"slice\":" ++ U32.show(slice) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"moves\":" ++ numbers(List.reverse(&2, U32, best)) ++ ",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"status\":" ++ U32.show(status) ++ ",\"state\":[" ++ cube(root) ++ "," ++ U32.show(request) ++ ",[" ++ String.join(tasks(entries), ",") ++ "]]}")
+    H.emit(U32.is_lt(length, 31), original, best, length, lower, nodes, S.is_optimal(status))
+    IO.print("{\"type\":\"snapshot\",\"id\":\"" ++ id ++ "\",\"request\":" ++ U32.show(initial_request) ++ ",\"slice\":" ++ U32.show(slice) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"moves\":" ++ numbers(List.reverse(&2, U32, best)) ++ ",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"status\":" ++ U32.show(S.completion_code(status)) ++ ",\"state\":[" ++ cube(root) ++ "," ++ U32.show(P.request_code(request)) ++ ",[" ++ String.join(tasks(entries), ",") ++ "]]}")
 
 def snapshots(fuel: Nat, +id: String, +original: M.Cube, +initial_request: U32, +slice: U32, state: P.Session) -> IO(Array<U32>):
   match fuel state:
@@ -55,7 +55,7 @@ def snapshots(fuel: Nat, +id: String, +original: M.Cube, +initial_request: U32, 
 
 def solve(valid: C.Validation, +original: M.Cube, id: String, +request: U32, slices: U32, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
   match valid:
-    case C.Valid{root}: snapshots(U32.to_nat(slices), id, original, request, 0, P.initialize(table, original, root, request, profile))
+    case C.Valid{root}: snapshots(U32.to_nat(slices), id, original, request, 0, P.initialize(table, original, root, P.request_mode(U32.is_eq(request, 2)), profile))
     case _: IO.die(Array<U32>, 2, "Invalid fixed-work cube")
 
 def parsed(value: Maybe<&2, M.Cube>, id: String, request: Maybe<&2, U32>, slices: Maybe<&2, U32>, table: Array<U32>, +profile: S.Profile) -> IO(Array<U32>):
