@@ -67,3 +67,7 @@ publication, deployment, or visible windows.
 Keep generated binaries, dependency trees, and pruning tables out of Git. Commit
 small deterministic fixtures and raw benchmark records with provenance. Do not
 store credentials or personal machine inventories.
+
+Yuzy requested frequent commits on 2026-10-17. Make focused local commits after
+verified improvements and preserve the configured GitHub author identity.
+This does not authorize pushes, releases, or deployment.
