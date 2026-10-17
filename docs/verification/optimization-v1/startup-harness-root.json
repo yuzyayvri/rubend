@@ -1,0 +1,30 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "startup-harness-root",
+  "startedAt": "2026-10-17T06:31:24.521Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+    "tests/startup-measure.mjs"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "seconds": 60,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+  "availableMiB": 16656,
+  "peakTreeRssKiB": 141316,
+  "samples": 53,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"passed\":true,\"cases\":30,\"workersChecked\":97,\"sensitivity\":{\"fastMedianMs\":37.26095300000003,\"delayedMedianMs\":135.102059},\"measurementClaim\":\"Fixture delay sensitivity only; not a product startup speedup\"}\n",
+  "stderr": "",
+  "elapsedMs": 10689,
+  "finishedAt": "2026-10-17T06:31:35.299Z"
+}

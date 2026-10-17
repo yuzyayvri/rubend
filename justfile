@@ -21,6 +21,7 @@ test: build
     node tests/engine.mjs
     node tests/http.mjs
     node tests/export.mjs
+    node tests/startup-measure.mjs
 
 audit:
     bend bench/audit.bend -o build/audit
