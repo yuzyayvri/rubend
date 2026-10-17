@@ -1,0 +1,44 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "block-codec-native-v1",
+  "startedAt": "2026-10-17T02:36:29.577Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/block-codec-test",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "seconds": 60,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "430c9b7fa68b7fb689b106dfa249528cfd1e41f870a5fb997f1d1a7c635e0aa6",
+  "availableMiB": 15434,
+  "peakTreeRssKiB": 0,
+  "samples": 0,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"nativeWordCodec\":true,\"cases\":851968}\n",
+  "stderr": "",
+  "build": {
+    "format": "rubend-experiment-build-v1",
+    "entry": "tests/block-codec.bend",
+    "sourceHashes": {
+      "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+      "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+      "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+      "tests/block-codec.bend": "f4922ea5298a5b401d27630edce2e1bd8e45aebc90130bf2645f8e73ad6a9b62"
+    },
+    "binarySha256": "430c9b7fa68b7fb689b106dfa249528cfd1e41f870a5fb997f1d1a7c635e0aa6",
+    "bend": "bend 2.0.37",
+    "flakeLockSha256": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698"
+  },
+  "elapsedMs": 28,
+  "finishedAt": "2026-10-17T02:36:29.607Z"
+}

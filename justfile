@@ -9,6 +9,11 @@ dev: build
 
 test: build
     node tests/package.mjs
+    node tests/block-layout.mjs
+    bend src/block-table.bend -o build/block-table.mjs
+    node tests/block-table.mjs
+    bend tests/block-codec.bend -o build/block-codec-test
+    build/block-codec-test --threads 1
     bend tests/joint-cache.bend -o build/joint-cache-test
     node tests/joint-cache.mjs
     node tests/core.mjs

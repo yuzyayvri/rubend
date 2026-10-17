@@ -63,6 +63,11 @@
         doCheck = true;
         checkPhase = ''
           runHook preCheck
+          node tests/block-layout.mjs
+          bend src/block-table.bend -o build/block-table.mjs
+          node tests/block-table.mjs
+          bend tests/block-codec.bend -o build/block-codec-test
+          build/block-codec-test --threads 1
           node tests/core.mjs
           node tests/exact.mjs
           node tests/export.mjs
