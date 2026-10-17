@@ -36,8 +36,28 @@ No slower frame code was integrated into main. The source is preserved in a
 local experiment branch and a portable recovery patch alongside all evidence.
 Read [the rejected pilot](verification/R03-SUBGROUP.md). The runtime cause is
 not yet isolated. Do not repeat the same field-deletion premise without a new
-direct test. Next pilot the independent packed-small-table memory layout. Keep
-using the expanded resource policy and frequent verified local commits.
+direct test.
+
+The independent packed-small-table pilot now passes its finite memory gate.
+It generates an exact four-MiB table directly instead of a thirty-two-MiB table.
+Native after-shallow RSS falls from 43,948 to 15,276 KiB in five fresh pairs.
+All 1,630 shallow memory jobs and 1,750 application jobs pass. Sixty deadline
+quality/lower-bound pairs tie. Startup median rises from 221 to 313 ms, so this
+is an optional memory tier, not a default switch or a general speed claim.
+All used entries and all packed words match the original data. Fixed-work
+snapshots, full regression, native/HTTP integration, and a hidden 3D solve,
+playback, and export smoke check pass. The pure direct builder also passes
+BendTT with the unchanged eighteen laws. No foreign solver or new unsafe effect
+is used. See [the packed result](verification/R03-SMALL.md) and
+[local profile instructions](benchmarks/ADVANCED-PROFILES.md).
+
+The default engine's search/portfolio/runtime/table source files are unchanged.
+The packed variant is generated separately with stale-source checks. Independent
+review, broad browser coverage, and Nix package rollout are not claimed. All
+temporary UI and worker processes are stopped. Next return to R02's all-18-move
+full-corner bound pilot, before the larger symmetry profile. R03 raw segmentation
+and owned-stack pilots remain independent. Keep the expanded resource policy,
+solo work, and frequent verified commits. No push has occurred yet.
 
 ## Whole-engine execution
 
