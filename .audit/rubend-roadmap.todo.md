@@ -15,10 +15,10 @@
   - [x] Fix accepted planning findings without implementing the engine.
 - [x] Phase D: Keep the audit trail.
   - [x] Append scoped planning decisions to .audit/rubend-startup.tsv.
-- [ ] Phase E: Verify and hand back.
+- [x] Phase E: Verify and hand back.
   - [x] Check the final artifacts and focused documentation diff.
-  - [ ] Commit verified planning artifacts locally with existing authorship.
-  - [ ] Publish and read back an updated checkpoint.
+  - [x] Commit verified planning artifacts locally with existing authorship.
+  - [x] Publish and read back an updated checkpoint.
 
 The multi-phase template is used for the future local implementation units.
 No PR, push, merge, automation, prototype, or engine benchmark is run now.
