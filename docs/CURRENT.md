@@ -1,5 +1,36 @@
 # Current state of Rubend
 
+## Latest verified work
+
+The exact-only inverse pilot is implemented and remains opt-in. Three lazy
+inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
+37.8% less on sixteen disjoint development positions to reach lower bound
+fifteen. Each set uses five fresh cohorts. All 480 measured targets and 4,890
+native shallow checks pass. These are direct-contour results, not general
+answer-speed or world-class strength claims. See [R02 evidence](verification/R02-INVERSE.md).
+
+The application canaries compare the frozen R01 raw release against the inverse
+profile. All 1,750 jobs pass. Sixty deadline quality and lower-bound pairs tie.
+Superflip first-answer p95 is 3.2% slower on five samples, within the finite
+five-percent canary threshold. Hard exact jobs remain incomplete. The full
+development regression, sixteen toolchain checks, and eighteen laws pass.
+The default small profile has not changed. Corner databases, remaining kernel
+pilots, full browser and package rollout, and independent review are not done.
+
+A hidden GUI check found and reproduced a stale export bound. The canonical
+solution now follows progress and completion events, so the same difficult
+case displays and exports fifteen to nineteen, with no optimal claim. The cheap
+regression fails before the fix and passes after it. Read the
+[closed export issue](issues/export-bound.md) and docs/verification/r06-export-v1/.
+The rebuilt hidden GUI confirms the fix. Its bounded server lease expired during
+the usage-limit interruption. After resumption the saved result was captured,
+the hidden tab was closed, and direct inspection found no remaining preview or
+native child. No subagent, Astra, visible window, push, or deployment was used.
+
+Yuzy resumed work after replenishing limits on 2026-10-18. Continue solo from
+the approved roadmap, next with the R03 coordinate-only phase-two pilot. Keep
+using the expanded resource policy and frequent verified local commits.
+
 ## Whole-engine execution
 
 Yuzy approved autonomous implementation of the plan on 2026-10-17 and authorized
