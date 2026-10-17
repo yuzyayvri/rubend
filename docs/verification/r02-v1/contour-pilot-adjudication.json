@@ -1,0 +1,152 @@
+{
+  "format": "rubend-contour-adjudication-v1",
+  "inputSha256": "de1b7f8f6e3e3902424027240895587d2b209102caf6e3effe97353b039c868f",
+  "target": 15,
+  "count": 16,
+  "completed": {
+    "forward": {
+      "planned": 80,
+      "completed": 80,
+      "censored": 0,
+      "cpuMs": {
+        "count": 80,
+        "median": 330,
+        "minimum": 180,
+        "maximum": 570
+      },
+      "nativeWallMs": {
+        "count": 80,
+        "median": 330,
+        "minimum": 179,
+        "maximum": 576
+      },
+      "workSteps": {
+        "count": 80,
+        "median": 2544421.5,
+        "minimum": 1366881,
+        "maximum": 4414333
+      }
+    },
+    "inverse-one": {
+      "planned": 80,
+      "completed": 80,
+      "censored": 0,
+      "cpuMs": {
+        "count": 80,
+        "median": 265,
+        "minimum": 140,
+        "maximum": 510
+      },
+      "nativeWallMs": {
+        "count": 80,
+        "median": 271,
+        "minimum": 150,
+        "maximum": 514
+      },
+      "workSteps": {
+        "count": 80,
+        "median": 1717787,
+        "minimum": 1034110,
+        "maximum": 2797785
+      }
+    },
+    "inverse-three": {
+      "planned": 80,
+      "completed": 80,
+      "censored": 0,
+      "cpuMs": {
+        "count": 80,
+        "median": 210,
+        "minimum": 130,
+        "maximum": 330
+      },
+      "nativeWallMs": {
+        "count": 80,
+        "median": 213,
+        "minimum": 132,
+        "maximum": 328
+      },
+      "workSteps": {
+        "count": 80,
+        "median": 1177683.5,
+        "minimum": 825224,
+        "maximum": 1764451
+      }
+    }
+  },
+  "comparisons": {
+    "inverse-one": {
+      "allTargetsComparable": true,
+      "plannedPairs": 80,
+      "completePairs": 80,
+      "pairedCpuRatio": {
+        "count": 80,
+        "median": 0.8095238095238095,
+        "minimum": 0.6,
+        "maximum": 1.0416666666666667
+      },
+      "pairedWorkRatio": {
+        "count": 80,
+        "median": 0.6960506816582295,
+        "minimum": 0.6064196066848344,
+        "maximum": 0.767321982172696
+      },
+      "nativeWallPerCpu": {
+        "count": 160,
+        "median": 1.0095262096774194,
+        "minimum": 0.9588235294117647,
+        "maximum": 1.0714285714285714
+      },
+      "geometricCpuRatio": 0.8148804837856348,
+      "cohortCpuRatios": [
+        0.8085682804130372,
+        0.7942311412560561,
+        0.9271400695743754,
+        0.7729694332629771,
+        0.7807253846764766
+      ],
+      "fiveCohortBootstrap95": [
+        0.7802856689121471,
+        0.871497158008558
+      ],
+      "observedTenPercentContourGate": true
+    },
+    "inverse-three": {
+      "allTargetsComparable": true,
+      "plannedPairs": 80,
+      "completePairs": 80,
+      "pairedCpuRatio": {
+        "count": 80,
+        "median": 0.6448371448371448,
+        "minimum": 0.45454545454545453,
+        "maximum": 0.7391304347826086
+      },
+      "pairedWorkRatio": {
+        "count": 80,
+        "median": 0.4797037207834205,
+        "minimum": 0.3610762984513222,
+        "maximum": 0.6037277568420367
+      },
+      "nativeWallPerCpu": {
+        "count": 160,
+        "median": 1.011764705882353,
+        "minimum": 0.9521739130434783,
+        "maximum": 1.06875
+      },
+      "geometricCpuRatio": 0.6341532570424362,
+      "cohortCpuRatios": [
+        0.649836822914192,
+        0.644246769477261,
+        0.638261061038586,
+        0.6050467658576091,
+        0.6343475642594577
+      ],
+      "fiveCohortBootstrap95": [
+        0.6185136257973582,
+        0.6453609199054069
+      ],
+      "observedTenPercentContourGate": true
+    }
+  },
+  "claim": "Finite direct-contour comparison only. CPU is process time, not work-step rate. Censored cases remain visible and disable the all-case ratio claim. Five cohorts on these positions do not establish general exact strength, application deadline quality, formal admissibility, or world-class performance."
+}
