@@ -30,11 +30,18 @@ The numeric protocol is unchanged. Native/generated-JS codec checks and a
 negative numeric-goal type fixture pass. The complete development regression
 suite also passes. This is behavior-preservation evidence, not a speed claim.
 
-A five-round identical-binary noise-control run is active in the managed
-roadmap-r01 worktree. Its sealed configuration is
-docs/verification/r01-v1/control-config.json in that checkout. It uses one
-nice-10 core, six GiB, and a 900-second cap. Do not start a second large table
-batch concurrently. Typed-contract overhead comparison and diagnostics follow.
+The identical-binary noise control passed 1,990 jobs with zero errors. Its median
+rate offsets were about 1.93%, 3.20%, and 2.08% across fast/exact/Superflip groups.
+One of 180 quality pairs differed despite identical binaries. These are noise
+observations, not improvements. Raw data is archived in the roadmap-r01 worktree.
+
+The five-round typed-contract comparison has been launched there with
+docs/verification/r01-v1/typed-config.json, one nice-10 core, six GiB, and a
+900-second cap. Check its resource record before starting any large job. A
+separate observational diagnostic program is WIP in that checkout. It leaves
+release sources untouched, predicts logical cuts/probes, checks actual child
+coordinates, and uses nonwrapping counters. Pure type checks and counter-fixture
+tests pass; its native semantic-trace verification has not run yet.
 
 ## Accepted experimental raw startup
 
