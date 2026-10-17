@@ -1,0 +1,205 @@
+{
+  "format": "rubend-warm-scorecard-v1",
+  "inputSha256": "5d43ce9003c29d684d9cb1de4534cf1b21bd72dadb83f392e981463828987dd9",
+  "sourceHashes": {
+    "score-warm.mjs": "f12464da30bf1620723ae4d2674f101530b4aced2df88ee8c7fa212de397a8fe",
+    "scorecard.mjs": "d45220ffcc51ac7f2fc51f6dedb705fdede0cf2af96670aeba845be5f824f034"
+  },
+  "groups": {
+    "fast": {
+      "profiles": {
+        "frozen-raw-baseline": [
+          {
+            "deadlineMs": 1000,
+            "planned": 160,
+            "errors": 0,
+            "answered": 160,
+            "noAnswer": 0,
+            "meanAnsweredLength": 18.75,
+            "p95FirstMs": 27,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 0,
+              "completed": 0,
+              "restrictedMeanMs": null
+            }
+          }
+        ],
+        "word-direct-262144": [
+          {
+            "deadlineMs": 1000,
+            "planned": 160,
+            "errors": 0,
+            "answered": 160,
+            "noAnswer": 0,
+            "meanAnsweredLength": 18.75,
+            "p95FirstMs": 27,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 0,
+              "completed": 0,
+              "restrictedMeanMs": null
+            }
+          }
+        ]
+      },
+      "comparison": [
+        {
+          "deadlineMs": 1000,
+          "baselineAnswered": 160,
+          "candidateAnswered": 160,
+          "paired": {
+            "wins": 0,
+            "ties": 160,
+            "losses": 0,
+            "bothMissing": 0,
+            "coverageGains": 0,
+            "coverageLosses": 0,
+            "lowerGains": 0,
+            "lowerLosses": 0
+          },
+          "qualityFloorPassed": true,
+          "verdict": "tied"
+        }
+      ]
+    },
+    "exact": {
+      "profiles": {
+        "frozen-raw-baseline": [
+          {
+            "deadlineMs": 2000,
+            "planned": 15,
+            "errors": 0,
+            "answered": 15,
+            "noAnswer": 0,
+            "meanAnsweredLength": 19,
+            "p95FirstMs": 22,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 15,
+              "completed": 0,
+              "restrictedMeanMs": 2000
+            }
+          }
+        ],
+        "word-direct-262144": [
+          {
+            "deadlineMs": 2000,
+            "planned": 15,
+            "errors": 0,
+            "answered": 15,
+            "noAnswer": 0,
+            "meanAnsweredLength": 19,
+            "p95FirstMs": 20,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 15,
+              "completed": 0,
+              "restrictedMeanMs": 2000
+            }
+          }
+        ]
+      },
+      "comparison": [
+        {
+          "deadlineMs": 2000,
+          "baselineAnswered": 15,
+          "candidateAnswered": 15,
+          "paired": {
+            "wins": 0,
+            "ties": 15,
+            "losses": 0,
+            "bothMissing": 0,
+            "coverageGains": 0,
+            "coverageLosses": 0,
+            "lowerGains": 0,
+            "lowerLosses": 0
+          },
+          "qualityFloorPassed": true,
+          "verdict": "tied"
+        }
+      ]
+    },
+    "superflip": {
+      "profiles": {
+        "frozen-raw-baseline": [
+          {
+            "deadlineMs": 5000,
+            "planned": 5,
+            "errors": 0,
+            "answered": 5,
+            "noAnswer": 0,
+            "meanAnsweredLength": 21,
+            "p95FirstMs": 1643,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 5,
+              "completed": 0,
+              "restrictedMeanMs": 5000
+            }
+          }
+        ],
+        "word-direct-262144": [
+          {
+            "deadlineMs": 5000,
+            "planned": 5,
+            "errors": 0,
+            "answered": 5,
+            "noAnswer": 0,
+            "meanAnsweredLength": 21,
+            "p95FirstMs": 1641,
+            "oracle": {
+              "eligible": 0,
+              "answered": 0,
+              "meanAnsweredExcess": null
+            },
+            "exact": {
+              "planned": 5,
+              "completed": 0,
+              "restrictedMeanMs": 5000
+            }
+          }
+        ]
+      },
+      "comparison": [
+        {
+          "deadlineMs": 5000,
+          "baselineAnswered": 5,
+          "candidateAnswered": 5,
+          "paired": {
+            "wins": 0,
+            "ties": 5,
+            "losses": 0,
+            "bothMissing": 0,
+            "coverageGains": 0,
+            "coverageLosses": 0,
+            "lowerGains": 0,
+            "lowerLosses": 0
+          },
+          "qualityFloorPassed": true,
+          "verdict": "tied"
+        }
+      ]
+    }
+  }
+}

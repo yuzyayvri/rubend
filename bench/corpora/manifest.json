@@ -1,0 +1,34 @@
+{
+  "format": "rubend-corpora-v1",
+  "sampler": "SHA256 counter with rejection-sampled bounded draws, Fisher-Yates permutations, parity repair, constrained orientations",
+  "sourceHashes": {
+    "bench/corpus.mjs": "5e9405ad50de8fc954cbf2b35dba07cdc897337be803f7cafd1570ad2d457030",
+    "tests/support.mjs": "b4e4d1e98b5f890530fc06af1bcc683063ab97164f8a608ad3cf33d4f5e17384",
+    "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+    "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    "apps/model.mjs": "9b817c747625ccdf92326b1a4c41ce0c2466db173185be8350456160ed3df5a4"
+  },
+  "corpora": [
+    {
+      "name": "pilot",
+      "count": 128,
+      "seed": "rubend-roadmap-pilot-v1",
+      "file": "pilot.txt",
+      "sha256": "bf222bf0086ca87443e6bdeac90ab4cdb9ba5c7175825ff939cace214354c80c"
+    },
+    {
+      "name": "development",
+      "count": 1000,
+      "seed": "rubend-roadmap-development-v1",
+      "file": "development.txt",
+      "sha256": "afee1ec1b694cc7e2a441fa4eb7f28f07648a348908be6bb6c7b9cce1fe60e9c"
+    },
+    {
+      "name": "release",
+      "count": 10000,
+      "seed": "rubend-roadmap-release-v1",
+      "file": "release.txt",
+      "sha256": "6ec6ac73a838752266398ee5073a9cd0fce44e7760c75436d6af94df27f13bc9"
+    }
+  ]
+}
