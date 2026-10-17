@@ -26,14 +26,22 @@ function configuration(input){
   for(const k of ["readyTimeoutMs","rssSampleMs","shutdownTimeoutMs"])assert.ok(integer(c[k],1,180000));
   assert.equal(c.profiles?.length,2);assert.equal(new Set(c.profiles.map(p=>p.id)).size,2);
   for(const p of c.profiles){
-    assert.ok(Object.keys(p).every(k=>["id","binary","cache","cacheSha256","cacheBytes","env","buildMetadata"].includes(k)));
+    assert.ok(Object.keys(p).every(k=>["id","binary","cache","cacheSha256","cacheBytes","env","buildMetadata","tableSource"].includes(k)));
     assert.match(p.id,/^[a-zA-Z0-9_-]{1,64}$/);
-    for(const k of ["binary","cache","buildMetadata"])assert.ok(typeof p[k]==="string"&&isAbsolute(p[k]),`Absolute ${k} required`);
-    assert.match(p.cacheSha256,/^[a-f0-9]{64}$/);assert.ok(integer(p.cacheBytes,1));
+    for(const k of ["binary","buildMetadata"])assert.ok(typeof p[k]==="string"&&isAbsolute(p[k]),`Absolute ${k} required`);
+    assert.ok(["cache","generated"].includes(p.tableSource??"cache"));
     assert.ok(p.env&&typeof p.env==="object"&&!Array.isArray(p.env));
     for(const [k,v] of Object.entries(p.env))assert.ok(/^[A-Z_][A-Z0-9_]*$/.test(k)&&typeof v==="string"&&!v.includes("\0"));
-    assert.equal(p.env.RUBEND_JOINT_CACHE,p.cache);
+    if(p.tableSource==="generated"){
+      assert.ok(["cache","cacheSha256","cacheBytes"].every(k=>!(k in p)),"Generated profiles cannot claim a disk cache");
+      assert.ok(!("RUBEND_JOINT_CACHE" in p.env),"Generated profiles cannot select a disk cache");
+    }else{
+      assert.ok(typeof p.cache==="string"&&isAbsolute(p.cache),"Absolute cache required");
+      assert.match(p.cacheSha256,/^[a-f0-9]{64}$/);assert.ok(integer(p.cacheBytes,1));
+      assert.equal(p.env.RUBEND_JOINT_CACHE,p.cache);
+    }
   }
+  assert.equal(c.profiles[0].tableSource??"cache",c.profiles[1].tableSource??"cache","Mixed table sources are not comparable here");
   assert.equal(c.profiles[0].cache,c.profiles[1].cache);assert.equal(c.profiles[0].cacheSha256,c.profiles[1].cacheSha256);assert.equal(c.profiles[0].cacheBytes,c.profiles[1].cacheBytes);
   assert.deepEqual(Object.keys(c.corpora).sort(),["exact","fast","warmup"]);
   for(const [group,v] of Object.entries(c.corpora)){assert.ok(Object.keys(v).every(k=>["path","count","budgetMs"].includes(k)));assert.ok(isAbsolute(v.path));assert.ok(integer(v.count,1));assert.ok(integer(v.budgetMs,50,30000));if(group!=="fast")assert.ok(v.budgetMs<=30000);}
@@ -101,14 +109,14 @@ function summarize(result){
   result.passed=result.errors.length===0&&result.rounds.length===result.config?.iterations&&result.rounds.every(r=>r.status==="ok");
 }
 export async function compareWarm(input,sourcePath=null){
-  const result={format:"rubend-warm-comparison-v1",startedAt:new Date().toISOString(),conditions:{clock:"Engine elapsedMs is rounded to one millisecond; deadline selection uses that observed clock",work:"Native nodes are search state-machine work steps, not expanded nodes",startup:"Recorded separately; host SHA256 warms file cache; not cold disk",limits:"Run externally with bench/run-limited.mjs; real configuration requests one low-priority core, 6144 MiB, 900 seconds",claim:"No strength or speed verdict before repeated evidence and independent review"},passed:false,rounds:[],errors:[],seals:{},afterSeals:{}};
+  const result={format:"rubend-warm-comparison-v1",startedAt:new Date().toISOString(),conditions:{clock:"Engine elapsedMs is rounded to one millisecond; deadline selection uses that observed clock",work:"Native nodes are search state-machine work steps, not expanded nodes",startup:"Recorded separately. Host hashes warm files, not a cold-disk claim. Generated profiles build tables per fresh worker.",limits:"Run externally with bench/run-limited.mjs. The resource receipt binds actual affinity, memory, priority, and wall cap.",claim:"No strength or speed verdict before repeated evidence and independent review"},passed:false,rounds:[],errors:[],seals:{},afterSeals:{}};
   try{
     if(sourcePath!==null){assert.ok(isAbsolute(sourcePath),"Configuration path must be absolute");result.seals[sourcePath]=await seal(sourcePath);assert.deepEqual(JSON.parse(readFileSync(sourcePath,"utf8")),input,"Configuration file differs from input");assert.deepEqual(identity(sourcePath),result.seals[sourcePath].identity,"Configuration changed while reading");}
     const config=configuration(input);result.config=config;
     const paths=["bench/warm-compare.mjs","bench/startup-measure.mjs","apps/engine.mjs","apps/model.mjs","build/model.mjs","build/cubie.mjs","build/notation.mjs"].map(p=>resolve(root,p));
-    paths.push(...Object.values(config.corpora).map(c=>c.path),...config.profiles.flatMap(p=>[p.binary,p.buildMetadata,p.cache]));
+    paths.push(...Object.values(config.corpora).map(c=>c.path),...config.profiles.flatMap(p=>[p.binary,p.buildMetadata,...(p.tableSource==="generated"?[]:[p.cache])]));
     for(const path of new Set(paths))result.seals[path]=await seal(path);
-    for(const p of config.profiles){assert.equal(result.seals[p.cache].sha256,p.cacheSha256,"Cache SHA256 mismatch");assert.equal(result.seals[p.cache].bytes,p.cacheBytes);const metadata=JSON.parse(readFileSync(p.buildMetadata,"utf8"));assert.equal(metadata.binarySha256,result.seals[p.binary].sha256,"Binary metadata mismatch");}
+    for(const p of config.profiles){if(p.tableSource!=="generated"){assert.equal(result.seals[p.cache].sha256,p.cacheSha256,"Cache SHA256 mismatch");assert.equal(result.seals[p.cache].bytes,p.cacheBytes);}const metadata=JSON.parse(readFileSync(p.buildMetadata,"utf8"));assert.equal(metadata.binarySha256,result.seals[p.binary].sha256,"Binary metadata mismatch");}
     const cases=Object.fromEntries(Object.entries(config.corpora).map(([group,c])=>{const items=JSON.parse(readFileSync(c.path,"utf8")).records;assert.equal(items.length,c.count);for(const [i,item] of items.entries()){item.id??=`${group}-${i}`;validate(item.facelets);if(group==="warmup")assert.ok(integer(item.depth,0,30));}assert.equal(new Set(items.map(i=>i.id)).size,items.length);return [group,items];}));
     cases.superflip=[{id:"superflip",facelets:encode(Cubie.to_facelets({...Cubie.solved(),eo:4095}))}];
     for(let iteration=0;iteration<config.iterations;iteration++){
@@ -116,7 +124,7 @@ export async function compareWarm(input,sourcePath=null){
       try{
         const order=iteration%2?[...config.profiles].reverse():config.profiles;
         for(const p of order){
-          for(const path of [p.binary,p.buildMetadata,p.cache])assert.deepEqual(identity(path),result.seals[path].identity,`Input identity changed: ${path}`);
+          for(const path of [p.binary,p.buildMetadata,...(p.tableSource==="generated"?[]:[p.cache])])assert.deepEqual(identity(path),result.seals[path].identity,`Input identity changed: ${path}`);
           const started=performance.now(),engine=environment(p.env,()=>new Engine({binary:p.binary}));engines[p.id]=engine;
           originals[p.id]={child:engine.child,stopped:engine.childStopped,directory:engine.directory};
           const worker={profile:p.id,generation:engine.generation,processIdentity:nativeIdentity(engine.child.pid),ipcDirectory:engine.directory,rss:[],shutdown:null};round.workers.push(worker);
