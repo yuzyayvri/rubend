@@ -1,0 +1,30 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "paired-profile-v1",
+  "startedAt": "2026-10-17T00:59:48.168Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node",
+    "bench/paired-profile.mjs"
+  ],
+  "limits": {
+    "memoryMiB": 4096,
+    "seconds": 300,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "f89c69d163e2686ed04cae19f5680668d4c1c64a072a70c1a6e50842a7a9e433",
+  "availableMiB": 15518,
+  "peakTreeRssKiB": 2308312,
+  "samples": 387,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"id\":0,\"light\":19,\"joint\":19,\"lightFirstMs\":97,\"jointFirstMs\":10}\n{\"id\":1,\"light\":20,\"joint\":19,\"lightFirstMs\":11,\"jointFirstMs\":10}\n{\"id\":2,\"light\":20,\"joint\":20,\"lightFirstMs\":8,\"jointFirstMs\":7}\n{\"id\":3,\"light\":19,\"joint\":18,\"lightFirstMs\":16,\"jointFirstMs\":6}\n{\"id\":4,\"light\":19,\"joint\":17,\"lightFirstMs\":10,\"jointFirstMs\":3}\n{\"id\":5,\"light\":20,\"joint\":20,\"lightFirstMs\":23,\"jointFirstMs\":21}\n{\"id\":6,\"light\":20,\"joint\":18,\"lightFirstMs\":27,\"jointFirstMs\":26}\n{\"id\":7,\"light\":20,\"joint\":18,\"lightFirstMs\":83,\"jointFirstMs\":31}\n{\"id\":8,\"light\":19,\"joint\":17,\"lightFirstMs\":59,\"jointFirstMs\":26}\n{\"id\":9,\"light\":19,\"joint\":19,\"lightFirstMs\":39,\"jointFirstMs\":37}\n{\"id\":10,\"light\":20,\"joint\":20,\"lightFirstMs\":10,\"jointFirstMs\":3}\n{\"id\":11,\"light\":20,\"joint\":18,\"lightFirstMs\":14,\"jointFirstMs\":6}\n{\"id\":12,\"light\":18,\"joint\":17,\"lightFirstMs\":41,\"jointFirstMs\":3}\n{\"id\":13,\"light\":20,\"joint\":19,\"lightFirstMs\":14,\"jointFirstMs\":5}\n{\"id\":14,\"light\":20,\"joint\":20,\"lightFirstMs\":24,\"jointFirstMs\":7}\n{\"id\":15,\"light\":19,\"joint\":19,\"lightFirstMs\":15,\"jointFirstMs\":4}\n{\"id\":16,\"light\":18,\"joint\":18,\"lightFirstMs\":8,\"jointFirstMs\":6}\n{\"id\":17,\"light\":20,\"joint\":19,\"lightFirstMs\":3,\"jointFirstMs\":3}\n{\"id\":18,\"light\":20,\"joint\":20,\"lightFirstMs\":83,\"jointFirstMs\":6}\n{\"id\":19,\"light\":18,\"joint\":18,\"lightFirstMs\":19,\"jointFirstMs\":5}\n{\"id\":20,\"light\":18,\"joint\":18,\"lightFirstMs\":42,\"jointFirstMs\":27}\n{\"id\":21,\"light\":20,\"joint\":19,\"lightFirstMs\":16,\"jointFirstMs\":8}\n{\"id\":22,\"light\":19,\"joint\":19,\"lightFirstMs\":6,\"jointFirstMs\":6}\n{\"id\":23,\"light\":19,\"joint\":19,\"lightFirstMs\":6,\"jointFirstMs\":3}\n{\"id\":24,\"light\":17,\"joint\":17,\"lightFirstMs\":3,\"jointFirstMs\":3}\n{\"id\":25,\"light\":19,\"joint\":19,\"lightFirstMs\":28,\"jointFirstMs\":7}\n{\"id\":26,\"light\":19,\"joint\":19,\"lightFirstMs\":3,\"jointFirstMs\":3}\n{\"id\":27,\"light\":20,\"joint\":20,\"lightFirstMs\":16,\"jointFirstMs\":15}\n{\"id\":28,\"light\":18,\"joint\":18,\"lightFirstMs\":60,\"jointFirstMs\":49}\n{\"id\":29,\"light\":21,\"joint\":20,\"lightFirstMs\":9,\"jointFirstMs\":9}\n{\"id\":30,\"light\":20,\"joint\":20,\"lightFirstMs\":1,\"jointFirstMs\":3}\n{\"id\":31,\"light\":20,\"joint\":19,\"lightFirstMs\":26,\"jointFirstMs\":3}\n{\"summary\":{\"light\":{\"cases\":32,\"meanFirstLength\":20.4375,\"meanBestLength\":19.3125,\"p95FirstMs\":83},\"joint\":{\"cases\":32,\"meanFirstLength\":20.40625,\"meanBestLength\":18.75,\"p95FirstMs\":37}},\"paired\":{\"jointShorter\":13,\"tied\":19,\"lightShorter\":0},\"initializationMs\":{\"light\":278,\"joint\":9890}}\n",
+  "stderr": "",
+  "elapsedMs": 77595,
+  "finishedAt": "2026-10-17T01:01:05.862Z"
+}

@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "joint-small-audited-v1",
+  "startedAt": "2026-10-17T00:43:43.829Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/joint",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "seconds": 180,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "30195ca4dff3abe3a09e0900feb162ec42039bd97dd0f81d4495f4a460a7e8d0",
+  "availableMiB": 15348,
+  "peakTreeRssKiB": 107748,
+  "samples": 5,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"type\":\"layer\",\"depth\":0,\"count\":1,\"total\":1,\"elapsedMs\":39}\n{\"type\":\"layer\",\"depth\":1,\"count\":4,\"total\":5,\"elapsedMs\":43}\n{\"type\":\"layer\",\"depth\":2,\"count\":46,\"total\":51,\"elapsedMs\":46}\n{\"type\":\"layer\",\"depth\":3,\"count\":504,\"total\":555,\"elapsedMs\":49}\n{\"type\":\"layer\",\"depth\":4,\"count\":5662,\"total\":6217,\"elapsedMs\":53}\n{\"type\":\"layer\",\"depth\":5,\"count\":61008,\"total\":67225,\"elapsedMs\":57}\n{\"type\":\"layer\",\"depth\":6,\"count\":549711,\"total\":616936,\"elapsedMs\":66}\n{\"type\":\"layer\",\"depth\":7,\"count\":2422226,\"total\":3039162,\"elapsedMs\":104}\n{\"type\":\"layer\",\"depth\":8,\"count\":1431344,\"total\":4470506,\"elapsedMs\":180}\n{\"type\":\"layer\",\"depth\":9,\"count\":8470,\"total\":4478976,\"elapsedMs\":223}\n{\"type\":\"referenceAgreement\",\"passed\":true,\"states\":4478976}\n{\"type\":\"referenceAudit\",\"passed\":true,\"states\":4478976,\"directedEdges\":80621568,\"maximum\":9,\"fingerprint\":2664812503}\n{\"type\":\"packedAudit\",\"passed\":true,\"maximum\":9,\"fingerprint\":2664812503}\n",
+  "stderr": "",
+  "elapsedMs": 1073,
+  "finishedAt": "2026-10-17T00:43:44.904Z"
+}

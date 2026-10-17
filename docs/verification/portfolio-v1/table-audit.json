@@ -1,0 +1,44 @@
+{
+  "kind": "exhaustive-projected-graph-audit",
+  "formalProof": false,
+  "passed": true,
+  "conditions": [
+    "unique zero goal",
+    "all distances finite",
+    "valid transition ranges",
+    "h(s) <= 1 + h(t) for every projected move",
+    "decreasing successor for every non-goal"
+  ],
+  "states": 4031685,
+  "directedEdges": 57087450,
+  "tables": [
+    {
+      "name": "twist-slice",
+      "states": 1082565,
+      "moves": 18,
+      "maximum": 9,
+      "fingerprint": 1184854199
+    },
+    {
+      "name": "flip-slice",
+      "states": 1013760,
+      "moves": 18,
+      "maximum": 9,
+      "fingerprint": 3350293901
+    },
+    {
+      "name": "corners-middle",
+      "states": 967680,
+      "moves": 10,
+      "maximum": 14,
+      "fingerprint": 2502238617
+    },
+    {
+      "name": "edges-middle",
+      "states": 967680,
+      "moves": 10,
+      "maximum": 12,
+      "fingerprint": 749147119
+    }
+  ]
+}

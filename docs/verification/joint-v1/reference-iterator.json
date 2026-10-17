@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "test": "bench/reference-iterator-test.c",
+  "upstreamRevision": "1f7e8e937d0e71e7eb3b5deab38b34d0a0159d88",
+  "iteratorBoundaryReproduced": true,
+  "oldConsumerDropsValidLastSlot": true,
+  "sentinelConsumerPreservesIt": true,
+  "h0BytesUnchangedAfterIteratorFix": true,
+  "h0Sha256BeforeAndAfter": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+  "scope": "Generation consumers and progress reporting only; no product backend or universal reference correctness claim"
+}

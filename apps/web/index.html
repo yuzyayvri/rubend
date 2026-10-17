@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101413">
+  <meta name="description" content="A proof-driven Rubik's cube workbench. Turn, scramble, solve, and explore locally with Bend 2.">
+  <title>Rubend — find the way home</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Rubend home"><svg viewBox="0 0 32 36" aria-hidden="true"><path d="M16 1 30 9v17l-14 8L2 26V9Z M2 9l14 8 14-8M16 17v17M9 5l14 8v17M23 5 9 13v17M2 17l14 8 14-8"/></svg><span>rubend<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Workspace"><span class="active-nav">Cube lab</span><button id="guide-button" class="quiet">How it works <span>↗</span></button></nav>
+    <div class="top-actions"><span id="engine-state" class="engine-state"><i></i> Warming up</span><button id="theme-button" class="icon-button" aria-label="Switch to light appearance">◐</button></div>
+  </header>
+  <main>
+    <section class="workspace" aria-label="Interactive cube workspace">
+      <div class="workspace-heading"><div><p class="eyebrow">A LITTLE CHAOS. A CLEAR WAY BACK.</p><h1>Every turn has a way home.</h1><p class="intro">Explore the cube. Find a solution. See every move.</p></div><span class="edition">3 × 3 × 3<span>HALF-TURN METRIC</span></span></div>
+      <div id="stage" class="stage" role="img" aria-label="Interactive 3D cube. Drag to orbit; click a face to turn it. Keyboard face controls are below.">
+        <div class="stage-grid" aria-hidden="true"></div>
+        <div class="stage-top"><span id="cube-state" class="state-tag">Solved position</span><button id="camera-button" class="small-button" aria-label="Reset camera">⌖ <span>Reset view</span></button></div>
+        <div id="canvas-host"></div>
+        <div id="fallback" class="fallback" hidden><p>3D is unavailable here. The cube net and solver still work.</p><button id="fallback-edit" class="small-button">Open cube net</button></div>
+        <div class="stage-bottom"><span class="axis-legend"><i class="face-u"></i> U <i class="face-f"></i> F <i class="face-r"></i> R</span><span>Drag to orbit <span class="dot-separator">·</span> Click a face to turn</span></div>
+      </div>
+      <div class="turn-row"><span>MAKE A MOVE</span><div id="turn-buttons" class="turn-buttons"></div><span class="key-tip"><kbd>shift</kbd> inverse <kbd>alt</kbd> half-turn</span></div>
+    </section>
+    <aside class="controls" aria-label="Cube input and search controls">
+      <section class="control-section cube-input"><div class="section-label"><span>01</span><h2>Your cube</h2><button id="reset-button" class="text-button">Reset</button></div>
+        <div class="input-actions"><button id="scramble-button" class="secondary-button"><span>⤨</span> Scramble</button><button id="edit-button" class="secondary-button"><span>▦</span> Edit stickers</button></div>
+        <label for="cube-input">Or paste moves / 54 facelets</label><textarea id="cube-input" rows="3" spellcheck="false" placeholder="R U R' U' F2…" maxlength="4096"></textarea>
+        <div class="input-footer"><span>U R F D L B notation</span><button id="apply-button" class="text-button">Apply input →</button></div>
+        <p id="input-error" class="error-message" role="alert" hidden></p>
+      </section>
+      <section class="control-section search-controls"><div class="section-label"><span>02</span><h2>Find a solution</h2></div>
+        <div class="mode-picker" role="group" aria-label="Search mode"><button id="fast-mode" class="mode selected" aria-pressed="true">Fast + improve</button><button id="exact-mode" class="mode" aria-pressed="false">Exact search</button></div>
+        <p id="mode-description" class="mode-description">A quick answer, then fewer moves as time allows.</p>
+        <div class="budget-label"><label for="budget">Thinking time</label><output id="budget-value" for="budget">2 seconds</output></div><input id="budget" type="range" min="0" max="4" step="1" value="2" aria-label="Thinking time">
+        <div class="range-labels"><span>Quick</span><span>Thorough</span></div>
+        <button id="solve-button" class="solve-button" disabled><span>Find the way home</span><span>↗</span></button><button id="cancel-button" class="cancel-button" hidden>Stop searching</button>
+        <div id="search-status" class="search-status" aria-live="polite">Everything runs on your machine.</div><div class="search-track" aria-hidden="true"><div id="search-progress"></div></div>
+        <dl class="metrics"><div><dt>Best length</dt><dd id="best-length">—</dd></div><div><dt>Lower bound</dt><dd id="lower-bound">—</dd></div><div><dt>Time</dt><dd id="search-time">—</dd></div></dl>
+        <details class="engine-details"><summary>Under the hood <span>+</span></summary><p>Native Bend 2 search. Every accepted answer carries a checked replay certificate. “Shortest” means complete search ruled out shorter paths; it is not a formal proof of the entire search engine.</p><p id="node-count">No positions searched yet.</p><p id="render-stat">Measuring rendering…</p></details>
+      </section>
+      <div class="local-note"><span>◉</span><p>Local by design.<br><span>No uploads. No account. Just the cube.</span></p></div>
+    </aside>
+    <section class="solution" aria-labelledby="solution-heading"><div class="solution-heading"><div><span class="eyebrow">THE WAY BACK</span><h2 id="solution-heading">Your solution will appear here.</h2></div><span id="solution-badge" class="solution-badge" hidden>Replay certified</span><div class="solution-actions"><button id="copy-button" class="small-button" disabled>Copy moves</button><button id="export-button" class="small-button" disabled>Export</button></div></div>
+      <div id="moves" class="moves" aria-label="Solution moves"><p class="empty-moves">A scrambled cube, a little thinking, and a clear sequence of turns.</p></div>
+      <div class="playback"><div class="playback-buttons"><button id="first-button" class="play-icon" aria-label="Back to start" disabled>⇤</button><button id="back-button" class="play-icon" aria-label="Previous move" disabled>←</button><button id="play-button" class="play-main" aria-label="Play solution" disabled>▶</button><button id="next-button" class="play-icon" aria-label="Next move" disabled>→</button></div><span id="step-count" class="step-count">0 / 0</span><input id="timeline" type="range" min="0" max="0" value="0" aria-label="Solution position" disabled><label class="speed-control" for="speed">Speed<select id="speed"><option value="500">Slow</option><option value="250" selected>Normal</option><option value="100">Fast</option></select></label></div>
+    </section>
+  </main>
+  <footer><span>Built with Bend 2. Backed by proof.</span><span>Turn freely. Think precisely.</span></footer>
+  <dialog id="edit-dialog" aria-labelledby="edit-title"><div class="dialog-top"><div><p class="eyebrow">YOUR CUBE, FACE BY FACE</p><h2 id="edit-title">Paint the cube.</h2></div><button id="close-edit" class="icon-button" aria-label="Close sticker editor">×</button></div><p>Choose a face color, then paint a sticker. Centers stay fixed.</p><div id="palette" class="palette" role="group" aria-label="Sticker color"></div><div id="cube-net" class="cube-net"></div><p id="edit-error" class="error-message" role="alert" hidden></p><div class="dialog-actions"><button id="cancel-edit" class="secondary-button">Cancel</button><button id="save-edit" class="solve-button">Use this cube →</button></div></dialog>
+  <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-top"><h2 id="guide-title">A cube, without the mystery.</h2><button id="close-guide" class="icon-button" aria-label="Close guide">×</button></div><p>Drag to look around. Click a face or use the six face buttons to turn it. The reference frame never changes when you orbit.</p><dl class="guide-list"><div><dt>U R F D L B</dt><dd>Up, Right, Front, Down, Left, Back.</dd></div><div><dt>′ and 2</dt><dd>An inverse turn and a half-turn. Both count as one move here.</dd></div><div><dt>Fast + improve</dt><dd>Find a verified answer and keep looking for a shorter one.</dd></div><div><dt>Exact search</dt><dd>Find an answer, then try to rule out every shorter length. Hard cubes may need more time.</dd></div><div><dt>Keyboard</dt><dd>Face letters turn the cube. Shift reverses, Alt makes a half-turn. Space plays; arrow keys step.</dd></div></dl><label class="motion-toggle"><input id="reduced-motion" type="checkbox"> Reduce turn animation</label></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-top"><h2 id="export-title">Your solve record.</h2><button id="close-export" class="icon-button" aria-label="Close solve record">×</button></div><p>Save the moves and the search result as JSON. If downloads are unavailable in this browser, select the record and copy it instead.</p><label for="export-record">Verified solve record</label><textarea id="export-record" rows="12" readonly spellcheck="false"></textarea><div class="dialog-actions"><button id="select-record" class="secondary-button">Select record</button><button id="download-record" class="solve-button">Download JSON ↓</button></div></dialog>
+</body>
+</html>

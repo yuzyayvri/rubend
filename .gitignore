@@ -1,0 +1,12 @@
+/build/
+/result
+/result-*
+/.direnv/
+/.toolchain/
+/node_modules/
+/.cache/
+/tables/
+/.env
+/.env.*
+!.env.example
+*.log

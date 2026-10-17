@@ -1,0 +1,32 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "nissy-h0-generation-v2",
+  "startedAt": "2026-10-17T00:45:48.690Z",
+  "cwd": "/home/yuzy/rubend/.cache/nissy-reference",
+  "command": [
+    "/home/yuzy/rubend/.cache/nissy-reference/run",
+    "gendata",
+    "-solver",
+    "h48h0"
+  ],
+  "limits": {
+    "memoryMiB": 512,
+    "seconds": 600,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "6a0a2fceae91559a829685c7842402d79849d009120f17a3fa33a2527abb545d",
+  "availableMiB": 13674,
+  "peakTreeRssKiB": 113232,
+  "samples": 519,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "",
+  "stderr": "[H48 gendata] cocsep data computed\n[H48 gendata] Computing depth <=8\n[H48 gendata] Computed 7437855 positions\nStatus updates won't be available because the sleep() functionality is not available on this platform.\n[H48 gendata] Computing eoesep data\n[H48 gendata] eoesep data computed\nData written to tables/h48h0\n",
+  "elapsedMs": 104028,
+  "finishedAt": "2026-10-17T00:47:32.720Z"
+}

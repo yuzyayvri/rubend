@@ -1,0 +1,30 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "joint-small-v1",
+  "startedAt": "2026-10-17T00:41:31.752Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/home/yuzy/rubend/build/joint",
+    "--threads",
+    "1"
+  ],
+  "limits": {
+    "memoryMiB": 256,
+    "seconds": 180,
+    "cpus": [
+      1
+    ],
+    "nice": 10
+  },
+  "binarySha256": "9361a8d68bc1c5f36d55163d5bfbb7848daac1ed25ac39f3545e2ade15c59411",
+  "availableMiB": 15526,
+  "peakTreeRssKiB": 0,
+  "samples": 0,
+  "exitCode": 1,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "",
+  "stderr": "bend: reservation failed\n",
+  "elapsedMs": 8,
+  "finishedAt": "2026-10-17T00:41:31.762Z"
+}
