@@ -1,0 +1,133 @@
+{
+  "kind": "toolchain-and-proof-gate",
+  "solverImplemented": true,
+  "checkedAt": "2026-10-17T08:38:10.641Z",
+  "node": "v24.21.0",
+  "bend": "bend 2.0.37",
+  "sourceHashes": {
+    "flake.nix": "4a14e2c979e9d7f5ad0335817c7ecb41cf85cb7964120b29391b12740c511dd5",
+    "flake.lock": "c66850f71d0da32692f1da757745406c68dc54f88ba2933235b227b3636e5698",
+    "scripts/check.mjs": "8cf5269b2e7aa63042d48f5845ac82da86818a984a1bac596e3db654a4045d69",
+    "LAWS.bend": "af97a1357000e37e9ab2e6421a16734340ab9618c4245ba1f9b353d78fb53d7d",
+    "PROOF.bend": "de40a629eabe5d214a2b0a37b99799b9d4caeeca83cf4cfb273345e10f582f7a",
+    "src/block-table.bend": "1e15937d9b002a149b1f261506241bb707b752ac9e7007f59eb3a369a1389cbd",
+    "src/certificate.bend": "b9bb9f312f4df6b515abfa811acabb009469d5898996060b336b787f51217138",
+    "src/coordinates.bend": "e06908ec53e7beec3ad44e322cd11f762b5929a49629ef13ae29e032269a712b",
+    "src/cubie.bend": "c8092f02fa7dd3629a987857bca603ab8f8988dbcf825ffe10fa8530c22c2c3b",
+    "src/joint-audit.bend": "b32aa90bea2c86906268bb89a9d24e39b106a6952898fda29c2723abe032d3de",
+    "src/joint-cache.bend": "920cc4ccde9bad41d3a3879f1ee3bdab8f82c3611baed0848b736892d8a0cfee",
+    "src/joint-table.bend": "c518050588e3c4a31d6f03c98b59c5ba9ad02a6f2165aeb5562e05731d2315ec",
+    "src/main.bend": "e0ada028b3ce649ba21282a4d4f9a816039a844ca9b72a7cf72ad16d6cd22a75",
+    "src/model-laws.bend": "70652c08b10e5b07f413a39985df1eb80aeba55c8d6c39601b59e9705e3d6dad",
+    "src/model-proof.bend": "7fb85129cc6b156e6f3c4ac7c22584883d613b0e674edc718310b1efea31b09f",
+    "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    "src/notation.bend": "9fcd7e7cac6eaa57adad857e676bb02d719f0ee101259d4cc4652f5e24d6715f",
+    "src/packed-symmetry.bend": "69e417d51d395780be05796df56e15c236893618841fcda1b0ee935ad4f776f8",
+    "src/portfolio.bend": "778a0dfe288732e3be7837b00f29e13b2110769322c19be6814822e034da3df1",
+    "src/pruning-laws.bend": "2cb78a8063a804a62769772f1c3490ccea76ee047424f3bdd80b8f80950fe55c",
+    "src/raw-table-io.bend": "c4e9722505b11ce4de4336e7c3ed6fd330dd6ba35c4d3dced358202644b09f5d",
+    "src/search.bend": "4734547b7c9648153113eaa7151ac4f0326171fe5ff8ef4b4d01243f0edd8841",
+    "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+    "src/table-audit.bend": "4b92f861564b1a50cd2d2f8f0e6a2c2ddc6e86ace4a8e6fac82f9b1e330ef869",
+    "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
+    "src/toolchain.bend": "c34b475dcd733da3eb8be20bad08d39d36058a3268ef1a27730449855a327d0a",
+    "src/word-io.bend": "4c66d05d74dac7edc0bb9fb9f7e450ba4b434a7b790234f22754e730b34c8b75",
+    "tests/toolchain/rejected/false.bend": "a969249d4e7e74a1a97106a5def78477a616e2858cd1ef94ebe7a7cda28fb7fa",
+    "tests/toolchain/rejected/open.bend": "2f0b85b7c9cae12b489c46ba952f9f931bd657f84107b135e0be311324d1f800",
+    "tests/toolchain/rejected/unsafe.bend": "6bab71152aea9efc13456d99dd7294c1f3d57fd7ad1dd81e316c1d401c57c669"
+  },
+  "results": [
+    {
+      "name": "pinned Bend version",
+      "status": "pass",
+      "durationMs": 28,
+      "output": "bend 2.0.37"
+    },
+    {
+      "name": "pinned Lean version",
+      "status": "pass",
+      "durationMs": 29,
+      "output": "Lean (version 4.34.0, x86_64-unknown-linux-gnu, commit 293d5d0c0c3f3dded4688b3ccd6a33939ac5102b, Release)"
+    },
+    {
+      "name": "Bend proof checker",
+      "status": "pass",
+      "durationMs": 963,
+      "output": "ALL PROOFS CHECK\nUse --verdict for mathematical validity."
+    },
+    {
+      "name": "independent BendTT verdict",
+      "status": "pass",
+      "durationMs": 14172,
+      "output": "ALL PROOFS CHECK"
+    },
+    {
+      "name": "reject false proof",
+      "status": "pass",
+      "durationMs": 110,
+      "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+    },
+    {
+      "name": "verdict rejects false proof",
+      "status": "pass",
+      "durationMs": 103,
+      "output": "SOME PROOFS FAIL\nError:\n- expected : False{}\n- observed : True{}\nLocation: false_equality\n3 | def false_equality() -> {False{} == True{} : Bool}:\n4>|   {==}\n  |   ^^^^\n5 |"
+    },
+    {
+      "name": "reject open proof",
+      "status": "pass",
+      "durationMs": 105,
+      "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+    },
+    {
+      "name": "verdict rejects open proof",
+      "status": "pass",
+      "durationMs": 105,
+      "output": "SOME PROOFS FAIL\nError: 1 TODO found.\nThe code is incomplete, and not a valid proof yet."
+    },
+    {
+      "name": "reject unsafe proof",
+      "status": "pass",
+      "durationMs": 109,
+      "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+    },
+    {
+      "name": "verdict rejects unsafe proof",
+      "status": "pass",
+      "durationMs": 109,
+      "output": "SOME PROOFS FAIL\nError: 1 def relies on unsafe or foreign code:\n- unchecked"
+    },
+    {
+      "name": "Bend IO execution",
+      "status": "pass",
+      "durationMs": 1980,
+      "output": "Rubend: pass 54 URFDLB facelets, fast|exact, and a millisecond budget."
+    },
+    {
+      "name": "native compilation",
+      "status": "pass",
+      "durationMs": 14916,
+      "output": ""
+    },
+    {
+      "name": "native execution",
+      "status": "pass",
+      "durationMs": 2,
+      "output": "Rubend: pass 54 URFDLB facelets, fast|exact, and a millisecond budget."
+    },
+    {
+      "name": "JavaScript module compilation",
+      "status": "pass",
+      "durationMs": 112,
+      "output": ""
+    },
+    {
+      "name": "generated JavaScript interop",
+      "status": "pass"
+    },
+    {
+      "name": "safe production Bend sources",
+      "status": "pass"
+    }
+  ]
+}

@@ -1,5 +1,18 @@
 # Current state of Rubend
 
+## Whole-engine planning checkpoint
+
+The latest request is planning-only. Read the
+[whole-engine optimization roadmap](architecture/OPTIMIZATION-ROADMAP.md) and its
+[source-grounded findings](research/OPTIMIZATION-GROUNDING.md) before resuming.
+The roadmap covers stronger exact bounds, cheaper Bend search state, modern
+symmetry-aware projections, anytime policies, table memory, lifecycle reuse,
+GUI responsiveness, and staged proof coverage. No implementation or benchmark
+ran in this planning turn. Its new performance targets are unmeasured.
+The [lifecycle issue](issues/engine-lifecycle.md) is source-observed and open.
+Execution waits for the user's go. Existing resource, model, publication, and
+hidden-window boundaries still apply.
+
 ## Accepted experimental raw startup
 
 The raw-profile initialization change is accepted after independent review of
