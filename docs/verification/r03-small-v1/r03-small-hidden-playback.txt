@@ -1,0 +1,107 @@
+Browser tab: 5, Title: "Rubend — find the way home", URL: "http://127.0.0.1:44767/".
+0 AXWebArea Rubend — find the way home, URL: 127.0.0.1:44767/
+	1 container
+		2 link Description: Rubend home, Value: 127.0.0.1:44767/
+		3 container Workspace
+			4 text Cube lab
+			5 button How it works ↗, ID: guide-button
+				6 text How it works 
+				7 text ↗
+		8 text Bend 2 · Local
+		9 button Description: Switch to light appearance, ID: theme-button
+	10 container
+		11 container Interactive cube workspace
+			12 text A LITTLE CHAOS. A CLEAR WAY BACK.
+			13 heading Every turn has a way home., Value: 1
+				14 text Every turn has a way home.
+			15 text Explore the cube. Find a solution. See every move.
+			16 text 3 × 3 × 3 HALF-TURN METRIC
+			17 container Description: Interactive 3D cube. Drag to orbit; click a face to turn it. Keyboard face controls are below., ID: stage
+			18 text MAKE A MOVE
+			19 container turn-buttons
+				20 button Turn U face
+				21 button Turn R face
+				22 button Turn F face
+				23 button Turn D face
+				24 button Turn L face
+				25 button Turn B face
+			26 text shift  inverse  alt  half-turn
+		27 container Cube input and search controls
+			28 container
+				29 text 01
+				30 heading Your cube, Value: 2
+					31 text Your cube
+				32 button Reset, ID: reset-button
+				33 button ⤨ Scramble, ID: scramble-button
+					34 text ⤨
+					35 text Scramble
+				36 button ▦ Edit stickers, ID: edit-button
+					37 text ▦
+					38 text Edit stickers
+				39 text Or paste moves / 54 facelets
+				40 text entry area (settable) Or paste moves / 54 facelets, Value: U R F2 D', ID: cube-input
+				41 text U R F D L B notation
+				42 button Apply input →, ID: apply-button
+			43 container
+				44 text 02
+				45 heading Find a solution, Value: 2
+					46 text Find a solution
+				47 container Search mode
+					48 checkbox Fast + improve, Value: 0, ID: fast-mode
+					49 checkbox Exact search, Value: 1, ID: exact-mode
+				99 text Try to prove the shortest length. Hard cubes can take longer.
+				51 text Thinking time
+				52 text 2 seconds
+				53 slider (settable, integer) Description: Thinking time, Value: 2, ID: budget
+				54 text Quick Thorough
+				55 button Find the way home ↗, ID: solve-button
+					56 text Find the way home
+					57 text ↗
+				100 text Shortest length established by complete search.
+				59 definition list
+					60 container Best length
+						61 text Best length
+					101 container best-length
+						102 text 4 HTM
+					63 container Lower bound
+						64 text Lower bound
+					103 text 4
+					66 container Time
+						67 text Time
+					104 text 0.02s
+				69 button (collapsed) Under the hood +, Secondary Actions: Expand
+					70 text Under the hood
+					71 text +
+			72 text ◉
+			73 container
+				74 text Local by design.
+				75 text No uploads. No account. Just the cube.
+		76 container 4 moves. Shortest by search.
+			77 text THE WAY BACK
+			78 heading 4 moves. Shortest by search., Value: 2, ID: solution-heading
+				105 text 4 moves. Shortest by search.
+			106 text Shortest · replay certified
+			80 button Copy moves, ID: copy-button
+			81 button Export, ID: export-button
+			82 container Description: Solution moves, ID: moves
+				107 button Move 1: D
+				108 button Move 2: F2
+				109 button Move 3: R'
+				110 button Move 4: U'
+			84 button Description: Back to start, ID: first-button
+			85 button Description: Previous move, ID: back-button
+			86 button Description: Play solution, ID: play-button
+			87 button (disabled) Description: Next move, ID: next-button
+			111 text 4 / 4
+			89 slider (settable, integer) Description: Solution position, Value: 4, ID: timeline
+			90 container
+				91 text Speed
+				92 pop up button (collapsed, settable) Speed, Value: Normal, ID: speed, Secondary Actions: Expand
+					93 menu
+						94 Slow
+						95 (selected) Normal
+						96 Fast
+	97 container
+		98 text Built with Bend 2. Backed by proof. Turn freely. Think precisely.
+
+The focused UI element is 89 slider (settable, integer) Description: Solution position, Value: 4, ID: timeline

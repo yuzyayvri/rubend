@@ -10,6 +10,7 @@ import ./src/portfolio.bend as Portfolio
 import ./src/small-table.bend as SmallTable
 import ./src/small/search.bend as SmallSearch
 import ./src/small/portfolio.bend as SmallPortfolio
+import ./src/small/tables.bend as SmallTables
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:

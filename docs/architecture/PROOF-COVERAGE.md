@@ -78,8 +78,9 @@ must fail closed; they are not reasons to weaken the laws.
 
 ## Packed small tier
 
-PROOF.bend also imports the pure packed codec and generated small search and
-portfolio. The runtime effects are not imported. The existing eighteen laws
+PROOF.bend also imports the pure packed codec, generated small search and
+portfolio, and direct packed table builder. Runtime effects are not imported.
+The existing eighteen laws
 are unchanged. BendTT accepts the expanded pure graph, but this does not add a
 universal compression, generator-equivalence, or traversal-completeness theorem.
 
