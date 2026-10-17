@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import {cpuList,admission} from "../bench/resource-policy.mjs";
+
+const allowed=cpuList("0-3,8-11"),gib=n=>n*1073741824;
+assert.deepEqual([...allowed],[0,1,2,3,8,9,10,11]);
+assert.equal(admission({memoryMiB:16384,seconds:1800,cpus:[0,1,2,3]},gib(24),allowed).reserveMiB,8192);
+assert.equal(admission({memoryMiB:6144,seconds:600,cpus:[2]},gib(14),allowed).nice,10);
+const reject=(request,bytes,message)=>assert.throws(()=>admission(request,bytes,allowed),message);
+reject({memoryMiB:16385,seconds:1,cpus:[0]},gib(32),/Memory ceiling/);
+reject({memoryMiB:127,seconds:1,cpus:[0]},gib(32),/Memory ceiling/);
+reject({memoryMiB:8192,seconds:1801,cpus:[0]},gib(32),/Wall ceiling/);
+reject({memoryMiB:8192,seconds:0,cpus:[0]},gib(32),/Wall ceiling/);
+reject({memoryMiB:8192,seconds:1,cpus:[0,1,2,3,8]},gib(32),/At most four/);
+reject({memoryMiB:8192,seconds:1,cpus:[0,0]},gib(32),/Duplicate CPU/);
+reject({memoryMiB:8192,seconds:1,cpus:[4]},gib(32),/not allowed/);
+reject({memoryMiB:8192,seconds:1,cpus:[]},gib(32),/At most four/);
+reject({memoryMiB:16384,seconds:1,cpus:[0]},gib(24)-1,/Insufficient headroom/);
+reject({memoryMiB:8192,seconds:1,cpus:[0]},gib(16)-1,/Insufficient headroom/);
+for(const value of ["","0-","a","2-1","65536","0,,1"])assert.throws(()=>cpuList(value));
+console.log(JSON.stringify({passed:true,headroomReserveMiB:8192,maxCpuLanes:4,maxMemoryMiB:16384,negativeAdmissionFixtures:10,invalidCpuLists:6}));
