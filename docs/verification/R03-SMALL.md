@@ -49,6 +49,11 @@ and work counts remain in the comparison. No field is masked or synthesized.
 
 The full development regression passes, including native/HTTP behavior, replay,
 all independent model checks, malformed loaders, generation, and export.
+With RUBEND_BINARY explicitly selecting build/r03-small-direct-v2, the existing
+34-case Engine suite and HTTP suite also pass. The integration receipt records
+15,280 KiB native peak RSS, eight-millisecond cancellation, and 318-millisecond
+worker recovery. These are a single integration run, not latency distributions.
+The default-backend regression and this opt-in integration are separate checks.
 Sixteen toolchain checks and the independent BendTT verdict pass. The pure codec
 and packed search/portfolio are in PROOF.bend. Runtime IO remains outside it.
 No existing law changes and no new domain law is added. Eighteen laws still
