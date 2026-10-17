@@ -1,0 +1,74 @@
+diff --git a/src/search.bend b/src/search.bend
+index 860a540..d1e88f6 100644
+--- a/src/search.bend
++++ b/src/search.bend
+@@ -384,16 +384,16 @@ def node_goal(goal: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>,
+     case _ _ meta:
+       Search{table, rest, meta}
+ 
+-def sub_push(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta, +move: U32, nx: U32, ny: U32, nz: U32) -> Search:
++def sub_push(ok: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, meta: Meta, +move: U32, nx: U32, ny: U32, nz: U32) -> Search:
+   match ok frame:
+     case True{} SubNode{a, b, c, +left, previous, next, +path, +length}:
+       Search{table, SubNode{nx, ny, nz, (left - 1 : U32), (move / 3 : U32), 0, move <> path, (length + 1 : U32)} <> SubNode{a, b, c, left, previous, next, path, length} <> rest, meta}
+     case _ frame: Search{table, frame <> rest, meta}
+ 
+-def sub_hy(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, ny: U32, nz: U32, hx: U32) -> Search:
++def sub_hy(read: Array<U32> & U32, +frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, ny: U32, nz: U32, hx: U32) -> Search:
+   match read frame:
+     case Tuple{table, hy} SubNode{a, b, c, +left, previous, next, path, length}:
+-      sub_push(U32.is_lt(maximum(hx, hy), left), table, SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, ny, nz)
++      sub_push(U32.is_lt(maximum(hx, hy), left), table, frame, rest, meta, move, nx, ny, nz)
+     case Tuple{table, hy} frame: Search{table, frame <> rest, meta}
+ 
+ def sub_hx(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, +ny: U32, +nz: U32) -> Search:
+@@ -404,25 +404,25 @@ def sub_z(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta,
+   match read:
+     case Tuple{table, +nz}: sub_hx(table[(2988105 + nx * 24 + nz : U32)], frame, rest, meta, move, nx, ny, nz)
+ 
+-def sub_y(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, +column: U32) -> Search:
++def sub_y(read: Array<U32> & U32, +frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, nx: U32, +column: U32) -> Search:
+   match read frame:
+     case Tuple{table, ny} SubNode{a, b, +c, left, previous, next, path, length}:
+-      sub_z(table[(891540 + c * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, ny)
++      sub_z(table[(891540 + c * 10 + column : U32)], frame, rest, meta, move, nx, ny)
+     case Tuple{table, ny} frame: Search{table, frame <> rest, meta}
+ 
+-def sub_x(read: Array<U32> & U32, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
++def sub_x(read: Array<U32> & U32, +frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
+   match read frame:
+     case Tuple{table, nx} SubNode{a, +b, c, left, previous, next, path, length}:
+-      sub_y(table[(488340 + b * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, nx, column)
++      sub_y(table[(488340 + b * 10 + column : U32)], frame, rest, meta, move, nx, column)
+     case Tuple{table, nx} frame: Search{table, frame <> rest, meta}
+ 
+-def sub_child(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
++def sub_child(ok: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, meta: Meta, move: U32, +column: U32) -> Search:
+   match ok frame:
+     case True{} SubNode{+a, b, c, left, previous, next, path, length}:
+-      sub_x(table[(85140 + a * 10 + column : U32)], SubNode{a, b, c, left, previous, next, path, length}, rest, meta, move, column)
++      sub_x(table[(85140 + a * 10 + column : U32)], frame, rest, meta, move, column)
+     case _ frame: Search{table, frame <> rest, meta}
+ 
+-def sub_enumerate(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta) -> Search:
++def sub_enumerate(ok: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, meta: Meta) -> Search:
+   match ok frame:
+     case True{} SubNode{a, b, c, left, +previous, +next, path, length}:
+       +move = Q.phase2_move(next)
+@@ -430,13 +430,13 @@ def sub_enumerate(ok: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>,
+       sub_child(root_allowed(previous, face) && U32.is_ne(face, previous) && (U32.is_ne(((face + 3) % 6 : U32), previous) || U32.is_lt(previous, face)), table, SubNode{a, b, c, left, previous, (next + 1 : U32), path, length}, rest, meta, move, next)
+     case _ _: Search{table, rest, meta}
+ 
+-def sub_open(goal: Bool, table: Array<U32>, frame: Frame, rest: +List<Frame>, meta: Meta) -> Search:
++def sub_open(goal: Bool, table: Array<U32>, +frame: Frame, rest: +List<Frame>, +meta: Meta) -> Search:
+   match goal frame meta:
+     case True{} SubNode{a, b, c, left, previous, next, +path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, profile}:
+-      maybe_record(U32.is_lt(length, best_len), table, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile}, path, length)
++      maybe_record(U32.is_lt(length, best_len), table, rest, meta, path, length)
+     case False{} SubNode{a, b, c, 0, previous, next, path, length} meta: Search{table, rest, meta}
+     case False{} SubNode{a, b, c, left, previous, +next, path, +length} Meta{root, p1, ceiling, best, +best_len, mode, bound, lower, nodes, status, profile}:
+-      sub_enumerate(U32.is_lt(next, 10) && U32.is_lt(length, best_len), table, SubNode{a, b, c, left, previous, next, path, length}, rest, Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, profile})
++      sub_enumerate(U32.is_lt(next, 10) && U32.is_lt(length, best_len), table, frame, rest, meta)
+     case _ _ meta: Search{table, rest, meta}
+ 
+ def retry_frame(profile: Profile, cube: C.Cubie, a: U32, b: U32, c: U32, depth: U32, previous: U32, path: +List<U32>, length: U32) -> Frame:

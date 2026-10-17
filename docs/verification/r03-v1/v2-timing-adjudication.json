@@ -1,0 +1,47 @@
+{
+  "format": "rubend-fixed-time-adjudication-v1",
+  "inputSha256": "9e42101edb3a4a2e5d7a8b80b305ab98fedd5400ce6cd4d246dc843180969657",
+  "groups": {
+    "fast": {
+      "pairs": 40,
+      "medianCpuRatio": 1.1956521739130435,
+      "geometricCpuRatio": 1.1922085011267287,
+      "minimumCpuRatio": 1.1224489795918366,
+      "maximumCpuRatio": 1.3571428571428572,
+      "cohortCpuRatios": [
+        1.194713607256315,
+        1.2422443187382581,
+        1.1971131343596577,
+        1.1704343353746425,
+        1.1582651584978956
+      ],
+      "fiveCohortBootstrap95": [
+        1.168372282151535,
+        1.2184863303902416
+      ],
+      "withinObservedOverheadLimit": false
+    },
+    "exact": {
+      "pairs": 15,
+      "medianCpuRatio": 1.1477272727272727,
+      "geometricCpuRatio": 1.1491304612336073,
+      "minimumCpuRatio": 1.105263157894737,
+      "maximumCpuRatio": 1.2134831460674158,
+      "cohortCpuRatios": [
+        1.1725807441034575,
+        1.1638052433124215,
+        1.1460517303623268,
+        1.1404589751217946,
+        1.1234137354745646
+      ],
+      "fiveCohortBootstrap95": [
+        1.1347197214589224,
+        1.1643341892455288
+      ],
+      "withinObservedOverheadLimit": false
+    }
+  },
+  "overheadLimit": 1.05,
+  "allWithinObservedOverheadLimit": false,
+  "claim": "Finite equal-work overhead check only. Five cohorts, process-tick resolution, background load, and the selected cases limit inference. This is not a universal bound or a speedup."
+}

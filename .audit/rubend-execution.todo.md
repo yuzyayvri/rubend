@@ -44,6 +44,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Five-cohort application canaries against frozen R01. Sixty quality pairs tie.
   - [ ] Corner database, combination, full rollout, and independent review.
 - [ ] R03. Kernel and memory pilots, independently measured.
+  - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
+  - [ ] Packed small-table memory pilot, then raw segmentation and owned stacks as separate hypotheses.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
