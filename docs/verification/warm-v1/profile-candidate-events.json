@@ -1,0 +1,331 @@
+{
+  "passed": true,
+  "events": [
+    {
+      "type": "progress",
+      "nodes": 0,
+      "lower": 0,
+      "elapsedMs": 3
+    },
+    {
+      "type": "candidate",
+      "moves": [
+        3,
+        10,
+        14,
+        7,
+        10,
+        3,
+        1,
+        3,
+        10,
+        5,
+        1,
+        16,
+        11,
+        8,
+        14,
+        15,
+        0,
+        3,
+        6,
+        10,
+        8
+      ],
+      "length": 21,
+      "lower": 0,
+      "nodes": 240000,
+      "optimal": 0,
+      "elapsedMs": 16
+    },
+    {
+      "type": "candidate",
+      "moves": [
+        16,
+        0,
+        13,
+        7,
+        9,
+        7,
+        13,
+        0,
+        12,
+        16,
+        10,
+        14,
+        6,
+        12,
+        3,
+        17,
+        3,
+        11,
+        5,
+        2
+      ],
+      "length": 20,
+      "lower": 13,
+      "nodes": 680000,
+      "optimal": 0,
+      "elapsedMs": 54
+    },
+    {
+      "type": "progress",
+      "nodes": 680000,
+      "lower": 13,
+      "elapsedMs": 56
+    },
+    {
+      "type": "progress",
+      "nodes": 1320000,
+      "lower": 14,
+      "elapsedMs": 112
+    },
+    {
+      "type": "candidate",
+      "moves": [
+        10,
+        16,
+        0,
+        7,
+        2,
+        13,
+        0,
+        15,
+        14,
+        2,
+        3,
+        15,
+        9,
+        17,
+        8,
+        9,
+        15,
+        6,
+        5
+      ],
+      "length": 19,
+      "lower": 14,
+      "nodes": 1400000,
+      "optimal": 0,
+      "elapsedMs": 117
+    },
+    {
+      "type": "progress",
+      "nodes": 1860000,
+      "lower": 14,
+      "elapsedMs": 163
+    },
+    {
+      "type": "progress",
+      "nodes": 2480000,
+      "lower": 14,
+      "elapsedMs": 214
+    },
+    {
+      "type": "progress",
+      "nodes": 3120000,
+      "lower": 14,
+      "elapsedMs": 273
+    },
+    {
+      "type": "progress",
+      "nodes": 3680000,
+      "lower": 14,
+      "elapsedMs": 323
+    },
+    {
+      "type": "progress",
+      "nodes": 4200000,
+      "lower": 14,
+      "elapsedMs": 376
+    },
+    {
+      "type": "progress",
+      "nodes": 4800000,
+      "lower": 14,
+      "elapsedMs": 427
+    },
+    {
+      "type": "progress",
+      "nodes": 5400000,
+      "lower": 14,
+      "elapsedMs": 478
+    },
+    {
+      "type": "progress",
+      "nodes": 6000000,
+      "lower": 15,
+      "elapsedMs": 533
+    },
+    {
+      "type": "progress",
+      "nodes": 6480000,
+      "lower": 15,
+      "elapsedMs": 584
+    },
+    {
+      "type": "progress",
+      "nodes": 7000000,
+      "lower": 15,
+      "elapsedMs": 635
+    },
+    {
+      "type": "progress",
+      "nodes": 7620000,
+      "lower": 15,
+      "elapsedMs": 693
+    },
+    {
+      "type": "progress",
+      "nodes": 8160000,
+      "lower": 15,
+      "elapsedMs": 749
+    },
+    {
+      "type": "progress",
+      "nodes": 8700000,
+      "lower": 15,
+      "elapsedMs": 807
+    },
+    {
+      "type": "progress",
+      "nodes": 9240000,
+      "lower": 15,
+      "elapsedMs": 857
+    },
+    {
+      "type": "progress",
+      "nodes": 9800000,
+      "lower": 15,
+      "elapsedMs": 908
+    },
+    {
+      "type": "progress",
+      "nodes": 10340000,
+      "lower": 15,
+      "elapsedMs": 959
+    },
+    {
+      "type": "progress",
+      "nodes": 10860000,
+      "lower": 15,
+      "elapsedMs": 1011
+    },
+    {
+      "type": "progress",
+      "nodes": 11460000,
+      "lower": 15,
+      "elapsedMs": 1062
+    },
+    {
+      "type": "progress",
+      "nodes": 12040000,
+      "lower": 15,
+      "elapsedMs": 1112
+    },
+    {
+      "type": "progress",
+      "nodes": 12580000,
+      "lower": 15,
+      "elapsedMs": 1163
+    },
+    {
+      "type": "progress",
+      "nodes": 13100000,
+      "lower": 15,
+      "elapsedMs": 1213
+    },
+    {
+      "type": "progress",
+      "nodes": 13640000,
+      "lower": 15,
+      "elapsedMs": 1263
+    },
+    {
+      "type": "progress",
+      "nodes": 14280000,
+      "lower": 15,
+      "elapsedMs": 1321
+    },
+    {
+      "type": "progress",
+      "nodes": 14820000,
+      "lower": 15,
+      "elapsedMs": 1372
+    },
+    {
+      "type": "progress",
+      "nodes": 15460000,
+      "lower": 15,
+      "elapsedMs": 1423
+    },
+    {
+      "type": "progress",
+      "nodes": 16080000,
+      "lower": 15,
+      "elapsedMs": 1480
+    },
+    {
+      "type": "progress",
+      "nodes": 16700000,
+      "lower": 15,
+      "elapsedMs": 1530
+    },
+    {
+      "type": "progress",
+      "nodes": 17220000,
+      "lower": 15,
+      "elapsedMs": 1581
+    },
+    {
+      "type": "progress",
+      "nodes": 17740000,
+      "lower": 15,
+      "elapsedMs": 1631
+    },
+    {
+      "type": "progress",
+      "nodes": 18320000,
+      "lower": 15,
+      "elapsedMs": 1682
+    },
+    {
+      "type": "progress",
+      "nodes": 18960000,
+      "lower": 15,
+      "elapsedMs": 1739
+    },
+    {
+      "type": "progress",
+      "nodes": 19500000,
+      "lower": 15,
+      "elapsedMs": 1791
+    },
+    {
+      "type": "progress",
+      "nodes": 20080000,
+      "lower": 15,
+      "elapsedMs": 1841
+    },
+    {
+      "type": "progress",
+      "nodes": 20760000,
+      "lower": 15,
+      "elapsedMs": 1900
+    },
+    {
+      "type": "progress",
+      "nodes": 21380000,
+      "lower": 15,
+      "elapsedMs": 1951
+    },
+    {
+      "type": "done",
+      "length": 19,
+      "lower": 15,
+      "nodes": 21880000,
+      "optimal": 0,
+      "elapsedMs": 2002
+    }
+  ]
+}

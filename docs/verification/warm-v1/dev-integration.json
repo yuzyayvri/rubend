@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "large-dev-integration",
+  "startedAt": "2026-10-17T08:11:11.793Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/bash",
+    "-c",
+    "set -e\nnode tests/engine.mjs\ncp build/evidence/engine.json docs/verification/warm-v1/dev-engine.json\nnode tests/http.mjs\ncp build/evidence/http.json docs/verification/warm-v1/dev-http.json"
+  ],
+  "limits": {
+    "memoryMiB": 6144,
+    "seconds": 120,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "80b557096c168920d1e77d7c064c92ee66b862d1f38be7efbe7bf254558d1c04",
+  "availableMiB": 16964,
+  "peakTreeRssKiB": 2305804,
+  "samples": 127,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"cases\":34,\"meanFastLength\":18.166666666666668,\"maxFirstAnswerMs\":26,\"peakRssKiB\":2142144,\"cancellationMs\":336,\"recoveryMs\":1944}\nHTTP: origin/session protection, input limits, streamed solve, and abort recovery passed.\n",
+  "stderr": "",
+  "elapsedMs": 25535,
+  "finishedAt": "2026-10-17T08:11:37.332Z"
+}
