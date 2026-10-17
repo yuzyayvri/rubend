@@ -25,6 +25,7 @@ test: build
     node tests/http.mjs
     node tests/export.mjs
     node tests/startup-measure.mjs
+    node tests/warm-compare.mjs
 
 audit:
     bend bench/audit.bend -o build/audit
