@@ -7,6 +7,9 @@ import ./src/joint-audit.bend as JointAudit
 import ./src/block-table.bend as BlockTable
 import ./src/search.bend as Search
 import ./src/portfolio.bend as Portfolio
+import ./src/small-table.bend as SmallTable
+import ./src/small/search.bend as SmallSearch
+import ./src/small/portfolio.bend as SmallPortfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:

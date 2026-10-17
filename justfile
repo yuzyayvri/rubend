@@ -35,6 +35,9 @@ test: build
     build/search-profile-test --threads 1
     bend tests/search-profile.bend -o build/search-profile-test.mjs
     node tests/search-domain.mjs
+    node tests/small-profile-generator.mjs
+    bend bench/small-table-audit.bend -o build/small-table-audit
+    build/small-table-audit --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test
     build/inverse-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs

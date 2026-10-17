@@ -75,3 +75,18 @@ The parser/elaborator, translation to BendTT, compiler backends, host runtime,
 hardware, and data-generation bridge remain trusted components. Failed proofs,
 incomplete table generation, invalid candidates, or protocol inconsistencies
 must fail closed; they are not reasons to weaken the laws.
+
+## Packed small tier
+
+PROOF.bend also imports the pure packed codec and generated small search and
+portfolio. The runtime effects are not imported. The existing eighteen laws
+are unchanged. BendTT accepts the expanded pure graph, but this does not add a
+universal compression, generator-equivalence, or traversal-completeness theorem.
+
+The packed pilot checks every one of the 4,923,465 used raw entries and all
+1,048,576 packed physical words against the original generator. Fixed-work
+native states, candidates, coordinates, and bounds match. These are exhaustive
+data-identity checks for the current tables plus finite runtime evidence, not
+a proof of all the missing refinement and compiler/backend bridges. The source
+generator's stale-pattern and exact-access guards do not replace such a proof.
+See [the packed result](../verification/R03-SMALL.md).

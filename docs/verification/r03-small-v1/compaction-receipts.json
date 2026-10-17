@@ -1,0 +1,11 @@
+[
+  {
+    "source": "build/evidence/r03-small-shallow-equality-v1.json",
+    "output": "build/evidence/r03-small-shallow-equality-v1-compact.json",
+    "originalBytes": 44410037,
+    "compactBytes": 7485859,
+    "originalSha256": "82a0dcef01ce44dd821c53606c9663b465926ac9aeff717ef474c42fae9e7002",
+    "compactSha256": "c6678997b640ab13d1809a18e7a79c62fe3e001ba5ccab57aed2f72a004d63af",
+    "allFieldsAndRecordsEqual": true
+  }
+]
