@@ -1,0 +1,29 @@
+Browser tab: 5, Title: "Rubend — find the way home", URL: "http://127.0.0.1:44767/".
+0 AXWebArea Rubend — find the way home, URL: 127.0.0.1:44767/
+	1 container Your solve record., ID: export-dialog
+		2 heading Your solve record., Value: 2, ID: export-title
+			3 text Your solve record.
+		4 button Description: Close solve record, ID: close-export
+		5 text Save the moves and the search result as JSON. If downloads are unavailable in this browser, select the record and copy it instead.
+		6 text Verified solve record
+		7 text entry area Verified solve record, ID: export-record, Value: {
+  "format": "rubend-solve-v1",
+  "facelets": "UURUUFBDDLRBLRBUBBDFFDFFFRBUBLUDDFDDFFRLLRDRRULLUBBLLR",
+  "moves": [
+    "D",
+    "F2",
+    "R'",
+    "U'"
+  ],
+  "htm": 4,
+  "lowerBound": 4,
+  "searchOptimal": true,
+  "replayCertified": true,
+  "mode": "exact",
+  "budgetMs": 2000,
+  "optimalityNote": "Search-established status recorded by this run; this JSON is not a formal optimality proof."
+}
+		8 button Select record, ID: select-record
+		9 button Download JSON ↓, ID: download-record
+
+The focused UI element is 4 button Description: Close solve record, ID: close-export
