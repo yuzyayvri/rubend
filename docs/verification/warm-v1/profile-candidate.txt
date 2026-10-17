@@ -1,0 +1,34 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls   s/call   s/call  name
+ 92.31      1.56     1.56      854     0.00     0.00  WL_FID____SRC_PORTFOLIO_ADVANCE_K253
+  2.96      1.61     0.05  1458549     0.00     0.00  term_drop
+  1.78      1.64     0.03  2240154     0.00     0.00  spin_4
+  1.18      1.66     0.02 24856383     0.00     0.00  rfc_wrap
+  1.18      1.68     0.02  2240154     0.00     0.00  spin_11
+  0.59      1.69     0.01  2612087     0.00     0.00  spin_3
+  0.00      1.69     0.00  1437229     0.00     0.00  spin_0
+  0.00      1.69     0.00   685403     0.00     0.00  spin_21
+  0.00      1.69     0.00    53451     0.00     0.00  WL_FID_STRING_APPEND_K386
+  0.00      1.69     0.00    16308     0.00     0.00  span_fade
+  0.00      1.69     0.00    16248     0.00     0.00  WL_FID____SRC_SYMMETRY_MAP_PATH_K114
+  0.00      1.69     0.00    13900     0.00     0.00  spin_75
+  0.00      1.69     0.00    10265     0.00     0.00  WL_FID_CLO_APPLY
+  0.00      1.69     0.00     9240     0.00     0.00  spin_58
+  0.00      1.69     0.00     6989     0.00     0.00  WL_FID____SRC_SYMMETRY_INVERT_MOVES_K64
+  0.00      1.69     0.00     5276     0.00     0.00  WL_FID_STRING_APPEND
+  0.00      1.69     0.00     5133     0.00     0.00  WL_FID_LIST_APPEND_K111
+  0.00      1.69     0.00     2567     0.00     0.00  WL_FID_IO_BIND
+  0.00      1.69     0.00     2566     0.00     0.00  WL_FID_IO_BIND_C585
+  0.00      1.69     0.00     2566     0.00     0.00  WL_FID_IO_BIND_K586
+  0.00      1.69     0.00     1784     0.00     0.00  WL_FID_U32_SHOW
+  0.00      1.69     0.00     1754     0.00     0.00  WL_FID_U32_SHOW_GO
+  0.00      1.69     0.00     1714     0.00     0.00  WL_FID_ENTER
+  0.00      1.69     0.00     1714     0.00     0.00  WL_FID_EXIT
+  0.00      1.69     0.00     1714     0.00     0.00  corpus_eval
+  0.00      1.69     0.00     1714     0.00     0.00  io_out
+  0.00      1.69     0.00     1679     0.00     0.00  io_mem
+  0.00      1.69     0.00     1155     0.00     0.00  spin_57
+  0.00      1.69     0.00      863     0.00     0.00  WL_FID____SRC_SYMMETRY_MAP_PATH

@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "warm-search-profiles",
+  "startedAt": "2026-10-17T07:47:23.424Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/bash",
+    "-c",
+    "set -e\nnode build/profile/run-search-v1.mjs baseline build/profile/search-baseline-v1 build/profile/gmon-search-baseline-v1\nnode build/profile/run-search-v1.mjs candidate build/profile/search-candidate-v1 build/profile/gmon-search-candidate-v1"
+  ],
+  "limits": {
+    "memoryMiB": 3072,
+    "seconds": 180,
+    "cpus": [
+      0
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "80b557096c168920d1e77d7c064c92ee66b862d1f38be7efbe7bf254558d1c04",
+  "availableMiB": 17184,
+  "peakTreeRssKiB": 2217808,
+  "samples": 96,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "{\"label\":\"baseline\",\"passed\":true,\"initializationMs\":12998.67744,\"facelets\":\"RBDRURUFDFUBDRFLDRFLRFFLBBBULDDDFLBBFBLULRDRLRDUUBLUUF\",\"requestedMs\":2000,\"done\":{\"type\":\"done\",\"length\":19,\"lower\":15,\"nodes\":21500000,\"optimal\":0,\"elapsedMs\":2011},\"gmon\":\"/home/yuzy/rubend/build/profile/gmon-search-baseline-v1.1124307\",\"purpose\":\"Unreported first hard-job CPU profile after initialization. Not a five-round warmed timing or strength comparison.\"}\n{\"label\":\"candidate\",\"passed\":true,\"initializationMs\":1803.246895,\"facelets\":\"RBDRURUFDFUBDRFLDRFLRFFLBBBULDDDFLBBFBLULRDRLRDUUBLUUF\",\"requestedMs\":2000,\"done\":{\"type\":\"done\",\"length\":19,\"lower\":15,\"nodes\":21880000,\"optimal\":0,\"elapsedMs\":2002},\"gmon\":\"/home/yuzy/rubend/build/profile/gmon-search-candidate-v1.1124328\",\"purpose\":\"Unreported first hard-job CPU profile after initialization. Not a five-round warmed timing or strength comparison.\"}\n",
+  "stderr": "",
+  "elapsedMs": 19300,
+  "finishedAt": "2026-10-17T07:47:42.727Z"
+}

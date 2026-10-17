@@ -1,0 +1,34 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls   s/call   s/call  name
+ 83.72      1.44     1.44      839     0.00     0.00  WL_FID____SRC_PORTFOLIO_ADVANCE_K238
+  7.56      1.57     0.13  2200147     0.00     0.00  spin_2
+  4.07      1.64     0.07  1712521     0.00     0.00  spin_0
+  1.74      1.67     0.03  1433842     0.00     0.00  term_drop
+  1.16      1.69     0.02 24425940     0.00     0.00  rfc_wrap
+  1.16      1.71     0.02  2200147     0.00     0.00  spin_9
+  0.58      1.72     0.01  2939910     0.00     0.00  spin_1
+  0.00      1.72     0.00    52495     0.00     0.00  WL_FID_STRING_APPEND_K345
+  0.00      1.72     0.00    16023     0.00     0.00  span_fade
+  0.00      1.72     0.00    15963     0.00     0.00  WL_FID____SRC_SYMMETRY_MAP_PATH_K97
+  0.00      1.72     0.00    13653     0.00     0.00  spin_62
+  0.00      1.72     0.00    10085     0.00     0.00  WL_FID_CLO_APPLY
+  0.00      1.72     0.00     9032     0.00     0.00  spin_46
+  0.00      1.72     0.00     6875     0.00     0.00  WL_FID____SRC_SYMMETRY_INVERT_MOVES_K50
+  0.00      1.72     0.00     5186     0.00     0.00  WL_FID_STRING_APPEND
+  0.00      1.72     0.00     5043     0.00     0.00  WL_FID_LIST_APPEND_K94
+  0.00      1.72     0.00     2522     0.00     0.00  WL_FID_IO_BIND
+  0.00      1.72     0.00     2521     0.00     0.00  WL_FID_IO_BIND_C558
+  0.00      1.72     0.00     2521     0.00     0.00  WL_FID_IO_BIND_K559
+  0.00      1.72     0.00     1754     0.00     0.00  WL_FID_U32_SHOW
+  0.00      1.72     0.00     1724     0.00     0.00  WL_FID_U32_SHOW_GO
+  0.00      1.72     0.00     1684     0.00     0.00  WL_FID_ENTER
+  0.00      1.72     0.00     1684     0.00     0.00  WL_FID_EXIT
+  0.00      1.72     0.00     1684     0.00     0.00  corpus_eval
+  0.00      1.72     0.00     1684     0.00     0.00  io_out
+  0.00      1.72     0.00     1649     0.00     0.00  io_mem
+  0.00      1.72     0.00     1129     0.00     0.00  spin_45
+  0.00      1.72     0.00      848     0.00     0.00  WL_FID____SRC_SYMMETRY_MAP_PATH
+  0.00      1.72     0.00      848     0.00     0.00  WL_FID____SRC_SYMMETRY_MAYBE_INVERSE

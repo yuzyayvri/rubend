@@ -1,0 +1,31 @@
+{
+  "format": "rubend-local-experiment-v1",
+  "name": "warm-profile-build",
+  "startedAt": "2026-10-17T07:45:46.065Z",
+  "cwd": "/home/yuzy/rubend",
+  "command": [
+    "/run/current-system/sw/bin/bash",
+    "-c",
+    "set -e\nnode build/profile/prepare-search-v1.mjs\nclang -O3 -pg -g -std=c11 -pthread build/profile/search-baseline-v1.c -lm -o build/profile/search-baseline-v1\nclang -O3 -pg -g -std=c11 -pthread build/profile/search-candidate-v1.c -lm -o build/profile/search-candidate-v1"
+  ],
+  "limits": {
+    "memoryMiB": 2048,
+    "seconds": 180,
+    "cpus": [
+      1
+    ],
+    "nice": 10,
+    "enforcement": "transient user cgroup scope: MemoryMax, no swap; taskset; timeout; CPU rlimit; aggregate RSS backstop"
+  },
+  "binarySha256": "80b557096c168920d1e77d7c064c92ee66b862d1f38be7efbe7bf254558d1c04",
+  "availableMiB": 17088,
+  "peakTreeRssKiB": 757872,
+  "samples": 152,
+  "exitCode": 0,
+  "signal": null,
+  "stoppedFor": null,
+  "stdout": "[{\"name\":\"baseline\",\"input\":\"build/profile/raw-baseline.c\",\"output\":\"build/profile/search-baseline-v1.c\",\"inputSha256\":\"dd6695deaf86294e9d33a205da0e6831bbfc932b985103a1c10bbd959bff4c5a\",\"outputSha256\":\"ff548f33cd335ce600ca2af1c2af23f7b1bfb2b152ff6857427e946812214e59\"},{\"name\":\"candidate\",\"input\":\"build/profile/word-direct-v1.c\",\"output\":\"build/profile/search-candidate-v1.c\",\"inputSha256\":\"a341d31c22e129bad5257db319dced0303c97f7a18c9d62c29ce872d3ccc951e\",\"outputSha256\":\"7259760d75738256385bcf525e3a9d12bb386f1d25e2c1f218065a2b12327940\"}]\n",
+  "stderr": "",
+  "elapsedMs": 30751,
+  "finishedAt": "2026-10-17T07:46:16.820Z"
+}

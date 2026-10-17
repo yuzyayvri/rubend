@@ -1,0 +1,48 @@
+{
+  "format": "rubend-search-profile-evidence-v1",
+  "scope": "Profiling-only generated C. Sampling disabled at process construction, enabled after real ready, stopped and written before first native done. Search mathematics unchanged.",
+  "caveats": [
+    "Two instrumented first-hard-job runs after initialization, not five-round warm performance observations",
+    "Startup sampling disabled at construction; enabled after ready; stopped and written before first native done",
+    "Compiler inlining changes attribution between symbols; percentages do not compare implementations"
+  ],
+  "inputGraphs": [
+    {
+      "name": "baseline",
+      "input": "build/profile/raw-baseline.c",
+      "output": "build/profile/search-baseline-v1.c",
+      "inputSha256": "dd6695deaf86294e9d33a205da0e6831bbfc932b985103a1c10bbd959bff4c5a",
+      "outputSha256": "ff548f33cd335ce600ca2af1c2af23f7b1bfb2b152ff6857427e946812214e59"
+    },
+    {
+      "name": "candidate",
+      "input": "build/profile/word-direct-v1.c",
+      "output": "build/profile/search-candidate-v1.c",
+      "inputSha256": "a341d31c22e129bad5257db319dced0303c97f7a18c9d62c29ce872d3ccc951e",
+      "outputSha256": "7259760d75738256385bcf525e3a9d12bb386f1d25e2c1f218065a2b12327940"
+    }
+  ],
+  "scripts": {
+    "build/profile/prepare-search-v1.mjs": {
+      "sha256": "ccb13353977bc566a74a5d99450f97ae2b4ecb97eb73be275cf80b9fb1780f15",
+      "source": "import assert from \"node:assert/strict\";\nimport {readFileSync,writeFileSync} from \"node:fs\";\nimport {createHash} from \"node:crypto\";\n\nconst records=[];\nfor(const [name,input] of [[\"baseline\",\"build/profile/raw-baseline.c\"],[\"candidate\",\"build/profile/word-direct-v1.c\"]]){\n  const source=readFileSync(input,\"utf8\"),start=source.indexOf(\"Term io_print_run(\"),end=source.indexOf(\"\\n}\\n\",start)+3;\n  assert.ok(start>0&&end>start);\n  const block=source.slice(start,end);\n  assert.equal(block.split(\"  io_out(stdout, text, n);\").length,2);\n  assert.equal(block.split(\"  free(text);\").length,2);\n  const changed=block.replace(\"  io_out(stdout, text, n);\",\"  if (strstr(text, \\\"\\\\\\\"type\\\\\\\":\\\\\\\"done\\\\\\\"\\\")) { moncontrol(0); _mcleanup(); }\\n  io_out(stdout, text, n);\")\n    .replace(\"  free(text);\",\"  if (strstr(text, \\\"\\\\\\\"type\\\\\\\":\\\\\\\"ready\\\\\\\"\\\")) moncontrol(1);\\n  free(text);\");\n  const output=`build/profile/search-${name}-v1.c`,text=source.slice(0,start)+\"extern void moncontrol(int);\\nextern void _mcleanup(void);\\n\"+changed+source.slice(end)+\"\\nstatic void __attribute__((constructor)) rubend_search_profile_off(void) { moncontrol(0); }\\n\";\n  writeFileSync(output,text,{flag:\"wx\"});\n  records.push({name,input,output,inputSha256:createHash(\"sha256\").update(source).digest(\"hex\"),outputSha256:createHash(\"sha256\").update(text).digest(\"hex\")});\n}\nwriteFileSync(\"build/profile/search-profile-inputs-v1.json\",JSON.stringify({records,scope:\"Profiling-only generated C. Sampling disabled at process construction, enabled after real ready, stopped and written before first native done. Search mathematics unchanged.\"},null,2)+\"\\n\");\nconsole.log(JSON.stringify(records));\n"
+    },
+    "build/profile/run-search-v1.mjs": {
+      "sha256": "2cd05f445242536f08a243eb0355c229c772f760639a9731dac6e69f6067245f",
+      "source": "import assert from \"node:assert/strict\";\nimport {readFileSync,existsSync,writeFileSync} from \"node:fs\";\nimport {resolve} from \"node:path\";\nimport {Engine} from \"../../apps/engine.mjs\";\n\nconst [label,binary,prefix]=process.argv.slice(2),facelets=JSON.parse(readFileSync(\"docs/verification/portfolio-v1/exact-profile.json\")).records[0].facelets;\nprocess.env.RUBEND_JOINT_CACHE=resolve(\".cache/joint/phase1-v1.raw\");\nprocess.env.GMON_OUT_PREFIX=resolve(prefix);\nconst engine=new Engine({binary:resolve(binary)}),events=[],started=performance.now();\nlet initializationMs,passed=false;\ntry{\n  await engine.ready(120000);initializationMs=performance.now()-started;\n  const generation=engine.generation;\n  await new Promise((done,fail)=>{\n    engine.solve({facelets,mode:\"exact\",budgetMs:2000},event=>{events.push(event);if(event.type===\"error\"||event.type===\"invalid\")fail(Error(JSON.stringify(event)));if(event.type===\"done\")done();}).catch(fail);\n  });\n  const last=events.at(-1);assert.notEqual(last.reason,\"time_limit\");assert.ok(Number.isInteger(last.nodes)&&last.nodes>0);\n  assert.equal(engine.generation,generation);assert.ok(events.some(e=>e.type===\"candidate\"));\n  const gmon=`${resolve(prefix)}.${engine.child.pid}`;assert.ok(existsSync(gmon));\n  passed=true;\n  console.log(JSON.stringify({label,passed,initializationMs,facelets,requestedMs:2000,done:last,gmon,purpose:\"Unreported first hard-job CPU profile after initialization. Not a five-round warmed timing or strength comparison.\"}));\n}finally{\n  await engine.close();\n  writeFileSync(`build/profile/search-${label}-events-v1.json`,JSON.stringify({passed,events},null,2)+\"\\n\");\n}\n"
+    }
+  },
+  "symbols": {
+    "baseline": {
+      "name": "WL_FID____SRC_PORTFOLIO_ADVANCE_K238",
+      "generatedLine": 34141,
+      "sampledSelfPercent": 83.72
+    },
+    "candidate": {
+      "name": "WL_FID____SRC_PORTFOLIO_ADVANCE_K253",
+      "generatedLine": 35101,
+      "sampledSelfPercent": 92.31
+    }
+  },
+  "sourceMap": "src/portfolio.bend run_slice calls S.run for20000or60000state-machine steps; generated spin_105 andspin_123 contain the fused search/transition/heuristic loops"
+}

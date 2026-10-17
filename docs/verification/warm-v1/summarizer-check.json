@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "realResultReproduced": true,
+  "deadlineMissFixtureRejected": true,
+  "scope": "No missing-answer scoring claim; current frozen corpus has zero deadline misses"
+}

@@ -30,16 +30,26 @@ experimental-binary measurement. No universal foreign-IO or completeness proof,
 world-class strength, or equal quality at every time budget is claimed.
 
 The lossless block codec passed full entry equality but remains rejected for the
-speed profile. Search specializations and exact-child reuse remain a separate
-warm-solve experiment. The next check compares solving quality and search work
-under matched budgets, not only startup or fixed-work equality.
+speed profile. The matched five-round warm check is now complete. All 1,990 jobs
+passed, including 1,630 shallow warmups and 360 measurement jobs. All 180 paired
+deadline-quality comparisons tied. Fast mean best length is 18.75 and first-
+answer p95 is 27 ms for both profiles. Exact and Superflip intervals also match.
+Rate ranges overlap, so no warm-speed gain is accepted for the search
+specializations or exact-child reuse. Read `docs/verification/WARM.md` and
+`.audit/rubend-warm-result-review.md` for the independently reviewed result.
+
+The large experimental backend also passed the existing 34-case Engine and
+local HTTP suites through a temporary environment override. No browser opened
+and no server remains running. This is development integration evidence, not a
+Nix package or browser-rendering recheck. The next research target is stronger
+exact-search pruning; the hard cases still do not finish within their budgets.
 
 The complete development regression and BendTT checks pass. Preserve the source
 and evidence in Git, and the ignored sealed caches and frozen binaries on disk.
-The active checklist is `.audit/rubend-startup.todo.md`; the append-only trail is
-`.audit/rubend-startup.tsv`. The old checkpoint pointer reports intentional
-artifact changes after resumed progress. Publish a new verified checkpoint at
-handoff rather than treating the old hash mismatch as lost data.
+The checklists are `.audit/rubend-startup.todo.md` and `.audit/rubend-warm.todo.md`.
+The append-only trail is `.audit/rubend-startup.tsv`. The old checkpoint pointer
+reported intentional artifact changes after resumed progress, not lost source
+or data. Publish and verify the current checkpoint at handoff.
 
 Continue without visible windows or Astra calls. Local experiment batches stay
 within eight GiB including scratch, two low-priority cores, and thirty minutes.
