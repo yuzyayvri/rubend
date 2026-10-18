@@ -1,0 +1,28 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync} from "node:fs";
+import {execFileSync} from "node:child_process";
+import {createHash} from "node:crypto";
+
+const destination = process.argv[2];
+assert.ok(destination,"Expected a fresh JSON output path");
+const run = (program,args) => execFileSync(program,args,{encoding:"utf8",timeout:180000,maxBuffer:4194304}).trim();
+const hash = path => createHash("sha256").update(readFileSync(path)).digest("hex");
+const read = path => JSON.parse(readFileSync(path,"utf8"));
+const packagePath = run("nix",["eval","--raw",".#packages.x86_64-linux.default.outPath"]);
+const setupPath = run("nix",["eval","--raw",".#checks.x86_64-linux.setup.outPath"]);
+const runtimePath = run("nix",["eval","--raw",".#checks.x86_64-linux.runtime.outPath"]);
+const manifest = read(packagePath+"/share/rubend/build/manifest.json");
+for (const [path,sha256] of Object.entries(manifest.sourceHashes)) assert.equal(hash(path),sha256,path);
+assert.equal(hash(packagePath+"/share/rubend/build/rubend"),manifest.nativeSha256);
+const setup = read(setupPath+"/setup-check.json");
+assert.equal(setup.results.length,16);
+assert.ok(setup.results.every(result => result.status === "pass"));
+for (const [path,sha256] of Object.entries(setup.sourceHashes)) assert.equal(hash(path),sha256,path);
+const engine = read(runtimePath+"/engine.json"), http = read(runtimePath+"/http.json");
+const logs = Object.fromEntries([["package",packagePath],["setup",setupPath],["runtime",runtimePath]].map(([name,path]) => [name,run("nix",["log",path])]));
+assert.equal(engine.records.length,34);
+assert.equal(engine.allReturnedSolutionsVerified,true);
+assert.equal(http.passed,true);
+const record = {format:"rubend-nix-package-evidence-v1",passed:true,revision:run("git",["rev-parse","HEAD"]),packagePath,setupPath,runtimePath,sourceHashesVerified:Object.keys(manifest.sourceHashes).length,installedNativeSha256:manifest.nativeSha256,manifest,setup,engine,http,logs,resourceCaveat:"Nix daemon children do not inherit the launcher's cgroup or affinity; max-jobs and cores are explicit build settings, not a daemon-wide MemoryMax guarantee.",independentReview:false};
+writeFileSync(destination,JSON.stringify(record,null,2)+"\n",{flag:"wx"});
+console.log(JSON.stringify({passed:true,revision:record.revision,sourceHashesVerified:record.sourceHashesVerified,setupChecks:setup.results.length,installedNativeSha256:record.installedNativeSha256}));
