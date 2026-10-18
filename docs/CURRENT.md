@@ -1,11 +1,10 @@
 # Current state of Rubend
 
-## Paused on request
+## Active continuation
 
-Yuzy requested a safe pause on 2026-10-19, Asia/Manila. All owned experiment,
-verification, and preview processes have finished. Keep sealed tables, frozen
-binaries, source snapshots, and the existing node_modules symlink for resume.
-No unfinished work is being pushed for this pause.
+Yuzy resumed work after the safe pause on 2026-10-19, Asia/Manila. Continue solo
+from the saved checkpoint. Keep sealed tables, frozen binaries, source snapshots,
+and the existing node_modules symlink. All prior jobs finished before resumption.
 
 Main and origin/main are both at 076682d937e40355aed444bfdfe0e5efd316d85d.
 That integrated checkpoint passes just check, just test, and the standalone
@@ -14,8 +13,10 @@ locally in the writer. The segmented foundation is a local WIP checkpoint.
 Its word, fixed-state, malformed-input, and kernel checks pass; the final new
 build/test hooks have not had another complete application-suite run.
 
-Resume first with the prepared segmented fixed-work timing and deadline/RSS
-comparisons. Do not run them alongside builds. Owned stacks, remaining R04
+Segmented measurements now pass all jobs but reject promotion. RSS is 45.9 percent
+lower; fixed-work CPU misses the overhead target and three Superflip lower bounds
+regress. Keep the default unchanged. Read docs/verification/R03-SEGMENTED.md.
+Continue with the lifecycle implementation and remaining hypotheses. Owned stacks, remaining R04
 decisions, R05, and most of R06 still need work. No overall completion,
 world-class strength, new default profile, or independent review is claimed.
 
