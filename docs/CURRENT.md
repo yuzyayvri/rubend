@@ -37,7 +37,13 @@ checks parity repair, moves, and spatial transforms. Combined full regression,
 just check, and unchanged-law BendTT pass. See
 [the edge evidence](verification/R04-EDGES.md).
 
-Next is compact metadata assembly and full-product feasibility in
+Compact metadata now agrees with independent assembly on all 2,892,000 words.
+Nine mutations and 36,000 coupled move checks pass, including cases that need
+nontrivial stabilizer equivalence. The derived product goal is 450,429.
+Targeted checks and unchanged-law BendTT pass. See
+[the metadata evidence](verification/R04-META.md).
+
+Next is bounded full-product feasibility in
 [the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
 integrated search gain, or default switch exists yet. R03, R05, and R06 remain
 open. Independent review remains not run under the solo-work instruction.
