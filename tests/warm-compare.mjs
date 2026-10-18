@@ -36,6 +36,14 @@ try{
   const generated=structuredClone(base);
   for(const p of generated.profiles){p.tableSource="generated";delete p.cache;delete p.cacheBytes;delete p.cacheSha256;p.env={};}
   const generatedResult=await compareWarm(generated);assert.equal(generatedResult.passed,true,JSON.stringify(generatedResult.errors));assert.equal(generatedResult.counts.successfulJobs,40);
+  const extra=resolve(directory,"extra"),additional=structuredClone(base);writeFileSync(extra,"extra-cache");
+  additional.profiles[1].additionalCaches=[{path:extra,bytes:11,sha256:digest(extra),env:"RUBEND_CORNER_CACHE"}];additional.profiles[1].env.RUBEND_CORNER_CACHE=extra;
+  const extraResult=await compareWarm(additional);assert.equal(extraResult.passed,true,JSON.stringify(extraResult.errors));assert.ok(extraResult.seals[extra]);assert.deepEqual(extraResult.afterSeals[extra],extraResult.seals[extra]);
+  for(const change of [c=>c.profiles[1].additionalCaches[0].sha256="0".repeat(64),c=>c.profiles[1].additionalCaches[0].bytes=12,c=>c.profiles[1].additionalCaches[0].path="relative",c=>delete c.profiles[1].additionalCaches,c=>c.profiles[1].additionalCaches.push(c.profiles[1].additionalCaches[0]),c=>c.profiles[1].additionalCaches[0].env="RUBEND_JOINT_CACHE"]){
+    const bad=structuredClone(additional);change(bad);const r=await compareWarm(bad);assert.equal(r.passed,false);assert.equal(r.counts.workers,0);
+  }
+  const mutation=structuredClone(additional);for(const p of mutation.profiles){p.env.WARM_FIXTURE_MODE="mutate";p.env.WARM_MUTATE_PATH=extra;}
+  const changedExtra=await compareWarm(mutation);assert.equal(changedExtra.passed,false);assert.ok(changedExtra.errors.some(e=>e.path===extra));
   for(const change of [c=>c.profiles[0].cache=cache,c=>c.profiles[0].env.RUBEND_JOINT_CACHE=cache,c=>c.profiles[0]=structuredClone(base.profiles[0])]){
     const bad=structuredClone(generated);change(bad);const r=await compareWarm(bad);assert.equal(r.passed,false);assert.equal(r.counts.workers,0);
   }
@@ -54,5 +62,5 @@ try{
   const configPath=resolve(directory,"input.json");
   const changedConfig=await run("mutate",configPath,compareWarm,configPath);assert.equal(changedConfig.passed,false);assert.ok(changedConfig.errors.some(e=>e.stage==="postflight"&&e.path===configPath));assert.equal(changedConfig.counts.successfulJobs,0);
   const mismatch=await compareWarm(base,configPath);assert.equal(mismatch.passed,false);assert.equal(mismatch.counts.workers,0);assert.ok(mismatch.errors.some(e=>e.message.includes("differs from input")));
-  console.log(JSON.stringify({passed:true,results},null,2));
+  console.log(JSON.stringify({passed:true,additionalCacheSealed:true,additionalCacheRejects:6,additionalCacheMutationRejected:true,results},null,2));
 }finally{rmSync(directory,{recursive:true,force:true});}
