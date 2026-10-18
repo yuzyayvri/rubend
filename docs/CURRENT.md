@@ -27,10 +27,17 @@ The raw and reduced corner distances agree on every state, with maximum nine
 and sum 984,482. The native audit checks all 2,755,620 raw edges, and an
 independent geometry/BFS oracle agrees on every distance and component move.
 Nine rejecting mutations, targeted tests, just check, and unchanged-law BendTT
-pass. Combined regression remains due before this unit's integration. See
+pass. The later combined component regression also passes. See
 [the distance evidence](verification/R04-CORNER-DISTANCES.md).
 
-Next is the edge coordinate and full-product feasibility in
+The edge component reaches all 34,650 placements and agrees with independent
+geometry on all moves, symmetries, and physical words. All 29,937,600 native
+commutation checks and seven mutations pass. A combined-coordinate fixture
+checks parity repair, moves, and spatial transforms. Combined full regression,
+just check, and unchanged-law BendTT pass. See
+[the edge evidence](verification/R04-EDGES.md).
+
+Next is compact metadata assembly and full-product feasibility in
 [the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
 integrated search gain, or default switch exists yet. R03, R05, and R06 remain
 open. Independent review remains not run under the solo-work instruction.

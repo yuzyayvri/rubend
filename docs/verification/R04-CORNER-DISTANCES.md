@@ -19,8 +19,8 @@ goal zero first so the fixture exercises the intended certificate condition.
 Compiler failures also remain in the raw records. None counts as a pass.
 
 Targeted tests, just check, and standalone BendTT pass with the unchanged
-twenty-three laws. A combined full regression is required before integrating
-this unit with the remaining R04 components. It has not run at this exact head.
+twenty-three laws. A later combined full regression with the edge component
+also passes. Its receipt is in [the edge evidence](R04-EDGES.md).
 The pure builder and audit are in PROOF.bend. Finite exhaustive agreement is
 not a universal projection or search-completeness theorem.
 
