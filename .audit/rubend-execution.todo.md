@@ -53,7 +53,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
   - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.
   - [x] Segmented raw foundation, full used-word identity, fixed-state equality, malformed inputs, and zero-geometry red/green checks. Not a measured or promoted memory tier.
-  - [ ] Segmented RSS/CPU/deadline comparisons and owned stacks as separate hypotheses. Independent review and package rollout remain open.
+  - [x] Segmented RSS/CPU/deadline comparisons. All jobs pass and memory drops45.9percent, but CPU misses the target and three Superflip lower bounds regress. Reject promotion; preserve the research profile and raw evidence.
+  - [ ] Owned stacks as a separate hypothesis. Independent review and package rollout remain open.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
   - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
   - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
@@ -104,6 +105,6 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [x] User explicitly paused work on 2026-10-19, Asia/Manila.
 - [x] No owned experiment, build, native worker, or preview server remains running.
 - [x] Preserve all artifacts and the user-owned dependency symlink. No broad cleanup.
-- [ ] Resume only after the user asks. Start with prepared segmented measurements,
-  then continue the remaining programme. This pause supersedes the standing
-  instruction to keep working until all phases finish.
+- [x] Yuzy explicitly resumed on 2026-10-19. Start with prepared segmented
+  measurements, then continue the remaining programme under the standing
+  autonomous completion instruction.
