@@ -1,7 +1,7 @@
 # Generated artifacts changed during a benchmark
 
-Status: the application run is invalidated. A per-checkout exclusion guard is
-implemented; its integration checks and serialized rerun are pending.
+Status: the application run is invalidated. The exclusion guard, full regression,
+and real-entrypoint integration checks pass. The serialized rerun is in progress.
 
 The first corner application comparison completed 1,750 native-validated jobs.
 Its postflight guard correctly rejects the entire result because a concurrent
@@ -20,5 +20,7 @@ system installation. No global system configuration changes.
 
 Tests cover conflict rejection without writes, ownership reuse, release after
 failure, and both real build/experiment entrypoints. The generated-input seals
-remain unchanged through the rejecting integration check. A fresh serialized
+remain unchanged through the rejecting integration check. Raw receipts are in
+docs/verification/r02-corner-v1/r02-artifact-lease-regression-v1.json.gz and
+r02-artifact-lease-integration-v1.json.gz. A fresh serialized
 application cohort is required before accepting any corner application claim.

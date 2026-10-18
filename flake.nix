@@ -48,7 +48,7 @@
         '';
         meta.license = pkgs.lib.licenses.asl20;
       };
-      tools = [ bendPackage pkgs.clang pkgs.nodejs_24 pkgs.git pkgs.just pkgs.coreutils leanExact kernel ];
+      tools = [ bendPackage pkgs.clang pkgs.nodejs_24 pkgs.git pkgs.just pkgs.coreutils pkgs.util-linux leanExact kernel ];
       rubend = pkgs.buildNpmPackage {
         pname = "rubend";
         version = (builtins.fromJSON (builtins.readFile ./package.json)).version;
@@ -56,7 +56,7 @@
         nodejs = pkgs.nodejs_24;
         npmDepsHash = "sha256-UdVqJLfQ0wq+ZA3cZpnCLmtXrshlWYZbhFLrjkvsZNE=";
         npmFlags = [ "--ignore-scripts" ];
-        nativeBuildInputs = [ bendPackage pkgs.clang pkgs.makeWrapper pkgs.autoPatchelfHook ];
+        nativeBuildInputs = [ bendPackage pkgs.clang pkgs.makeWrapper pkgs.autoPatchelfHook pkgs.util-linux ];
         buildInputs = [ pkgs.stdenv.cc.cc.lib ];
         BENDTT = "${kernel}/bin/bendtt";
         BEND_NO_TELEMETRY = "1";
