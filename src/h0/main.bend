@@ -152,8 +152,6 @@ def policy(text: String) -> IO(S.Profile):
     case "inverse-three": IO.pure(S.Profile, S.RawInverseThree{})
     case "h0": IO.pure(S.Profile, S.ForwardH0{})
     case "combined": IO.pure(S.Profile, S.InverseH0{})
-    case "h0-fast": IO.pure(S.Profile, S.ForwardH0Fast{})
-    case "combined-fast": IO.pure(S.Profile, S.InverseH0Fast{})
     case _: IO.die(S.Profile, 2, "Invalid H0 policy")
 
 def selected_profile() -> IO(S.Profile):

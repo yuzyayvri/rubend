@@ -1,6 +1,6 @@
 import Base
 import ../src/cubie.bend as C
-import ../src/h0-bound.bend as K
+import ../bench/rejected-h0-fused.bend as K
 import ../src/h0-corners.bend as H
 import ../src/h0-edges.bend as E
 

@@ -7,6 +7,7 @@ import ../src/h0-corners.bend as Corners
 import ../src/h0-edges.bend as Edges
 import ../src/h0-table-io.bend as Load
 import ../src/joint-cache.bend as Cache
+import ./rejected-h0-fused.bend as Rejected
 
 def answer(read: Array<U32> & K.CubeBound, sparse: U32, edge: U32) -> IO(Array<U32>):
   match read:
@@ -17,7 +18,7 @@ def answer(read: Array<U32> & K.CubeBound, sparse: U32, edge: U32) -> IO(Array<U
 
 def lookup(fast: Bool, table: Array<U32>, cube: C.Cubie) -> Array<U32> & K.CubeBound:
   match fast:
-    case True{}: K.full_cube_fast(table, cube)
+    case True{}: Rejected.full_cube_fast(table, cube)
     case False{}: K.full_cube(table, cube)
 
 def valid(value: C.Validation, table: Array<U32>, fast: Bool) -> IO(Array<U32>):
