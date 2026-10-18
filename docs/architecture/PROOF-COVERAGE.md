@@ -95,9 +95,10 @@ See [the packed result](../verification/R03-SMALL.md).
 ## Experimental corner bound
 
 PROOF.bend imports the pure all-move corner builder, auditor, byte lookup, and
-private search and portfolio. BendTT accepts them with the unchanged eighteen
-laws. The loader's file effects remain outside this graph. Importing checked
-definitions does not prove a new projection or traversal-completeness theorem.
+private late and corner-first search and portfolio. BendTT accepts them with
+the unchanged eighteen laws. The loader's file effects remain outside this
+graph. Importing checked definitions does not prove a new projection or
+traversal-completeness theorem.
 
 The current generated database visits all 88,179,840 corner states and audits
 all 1,587,237,120 directed edges, the unique zero, distance inequalities, and

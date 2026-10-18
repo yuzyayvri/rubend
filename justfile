@@ -27,6 +27,7 @@ test: build
     node bench/corpus.mjs --check
     node tests/corpus.mjs
     node tests/scorecard.mjs
+    node tests/score-warm-report.mjs
     node tests/resource-policy.mjs
     node tests/artifact-lease.mjs
     node tests/artifact-lease-integration.mjs
@@ -55,6 +56,7 @@ test: build
     node tests/inverse-bound.mjs
     node tests/contour-compare.mjs
     node tests/corner-contour-summary.mjs
+    node tests/corner-orders.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
 

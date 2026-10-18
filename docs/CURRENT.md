@@ -18,8 +18,19 @@ sixteen-case half-turn diagnostic, over five fresh cohorts to lower ten or an
 earlier optimum. Both complete all eighty repeated targets. Forward-only leaves
 forty-five diagnostic requests fuel-censored; no all-case ratio against it is
 claimed. This is a specialized contour gain, not general strength. Application
-canaries and a separately generated corner-first ordering experiment are in
-progress. No default rollout or independent review is claimed.
+canaries now pass all 1,750 jobs with sixty deadline quality, coverage, and
+lower-bound ties against the frozen inverse backend. The first application attempt
+was correctly invalidated for overlapping generated-file writes. A new artifact
+lease passes conflict/failure tests and prevents that overlap; the serialized
+second run has unchanged seals. The separate corner-first ordering experiment
+also ties uniform inverse-only time but uses 87.3% less CPU on the declared
+half-turn diagnostic, about 7.84 times as fast to its target. Another 9,780 shallow
+checks, 960 measured requests, and 1,750 application jobs pass. All sixty
+application quality/lower-bound pairs tie, and native/HTTP integration passes.
+Read [the ordering result](verification/R02-CORNER-FIRST.md). No third
+placement-only variant is justified. The default remains unchanged and independent review
+has not run. The large-profile lifecycle check still misses the cancellation
+target; its existing R06 issue remains open. Browser/package rollout is separate.
 
 The exact-only inverse pilot is implemented and remains opt-in. Three lazy
 inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
