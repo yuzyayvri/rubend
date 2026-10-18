@@ -1,6 +1,8 @@
 # Segmented raw-layout pilot
 
-Status is a functionally checked, performance-unmeasured prototype. Keep this hypothesis separate from H0 probe
+Status is measured and rejected for promotion. RSS improves, but CPU misses its
+target and three Superflip lower bounds regress. Read
+[the measured disposition](../verification/R03-SEGMENTED.md). Keep this hypothesis separate from H0 probe
 ordering, owned stacks, and portfolio scheduling. The unchanged raw nibble
 payload has 277,136,640 words. The search also needs an 8,388,608-word prefix.
 

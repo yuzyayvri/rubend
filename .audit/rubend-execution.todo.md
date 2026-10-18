@@ -71,6 +71,21 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
+  - [x] Solo lifecycle sketch, versioned cooperative control, host state ownership,
+    startup abort, and model-worker failure handling implemented.
+  - [x] Host13-case and model10-case fixtures pass. Native missing-yield prototype
+    fails same-owner cancellation; explicit zero-delay yield passes preliminary
+    native cancellation and fragmented/stale-control checks.
+  - [ ] Final source-sealed regression and hidden browser acceptance. Full suite
+    is running. Do not edit app, source, generator, or existing test inputs while
+    it runs. One prior build was invalidated by a late web source edit; replacement
+    r06-yield-build-v2 passes and later full-suite build also passes.
+  - [x] Strengthen fallback startup-overlap observation and terminal-length
+    rejection. Actual prior PID/start-tick checks pass; terminal contradiction
+    fails before and passes after. Fourteen host scenarios and focused native,
+    HTTP, export, model-worker, and measurement-adapter checks pass.
+  - [ ] Matched raw lifecycle and deadline-quality measurements. New dedicated
+    lifecycle adapter is not yet tested or run. No lifecycle speed claim.
 - [x] Push the verified checkpoint through the raw H0 corner codec to origin/main without force. This is a development checkpoint, not final profile promotion or release approval.
 
 Throughput checkpoint. Two design seats were planned, only one ran. The user then

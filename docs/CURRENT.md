@@ -20,6 +20,23 @@ Continue with the lifecycle implementation and remaining hypotheses. Owned stack
 decisions, R05, and most of R06 still need work. No overall completion,
 world-class strength, new default profile, or independent review is claimed.
 
+The lifecycle core is implemented. Protocol-two cancellation retains the native
+table owner, while frozen legacy backends restart serially. Startup abort, late
+IDs, malformed events, terminal contradictions, and browser-worker failure have
+executable checks. Full regression passes before the last small host/browser
+guards; their focused checks and actual hidden failure/recovery path pass afterward.
+The hidden warming fixture also verifies truthful readiness. Five matched raw
+cohorts observe cancel-to-ready medians 2,046.43 ms and 2.95 ms, with cooperative
+p95 14.11 ms and fifteen of fifteen retained owners. This is not search throughput.
+The separate deadline-quality run passes all1,750jobs and ties sixty answer lengths
+but loses four Superflip lower bounds. It rejects promotion. An instrumented
+diagnostic finds636native pselect6 calls versus one during marked search. Next
+batch control reads and bounded yields, then repeat the gates. All runs are now
+stopped. The fixed-work timer also needs its explicit diagnostic-event opt-in;
+default solver events remain strict. Final full integration, broader GUI, optional-profile
+lifecycle, and packaging remain. Read docs/verification/R06-LIFECYCLE.md and its
+linked receipts. R06 is not complete.
+
 ## Latest verified work
 
 R04's full spatial-symmetry foundation is implemented and verified. All five
@@ -83,8 +100,8 @@ the rejection archive; the live H0 runtime is restored to the reference.
 R03's segmented raw owner is also a live isolated prototype. All 285,525,248
 used words match the original loader. All 4,075 shallow and 350 general
 fixed-work snapshots agree, including cubes, paths, bounds, and completion.
-The 1,120-MiB allocation is geometry only until repeated native RSS checks.
-Timing, deadline quality, and review remain open. Read
+Five repeated cohorts observe45.9percent lower native RSS but reject promotion
+after CPU overhead and three lower-bound losses. Independent review remains open. Read
 [the data shape and remaining checks](architecture/R03-SEGMENTED-DESIGN.md).
 Read [the verified foundation](verification/R03-SEGMENTED.md). The prototype
 also closes a zero-geometry/profile collision before promotion.

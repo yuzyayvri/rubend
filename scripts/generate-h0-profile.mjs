@@ -60,7 +60,7 @@ def selected_profile() -> IO(S.Profile):
 main=once(main,"def worker(file: File)",policy+"def worker(file: File)");
 main=once(main,"table : Array<U32> <- checked_table(Array.size(U32, T.generate()))","profile : S.Profile <- selected_profile()\n    table : Array<U32> <- A.table()",2);
 main=once(main,"        profile : S.Profile <- selected_profile()\n    table : Array<U32> <- A.table()","        profile : S.Profile <- selected_profile()\n        table : Array<U32> <- A.table()");
-main=once(main,"table, read, S.Light{})","table, read, profile)");main=once(main,"text, mode, table, S.Light{})","text, mode, table, profile)");
+main=once(main,"table, read, S.Light{}, control)","table, read, profile, control)");main=once(main,"text, mode, table, S.Light{})","text, mode, table, profile)");
 let contour=once(originals.contour,"import ./advanced-main.bend as A","import ../src/h0-table-io.bend as A");
 for(const name of["main","search"])contour=once(contour,"import ../src/"+name+".bend as ","import ../src/h0/"+name+".bend as ");
 contour=once(contour,'    case "inverse-one": S.RawInverseOne{}\n','    case "h0": S.ForwardH0{}\n    case "h0-combined": S.InverseH0{}\n');

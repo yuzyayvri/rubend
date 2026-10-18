@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import { mkdirSync, writeFileSync, readFileSync,existsSync } from "node:fs";
 import { performance } from "node:perf_hooks";
-import {once} from "node:events";
 import { Engine } from "../apps/engine.mjs";
 import { apply, solved } from "../apps/model.mjs";
 
@@ -37,10 +36,13 @@ try{
   }
   await check(apply(solved,[3,0,5,2,6,9,12]),"exact",1000);
   await engine.solve({facelets:apply(solved,[0,3,6,9,12,15,1,4,7,10,13,16]),mode:"exact",budgetMs:10000},()=>{});
-  const exiting=once(engine.child,"exit");
-  const cancelledAt=performance.now();engine.cancel();await exiting;
+  const originalPid=engine.child.pid,originalGeneration=engine.generation;
+  const cancelledAt=performance.now();await engine.cancel();
   const cancellationMs=Math.round(performance.now()-cancelledAt);
   await engine.ready();
+  assert.equal(engine.cooperative,true,"Current native worker must support reusable cancellation");
+  assert.equal(engine.child.pid,originalPid,"Cancellation must keep the table owner");
+  assert.equal(engine.generation,originalGeneration,"Cancellation must not initialize another table");
   const recoveryMs=Math.round(performance.now()-cancelledAt);
   await check(solved,"exact",500,0);
   const result={checkedAt:new Date().toISOString(),records,peakRssKiB,cancellationMs,cancelAndRecoveryMs:recoveryMs,allReturnedSolutionsVerified:true};

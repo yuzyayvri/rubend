@@ -1,0 +1,101 @@
+Browser tab: 7, Title: "Rubend — find the way home", URL: "http://127.0.0.1:42435/".
+0 AXWebArea Rubend — find the way home, URL: 127.0.0.1:42435/
+	1 container
+		2 link Description: Rubend home, Value: 127.0.0.1:42435/
+		3 container Workspace
+			4 text Cube lab
+			5 button How it works ↗, ID: guide-button
+				6 text How it works 
+				7 text ↗
+		98 text Engine warming up
+		9 button Description: Switch to light appearance, ID: theme-button
+	10 container
+		11 container Interactive cube workspace
+			12 text A LITTLE CHAOS. A CLEAR WAY BACK.
+			13 heading Every turn has a way home., Value: 1
+				14 text Every turn has a way home.
+			15 text Explore the cube. Find a solution. See every move.
+			16 text 3 × 3 × 3 HALF-TURN METRIC
+			17 container Description: Interactive 3D cube. Drag to orbit; click a face to turn it. Keyboard face controls are below., ID: stage
+			18 text MAKE A MOVE
+			19 container turn-buttons
+				20 button Turn U face
+				21 button Turn R face
+				22 button Turn F face
+				23 button Turn D face
+				24 button Turn L face
+				25 button Turn B face
+			26 text shift  inverse  alt  half-turn
+		27 container Cube input and search controls
+			28 container
+				29 text 01
+				30 heading Your cube, Value: 2
+					31 text Your cube
+				32 button Reset, ID: reset-button
+				33 button ⤨ Scramble, ID: scramble-button
+					34 text ⤨
+					35 text Scramble
+				36 button ▦ Edit stickers, ID: edit-button
+					37 text ▦
+					38 text Edit stickers
+				39 text Or paste moves / 54 facelets
+				40 text entry area (settable) Or paste moves / 54 facelets, ID: cube-input
+				41 text U R F D L B notation
+				42 button Apply input →, ID: apply-button
+			43 container
+				44 text 02
+				45 heading Find a solution, Value: 2
+					46 text Find a solution
+				47 container Search mode
+					48 checkbox Fast + improve, Value: 1, ID: fast-mode
+					49 checkbox Exact search, Value: 0, ID: exact-mode
+				50 text A quick answer, then fewer moves as time allows.
+				51 text Thinking time
+				52 text 2 seconds
+				53 slider (settable, integer) Description: Thinking time, Value: 2, ID: budget
+				54 text Quick Thorough
+				55 button (disabled) Find the way home ↗, ID: solve-button
+					56 text Find the way home ↗
+				57 text Everything runs on your machine.
+				58 definition list
+					59 container Best length
+						60 text Best length
+					61 text —
+					62 container Lower bound
+						63 text Lower bound
+					64 text —
+					65 container Time
+						66 text Time
+					67 text —
+				68 button (collapsed) Under the hood +, Secondary Actions: Expand
+					69 text Under the hood
+					70 text +
+			71 text ◉
+			72 container
+				73 text Local by design.
+				74 text No uploads. No account. Just the cube.
+		75 container Your solution will appear here.
+			76 text THE WAY BACK
+			77 heading Your solution will appear here., Value: 2, ID: solution-heading
+				78 text Your solution will appear here.
+			79 button (disabled) Copy moves, ID: copy-button
+			80 button (disabled) Export, ID: export-button
+			81 container Description: Solution moves, ID: moves
+				82 text A scrambled cube, a little thinking, and a clear sequence of turns.
+			83 button (disabled) Description: Back to start, ID: first-button
+			84 button (disabled) Description: Previous move, ID: back-button
+			85 button (disabled) Description: Play solution, ID: play-button
+			86 button (disabled) Description: Next move, ID: next-button
+			99 text 0 / 0
+			88 slider (disabled, settable, integer) Description: Solution position, Value: 0, ID: timeline
+			89 container
+				90 text Speed
+				91 pop up button (collapsed, settable) Speed, Value: Normal, ID: speed, Secondary Actions: Expand
+					92 menu
+						93 Slow
+						94 (selected) Normal
+						95 Fast
+	96 container
+		97 text Built with Bend 2. Backed by proof. Turn freely. Think precisely.
+
+The focused UI element is 0 AXWebArea Rubend — find the way home, URL: 127.0.0.1:42435/
