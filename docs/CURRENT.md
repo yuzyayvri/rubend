@@ -11,6 +11,14 @@ are awaiting Yuzy's approval under the law-ownership rule. They are Markdown
 proposals only. Do not add them to executable law files before approval; all
 eighteen existing laws remain unchanged. R03 and R06 work remain on the roadmap.
 
+Experiment source snapshots are also hardened. Different source trees can yield
+identical binaries, so the old binary-only key could replace frozen source.
+Snapshots now bind both digests and reject overwrite/conflict. All eight audited
+frozen graphs are intact. Real native building and legacy fixed-work reading,
+focused red/green fixtures, full regression, and unchanged-law BendTT pass.
+Read [the closed artifact issue](issues/experiment-source-snapshots.md). This
+changes development tooling, not the measured solver. No old artifact is rewritten.
+
 The internal Search.initialize contract is corrected. ExactContour now begins
 with FullCube, not Reduction. The focused test fails before with observed goal
 zero against expected two and passes after with observed two. Improving stages
