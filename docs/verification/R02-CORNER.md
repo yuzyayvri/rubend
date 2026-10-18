@@ -1,7 +1,7 @@
 # All-move corner database
 
-The full byte database is generated and completely audited. The isolated late-
-corner backend has a finite diagnostic win, but no general speed or solution-
+The full byte database is generated and completely audited. The isolated
+late-corner backend has a finite diagnostic win, but no general speed or solution
 quality gain is established. The default engine remains unchanged.
 No independent review runs under the user's no-subagents instruction.
 
@@ -94,7 +94,7 @@ adds explicit four-policy corner ablations. Its fixtures reject six malformed
 corner configurations and unknown policies. Sixteen deterministic half-turn
 positions are frozen separately before timing. They are a diagnostic subgroup,
 not a uniform strength corpus or known-optimum set. Loaded-backend shallow and
-contour checks are complete below. Application canaries remain in progress.
+contour checks and the late backend's application canaries are complete below.
 
 The application comparison runner now seals declared additional caches before
 and after use, validates exact lengths and SHA256 identities, and rejects
@@ -168,5 +168,43 @@ The raw pilot, three confirmations, version-two adjudications, and resource
 receipt are archived under r02-corner-v1/. Version two adds deterministic-state
 and cross-policy completion checks without changing the measured inputs or
 ratios. The first four-case pilot is not counted as a confirmation cohort.
-Application comparisons and one separately generated corner-first ordering
-experiment are next. No incremental frame field or default switch is accepted.
+One separately generated corner-first ordering experiment remains in progress.
+No incremental frame field or default switch is accepted.
+
+## Application canaries
+
+A fresh serialized five-pair run compares the frozen inverse-three release with
+the late combined application backend. All 1,750 jobs pass with zero errors,
+missing deadline answers, forced cleanup, or input-seal changes. This includes
+1,630 shallow optima and 120 measured jobs. All sixty deadline solution-length
+pairs tie, with no coverage or completed-lower-bound loss. The coverage-first
+scorecard independently reproduces those ties from the complete event records.
+
+Both profiles average 19.375 moves on eight pilot fast cases, nineteen on three
+exact canaries, and twenty-one on Superflip. Exact intervals end at lower fifteen
+and Superflip at lower sixteen for both profiles. The difficult jobs remain
+incomplete. First-answer p95 is twelve milliseconds for forty fast samples per
+side, twenty-two for fifteen exact samples, and 1,545 versus 1,507 for five
+Superflip samples. These are small canaries, not a population latency guarantee.
+
+Warm-file initialization medians are 1,756.7 versus 1,773.9 milliseconds over
+five fresh workers. Their ranges are 1,705.7 to 1,758.3 and 1,748.3 to 1,823.8.
+Sampled native peak RSS is 2,142,152 versus 2,142,188 KiB, excluding the host and
+browser. Both still allocate the two-GiB raw tier. No memory or initialization
+improvement is claimed. The batch takes 221.883 seconds and peaks at 4,411,200
+KiB aggregate RSS under its 6,144-MiB limit, CPU 2, nice 10, no swap, and
+900-second wall cap. Both native workers may reside concurrently; work alternates.
+
+The first attempt is invalidated because a concurrent build rewrote generated
+model modules. Their contents stayed equal but their filesystem seals changed.
+The new checkout lease prevents competing builds and bounded experiments from
+writing during a measurement. Its real-entrypoint and failure-release tests
+pass. Read [the closed incident](../issues/artifact-build-overlap.md). Never use
+the invalidated run's timings or quality counts as accepted evidence.
+
+The version-two report, resource receipt, and scorecard are archived under
+r02-corner-v1/. Reproduce the scorecard with bench/score-warm.mjs --report on
+the complete warm report. That mode does not claim to validate resource limits;
+inspect the separate actual run receipt. Its four rejecting fixtures and the
+legacy resource-record mode agree. No hidden GUI or package rollout for the
+corner profile is claimed yet, and independent review remains not run.
