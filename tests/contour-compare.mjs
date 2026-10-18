@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import {validateContour} from "../bench/contour-compare.mjs";
+import {validateContour,contourConfig} from "../bench/contour-compare.mjs";
 import {solved,apply} from "../apps/model.mjs";
 
 const complete=[{type:"measurement",profile:3,nativeMs:100,target:15,bound:15,status:0,moves:[]},{type:"done",length:31,lower:15,nodes:2000,optimal:0}];
@@ -30,3 +30,13 @@ reject(optimum,e=>e.shift(),{facelets:solved,depth:0},"forward");
 reject(optimum,e=>{},item,"forward");
 reject(optimum,e=>{e[0].moves=[0];e[0].length=1;e[1].moves=[0];e[2].length=1;},{facelets:solved},"forward");
 console.log(JSON.stringify({passed:true,completedAndCensoredAndOptimal:true,rejectedFixtures:rejected}));
+
+const base={binary:"/binary",cache:"/cache",cacheSha256:"0".repeat(64),count:16,iterations:5,output:"/output",target:15,warmup:"/warmup"};
+assert.equal(contourConfig(base),false);
+const corner={...base,cornerCache:"/corner",cornerSha256:"1".repeat(64),stratum:"half-turn"};
+assert.equal(contourConfig(corner),true);
+for(const [name,code] of [["corner",4],["combined",7]]){const events=structuredClone(complete);events[0].profile=code;assert.equal(validateContour(events,item,name,15).complete,true);}
+let cornerRejects=0;
+for(const bad of [{...base,cornerSha256:"1".repeat(64)},{...base,stratum:"half-turn"},{...corner,cornerSha256:"bad"},{...corner,cornerCache:"relative"},{...corner,stratum:"release"},{...corner,split:"release"}]){assert.throws(()=>contourConfig(bad));cornerRejects++;}
+assert.throws(()=>validateContour(complete,item,"unknown",15));
+console.log(JSON.stringify({passed:true,cornerPolicies:true,cornerConfigRejects:cornerRejects,unknownPolicyRejected:true}));

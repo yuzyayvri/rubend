@@ -41,6 +41,10 @@ test: build
     bend bench/corner-pilot.bend -o build/corner-pilot-test
     bend tests/corner-table.bend -o build/corner-table-test
     node tests/corner-pilot.mjs build/corner-pilot-test build/corner-table-test
+    node tests/corner-profile-generator.mjs
+    node bench/corner-stratum.mjs --check
+    bend tests/corner-bound.bend -o build/corner-bound-test
+    build/corner-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test
     build/inverse-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
