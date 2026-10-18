@@ -1,0 +1,76 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-edges-compile-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/r04-h0-edges-compile-v1.json.gz",
+      "bytes": 1182,
+      "compressedBytes": 747,
+      "sha256": "6557ef874e9c112b88a6d9900ec820d63ad09961be2c1ebc33817121896f1488",
+      "compressedSha256": "62c11212cd4ce2aabacc403ae8568a586538d9a2546bbba8fb0e91dc07ac9702",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-edge-data-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/r04-h0-edge-data-v1.json.gz",
+      "bytes": 1800,
+      "compressedBytes": 1037,
+      "sha256": "bee8cd9dbc28f7e32f6a48382be3bc955f630a6b69a572c8621fcadb273cc221",
+      "compressedSha256": "db0ac4beeee900ea8e8ffe8ae8b318d733905cc1017a256dd8ba5fbcc59422d2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-edge-check-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/r04-h0-edge-check-v1.json.gz",
+      "bytes": 1368,
+      "compressedBytes": 839,
+      "sha256": "2a2f227d4807133a18fa734e2bb0a0d612f2d376106c3511e7aa52a047dbbd8c",
+      "compressedSha256": "8bfe2ce687dac07634bf5c8def16fa7b27ac3583029e7b98db2d99f97d2a142f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-components-regression-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/r04-h0-components-regression-v1.json.gz",
+      "bytes": 33375,
+      "compressedBytes": 6815,
+      "sha256": "6483e72760dc0ba6fe19f7d6979b8baaac39bb42c821e4cad8146b13809272ec",
+      "compressedSha256": "56fd7721157ee0876fb36934d7df5c9778ab48372128502b3805eed2d0b58bec",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-product-check-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/r04-h0-product-check-v1.json.gz",
+      "bytes": 1338,
+      "compressedBytes": 806,
+      "sha256": "83ba664b66b3f47d5d83b649ad7ce6af80b58283de9a886df011946795ca88fc",
+      "compressedSha256": "8ac323ae4657a3200c8925bce20c8e68759905b88c9cb6b4f132c132a9d0af55",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-edges.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/h0-edges.json.gz",
+      "bytes": 1636,
+      "compressedBytes": 537,
+      "sha256": "250367ee2a64b5dafc05c5cf6f54e4048f22d9f9fbd00153bd5ab745536dc93e",
+      "compressedSha256": "571ece09e1c21318cf08f49d3fd361c007502718c0fe366f2e3b7cec0119ff1e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-edge-oracle.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/h0-edge-oracle.json.gz",
+      "bytes": 341,
+      "compressedBytes": 251,
+      "sha256": "6f10c522c9f54f528542acc13059e19761aa93a09a37d034891a18dfbeb2b05b",
+      "compressedSha256": "fbd00d998372fe79d047934c5c3379d3f423136c90b73f7f8bc38bc099607c56",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-edge-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-edges-v1/h0-edge-summary.json.gz",
+      "bytes": 1386,
+      "compressedBytes": 770,
+      "sha256": "24d92a4d91b870e06a69bacb4be48fa4ec3e39ec535241ea3eead04f9b7a9c56",
+      "compressedSha256": "0b7f25fda5d5206fa72c8f7bf5a64375fa31401de2dcb59edbcdfd36cd86f948",
+      "roundtripPassed": true
+    }
+  ]
+}

@@ -60,7 +60,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [ ] Small corner projection and quotient, then edge/stabilizer checks. No full H0 table admitted yet.
     - [x] Corner codec, all 153,090 legal representatives and sparse keys, 18,000 moves, 6,144 reference symmetries, and explicit target checks. Full regression and unchanged twenty-three-law BendTT pass.
     - [x] All 3,393 classes and 153,090 transformations to representative, every stabilizer, independent full payload agreement, six audit mutations, repeated audits, full regression, and unchanged twenty-three-law BendTT pass.
-    - [x] Raw/class distance equality on all states and all 2,755,620 edges. Independent full payload/move agreement, nine mutations, targeted checks, and unchanged-law BendTT pass. Combined regression remains due before integration.
+    - [x] Raw/class distance equality on all states and all 2,755,620 edges. Independent full payload/move agreement, nine mutations, targeted checks, and unchanged-law BendTT pass. Combined component regression now passes.
+    - [x] All 34,650 edge placements, moves, symmetries, and 29,937,600 commutations. Full independent payload agreement, seven mutations, combined-coordinate refinements, combined regression, and unchanged-law BendTT pass.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
