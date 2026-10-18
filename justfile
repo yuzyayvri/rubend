@@ -1,6 +1,9 @@
 check:
     node scripts/check.mjs
 
+resource-evidence-test:
+    node tests/resource-evidence.mjs
+
 build:
     node scripts/build.mjs
 

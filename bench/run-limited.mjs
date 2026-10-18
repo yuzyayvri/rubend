@@ -10,6 +10,8 @@ withArtifactLease();
 const [name,memoryText,timeText,cpuText,...command]=process.argv.slice(2);
 const memoryMiB=Number(memoryText),seconds=Number(timeText),cpus=cpuText?.split(",").map(Number);
 if(!/^[a-z0-9-]+$/.test(name??"")||!command.length)throw Error("Usage: node bench/run-limited.mjs NAME MEMORY_MiB SECONDS CPU[,CPU...] PROGRAM [ARGS...]");
+const output=resolve(process.env.RUBEND_EVIDENCE??"build/evidence",`${name}.json`);
+if(existsSync(output))throw Error("Refusing an existing resource receipt; use a fresh experiment name.");
 const available=Number(readFileSync("/proc/meminfo","utf8").match(/^MemAvailable:\s+(\d+)/m)[1])*1024;
 const allowed=cpuList(readFileSync("/proc/self/status","utf8").match(/^Cpus_allowed_list:\s+([^\n]+)/m)[1].trim());
 const policy=admission({memoryMiB,seconds,cpus},available,allowed);
@@ -31,5 +33,5 @@ const timer=setInterval(()=>{
 },200);
 process.on("SIGTERM",()=>stop("parent-termination"));process.on("SIGINT",()=>stop("parent-interruption"));
 try{await new Promise((res,rej)=>{child.on("error",rej);child.on("close",(code,signal)=>{record.exitCode=code;record.signal=signal;res();});});}
-finally{clearInterval(timer);record.elapsedMs=Math.round(performance.now()-started);record.finishedAt=new Date().toISOString();const output=resolve(process.env.RUBEND_EVIDENCE??"build/evidence",`${name}.json`);mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(record,null,2)+"\n");process.stderr.write(`Experiment record: ${output}\n`);}
+finally{clearInterval(timer);record.elapsedMs=Math.round(performance.now()-started);record.finishedAt=new Date().toISOString();mkdirSync(dirname(output),{recursive:true});writeFileSync(output,JSON.stringify(record,null,2)+"\n",{flag:"wx"});process.stderr.write(`Experiment record: ${output}\n`);}
 process.exitCode=record.exitCode??1;
