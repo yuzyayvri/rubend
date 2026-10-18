@@ -1,14 +1,14 @@
 {
   "format": "rubend-generated-small-profile-v2",
   "sourceHashes": {
-    "src/search.bend": "42f6ccbb529d9615f2cc4d30529ca189aea0a21dfe49f73dc84f0eec714673c6",
+    "src/search.bend": "a3527ec1fded8d81f632107eb915ca2c4a6dca46de61eefca9d2661b99c4e062",
     "src/portfolio.bend": "3f2dbeffd6fbb40bab43a2acbc3f6e45a03ade914427301cbdf5e6b607612b6b",
     "src/main.bend": "363ac6c288015942654ebb9f115fa3e78bba2e63c0ba662baf8839f417de8d0e",
     "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
     "bench/fixed-work.bend": "b016e5ed67c7406208e99c22ff10ea62f83ce0fe79d1876c8eebc5356721b5b8"
   },
   "outputHashes": {
-    "src/small/search.bend": "083107eca8149fcc4781b7c697c75f4968ebb6e104011b4f4a5c1fe1198ca198",
+    "src/small/search.bend": "4aa12cbd4efee59e1eee6e8b6dc0e65eaad1d1bf3d67bbc3674f3e8a8883a032",
     "src/small/portfolio.bend": "1e424396bc0fea2fc207788241ab1274118ca302d64f9406072b0a2cd1238f55",
     "src/small/main.bend": "6aa9425d5b8d574ca6932e4c35180afd522f6e9d92a71a847d31d6b8eb88857e",
     "src/small/tables.bend": "283dab7138439472545e0675e5a96725723a7f4abd5583a99a15d960cd03c4f1",
