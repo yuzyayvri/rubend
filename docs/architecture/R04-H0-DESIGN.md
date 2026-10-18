@@ -5,8 +5,9 @@ approved action laws pass the ordinary checker and BendTT. Runtime regression,
 native comparisons, and deliberate-error rejection pass. The raw corner codec
 also passes all 153,090 cases and target checks. The small quotient reaches
 3,393 classes and passes representative/stabilizer audits and full oracle data
-agreement. Raw/class distances, edge coordinates, H0 pruning data, and strength
-results are not implemented yet. This is the R04
+agreement. Raw/class distances agree at every state. Edge placements, moves,
+symmetries, and combined-coordinate refinements pass their component checks.
+Full H0 pruning data and strength results are not implemented yet. This is the R04
 foundation, not a world-class solver claim.
 
 ## Why this experiment
@@ -97,6 +98,31 @@ proposal. Record any later adaptation and preserve its required notices.
 
 ## Stabilizers and data validity
 
+The product metadata is planned as one owned 2^22-word array. Its logical
+ranges are sparse corner map at zero, 3,393 representatives at 524,288, low
+stabilizers at 528,384, high stabilizers at 532,480, 61,074 corner moves at
+536,576, 623,700 edge moves at 602,112, and 1,663,200 edge symmetry entries at
+1,228,800. The logical end is 2,892,000 words. Inputs remain separate during
+assembly so sparse writes cannot overwrite unread dense class entries.
+
+A corner-move word contains destination class and transformation to
+representative. A product move first moves the edge placement, then applies
+that representative transform. It assigns the destination's entire corner
+stabilizer orbit at the same depth. A known orbit member at a different depth
+is a build failure. Queue entries are unique newly assigned logical entries.
+
+The planned exact-byte builder owns a 128-MiB distance array, a 512-MiB queue,
+and the 16-MiB metadata array. Its prefix is bounded by expanded nodes, with
+incomplete and complete states distinct. Full generation requires a measured
+prefix with conservative audit/save margin inside thirty minutes. The audit
+checks every logical entry, all eighteen neighbors, every stabilizer equality,
+the unique derived goal, and a decreasing successor. The two serialized padding
+bytes are 255 and are checked separately. No full build has run yet.
+
+The raw corner goal is twenty-three and its class is twelve. The edge goal is
+34,629 under the checked colex convention. Their product index is
+derived at runtime. No part of the generator or loader assumes index zero.
+
 The small class builder owns one 2^20-word array. Raw entries hold a class ID
 and transformation to representative. Separate fixed ranges hold canonical
 representatives and the low/high stabilizer masks. Incomplete, complete, and
@@ -158,6 +184,19 @@ This specification is not the optimized packed-coordinate action. Any later
 packed action must be compared with it before use in generation or search.
 
 ## Verifiable sequence and admission
+
+The edge coordinate uses twelve two-bit slice labels, four from each slice.
+Its dense index is the colex rank of the four E positions times seventy plus
+the colex rank of the four M positions among the eight remaining positions.
+It has 34,650 values. The index is derived rather than assumed zero at solved.
+Boundary decoding rejects the first out-of-range value and U32 max.
+
+This keeps the labeled placement available for direct moves and transforms,
+instead of decoding a dense index in every action. Canonical representatives
+fill each slice in order and fix corner parity without changing edges. An
+independent two-sticker geometry oracle will check every move and symmetry
+entry before product generation. Product representatives must repair parity
+within an untracked tetrad, not swap edges across slices.
 
 The first corner unit stores a four-of-eight separation mask and the existing
 seven-trit twist rank in a branded Corner value. Its dense index is

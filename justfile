@@ -24,6 +24,7 @@ test: build
     just h0-corners-test
     just h0-classes-test
     just h0-distances-test
+    just h0-edges-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -103,6 +104,13 @@ h0-distances-test:
     bend bench/h0-distance-pilot.bend -o build/h0-distance-pilot
     bend tests/h0-distances.bend -o build/h0-distance-audit
     node tests/h0-distances.mjs
+
+h0-edges-test:
+    bend bench/h0-edge-pilot.bend -o build/h0-edge-pilot
+    bend tests/h0-edges.bend -o build/h0-edge-audit
+    node tests/h0-edges.mjs
+    bend tests/h0-product.bend -o build/h0-product-test
+    build/h0-product-test --threads 1
 
 loader-test:
     mkdir -p build/evidence
