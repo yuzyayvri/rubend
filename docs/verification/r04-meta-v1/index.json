@@ -1,0 +1,76 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-meta-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/r04-h0-meta-v1.json.gz",
+      "bytes": 1439,
+      "compressedBytes": 838,
+      "sha256": "1fab0864755b0224abd73c817d422a1cb7271dd0233301aacd390e27b3c77d3a",
+      "compressedSha256": "d281770986b2a62d3916f20102e0b148b02b9ab0d716253d0764c41946ec879c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-meta-oracle-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/r04-h0-meta-oracle-v1.json.gz",
+      "bytes": 1283,
+      "compressedBytes": 790,
+      "sha256": "9f09770967e99416cb6b7d64a1c7d8d80929c5f650767c8b5c97ceeb4e6db33c",
+      "compressedSha256": "b58c0bc5ee95ad62ff95adc8d6fec6259f1687abe1be74c685a78ae931abc394",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-meta-check-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/r04-h0-meta-check-v1.json.gz",
+      "bytes": 1313,
+      "compressedBytes": 808,
+      "sha256": "79de6cad48324337805fe5c72fa7472491fc0329f84e9da6d683c31e0f4ef2d4",
+      "compressedSha256": "addd6d51141465fa73df7c41e00e444fe2bff0bb69bc26ed50688beb8e938db6",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-meta-frame-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/r04-h0-meta-frame-v1.json.gz",
+      "bytes": 1487,
+      "compressedBytes": 899,
+      "sha256": "19e88fc6f130498f5f4ea3e770e8919ea296aa4194d7a4a60e73b1c9d3948385",
+      "compressedSha256": "568efe9ba410e6ddc54bf5fd1cc49f4928c8919a251a36d210f4d83d644826d2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-meta-proof-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/r04-h0-meta-proof-v1.json.gz",
+      "bytes": 1971,
+      "compressedBytes": 1044,
+      "sha256": "c4484cfcd8cf524eca924acf162eb5f499feb0ff938b653eef0fcc612262e829",
+      "compressedSha256": "d2ce42364ca2dc3e754ee5997eba22b6f7a5fb9b4f01cdf0cbef23c0ad57eb3e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-meta.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/h0-meta.json.gz",
+      "bytes": 2090,
+      "compressedBytes": 640,
+      "sha256": "56e3c46b42f8a2dd6aafe011c8542dd1061b7df22be473ce53db8e0ad2faf082",
+      "compressedSha256": "7c205b3aab5fe864cba086fb3bc60e614e28cefe34487cf4719d05977c721004",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-meta-oracle.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/h0-meta-oracle.json.gz",
+      "bytes": 568,
+      "compressedBytes": 369,
+      "sha256": "9dd4eeb69a28b5c7d3499eeb574af0f5f4500490e815ddbbccb23bca4bcf330c",
+      "compressedSha256": "a29740d475847c9d5af8f5098bae9478acb7c5531cc48937f7bf37540557115c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-meta-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-meta-v1/h0-meta-summary.json.gz",
+      "bytes": 1052,
+      "compressedBytes": 624,
+      "sha256": "d6fc8ca9dea58a097e68be9ce5301ef302fd59ddb921c64dcca55dde0da6caef",
+      "compressedSha256": "5c6206025b846a6215fd85473e4eaaf21fa245812f1ecfad2ef6e94a9be8b1f1",
+      "roundtripPassed": true
+    }
+  ]
+}
