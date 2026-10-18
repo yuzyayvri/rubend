@@ -1,9 +1,9 @@
 # H0 symmetry prototype
 
-Status: architecture proposal. No H0 or full-48-symmetry implementation, table
-build, new law, or speed result exists yet. The five exact law statements in
-[the proof plan](PROOF-PLAN.md#proposed-full-symmetry-laws) need Yuzy's approval
-before they enter executable law files. This is the next R04 direction, not a
+Status: approved for the bounded prototype on 2026-10-18. No H0 or full-48-symmetry
+implementation, table build, proof result, or speed result exists yet. Yuzy
+approved the five exact law statements in
+[the proof plan](PROOF-PLAN.md#proposed-full-symmetry-laws). This is the next R04 direction, not a
 reason to claim the current solver is world-class.
 
 ## Why this experiment
