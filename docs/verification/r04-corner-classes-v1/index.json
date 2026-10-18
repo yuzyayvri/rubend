@@ -1,0 +1,103 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v1.json.gz",
+      "bytes": 1557,
+      "compressedBytes": 918,
+      "sha256": "cb55c3bbf2a9073435f3d66a4f4ce53a6836c26e28c65edaf4ad65d43e04cac6",
+      "compressedSha256": "ffd5f2fc666f1dfeb3a0ecf741a7a3093816744633bf3f5ccddd6c44b784344c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v2.json.gz",
+      "bytes": 1428,
+      "compressedBytes": 839,
+      "sha256": "24e9bb81d928081428e8989b39521ec60912e0a6f63d3596fa6742731eef17ed",
+      "compressedSha256": "2b0f03edff9b7594cfb687f6c81e179d9de47ef041564e84b71aea2497979898",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v3.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v3.json.gz",
+      "bytes": 1680,
+      "compressedBytes": 975,
+      "sha256": "162a433d096a9c092780a71b6ca1da12eba9e4e8f977d9e0838db675b889b958",
+      "compressedSha256": "c2d1a7f4b57b6f680e00d8ace29ef909ff041c205f21509e0aba0e5ac64b1b91",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v4.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v4.json.gz",
+      "bytes": 1731,
+      "compressedBytes": 999,
+      "sha256": "c922f61c473ae4dec2f41f43684000525bd2e7ef35fc37877765cf661df83c41",
+      "compressedSha256": "2946ef44ce07c8880020131f607c09816bdef0ce9294433f0c68e81ec8947b2a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v5.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v5.json.gz",
+      "bytes": 1656,
+      "compressedBytes": 954,
+      "sha256": "e26a79ac47e45ab3ca2a4005538817059358869e3b7229c1a24a2e14d92f1269",
+      "compressedSha256": "44697c703dd6b820015fdbf22ec1b1b1a42078b949e3b7d425b4e6dacecbda85",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-v6.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-v6.json.gz",
+      "bytes": 1942,
+      "compressedBytes": 1098,
+      "sha256": "4a69d47eed83a1da34d001d8a89ed9f0ef0c0763d6b6744c31bbdbaaaa1bf644",
+      "compressedSha256": "79cd3ecd59371ca67ebd51cb19c7396124b8ab6de6c15c284bed623178294c80",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-check-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-check-v1.json.gz",
+      "bytes": 1406,
+      "compressedBytes": 855,
+      "sha256": "33c09571f72b5eda691794464369bd59f4f552228c3a438f04292ba342789bc8",
+      "compressedSha256": "7528866870f38307c56234b69bb15559cab5ef113492a43b136a50f6221121c0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-classes-regression-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/r04-h0-classes-regression-v1.json.gz",
+      "bytes": 32821,
+      "compressedBytes": 6717,
+      "sha256": "b8d3d85fffa1b728d5a73e5cead9ce1f580ce38ef97f891ee312a721789cb40c",
+      "compressedSha256": "7a9b25699fa2530ea85da954af2605373ced1d768f1beee6499e98cc2e2a4776",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-classes.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/h0-classes.json.gz",
+      "bytes": 1694,
+      "compressedBytes": 629,
+      "sha256": "29679c91196e3c537bc8de3bcaca12967fa564870b69a46aa8b05a8f0a76dd8a",
+      "compressedSha256": "aea0fb4dfa986ebf7da63319958b47b5284cb070184850af59d1b746de3a3a71",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-class-oracle.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/h0-class-oracle.json.gz",
+      "bytes": 475,
+      "compressedBytes": 303,
+      "sha256": "dc0e575309862cca901ca5a6f75a7b47e930e0d2796671ed1ff40bb1f9beb337",
+      "compressedSha256": "f72f25199c386f48a6bb6fab5fbcbbe6538e1dcc43c89e58ea279961d4871edd",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-class-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-classes-v1/h0-class-summary.json.gz",
+      "bytes": 1061,
+      "compressedBytes": 616,
+      "sha256": "ebc66206d7eff74a44b3602fb1806cee551a412a330b5759d57ff3a17b3ef002",
+      "compressedSha256": "71a89af174dedd5820af39eb0c88ae660bfb18067e0e24d27c3397bd9de5b6f6",
+      "roundtripPassed": true
+    }
+  ]
+}
