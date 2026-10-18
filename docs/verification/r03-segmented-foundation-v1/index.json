@@ -1,0 +1,123 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-build-check-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-build-check-v2.json.gz",
+      "bytes": 1914,
+      "compressedBytes": 923,
+      "sha256": "f16b580e55cc5a9ec3a61e466722bfc9ce4de747074f40099a576e18e27eb7f9",
+      "compressedSha256": "58576967a8177f1b50575e4d5ad24ccf274a835f826a6849546d332b66270f81",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-full-equality-run-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-full-equality-run-v2.json.gz",
+      "bytes": 3834,
+      "compressedBytes": 1897,
+      "sha256": "9c73002c6208be6713ab34dc04b8709164685e2ef7e0aae6419c7651e8ac02c4",
+      "compressedSha256": "40ec20a68c9b50a563e49861b458f18fe8b27285f5b4d795b09b1b0feb98e80a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-fixed-semantics-run-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-fixed-semantics-run-v2.json.gz",
+      "bytes": 1878,
+      "compressedBytes": 848,
+      "sha256": "f1e5e677401703ba215c988180d5c65d1d9cc6ff584215211a49777336641665",
+      "compressedSha256": "5cea4fa7299dd4c68b1bab3b506bc2d1832c3421acb3a774af8d40d600086f02",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-timer-build-check-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-timer-build-check-run-v1.json.gz",
+      "bytes": 2159,
+      "compressedBytes": 1062,
+      "sha256": "2a7a0f587a18361360e33000ef15b18f3f1ca4c958449ba6062ef87214282011",
+      "compressedSha256": "0dfc3675835178ae747c5da1d3ab784a74c56b0e3bc519b3fda5f29ca5fc7798",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-fused-rejection-check-run-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r04-h0-fused-rejection-check-run-v2.json.gz",
+      "bytes": 3457,
+      "compressedBytes": 1547,
+      "sha256": "9fcd67008e1d5f75d62302851493ec0093a924ae22d68765008ede02b9f4b64e",
+      "compressedSha256": "c7a7e5589330f6477f659b213f11c98a369ed355f025d837e201b2349a422604",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-dimension-green-build-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-dimension-green-build-run-v1.json.gz",
+      "bytes": 2634,
+      "compressedBytes": 1206,
+      "sha256": "7ca18b2240188a70c7288ee5cd8f8ebcc52ebb980f58bd11a2f045d309567623",
+      "compressedSha256": "47ab6702df5c713227cdff1cb1984f04bcd92b27a496a62bd3e2867ea2a2e127",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-dimension-red-run-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-dimension-red-run-v2.json.gz",
+      "bytes": 1180,
+      "compressedBytes": 692,
+      "sha256": "4a1ea7c1eee680c014c8891c3544695125125cf6679e7db734fd6ddca88c84dc",
+      "compressedSha256": "095f3ce98cda22ef50422e2011d743501479783157be229aed1cfea457ab0457",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/segmented-loader.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/segmented-loader.json.gz",
+      "bytes": 585,
+      "compressedBytes": 182,
+      "sha256": "863e7f846e911e819e98f59199f0f689fde20985a9fd8c610d5a72138e9613ba",
+      "compressedSha256": "af96408eeb41b9f3a5b176843af219e156e0306aa3d6ba38071905b3baf5ce54",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-shallow-fixed-compact-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-shallow-fixed-compact-v2.json.gz",
+      "bytes": 7444054,
+      "compressedBytes": 252688,
+      "sha256": "3220f55ca3367dfb9e9e431815da8af2a4be2ef8c5d4ce1955f62887aa8a7f36",
+      "compressedSha256": "09196735cc59a2bea6a28a29ce81696de08c6e26129ca97b0da26dba376de2d0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-segmented-general-fixed-compact-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/r03-segmented-general-fixed-compact-v2.json.gz",
+      "bytes": 1172551,
+      "compressedBytes": 86258,
+      "sha256": "6fa8948b455d933980f9b03c3c167489bc8e6e5f91bbfd3fa62e3d132a37232f",
+      "compressedSha256": "293b58ace4bbb75dc5ecd25e8d986fbeb22dfbae07960dad88e78972af38aeae",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/segmented-foundation-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-segmented-foundation-v1/segmented-foundation-summary.json.gz",
+      "bytes": 16380,
+      "compressedBytes": 3442,
+      "sha256": "0ff15b764739a6cbeed0802132dd00a4f6941d3b9e65d1935726a89758066af3",
+      "compressedSha256": "d8c89760342711e8db9dcc9b9379e9a7a7c76874097356b883d51736e45f12b3",
+      "roundtripPassed": true
+    }
+  ],
+  "reformatted": [
+    {
+      "source": "build/evidence/r03-segmented-shallow-fixed-v2.json",
+      "originalSha256": "5866becbb6625be0b759067bda659c5e971ec796a381cfcfe2710ffdf8924c88",
+      "originalBytes": 44133854,
+      "compact": "build/evidence/r03-segmented-shallow-fixed-compact-v2.json",
+      "compactSha256": "3220f55ca3367dfb9e9e431815da8af2a4be2ef8c5d4ce1955f62887aa8a7f36",
+      "compactBytes": 7444054,
+      "objectRoundtrip": true
+    },
+    {
+      "source": "build/evidence/r03-segmented-general-fixed-v2.json",
+      "originalSha256": "14fa441d3ff25592015bb1c7efb6e745cfc5cda5fc2568cde2e1eefa8db3d89e",
+      "originalBytes": 7686812,
+      "compact": "build/evidence/r03-segmented-general-fixed-compact-v2.json",
+      "compactSha256": "6fa8948b455d933980f9b03c3c167489bc8e6e5f91bbfd3fa62e3d132a37232f",
+      "compactBytes": 1172551,
+      "objectRoundtrip": true
+    }
+  ]
+}

@@ -31,6 +31,7 @@ test: build
     just h0-meta-test
     just h0-table-test
     just h0-profile-test
+    just segmented-profile-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -140,6 +141,14 @@ h0-profile-test:
 h0-fused-rejected-check:
     bend tests/h0-fast-codec.bend -o build/h0-fast-codec-test
     build/h0-fast-codec-test --threads 1
+
+segmented-profile-test:
+    node scripts/generate-segmented-profile.mjs --check
+    node tests/segmented-profile-generator.mjs
+    bend tests/segmented-table.bend -o build/segmented-table-test
+    build/segmented-table-test --threads 1
+    bend tests/segmented-loader.bend -o build/segmented-loader-test
+    node tests/segmented-loader.mjs
 
 loader-test:
     mkdir -p build/evidence
