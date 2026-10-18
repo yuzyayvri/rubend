@@ -21,6 +21,11 @@ Next is the small H0 quotient prototype in
 integrated search gain, or default switch exists yet. R03, R05, and R06 remain
 open. Independent review remains not run under the solo-work instruction.
 
+Verified development work through the raw corner codec is pushed to origin/main
+under Yuzy's configured GitHub author identity. The remote commit was read back
+and matched the local checkpoint. This is not a release, default-profile
+promotion, or claim that R01 through R06 are complete.
+
 Experiment source snapshots are also hardened. Different source trees can yield
 identical binaries, so the old binary-only key could replace frozen source.
 Snapshots now bind both digests and reject overwrite/conflict. All eight audited
