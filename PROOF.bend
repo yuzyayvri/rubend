@@ -15,6 +15,8 @@ import ./src/corner-table.bend as CornerTable
 import ./src/corner-bound.bend as CornerBound
 import ./src/corner/search.bend as CornerSearch
 import ./src/corner/portfolio.bend as CornerPortfolio
+import ./src/corner-first/search.bend as CornerFirstSearch
+import ./src/corner-first/portfolio.bend as CornerFirstPortfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:
