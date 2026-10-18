@@ -2,14 +2,18 @@
 
 ## Latest verified work
 
-The next R04 step is the exact-byte H0 symmetry prototype. Its
-[architecture](architecture/R04-H0-DESIGN.md) compares two projection sketches,
-records upstream expected dimensions, and requires small exhaustive checks and
-a bounded prefix before any full build. No H0 code, table, or performance result
-exists yet. The five [proposed symmetry laws](architecture/PROOF-PLAN.md#proposed-full-symmetry-laws)
-were approved by Yuzy on 2026-10-18 with "Yes. Proceed autonomously."
-Implementation may now add and prove exactly those five statements; all eighteen
-existing laws remain unchanged. R03 and R06 work remain on the roadmap.
+R04's full spatial-symmetry foundation is implemented and verified. All five
+laws approved on 2026-10-18 pass the ordinary checker and BendTT, bringing the
+total to twenty-three without changing the original eighteen statements.
+Independent positional checks, 27,648 KPuzzle comparisons, native action and
+composition output, deliberate-error rejection, full regression, and just check
+pass. The emitted default-engine C is unchanged. See
+[the evidence](verification/R04-SYMMETRY.md).
+
+Next is the small H0 corner projection and quotient prototype in
+[the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
+integrated search gain, or default switch exists yet. R03, R05, and R06 remain
+open. Independent review remains not run under the solo-work instruction.
 
 Experiment source snapshots are also hardened. Different source trees can yield
 identical binaries, so the old binary-only key could replace frozen source.

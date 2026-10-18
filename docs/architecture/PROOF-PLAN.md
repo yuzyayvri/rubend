@@ -97,11 +97,12 @@ require rerunning the entire evidence suite with old/new revisions recorded.
 Status: approved by Yuzy on 2026-10-18: "Yes. Proceed autonomously. Btw, how far
 along are we in the improvements plan?" This approves adding and proving the
 five statements below, not weakening the existing eighteen laws. Implementation
-and proof results must be recorded separately. The planned module namespace S48 is
+and proof results are recorded separately. The module namespace S48 is
 defined in [the H0 design](R04-H0-DESIGN.md). Its Symmetry type has exactly
 forty-eight generated cases, covering proper rotations and reflections. M
 denotes the existing src/model.bend module; S48 denotes the planned pure
-src/symmetry48.bend module. These are not live imports yet.
+src/symmetry48.bend module. The executable statements are in
+src/symmetry48-laws.bend. They now pass both checkers without changing this text.
 
 The action permutes positions and relabels face colors, while other U32 color
 values remain unchanged. Thus these laws quantify over every Model.Cube value,
