@@ -48,6 +48,11 @@ This checks the new build-lock dependency and current default app, not a Nix
 package of the optional corner binary. The daemon does not inherit experiment
 MemoryMax or affinity; the command uses one build job and four declared cores.
 The receipt is docs/verification/r02-corner-first-v1/r02-nix-package-v1.json.gz.
+After the initializer fix, the fresh default package/setup/runtime checks and
+cached confirmation also pass at main e45e209. All seventy-one source hashes
+match, and the installed native binary is byte-identical to the earlier
+package. The newer receipt is
+docs/verification/r01-initialization-v1/nix-package-v2.json.gz.
 
 The exact-only inverse pilot is implemented and remains opt-in. Three lazy
 inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
