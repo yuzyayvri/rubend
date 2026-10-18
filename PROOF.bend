@@ -12,6 +12,9 @@ import ./src/small/search.bend as SmallSearch
 import ./src/small/portfolio.bend as SmallPortfolio
 import ./src/small/tables.bend as SmallTables
 import ./src/corner-table.bend as CornerTable
+import ./src/corner-bound.bend as CornerBound
+import ./src/corner/search.bend as CornerSearch
+import ./src/corner/portfolio.bend as CornerPortfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:

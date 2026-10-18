@@ -54,3 +54,31 @@ the pure proof graph and reuse bounded byte/word IO, not a foreign solver.
 Histograms and prior mean values do not predict search speed. Same completed-
 depth timing, known optima, and deadline coverage/quality decide whether the
 complementary bound pays. The release holdout remains unopened for tuning.
+
+## Search boundary
+
+The isolated caller selects one of four profiles before allocating tables.
+Forward and inverse-three are same-binary controls. Corner adds the corner
+estimate to forward axes; combined adds it after surviving inverse estimates.
+Unknown policy text fails. Unsupported private geometries fail admission.
+Array capacity alone never activates a bound. Each policy loads both audited
+payloads to hold initialization and resident data constant for the ablation.
+
+The existing raw array has 536,870,912 words. Its small prefix and joint payload
+end at word 285,525,248. The 22,044,960 corner words end at 307,570,208, inside
+the same array. The loader checks exact byte counts and recorded fingerprints.
+It reuses bounded word IO and keeps effects outside PROOF.bend.
+
+CornerBound.CubeBound brands the estimate as a full-cube bound. Its index is
+corner permutation times 2,187 plus twist. The private search applies it only
+after ordinary forward cuts and optional inverse cuts. It accepts a child when
+the distance is below the parent's remaining depth, equivalent to the child's
+remaining depth being at least the estimate. It reuses the existing child cube.
+Reduction and subgroup frames bypass this estimate even for corner profiles.
+
+The generator produces private search, portfolio, runtime, and contour modules.
+It checks exact transformation patterns, output identities, and original input
+hashes. It does not edit the default engine. The alternative incremental-frame
+sketch stays deferred until lazy ranking has measured cost and pruning evidence.
+This is a solo architecture pass under the no-subagents instruction. Independent
+design and correctness review remain not run.

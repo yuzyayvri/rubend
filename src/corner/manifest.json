@@ -1,0 +1,27 @@
+{
+  "format": "rubend-generated-corner-profile-v1",
+  "sourceHashes": {
+    "src/search.bend": "42f6ccbb529d9615f2cc4d30529ca189aea0a21dfe49f73dc84f0eec714673c6",
+    "src/portfolio.bend": "3f2dbeffd6fbb40bab43a2acbc3f6e45a03ade914427301cbdf5e6b607612b6b",
+    "src/main.bend": "363ac6c288015942654ebb9f115fa3e78bba2e63c0ba662baf8839f417de8d0e",
+    "bench/contour-target.bend": "c1f4397e0ad7ad366300d97b529f933a9664ab692a59d2f3edd2091ec175af83"
+  },
+  "outputHashes": {
+    "src/corner/search.bend": "58e9cd40d9a84d06a5b404e88dc9d445f799b7ca45f903351222ffe6c74cd574",
+    "src/corner/portfolio.bend": "1e424396bc0fea2fc207788241ab1274118ca302d64f9406072b0a2cd1238f55",
+    "src/corner/main.bend": "f0c6ee323ab4063017b2b19874b7ddcd27513100ce07e747a04a7ab07a07bb67",
+    "bench/corner-contour.bend": "bbaf39e3a4ea0a5efd94a1bf9d638089e3788660467159877aae4a71afff4ae3"
+  },
+  "policies": {
+    "forward": "three forward joint axes",
+    "inverse-three": "forward and three inverse axes",
+    "corner": "forward axes and corner bound",
+    "combined": "forward and inverse axes and corner bound"
+  },
+  "geometry": {
+    "words": 536870912,
+    "cornerBase": 285525248,
+    "cornerWords": 22044960
+  },
+  "defaultEngine": "Original sources remain unchanged. Only explicit private profiles may use the loaded corner payload."
+}
