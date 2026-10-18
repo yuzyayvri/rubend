@@ -38,6 +38,8 @@ test: build
     build/search-profile-test --threads 1
     bend tests/search-profile.bend -o build/search-profile-test.mjs
     node tests/search-domain.mjs
+    bend tests/search-initialization.bend -o build/search-initialization-test
+    build/search-initialization-test --threads 1
     node tests/small-profile-generator.mjs
     bend bench/small-table-audit.bend -o build/small-table-audit
     build/small-table-audit --threads 1

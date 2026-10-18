@@ -418,9 +418,9 @@ def run(fuel: Nat, state: Search) -> Search:
     case _ state:
       state
 
-def initialize_checked(accepted: Bool, table: Array<U32>, +root: C.Cubie, request: Stage, profile: Profile) -> Search:
+def initialize_checked(accepted: Bool, table: Array<U32>, +root: C.Cubie, +request: Stage, profile: Profile) -> Search:
   match accepted:
-    case True{}: Search{table, root_frame(root, 0, Reduction{}) <> Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, Running{}, profile}}
+    case True{}: Search{table, root_frame(root, 0, next_goal(is_exact(request))) <> Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, Running{}, profile}}
     case False{}: Search{table, Nil{}, Meta{root, 0, 21, Nil{}, 31, request, 0, 0, 0, ProfileMismatch{}, profile}}
 
 def initialize_size(read: Array<U32> & U32, root: C.Cubie, request: Stage, +profile: Profile) -> Search:
