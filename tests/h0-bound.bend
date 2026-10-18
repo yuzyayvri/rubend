@@ -23,12 +23,17 @@ def result(value: U32) -> Bool:
 def checks() -> Bool:
   S.profile_matches(S.ForwardH0{}, 536870912) &&
   S.profile_matches(S.InverseH0{}, 536870912) &&
+  S.profile_matches(S.ForwardH0Fast{}, 536870912) &&
+  S.profile_matches(S.InverseH0Fast{}, 536870912) &&
   Bool.not(S.profile_matches(S.Light{}, 8388608)) &&
   Bool.not(S.profile_matches(S.ForwardH0{}, 8388608)) &&
   policy(S.Reduction{}, S.ForwardH0{}) && policy(S.Reduction{}, S.InverseH0{}) &&
   policy(S.Subgroup{}, S.ForwardH0{}) && policy(S.Subgroup{}, S.InverseH0{}) &&
+  policy(S.Reduction{}, S.ForwardH0Fast{}) && policy(S.Reduction{}, S.InverseH0Fast{}) &&
+  policy(S.Subgroup{}, S.ForwardH0Fast{}) && policy(S.Subgroup{}, S.InverseH0Fast{}) &&
   policy(S.FullCube{}, S.RawJoint{}) && policy(S.FullCube{}, S.RawInverseThree{}) &&
   Bool.not(policy(S.FullCube{}, S.ForwardH0{})) && Bool.not(policy(S.FullCube{}, S.InverseH0{})) &&
+  Bool.not(policy(S.FullCube{}, S.ForwardH0Fast{})) && Bool.not(policy(S.FullCube{}, S.InverseH0Fast{})) &&
   result(1) && Bool.not(result(2))
 
 def report(ok: Bool) -> IO(Unit):

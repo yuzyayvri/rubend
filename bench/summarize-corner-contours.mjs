@@ -6,7 +6,8 @@ import {createHash} from "node:crypto";
 assert.equal(process.argv.length,3,"Expected four-policy contour report");
 const path=process.argv[2],bytes=readFileSync(path),data=JSON.parse((path.endsWith(".gz")?gunzipSync(bytes):bytes).toString("utf8"));
 assert.equal(data.format,"rubend-contour-comparison-v1");assert.equal(data.passed,true);assert.deepEqual(data.errors,[]);assert.equal(data.rounds.length,5);assert.ok(Boolean(data.config.cornerCache)!==Boolean(data.config.h0Cache));
-const h0=Boolean(data.config.h0Cache),single=h0?"h0":"corner",combined=h0?"h0-combined":"combined",profiles=["forward","inverse-three",single,combined],series=Object.fromEntries(profiles.map(p=>[p,[]]));
+const h0=Boolean(data.config.h0Cache),paired=h0&&data.config.h0Kernel==="paired",fused=h0&&data.config.h0Kernel==="fused",single=h0?(fused?"h0-fast":"h0"):"corner",combined=h0?(fused?"h0-combined-fast":"h0-combined"):"combined",profiles=paired?["h0","h0-fast","h0-combined","h0-combined-fast"]:["forward","inverse-three",single,combined],series=Object.fromEntries(profiles.map(p=>[p,[]]));
+if(h0)assert.ok(["reference","fused","paired"].includes(data.config.h0Kernel??"reference"));
 const summary={format:h0?"rubend-h0-contour-adjudication-v1":"rubend-corner-contour-adjudication-v1",inputSha256:createHash("sha256").update(bytes).digest("hex"),target:data.config.target,count:data.config.count,split:data.config.split??"pilot",stratum:data.config.stratum??"uniform",completed:{},comparisons:{}};
 const dist=xs=>{const a=[...xs].sort((a,b)=>a-b),m=Math.floor(a.length/2);return {count:a.length,median:a.length%2?a[m]:(a[m-1]+a[m])/2,minimum:a[0],maximum:a.at(-1)};};
 for(const round of data.rounds){
@@ -24,11 +25,11 @@ for(const profile of profiles){
   for(const jobs of series[profile])for(const j of jobs){const before=reference.get(j.id);assert.ok(before);for(const key of ["facelets","complete","lower","length","optimal","nodes","moves"])assert.deepEqual(j[key],before[key],"Deterministic contour state changed between cohorts");}
 }
 for(const p of profiles){const jobs=series[p].flat();summary.completed[p]={planned:jobs.length,completed:jobs.filter(j=>j.complete).length,censored:jobs.filter(j=>!j.complete).length,cpuMs:dist(jobs.map(j=>j.cpuMs)),nativeWallMs:dist(jobs.map(j=>j.nativeMs)),workSteps:dist(jobs.map(j=>j.nodes))};}
-for(const [control,candidate] of [["forward",single],["inverse-three",combined],["forward",combined],["forward","inverse-three"]]){
+for(const [control,candidate] of paired?[["h0","h0-fast"],["h0-combined","h0-combined-fast"]]:[["forward",single],["inverse-three",combined],["forward",combined],["forward","inverse-three"]]){
   const blocks=[],workBlocks=[],wallBlocks=[];let completePairs=0,comparable=true;
   for(let round=0;round<5;round++){
     const before=series[control][round],after=new Map(series[candidate][round].map(j=>[j.id,j]));
-    for(const j of before){const next=after.get(j.id);assert.ok(next);assert.equal(next.facelets,j.facelets);if(!j.complete||!next.complete)comparable=false;else{completePairs++;assert.equal(next.optimal,j.optimal,"Completed policies disagree on optimality");assert.equal(next.lower,j.lower,"Completed policies disagree on lower bound");assert.equal(next.length,j.length,"Completed policies disagree on optimum or missing answer");}}
+    for(const j of before){const next=after.get(j.id);assert.ok(next);assert.equal(next.facelets,j.facelets);if(paired)for(const key of["complete","lower","length","optimal","nodes","moves"])assert.deepEqual(next[key],j[key],"Fused ranking changed traversal: "+key);if(!j.complete||!next.complete)comparable=false;else{completePairs++;assert.equal(next.optimal,j.optimal,"Completed policies disagree on optimality");assert.equal(next.lower,j.lower,"Completed policies disagree on lower bound");assert.equal(next.length,j.length,"Completed policies disagree on optimum or missing answer");}}
     const sum=(xs,key)=>xs.reduce((a,j)=>a+j[key],0),next=before.map(j=>after.get(j.id));
     const cpuBefore=sum(before,"cpuMs"),cpuAfter=sum(next,"cpuMs"),wallBefore=sum(before,"nativeMs"),wallAfter=sum(next,"nativeMs");
     assert.ok(cpuBefore>=100&&cpuAfter>=100,"Insufficient aggregate CPU tick resolution");

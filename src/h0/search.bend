@@ -16,6 +16,8 @@ type Profile is Data:
   BlockJoint{}
   ForwardH0{}
   InverseH0{}
+  ForwardH0Fast{}
+  InverseH0Fast{}
 
 def profile_words(profile: Profile) -> U32:
   match profile:
@@ -23,6 +25,8 @@ def profile_words(profile: Profile) -> U32:
     case RawInverseThree{}: 536870912
     case ForwardH0{}: 536870912
     case InverseH0{}: 536870912
+    case ForwardH0Fast{}: 536870912
+    case InverseH0Fast{}: 536870912
     case _: 0
 
 def profile_matches(profile: Profile, words: U32) -> Bool:
@@ -216,6 +220,10 @@ def h0_policy(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta
       h0_result(K.full_cube(table, child), parent, rest, meta, child, move, nx, ny, nz)
     case Node{cube, a, b, c, left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, InverseH0{}}:
       h0_result(K.full_cube(table, child), parent, rest, meta, child, move, nx, ny, nz)
+    case Node{cube, a, b, c, left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, ForwardH0Fast{}}:
+      h0_result(K.full_cube_fast(table, child), parent, rest, meta, child, move, nx, ny, nz)
+    case Node{cube, a, b, c, left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, InverseH0Fast{}}:
+      h0_result(K.full_cube_fast(table, child), parent, rest, meta, child, move, nx, ny, nz)
     case _ _: push_child(table, parent, rest, meta, child, move, nx, ny, nz)
 
 def accept_child(ok: Bool, table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta: Meta, child: C.Cubie, move: U32, nx: U32, ny: U32, nz: U32) -> Search:
@@ -236,6 +244,8 @@ def inverse_policy(table: Array<U32>, +parent: Frame, rest: +List<Frame>, +meta:
     case Node{cube, a, b, c, +left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, RawInverseThree{}}:
       inverse_result(I.full_cube_three(table, child, left), parent, rest, meta, child, move, nx, ny, nz)
     case Node{cube, a, b, c, +left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, InverseH0{}}:
+      inverse_result(I.full_cube_three(table, child, left), parent, rest, meta, child, move, nx, ny, nz)
+    case Node{cube, a, b, c, +left, previous, next, FullCube{}, path, length} Meta{root, p1, ceiling, best, best_len, mode, bound, lower, nodes, status, InverseH0Fast{}}:
       inverse_result(I.full_cube_three(table, child, left), parent, rest, meta, child, move, nx, ny, nz)
     case _ _: accept_child(True{}, table, parent, rest, meta, child, move, nx, ny, nz)
 
@@ -286,6 +296,8 @@ def joint_profile(profile: Profile, table: Array<U32>, +parent: Frame, rest: +Li
     case RawJoint{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case ForwardH0{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case InverseH0{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case ForwardH0Fast{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
+    case InverseH0Fast{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case RawInverseOne{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case RawInverseThree{}: first_joint(~raw_lookup, raw_lookup(table, ((nx * 2048 + ny) * 495 + nz : U32)), parent, rest, meta, move, nx, ny, nz)
     case Light{}: push(True{}, table, parent, rest, meta, move, nx, ny, nz)
