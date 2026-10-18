@@ -55,7 +55,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [ ] Raw segmentation and owned stacks as separate hypotheses. Independent review and package rollout remain open.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
   - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
-  - [ ] BLOCKED: approval to add the five exact symmetry-law statements in docs/architecture/PROOF-PLAN.md. No executable law or H0 implementation changed. Do not weaken the existing eighteen laws.
+  - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
+  - [ ] Generate and prove the full forty-eight-case specification action; independent positional checks, then the small corner quotient. No full table admitted yet.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.

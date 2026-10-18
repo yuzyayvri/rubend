@@ -94,9 +94,10 @@ require rerunning the entire evidence suite with old/new revisions recorded.
 
 ## Proposed full-symmetry laws
 
-Status: awaiting Yuzy's approval. These statements are proposals only. They have
-not been added to LAWS.bend, another executable law file, or PROOF.bend. The
-existing eighteen laws remain unchanged. The planned module namespace S48 is
+Status: approved by Yuzy on 2026-10-18: "Yes. Proceed autonomously. Btw, how far
+along are we in the improvements plan?" This approves adding and proving the
+five statements below, not weakening the existing eighteen laws. Implementation
+and proof results must be recorded separately. The planned module namespace S48 is
 defined in [the H0 design](R04-H0-DESIGN.md). Its Symmetry type has exactly
 forty-eight generated cases, covering proper rotations and reflections. M
 denotes the existing src/model.bend module; S48 denotes the planned pure
