@@ -28,6 +28,8 @@ test: build
     node tests/corpus.mjs
     node tests/scorecard.mjs
     node tests/resource-policy.mjs
+    node tests/artifact-lease.mjs
+    node tests/artifact-lease-integration.mjs
     node tests/archive-evidence.mjs
     node tests/search-observer.mjs
     node tests/process-cpu.mjs
@@ -45,6 +47,8 @@ test: build
     node bench/corner-stratum.mjs --check
     bend tests/corner-bound.bend -o build/corner-bound-test
     build/corner-bound-test --threads 1
+    bend tests/corner-first-bound.bend -o build/corner-first-bound-test
+    build/corner-first-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test
     build/inverse-bound-test --threads 1
     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
