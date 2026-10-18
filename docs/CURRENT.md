@@ -1,5 +1,24 @@
 # Current state of Rubend
 
+## Paused on request
+
+Yuzy requested a safe pause on 2026-10-19, Asia/Manila. All owned experiment,
+verification, and preview processes have finished. Keep sealed tables, frozen
+binaries, source snapshots, and the existing node_modules symlink for resume.
+No unfinished work is being pushed for this pause.
+
+Main and origin/main are both at 076682d937e40355aed444bfdfe0e5efd316d85d.
+That integrated checkpoint passes just check, just test, and the standalone
+twenty-three-law verdict. Later H0 measurement/rejection work is committed
+locally in the writer. The segmented foundation is a local WIP checkpoint.
+Its word, fixed-state, malformed-input, and kernel checks pass; the final new
+build/test hooks have not had another complete application-suite run.
+
+Resume first with the prepared segmented fixed-work timing and deadline/RSS
+comparisons. Do not run them alongside builds. Owned stacks, remaining R04
+decisions, R05, and most of R06 still need work. No overall completion,
+world-class strength, new default profile, or independent review is claimed.
+
 ## Latest verified work
 
 R04's full spatial-symmetry foundation is implemented and verified. All five
@@ -50,8 +69,26 @@ fresh feasibility cohorts admitted the bounded full run. A separately
 implemented full reference BFS agrees on every distance and both padding bytes.
 The isolated profile, all 47,871 cache-backed bound queries, malformed-cache
 checks, the full development regression, and unchanged-law kernel checks pass.
-Read [the data evidence](verification/R04-H0-TABLE.md). Direct-contour and
-application comparisons are next, against frozen controls.
+Read [the data evidence](verification/R04-H0-TABLE.md). Application comparisons
+remain unrun.
+The reference contour comparisons are now complete on pilot and disjoint
+development sets. All 640 measured jobs and 6,520 shallow checks pass. The
+kernel misses the ten-percent marginal gate over inverse-three. Read
+[the measured disposition](verification/R04-H0-REFERENCE-CONTOURS.md).
+The fused-ranking treatment is rejected after identical-traversal timing.
+It gives no useful total gain. Its source and raw evidence are preserved in
+the rejection archive; the live H0 runtime is restored to the reference.
+
+R03's segmented raw owner is also a live isolated prototype. All 285,525,248
+used words match the original loader. All 4,075 shallow and 350 general
+fixed-work snapshots agree, including cubes, paths, bounds, and completion.
+The 1,120-MiB allocation is geometry only until repeated native RSS checks.
+Timing, deadline quality, and review remain open. Read
+[the data shape and remaining checks](architecture/R03-SEGMENTED-DESIGN.md).
+Read [the verified foundation](verification/R03-SEGMENTED.md). The prototype
+also closes a zero-geometry/profile collision before promotion.
+Its real initialization test fails before and passes after the positive-size
+guard. Full data identity and fixed-state checks are rerun after that fix.
 No integrated strength gain or default switch is claimed. R03, R05, and R06
 remain open. Independent review remains not run under solo work.
 

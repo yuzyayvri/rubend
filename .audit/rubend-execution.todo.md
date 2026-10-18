@@ -52,19 +52,21 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [ ] R03. Kernel and memory pilots, independently measured.
   - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
   - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.
-  - [ ] Raw segmentation and owned stacks as separate hypotheses. Independent review and package rollout remain open.
+  - [x] Segmented raw foundation, full used-word identity, fixed-state equality, malformed inputs, and zero-geometry red/green checks. Not a measured or promoted memory tier.
+  - [ ] Segmented RSS/CPU/deadline comparisons and owned stacks as separate hypotheses. Independent review and package rollout remain open.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
   - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
   - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
   - [x] Generate and prove the full forty-eight-case specification action. Five new laws and the original eighteen pass both checkers; independent positional/KPuzzle tests, native output, deliberate-error rejection, full regression, and unchanged default C pass. Solo verification only.
-  - [ ] Small corner projection and quotient, then edge/stabilizer checks. No full H0 table admitted yet.
+  - [x] Small corner projection, quotient, edges/stabilizers, and admitted complete H0 table. No default promotion.
     - [x] Corner codec, all 153,090 legal representatives and sparse keys, 18,000 moves, 6,144 reference symmetries, and explicit target checks. Full regression and unchanged twenty-three-law BendTT pass.
     - [x] All 3,393 classes and 153,090 transformations to representative, every stabilizer, independent full payload agreement, six audit mutations, repeated audits, full regression, and unchanged twenty-three-law BendTT pass.
     - [x] Raw/class distance equality on all states and all 2,755,620 edges. Independent full payload/move agreement, nine mutations, targeted checks, and unchanged-law BendTT pass. Combined component regression now passes.
     - [x] All 34,650 edge placements, moves, symmetries, and 29,937,600 commutations. Full independent payload agreement, seven mutations, combined-coordinate refinements, combined regression, and unchanged-law BendTT pass.
-    - [x] Compact metadata, every serialized word, nine mutations, and 36,000 canonical product moves. Nontrivial stabilizers are required in 812 sampled transitions. Targeted and unchanged-law BendTT checks pass; integration regression remains due.
-    - [x] Bounded BFS, actual missing-orbit-update mutation, measured full-build admission, complete native product audits, and separately implemented full reference BFS. All117567450entries agree, maximum12. Integration regression is in progress.
-    - [ ] Isolated H0 profile and frozen strength comparisons.
+    - [x] Compact metadata, every serialized word, nine mutations, and 36,000 canonical product moves. Full integration regression passes.
+    - [x] Bounded BFS, actual missing-orbit-update mutation, measured full-build admission, complete native product audits, and separately implemented full reference BFS. All117567450entries agree, maximum12. Full integration regression passes.
+    - [x] Reference direct-contour comparison and fused-ranking disposition. Reference misses the ten-percent marginal gate; fused treatment is rejected and preserved. Runtime restored.
+    - [ ] H0 application/remaining projection decisions and final strength comparisons. No promotion or world-class claim.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
@@ -96,3 +98,12 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [ ] Verify the whole against the frozen contracts and publish the final report.
 - [ ] BLOCKED: required independent review. No reviewers may run under the solo
   instruction. Continue work that does not depend on this gate. Do not call it done.
+
+## Safe pause
+
+- [x] User explicitly paused work on 2026-10-19, Asia/Manila.
+- [x] No owned experiment, build, native worker, or preview server remains running.
+- [x] Preserve all artifacts and the user-owned dependency symlink. No broad cleanup.
+- [ ] Resume only after the user asks. Start with prepared segmented measurements,
+  then continue the remaining programme. This pause supersedes the standing
+  instruction to keep working until all phases finish.

@@ -29,6 +29,10 @@ import ./src/h0-table-audit.bend as H0TableAudit
 import ./src/h0-bound.bend as H0Bound
 import ./src/h0/search.bend as H0Search
 import ./src/h0/portfolio.bend as H0Portfolio
+import ./src/segmented-table.bend as SegmentedTable
+import ./src/segmented-joint.bend as SegmentedJoint
+import ./src/segmented/search.bend as SegmentedSearch
+import ./src/segmented/portfolio.bend as SegmentedPortfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:
