@@ -24,6 +24,11 @@ import ./src/h0-distances.bend as H0Distances
 import ./src/h0-edges.bend as H0Edges
 import ./src/h0-edge-table.bend as H0EdgeTable
 import ./src/h0-meta.bend as H0Meta
+import ./src/h0-table.bend as H0Table
+import ./src/h0-table-audit.bend as H0TableAudit
+import ./src/h0-bound.bend as H0Bound
+import ./src/h0/search.bend as H0Search
+import ./src/h0/portfolio.bend as H0Portfolio
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:
