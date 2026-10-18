@@ -7,9 +7,9 @@ The next R04 step is the exact-byte H0 symmetry prototype. Its
 records upstream expected dimensions, and requires small exhaustive checks and
 a bounded prefix before any full build. No H0 code, table, or performance result
 exists yet. The five [proposed symmetry laws](architecture/PROOF-PLAN.md#proposed-full-symmetry-laws)
-are awaiting Yuzy's approval under the law-ownership rule. They are Markdown
-proposals only. Do not add them to executable law files before approval; all
-eighteen existing laws remain unchanged. R03 and R06 work remain on the roadmap.
+were approved by Yuzy on 2026-10-18 with "Yes. Proceed autonomously."
+Implementation may now add and prove exactly those five statements; all eighteen
+existing laws remain unchanged. R03 and R06 work remain on the roadmap.
 
 Experiment source snapshots are also hardened. Different source trees can yield
 identical binaries, so the old binary-only key could replace frozen source.
