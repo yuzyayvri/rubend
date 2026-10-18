@@ -6,6 +6,7 @@ import ./portfolio.bend as P
 import ../tables.bend as T
 import ../certificate.bend as Cert
 import ../h0-table-io.bend as A
+import ../worker-control.bend as Control
 
 def color(code: U32) -> U32:
   match code:
@@ -44,12 +45,15 @@ def move_text(xs: +List<U32>) -> +List<String>:
     case Con{x, rest}:
       U32.show(x) <> move_text(rest)
 
-def candidate(ok: Bool, moves: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+def candidate_for(ok: Bool, moves: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool, tag: String) -> IO(Unit):
   match ok:
     case False{}:
       IO.die(Unit, 2, "Candidate replay failed")
     case True{}:
-      IO.print("{\"type\":\"candidate\",\"moves\":[" ++ String.join(move_text(moves), ",") ++ "],\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(optimal, 1, 0)) ++ "}")
+      IO.print("{\"type\":\"candidate\",\"moves\":[" ++ String.join(move_text(moves), ",") ++ "],\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(optimal, 1, 0)) ++ tag ++ "}")
+
+def candidate(ok: Bool, moves: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+  candidate_for(ok, moves, length, lower, nodes, optimal, "")
 
 def indices(xs: +List<M.Move>) -> +List<U32>:
   match xs:
@@ -58,20 +62,26 @@ def indices(xs: +List<M.Move>) -> +List<U32>:
     case Con{move, rest}:
       M.index(move) <> indices(rest)
 
-def certified(-original: M.Cube, result: Maybe<&2, Cert.Certificate<original>>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+def certified_for(-original: M.Cube, result: Maybe<&2, Cert.Certificate<original>>, length: U32, lower: U32, nodes: U32, optimal: Bool, tag: String) -> IO(Unit):
   match result:
     case None{}:
       IO.die(Unit, 2, "Candidate certificate failed")
     case Some{certificate}:
-      candidate(True{}, indices(Cert.moves(original, certificate)), length, lower, nodes, optimal)
+      candidate_for(True{}, indices(Cert.moves(original, certificate)), length, lower, nodes, optimal, tag)
 
-def emit(changed: Bool, +original: M.Cube, +best: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+def certified(-original: M.Cube, result: Maybe<&2, Cert.Certificate<original>>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+  certified_for(original, result, length, lower, nodes, optimal, "")
+
+def emit_for(changed: Bool, +original: M.Cube, +best: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool, tag: String) -> IO(Unit):
   match changed:
     case False{}:
       IO.pure(Unit, Unit{})
     case True{}:
       +moves = List.reverse(&2, U32, best)
-      certified(original, Cert.certify(original, to_moves(moves)), length, lower, nodes, optimal)
+      certified_for(original, Cert.certify(original, to_moves(moves)), length, lower, nodes, optimal, tag)
+
+def emit(changed: Bool, +original: M.Cube, +best: +List<U32>, length: U32, lower: U32, nodes: U32, optimal: Bool) -> IO(Unit):
+  emit_for(changed, original, best, length, lower, nodes, optimal, "")
 
 def service(fuel: Nat, active: Bool, state: P.Session, +original: M.Cube, +started: Nat, +budget: Nat, previous: U32, +profile: S.Profile) -> IO(Array<U32>):
   match fuel active state:
@@ -139,6 +149,101 @@ def worker_loop(fuel: Nat, table: Array<U32>, read: File & Result<&1, &1, U32 & 
     case _ Tuple{file, result}:
       File.close(file)
 
+type Loop is Type:
+  Running{session: P.Session, previous: U32}
+  Stopped{table: Array<U32>}
+
+def step_controlled(cancelled: Bool, active: Bool, state: P.Session, +original: M.Cube, previous: U32, +control: Control.Context) -> IO(Loop):
+  match cancelled active state:
+    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, S.InvalidTransform{}}:
+      IO.die(Loop, 2, "Transformed cube failed validation")
+    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, S.ProfileMismatch{}}:
+      IO.die(Loop, 2, "Lookup profile does not match loaded storage")
+    case True{} _ P.Session{table, tasks, root, best, length, lower, nodes, request, status}:
+      do IO<Loop>:
+        IO.print("{\"type\":\"cancelled\"" ++ Control.tag(control) ++ "}")
+        return Stopped{table}
+    case False{} True{} P.Session{table, tasks, root, +best, +length, +lower, +nodes, request, +status}:
+      do IO<Loop>:
+        emit_for(U32.is_lt(length, previous) || S.is_optimal(status), original, best, length, lower, nodes, S.is_optimal(status), Control.tag(control))
+        IO.print("{\"type\":\"progress\",\"nodes\":" ++ U32.show(nodes) ++ ",\"lower\":" ++ U32.show(lower) ++ Control.tag(control) ++ "}")
+        return Running{P.advance(P.Session{table, tasks, root, best, length, lower, nodes, request, status}), length}
+    case False{} False{} P.Session{table, tasks, root, best, +length, +lower, +nodes, request, +status}:
+      do IO<Loop>:
+        emit_for(U32.is_lt(length, previous) || S.is_optimal(status), original, best, length, lower, nodes, S.is_optimal(status), Control.tag(control))
+        IO.print("{\"type\":\"done\",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"optimal\":" ++ U32.show(C.pick(S.is_optimal(status), 1, 0)) ++ Control.tag(control) ++ "}")
+        return Stopped{table}
+
+def stopped(loop: Loop) -> IO(Array<U32>):
+  match loop:
+    case Stopped{table}: IO.pure(Array<U32>, table)
+    case Running{state, previous}: IO.die(Array<U32>, 2, "Unfinished worker shutdown")
+
+def service_controlled(fuel: Nat, loop: Loop, +original: M.Cube, +started: Nat, +budget: Nat, +control: Control.Context) -> IO(Array<U32>):
+  match fuel loop:
+    case _ Stopped{table}: IO.pure(Array<U32>, table)
+    case 0n Running{state, previous}:
+      do IO<Array<U32>>:
+        final : Loop <- step_controlled(False{}, False{}, state, original, previous, control)
+        stopped(final)
+    case 1n+p Running{P.Session{table, tasks, root, best, length, lower, nodes, request, +status}, previous}:
+      do IO<Array<U32>>:
+        IO.sleep(0)
+        cancelled : Bool <- Control.poll(control)
+        now : Nat <- IO.now()
+        next : Loop <- step_controlled(cancelled, Nat.is_lt(now, Nat.add(started, budget)) && S.is_running(status), P.Session{table, tasks, root, best, length, lower, nodes, request, status}, original, previous, control)
+        service_controlled(p, next, original, started, budget, control)
+
+def solve_controlled(valid: C.Validation, +original: M.Cube, +request: P.Request, budget: U32, table: Array<U32>, +profile: S.Profile, +control: Control.Context) -> IO(Array<U32>):
+  match valid:
+    case C.Invalid{code}:
+      do IO<Array<U32>>:
+        IO.print("{\"type\":\"invalid\",\"code\":" ++ U32.show(code) ++ Control.tag(control) ++ "}")
+        return table
+    case C.Valid{cube}:
+      do IO<Array<U32>>:
+        started : Nat <- IO.now()
+        service_controlled(U32.to_nat(C.pick(P.is_fast(request), 180000, 60000)), Running{P.initialize(table, original, cube, request, profile), 31}, original, started, U32.to_nat(budget), control)
+
+def parsed_controlled(result: Maybe<&2, M.Cube>, request: P.Request, budget: U32, table: Array<U32>, +profile: S.Profile, +control: Control.Context) -> IO(Array<U32>):
+  match result:
+    case None{}:
+      do IO<Array<U32>>:
+        IO.print("{\"type\":\"invalid\",\"code\":6" ++ Control.tag(control) ++ "}")
+        return table
+    case Some{+cube}: solve_controlled(C.validate(cube), cube, request, budget, table, profile, control)
+
+def checked_command(valid: Bool, text: String, mode: String, budget: U32, table: Array<U32>, +profile: S.Profile, +control: Control.Context) -> IO(Array<U32>):
+  match valid:
+    case True{}: parsed_controlled(M.from_list(colors(text)), P.request_mode(String.eq(mode, "exact")), budget, table, profile, control)
+    case False{}:
+      do IO<Array<U32>>:
+        IO.print("{\"type\":\"invalid\",\"code\":7" ++ Control.tag(control) ++ "}")
+        return table
+
+def tracked_command(text: String, +mode: String, limit: Maybe<&2, U32>, id: Maybe<&2, U32>, table: Array<U32>, +profile: S.Profile, control: Control.Context) -> IO(Array<U32>):
+  match limit id:
+    case Some{+budget} Some{+job}:
+      checked_command(U32.is_gt(job, 0) && U32.is_ge(budget, 50) && U32.is_le(budget, 30000) && (String.eq(mode, "fast") || String.eq(mode, "exact")), text, mode, budget, table, profile, Control.for_job(control, job))
+    case _ _: IO.die(Array<U32>, 2, "Invalid tracked worker command")
+
+def command_controlled(+args: +List<String>, table: Array<U32>, +profile: S.Profile, +control: Control.Context) -> IO(Array<U32>):
+  match args control:
+    case Con{text, Con{mode, Con{limit, Con{job, Nil{}}}}} Control.Attached{id, channel}:
+      tracked_command(text, mode, U32.read(limit), U32.read(job), table, profile, Control.Attached{id, channel})
+    case _ Control.Detached{}:
+      worker_command(args, table, profile)
+    case _ _: IO.die(Array<U32>, 2, "Expected tracked worker command")
+
+def worker_loop_controlled(fuel: Nat, table: Array<U32>, read: File & Result<&1, &1, U32 & String, String>, +profile: S.Profile, +control: Control.Context) -> IO(Unit):
+  match fuel read:
+    case 1n+p Tuple{file, Done{SCon{head, rest}}}:
+      do IO<Unit>:
+        table : Array<U32> <- command_controlled(String.split(String.trim(SCon{head, rest}), Chr{9}), table, profile, control)
+        read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
+        worker_loop_controlled(p, table, read, profile, control)
+    case _ Tuple{file, result}: File.close(file)
+
 def checked_table(read: Array<U32> & U32) -> IO(Array<U32>):
   match read:
     case Tuple{table, 8388608}:
@@ -164,9 +269,10 @@ def worker(file: File) -> IO(Unit):
     IO.print("{\"type\":\"initializing\"}")
     profile : S.Profile <- selected_profile()
     table : Array<U32> <- A.table()
-    IO.print("{\"type\":\"ready\"}")
+    +control : Control.Context <- Control.open()
+    Control.ready(control)
     read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
-    worker_loop(1000000n, table, read, profile)
+    worker_loop_controlled(1000000n, table, read, profile, control)
 
 def command(args: List<String>) -> IO(Unit):
   match args:

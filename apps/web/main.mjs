@@ -1,12 +1,12 @@
 import { CubeScene, faceColors } from "./scene.mjs";
 import {solveRecord} from "../export.mjs";
 import {refineSolution} from "../solve-state.mjs";
+import {ModelClient} from "./model-client.mjs";
 
 const $=id=>document.getElementById(id),faces="URFDLB",moveNames=[...faces].flatMap(f=>[f,`${f}2`,`${f}'`]),solved=[...faces].map(f=>f.repeat(9)).join("");
 const worker=new Worker(new URL("./worker.js",import.meta.url),{type:"module"});
-const pending=new Map();let serial=0;
-worker.onmessage=({data})=>{const p=pending.get(data.id);if(!p)return;pending.delete(data.id);data.error?p.reject(Error(data.error)):p.resolve(data);};
-function model(type,data={}){return new Promise((resolve,reject)=>{const id=++serial;pending.set(id,{resolve,reject});worker.postMessage({id,type,...data});});}
+const modelClient=new ModelClient(worker,{onFailure:e=>{playing=false;pendingSeek=null;message(e.message,true);sync();}});
+const model=(type,data)=>modelClient.request(type,data);
 let facelets=solved,revision=0,solution=null,step=0,playing=false,busy=false,searching=false,searchController=null,mode="fast",token=null,ready=false,draft=solved,paint="U",queue=Promise.resolve(),lastRun=null,pendingSeek=null,exportText="";
 const budgets=[250,1000,2000,5000,15000];
 let scene;
@@ -15,20 +15,22 @@ function message(text,error=false){$("search-status").textContent=text;$("search
 function error(text){$("input-error").textContent=text;$("input-error").hidden=!text;}
 function duration(){return $("reduced-motion").checked?0:Number($("speed").value);}
 function sync(){
+  const modelUnavailable=modelClient.state!=="active";
   $("cube-state").textContent=facelets===solved?"Solved position":"Scrambled position";
   $("solve-button").disabled=!ready||searching||busy;
   $("solve-button").hidden=searching;$("cancel-button").hidden=!searching;
   const has=Boolean(solution);
   for(const id of ["first-button","back-button","play-button","next-button","copy-button","export-button","timeline"])$(id).disabled=!has||busy||searching;
-  $("play-button").disabled=!has||searching||(busy&&!playing);
-  $("timeline").disabled=!has||searching;
-  $("first-button").disabled=!has||busy||searching||step===0;$("back-button").disabled=!has||busy||searching||step===0;$("next-button").disabled=!has||busy||searching||step>=solution.moves.length;
+  $("play-button").disabled=modelUnavailable||!has||searching||(busy&&!playing);
+  $("timeline").disabled=modelUnavailable||!has||searching;
+  $("first-button").disabled=modelUnavailable||!has||busy||searching||step===0;$("back-button").disabled=modelUnavailable||!has||busy||searching||step===0;$("next-button").disabled=modelUnavailable||!has||busy||searching||step>=solution.moves.length;
   $("timeline").max=has?solution.moves.length:0;$("timeline").value=step;
   $("step-count").textContent=`${step} / ${has?solution.moves.length:0}`;
   $("play-button").textContent=playing?"Ⅱ":"▶";$("play-button").setAttribute("aria-label",playing?"Pause solution":"Play solution");
-  $("turn-buttons").querySelectorAll("button").forEach(b=>b.disabled=busy);
+  $("turn-buttons").querySelectorAll("button").forEach(b=>b.disabled=busy||modelUnavailable);
   for(const id of ["reset-button","apply-button","scramble-button","edit-button"])$(id).disabled=busy;
-  $("moves").querySelectorAll("button").forEach((b,i)=>{b.disabled=busy||searching;b.classList.toggle("past",i<step);b.classList.toggle("current",i===step);b.setAttribute("aria-current",i===step?"step":"false");});
+  for(const id of ["apply-button","scramble-button","edit-button","save-edit"])$(id).disabled=busy||modelUnavailable;
+  $("moves").querySelectorAll("button").forEach((b,i)=>{b.disabled=modelUnavailable||busy||searching;b.classList.toggle("past",i<step);b.classList.toggle("current",i===step);b.setAttribute("aria-current",i===step?"step":"false");});
 }
 function save(){try{localStorage.setItem("rubend-cube",facelets);}catch{}}
 function stop(keep=true){playing=false;if(searchController){searchController.abort();searchController=null;}searching=false;$("search-progress").style.width="0%";if(keep&&solution)message("Search stopped. Keeping your verified solution.");sync();}
@@ -92,7 +94,19 @@ function theme(value){document.documentElement.dataset.theme=value;$("theme-butt
 try{theme(localStorage.getItem("rubend-theme")??"dark");}catch{theme("dark");}$("theme-button").onclick=()=>theme(document.documentElement.dataset.theme==="dark"?"light":"dark");
 document.addEventListener("keydown",e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||e.ctrlKey||e.metaKey||$("edit-dialog").open||$("guide-dialog").open||$("export-dialog").open)return;const f=faces.indexOf(e.key.toUpperCase());if(f>=0){e.preventDefault();manual(f*3+(e.altKey?1:e.shiftKey?2:0));}else if(e.code==="Space"){e.preventDefault();play();}else if(e.key==="ArrowRight"){e.preventDefault();jump(step+1,true);}else if(e.key==="ArrowLeft"){e.preventDefault();jump(step-1);}});
 try{const saved=localStorage.getItem("rubend-cube");if(saved){const r=await model("validate",{facelets:saved});facelets=r.facelets;scene?.set(facelets);}}catch{}
-try{const response=await fetch("/api/session");if(!response.ok)throw Error("Local engine unavailable");const data=await response.json();token=data.token;ready=true;$("engine-state").classList.add("ready");$("engine-state").replaceChildren(document.createElement("i"),document.createTextNode("Bend 2 · Local"));}catch(e){message(e.message,true);$("engine-state").textContent="Engine offline";}
-window.rubendDiagnostics=()=>({facelets,revision,solution:solution?{...solution}:null,step,searching,playing,renderer:scene?.stats()??null,model:"Bend 2",lastRun});
+let sessionTimer,sessionClosed=false;
+async function session(){
+  try{
+    const response=await fetch("/api/session");if(!response.ok)throw Error("Local engine unavailable");const data=await response.json();
+    if(sessionClosed)return;token=data.token;ready=data.ready===true;$("engine-state").classList.toggle("ready",ready);
+    $("engine-state").replaceChildren(document.createElement("i"),document.createTextNode(ready?"Bend 2 · Local":data.error?"Engine offline":"Engine warming up"));
+    if(data.error)message(data.error,true);
+  }catch(e){if(!sessionClosed){ready=false;$("engine-state").classList.remove("ready");$("engine-state").textContent="Engine offline";message(e.message,true);}}
+  finally{if(!sessionClosed){sync();sessionTimer=setTimeout(session,ready?1000:250);}}
+}
+await session();
+window.rubendDiagnostics=()=>({facelets,revision,solution:solution?{...solution}:null,step,searching,playing,renderer:scene?.stats()??null,model:"Bend 2",modelState:modelClient.state,pendingModelRequests:modelClient.pending.size,lastRun});
+window.addEventListener("pagehide",()=>{sessionClosed=true;clearTimeout(sessionTimer);modelClient.close();searchController?.abort();},{once:true});
+window.addEventListener("pageshow",event=>{if(event.persisted)location.reload();});
 setInterval(()=>{const stats=scene?.stats();if(stats?.averageFrameMs){$("render-stat").textContent=`Rendering: ${(1000/stats.averageFrameMs).toFixed(0)} fps · p95 ${stats.p95FrameMs.toFixed(1)} ms · ${stats.frames} recent frames.`;}else $("render-stat").textContent="2D controls remain available without a 3D renderer.";},1000);
 sync();

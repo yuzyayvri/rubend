@@ -34,8 +34,13 @@ test: build
     just segmented-profile-test
     node tests/exact.mjs
     node tests/engine.mjs
+    node tests/engine-lifecycle.mjs
+    node tests/native-lifecycle.mjs
+    bend tests/worker-control.bend -o build/worker-control-test
+    node tests/worker-control.mjs
     node tests/http.mjs
     node tests/export.mjs
+    node tests/model-client.mjs
     node bench/corpus.mjs --check
     node tests/corpus.mjs
     node tests/scorecard.mjs
@@ -74,6 +79,7 @@ test: build
     node tests/corner-orders.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
+    node tests/lifecycle-compare.mjs
 
 audit:
     bend bench/audit.bend -o build/audit

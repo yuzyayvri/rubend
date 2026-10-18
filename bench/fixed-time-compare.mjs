@@ -112,7 +112,7 @@ export async function compareFixedTime(config,configPath){
         const order=round%2?[...config.profiles].reverse():config.profiles;
         for(const profile of order){
           for(const path of [profile.binary,profile.binary+".json",config.cache])assert.deepEqual(identity(path),seals.find(s=>s.path===resolve(path)).identity,"Worker input identity changed");
-          const engine=new Engine({binary:profile.binary});engines[profile.id]=engine;
+          const engine=new Engine({binary:profile.binary,eventProtocol:"fixed-work"});engines[profile.id]=engine;
           await engine.ready(120000);workers.push({profile:profile.id,identity:cpu(engine.child.pid),directory:engine.directory});
         }
         let index=0;

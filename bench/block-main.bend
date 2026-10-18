@@ -3,6 +3,7 @@ import ../src/main.bend as H
 import ../src/search.bend as S
 import ../src/tables.bend as T
 import ../src/joint-cache.bend as Cache
+import ../src/worker-control.bend as Control
 
 def checked_digest(result: Cache.Digest) -> IO(Array<U32>):
   match result:
@@ -21,9 +22,10 @@ def worker(file: File) -> IO(Unit):
   do IO<Unit>:
     IO.print("{\"type\":\"initializing\"}")
     table : Array<U32> <- table()
-    IO.print("{\"type\":\"ready\"}")
+    +control : Control.Context <- Control.open()
+    Control.ready(control)
     read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
-    H.worker_loop(1000000n, table, read, S.BlockJoint{})
+    H.worker_loop_controlled(1000000n, table, read, S.BlockJoint{}, control)
 
 def command(args: List<String>) -> IO(Unit):
   match args:

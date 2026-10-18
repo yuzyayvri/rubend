@@ -23,7 +23,7 @@ const server=createServer(async(req,res)=>{
     if(req.headers.origin && req.headers.origin!==address.origin) return fail(403,"Invalid origin");
     if(req.headers["sec-fetch-site"] && !["same-origin","none"].includes(req.headers["sec-fetch-site"])) return fail(403,"Cross-site requests are not allowed");
     if(req.method==="GET" && url.pathname==="/api/session") {
-      res.writeHead(200,{"Content-Type":"application/json"});return res.end(JSON.stringify({token,ready:engine.available,version:1}));
+      res.writeHead(200,{"Content-Type":"application/json"});return res.end(JSON.stringify({token,ready:engine.available,state:engine.state,error:engine.failure,version:1}));
     }
     if(req.method==="POST" && url.pathname==="/api/solve") {
       const provided=Buffer.from(String(req.headers["x-rubend-token"]??""));
@@ -37,16 +37,15 @@ const server=createServer(async(req,res)=>{
       if(engine.job)return fail(409,"Engine is busy");
       if(!["fast","exact"].includes(input.mode)||!Number.isInteger(input.budgetMs)||input.budgetMs<50||input.budgetMs>30000)return fail(400,"Invalid budget or mode");
       let ended=false;
-      let cancel;
-      res.on("close",()=>{if(!ended){ended=true;cancel?.();}});
+      const controller=new AbortController();
+      res.on("close",()=>{if(!ended){ended=true;controller.abort();}});
       res.writeHead(200,{"Content-Type":"text/event-stream; charset=utf-8","Connection":"keep-alive"});
       res.write(": rubend\n\n");
-      cancel=await engine.solve(input,event=>{
+      await engine.solve(input,event=>{
         if(ended)return;
         res.write(`data: ${JSON.stringify({...event,id:input.id})}\n\n`);
         if(["done","invalid","error"].includes(event.type)){ended=true;res.end();}
-      });
-      if(ended)cancel();
+      },{signal:controller.signal});
       return;
     }
     if(req.method!=="GET")return fail(405,"Method not allowed");

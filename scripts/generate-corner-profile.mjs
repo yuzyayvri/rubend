@@ -80,7 +80,7 @@ def selected_profile() -> IO(S.Profile):
 main=once(main,"def worker(file: File)",policy+"def worker(file: File)");
 main=once(main,"table : Array<U32> <- checked_table(Array.size(U32, T.generate()))","profile : S.Profile <- selected_profile()\n    table : Array<U32> <- A.table()",2);
 main=once(main,"        profile : S.Profile <- selected_profile()\n    table : Array<U32> <- A.table()","        profile : S.Profile <- selected_profile()\n        table : Array<U32> <- A.table()");
-main=once(main,"table, read, S.Light{})","table, read, profile)");
+main=once(main,"table, read, S.Light{}, control)","table, read, profile, control)");
 main=once(main,"text, mode, table, S.Light{})","text, mode, table, profile)");
 let contour=originals.contour;
 contour=once(contour,"import ./advanced-main.bend as A","import ../src/corner-table-io.bend as A");
