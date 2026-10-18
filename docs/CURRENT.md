@@ -11,9 +11,15 @@ remains ignored in the managed writer checkout. Do not rebuild it on resumption.
 The isolated four-policy backend compiles and passes synthetic goal/cutoff
 checks, native malformed-cache rejection, full development regression, and
 BendTT. Its pure search and portfolio are checked; runtime IO is excluded.
-Next run loaded-backend shallow checks and completed-contour ablations, including
-the frozen diagnostic half-turn stratum. No corner speed or strength gain,
-default rollout, or independent review is claimed.
+All 9,780 native shallow checks and 960 measured requests pass without errors.
+Uniform corner additions fail the ten-percent gate against the relevant control.
+The combined bound uses about 80.9% less CPU time than inverse-three on the
+sixteen-case half-turn diagnostic, over five fresh cohorts to lower ten or an
+earlier optimum. Both complete all eighty repeated targets. Forward-only leaves
+forty-five diagnostic requests fuel-censored; no all-case ratio against it is
+claimed. This is a specialized contour gain, not general strength. Application
+canaries and a separately generated corner-first ordering experiment are in
+progress. No default rollout or independent review is claimed.
 
 The exact-only inverse pilot is implemented and remains opt-in. Three lazy
 inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
@@ -181,10 +187,11 @@ The append-only trail is `.audit/rubend-startup.tsv`. The old checkpoint pointer
 reported intentional artifact changes after resumed progress, not lost source
 or data. Publish and verify the current checkpoint at handoff.
 
-Continue without visible windows or Astra calls. Local experiment batches stay
-within eight GiB including scratch, two low-priority cores, and thirty minutes.
-Keep configured local Git authorship and commit verified units frequently.
-Publication, merges, pushes, deployment, and system changes are not authorized.
+Continue solo without visible windows or Astra calls. The newer resource policy
+supersedes this historical startup unit's two-core/eight-GiB envelope. Keep the
+thirty-minute batch cap, desktop reserve, configured Git authorship, and frequent
+verified commits. Yuzy later authorized pushing verified work when done, as
+recorded above. PRs, merges, releases, deployment, and system changes remain gated.
 
 ## Run and verify
 

@@ -44,6 +44,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Five-cohort application canaries against frozen R01. Sixty quality pairs tie.
   - [x] Full corner database. All 88,179,840 states and 1,587,237,120 directed edges audited; independent transitions and shallow distances pass. Pure builder/auditor BendTT passes with unchanged laws.
   - [ ] Isolated lazy-corner integration and forward/inverse/corner/combined ablation. Goal guards, malformed caches, shallow optima, half-turn stratum, completed contours, and deadline evidence required.
+    - [x] Late-corner three-stratum contour checks. 9,780 shallow jobs, 960 measured requests, and all uniform targets pass. No uniform marginal gain over inverse-three; 80.9% less CPU on the declared half-turn diagnostic. Forty-five forward diagnostic requests remain censored.
+    - [ ] Application canaries against the frozen inverse backend. Corner-first ordering is a distinct next pilot, not an accepted improvement.
   - [ ] Full rollout and independent review. BLOCKED: independent review under the no-subagents instruction.
 - [ ] R03. Kernel and memory pilots, independently measured.
   - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
