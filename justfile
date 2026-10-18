@@ -50,6 +50,7 @@ test: build
     bend tests/inverse-bound.bend -o build/inverse-bound-test.mjs
     node tests/inverse-bound.mjs
     node tests/contour-compare.mjs
+    node tests/corner-contour-summary.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
 
