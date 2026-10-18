@@ -23,6 +23,7 @@ import ./src/h0-classes.bend as H0Classes
 import ./src/h0-distances.bend as H0Distances
 import ./src/h0-edges.bend as H0Edges
 import ./src/h0-edge-table.bend as H0EdgeTable
+import ./src/h0-meta.bend as H0Meta
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:
