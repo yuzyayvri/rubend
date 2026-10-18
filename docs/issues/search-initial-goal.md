@@ -34,3 +34,7 @@ docs/verification/r01-initialization-v1/. No domain law is changed or weakened.
 The regression is part of just test. Independent review remains not run under
 the user's no-subagents instruction. No new speed or optimality-proof claim
 comes from this API correction.
+The default Nix package/setup/runtime checks also pass at e45e209. The installed
+native binary remains byte-identical to the pre-fix package and all current
+source-manifest hashes match. The receipt is nix-package-v2.json.gz in the same
+evidence directory.
