@@ -18,6 +18,7 @@
     "corner": "forward axes and corner bound",
     "combined": "forward and inverse axes and corner bound"
   },
+  "combinedOrder": "forward/inverse/corner",
   "geometry": {
     "words": 536870912,
     "cornerBase": 285525248,
