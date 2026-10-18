@@ -10,7 +10,13 @@ composition output, deliberate-error rejection, full regression, and just check
 pass. The emitted default-engine C is unchanged. See
 [the evidence](verification/R04-SYMMETRY.md).
 
-Next is the small H0 corner projection and quotient prototype in
+The H0 corner codec also passes all 153,090 dense roundtrips, legal canonical
+representatives, sparse-key uniqueness, 18,000 move comparisons, and 6,144
+reference-symmetry comparisons. All forty-eight target actions agree; its
+dense goal index is 23. Full regression and the unchanged twenty-three-law
+BendTT check pass. See [the codec evidence](verification/R04-CORNER-CODEC.md).
+
+Next is the small H0 quotient prototype in
 [the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
 integrated search gain, or default switch exists yet. R03, R05, and R06 remain
 open. Independent review remains not run under the solo-work instruction.
