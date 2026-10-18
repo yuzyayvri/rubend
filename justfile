@@ -21,6 +21,7 @@ test: build
     node tests/fixed-work-inputs.mjs
     node tests/core.mjs
     just symmetry48-test
+    just h0-corners-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -85,6 +86,11 @@ symmetry48-test:
     bend tests/symmetry48-native.bend -o build/symmetry48-native-test
     node tests/symmetry48-native.mjs
     node tests/symmetry48-proof-negative.mjs
+
+h0-corners-test:
+    bend src/h0-corners.bend -o build/h0-corners.mjs
+    bend tests/h0-corners.bend -o build/h0-corners-test
+    node tests/h0-corners.mjs
 
 loader-test:
     mkdir -p build/evidence
