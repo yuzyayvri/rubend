@@ -91,3 +91,51 @@ Run both the ordinary checker and `--verdict`, negative-proof fixtures, generate
 JS/native differential checks, and an independent facelet oracle. Preserve the
 emitted proof translation for significant domain proofs. Compiler upgrades
 require rerunning the entire evidence suite with old/new revisions recorded.
+
+## Proposed full-symmetry laws
+
+Status: awaiting Yuzy's approval. These statements are proposals only. They have
+not been added to LAWS.bend, another executable law file, or PROOF.bend. The
+existing eighteen laws remain unchanged. The planned module namespace S48 is
+defined in [the H0 design](R04-H0-DESIGN.md). Its Symmetry type has exactly
+forty-eight generated cases, covering proper rotations and reflections. M
+denotes the existing src/model.bend module; S48 denotes the planned pure
+src/symmetry48.bend module. These are not live imports yet.
+
+The action permutes positions and relabels face colors, while other U32 color
+values remain unchanged. Thus these laws quantify over every Model.Cube value,
+not only sample legal cubes. Model.Move is the existing eighteen-move HTM type.
+Composition applies its right argument first. The proposed five statements are:
+
+```bend
+law sym48_identity_action:
+  for +cube: M.Cube
+  {S48.apply(S48.identity(), cube) == cube : M.Cube}
+
+law sym48_composition_action:
+  for +left: S48.Symmetry
+  for +right: S48.Symmetry
+  for +cube: M.Cube
+  {S48.apply(S48.compose(left, right), cube) == S48.apply(left, S48.apply(right, cube)) : M.Cube}
+
+law sym48_inverse_action:
+  for +sym: S48.Symmetry
+  for +cube: M.Cube
+  {S48.apply(S48.inverse(sym), S48.apply(sym, cube)) == cube : M.Cube}
+
+law sym48_move_conjugacy:
+  for +sym: S48.Symmetry
+  for +move: M.Move
+  for +cube: M.Cube
+  {S48.apply(sym, M.turn(move, cube)) == M.turn(S48.map_move(sym, move), S48.apply(sym, cube)) : M.Cube}
+
+law sym48_solved_fixed:
+  for sym: S48.Symmetry
+  {S48.apply(sym, M.solved()) == M.solved() : M.Cube}
+```
+
+Approval permits adding and proving exactly these five statements without
+weakening an existing law. It does not certify the H0 implementation, approve
+new unlisted domain claims, lift table-build limits, or authorize a default
+profile switch. Projection/refinement, loaded-data, and search-completeness
+obligations remain separately visible even after these five proofs pass.
