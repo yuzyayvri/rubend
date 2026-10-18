@@ -1,0 +1,85 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distances-compile-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distances-compile-v1.json.gz",
+      "bytes": 1621,
+      "compressedBytes": 960,
+      "sha256": "d64a8145f6c1c4145a5f7842740d2c428b8a24f9233099d342254430c13ed923",
+      "compressedSha256": "1839e1b047fd0690a9a5803449d3cb901f9dac3f43d45045f45272a8be8b8a65",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distances-compile-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distances-compile-v2.json.gz",
+      "bytes": 1520,
+      "compressedBytes": 899,
+      "sha256": "ad387b1da382fc616a1ddf31c4d35322bf9f16272a2a28638fc68ed30b433e9f",
+      "compressedSha256": "ca767cdeb0d7e5dcfe7252fc44277fd50228eef2736aa18f9f739e24fb165bf4",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distances-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distances-v1.json.gz",
+      "bytes": 1813,
+      "compressedBytes": 999,
+      "sha256": "94b846ce823761d953bb7efa8f0ee8146b6a09f9eecd2ef2cd7f36c0a5003fc2",
+      "compressedSha256": "f6e493aa01a93866546dedff4121b6bb828e25c91df4cc009219451b28fd747c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distances-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distances-v2.json.gz",
+      "bytes": 1839,
+      "compressedBytes": 977,
+      "sha256": "72739f59af63faa1648a7111653e0a0df09fb35d5bb07ab522db441a68495163",
+      "compressedSha256": "0bef2a343051bb821cf963163ab314efa3fbf5a2d9f59a4765072f83097c4a4b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distance-check-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distance-check-v1.json.gz",
+      "bytes": 1941,
+      "compressedBytes": 1049,
+      "sha256": "2b234aaac4e18797ca68790792b743a5d3b64f5f0773e0852b545371a3fd2009",
+      "compressedSha256": "3ca794f73e56ec79b8816b4f0bd7ed0de03ec1d1f6a005d69320a831ddfd41d6",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distance-check-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distance-check-v2.json.gz",
+      "bytes": 1481,
+      "compressedBytes": 869,
+      "sha256": "876ec553ff187b69a7b266463086a09a94805cbb8d89e1d96c1729f19d7fca6b",
+      "compressedSha256": "925395fb8a30dc752ae4ef96a5f3ab5e75cd62b278111c7d70ba0c7aa8817d0c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-distances-proof-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/r04-h0-distances-proof-v1.json.gz",
+      "bytes": 2072,
+      "compressedBytes": 1090,
+      "sha256": "d4ae6cc2f2149af04f9d9ecf3994ccf8bc4c81607e3931a5629bc716443ca730",
+      "compressedSha256": "9cbdbbe99a9a7e2ec89f8ca6594e9dc5ecf19f77154990bac359a629d14d532e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-distances.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/h0-distances.json.gz",
+      "bytes": 1893,
+      "compressedBytes": 524,
+      "sha256": "cfe059ca100ef953fade17dcb1aeb52369dd0e5e5d13fd8b6b0c53c2d6cdd3b3",
+      "compressedSha256": "33eb6a211beb6bca3c5584c90d844f369a78449ac0b94f20fb5ad8899bd360dc",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-distance-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-corner-distances-v1/h0-distance-summary.json.gz",
+      "bytes": 1117,
+      "compressedBytes": 647,
+      "sha256": "428729575ee9fa6ab60e0ee8d36dd91da75d088667eb1ac1287a767eca564a25",
+      "compressedSha256": "c59b7daf47a690fcf744a017915870bd12afef0bd3c036f5107f2d72ee4fb538",
+      "roundtripPassed": true
+    }
+  ]
+}
