@@ -3,14 +3,14 @@
   "sourceHashes": {
     "src/search.bend": "a3527ec1fded8d81f632107eb915ca2c4a6dca46de61eefca9d2661b99c4e062",
     "src/portfolio.bend": "3f2dbeffd6fbb40bab43a2acbc3f6e45a03ade914427301cbdf5e6b607612b6b",
-    "src/main.bend": "b8588272b9073f7263bb44b3d86a46624636df38714b437d576ca4bb21f6bf7c",
+    "src/main.bend": "f7022bedc0663e42ca5df2ff1599dcfa035420b6ea4258bab9c492810d74d4c4",
     "src/tables.bend": "17a014eaf18bc660cbe3eea3f0bf65ee8a41156200e751065ada372fc14dd7b6",
     "bench/fixed-work.bend": "b016e5ed67c7406208e99c22ff10ea62f83ce0fe79d1876c8eebc5356721b5b8"
   },
   "outputHashes": {
     "src/small/search.bend": "4aa12cbd4efee59e1eee6e8b6dc0e65eaad1d1bf3d67bbc3674f3e8a8883a032",
     "src/small/portfolio.bend": "1e424396bc0fea2fc207788241ab1274118ca302d64f9406072b0a2cd1238f55",
-    "src/small/main.bend": "a29ddc59605f0aaf6b454021a1939521127fd88a769e96272c670d6e4fd88f50",
+    "src/small/main.bend": "8d3ab591e1cd4204042ced5e4a6d88d9c15c23de32a7734edec3d50b4ee2f5d0",
     "src/small/tables.bend": "283dab7138439472545e0675e5a96725723a7f4abd5583a99a15d960cd03c4f1",
     "bench/small-fixed.bend": "1b0b557821b519b2624957a456c2cb2534125ca856eb31e2575ac609f9ffd67e"
   },

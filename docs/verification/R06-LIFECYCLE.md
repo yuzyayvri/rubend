@@ -175,6 +175,42 @@ The application keeps the strict solver default. Both positive diagnostic
 packets and default rejection pass the current host fixtures. This is a host
 protocol correction, not a relaxation of snapshot or solution validation.
 
+## Paused ownership investigation
+
+The batched version's [second quality run](r06-lifecycle-core-v1/deadline-rejected-v2.json.gz)
+also passes all1,750jobs and sixty answer lengths, but loses three Superflip
+lower bounds. It is not promoted. The [batched functional run](r06-lifecycle-core-v1/batched-functional.json.gz)
+passes parser fragments/coalescing, actual native cancellation, stale control,
+host fixtures, and a real frozen timing worker. The [second diagnostic](r06-lifecycle-core-v1/diagnostic-v2.json.gz)
+reduces observed pselect6 calls to103. This does not explain away the failed
+quality gate.
+
+The historical R01 control does not have the later inverse-bound plumbing.
+For attribution, a [new reference build](r06-lifecycle-core-v1/matched-reference-build.json.gz)
+exports the immediate pre-lifecycle graph from62de4d8. Its
+[Git provenance](r06-lifecycle-core-v1/matched-reference-provenance.json.gz)
+retains every original source hash. Search, portfolio, cubie, coordinates, and
+raw loader match the current candidate. This control is built, not yet timed.
+The historical quality failures remain valid comparisons with R01 but do not
+by themselves isolate lifecycle overhead.
+
+Emitted hot-function signatures also gain borrowed-location arguments under
+the Loop-based cooperative runtime despite unchanged pure sources. Equal seal
+counts in the inspected push-child function do not support assuming extra
+reference-count seals caused the regression. The latest source removes Loop
+and transfers the affine table to exactly one of two IO continuations. It
+restores the original service-loop shape while keeping the batched reader.
+This is an unmeasured ownership hypothesis, not a proven root cause or fix.
+
+At Yuzy's explicit pause, [all sixteen toolchain checks](r06-lifecycle-core-v1/pause-check.json.gz)
+pass, including native compilation/smoke and the unchanged twenty-three-law
+verdict. Generated variants are refreshed. The latest source has no raw frozen
+binary, solve/cancel test, full regression, or performance result yet.
+The prior build/rubend must not be treated as this source's application build.
+No experiment or preview remains running. Four verified-dead scratch/IPC
+directories are removed after [saving their diagnostic data](r06-lifecycle-core-v1/pause-cleanup.json.gz).
+Tables, frozen binaries, source snapshots, and the dependency symlink stay intact.
+
 ## Open gates
 
 Broader hidden-browser cancel, playback, and fallback acceptance remains open.

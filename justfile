@@ -38,6 +38,8 @@ test: build
     node tests/native-lifecycle.mjs
     bend tests/worker-control.bend -o build/worker-control-test
     node tests/worker-control.mjs
+    bend tests/worker-control-batch.bend -o build/worker-control-batch-test
+    node tests/worker-control-batch.mjs
     node tests/http.mjs
     node tests/export.mjs
     node tests/model-client.mjs
