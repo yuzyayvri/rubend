@@ -26,6 +26,8 @@ test: build
     just h0-distances-test
     just h0-edges-test
     just h0-meta-test
+    just h0-table-test
+    just h0-profile-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -117,6 +119,20 @@ h0-meta-test:
     bend bench/h0-meta-pilot.bend -o build/h0-meta-pilot
     bend tests/h0-meta.bend -o build/h0-meta-audit
     node tests/h0-meta.mjs
+
+h0-table-test:
+    bend bench/h0-class-pilot.bend -o build/h0-class-pilot
+    bend bench/h0-edge-pilot.bend -o build/h0-edge-pilot
+    bend bench/h0-meta-pilot.bend -o build/h0-meta-pilot
+    bend tests/h0-table-orbit.bend -o build/h0-table-orbit-test
+    bend tests/h0-table-audit.bend -o build/h0-table-audit-test
+    node tests/h0-table-check.mjs
+
+h0-profile-test:
+    node scripts/generate-h0-profile.mjs --check
+    node tests/h0-profile-generator.mjs
+    bend tests/h0-bound.bend -o build/h0-bound-test
+    build/h0-bound-test --threads 1
 
 loader-test:
     mkdir -p build/evidence

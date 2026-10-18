@@ -20,14 +20,15 @@ async function seal(path){
   return {path,identity:before,bytes,sha256:digest.digest("hex")};
 }
 const cpu=pid=>parseCpu(readFileSync("/proc/"+pid+"/stat","utf8"),pid);
-const codes={forward:0,"inverse-one":1,"inverse-three":3,corner:4,combined:7};
+const codes={forward:0,"inverse-one":1,"inverse-three":3,corner:4,combined:7,h0:8,"h0-combined":11};
 
 export function contourConfig(config){
-  const corner=Object.hasOwn(config,"cornerCache");
-  const optional=corner?["split","stratum"]:["split"];
-  assert.deepEqual(Object.keys(config).filter(k=>!optional.includes(k)).sort(),["binary","cache","cacheSha256","count","iterations","output","target","warmup",...corner?["cornerCache","cornerSha256"]:[]].sort());
+  const corner=Object.hasOwn(config,"cornerCache"),h0=Object.hasOwn(config,"h0Cache");assert.ok(!(corner&&h0));
+  const optional=corner||h0?["split","stratum"]:["split"];
+  assert.deepEqual(Object.keys(config).filter(k=>!optional.includes(k)).sort(),["binary","cache","cacheSha256","count","iterations","output","target","warmup",...corner?["cornerCache","cornerSha256"]:[],...h0?["h0Cache","h0Sha256","h0Meta","h0MetaSha256"]:[]].sort());
   assert.ok(["pilot","development"].includes(config.split??"pilot"));
   if(corner){assert.ok(["uniform","half-turn"].includes(config.stratum??"uniform"));assert.match(config.cornerSha256,/^[0-9a-f]{64}$/);assert.equal(resolve(config.cornerCache),config.cornerCache);}
+  if(h0){assert.ok(["uniform","half-turn"].includes(config.stratum??"uniform"));for(const k of["h0Sha256","h0MetaSha256"])assert.match(config[k],/^[0-9a-f]{64}$/);for(const k of["h0Cache","h0Meta"])assert.equal(resolve(config[k]),config[k]);}
   return corner;
 }
 
@@ -73,21 +74,23 @@ async function sample(engine,item,profile,target,hz){
 
 export async function compareContours(config,configPath){
   assert.deepEqual(JSON.parse(readFileSync(configPath,"utf8")),config);
-  const corner=contourConfig(config);
+  const corner=contourConfig(config),h0=Object.hasOwn(config,"h0Cache");
   const split=config.split??"pilot";assert.ok(["pilot","development"].includes(split));
   assert.ok([1,5].includes(config.iterations));assert.ok([1,4,8,16].includes(config.count));
   assert.ok(Number.isInteger(config.target)&&config.target>=1&&config.target<=18);
   for(const key of ["binary","cache","warmup","output"])assert.equal(resolve(config[key]),config[key]);
   assert.ok(config.output.startsWith(resolve("build/evidence")+"/")&&!existsSync(config.output));
   const query=spawnSync("getconf",["CLK_TCK"],{encoding:"utf8"});assert.equal(query.status,0);const hz=Number(query.stdout.trim());assert.ok(hz>0);
-  const halfTurn=corner&&config.stratum==="half-turn";
+  const halfTurn=(corner||h0)&&config.stratum==="half-turn";
   const files=[configPath,config.binary,config.binary+".json",config.cache,config.warmup,"bench/corpora/"+split+".txt","bench/corpora/manifest.json","bench/contour-compare.mjs","bench/fixed-time-compare.mjs","bench/corpus.mjs","apps/engine.mjs","apps/model.mjs","build/model.mjs","build/cubie.mjs","build/notation.mjs",...corner?[config.cornerCache]:[],...halfTurn?["bench/corpora/half-turn-v1.json","bench/corner-stratum.mjs"]:[]].map(p=>resolve(p));
+  if(h0)files.push(config.h0Cache,config.h0Meta);
   const seals=[];for(const file of new Set(files))seals.push(await seal(file));
   assert.equal(seals.find(s=>s.path===config.cache).sha256,config.cacheSha256);
   if(corner)assert.equal(seals.find(s=>s.path===config.cornerCache).sha256,config.cornerSha256);
+  if(h0){assert.equal(seals.find(s=>s.path===config.h0Cache).sha256,config.h0Sha256);assert.equal(seals.find(s=>s.path===config.h0Meta).sha256,config.h0MetaSha256);}
   const build=JSON.parse(readFileSync(config.binary+".json","utf8"));assert.equal(build.binarySha256,seals.find(s=>s.path===config.binary).sha256);
   const warmup=JSON.parse(readFileSync(config.warmup,"utf8")).records.map((r,i)=>({...r,id:"shallow-"+i}));assert.equal(warmup.length,163);
-  const items=(halfTurn?JSON.parse(readFileSync("bench/corpora/half-turn-v1.json","utf8")).cases:loadCorpus(split)).slice(0,config.count),profiles=corner?["forward","inverse-three","corner","combined"]:["forward","inverse-one","inverse-three"];
+  const items=(halfTurn?JSON.parse(readFileSync("bench/corpora/half-turn-v1.json","utf8")).cases:loadCorpus(split)).slice(0,config.count),profiles=corner?["forward","inverse-three","corner","combined"]:h0?["forward","inverse-three","h0","h0-combined"]:["forward","inverse-one","inverse-three"];
   const report={format:"rubend-contour-comparison-v1",passed:false,config,hz,build,seals,planned:{workers:config.iterations*profiles.length,shallowJobs:config.iterations*profiles.length*warmup.length,measurementJobs:config.iterations*profiles.length*items.length},rounds:[],errors:[],conditions:"Direct full-cube exact traversal from depth zero to declared lower bound, or a replay-checked optimum. Each request has 20,000,000 work-step fuel, not a time budget. CPU ticks include output; native monotonic time excludes output. Same binary and table, actual selected profile echoed by native metadata. Incomplete jobs remain in records. No instrumented observer."};
   try{
     for(let round=0;round<config.iterations;round++){
@@ -95,9 +98,10 @@ export async function compareContours(config,configPath){
       const order=profiles.map((_,i)=>profiles[(i+round)%profiles.length]);
       for(const profile of order){
         for(const s of seals)assert.deepEqual(identity(s.path),s.identity);
-        const saved=Object.fromEntries(["RUBEND_JOINT_CACHE","RUBEND_CONTOUR_PROFILE","RUBEND_CONTOUR_TARGET","RUBEND_CORNER_CACHE"].map(k=>[k,process.env[k]]));
+        const saved=Object.fromEntries(["RUBEND_JOINT_CACHE","RUBEND_CONTOUR_PROFILE","RUBEND_CONTOUR_TARGET","RUBEND_CORNER_CACHE","RUBEND_H0_CACHE","RUBEND_H0_META_CACHE"].map(k=>[k,process.env[k]]));
         Object.assign(process.env,{RUBEND_JOINT_CACHE:config.cache,RUBEND_CONTOUR_PROFILE:profile,RUBEND_CONTOUR_TARGET:String(config.target)});
         if(corner)process.env.RUBEND_CORNER_CACHE=config.cornerCache;else delete process.env.RUBEND_CORNER_CACHE;
+        if(h0){process.env.RUBEND_H0_CACHE=config.h0Cache;process.env.RUBEND_H0_META_CACHE=config.h0Meta;}else{delete process.env.RUBEND_H0_CACHE;delete process.env.RUBEND_H0_META_CACHE;}
         let engine;
         try{
           engine=new Engine({binary:config.binary});await engine.ready(120000);
