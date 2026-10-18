@@ -116,3 +116,11 @@ The application, scorecard, native/HTTP, and final proof/check receipts are in
 r02-corner-first-v1/. The final sixteen toolchain checks and independent BendTT
 verdict pass with the unchanged eighteen laws. This kernel check is not an
 independent human or agent review. Review remains not run under the solo rule.
+
+The default Nix package and flake checks also pass at main 0c793d2. The stored
+receipt contains the cached confirmation, derivation logs, setup/native/HTTP
+reports, installed-native identity, and seventy-one matching source hashes.
+It verifies the new util-linux build dependency and default packaged app. It
+does not install the optional corner engine or its large cache. One build job
+and four cores are requested; no experiment-cgroup inheritance is claimed for
+the Nix daemon. This is packaging evidence, not a performance result.
