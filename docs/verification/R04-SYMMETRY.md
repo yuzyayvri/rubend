@@ -81,3 +81,19 @@ not prove projection refinement, data admissibility, or search completeness.
 
 Independent review remains not run under Yuzy's solo-work instruction. There
 is no default switch, packaging promotion, or world-class result in this unit.
+
+## Packaged foundation
+
+The default Nix package and all flake checks pass at c29cf10. The
+[package receipt](r04-symmetry-package-v1/package.json.gz) verifies all seventy-five
+installed source-manifest hashes, the installed native hash, sixteen setup
+checks, thirty-four native Engine cases, and HTTP checks. This scope is the
+symmetry-foundation commit, before the later corner-codec work.
+
+The [launch record](r04-symmetry-package-v1/nix-resource.json.gz) records the
+explicit max-jobs one and cores four settings. Nix daemon children do not inherit
+the launcher's MemoryMax or CPU affinity. Do not treat launcher RSS as the total
+package-build memory ceiling. The first receipt script expected a textual
+Engine prefix that the real test no longer emits. The corrected script checks
+the structured Engine and HTTP results instead. That recording error did not
+invalidate the completed Nix checks.
