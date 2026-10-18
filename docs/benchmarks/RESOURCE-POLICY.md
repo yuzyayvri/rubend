@@ -27,3 +27,13 @@ can use four distinct physical cores while leaving two available to the desktop.
 Do not persist a broader personal machine inventory. Recheck headroom at launch.
 The Nix daemon does not inherit a user scope's limits automatically. Do not claim
 that it does, and do not alter global daemon settings for a speed comparison.
+
+Builds and bounded experiment commands now take an exclusive per-checkout
+artifact lease. An unrelated build or experiment exits with code 73 before
+writing shared generated files. Commands nested inside the owning batch reuse
+the lease. The kernel releases the file lock when its owning processes exit.
+The inherited ownership marker coordinates trusted local tools; it is not a
+security boundary. The small launcher and lease processes remain outside the
+experiment's cgroup, like the existing monitor and Nix launcher. The enforced
+memory ceiling applies to the experiment command tree, with desktop reserve
+and the global memory-pressure backstop still active.

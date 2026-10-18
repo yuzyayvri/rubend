@@ -3,6 +3,9 @@ import {readFileSync,readdirSync,mkdirSync,writeFileSync,existsSync} from "node:
 import {resolve,dirname} from "node:path";
 import {createHash} from "node:crypto";
 import {admission,cpuList} from "./resource-policy.mjs";
+import {withArtifactLease} from "../scripts/artifact-lease.mjs";
+
+withArtifactLease();
 
 const [name,memoryText,timeText,cpuText,...command]=process.argv.slice(2);
 const memoryMiB=Number(memoryText),seconds=Number(timeText),cpus=cpuText?.split(",").map(Number);
