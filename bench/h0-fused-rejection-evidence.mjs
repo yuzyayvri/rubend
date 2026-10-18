@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {createHash} from "node:crypto";
+import {gzipSync,gunzipSync} from "node:zlib";
+import {execFileSync} from "node:child_process";
+
+const destination="docs/verification/r04-h0-fused-rejected-v1",summary=JSON.parse(execFileSync(process.execPath,["bench/summarize-corner-contours.mjs","build/evidence/r04-h0-fused-paired-pilot-v1.json"],{encoding:"utf8"})),receipt=JSON.parse(readFileSync("build/evidence/r04-h0-fused-paired-pilot-run-v1.json","utf8"));
+assert.equal(receipt.exitCode,0);assert.equal(receipt.stoppedFor,null);assert.equal(summary.comparisons["h0/h0-fast"].observedTenPercentContourGate,false);assert.equal(summary.comparisons["h0-combined/h0-combined-fast"].observedTenPercentContourGate,false);for(const c of Object.values(summary.comparisons))assert.ok(c.cohortWorkRatios.every(x=>x===1));
+writeFileSync("build/evidence/h0-fused-rejection-summary.json",JSON.stringify({passed:true,disposition:"Reject the fused-ranking treatment. Same traversal, no useful total CPU gain. Preserve prototype sources, remove live runtime selection, and do not promote the reference H0 marginal result.",summary,independentReview:false},null,2)+"\n",{flag:"wx"});
+const paths=["src/h0-bound.bend","scripts/generate-h0-profile.mjs","src/h0/search.bend","src/h0/main.bend","src/h0/manifest.json","bench/h0-bound-query.bend","bench/h0-contour.bend","tests/h0-bound.bend","tests/h0-fast-codec.bend","tests/h0-bound-oracle.mjs","justfile","bench/contour-compare.mjs","bench/summarize-corner-contours.mjs","tests/contour-compare.mjs","tests/corner-contour-summary.mjs"];
+const patch=execFileSync("git",["diff","--binary","402e8991d25dfead4c0f6fd4a7dbdb53f8d35a41","311e49fa98d554b8150871f23d2a57560b53c380","--",...paths],{maxBuffer:8388608}),compressed=gzipSync(patch,{level:9});assert.deepEqual(gunzipSync(compressed),patch);mkdirSync(destination,{recursive:true});writeFileSync(destination+"/prototype.patch.gz",compressed,{flag:"wx"});
+const receipts=["r04-h0-fused-paired-pilot-config-v1","r04-h0-fused-paired-pilot-v1","r04-h0-fused-paired-pilot-run-v1","h0-fused-rejection-summary"].map(n=>JSON.parse(execFileSync(process.execPath,["bench/archive-evidence.mjs","build/evidence/"+n+".json",destination+"/"+n+".json.gz"],{encoding:"utf8"})));
+writeFileSync(destination+"/index.json",JSON.stringify({receipts,prototype:{commit:"311e49fa98d554b8150871f23d2a57560b53c380",base:"402e8991d25dfead4c0f6fd4a7dbdb53f8d35a41",path:"prototype.patch.gz",sha256:createHash("sha256").update(patch).digest("hex"),bytes:patch.length,roundtrip:true}},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,rejected:true,prototypePreserved:true}));
