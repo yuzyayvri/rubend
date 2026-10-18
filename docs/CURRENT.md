@@ -32,6 +32,14 @@ placement-only variant is justified. The default remains unchanged and independe
 has not run. The large-profile lifecycle check still misses the cancellation
 target; its existing R06 issue remains open. Browser/package rollout is separate.
 
+The default Nix package and flake checks now pass at main 0c793d2. A cached
+confirmation also verifies the installed native hash and all seventy-one
+source-manifest hashes. The setup verdict and packaged native/HTTP checks pass.
+This checks the new build-lock dependency and current default app, not a Nix
+package of the optional corner binary. The daemon does not inherit experiment
+MemoryMax or affinity; the command uses one build job and four declared cores.
+The receipt is docs/verification/r02-corner-first-v1/r02-nix-package-v1.json.gz.
+
 The exact-only inverse pilot is implemented and remains opt-in. Three lazy
 inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
 37.8% less on sixteen disjoint development positions to reach lower bound
@@ -44,8 +52,8 @@ profile. All 1,750 jobs pass. Sixty deadline quality and lower-bound pairs tie.
 Superflip first-answer p95 is 3.2% slower on five samples, within the finite
 five-percent canary threshold. Hard exact jobs remain incomplete. The full
 development regression, sixteen toolchain checks, and eighteen laws pass.
-The default small profile has not changed. Corner search integration, remaining
-kernel pilots, full browser and package rollout, and independent review are not done.
+The default small profile has not changed. Remaining kernel pilots, broad corner
+browser/profile rollout, and independent review are not done.
 
 A hidden GUI check found and reproduced a stale export bound. The canonical
 solution now follows progress and completion events, so the same difficult
@@ -84,10 +92,10 @@ is used. See [the packed result](verification/R03-SMALL.md) and
 The default engine's search/portfolio/runtime/table source files are unchanged.
 The packed variant is generated separately with stale-source checks. Independent
 review, broad browser coverage, and Nix package rollout are not claimed. All
-temporary UI and worker processes are stopped. Next return to R02's all-18-move
-full-corner bound pilot, before the larger symmetry profile. R03 raw segmentation
-and owned-stack pilots remain independent. Keep the expanded resource policy,
-solo work, and frequent verified commits. No push has occurred yet.
+temporary UI and worker processes are stopped. The corner follow-up is recorded
+above. R03 raw segmentation and owned-stack pilots remain before broader R04
+scaling. R06 lifecycle work can proceed independently. Keep the expanded resource
+policy, solo work, and frequent verified commits. No push has occurred yet.
 
 ## Whole-engine execution
 
@@ -100,7 +108,7 @@ symmetry-aware projections, anytime policies, table memory, lifecycle reuse,
 GUI responsiveness, and staged proof coverage. No implementation or benchmark
 ran in the earlier planning turn. The new performance targets remain unmeasured.
 The [lifecycle issue](issues/engine-lifecycle.md) is source-observed and open.
-R01 grounding and architecture are in progress. Push authority does not include
+R01's solo foundation is complete as recorded below. Push authority does not include
 PR creation, merges, releases, deployment, or global system changes. Existing
 resource, model, and hidden-window boundaries still apply.
 
@@ -138,7 +146,7 @@ uses nonwrapping counters. Its timing is intentionally not a release metric.
 Read [R01 measurements](verification/R01-MEASUREMENTS.md) and the compressed raw
 records under docs/verification/r01-v1/. The implementation/finite-check portion
 of R01 is complete. Independent review, separate browser coverage, and package
-rollout are not claimed. Next run the R02 exact-bound pilots.
+rollout are not claimed by this R01 result. The later R02 pilots are recorded above.
 
 Yuzy extended local CPU/RAM authority after inspection. Read the current
 [resource policy](benchmarks/RESOURCE-POLICY.md). It allows inspected development
