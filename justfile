@@ -25,6 +25,7 @@ test: build
     just h0-classes-test
     just h0-distances-test
     just h0-edges-test
+    just h0-meta-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -111,6 +112,11 @@ h0-edges-test:
     node tests/h0-edges.mjs
     bend tests/h0-product.bend -o build/h0-product-test
     build/h0-product-test --threads 1
+
+h0-meta-test:
+    bend bench/h0-meta-pilot.bend -o build/h0-meta-pilot
+    bend tests/h0-meta.bend -o build/h0-meta-audit
+    node tests/h0-meta.mjs
 
 loader-test:
     mkdir -p build/evidence
