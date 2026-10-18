@@ -26,14 +26,23 @@ function configuration(input){
   for(const k of ["readyTimeoutMs","rssSampleMs","shutdownTimeoutMs"])assert.ok(integer(c[k],1,180000));
   assert.equal(c.profiles?.length,2);assert.equal(new Set(c.profiles.map(p=>p.id)).size,2);
   for(const p of c.profiles){
-    assert.ok(Object.keys(p).every(k=>["id","binary","cache","cacheSha256","cacheBytes","env","buildMetadata","tableSource"].includes(k)));
+    assert.ok(Object.keys(p).every(k=>["id","binary","cache","cacheSha256","cacheBytes","env","buildMetadata","tableSource","additionalCaches"].includes(k)));
     assert.match(p.id,/^[a-zA-Z0-9_-]{1,64}$/);
     for(const k of ["binary","buildMetadata"])assert.ok(typeof p[k]==="string"&&isAbsolute(p[k]),`Absolute ${k} required`);
     assert.ok(["cache","generated"].includes(p.tableSource??"cache"));
     assert.ok(p.env&&typeof p.env==="object"&&!Array.isArray(p.env));
     for(const [k,v] of Object.entries(p.env))assert.ok(/^[A-Z_][A-Z0-9_]*$/.test(k)&&typeof v==="string"&&!v.includes("\0"));
+    const additional=p.additionalCaches??[];assert.ok(Array.isArray(additional)&&additional.length<=4);
+    assert.equal(new Set(additional.map(c=>c.env)).size,additional.length);assert.equal(new Set(additional.map(c=>c.path)).size,additional.length);
+    for(const c of additional){
+      assert.deepEqual(Object.keys(c).sort(),["bytes","env","path","sha256"]);
+      assert.ok(isAbsolute(c.path)&&c.path!==p.cache);assert.match(c.sha256,/^[a-f0-9]{64}$/);assert.ok(integer(c.bytes,1));
+      assert.match(c.env,/^[A-Z_][A-Z0-9_]*_CACHE$/);assert.notEqual(c.env,"RUBEND_JOINT_CACHE");assert.equal(p.env[c.env],c.path);
+    }
+    for(const k of Object.keys(p.env))if(k.endsWith("_CACHE")&&k!=="RUBEND_JOINT_CACHE")assert.ok(additional.some(c=>c.env===k),"Unsealed additional cache environment");
     if(p.tableSource==="generated"){
       assert.ok(["cache","cacheSha256","cacheBytes"].every(k=>!(k in p)),"Generated profiles cannot claim a disk cache");
+      assert.ok(!("additionalCaches" in p),"Generated profiles cannot claim additional caches");
       assert.ok(!("RUBEND_JOINT_CACHE" in p.env),"Generated profiles cannot select a disk cache");
     }else{
       assert.ok(typeof p.cache==="string"&&isAbsolute(p.cache),"Absolute cache required");
@@ -48,6 +57,7 @@ function configuration(input){
   return c;
 }
 function environment(env,fn){const saved=Object.fromEntries(Object.keys(env).map(k=>[k,process.env[k]]));try{Object.assign(process.env,env);return fn();}finally{for(const [k,v] of Object.entries(saved))if(v===undefined)delete process.env[k];else process.env[k]=v;}}
+const profileFiles=p=>[p.binary,p.buildMetadata,...(p.tableSource==="generated"?[]:[p.cache]),...(p.additionalCaches??[]).map(c=>c.path)];
 function distribution(values){if(!values.length)return null;const a=[...values].sort((x,y)=>x-y),m=Math.floor(a.length/2);return {count:a.length,median:a.length%2?a[m]:(a[m-1]+a[m])/2,minimum:a[0],maximum:a.at(-1)};}
 async function job(engine,item,group,budgetMs){
   const record={id:item.id,facelets:item.facelets,group,mode:group==="fast"?"fast":"exact",budgetMs,status:"error",events:[],error:null};
@@ -114,9 +124,13 @@ export async function compareWarm(input,sourcePath=null){
     if(sourcePath!==null){assert.ok(isAbsolute(sourcePath),"Configuration path must be absolute");result.seals[sourcePath]=await seal(sourcePath);assert.deepEqual(JSON.parse(readFileSync(sourcePath,"utf8")),input,"Configuration file differs from input");assert.deepEqual(identity(sourcePath),result.seals[sourcePath].identity,"Configuration changed while reading");}
     const config=configuration(input);result.config=config;
     const paths=["bench/warm-compare.mjs","bench/startup-measure.mjs","apps/engine.mjs","apps/model.mjs","build/model.mjs","build/cubie.mjs","build/notation.mjs"].map(p=>resolve(root,p));
-    paths.push(...Object.values(config.corpora).map(c=>c.path),...config.profiles.flatMap(p=>[p.binary,p.buildMetadata,...(p.tableSource==="generated"?[]:[p.cache])]));
+    paths.push(...Object.values(config.corpora).map(c=>c.path),...config.profiles.flatMap(profileFiles));
     for(const path of new Set(paths))result.seals[path]=await seal(path);
-    for(const p of config.profiles){if(p.tableSource!=="generated"){assert.equal(result.seals[p.cache].sha256,p.cacheSha256,"Cache SHA256 mismatch");assert.equal(result.seals[p.cache].bytes,p.cacheBytes);}const metadata=JSON.parse(readFileSync(p.buildMetadata,"utf8"));assert.equal(metadata.binarySha256,result.seals[p.binary].sha256,"Binary metadata mismatch");}
+    for(const p of config.profiles){
+      if(p.tableSource!=="generated"){assert.equal(result.seals[p.cache].sha256,p.cacheSha256,"Cache SHA256 mismatch");assert.equal(result.seals[p.cache].bytes,p.cacheBytes);}
+      for(const c of p.additionalCaches??[]){assert.equal(result.seals[c.path].sha256,c.sha256,"Additional cache SHA256 mismatch");assert.equal(result.seals[c.path].bytes,c.bytes,"Additional cache byte count mismatch");}
+      const metadata=JSON.parse(readFileSync(p.buildMetadata,"utf8"));assert.equal(metadata.binarySha256,result.seals[p.binary].sha256,"Binary metadata mismatch");
+    }
     const cases=Object.fromEntries(Object.entries(config.corpora).map(([group,c])=>{const items=JSON.parse(readFileSync(c.path,"utf8")).records;assert.equal(items.length,c.count);for(const [i,item] of items.entries()){item.id??=`${group}-${i}`;validate(item.facelets);if(group==="warmup")assert.ok(integer(item.depth,0,30));}assert.equal(new Set(items.map(i=>i.id)).size,items.length);return [group,items];}));
     cases.superflip=[{id:"superflip",facelets:encode(Cubie.to_facelets({...Cubie.solved(),eo:4095}))}];
     for(let iteration=0;iteration<config.iterations;iteration++){
@@ -124,7 +138,7 @@ export async function compareWarm(input,sourcePath=null){
       try{
         const order=iteration%2?[...config.profiles].reverse():config.profiles;
         for(const p of order){
-          for(const path of [p.binary,p.buildMetadata,...(p.tableSource==="generated"?[]:[p.cache])])assert.deepEqual(identity(path),result.seals[path].identity,`Input identity changed: ${path}`);
+          for(const path of profileFiles(p))assert.deepEqual(identity(path),result.seals[path].identity,`Input identity changed: ${path}`);
           const started=performance.now(),engine=environment(p.env,()=>new Engine({binary:p.binary}));engines[p.id]=engine;
           originals[p.id]={child:engine.child,stopped:engine.childStopped,directory:engine.directory};
           const worker={profile:p.id,generation:engine.generation,processIdentity:nativeIdentity(engine.child.pid),ipcDirectory:engine.directory,rss:[],shutdown:null};round.workers.push(worker);

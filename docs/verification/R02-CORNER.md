@@ -95,6 +95,21 @@ positions are frozen separately before timing. They are a diagnostic subgroup,
 not a uniform strength corpus or known-optimum set. Timings and actual shallow
 optima through the loaded private backend remain the next gate.
 
+The application comparison runner now seals declared additional caches before
+and after use, validates exact lengths and SHA256 identities, and rejects
+unregistered cache environment variables. A positive auxiliary-cache fixture,
+six preflight rejects, and a mutation fixture pass alongside the existing worker
+and cleanup tests. The four-policy contour summarizer has seven rejecting
+fixtures and preserves censored jobs. It uses ratios of cohort totals so very
+short individual requests cannot create zero-CPU divisions. Each policy's cohort
+must still total at least 100 ms of process CPU time.
+
+All sixteen frozen half-turn states replay through the independent facelet
+model. Reads from the actual raw joint cache show zero for all three forward
+and three inverse estimates on every root. An independent corner rank agrees
+with the Bend-generated rank and reads a positive distance for each. This
+confirms the diagnostic's intended blind spot, not its timing result.
+
 Compare lazy corner ranking against the existing forward and inverse policies
 before adding any incremental field. Keep default search code unchanged and use
 an isolated, checked variant. Load the corner bytes into the raw array's unused

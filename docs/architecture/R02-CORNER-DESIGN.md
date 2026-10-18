@@ -82,3 +82,21 @@ hashes. It does not edit the default engine. The alternative incremental-frame
 sketch stays deferred until lazy ranking has measured cost and pruning evidence.
 This is a solo architecture pass under the no-subagents instruction. Independent
 design and correctness review remain not run.
+
+## Frozen contour measurement
+
+The first four-position pilot passes all 652 shallow optima and sixteen depth-
+fifteen targets. It is not the five-cohort acceptance result. Next compare all
+four policies on sixteen pilot and sixteen disjoint development positions, to
+lower bound fifteen. Run five fresh sequential workers per policy and stratum,
+rotating policy order and reversing cases on alternate cohorts. The separate
+sixteen-case half-turn diagnostic uses target ten, a bounded shallow contour
+test rather than a claim of solving the entire half-turn group. These targets
+and cases are selected before the confirmation runs. Keep the release holdout
+closed. Preserve incomplete requests rather than dropping them from ratios.
+
+Expected claim, if measured, is less CPU time to the same completed contour on
+the declared finite stratum. Require a five-cohort upper confidence bound below
+0.9 for a ten-percent gain over each relevant control. Same-binary forward and
+inverse controls do not replace comparisons to frozen real application binaries.
+Deadline quality, coverage, initialization, RSS, and default rollout stay separate.
