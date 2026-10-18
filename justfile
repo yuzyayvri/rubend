@@ -31,6 +31,7 @@ test: build
     node tests/resource-policy.mjs
     node tests/artifact-lease.mjs
     node tests/artifact-lease-integration.mjs
+    node tests/experiment-build.mjs
     node tests/archive-evidence.mjs
     node tests/search-observer.mjs
     node tests/process-cpu.mjs

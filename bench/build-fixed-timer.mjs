@@ -4,16 +4,21 @@ import {resolve,dirname,isAbsolute} from "node:path";
 import {createHash} from "node:crypto";
 import {spawnSync} from "node:child_process";
 import {fileURLToPath} from "node:url";
+import {sourceSnapshotPath} from "./source-snapshot.mjs";
+import {withArtifactLease} from "../scripts/artifact-lease.mjs";
+
+withArtifactLease();
 
 assert.equal(process.argv.length,4,"Expected source-build.json output");
 const hash=bytes=>createHash("sha256").update(bytes).digest("hex");
 const metadata=JSON.parse(readFileSync(process.argv[2],"utf8")),output=resolve(process.argv[3]),directory=output+"-sources";
 assert.equal(metadata.format,"rubend-experiment-build-v1");
+assert.ok(Object.hasOwn(metadata.sourceHashes,"bench/fixed-work.bend"),"Fixed timer requires a frozen fixed-work source graph");
 const version=spawnSync("bend",["version"],{encoding:"utf8"});
 assert.equal(version.status,0);assert.equal(version.stdout.trim(),metadata.bend);
 assert.equal(hash(readFileSync("flake.lock")),metadata.flakeLockSha256);
-assert.ok(!existsSync(output)&&!existsSync(directory),"Use a fresh output path");
-const snapshot=resolve(".cache/experiment-sources",metadata.binarySha256);
+assert.ok(!existsSync(output)&&!existsSync(output+".json")&&!existsSync(directory),"Use a fresh output path");
+const snapshot=sourceSnapshotPath(metadata);
 for(const [name,expected] of Object.entries(metadata.sourceHashes)){
   assert.ok(!isAbsolute(name)&&!name.split("/").includes(".."));
   const bytes=readFileSync(resolve(snapshot,name));assert.equal(hash(bytes),expected,"Frozen source mismatch");
