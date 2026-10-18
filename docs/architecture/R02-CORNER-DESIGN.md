@@ -100,3 +100,16 @@ the declared finite stratum. Require a five-cohort upper confidence bound below
 0.9 for a ten-percent gain over each relevant control. Same-binary forward and
 inverse controls do not replace comparisons to frozen real application binaries.
 Deadline quality, coverage, initialization, RSS, and default rollout stay separate.
+
+## Bound-order experiment
+
+The late combined bound removes about six percent of work after inverse cuts
+on the first pilot confirmation, but CPU time ties the inverse-only control.
+Test one distinct ordering before rejecting lazy corner integration. A separately
+generated corner-first backend checks the same corner distance after forward
+axes but before inverse estimates. It never reads it twice. The existing late
+backend and its frozen binaries remain intact. Profiles, frame shape, pruning
+inequalities, owned payload, move ordering, and contour targets stay identical.
+The alternative changes only short-circuit order within the combined policy.
+Use the same pilot/development targets and finite ten-percent gate. This does
+not authorize changing the gate after seeing results or tuning the release set.

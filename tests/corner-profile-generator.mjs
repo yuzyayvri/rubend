@@ -13,6 +13,7 @@ function run(check=false){return spawnSync(process.execPath,[generator,...check?
 let rejected=0;
 try{
   reset();assert.equal(run().status,0);assert.equal(run(true).status,0);
+  for(const flag of ["--corner-first","--check-corner-first"])assert.equal(spawnSync(process.execPath,[generator,flag],{cwd:temporary,encoding:"utf8"}).status,0);
   const target=resolve(temporary,"src/corner/search.bend"),manifest=readFileSync(resolve(temporary,"src/corner/manifest.json"),"utf8");
   writeFileSync(target,readFileSync(target,"utf8")+"\n");const stale=run(true);assert.equal(stale.status,1);assert.match(stale.stderr,/Stale corner profile/);rejected++;
   for(const [path,change] of [
