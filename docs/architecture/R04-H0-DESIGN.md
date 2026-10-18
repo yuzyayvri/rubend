@@ -2,8 +2,10 @@
 
 Status: the full forty-eight-case specification action is implemented. The five
 approved action laws pass the ordinary checker and BendTT. Runtime regression,
-native comparisons, and deliberate-error rejection pass. H0 coordinates, tables, and strength results are not implemented
-yet. This is the R04 foundation, not a world-class solver claim.
+native comparisons, and deliberate-error rejection pass. The raw corner codec
+also passes all 153,090 cases and target checks. Quotient and edge coordinates,
+H0 pruning data, and strength results are not implemented yet. This is the R04
+foundation, not a world-class solver claim.
 
 ## Why this experiment
 
@@ -140,6 +142,20 @@ This specification is not the optimized packed-coordinate action. Any later
 packed action must be compared with it before use in generation or search.
 
 ## Verifiable sequence and admission
+
+The first corner unit stores a four-of-eight separation mask and the existing
+seven-trit twist rank in a branded Corner value. Its dense index is
+twist * 70 + colex separation rank. A sparse key uses twist * 128 plus the low
+seven separation bits. The unused last bit follows from the four-of-eight
+constraint. The boundary decoder rejects indexes at or beyond 153,090.
+
+This is preferred to storing only a dense U32 index. It keeps separation and
+orientation distinct during prototype actions and makes the sparse lookup
+explicit. The representative fills each tetrad in canonical piece order and
+fixes edge parity without changing the corner projection. Typed eighteen-move
+transitions and full-model reference transforms remain separate from the later
+optimized action. Every representative, dense roundtrip, and sparse-key
+collision is checked before building the quotient. This unit adds no new law.
 
 1. After law approval, generate the forty-eight specification actions and prove
    all five statements with the ordinary checker and BendTT. Preserve all
