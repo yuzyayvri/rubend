@@ -23,6 +23,7 @@ test: build
     just symmetry48-test
     just h0-corners-test
     just h0-classes-test
+    just h0-distances-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -97,6 +98,11 @@ h0-classes-test:
     bend bench/h0-class-pilot.bend -o build/h0-class-pilot
     bend tests/h0-classes.bend -o build/h0-class-audit
     node tests/h0-classes.mjs
+
+h0-distances-test:
+    bend bench/h0-distance-pilot.bend -o build/h0-distance-pilot
+    bend tests/h0-distances.bend -o build/h0-distance-audit
+    node tests/h0-distances.mjs
 
 loader-test:
     mkdir -p build/evidence
