@@ -2,6 +2,15 @@
 
 ## Latest verified work
 
+The next R04 step is the exact-byte H0 symmetry prototype. Its
+[architecture](architecture/R04-H0-DESIGN.md) compares two projection sketches,
+records upstream expected dimensions, and requires small exhaustive checks and
+a bounded prefix before any full build. No H0 code, table, or performance result
+exists yet. The five [proposed symmetry laws](architecture/PROOF-PLAN.md#proposed-full-symmetry-laws)
+are awaiting Yuzy's approval under the law-ownership rule. They are Markdown
+proposals only. Do not add them to executable law files before approval; all
+eighteen existing laws remain unchanged. R03 and R06 work remain on the roadmap.
+
 The internal Search.initialize contract is corrected. ExactContour now begins
 with FullCube, not Reduction. The focused test fails before with observed goal
 zero against expected two and passes after with observed two. Improving stages
