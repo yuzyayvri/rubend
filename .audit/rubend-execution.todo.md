@@ -58,6 +58,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
   - [x] Generate and prove the full forty-eight-case specification action. Five new laws and the original eighteen pass both checkers; independent positional/KPuzzle tests, native output, deliberate-error rejection, full regression, and unchanged default C pass. Solo verification only.
   - [ ] Small corner projection and quotient, then edge/stabilizer checks. No full H0 table admitted yet.
+    - [x] Corner codec, all 153,090 legal representatives and sparse keys, 18,000 moves, 6,144 reference symmetries, and explicit target checks. Full regression and unchanged twenty-three-law BendTT pass.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.

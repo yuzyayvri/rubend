@@ -124,3 +124,8 @@ argument first. Values outside the six face colors remain unchanged.
 These proofs do not certify an H0 coordinate, stabilizer reduction, pruning
 table, packed-symmetry refinement, or complete search. Those remain separate
 obligations. The new specification is not wired into the default solver yet.
+
+The pure H0 corner codec is also imported. Its 153,090 roundtrips, legal
+representatives, and unique sparse keys are finite checks, not new laws.
+Neither its universal projection theorem nor the quotient/data bridge is
+proved by importing it. The total remains twenty-three laws.
