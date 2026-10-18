@@ -1,7 +1,8 @@
 # Generated artifacts changed during a benchmark
 
-Status: the application run is invalidated. The exclusion guard, full regression,
-and real-entrypoint integration checks pass. The serialized rerun is in progress.
+Status: closed with solo verification. The first application run remains
+invalidated. The guard, full regression, real-entrypoint checks, and fresh
+serialized application rerun pass. Independent review has not run.
 
 The first corner application comparison completed 1,750 native-validated jobs.
 Its postflight guard correctly rejects the entire result because a concurrent
@@ -22,5 +23,8 @@ Tests cover conflict rejection without writes, ownership reuse, release after
 failure, and both real build/experiment entrypoints. The generated-input seals
 remain unchanged through the rejecting integration check. Raw receipts are in
 docs/verification/r02-corner-v1/r02-artifact-lease-regression-v1.json.gz and
-r02-artifact-lease-integration-v1.json.gz. A fresh serialized
-application cohort is required before accepting any corner application claim.
+r02-artifact-lease-integration-v1.json.gz. The fresh serialized application v2
+completes 1,750 validated jobs with every input seal unchanged. Its report and
+resource receipt are r02-corner-quality-v2.json.gz and
+r02-corner-quality-run-v2.json.gz in the same evidence directory. Only this
+second run can support the reported application comparison.
