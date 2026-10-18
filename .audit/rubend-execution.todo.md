@@ -62,7 +62,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
-- [ ] Push verified accepted commits to the existing repository without force.
+- [x] Push the verified checkpoint through the raw H0 corner codec to origin/main without force. This is a development checkpoint, not final profile promotion or release approval.
 
 Throughput checkpoint. Two design seats were planned, only one ran. The user then
 required solo work. Root owns all implementation and checks from here. Any gate
