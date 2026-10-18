@@ -2,6 +2,15 @@
 
 ## Latest verified work
 
+The internal Search.initialize contract is corrected. ExactContour now begins
+with FullCube, not Reduction. The focused test fails before with observed goal
+zero against expected two and passes after with observed two. Improving stages
+and profile rejection remain correct. Full regression, sixteen toolchain checks,
+and unchanged-law BendTT pass. Seven real application/contour entrypoints emit
+byte-identical native C across the fix, so their measured search programs are
+unchanged. This is an API correctness fix, not a new speed claim. Read the
+[closed initializer issue](issues/search-initial-goal.md).
+
 The complete all-eighteen-move corner database now exists. Bend generation
 reaches all 88,179,840 states and its audit checks all 1,587,237,120 directed
 edges. Independent transitions, shallow distances, and rejecting fixtures pass.
@@ -89,8 +98,10 @@ BendTT with the unchanged eighteen laws. No foreign solver or new unsafe effect
 is used. See [the packed result](verification/R03-SMALL.md) and
 [local profile instructions](benchmarks/ADVANCED-PROFILES.md).
 
-The default engine's search/portfolio/runtime/table source files are unchanged.
-The packed variant is generated separately with stale-source checks. Independent
+The memory and corner experiments leave the default hot loops unchanged. The
+later initializer correction above changes an unused helper, with identical
+emitted native application code. Variants are generated separately with
+stale-source checks. Independent
 review, broad browser coverage, and Nix package rollout are not claimed. All
 temporary UI and worker processes are stopped. The corner follow-up is recorded
 above. R03 raw segmentation and owned-stack pilots remain before broader R04

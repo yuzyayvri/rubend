@@ -36,6 +36,7 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 
 - [x] R01a. Frozen corpus and coverage-first scoring contracts. Six positive families, twenty rejecting fixtures, historical-data reproduction, and sixteen toolchain/proof checks pass. Solo verification only.
 - [x] R01b implementation. Explicit goal/profile/completion and fixed-work semantic equality pass. Timed overhead and independent-review gates are not closed.
+  - [x] Fix the separately reproduced initializer contract. ExactContour observed Reduction instead of FullCube. Red/green native regression, seven-entrypoint emitted-C equality, full regression, and unchanged-law BendTT pass. No new performance claim.
 - [x] R01c implementation/checks. Observer traces match; counter negatives pass; five-cohort deadline quality ties and equal-work overhead check complete. Independent review/browser/package gates remain unrun.
 - [ ] R02. Exact-bound pilots, independently measured.
   - [x] Solo lazy inverse one/three-axis implementation and goal guards.
