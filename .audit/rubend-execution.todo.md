@@ -76,16 +76,26 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Host13-case and model10-case fixtures pass. Native missing-yield prototype
     fails same-owner cancellation; explicit zero-delay yield passes preliminary
     native cancellation and fragmented/stale-control checks.
-  - [ ] Final source-sealed regression and hidden browser acceptance. Full suite
-    is running. Do not edit app, source, generator, or existing test inputs while
-    it runs. One prior build was invalidated by a late web source edit; replacement
-    r06-yield-build-v2 passes and later full-suite build also passes.
+  - [ ] Final source-sealed regression and broader hidden browser acceptance.
+    Earlier full suite passes, including native cancellation. Actual hidden
+    delayed readiness and model failure/recovery text are verified. Current
+    batched control needs another full regression. One prior build is correctly
+    invalidated by a late web edit; sealed replacements pass.
   - [x] Strengthen fallback startup-overlap observation and terminal-length
     rejection. Actual prior PID/start-tick checks pass; terminal contradiction
     fails before and passes after. Fourteen host scenarios and focused native,
     HTTP, export, model-worker, and measurement-adapter checks pass.
-  - [ ] Matched raw lifecycle and deadline-quality measurements. New dedicated
-    lifecycle adapter is not yet tested or run. No lifecycle speed claim.
+  - [x] First matched raw lifecycle. Five cohorts, thirty cancellation cycles,
+    median2046.43ms to2.95ms and cooperative p9514.11ms, all retained owners.
+    This is lifecycle only, not search throughput.
+  - [ ] Clear the deadline-quality gate. First version passes1750jobs and sixty
+    answer lengths but loses four Superflip lower bounds. No promotion. Profiled
+    checkpoint overhead leads to64-byte reader and eight-slice yield treatment.
+    Functional checks and real frozen timer compatibility pass. Five-cohort
+    r06-quality-run-v2 also rejects promotion after three lower-bound losses.
+    A contemporary reference from62de4d8 is built. The current continuation-owner
+    treatment removes the Loop wrapper; it passes pause-time native compile and
+    toolchain/proof gates but has no solve, cancel, or performance run yet.
 - [x] Push the verified checkpoint through the raw H0 corner codec to origin/main without force. This is a development checkpoint, not final profile promotion or release approval.
 
 Throughput checkpoint. Two design seats were planned, only one ran. The user then
@@ -123,3 +133,7 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [x] Yuzy explicitly resumed on 2026-10-19. Start with prepared segmented
   measurements, then continue the remaining programme under the standing
   autonomous completion instruction.
+- [x] Yuzy paused again on2026-10-19 at15percent usage. All owned jobs and hidden
+  previews are stopped. Four verified-dead scratch/IPC directories are removed
+  with recovery data saved. No table, frozen binary, source snapshot, or user
+  dependency is removed. Latest WIP state and checkpoint are preserved locally.

@@ -34,12 +34,20 @@ def deliver(step: Byte, +channel: Chan(U32)) -> IO(U32 & U32):
         return (0, 0)
     case Bad{}: IO.die(U32 & U32, 2, "Invalid engine control record")
 
+def chunk(text: String, state: U32 & U32, +channel: Chan(U32)) -> IO(U32 & U32):
+  match text state:
+    case SNil{} state: IO.pure(U32 & U32, state)
+    case SCon{Chr{code}, rest} Tuple{value, digits}:
+      do IO<U32 & U32>:
+        parsed : U32 & U32 <- deliver(byte(code, value, digits), channel)
+        chunk(rest, parsed, channel)
+
 def reader(fuel: Nat, +channel: Chan(U32), read: File & Result<&1, &1, U32 & String, String>, state: U32 & U32) -> IO(Unit):
   match fuel read state:
-    case 1n+p Tuple{file, Done{SCon{Chr{code}, SNil{}}}} Tuple{value, digits}:
+    case 1n+p Tuple{file, Done{SCon{head, rest}}} state:
       do IO<Unit>:
-        parsed : U32 & U32 <- deliver(byte(code, value, digits), channel)
-        next : File & Result<&1, &1, U32 & String, String> <- File.read(file, 1)
+        parsed : U32 & U32 <- chunk(SCon{head, rest}, state, channel)
+        next : File & Result<&1, &1, U32 & String, String> <- File.read(file, 64)
         reader(p, channel, next, parsed)
     case _ Tuple{file, result} _:
       do IO<Unit>:
@@ -53,7 +61,7 @@ def open_result(result: Result<&1, &1, U32 & String, String>) -> IO(Context):
       do IO<Context>:
         file : File <- IO.try(File, File.open(path, "r"))
         +channel : Chan(U32) <- Chan.new(U32, 32)
-        IO.spawn(Unit, IO.bind(File & Result<&1, &1, U32 & String, String>, Unit, File.read(file, 1), read => reader(100000000n, channel, read, (0, 0))))
+        IO.spawn(Unit, IO.bind(File & Result<&1, &1, U32 & String, String>, Unit, File.read(file, 64), read => reader(100000000n, channel, read, (0, 0))))
         return Attached{0, channel}
 
 def open() -> IO(Context):
@@ -89,3 +97,11 @@ def poll(context: Context) -> IO(Bool):
       do IO<Bool>:
         result : Poll<&1, &1, Maybe<&1, U32>, Unit> <- Chan.try_recv(U32, channel, 0)
         polled(result, id)
+
+def checkpoint(pulse: U32, context: Context) -> IO(Bool):
+  match pulse:
+    case 0:
+      do IO<Bool>:
+        IO.sleep(0)
+        poll(context)
+    case _: IO.pure(Bool, False{})

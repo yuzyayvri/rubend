@@ -43,6 +43,15 @@ The [actual failing native test](../issues/cooperative-control-yield.md) records
 the source diagnosis. This is an accepted solo refinement of the cooperative
 design, not an independent design review.
 
+The first matched deadline run rejects yielding on every slice. The next
+isolated treatment reads at most 64 control bytes per file effect, retains parser
+state across fragments, and yields/polls once per eight pure slices. The pulse
+is masked into 0 through 7. A 32-record channel remains bounded. Whole commands,
+maximum U32 IDs, coalesced records, split records, stale IDs, and malformed
+records have direct checks. Candidate emission and budget checks still happen
+each slice. No progress cadence, search policy, or heuristic changes are bundled.
+Cancellation latency and deadline quality must be remeasured for this treatment.
+
 ## Interfaces and state
 
 Engine has initializing, ready, searching, cancelling, failed, and closed states.

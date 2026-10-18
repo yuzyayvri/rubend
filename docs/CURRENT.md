@@ -1,10 +1,18 @@
 # Current state of Rubend
 
-## Active continuation
+## Safe pause
 
-Yuzy resumed work after the safe pause on 2026-10-19, Asia/Manila. Continue solo
-from the saved checkpoint. Keep sealed tables, frozen binaries, source snapshots,
-and the existing node_modules symlink. All prior jobs finished before resumption.
+Yuzy explicitly paused on 2026-10-19, Asia/Manila, with15percent usage remaining.
+No owned experiment, build, native worker, or preview server remains running.
+Four verified-dead scratch/IPC directories from interrupted baseline fixtures
+are removed after saving their diagnostic contents. Keep sealed tables, frozen
+binaries, source snapshots, and the existing node_modules symlink.
+The continuation prompt is in chat, not a repository artifact.
+
+The managed writer is /home/yuzy/.codex/worktrees/roadmap-r01/rubend.
+Its latest commit is the safe WIP pause checkpoint after81bb524. Use the shared
+pstack checkpoint locator and Git log for its exact identity. Nothing is pushed
+during this pause. Resume only after Yuzy asks.
 
 Main and origin/main are both at 076682d937e40355aed444bfdfe0e5efd316d85d.
 That integrated checkpoint passes just check, just test, and the standalone
@@ -28,11 +36,39 @@ guards; their focused checks and actual hidden failure/recovery path pass afterw
 The hidden warming fixture also verifies truthful readiness. Five matched raw
 cohorts observe cancel-to-ready medians 2,046.43 ms and 2.95 ms, with cooperative
 p95 14.11 ms and fifteen of fifteen retained owners. This is not search throughput.
-The separate deadline-quality run passes all1,750jobs and ties sixty answer lengths
+The first deadline-quality run passes all 1,750 jobs and ties sixty answer lengths
 but loses four Superflip lower bounds. It rejects promotion. An instrumented
-diagnostic finds636native pselect6 calls versus one during marked search. Next
-batch control reads and bounded yields, then repeat the gates. All runs are now
-stopped. The fixed-work timer also needs its explicit diagnostic-event opt-in;
+diagnostic finds 636 native pselect6 calls versus one during marked search. The
+second treatment batches 64-byte reads and yields once per eight slices. Parser,
+native cancellation, host fixtures, and a real frozen fixed-work timer pass.
+The batched candidate is build/experiments/r06-raw-v2, with frozen metadata and
+source snapshot. Its diagnostic sees 103 pselect6 calls rather than 636, without
+using traced timings as release evidence. Its five-cohort quality run also passes
+all1,750jobs and sixty answer lengths but loses three Superflip lower bounds.
+Neither version is promoted. The OS-polling explanation is therefore incomplete.
+
+The R01 control predates inverse-bound plumbing. A new contemporary reference is
+build/experiments/r06-reference-v1, exported from62de4d8 with readback provenance.
+Its search, portfolio, cubie, coordinates, and raw loader hashes equal the current
+candidate. Keep the historical quality failures visible, but use this matched
+kernel control when isolating lifecycle overhead.
+
+Emitted C also shows extra borrowed-location arguments in hot search functions
+under the cooperative Loop wrapper, even with unchanged pure source. This is
+observed ABI evidence, not proof of the cause. The current unmeasured treatment
+removes that Loop wrapper and hands the affine table to one of two IO continuations.
+It restores the original service-loop shape and retains the64-byte reader and
+eight-slice checkpoint. RootMain check-only and native smoke compilation pass.
+Regenerated variants are refreshed. Just check passes all16gates, including the
+unchanged23-law verdict, in build/evidence/r06-pause-check-v1.json.
+This latest service shape has no frozen raw binary, solve/cancel test, matched
+timing, deadline result, or full regression yet. build/rubend still contains the
+previous built treatment; do not mistake it for the paused source.
+
+First on resume, inspect/compile the current ownership treatment against the
+matched reference, then run native semantics, cancellation, full gates, and fresh
+matched comparisons. Do not weaken the quality floor or infer speed from C shape.
+The fixed-work timer now selects its explicit diagnostic-event opt-in;
 default solver events remain strict. Final full integration, broader GUI, optional-profile
 lifecycle, and packaging remain. Read docs/verification/R06-LIFECYCLE.md and its
 linked receipts. R06 is not complete.
