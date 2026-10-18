@@ -136,6 +136,8 @@ h0-profile-test:
     node tests/h0-profile-generator.mjs
     bend tests/h0-bound.bend -o build/h0-bound-test
     build/h0-bound-test --threads 1
+    bend tests/h0-fast-codec.bend -o build/h0-fast-codec-test
+    build/h0-fast-codec-test --threads 1
 
 loader-test:
     mkdir -p build/evidence

@@ -8,7 +8,7 @@ import Cubie from "../build/cubie.mjs";
 import {faceletsOf} from "./support.mjs";
 import {loadCorpus} from "../bench/corpus.mjs";
 
-const binary=process.argv[2];assert.ok(binary);
+const binary=process.argv[2],kernel=process.argv[3]??"reference";assert.ok(binary);assert.ok(["reference","fast"].includes(kernel));
 const hash=b=>createHash("sha256").update(b).digest("hex"),meta=readFileSync("build/evidence/h0-meta-v1.raw"),distance=readFileSync("build/evidence/h0-table-v1.raw");
 assert.equal(hash(meta),"b6f6a7b08bcddf7f06fd9edbd28622d504ee15e5fde9b1b6880a881032811438");assert.equal(hash(distance),"9353ed8327ddb3121587674439cba73be9390dcc8984eae9629af93fbd8f1085");
 function choose(n,k){if(k>n)return 0;let x=1;for(let i=1;i<=k;i++)x=x*(n-i+1)/i;return x;}
@@ -27,9 +27,9 @@ const superflip=faceletsOf({...Cubie.solved(),eo:4095});items.push({id:"superfli
 const directory=mkdtempSync("build/h0-bound-input-");
 try{
   const path=join(directory,"cubes.txt");writeFileSync(path,items.map(x=>x.facelets).join("\n")+"\n");
-  const r=spawnSync(binary,["--threads","1","--",path,"build/evidence/h0-meta-v1.raw","build/evidence/h0-table-v1.raw"],{encoding:"utf8",timeout:180000,maxBuffer:16777216});
+  const r=spawnSync(binary,["--threads","1","--",path,"build/evidence/h0-meta-v1.raw","build/evidence/h0-table-v1.raw",...kernel==="fast"?["fast"]:[]],{encoding:"utf8",timeout:180000,maxBuffer:16777216});
   assert.ifError(r.error);assert.equal(r.status,0,r.stdout.slice(-1000)+r.stderr);const values=r.stdout.trim().split("\n").map(x=>JSON.parse(x));assert.equal(values.length,items.length);
   const records=items.map((item,i)=>{const want=expected(item.facelets),actual=values[i];assert.deepEqual(actual,want,item.id);assert.ok(actual.distance>=0&&actual.distance<=12);if(item.depth!==undefined)assert.ok(actual.distance<=item.depth,"Inadmissible shallow bound "+item.id);if(item.expected!==undefined)assert.equal(actual.distance,item.expected);return {...item,...actual};});
-  const report={passed:true,checked:records.length,shallow:seen.size,uniform:1128,layerCounts:layers.map(x=>x.length),records,inputHashes:{meta:hash(meta),distance:hash(distance),query:hash(readFileSync(binary))},independentReview:false};
-  writeFileSync("build/evidence/h0-bound-oracle.json",JSON.stringify(report)+"\n");console.log(JSON.stringify({passed:true,checked:records.length,allShallowBoundsAdmissible:true,superflipZero:true,subgroupUIsNotFullCubeGoal:true}));
+  const report={passed:true,kernel,checked:records.length,shallow:seen.size,uniform:1128,layerCounts:layers.map(x=>x.length),records,inputHashes:{meta:hash(meta),distance:hash(distance),query:hash(readFileSync(binary))},independentReview:false};
+  writeFileSync(kernel==="fast"?"build/evidence/h0-fast-bound-oracle.json":"build/evidence/h0-bound-oracle.json",JSON.stringify(report)+"\n");console.log(JSON.stringify({passed:true,kernel,checked:records.length,allShallowBoundsAdmissible:true,superflipZero:true,subgroupUIsNotFullCubeGoal:true}));
 }finally{rmSync(directory,{recursive:true,force:true});}

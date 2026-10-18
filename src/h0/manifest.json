@@ -7,10 +7,10 @@
     "bench/contour-target.bend": "c1f4397e0ad7ad366300d97b529f933a9664ab692a59d2f3edd2091ec175af83"
   },
   "outputHashes": {
-    "src/h0/search.bend": "f4af68c4624782879efc131ff145ea206ccb144a140ff708e5fc540da6fef037",
+    "src/h0/search.bend": "cff905f933bbafdc0d2e98dcfd57f805a4cd227d56a2b7d94e228b0b03492ee5",
     "src/h0/portfolio.bend": "1e424396bc0fea2fc207788241ab1274118ca302d64f9406072b0a2cd1238f55",
-    "src/h0/main.bend": "cfdda32c275fbddc3e7a266ed3401e4b9a766f29dcd9efe2ee78295a1d8b5d8c",
-    "bench/h0-contour.bend": "cda834a83d2cb9a254ad520dc805a6cfbe3e75221bf09fb94ef1fe7581c68b45"
+    "src/h0/main.bend": "684e194f5ba759260541befd7e740b52eb2e76a1e6469081a937302eedfa457b",
+    "bench/h0-contour.bend": "90e4eebf06ffbf6474211e37db7bbd8656fcb3588f8d6921c6590fb35288a1e2"
   },
   "geometry": {
     "words": 536870912,

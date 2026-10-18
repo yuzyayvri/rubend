@@ -43,7 +43,9 @@ console.log(JSON.stringify({passed:true,cornerPolicies:true,cornerConfigRejects:
 
 const h0={...base,h0Cache:"/h0",h0Sha256:"2".repeat(64),h0Meta:"/meta",h0MetaSha256:"3".repeat(64),stratum:"uniform"};
 assert.equal(contourConfig(h0),false);
-for(const [name,code] of[["h0",8],["h0-combined",11]]){const events=structuredClone(complete);events[0].profile=code;assert.equal(validateContour(events,item,name,15).complete,true);}
+for(const [name,code] of[["h0",8],["h0-combined",11],["h0-fast",12],["h0-combined-fast",15]]){const events=structuredClone(complete);events[0].profile=code;assert.equal(validateContour(events,item,name,15).complete,true);}
+for(const h0Kernel of["reference","fused","paired"])assert.equal(contourConfig({...h0,h0Kernel}),false);
 let h0Rejects=0;
 for(const bad of[{...h0,h0Sha256:"bad"},{...h0,h0MetaSha256:"bad"},{...h0,h0Cache:"relative"},{...h0,h0Meta:"relative"},{...h0,stratum:"release"},{...h0,cornerCache:"/corner",cornerSha256:"1".repeat(64)}]){assert.throws(()=>contourConfig(bad));h0Rejects++;}
+assert.throws(()=>contourConfig({...h0,h0Kernel:"unknown"}));assert.throws(()=>contourConfig({...base,h0Kernel:"paired"}));
 console.log(JSON.stringify({passed:true,h0Policies:true,h0ConfigRejects:h0Rejects}));

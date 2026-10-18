@@ -10,6 +10,8 @@ def profile(text: String) -> S.Profile:
     case "forward": S.RawJoint{}
     case "h0": S.ForwardH0{}
     case "h0-combined": S.InverseH0{}
+    case "h0-fast": S.ForwardH0Fast{}
+    case "h0-combined-fast": S.InverseH0Fast{}
     case "inverse-three": S.RawInverseThree{}
     case _: S.Light{}
 
@@ -18,6 +20,8 @@ def profile_code(profile: S.Profile) -> U32:
     case S.RawJoint{}: 0
     case S.ForwardH0{}: 8
     case S.InverseH0{}: 11
+    case S.ForwardH0Fast{}: 12
+    case S.InverseH0Fast{}: 15
     case S.RawInverseThree{}: 3
     case _: 99
 
