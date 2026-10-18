@@ -20,6 +20,7 @@ test: build
     node tests/fixed-work.mjs
     node tests/fixed-work-inputs.mjs
     node tests/core.mjs
+    just symmetry48-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -75,6 +76,15 @@ smoke:
 
 guide:
     bend guide
+
+symmetry48-test:
+    node scripts/generate-symmetry48.mjs --check
+    node tests/symmetry48-laws.mjs
+    bend src/symmetry48.bend -o build/symmetry48.mjs
+    node tests/symmetry48.mjs
+    bend tests/symmetry48-native.bend -o build/symmetry48-native-test
+    node tests/symmetry48-native.mjs
+    node tests/symmetry48-proof-negative.mjs
 
 loader-test:
     mkdir -p build/evidence
