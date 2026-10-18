@@ -5,9 +5,9 @@ import {createHash} from "node:crypto";
 
 assert.equal(process.argv.length,3,"Expected four-policy contour report");
 const path=process.argv[2],bytes=readFileSync(path),data=JSON.parse((path.endsWith(".gz")?gunzipSync(bytes):bytes).toString("utf8"));
-assert.equal(data.format,"rubend-contour-comparison-v1");assert.equal(data.passed,true);assert.deepEqual(data.errors,[]);assert.equal(data.rounds.length,5);assert.ok(data.config.cornerCache);
-const profiles=["forward","inverse-three","corner","combined"],series=Object.fromEntries(profiles.map(p=>[p,[]]));
-const summary={format:"rubend-corner-contour-adjudication-v1",inputSha256:createHash("sha256").update(bytes).digest("hex"),target:data.config.target,count:data.config.count,split:data.config.split??"pilot",stratum:data.config.stratum??"uniform",completed:{},comparisons:{}};
+assert.equal(data.format,"rubend-contour-comparison-v1");assert.equal(data.passed,true);assert.deepEqual(data.errors,[]);assert.equal(data.rounds.length,5);assert.ok(Boolean(data.config.cornerCache)!==Boolean(data.config.h0Cache));
+const h0=Boolean(data.config.h0Cache),single=h0?"h0":"corner",combined=h0?"h0-combined":"combined",profiles=["forward","inverse-three",single,combined],series=Object.fromEntries(profiles.map(p=>[p,[]]));
+const summary={format:h0?"rubend-h0-contour-adjudication-v1":"rubend-corner-contour-adjudication-v1",inputSha256:createHash("sha256").update(bytes).digest("hex"),target:data.config.target,count:data.config.count,split:data.config.split??"pilot",stratum:data.config.stratum??"uniform",completed:{},comparisons:{}};
 const dist=xs=>{const a=[...xs].sort((a,b)=>a-b),m=Math.floor(a.length/2);return {count:a.length,median:a.length%2?a[m]:(a[m-1]+a[m])/2,minimum:a[0],maximum:a.at(-1)};};
 for(const round of data.rounds){
   assert.equal(round.status,"ok");assert.equal(round.workers.length,4);assert.equal(round.jobs.length,4*data.config.count);
@@ -24,7 +24,7 @@ for(const profile of profiles){
   for(const jobs of series[profile])for(const j of jobs){const before=reference.get(j.id);assert.ok(before);for(const key of ["facelets","complete","lower","length","optimal","nodes","moves"])assert.deepEqual(j[key],before[key],"Deterministic contour state changed between cohorts");}
 }
 for(const p of profiles){const jobs=series[p].flat();summary.completed[p]={planned:jobs.length,completed:jobs.filter(j=>j.complete).length,censored:jobs.filter(j=>!j.complete).length,cpuMs:dist(jobs.map(j=>j.cpuMs)),nativeWallMs:dist(jobs.map(j=>j.nativeMs)),workSteps:dist(jobs.map(j=>j.nodes))};}
-for(const [control,candidate] of [["forward","corner"],["inverse-three","combined"],["forward","combined"],["forward","inverse-three"]]){
+for(const [control,candidate] of [["forward",single],["inverse-three",combined],["forward",combined],["forward","inverse-three"]]){
   const blocks=[],workBlocks=[],wallBlocks=[];let completePairs=0,comparable=true;
   for(let round=0;round<5;round++){
     const before=series[control][round],after=new Map(series[candidate][round].map(j=>[j.id,j]));
@@ -45,5 +45,5 @@ for(const [control,candidate] of [["forward","corner"],["inverse-three","combine
   }
   summary.comparisons[control+"/"+candidate]=result;
 }
-summary.claim="Finite direct-contour ablation, not application quality or general strength. Each policy's censored cases remain visible and disable the completed-all-case ratio claim. Same-binary controls include the same loaded corner data. Five cohorts do not establish universal admissibility, completeness, or world-class performance.";
+summary.claim="Finite direct-contour ablation, not application quality or general strength. Each policy's censored cases remain visible and disable the completed-all-case ratio claim. Same-binary controls include the same loaded "+(h0?"H0":"corner")+" data. Five cohorts do not establish universal admissibility, completeness, or world-class performance.";
 console.log(JSON.stringify(summary,null,2));

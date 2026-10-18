@@ -43,10 +43,17 @@ nontrivial stabilizer equivalence. The derived product goal is 450,429.
 Targeted checks and unchanged-law BendTT pass. See
 [the metadata evidence](verification/R04-META.md).
 
-Next is bounded full-product feasibility in
-[the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
-integrated search gain, or default switch exists yet. R03, R05, and R06 remain
-open. Independent review remains not run under the solo-work instruction.
+The full H0 byte table now reaches and audits all 117,567,450 entries, including
+all move edges and stabilizer equalities. The maximum is twelve. The actual
+missing-orbit-update mutation and nine auditor rejection fixtures pass. Five
+fresh feasibility cohorts admitted the bounded full run. A separately
+implemented full reference BFS agrees on every distance and both padding bytes.
+The isolated profile, all 47,871 cache-backed bound queries, malformed-cache
+checks, the full development regression, and unchanged-law kernel checks pass.
+Read [the data evidence](verification/R04-H0-TABLE.md). Direct-contour and
+application comparisons are next, against frozen controls.
+No integrated strength gain or default switch is claimed. R03, R05, and R06
+remain open. Independent review remains not run under solo work.
 
 Verified development work through the raw corner codec is pushed to origin/main
 under Yuzy's configured GitHub author identity. The remote commit was read back
