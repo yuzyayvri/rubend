@@ -22,6 +22,7 @@ test: build
     node tests/core.mjs
     just symmetry48-test
     just h0-corners-test
+    just h0-classes-test
     node tests/exact.mjs
     node tests/engine.mjs
     node tests/http.mjs
@@ -91,6 +92,11 @@ h0-corners-test:
     bend src/h0-corners.bend -o build/h0-corners.mjs
     bend tests/h0-corners.bend -o build/h0-corners-test
     node tests/h0-corners.mjs
+
+h0-classes-test:
+    bend bench/h0-class-pilot.bend -o build/h0-class-pilot
+    bend tests/h0-classes.bend -o build/h0-class-audit
+    node tests/h0-classes.mjs
 
 loader-test:
     mkdir -p build/evidence

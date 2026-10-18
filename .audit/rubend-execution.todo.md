@@ -59,6 +59,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Generate and prove the full forty-eight-case specification action. Five new laws and the original eighteen pass both checkers; independent positional/KPuzzle tests, native output, deliberate-error rejection, full regression, and unchanged default C pass. Solo verification only.
   - [ ] Small corner projection and quotient, then edge/stabilizer checks. No full H0 table admitted yet.
     - [x] Corner codec, all 153,090 legal representatives and sparse keys, 18,000 moves, 6,144 reference symmetries, and explicit target checks. Full regression and unchanged twenty-three-law BendTT pass.
+    - [x] All 3,393 classes and 153,090 transformations to representative, every stabilizer, independent full payload agreement, six audit mutations, repeated audits, full regression, and unchanged twenty-three-law BendTT pass.
+    - [ ] Raw/class distance equality and all-edge audits.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
@@ -67,3 +69,26 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 Throughput checkpoint. Two design seats were planned, only one ran. The user then
 required solo work. Root owns all implementation and checks from here. Any gate
 that specifically requires independent review remains marked not run.
+
+## Finish-the-program run
+
+Yuzy requested completion of the remaining phases before reporting back.
+Continue all unblocked implementation and evidence work, not just the next
+prototype. Keep the existing authorization, resource, law, and solo boundaries.
+
+- [x] Read pstack principles and reconstruct the verified checkpoint.
+- [x] Frame. Done requires a measured disposition for every remaining treatment,
+  integration of accepted changes, the live acceptance scenarios, and a final
+  honest Pareto/proof report. Independent review cannot be claimed under solo work.
+- [x] Design the workflow. Follow the approved roadmap and H0 design; keep each
+  hypothesis separate, test actual artifacts, preserve rejections, and commit.
+- [ ] Run the loop. Finish R04 small quotient/actions/distances, edge geometry,
+  stabilizer tests, generation admission, optional profile, and comparisons.
+- [ ] Run the loop. Finish R03 segmented-layout and owned-stack hypotheses,
+  plus integration/package checks for any accepted memory tier.
+- [ ] Run the loop. Finish R05 policy, ordering/premove, and bounded task pilots.
+- [ ] Run the loop. Finish R06 lifecycle, hidden GUI/profile, package, and trust checks.
+- [ ] Keep the audit trail after each verified or rejected unit.
+- [ ] Verify the whole against the frozen contracts and publish the final report.
+- [ ] BLOCKED: required independent review. No reviewers may run under the solo
+  instruction. Continue work that does not depend on this gate. Do not call it done.

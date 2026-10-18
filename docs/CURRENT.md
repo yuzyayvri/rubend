@@ -16,7 +16,14 @@ reference-symmetry comparisons. All forty-eight target actions agree; its
 dense goal index is 23. Full regression and the unchanged twenty-three-law
 BendTT check pass. See [the codec evidence](verification/R04-CORNER-CODEC.md).
 
-Next is the small H0 quotient prototype in
+The small H0 quotient also reaches 3,393 classes covering all 153,090 raw states.
+Every transformation to representative and every stabilizer bit passes the
+native audit. An independent oracle agrees on all 1,048,576 physical words.
+Six rejecting mutations, repeated audits, full regression, and the unchanged
+twenty-three-law BendTT check pass. See
+[the class evidence](verification/R04-CORNER-CLASSES.md).
+
+Next are small raw/quotient distance checks and the edge coordinate in
 [the architecture](architecture/R04-H0-DESIGN.md). No H0 pruning table,
 integrated search gain, or default switch exists yet. R03, R05, and R06 remain
 open. Independent review remains not run under the solo-work instruction.

@@ -3,8 +3,10 @@
 Status: the full forty-eight-case specification action is implemented. The five
 approved action laws pass the ordinary checker and BendTT. Runtime regression,
 native comparisons, and deliberate-error rejection pass. The raw corner codec
-also passes all 153,090 cases and target checks. Quotient and edge coordinates,
-H0 pruning data, and strength results are not implemented yet. This is the R04
+also passes all 153,090 cases and target checks. The small quotient reaches
+3,393 classes and passes representative/stabilizer audits and full oracle data
+agreement. Raw/class distances, edge coordinates, H0 pruning data, and strength
+results are not implemented yet. This is the R04
 foundation, not a world-class solver claim.
 
 ## Why this experiment
@@ -94,6 +96,20 @@ is a GPL-3.0-or-later reference/oracle only; no source has been ported for this
 proposal. Record any later adaptation and preserve its required notices.
 
 ## Stabilizers and data validity
+
+The small class builder owns one 2^20-word array. Raw entries hold a class ID
+and transformation to representative. Separate fixed ranges hold canonical
+representatives and the low/high stabilizer masks. Incomplete, complete, and
+failed builds are distinct types. Every target and metadata range is checked
+before an array access. The expected class count is an admission check, not
+a value silently substituted into the output.
+
+This is preferred to materializing a 153,090 by 48 action matrix. Enumerating
+only unassigned representatives requires roughly one orbit per class and
+preserves all stabilizers. The reference transform remains the checked full
+facelet action. A separate audit verifies each raw transformation back to its
+representative and recomputes stabilizers rather than trusting generated bits.
+This is a solo design pass. Raw/class distances remain a subsequent check.
 
 A self-symmetric corner representative can transform its edge coordinate in
 several ways. Choosing one representative is not enough. Every equivalent
