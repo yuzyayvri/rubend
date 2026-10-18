@@ -4,8 +4,10 @@ import { build } from "esbuild";
 import {fileURLToPath} from "node:url";
 import assert from "node:assert/strict";
 import {inputs,manifest} from "./manifest.mjs";
+import {withArtifactLease} from "./artifact-lease.mjs";
 
 process.chdir(fileURLToPath(new URL("..", import.meta.url)));
+withArtifactLease();
 mkdirSync("build", { recursive: true });
 const sourceHashes=inputs();
 function run(program, args) {
@@ -13,6 +15,7 @@ function run(program, args) {
   if(result.status !== 0) process.exit(result.status ?? 1);
 }
 for(const script of ["generate-model", "generate-cubie", "generate-coordinates", "generate-symmetry", "generate-packed-symmetry", "generate-pruning-laws", "generate-small-profile", "generate-corner-profile"]) run(process.execPath, [`scripts/${script}.mjs`, "--check"]);
+run(process.execPath,["scripts/generate-corner-profile.mjs","--check-corner-first"]);
 run("bend", ["PROOF.bend", "--verdict"]);
 for(const name of ["model", "cubie", "notation", "symmetry", "packed-symmetry", "coordinates"]) run("bend", [`src/${name}.bend`, "-o", `build/${name}.mjs`]);
 run("bend", ["src/main.bend", "-o", "build/rubend"]);
