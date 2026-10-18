@@ -19,12 +19,16 @@ for(const round of data.rounds){
     series[profile].push(jobs);
   }
 }
+for(const profile of profiles){
+  const reference=new Map(series[profile][0].map(j=>[j.id,j]));
+  for(const jobs of series[profile])for(const j of jobs){const before=reference.get(j.id);assert.ok(before);for(const key of ["facelets","complete","lower","length","optimal","nodes","moves"])assert.deepEqual(j[key],before[key],"Deterministic contour state changed between cohorts");}
+}
 for(const p of profiles){const jobs=series[p].flat();summary.completed[p]={planned:jobs.length,completed:jobs.filter(j=>j.complete).length,censored:jobs.filter(j=>!j.complete).length,cpuMs:dist(jobs.map(j=>j.cpuMs)),nativeWallMs:dist(jobs.map(j=>j.nativeMs)),workSteps:dist(jobs.map(j=>j.nodes))};}
 for(const [control,candidate] of [["forward","corner"],["inverse-three","combined"],["forward","combined"],["forward","inverse-three"]]){
   const blocks=[],workBlocks=[],wallBlocks=[];let completePairs=0,comparable=true;
   for(let round=0;round<5;round++){
     const before=series[control][round],after=new Map(series[candidate][round].map(j=>[j.id,j]));
-    for(const j of before){const next=after.get(j.id);assert.ok(next);assert.equal(next.facelets,j.facelets);if(!j.complete||!next.complete)comparable=false;else completePairs++;}
+    for(const j of before){const next=after.get(j.id);assert.ok(next);assert.equal(next.facelets,j.facelets);if(!j.complete||!next.complete)comparable=false;else{completePairs++;assert.equal(next.optimal,j.optimal,"Completed policies disagree on optimality");assert.equal(next.lower,j.lower,"Completed policies disagree on lower bound");assert.equal(next.length,j.length,"Completed policies disagree on optimum or missing answer");}}
     const sum=(xs,key)=>xs.reduce((a,j)=>a+j[key],0),next=before.map(j=>after.get(j.id));
     const cpuBefore=sum(before,"cpuMs"),cpuAfter=sum(next,"cpuMs"),wallBefore=sum(before,"nativeMs"),wallAfter=sum(next,"nativeMs");
     assert.ok(cpuBefore>=100&&cpuAfter>=100,"Insufficient aggregate CPU tick resolution");

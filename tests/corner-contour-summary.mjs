@@ -9,9 +9,9 @@ const report={format:"rubend-contour-comparison-v1",passed:true,errors:[],config
 function run(input){writeFileSync(path,JSON.stringify(input));return spawnSync(process.execPath,["bench/summarize-corner-contours.mjs",path],{encoding:"utf8",maxBuffer:1048576});}
 try{
   const good=run(report);assert.equal(good.status,0,good.stderr);const result=JSON.parse(good.stdout);assert.equal(result.comparisons["forward/corner"].observedTenPercentContourGate,true);assert.ok(Math.abs(result.comparisons["inverse-three/combined"].geometricCpuRatio-.5)<1e-10);
-  const partial=structuredClone(report);partial.rounds[0].jobs[0].complete=false;partial.rounds[0].jobs[0].lower=14;
-  const censored=run(partial);assert.equal(censored.status,0,censored.stderr);const kept=JSON.parse(censored.stdout);assert.equal(kept.completed.forward.censored,1);assert.equal(kept.comparisons["forward/corner"].allTargetsComparable,false);assert.equal(Object.hasOwn(kept.comparisons["forward/corner"],"geometricCpuRatio"),false);
+  const partial=structuredClone(report);for(const r of partial.rounds){r.jobs[0].complete=false;r.jobs[0].lower=14;}
+  const censored=run(partial);assert.equal(censored.status,0,censored.stderr);const kept=JSON.parse(censored.stdout);assert.equal(kept.completed.forward.censored,5);assert.equal(kept.comparisons["forward/corner"].allTargetsComparable,false);assert.equal(Object.hasOwn(kept.comparisons["forward/corner"],"geometricCpuRatio"),false);
   let rejected=0;
-  for(const change of [r=>r.passed=false,r=>r.rounds.pop(),r=>r.rounds[0].workers[0].shutdown.forced=true,r=>r.rounds[0].jobs.pop(),r=>r.rounds[0].jobs[0].nativeMs=1,r=>r.rounds[0].jobs[0].cpuMs=1,r=>r.rounds[0].jobs[1].facelets="changed"]){const bad=structuredClone(report);change(bad);assert.notEqual(run(bad).status,0);rejected++;}
+  for(const change of [r=>r.passed=false,r=>r.rounds.pop(),r=>r.rounds[0].workers[0].shutdown.forced=true,r=>r.rounds[0].jobs.pop(),r=>r.rounds[0].jobs[0].nativeMs=1,r=>r.rounds[0].jobs[0].cpuMs=1,r=>r.rounds[0].jobs[1].facelets="changed",r=>r.rounds[1].jobs[0].nodes++,r=>r.rounds.forEach(c=>c.jobs[2].length=12)]){const bad=structuredClone(report);change(bad);assert.notEqual(run(bad).status,0);rejected++;}
   console.log(JSON.stringify({passed:true,censoredCasesRetained:true,cohortRatios:true,rejectedFixtures:rejected}));
 }finally{rmSync(temporary,{recursive:true,force:true});}
