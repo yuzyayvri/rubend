@@ -54,6 +54,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.
   - [ ] Raw segmentation and owned stacks as separate hypotheses. Independent review and package rollout remain open.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
+  - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
+  - [ ] BLOCKED: approval to add the five exact symmetry-law statements in docs/architecture/PROOF-PLAN.md. No executable law or H0 implementation changed. Do not weaken the existing eighteen laws.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
