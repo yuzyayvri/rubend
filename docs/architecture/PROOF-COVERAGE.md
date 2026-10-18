@@ -1,6 +1,6 @@
 # Proof coverage and remaining trust
 
-`bend PROOF.bend --verdict` currently checks 18 laws through the normal checker
+`bend PROOF.bend --verdict` currently checks 23 laws through the normal checker
 and the independently built BendTT kernel. This is not a proof of the entire
 application or compiler.
 
@@ -11,6 +11,7 @@ application or compiler.
 | Certificate | Every value of the accepted-certificate type replays to solved |
 | Notation | Showing and parsing any one of the 18 moves returns that move |
 | Frame symmetries | Three frame transforms commute with mapped moves and fix solved; the two UD-subgroup transforms preserve the phase-two move set |
+| Full spatial symmetry | Forty-eight-case identity, composition, inverse action, move conjugacy, and solved fixed point, over arbitrary U32 facelet values |
 | Pruning identities | Same-face pairs combine to at most one turn; opposite faces commute; move/index codec roundtrip |
 
 The specification is a 54-field facelet model, so the permutation laws quantify
@@ -44,7 +45,7 @@ formal optimality proof.
   39,907,676,160-edge audit, following every-state packed/uncompressed agreement
   on a smaller product graph. See `docs/verification/JOINT.md`.
 - Packed frame transforms have 3,000 facelet comparisons and 54,000 conjugation
-  checks. Their universal refinement theorem is not among the 18 checked laws.
+  checks. Their universal refinement theorem is not among the checked laws.
 
 These finite audits give strong data evidence. Their implementation, abstract
 transition refinement, optimized representation, input-validator correctness,
@@ -81,7 +82,7 @@ must fail closed; they are not reasons to weaken the laws.
 PROOF.bend also imports the pure packed codec, generated small search and
 portfolio, and direct packed table builder. Runtime effects are not imported.
 The existing eighteen laws
-are unchanged. BendTT accepts the expanded pure graph, but this does not add a
+are unchanged by the packed pilot. BendTT accepts the expanded pure graph, but this does not add a
 universal compression, generator-equivalence, or traversal-completeness theorem.
 
 The packed pilot checks every one of the 4,923,465 used raw entries and all
@@ -96,7 +97,7 @@ See [the packed result](../verification/R03-SMALL.md).
 
 PROOF.bend imports the pure all-move corner builder, auditor, byte lookup, and
 private late and corner-first search and portfolio. BendTT accepts them with
-the unchanged eighteen laws. The loader's file effects remain outside this
+the then-unchanged eighteen laws. The loader's file effects remain outside this
 graph. Importing checked definitions does not prove a new projection or
 traversal-completeness theorem.
 
@@ -107,3 +108,19 @@ decreasing successors. Independent checks cover every component transition,
 goal guards and malformed-cache rejection are executable evidence. Fingerprints
 identify the loaded payload but do not prove its admissibility. Read
 [the corner evidence](../verification/R02-CORNER.md) for exact scope and limits.
+
+## Full spatial symmetry
+
+Yuzy approved exactly five new laws on 2026-10-18. Their executable statements
+match [the approved text](PROOF-PLAN.md#proposed-full-symmetry-laws). Both proof
+checkers accept all twenty-three laws. The original eighteen statements are
+unchanged.
+
+The new action includes twenty-four proper rotations and twenty-four spatial
+reflections. It permutes positions and renames colors together, fixes solved,
+and reverses quarter-turn sense for reflections. Composition applies the right
+argument first. Values outside the six face colors remain unchanged.
+
+These proofs do not certify an H0 coordinate, stabilizer reduction, pruning
+table, packed-symmetry refinement, or complete search. Those remain separate
+obligations. The new specification is not wired into the default solver yet.
