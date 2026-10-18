@@ -1,0 +1,176 @@
+{
+  "format": "rubend-evidence-index-v1",
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-proof-attempt-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-proof-attempt-v1.json.gz",
+      "bytes": 1161,
+      "compressedBytes": 727,
+      "sha256": "f86fc35c5ca767c9c469b1d7f4ea13a569b68b8459aaf071e97fbaeffdf8df3c",
+      "compressedSha256": "d08a316a47463943bf1699c0ad48ed3805a1d51b8d4d84483a43b0ca8da51b75",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-proof-attempt-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-proof-attempt-v2.json.gz",
+      "bytes": 1161,
+      "compressedBytes": 724,
+      "sha256": "813e44f992f16994ff4952bb19cdd8dc63a30d624f25f4ec33f340c1418b1038",
+      "compressedSha256": "0a09e308c0d238a6f250b764b88750febeef3d8bf3d318fad604b0b3f5783fc7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-proof-attempt-v3.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-proof-attempt-v3.json.gz",
+      "bytes": 1194,
+      "compressedBytes": 759,
+      "sha256": "42ede301a5384beff406bd59511f4d73a3b95b859b38e6c3d5381b3e453aa92f",
+      "compressedSha256": "0b32f1baa6bfa81e4f43a9d7c2f9768bc402dcc8941db166ec3eb1e05f43d098",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-spec-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-spec-v1.json.gz",
+      "bytes": 1133,
+      "compressedBytes": 701,
+      "sha256": "72dc3849e6ad3e548cd3d114732b32804d6a16cee5d60f3026feb58cb189fb95",
+      "compressedSha256": "a3b6a53f356b05920a645fbcfc957eddc1ec516d1b4e48a02a3c43a442387a27",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-spec-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-spec-v2.json.gz",
+      "bytes": 1787,
+      "compressedBytes": 971,
+      "sha256": "27d2cfb92743ab948cc26a935cca42b97fd4dd0466133d1abf554612aad05cf2",
+      "compressedSha256": "a201268ecd6bbc74b91bfff5b0125affc191d37212c9ef6e39af209f3efe0204",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-color-cost-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-color-cost-v1.json.gz",
+      "bytes": 2215,
+      "compressedBytes": 808,
+      "sha256": "c8e0f66df327371b6ba547fbec803d5f0cffef7bfd9abac63347e067360a9c43",
+      "compressedSha256": "af9105c9ebaf5a9398ad8b4809e19250174552c217030b6af7d730e2a98a4e21",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-color-cost-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-color-cost-v2.json.gz",
+      "bytes": 1663,
+      "compressedBytes": 893,
+      "sha256": "6f92a3250186d574bdeb92740f1a31ab137bbfddaf89369f5fc201d31cc1465f",
+      "compressedSha256": "bc864220796f44aa9fad8f38f8d931967fded8af1a99ca127c5219f2fac0c747",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-color-cost-v3.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-color-cost-v3.json.gz",
+      "bytes": 1069,
+      "compressedBytes": 669,
+      "sha256": "62dabd9c451e4db2e229d200074560673765ffcf693f320ce4c01e043f0a0c8f",
+      "compressedSha256": "504aae3e8e5a19eacaf0ff4b0dff97590c464f9faaa66a1276c151377f89c18a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-verdict-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-verdict-v1.json.gz",
+      "bytes": 1210,
+      "compressedBytes": 735,
+      "sha256": "852a5ed2150aa2a7b14fbbefebe2253b9aa1156799b6fd426d6caaab41fa8767",
+      "compressedSha256": "2d6b22bfcd2b9a7a7ef9fa46ff81a871793ef438826650faf877ee5173c6568c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-verdict-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-verdict-v2.json.gz",
+      "bytes": 1129,
+      "compressedBytes": 706,
+      "sha256": "3dbb0d4dac52f46a76256b6f9e50fb7e44c7a808756254d1bf4fc3e0daee1499",
+      "compressedSha256": "78cbcc73b9b8cd1e2643646cd253805c3dea8fbda4fbe84ff8383200c557a21b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-regression-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-regression-v1.json.gz",
+      "bytes": 10274,
+      "compressedBytes": 2585,
+      "sha256": "8e168df655e1f25b82a19556d373a60e29c83eae8cb21761c644df35331af624",
+      "compressedSha256": "a018c366f5c15655622801b4bf930064f08a23dd0712873bbfd85d9729f0cc55",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-regression-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-regression-v2.json.gz",
+      "bytes": 32212,
+      "compressedBytes": 6518,
+      "sha256": "eb879ebee034ec9595bc0e29668664223157a8882f886120798d61121ca49643",
+      "compressedSha256": "9b74eafcf393c9bde02ecebac8c667102054b3e0cb5cd89380fcc8eda2cc5f42",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-runtime-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-runtime-v1.json.gz",
+      "bytes": 2023,
+      "compressedBytes": 1091,
+      "sha256": "f9bda0e05d7f1a8ff3aef7e4a64327fda5d0e3d47b1a2f5cddc1868d65484393",
+      "compressedSha256": "a4dc165ba3b792ec5e6c344ac634e693f32d916cca55622d0a438969e5256453",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-negative-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-negative-v1.json.gz",
+      "bytes": 5368,
+      "compressedBytes": 1493,
+      "sha256": "663d861b92a0bd4c1bd5bf30e2cec4d0e38a21ef70d9ea5a377558a4e5549c3e",
+      "compressedSha256": "b4710ca04b048900fe1d74c64547141e01151b80776de21d153fd257c6499756",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-sym48-negative-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/r04-sym48-negative-v2.json.gz",
+      "bytes": 1077,
+      "compressedBytes": 671,
+      "sha256": "b51d2479088dc02ed0e8702ed0c83b8b3640d5210b386f8f989ea917a3a59928",
+      "compressedSha256": "44067b8485c1157ca0a24a779509be41b4e6737be7034d1c733cf2e45e2dbcde",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/symmetry48.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/symmetry48.json.gz",
+      "bytes": 453,
+      "compressedBytes": 289,
+      "sha256": "fe65f686bff3eef64205ddac780edbbd8fec656176a7cf108e03b13df27a9452",
+      "compressedSha256": "d1c6558fee811dab8ef90f5676b0417fa29a1213f14ccf9870df79dc226d6af0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/symmetry48-native.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/symmetry48-native.json.gz",
+      "bytes": 183,
+      "compressedBytes": 146,
+      "sha256": "bd0bb629c88a339aea9e4fec9cdb4001461a8f0d15d251d8076e014f0ae2e2b3",
+      "compressedSha256": "9b20ecae0faa21e62c59197648fc50ca6c0bee65ceba0a52b017b7ff25a162d3",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/symmetry48-proof-negative.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/symmetry48-proof-negative.json.gz",
+      "bytes": 4817,
+      "compressedBytes": 932,
+      "sha256": "71bc41de0f2c0d6e4405ffb7a60a1edf23cd5f68fad0673e7fa13ffcfb852608",
+      "compressedSha256": "93abf0306a1cef7ee14d7f303c2ebd605f108c783a9f0917439c9795741ce14a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/symmetry48-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-symmetry-v1/symmetry48-summary.json.gz",
+      "bytes": 2218,
+      "compressedBytes": 1099,
+      "sha256": "fd8cedfd4fa070cefa1154a7671ddf1f19823f34c5863d7f587f8e8e55a77e7f",
+      "compressedSha256": "64361cf806535e99c8fccf5bdce0e0d40ec09f1378677af923705092184d6c44",
+      "roundtripPassed": true
+    }
+  ]
+}

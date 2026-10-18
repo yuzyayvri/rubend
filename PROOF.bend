@@ -17,6 +17,7 @@ import ./src/corner/search.bend as CornerSearch
 import ./src/corner/portfolio.bend as CornerPortfolio
 import ./src/corner-first/search.bend as CornerFirstSearch
 import ./src/corner-first/portfolio.bend as CornerFirstPortfolio
+import ./src/symmetry48-proof.bend as Symmetry48Proof
 
 def Laws.toolchain_flip_roundtrip(value):
   match value:

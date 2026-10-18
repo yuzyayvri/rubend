@@ -1,10 +1,9 @@
 # H0 symmetry prototype
 
-Status: approved for the bounded prototype on 2026-10-18. No H0 or full-48-symmetry
-implementation, table build, proof result, or speed result exists yet. Yuzy
-approved the five exact law statements in
-[the proof plan](PROOF-PLAN.md#proposed-full-symmetry-laws). This is the next R04 direction, not a
-reason to claim the current solver is world-class.
+Status: the full forty-eight-case specification action is implemented. The five
+approved action laws pass the ordinary checker and BendTT. Runtime regression,
+native comparisons, and deliberate-error rejection pass. H0 coordinates, tables, and strength results are not implemented
+yet. This is the R04 foundation, not a world-class solver claim.
 
 ## Why this experiment
 
@@ -47,7 +46,8 @@ matrices. The action permutes facelet positions and relabels colors together,
 so it fixes the canonical solved cube. Reflections reverse quarter-turn sense;
 they are not cube-state inversion. Composition applies the right argument first.
 
-Planned interfaces are pure Bend definitions. Their bodies are not implemented.
+The six S48 interfaces below are implemented pure Bend definitions. The
+coordinate and bound interfaces remain planned.
 
 ```text
 S48.Symmetry
@@ -74,8 +74,10 @@ Declare a loader-selected profile and reject unknown or incomplete data.
 
 - scripts/generate-symmetry48.mjs emits symmetry cases, position/color permutations,
   mapped moves, composition, and inverse data from signed matrices.
-- src/symmetry48.bend defines the Model.Cube action and the five proposed
-  laws once approval is given. Its proofs stay in the pure graph.
+- src/symmetry48.bend defines the Model.Cube action. The five approved statements
+  live in src/symmetry48-laws.bend and their proofs in src/symmetry48-proof.bend.
+  LAWS.bend and PROOF.bend import them. The IO comparison driver stays outside
+  the proof graph.
 - src/h0-corners.bend maps the raw separation/orientation to a class and one
   representative transform. It also retains every stabilizer, using two U32
   words for a forty-eight-bit set rather than assuming native U64.
@@ -110,6 +112,32 @@ These five action laws do not by themselves certify optimized projection,
 stabilizer reduction, loaded data, or search completeness. The existing T01,
 T02, T03, S03, and S04 obligations remain. Finite audits are evidence, not a
 claim of universal formally certified optimality.
+
+## Specification implementation
+
+The existing model owns fifty-four U32 facelet fields and eighteen typed moves.
+Existing three-frame transforms serve the portfolio and subgroup pruning.
+The new module is separate. It does not change those callers or assume that all
+forty-eight transforms preserve the ten-move subgroup.
+
+Two action shapes were considered: one generated cube expression per symmetry,
+and a position permutation followed by a pointwise color action. The second
+keeps color composition separate from cube composition. Generic field rewrites
+then avoid splitting all color combinations across fifty-four fields. This is
+a solo design choice, not an independently reviewed synthesis.
+
+The color action inspects the high twenty-nine bits before changing the low
+three. Any high bit set leaves the value unchanged. Values six and seven also
+remain unchanged. This gives a structural proof for arbitrary U32 values.
+A numeric wildcard did not give the checker enough information to reduce a
+nested color action. The diagnostic and rejected proof layouts are recorded in
+[the proof-cost issue](../issues/symmetry-proof-cost.md).
+
+The generator owns the specification, finite proof cases, native comparison
+driver, and deterministic test data. The law statements remain outside the
+generator and an executable check compares them exactly with the approved text.
+This specification is not the optimized packed-coordinate action. Any later
+packed action must be compared with it before use in generation or search.
 
 ## Verifiable sequence and admission
 

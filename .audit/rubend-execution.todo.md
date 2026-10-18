@@ -56,7 +56,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
   - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
   - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
-  - [ ] Generate and prove the full forty-eight-case specification action; independent positional checks, then the small corner quotient. No full table admitted yet.
+  - [x] Generate and prove the full forty-eight-case specification action. Five new laws and the original eighteen pass both checkers; independent positional/KPuzzle tests, native output, deliberate-error rejection, full regression, and unchanged default C pass. Solo verification only.
+  - [ ] Small corner projection and quotient, then edge/stabilizer checks. No full H0 table admitted yet.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.

@@ -14,7 +14,7 @@ function run(program, args) {
   const result = spawnSync(program, args, { stdio: "inherit", env: { ...process.env, BEND_NO_TELEMETRY: "1" } });
   if(result.status !== 0) process.exit(result.status ?? 1);
 }
-for(const script of ["generate-model", "generate-cubie", "generate-coordinates", "generate-symmetry", "generate-packed-symmetry", "generate-pruning-laws", "generate-small-profile", "generate-corner-profile"]) run(process.execPath, [`scripts/${script}.mjs`, "--check"]);
+for(const script of ["generate-model", "generate-cubie", "generate-coordinates", "generate-symmetry", "generate-symmetry48", "generate-packed-symmetry", "generate-pruning-laws", "generate-small-profile", "generate-corner-profile"]) run(process.execPath, [`scripts/${script}.mjs`, "--check"]);
 run(process.execPath,["scripts/generate-corner-profile.mjs","--check-corner-first"]);
 run("bend", ["PROOF.bend", "--verdict"]);
 for(const name of ["model", "cubie", "notation", "symmetry", "packed-symmetry", "coordinates"]) run("bend", [`src/${name}.bend`, "-o", `build/${name}.mjs`]);
