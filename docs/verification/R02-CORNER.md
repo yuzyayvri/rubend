@@ -1,7 +1,7 @@
 # All-move corner database
 
-The full byte database is generated and completely audited. It is not yet
-connected to search, and no solution-quality or search-speed gain is claimed.
+The full byte database is generated and completely audited. An isolated search
+backend now loads it, but no solution-quality or search-speed gain is claimed.
 No independent review runs under the user's no-subagents instruction.
 
 The pure Bend builder uses all eighteen HTM face moves. It does not reuse the
@@ -72,6 +72,28 @@ report was corrected before final runs; incomplete probes are never counted
 as a complete table or search result.
 
 ## Next integration
+
+The private search, portfolio, runtime, and direct-contour entrypoint compile.
+Forward, inverse-three, corner, and combined profiles are selected explicitly.
+All four load the same joint and corner payloads into one two-GiB array. The
+default search and runtime files remain unchanged. A checked generator records
+the permitted differences and rejects five stale or mismatched source fixtures.
+
+Synthetic checks pass for supported geometry, unsupported profiles, reduction
+and subgroup bypass, full-cube cutoffs, reuse of the supplied child, solved
+index, and all four byte lanes. The native runtime rejects an unknown policy,
+a missing corner file, short and trailing files, and a same-length one-byte
+mutation. Both sealed source caches remain unchanged. The complete development
+regression, sixteen toolchain checks, and separate BendTT verdict pass. The pure
+private search and portfolio are in the proof graph; IO is not. No law changes.
+Raw integration/build/loader receipts are archived under r02-corner-v1/.
+
+The extended contour runner preserves the original inverse-only protocol and
+adds explicit four-policy corner ablations. Its fixtures reject six malformed
+corner configurations and unknown policies. Sixteen deterministic half-turn
+positions are frozen separately before timing. They are a diagnostic subgroup,
+not a uniform strength corpus or known-optimum set. Timings and actual shallow
+optima through the loaded private backend remain the next gate.
 
 Compare lazy corner ranking against the existing forward and inverse policies
 before adding any incremental field. Keep default search code unchanged and use

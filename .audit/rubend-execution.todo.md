@@ -42,7 +42,9 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Independent inverse oracle, shallow optima, real-table cutoffs, and full regression.
   - [x] Five-cohort pilot and disjoint development completed-depth measurements.
   - [x] Five-cohort application canaries against frozen R01. Sixty quality pairs tie.
-  - [ ] Corner database, combination, full rollout, and independent review.
+  - [x] Full corner database. All 88,179,840 states and 1,587,237,120 directed edges audited; independent transitions and shallow distances pass. Pure builder/auditor BendTT passes with unchanged laws.
+  - [ ] Isolated lazy-corner integration and forward/inverse/corner/combined ablation. Goal guards, malformed caches, shallow optima, half-turn stratum, completed contours, and deadline evidence required.
+  - [ ] Full rollout and independent review. BLOCKED: independent review under the no-subagents instruction.
 - [ ] R03. Kernel and memory pilots, independently measured.
   - [x] Coordinate-only subgroup frames. Two correct variants rejected after three five-cohort comparisons. Slower code excluded from main; recoverable source and raw evidence retained.
   - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.

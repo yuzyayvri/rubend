@@ -2,6 +2,19 @@
 
 ## Latest verified work
 
+The complete all-eighteen-move corner database now exists. Bend generation
+reaches all 88,179,840 states and its audit checks all 1,587,237,120 directed
+edges. Independent transitions, shallow distances, and rejecting fixtures pass.
+The pure builder and auditor pass BendTT with the unchanged eighteen laws.
+Read [the corner result](verification/R02-CORNER.md). The sealed byte cache
+remains ignored in the managed writer checkout. Do not rebuild it on resumption.
+The isolated four-policy backend compiles and passes synthetic goal/cutoff
+checks, native malformed-cache rejection, full development regression, and
+BendTT. Its pure search and portfolio are checked; runtime IO is excluded.
+Next run loaded-backend shallow checks and completed-contour ablations, including
+the frozen diagnostic half-turn stratum. No corner speed or strength gain,
+default rollout, or independent review is claimed.
+
 The exact-only inverse pilot is implemented and remains opt-in. Three lazy
 inverse-axis estimates use 36.6% less CPU time on sixteen pilot positions and
 37.8% less on sixteen disjoint development positions to reach lower bound
@@ -14,8 +27,8 @@ profile. All 1,750 jobs pass. Sixty deadline quality and lower-bound pairs tie.
 Superflip first-answer p95 is 3.2% slower on five samples, within the finite
 five-percent canary threshold. Hard exact jobs remain incomplete. The full
 development regression, sixteen toolchain checks, and eighteen laws pass.
-The default small profile has not changed. Corner databases, remaining kernel
-pilots, full browser and package rollout, and independent review are not done.
+The default small profile has not changed. Corner search integration, remaining
+kernel pilots, full browser and package rollout, and independent review are not done.
 
 A hidden GUI check found and reproduced a stale export bound. The canonical
 solution now follows progress and completion events, so the same difficult
