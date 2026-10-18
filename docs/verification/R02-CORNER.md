@@ -1,7 +1,8 @@
 # All-move corner database
 
-The full byte database is generated and completely audited. An isolated search
-backend now loads it, but no solution-quality or search-speed gain is claimed.
+The full byte database is generated and completely audited. The isolated late-
+corner backend has a finite diagnostic win, but no general speed or solution-
+quality gain is established. The default engine remains unchanged.
 No independent review runs under the user's no-subagents instruction.
 
 The pure Bend builder uses all eighteen HTM face moves. It does not reuse the
@@ -71,7 +72,7 @@ and raw logs are archived under r02-corner-v1/. The earlier uppercase boolean
 report was corrected before final runs; incomplete probes are never counted
 as a complete table or search result.
 
-## Next integration
+## Search integration
 
 The private search, portfolio, runtime, and direct-contour entrypoint compile.
 Forward, inverse-three, corner, and combined profiles are selected explicitly.
@@ -92,14 +93,14 @@ The extended contour runner preserves the original inverse-only protocol and
 adds explicit four-policy corner ablations. Its fixtures reject six malformed
 corner configurations and unknown policies. Sixteen deterministic half-turn
 positions are frozen separately before timing. They are a diagnostic subgroup,
-not a uniform strength corpus or known-optimum set. Timings and actual shallow
-optima through the loaded private backend remain the next gate.
+not a uniform strength corpus or known-optimum set. Loaded-backend shallow and
+contour checks are complete below. Application canaries remain in progress.
 
 The application comparison runner now seals declared additional caches before
 and after use, validates exact lengths and SHA256 identities, and rejects
 unregistered cache environment variables. A positive auxiliary-cache fixture,
 six preflight rejects, and a mutation fixture pass alongside the existing worker
-and cleanup tests. The four-policy contour summarizer has seven rejecting
+and cleanup tests. The four-policy contour summarizer has nine rejecting
 fixtures and preserves censored jobs. It uses ratios of cohort totals so very
 short individual requests cannot create zero-CPU divisions. Each policy's cohort
 must still total at least 100 ms of process CPU time.
@@ -110,17 +111,62 @@ and three inverse estimates on every root. An independent corner rank agrees
 with the Bend-generated rank and reads a positive distance for each. This
 confirms the diagnostic's intended blind spot, not its timing result.
 
-Compare lazy corner ranking against the existing forward and inverse policies
-before adding any incremental field. Keep default search code unchanged and use
-an isolated, checked variant. Load the corner bytes into the raw array's unused
-region only after exact size and identity checks. Select capabilities explicitly,
-not from array capacity. Apply this bound only to FullCube frames and combine
-it by maximum. Require wrong-goal, malformed-cache, shallow-optimum, completed-
-contour, and deadline tests before accepting an engine treatment.
+## Late-corner timing
 
-Include an explicit half-turn stratum. Every face half-turn belongs to each
-axis reduction subgroup, so all forward/inverse joint reduction estimates can
-be zero on unsolved states in that group. Corner permutation information can
-address this blind spot. Verify that deduction on actual cases before using it
-to explain a measured gain. Do not confuse larger heuristic values with less
-time to the same completed contour.
+Five fresh cohorts compare forward, inverse-three, corner, and combined policies
+on each declared set. Each worker passes all 163 known shallow optima before
+timing. All 9,780 warmups and 960 measured requests execute without error or forced
+cleanup. All 640 uniform targets complete. The release holdout stays unopened.
+
+The primary ratio is the geometric mean of five ratios of cohort CPU totals,
+each using all sixteen declared cases. The interval resamples the five cohorts,
+not the population of possible cubes. It differs from the earlier inverse report's
+geometric per-case statistic, so compare the policies inside this result.
+
+| Set and target | Candidate over control | CPU ratio | Five-cohort 95% interval | Ten-percent gate |
+| --- | --- | --- | --- | --- |
+| Pilot, lower fifteen | Corner over forward | 0.9183 | 0.9133 to 0.9232 | Fails |
+| Development, lower fifteen | Corner over forward | 0.8779 | 0.8431 to 0.9161 | Fails |
+| Pilot, lower fifteen | Combined over inverse-three | 1.0014 | 0.9855 to 1.0196 | Fails |
+| Development, lower fifteen | Combined over inverse-three | 0.9946 | 0.9812 to 1.0147 | Fails |
+| Half-turn diagnostic, lower ten or optimum | Combined over inverse-three | 0.1909 | 0.1887 to 0.1933 | Passes |
+
+Uniform corner pruning does not meet the declared ten-percent threshold. Adding
+the late corner check to inverse-three gives no measurable uniform speed gain.
+Combined beats forward on those sets, but inverse-three already supplies that
+gain. Do not attribute it to the corner addition or promote the default engine.
+
+On the separate half-turn diagnostic, both inverse-three and combined complete
+all eighty repeated targets. Combined uses about 80.9% less CPU time, about 5.24
+times as fast for this finite direct-contour task. Its cohort ratios range from
+0.1880 to 0.1947. The combined work-step total is 12.26% of inverse-three's,
+so added work per surviving step limits the time gain. This does not establish
+a general fivefold solver improvement. Eight cases per cohort are solved below
+depth ten; the others reach lower bound ten, excluding contours zero through
+nine rather than exhausting depth ten.
+
+Forward-only completes only thirty-five of eighty diagnostic requests. Forty-
+five hit twenty-million-step fuel, and every censored record stays present.
+No completed-all-case time ratio against forward is claimed on that stratum.
+Every complete policy agrees on the established bound and any optimum, and
+deterministic final states agree across all five cohorts.
+
+The timed pure loop advances the real search without IO. Native wall totals
+are about 1.01 to 1.05 times process CPU totals across these policies and sets.
+This is a CPU-bound traversal result, not startup, disk, or work-step throughput.
+All policies load identical data in the same binary; fewer steps reflect actual
+cuts rather than different request budgets or missing work. State-machine steps
+are not expanded-node counts. No profiler or diagnostic observer time is reported.
+
+The sequential batch takes 538.746 seconds and peaks at 2,324,684 KiB aggregate
+RSS. It uses one native thread on CPU 2, nice 10, a 4,096-MiB ceiling, no swap,
+an eight-GiB desktop reserve, and a 1,800-second wall cap. These are warm-file
+measurements. Startup and two-GiB table allocation are separate costs.
+
+Reproduce the raw report summaries with bench/summarize-corner-contours.mjs.
+The raw pilot, three confirmations, version-two adjudications, and resource
+receipt are archived under r02-corner-v1/. Version two adds deterministic-state
+and cross-policy completion checks without changing the measured inputs or
+ratios. The first four-case pilot is not counted as a confirmation cohort.
+Application comparisons and one separately generated corner-first ordering
+experiment are next. No incremental frame field or default switch is accepted.
