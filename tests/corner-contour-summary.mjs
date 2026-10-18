@@ -14,4 +14,9 @@ try{
   let rejected=0;
   for(const change of [r=>r.passed=false,r=>r.rounds.pop(),r=>r.rounds[0].workers[0].shutdown.forced=true,r=>r.rounds[0].jobs.pop(),r=>r.rounds[0].jobs[0].nativeMs=1,r=>r.rounds[0].jobs[0].cpuMs=1,r=>r.rounds[0].jobs[1].facelets="changed",r=>r.rounds[1].jobs[0].nodes++,r=>r.rounds.forEach(c=>c.jobs[2].length=12)]){const bad=structuredClone(report);change(bad);assert.notEqual(run(bad).status,0);rejected++;}
   console.log(JSON.stringify({passed:true,censoredCasesRetained:true,cohortRatios:true,rejectedFixtures:rejected}));
+  const h0=structuredClone(report);delete h0.config.cornerCache;h0.config.h0Cache="/h0";
+  for(const round of h0.rounds)for(const entry of[...round.workers,...round.jobs]){if(entry.profile==="corner")entry.profile="h0";if(entry.profile==="combined")entry.profile="h0-combined";}
+  const h0Result=run(h0);assert.equal(h0Result.status,0,h0Result.stderr);const h0Summary=JSON.parse(h0Result.stdout);assert.equal(h0Summary.format,"rubend-h0-contour-adjudication-v1");assert.ok(Math.abs(h0Summary.comparisons["inverse-three/h0-combined"].geometricCpuRatio-.5)<1e-10);
+  const mixed=structuredClone(h0);mixed.config.cornerCache="/corner";assert.notEqual(run(mixed).status,0);
+  console.log(JSON.stringify({passed:true,h0Policies:true,mixedProjectionRejected:true}));
 }finally{rmSync(temporary,{recursive:true,force:true});}

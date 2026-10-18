@@ -63,7 +63,8 @@ app integration, and honest proof coverage, not an assumed world-class victory.
     - [x] Raw/class distance equality on all states and all 2,755,620 edges. Independent full payload/move agreement, nine mutations, targeted checks, and unchanged-law BendTT pass. Combined component regression now passes.
     - [x] All 34,650 edge placements, moves, symmetries, and 29,937,600 commutations. Full independent payload agreement, seven mutations, combined-coordinate refinements, combined regression, and unchanged-law BendTT pass.
     - [x] Compact metadata, every serialized word, nine mutations, and 36,000 canonical product moves. Nontrivial stabilizers are required in 812 sampled transitions. Targeted and unchanged-law BendTT checks pass; integration regression remains due.
-    - [ ] Bounded BFS, actual missing-orbit-update mutation, measured full-build admission, and complete product audits.
+    - [x] Bounded BFS, actual missing-orbit-update mutation, measured full-build admission, complete native product audits, and separately implemented full reference BFS. All117567450entries agree, maximum12. Integration regression is in progress.
+    - [ ] Isolated H0 profile and frozen strength comparisons.
 - [ ] R05. Anytime and bounded scheduling pilots.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
