@@ -1,0 +1,76 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-fixed-config-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-fixed-config-v1.json.gz",
+      "bytes": 719,
+      "compressedBytes": 331,
+      "sha256": "48bb6afc1500e43271cf7fd200d21a94dc8923a5eef30ccd6d845d782713aff0",
+      "compressedSha256": "12167185b64bd59750f4ae9447736c84348392b44eedce82bbbec4c141b96ad7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-quality-config-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-quality-config-v1.json.gz",
+      "bytes": 1613,
+      "compressedBytes": 492,
+      "sha256": "40243212ff909b1caac01b3c9baf48135ac79f7e901547281fe64c2359eb92dd",
+      "compressedSha256": "ae4d15c401059d836e60875d3a9881212720763f583800dcad51ce5163fd48a2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-fixed-time-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-fixed-time-run-v1.json.gz",
+      "bytes": 2078,
+      "compressedBytes": 961,
+      "sha256": "d04bdfb765f08bd8b7f00b837307eabb2a2e9d768ee818d8286bbd89463d73bd",
+      "compressedSha256": "8e7d36238014715c71e4abf645dd9fa7cbd12598457a7393efd5b0d2aee99ba1",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-fixed-time-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-fixed-time-v1.json.gz",
+      "bytes": 643247,
+      "compressedBytes": 120757,
+      "sha256": "ea7f9295d4ae3b4c185719850749110d0204d42aac87fe5d35eb54a18cfc404b",
+      "compressedSha256": "be52f4dbabe71f4d8dc50c53166aca7e25661ad6bafe4c127497556bfbb167dc",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-quality-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-quality-run-v1.json.gz",
+      "bytes": 8116034,
+      "compressedBytes": 238875,
+      "sha256": "2c186c049e05610b84a3f193665858b326579682230eddda45f118552418e4e8",
+      "compressedSha256": "d80a8ec07544e235a377a9d0cfbefabc78e07ebc0632b76b7d316101b2b7df54",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-fixed-score-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-fixed-score-v1.json.gz",
+      "bytes": 1473,
+      "compressedBytes": 660,
+      "sha256": "c6febc40a271ddde1bc518021e8eee3ec117aaf746912e7f763178cac30c8468",
+      "compressedSha256": "a3cd53f0a7750b292b98cdf777cabf25aed75234f8c4d5facf432b670d43eb33",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-quality-score-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-quality-score-v1.json.gz",
+      "bytes": 5289,
+      "compressedBytes": 812,
+      "sha256": "832d95d9710c8c2622346eb1cea7be378da2e3c0a9869e54448e3a6a7e13a3e5",
+      "compressedSha256": "9758aa334e62e00c98f044ac3812a0ba7b5e07cff5fffd0bc5fcae7dc2d25bb1",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-measurement-summary-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-measurement-v1/r03-owned-measurement-summary-v1.json.gz",
+      "bytes": 10874,
+      "compressedBytes": 2630,
+      "sha256": "effd1de53aecdac106a2f0356251b1ce0a6c0edef4334a0eadcad89ed9d96ac7",
+      "compressedSha256": "e2bffb666bffe2fa739ed62e486dba7ed031a6c1c8ae336174b59a77b23a641a",
+      "roundtripPassed": true
+    }
+  ]
+}

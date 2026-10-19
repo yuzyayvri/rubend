@@ -24,24 +24,23 @@ confirmation passes all1,750jobs and sixty answer lengths but loses one
 Superflip lower-bound pair, including native terminal bounds. Promotion remains
 rejected. Matched cancellation p95 is16.03ms, with all fifteen owners retained
 and clean recovery/shutdown. No search speed gain or roadmap completion is
-claimed. Owned stacks and the remaining R04/R05/R06 work
-remain queued. The owned-stack implementation map now includes failure propagation
-and the global-array-mode gate.
+claimed. Remaining R04, R05, and R06 work stays queued.
 
-The R03 owned store and isolated search now have executable prototypes.
-Twelve storage checks pass in native and JavaScript, and six intended
-mutations are rejected. A native comparison matches every frame and metadata
-field across109,325observed states in15cases. This is bounded Light-profile
-evidence only. Portfolio/runtime integration and performance remain open.
-Read docs/verification/R03-OWNED-STACKS.md. The default solver is unchanged.
+The R03 owned-continuation pilot is now verified and rejected for promotion.
+Storage, mutation, 109,325 complete search-state observations, and 21,890 Light
+and Raw portfolio snapshot pairs pass. All 163 shallow optima per profile,
+full application regression, all 23 laws, and both native lifecycle/failure
+paths pass. A nominal affine Tasks queue avoids the reproduced generic-list
+restart array-mode trigger. All sources and negative evidence are preserved.
 
-The isolated affine portfolio and fail-closed runtime now also compile and pass
-focused checks. A nominal Tasks queue avoids the reproduced shared-array-mode
-trigger in recursive generic-list restart. All 21,890 portfolio snapshots match
-in every existing field in Light and Raw, including all 163 shallow optima per
-profile. Full application regression, all 23 laws, and isolated Light and Raw
-native cancellation and failure checks pass. Matched performance and
-broader hidden acceptance remain open. No stack promotion is claimed.
+Five matched cohorts use 20.04 percent more CPU for fast fixed work and
+11.83 percent more for exact work. All 1,750 application jobs pass and sixty
+deadline answer lengths tie, but four Superflip lower-bound pairs regress.
+First-answer p95 misses the latency floor and native RSS does not improve.
+The default solver remains unchanged. Read docs/verification/R03-OWNED-STACKS.md.
+Continue remaining R04 application/projection decisions, R05 scheduling pilots,
+and final R06 hidden-browser, profile, package, and trust checks. Independent
+review remains not run. No overall completion or strength claim is made.
 
 A separate host reporting gap is also fixed. Stronger lower bounds now bypass
 counter-only progress throttling. The test first observes zero instead of

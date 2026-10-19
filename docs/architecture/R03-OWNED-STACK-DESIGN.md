@@ -2,7 +2,8 @@
 
 Status is an isolated solo store, search, affine portfolio, and runtime
 implementation. Bounded search and portfolio comparisons pass. Full regression
-and performance remain open.
+and matched measurements pass their execution checks but reject promotion.
+Independent review remains not run.
 The relevant source is src/search.bend and src/portfolio.bend at81bb524.
 The prior coordinate-only and segmented outcomes do not predict this treatment.
 Independent design review cannot run under the solo instruction.
