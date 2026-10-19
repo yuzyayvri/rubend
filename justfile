@@ -82,6 +82,7 @@ test: build
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
     node tests/lifecycle-compare.mjs
+    node tests/control-ownership-inspect.mjs
 
 audit:
     bend bench/audit.bend -o build/audit
