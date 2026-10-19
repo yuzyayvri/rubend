@@ -150,7 +150,9 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
   contemporary kernel, verify semantics and cancellation, then measure matched
   fixed work and deadlines before resuming R03, R04, R05, and final R06 checks.
 - [ ] Phase C: Run the loop.
-  - [ ] Freeze and inspect the paused ownership treatment.
+  - [x] Freeze and inspect the paused ownership treatment. Its child-admission
+    body matches v2 exactly. Matched quality ties, but first-answer p95 rejects
+    promotion. Keep the reference and all negative evidence.
   - [ ] Run native cancellation, full regression, and all twenty-three laws.
   - [ ] Run matched lifecycle and deadline comparisons without overlapping builds.
   - [ ] Complete remaining roadmap hypotheses and integration checks.
