@@ -4,6 +4,25 @@ check:
 resource-evidence-test:
     node tests/resource-evidence.mjs
 
+owned-continuation-test:
+    node scripts/generate-owned-search.mjs --check
+    node tests/owned-search-generator.mjs
+    bend bench/owned-continuation.bend --verdict
+    bend src/owned/search.bend --verdict
+    bend src/owned/portfolio.bend --verdict
+    bend tests/owned-continuation.bend -o build/owned-continuation-test
+    build/owned-continuation-test --threads 1
+    bend tests/owned-continuation.bend -o build/owned-continuation-test.mjs
+    node tests/owned-continuation.mjs
+    bend tests/owned-search-observer.bend -o build/owned-search-observer-test
+    build/owned-search-observer-test --threads 1
+    bend tests/owned-failures.bend -o build/owned-failures-test
+    node tests/owned-failures.mjs
+    bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence
+    bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence.c
+    node scripts/check-array-mode.mjs build/owned-search-equivalence.c
+    build/owned-search-equivalence --threads 1
+
 build:
     node scripts/build.mjs
 
@@ -31,10 +50,24 @@ test: build
     just h0-meta-test
     just h0-table-test
     just h0-profile-test
+    just segmented-profile-test
     node tests/exact.mjs
     node tests/engine.mjs
+    node tests/engine-lifecycle.mjs
+    node tests/native-lifecycle.mjs
+    node tests/native-control-failures.mjs
+    bend tests/worker-control.bend -o build/worker-control-test
+    node tests/worker-control.mjs
+    bend tests/worker-control-batch.bend -o build/worker-control-batch-test
+    node tests/worker-control-batch.mjs
+    bend src/worker-control.bend -o build/worker-control.mjs
+    node tests/worker-control-scan.mjs
+    just control-io-test
     node tests/http.mjs
     node tests/export.mjs
+    node tests/model-client.mjs
+    node tests/keyboard-playback.mjs
+    node tests/contour-protocol.mjs
     node bench/corpus.mjs --check
     node tests/corpus.mjs
     node tests/scorecard.mjs
@@ -45,6 +78,7 @@ test: build
     node tests/experiment-build.mjs
     node tests/archive-evidence.mjs
     node tests/search-observer.mjs
+    just owned-continuation-test
     node tests/process-cpu.mjs
     bend tests/search-profile.bend -o build/search-profile-test
     build/search-profile-test --threads 1
@@ -73,6 +107,15 @@ test: build
     node tests/corner-orders.mjs
     node tests/startup-measure.mjs
     node tests/warm-compare.mjs
+    node tests/lifecycle-compare.mjs
+    node tests/control-ownership-inspect.mjs
+    node tests/control-detached-probe.mjs
+
+control-io-test:
+    bend tests/control-io.bend -o build/control-io-test
+    bend tests/control-io.bend -o build/control-io-test.c
+    clang -O2 build/control-io-test.c tests/control-read-wrap.c -Wl,--wrap=read -Wl,--wrap=__read_chk -Wl,--wrap=fcntl -o build/control-io-wrapped-test -lpthread -lm
+    node tests/control-io.mjs --wrapped
 
 audit:
     bend bench/audit.bend -o build/audit
@@ -136,6 +179,18 @@ h0-profile-test:
     node tests/h0-profile-generator.mjs
     bend tests/h0-bound.bend -o build/h0-bound-test
     build/h0-bound-test --threads 1
+
+h0-fused-rejected-check:
+    bend tests/h0-fast-codec.bend -o build/h0-fast-codec-test
+    build/h0-fast-codec-test --threads 1
+
+segmented-profile-test:
+    node scripts/generate-segmented-profile.mjs --check
+    node tests/segmented-profile-generator.mjs
+    bend tests/segmented-table.bend -o build/segmented-table-test
+    build/segmented-table-test --threads 1
+    bend tests/segmented-loader.bend -o build/segmented-loader-test
+    node tests/segmented-loader.mjs
 
 loader-test:
     mkdir -p build/evidence

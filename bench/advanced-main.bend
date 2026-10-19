@@ -2,6 +2,7 @@ import Base
 import ../src/main.bend as H
 import ../src/search.bend as S
 import ../src/raw-table-io.bend as Raw
+import ../src/worker-control.bend as Control
 
 def table() -> IO(Array<U32>):
   do IO<Array<U32>>:
@@ -12,9 +13,10 @@ def worker(file: File) -> IO(Unit):
   do IO<Unit>:
     IO.print("{\"type\":\"initializing\"}")
     table : Array<U32> <- table()
-    IO.print("{\"type\":\"ready\"}")
+    control : Control.Context <- Control.open()
+    control : Control.Context <- Control.ready(control)
     read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
-    H.worker_loop(1000000n, table, read, S.RawJoint{})
+    H.worker_loop_controlled(1000000n, table, read, S.RawJoint{}, control)
 
 def command(args: List<String>) -> IO(Unit):
   match args:

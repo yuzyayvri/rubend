@@ -20,15 +20,15 @@ async function seal(path){
   return {path,identity:before,bytes,sha256:digest.digest("hex")};
 }
 const cpu=pid=>parseCpu(readFileSync("/proc/"+pid+"/stat","utf8"),pid);
-const codes={forward:0,"inverse-one":1,"inverse-three":3,corner:4,combined:7,h0:8,"h0-combined":11};
+const codes={forward:0,"inverse-one":1,"inverse-three":3,corner:4,combined:7,h0:8,"h0-combined":11,"h0-fast":12,"h0-combined-fast":15};
 
 export function contourConfig(config){
   const corner=Object.hasOwn(config,"cornerCache"),h0=Object.hasOwn(config,"h0Cache");assert.ok(!(corner&&h0));
-  const optional=corner||h0?["split","stratum"]:["split"];
+  const optional=h0?["split","stratum","h0Kernel"]:corner?["split","stratum"]:["split"];
   assert.deepEqual(Object.keys(config).filter(k=>!optional.includes(k)).sort(),["binary","cache","cacheSha256","count","iterations","output","target","warmup",...corner?["cornerCache","cornerSha256"]:[],...h0?["h0Cache","h0Sha256","h0Meta","h0MetaSha256"]:[]].sort());
   assert.ok(["pilot","development"].includes(config.split??"pilot"));
   if(corner){assert.ok(["uniform","half-turn"].includes(config.stratum??"uniform"));assert.match(config.cornerSha256,/^[0-9a-f]{64}$/);assert.equal(resolve(config.cornerCache),config.cornerCache);}
-  if(h0){assert.ok(["uniform","half-turn"].includes(config.stratum??"uniform"));for(const k of["h0Sha256","h0MetaSha256"])assert.match(config[k],/^[0-9a-f]{64}$/);for(const k of["h0Cache","h0Meta"])assert.equal(resolve(config[k]),config[k]);}
+  if(h0){assert.ok(["uniform","half-turn"].includes(config.stratum??"uniform"));assert.ok(["reference","fused","paired"].includes(config.h0Kernel??"reference"));for(const k of["h0Sha256","h0MetaSha256"])assert.match(config[k],/^[0-9a-f]{64}$/);for(const k of["h0Cache","h0Meta"])assert.equal(resolve(config[k]),config[k]);}
   return corner;
 }
 
@@ -90,7 +90,8 @@ export async function compareContours(config,configPath){
   if(h0){assert.equal(seals.find(s=>s.path===config.h0Cache).sha256,config.h0Sha256);assert.equal(seals.find(s=>s.path===config.h0Meta).sha256,config.h0MetaSha256);}
   const build=JSON.parse(readFileSync(config.binary+".json","utf8"));assert.equal(build.binarySha256,seals.find(s=>s.path===config.binary).sha256);
   const warmup=JSON.parse(readFileSync(config.warmup,"utf8")).records.map((r,i)=>({...r,id:"shallow-"+i}));assert.equal(warmup.length,163);
-  const items=(halfTurn?JSON.parse(readFileSync("bench/corpora/half-turn-v1.json","utf8")).cases:loadCorpus(split)).slice(0,config.count),profiles=corner?["forward","inverse-three","corner","combined"]:h0?["forward","inverse-three","h0","h0-combined"]:["forward","inverse-one","inverse-three"];
+  const h0Profiles=config.h0Kernel==="paired"?["h0","h0-fast","h0-combined","h0-combined-fast"]:config.h0Kernel==="fused"?["forward","inverse-three","h0-fast","h0-combined-fast"]:["forward","inverse-three","h0","h0-combined"];
+  const items=(halfTurn?JSON.parse(readFileSync("bench/corpora/half-turn-v1.json","utf8")).cases:loadCorpus(split)).slice(0,config.count),profiles=corner?["forward","inverse-three","corner","combined"]:h0?h0Profiles:["forward","inverse-one","inverse-three"];
   const report={format:"rubend-contour-comparison-v1",passed:false,config,hz,build,seals,planned:{workers:config.iterations*profiles.length,shallowJobs:config.iterations*profiles.length*warmup.length,measurementJobs:config.iterations*profiles.length*items.length},rounds:[],errors:[],conditions:"Direct full-cube exact traversal from depth zero to declared lower bound, or a replay-checked optimum. Each request has 20,000,000 work-step fuel, not a time budget. CPU ticks include output; native monotonic time excludes output. Same binary and table, actual selected profile echoed by native metadata. Incomplete jobs remain in records. No instrumented observer."};
   try{
     for(let round=0;round<config.iterations;round++){
@@ -104,7 +105,7 @@ export async function compareContours(config,configPath){
         if(h0){process.env.RUBEND_H0_CACHE=config.h0Cache;process.env.RUBEND_H0_META_CACHE=config.h0Meta;}else{delete process.env.RUBEND_H0_CACHE;delete process.env.RUBEND_H0_META_CACHE;}
         let engine;
         try{
-          engine=new Engine({binary:config.binary});await engine.ready(120000);
+          engine=new Engine({binary:config.binary,eventProtocol:"fixed-work"});await engine.ready(120000);
           const worker={profile,identity:cpu(engine.child.pid),directory:engine.directory,shallowPassed:0};cohort.workers.push(worker);
           for(const item of warmup){await sample(engine,item,profile,config.target,hz);worker.shallowPassed++;}
           for(const item of round%2?[...items].reverse():items)cohort.jobs.push(await sample(engine,item,profile,config.target,hz));

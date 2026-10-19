@@ -17,9 +17,13 @@ function run(program, args) {
 for(const script of ["generate-model", "generate-cubie", "generate-coordinates", "generate-symmetry", "generate-symmetry48", "generate-packed-symmetry", "generate-pruning-laws", "generate-small-profile", "generate-corner-profile"]) run(process.execPath, [`scripts/${script}.mjs`, "--check"]);
 run(process.execPath,["scripts/generate-corner-profile.mjs","--check-corner-first"]);
 run(process.execPath,["scripts/generate-h0-profile.mjs","--check"]);
+run(process.execPath,["scripts/generate-segmented-profile.mjs","--check"]);
+run(process.execPath,["scripts/generate-owned-search.mjs","--check"]);
 run("bend", ["PROOF.bend", "--verdict"]);
 for(const name of ["model", "cubie", "notation", "symmetry", "packed-symmetry", "coordinates"]) run("bend", [`src/${name}.bend`, "-o", `build/${name}.mjs`]);
 run("bend", ["src/main.bend", "-o", "build/rubend"]);
+run("bend", ["src/main.bend", "-o", "build/rubend.c"]);
+run(process.execPath,["scripts/check-array-mode.mjs","build/rubend.c"]);
 if(!process.argv.includes("--engine-only")) {
   mkdirSync("build/web", { recursive: true });
   await build({ entryPoints: ["apps/web/main.mjs", "apps/web/worker.mjs"], bundle: true, format: "esm", outdir: "build/web", minify: true, sourcemap: true, target: "es2022" });

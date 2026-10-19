@@ -1,0 +1,31 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-reference-restoration.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/h0-reference-restoration.json.gz",
+      "bytes": 411,
+      "compressedBytes": 293,
+      "sha256": "d24c99ab5e907e5b0002f4c68efa781b22ca37b86ed367ed89a8cbae914b601c",
+      "compressedSha256": "91c0590cfea8977ceecf41b202f04cd0fb7ac35376ab831efdb9c7622be89baf",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-fused-rejection-check-run-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/r04-h0-fused-rejection-check-run-v2.json.gz",
+      "bytes": 3457,
+      "compressedBytes": 1547,
+      "sha256": "9fcd67008e1d5f75d62302851493ec0093a924ae22d68765008ede02b9f4b64e",
+      "compressedSha256": "c7a7e5589330f6477f659b213f11c98a369ed355f025d837e201b2349a422604",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-fused-cleanup-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/h0-fused-cleanup-summary.json.gz",
+      "bytes": 1728,
+      "compressedBytes": 1005,
+      "sha256": "a4b98f67d7178ad4a54ea387fe3e8506a4bfd863fb9b8dc326847fee0084baab",
+      "compressedSha256": "c5c9422f7c52eefd774872045fe5f20a1ce1dc5ec2da01b324c7dd0d650f1fbc",
+      "roundtripPassed": true
+    }
+  ]
+}

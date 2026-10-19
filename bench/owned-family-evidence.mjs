@@ -1,0 +1,27 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync,createReadStream,statSync} from "node:fs";
+import {createHash} from "node:crypto";
+import {execFileSync} from "node:child_process";
+
+const read=path=>JSON.parse(readFileSync(path,"utf8")),hash=bytes=>createHash("sha256").update(bytes).digest("hex"),destination="docs/verification/r03-owned-family-v1";
+const laws=["LAWS.bend","src/model-laws.bend","src/certificate.bend","src/symmetry.bend","src/notation.bend","src/pruning-laws.bend","src/symmetry48-laws.bend"];
+execFileSync("git",["diff","--exit-code","origin/main","--",...laws]);execFileSync("git",["diff","--exit-code","13e2557","--","PROOF.bend"]);execFileSync("git",["diff","--exit-code","HEAD","--","src/search.bend","src/portfolio.bend","src/main.bend"]);
+const runs=["r03-owned-family-build-v2","r03-owned-portfolio-equivalence-v2","r03-owned-queue-confirm-v2","r03-owned-integration-v2"];
+for(const name of runs){const record=read("build/evidence/"+name+".json");assert.equal(record.exitCode,0,name);assert.equal(record.stoppedFor,null,name);}
+const failed=read("build/evidence/r03-owned-family-build-v1.json");assert.equal(failed.exitCode,1);assert.match(failed.stderr,/shared-array mode/);
+const generic=read("build/experiments/r03-owned-generic-confirm-v2/result.json"),nominal=read("build/experiments/r03-owned-nominal-confirm-v2/result.json");
+assert.equal(generic.rows.find(row=>row.name==="restart").sharedArrayMode,1);assert.equal(generic.rows.find(row=>row.name==="restart-task-direct").sharedArrayMode,0);for(const row of nominal.rows)assert.equal(row.sharedArrayMode,0);
+const reformatted=[];
+for(const [name,count]of[["r03-owned-light-states-v1",350],["r03-owned-light-shallow-v2",10595],["r03-owned-raw-states-v1",350],["r03-owned-raw-shallow-v2",10595]]){
+  const source="build/evidence/"+name+".json",bytes=readFileSync(source),record=JSON.parse(bytes);assert.equal(record.passed,true);assert.equal(record.counts.snapshots,count);
+  const compact=Buffer.from(JSON.stringify(record)+"\n"),path="build/evidence/"+name+"-compact.json";assert.deepEqual(JSON.parse(compact),record);writeFileSync(path,compact,{flag:"wx"});assert.equal(hash(readFileSync(source)),hash(bytes));
+  reformatted.push({source,originalSha256:hash(bytes),originalBytes:bytes.length,compact:path,compactSha256:hash(compact),compactBytes:compact.length,objectRoundtrip:true,counts:record.counts,referenceBinarySha256:record.referenceBinarySha256,candidateBinarySha256:record.candidateBinarySha256});
+}
+const cache="/home/yuzy/rubend/.cache/joint/phase1-v1.raw",identity=()=>{const s=statSync(cache,{bigint:true});return["dev","ino","size","mtimeNs","ctimeNs","mode"].map(key=>String(s[key]));},before=identity(),digest=createHash("sha256");for await(const chunk of createReadStream(cache))digest.update(chunk);assert.deepEqual(identity(),before);const cacheSha256=digest.digest("hex");assert.equal(cacheSha256,"2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5");
+const sources=["scripts/generate-owned-search.mjs","bench/owned-continuation.bend","bench/owned-search-observer.bend","bench/owned-portfolio-array-probe.mjs","bench/owned-array-probe.mjs","bench/build-fixed-timer.mjs","bench/owned-fixed.bend","bench/owned-advanced.bend","src/owned/search.bend","src/owned/portfolio.bend","src/owned/main.bend","src/owned/manifest.json","tests/owned-failures.bend","tests/owned-failures.mjs","tests/owned-search-generator.mjs","justfile","LAWS.bend","PROOF.bend"];
+const summary={format:"rubend-owned-family-evidence-v1",passed:true,reformatted,sourceHashes:Object.fromEntries(sources.map(path=>[path,hash(readFileSync(path))])),builds:Object.fromEntries(["r03-owned-light-v2","r03-owned-raw-v2","r03-owned-fixed-v2","r03-owned-reference-fixed-v1","r03-owned-reference-timer-v1","r03-owned-timer-v2"].map(name=>[name,read("build/experiments/"+name+".json")])),cache:{path:cache,sha256:cacheSha256,identity:before},snapshots:reformatted.reduce((sum,row)=>sum+row.counts.snapshots,0),shallowOptimaPerProfile:163,checkedLaws:23,defaultEngineChanged:false,performanceMeasured:false,independentReview:false};
+assert.equal(summary.snapshots,21890);writeFileSync("build/evidence/r03-owned-family-summary-v1.json",JSON.stringify(summary,null,2)+"\n",{flag:"wx"});
+mkdirSync(destination,{recursive:true});
+const entries=[...runs.map(name=>["build/evidence/"+name+".json",name]),["build/evidence/r03-owned-family-build-v1.json","rejected-generic-array-mode"],["build/evidence/r03-owned-portfolio-equivalence-v1.json","reference-shallow-cap"],["build/evidence/r03-owned-integration-v1.json","stopped-launcher"],["build/experiments/r03-owned-generic-confirm-v2/result.json","generic-restart-probe"],["build/experiments/r03-owned-nominal-confirm-v2/result.json","nominal-restart-probe"],["build/experiments/r03-owned-array-probe-v5/result.json","simple-list-probes"],...reformatted.map(row=>[row.compact,row.compact.split("/").at(-1).replace(/\.json$/,"" )]),["build/evidence/r03-owned-family-summary-v1.json","summary"]];
+const receipts=entries.map(([source,name])=>JSON.parse(execFileSync(process.execPath,["bench/archive-evidence.mjs",source,destination+"/"+name+".json.gz"],{encoding:"utf8",maxBuffer:1048576})));
+writeFileSync(destination+"/index.json",JSON.stringify({receipts,reformatted},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,archives:receipts.length,snapshots:summary.snapshots,performanceStillDue:true}));

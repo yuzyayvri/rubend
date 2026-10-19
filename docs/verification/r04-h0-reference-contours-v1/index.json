@@ -1,0 +1,85 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-reference-contours-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/h0-reference-contours-summary.json.gz",
+      "bytes": 16776,
+      "compressedBytes": 3119,
+      "sha256": "36ff0da4c593e604f7ebf0c2813f74476cb8711ef41926d823d2f9117856abc7",
+      "compressedSha256": "c993c1a4228f49f0a68db1b78c92d34913d3a3779ea7fdc42d8659d21ab7a44e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-pilot-config-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-pilot-config-v1.json.gz",
+      "bytes": 854,
+      "compressedBytes": 412,
+      "sha256": "f55e505e03c7e76c7fe756e7908bae2af8516b8db2ed5ecdd35508a9f0d29ec2",
+      "compressedSha256": "7d29a2f883c998365fd801e7ebd36478fdf6e518c295ff6016002121b7f45f76",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-pilot-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-pilot-run-v1.json.gz",
+      "bytes": 1193,
+      "compressedBytes": 684,
+      "sha256": "1834033936990e659e31bd7cf858363695fdc4843d3bf762553ad0d5729438fd",
+      "compressedSha256": "1ab033c4cb207f05e6dd45883ec43d29dea13b6d63086b2f65f2524c72498a56",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-pilot-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-pilot-v1.json.gz",
+      "bytes": 103317,
+      "compressedBytes": 11870,
+      "sha256": "b3d2f734da45145259a32090796e036db310a33b6db3a989c35f0ded6bb08b52",
+      "compressedSha256": "08d8e29a394c6f3e950bc1277952a27e99861cd835b23ad21c90db5ac08b2eb8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-pilot-summary-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-pilot-summary-v1.json.gz",
+      "bytes": 6944,
+      "compressedBytes": 1666,
+      "sha256": "79576bb5cfe63be913870bc63dbd32ca2615b2a95c04d94fb737fc4a445a76f2",
+      "compressedSha256": "c334717698477aadc9846ccb5607ba1224f5f57186aa509ad0a369cdcdfead3d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-development-config-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-development-config-v1.json.gz",
+      "bytes": 866,
+      "compressedBytes": 416,
+      "sha256": "de3fc4ba2513b0794c347cd65524b50fc34a8c0e4d4b7a01656e9d0b589f29fe",
+      "compressedSha256": "e37da355ecba17fd08729138f4d9a667cfbaee4ed6f9e9e27b99c322a5030932",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-development-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-development-run-v1.json.gz",
+      "bytes": 1211,
+      "compressedBytes": 685,
+      "sha256": "583b3ed07c077c7ea351bb27b4f3607b8af11343cd2ef733554fa68d3475d022",
+      "compressedSha256": "8846233c8f98dccae70acf7b6fea64688ff0d155d306e99aad0f654915e8e9aa",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-development-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-development-v1.json.gz",
+      "bytes": 105340,
+      "compressedBytes": 11678,
+      "sha256": "3f7dacd5e14ad17e1c415228a7ff93cb1d1e816ea74b069b6bfad5af682a91b7",
+      "compressedSha256": "e5a771ed222eac84d412331fc1cf85220f7ead9b0d576c097c57936ca40a2ea7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-contour-development-summary-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-reference-contours-v1/r04-h0-contour-development-summary-v1.json.gz",
+      "bytes": 6941,
+      "compressedBytes": 1657,
+      "sha256": "773012dd5af8343d53726c785342ecee8ae53421fc9bfdc07e7b6e0b9f371971",
+      "compressedSha256": "b0462d051a5ea499d38bae743e98ec7908b6f19205c01a41937b48d4ce57885d",
+      "roundtripPassed": true
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,existsSync,chmodSync} from "node:fs";
+import {resolve} from "node:path";
+import {createHash} from "node:crypto";
+
+assert.equal(process.argv.length,5,"Expected matched-quality-config fresh-wrapper fresh-config");
+const [source,wrapper,output]=process.argv.slice(2).map(path=>resolve(path)),hash=bytes=>createHash("sha256").update(bytes).digest("hex");
+for(const path of[wrapper,wrapper+".json",output])assert.equal(existsSync(path),false,"Fresh probe paths required");
+assert.ok(wrapper.startsWith(resolve("build/experiments")+"/"));
+const original=readFileSync(source),config=JSON.parse(original);assert.equal(config.profiles.length,2);
+const candidate=config.profiles[1],target=resolve(candidate.binary),metadata=JSON.parse(readFileSync(candidate.buildMetadata,"utf8"));
+assert.match(target,/^[a-zA-Z0-9_./-]+$/);assert.equal(hash(readFileSync(target)),metadata.binarySha256);
+const bytes=Buffer.from(`#!/bin/sh\nunset RUBEND_CONTROL_FIFO\nexec '${target}' "$@"\n`);
+writeFileSync(wrapper,bytes,{flag:"wx"});chmodSync(wrapper,0o755);
+const record={format:"rubend-detached-control-probe-v1",binarySha256:hash(bytes),target,targetBinarySha256:metadata.binarySha256,targetBuild:metadata,sourceConfig:source,sourceConfigSha256:hash(original),claim:"The wrapper execs the same sealed native binary as the other profile, without its control FIFO. This isolates the enabled protocol and service path, not compiler ABI differences."};
+writeFileSync(wrapper+".json",JSON.stringify(record,null,2)+"\n",{flag:"wx"});
+config.profiles[0]={...candidate,id:"detached-raw",binary:wrapper,buildMetadata:wrapper+".json"};
+assert.equal(config.profiles[1].binary,target);
+writeFileSync(output,JSON.stringify(config,null,2)+"\n",{flag:"wx"});
+assert.equal(hash(readFileSync(target)),metadata.binarySha256);assert.deepEqual(readFileSync(wrapper),bytes);
+console.log(JSON.stringify({passed:true,wrapper,output,targetBinarySha256:metadata.binarySha256,bothProfilesSealSameTarget:true}));

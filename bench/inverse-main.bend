@@ -2,14 +2,16 @@ import Base
 import ./advanced-main.bend as A
 import ../src/main.bend as H
 import ../src/search.bend as S
+import ../src/worker-control.bend as Control
 
 def worker(file: File) -> IO(Unit):
   do IO<Unit>:
     IO.print("{\"type\":\"initializing\"}")
     table : Array<U32> <- A.table()
-    IO.print("{\"type\":\"ready\"}")
+    control : Control.Context <- Control.open()
+    control : Control.Context <- Control.ready(control)
     read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
-    H.worker_loop(1000000n, table, read, S.RawInverseThree{})
+    H.worker_loop_controlled(1000000n, table, read, S.RawInverseThree{}, control)
 
 def command(args: List<String>) -> IO(Unit):
   match args:

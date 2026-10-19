@@ -1,0 +1,48 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-fused-paired-pilot-config-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/r04-h0-fused-paired-pilot-config-v1.json.gz",
+      "bytes": 883,
+      "compressedBytes": 429,
+      "sha256": "b28e9b4971b25a4d30db046e6131cdd6766a520e877c819f6814ba241eb65700",
+      "compressedSha256": "65bea199fb4087a001990b3bb6ff4f9f9604f5e0ac7440de75e85aba770c5f2d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-fused-paired-pilot-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/r04-h0-fused-paired-pilot-v1.json.gz",
+      "bytes": 103622,
+      "compressedBytes": 10934,
+      "sha256": "098e64bc9b01ab0bd6a00b22d2d2308df468e5f8d7ebdd598f689839489e01b7",
+      "compressedSha256": "dbe063c58d15274b2720f3ab8808e64609c873b3f15b6f140f9cd63218aa0a04",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r04-h0-fused-paired-pilot-run-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/r04-h0-fused-paired-pilot-run-v1.json.gz",
+      "bytes": 1208,
+      "compressedBytes": 691,
+      "sha256": "a821905482e1ee40a13bd548fd3e43b9615e49f5889e7f113881b591400ca9c8",
+      "compressedSha256": "cfc05c98df1b32d1b03c9bc60e6fb29a053c97052b21462e8f42358a13a979a8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/h0-fused-rejection-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r04-h0-fused-rejected-v1/h0-fused-rejection-summary.json.gz",
+      "bytes": 5070,
+      "compressedBytes": 1324,
+      "sha256": "b6b9740dafbcf09b080f6d54f477e7b736986a3926d7fed932760fbd99368a9b",
+      "compressedSha256": "be67f631b154af63aba8a9520bc69a2576d367697e9c984eaae24722438030cd",
+      "roundtripPassed": true
+    }
+  ],
+  "prototype": {
+    "commit": "311e49fa98d554b8150871f23d2a57560b53c380",
+    "base": "402e8991d25dfead4c0f6fd4a7dbdb53f8d35a41",
+    "path": "prototype.patch.gz",
+    "sha256": "9d623b6c87279500447e411da9613048ba059b6cb58697eaf7bea6d6c2f265cc",
+    "bytes": 36921,
+    "roundtrip": true
+  }
+}

@@ -1,5 +1,210 @@
 # Current state of Rubend
 
+## Private-review fixes and directed merge
+
+PR 1 is closed and PR 2 retains its full checkpoint plus the contour protocol
+and keyboard playback fixes. Five focused checks, the complete `just test`, and
+all sixteen `just check` gates pass. The full run finished at 23:46 Manila on
+October 19. Read docs/verification/PRIVATE-REVIEW-PASS-2.md and its source-bound
+receipts. No independent or real-browser verification is claimed for this pass.
+
+Yuzy explicitly directed merging on October 20 and repeated the direction after
+the independent-review gate was disclosed. Work remains solo and Astra remains
+prohibited. Main's twenty-seven diverged commits have exact patch counterparts
+in the PR, and its complete tree equals PR checkpoint 402e899. An ancestry-only
+merge preserves the previously tested source tree exactly. A redundant full
+confirmation is running unattended as private-review-merge-full-v1. Read its
+saved results on a later ping; do not poll or create an automatic wakeup.
+
+## Latest unattended verification
+
+Yuzy requested an unattended local test queue on 2026-10-19 to avoid spending
+model usage while long checks run. Run r06-unattended-20261019-v1 passed all
+three jobs and finished at 21:23:29 Manila, after 258.79 seconds. The detached
+worker has stopped. Six optional profiles pass build and array-mode checks,
+retained-owner cancellation, stable descriptors, fragmented and stale control,
+and thirty real native control failures. The staged package passes native,
+HTTP, export, and all sixteen toolchain checks with the unchanged 23 laws.
+This is not Nix sandbox, relocation, independent-review, or GUI acceptance.
+Read docs/verification/r06-unattended-20261019-v1/index.json for source-bound
+receipts. Yuzy resumed at 21:51 and made detached test batches the standing
+workflow. Prepare a meaningful fixed batch, launch it, and pause with an ETA.
+Do not poll long tests or create automatic model wakeups. Read
+docs/verification/BACKGROUND-TESTS.md before starting another batch.
+
+The R05 queue r05-scheduling-unattended-20261019-v1 also passed its execution
+checks, finishing at 22:13:10 Manila in 595.998 seconds. All 3,500 native jobs
+and 10,585 independently replayed candidate events pass. Both policies tie
+all sixty deadline answer lengths, but each loses one Superflip native lower
+bound and misses its first-answer latency floor. Neither policy is promoted.
+The default search, ordering, restarts, and 23 laws remain unchanged. Read
+docs/verification/R05-SCHEDULING.md and the source-bound archive beside it.
+The worker has stopped. No further tests are left running from either queue.
+
+Yuzy requested a bounded closeout and public-facing README refresh at 22:20,
+with 19 percent of the five-hour usage window remaining. This pass records
+measured dispositions and updates the overview rather than starting another
+expensive feature or repeating completed tests. See
+docs/verification/ROADMAP-REPORT-2026-10-19.md for the consolidated roadmap,
+strength, benchmarks, and remaining limitations. The roadmap is not complete.
+
+The H0 application comparison also passes all 1,750 jobs, with sixty paired
+deadline lengths and lower bounds tied. First-answer p95 is 13 versus 12 ms,
+22 versus 22 ms, and 1,674 versus 1,675 ms. There is no observed canary quality
+gain and no promotion. Source-sealed evidence is under
+docs/verification/r04-h0-application-v1. Remaining R04 projection decisions,
+R05 implementation, and broader R06 acceptance stay pending while the chat rests.
+
+## Active resume
+
+Yuzy resumed on 2026-10-19 in the managed writer below, with solo work, hidden
+previews, unchanged twenty-three laws, frequent commits, and verified pushes
+when finished. No subagents may run. Independent review remains not run.
+
+The single-owned control File treatment is implemented. Its emitted raw C
+restores BLK_SHR zero and the reference child-admission body. Focused IO, parser,
+native reuse, stable-descriptor, and real failure/cleanup checks pass. The
+complete v5 native-source application suite and all sixteen toolchain/proof gates
+pass with the unchanged twenty-three laws. The FIFO-kind startup guard is
+included. The frozen raw binary is build/experiments/r06-raw-v5. build/rubend
+and its frontend now also contain this final source. Native and actual Bun
+FFI boundary checks pass. Broader hidden GUI/profile/package acceptance remains.
+Read docs/verification/R06-OWNED-CONTROL.md.
+
+The first v4 quality run passes1,750jobs and ties sixty answer lengths and
+lower bounds, but short-case first-answer p95 misses the five-percent floor.
+Same-binary A/A produces fast p95 values of13and16ms, beyond the five-percent
+noise limit. Latency acceptance is therefore inconclusive, not passed. The v5
+confirmation passes all1,750jobs and sixty answer lengths but loses one
+Superflip lower-bound pair, including native terminal bounds. Promotion remains
+rejected. Matched cancellation p95 is16.03ms, with all fifteen owners retained
+and clean recovery/shutdown. No search speed gain or roadmap completion is
+claimed. Remaining R04, R05, and R06 work stays queued.
+
+The R03 owned-continuation pilot is now verified and rejected for promotion.
+Storage, mutation, 109,325 complete search-state observations, and 21,890 Light
+and Raw portfolio snapshot pairs pass. All 163 shallow optima per profile,
+full application regression, all 23 laws, and both native lifecycle/failure
+paths pass. A nominal affine Tasks queue avoids the reproduced generic-list
+restart array-mode trigger. All sources and negative evidence are preserved.
+
+Five matched cohorts use 20.04 percent more CPU for fast fixed work and
+11.83 percent more for exact work. All 1,750 application jobs pass and sixty
+deadline answer lengths tie, but four Superflip lower-bound pairs regress.
+First-answer p95 misses the latency floor and native RSS does not improve.
+The default solver remains unchanged. Read docs/verification/R03-OWNED-STACKS.md.
+Continue remaining R04 application/projection decisions, R05 scheduling pilots,
+and final R06 hidden-browser, profile, package, and trust checks. Independent
+review remains not run. No overall completion or strength claim is made.
+
+A separate host reporting gap is also fixed. Stronger lower bounds now bypass
+counter-only progress throttling. The test first observes zero instead of
+zero, one, and two; the focused rebuilt native/HTTP/export suite and all23laws
+pass after the change. Read docs/issues/progress-bound-throttle.md. This does
+not explain away the v5 native lower-bound loss. New comparisons must record
+the changed host adapter.
+
+## Inherited ownership investigation
+
+The paused R06 source is now frozen as build/experiments/r06-raw-v3. Actual
+raw-table cancellation, fragmented/stale control, retained PID, recovery, IPC
+cleanup, host fixtures, and all sixteen toolchain/proof checks pass. The
+rerunnable child-admission inspection finds the same emitted body as v2,
+including five borrowed-location arguments. The ownership hypothesis did not
+produce its intended C change.
+
+Five fresh matched-kernel cohorts pass all 1,750 application jobs and tie all
+sixty answer lengths and lower bounds. Superflip first-answer p95 is 2,293 ms
+for the contemporary reference and 2,520 ms for v3. That exceeds the five-percent
+latency floor, so v3 is not promoted. Full regression and all sixteen final
+toolchain/proof gates pass. Fresh matched cancellation p95 is 25.76 ms, with
+all fifteen cooperative table owners retained. A separate
+tail-state compiler probe is rejected after emitting the same hot function.
+A same-binary detached/cooperative comparison passes all1,750jobs and ties
+quality. Its first-answer ranges overlap. A minimal native test isolates reused
+opaque channels as a trigger for global shared-array mode. The extra location
+arguments were previously mislabeled as ordinary borrows. Read
+docs/research/CONTROL-ARRAY-MODE.md. This led to the File-owner treatment above,
+preserving the Bend parser and pure engine. Neither C
+shape nor search work-step counts establish a speedup.
+
+The reproducible C-inspection tool and rejecting fixtures are committed at
+3ea769c. Read docs/verification/R06-LIFECYCLE.md for current receipts and the
+remaining roadmap gates. The following safe-pause section is historical.
+
+## Previous safe pause
+
+Yuzy explicitly paused on 2026-10-19, Asia/Manila, with15percent usage remaining.
+No owned experiment, build, native worker, or preview server remains running.
+Four verified-dead scratch/IPC directories from interrupted baseline fixtures
+are removed after saving their diagnostic contents. Keep sealed tables, frozen
+binaries, source snapshots, and the existing node_modules symlink.
+The continuation prompt is in chat, not a repository artifact.
+
+The managed writer is /home/yuzy/.codex/worktrees/roadmap-r01/rubend.
+Its latest commit is the safe WIP pause checkpoint after81bb524. Use the shared
+pstack checkpoint locator and Git log for its exact identity. Nothing is pushed
+during this pause. Resume only after Yuzy asks.
+
+Main and origin/main are both at 076682d937e40355aed444bfdfe0e5efd316d85d.
+That integrated checkpoint passes just check, just test, and the standalone
+twenty-three-law verdict. Later H0 measurement/rejection work is committed
+locally in the writer. The segmented foundation is a local WIP checkpoint.
+Its word, fixed-state, malformed-input, and kernel checks pass; the final new
+build/test hooks have not had another complete application-suite run.
+
+Segmented measurements now pass all jobs but reject promotion. RSS is 45.9 percent
+lower; fixed-work CPU misses the overhead target and three Superflip lower bounds
+regress. Keep the default unchanged. Read docs/verification/R03-SEGMENTED.md.
+Continue with the lifecycle implementation and remaining hypotheses. Owned stacks, remaining R04
+decisions, R05, and most of R06 still need work. No overall completion,
+world-class strength, new default profile, or independent review is claimed.
+
+The lifecycle core is implemented. Protocol-two cancellation retains the native
+table owner, while frozen legacy backends restart serially. Startup abort, late
+IDs, malformed events, terminal contradictions, and browser-worker failure have
+executable checks. Full regression passes before the last small host/browser
+guards; their focused checks and actual hidden failure/recovery path pass afterward.
+The hidden warming fixture also verifies truthful readiness. Five matched raw
+cohorts observe cancel-to-ready medians 2,046.43 ms and 2.95 ms, with cooperative
+p95 14.11 ms and fifteen of fifteen retained owners. This is not search throughput.
+The first deadline-quality run passes all 1,750 jobs and ties sixty answer lengths
+but loses four Superflip lower bounds. It rejects promotion. An instrumented
+diagnostic finds 636 native pselect6 calls versus one during marked search. The
+second treatment batches 64-byte reads and yields once per eight slices. Parser,
+native cancellation, host fixtures, and a real frozen fixed-work timer pass.
+The batched candidate is build/experiments/r06-raw-v2, with frozen metadata and
+source snapshot. Its diagnostic sees 103 pselect6 calls rather than 636, without
+using traced timings as release evidence. Its five-cohort quality run also passes
+all1,750jobs and sixty answer lengths but loses three Superflip lower bounds.
+Neither version is promoted. The OS-polling explanation is therefore incomplete.
+
+The R01 control predates inverse-bound plumbing. A new contemporary reference is
+build/experiments/r06-reference-v1, exported from62de4d8 with readback provenance.
+Its search, portfolio, cubie, coordinates, and raw loader hashes equal the current
+candidate. Keep the historical quality failures visible, but use this matched
+kernel control when isolating lifecycle overhead.
+
+Emitted C also shows extra borrowed-location arguments in hot search functions
+under the cooperative Loop wrapper, even with unchanged pure source. This is
+observed ABI evidence, not proof of the cause. The current unmeasured treatment
+removes that Loop wrapper and hands the affine table to one of two IO continuations.
+It restores the original service-loop shape and retains the64-byte reader and
+eight-slice checkpoint. RootMain check-only and native smoke compilation pass.
+Regenerated variants are refreshed. Just check passes all16gates, including the
+unchanged23-law verdict, in build/evidence/r06-pause-check-v1.json.
+This latest service shape has no frozen raw binary, solve/cancel test, matched
+timing, deadline result, or full regression yet. build/rubend still contains the
+previous built treatment; do not mistake it for the paused source.
+
+First on resume, inspect/compile the current ownership treatment against the
+matched reference, then run native semantics, cancellation, full gates, and fresh
+matched comparisons. Do not weaken the quality floor or infer speed from C shape.
+The fixed-work timer now selects its explicit diagnostic-event opt-in;
+default solver events remain strict. Final full integration, broader GUI, optional-profile
+lifecycle, and packaging remain. Read docs/verification/R06-LIFECYCLE.md and its
+linked receipts. R06 is not complete.
+
 ## Latest verified work
 
 R04's full spatial-symmetry foundation is implemented and verified. All five
@@ -50,8 +255,26 @@ fresh feasibility cohorts admitted the bounded full run. A separately
 implemented full reference BFS agrees on every distance and both padding bytes.
 The isolated profile, all 47,871 cache-backed bound queries, malformed-cache
 checks, the full development regression, and unchanged-law kernel checks pass.
-Read [the data evidence](verification/R04-H0-TABLE.md). Direct-contour and
-application comparisons are next, against frozen controls.
+Read [the data evidence](verification/R04-H0-TABLE.md). Application comparisons
+remain unrun.
+The reference contour comparisons are now complete on pilot and disjoint
+development sets. All 640 measured jobs and 6,520 shallow checks pass. The
+kernel misses the ten-percent marginal gate over inverse-three. Read
+[the measured disposition](verification/R04-H0-REFERENCE-CONTOURS.md).
+The fused-ranking treatment is rejected after identical-traversal timing.
+It gives no useful total gain. Its source and raw evidence are preserved in
+the rejection archive; the live H0 runtime is restored to the reference.
+
+R03's segmented raw owner is also a live isolated prototype. All 285,525,248
+used words match the original loader. All 4,075 shallow and 350 general
+fixed-work snapshots agree, including cubes, paths, bounds, and completion.
+Five repeated cohorts observe45.9percent lower native RSS but reject promotion
+after CPU overhead and three lower-bound losses. Independent review remains open. Read
+[the data shape and remaining checks](architecture/R03-SEGMENTED-DESIGN.md).
+Read [the verified foundation](verification/R03-SEGMENTED.md). The prototype
+also closes a zero-geometry/profile collision before promotion.
+Its real initialization test fails before and passes after the positive-size
+guard. Full data identity and fixed-state checks are rerun after that fix.
 No integrated strength gain or default switch is claimed. R03, R05, and R06
 remain open. Independent review remains not run under solo work.
 

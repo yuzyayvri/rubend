@@ -19,4 +19,9 @@ try{
   const h0Result=run(h0);assert.equal(h0Result.status,0,h0Result.stderr);const h0Summary=JSON.parse(h0Result.stdout);assert.equal(h0Summary.format,"rubend-h0-contour-adjudication-v1");assert.ok(Math.abs(h0Summary.comparisons["inverse-three/h0-combined"].geometricCpuRatio-.5)<1e-10);
   const mixed=structuredClone(h0);mixed.config.cornerCache="/corner";assert.notEqual(run(mixed).status,0);
   console.log(JSON.stringify({passed:true,h0Policies:true,mixedProjectionRejected:true}));
+  const fused=structuredClone(h0);fused.config.h0Kernel="fused";for(const r of fused.rounds)for(const x of[...r.workers,...r.jobs]){if(x.profile==="h0")x.profile="h0-fast";if(x.profile==="h0-combined")x.profile="h0-combined-fast";}assert.equal(run(fused).status,0);
+  const paired=structuredClone(h0);paired.config.h0Kernel="paired";for(const r of paired.rounds){for(let i=0;i<4;i++){r.workers[i].profile=["h0","h0-fast","h0-combined","h0-combined-fast"][i];r.jobs[i].profile=r.workers[i].profile;r.jobs[i].nodes=i<2?10000:6000;}}
+  const pairing=run(paired);assert.equal(pairing.status,0,pairing.stderr);assert.ok(Math.abs(JSON.parse(pairing.stdout).comparisons["h0/h0-fast"].geometricCpuRatio-.8)<1e-10);
+  for(const r of paired.rounds)r.jobs[1].nodes++;const changed=run(paired);assert.notEqual(changed.status,0);assert.match(changed.stderr,/Fused ranking changed traversal/);
+  console.log(JSON.stringify({passed:true,fusedH0Policies:true,sameTraversalRequired:true}));
 }finally{rmSync(temporary,{recursive:true,force:true});}
