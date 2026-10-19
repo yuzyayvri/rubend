@@ -1,5 +1,24 @@
 # Current state of Rubend
 
+## Background-only interval
+
+Yuzy requested an unattended local test queue on 2026-10-19 to avoid spending
+model usage while long checks run. Implementation pauses after launching the
+fixed queue. No heartbeat or automatic AI wakeup is created. The planned run ID
+is r06-unattended-20261019-v1. Read its plan at
+build/evidence/r06-unattended-20261019-v1-plan.json and its mutable status at
+build/experiments/r06-unattended-20261019-v1/status.json.
+Expected completion is about fifteen minutes after launch, with a thirty-minute
+aggregate queue cap. Results stay on disk until Yuzy pings again. Read
+docs/verification/BACKGROUND-TESTS.md before resuming or starting another build.
+
+The H0 application comparison also passes all 1,750 jobs, with sixty paired
+deadline lengths and lower bounds tied. First-answer p95 is 13 versus 12 ms,
+22 versus 22 ms, and 1,674 versus 1,675 ms. There is no observed canary quality
+gain and no promotion. Source-sealed evidence is under
+docs/verification/r04-h0-application-v1. Remaining R04 projection decisions,
+R05 implementation, and broader R06 acceptance stay pending while the chat rests.
+
 ## Active resume
 
 Yuzy resumed on 2026-10-19 in the managed writer below, with solo work, hidden

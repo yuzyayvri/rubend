@@ -1,6 +1,14 @@
 # H0 symmetry prototype
 
-Status: the full forty-eight-case specification action is implemented. The five
+Current status supersedes the historical proposal below. The complete H0 table,
+native audit, and independent BFS now agree on all 117,567,450 entries. Direct
+contours miss the ten-percent marginal gain over inverse-three. The application
+canary passes 1,750 jobs with sixty deadline length and lower-bound ties, not a
+quality gain or default promotion. Read docs/verification/R04-H0-TABLE.md and
+docs/verification/R04-H0-REFERENCE-CONTOURS.md. The six-edge fallback and remaining
+projection decisions are pending.
+
+Original foundation status: the full forty-eight-case specification action is implemented. The five
 approved action laws pass the ordinary checker and BendTT. Runtime regression,
 native comparisons, and deliberate-error rejection pass. The raw corner codec
 also passes all 153,090 cases and target checks. The small quotient reaches
