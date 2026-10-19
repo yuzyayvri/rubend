@@ -1,4 +1,4 @@
-#!/nix/store/gxq2cd70i077rah1d4hkzc1lpq8q4pv8-nodejs-24.21.0/bin/node
+#!/usr/bin/env node
 import {appendFileSync,createReadStream,readFileSync,writeFileSync} from "node:fs";
 import {createInterface} from "node:readline";
 
