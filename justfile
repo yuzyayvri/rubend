@@ -4,6 +4,21 @@ check:
 resource-evidence-test:
     node tests/resource-evidence.mjs
 
+owned-continuation-test:
+    node scripts/generate-owned-search.mjs --check
+    bend bench/owned-continuation.bend --verdict
+    bend src/owned/search.bend --verdict
+    bend tests/owned-continuation.bend -o build/owned-continuation-test
+    build/owned-continuation-test --threads 1
+    bend tests/owned-continuation.bend -o build/owned-continuation-test.mjs
+    node tests/owned-continuation.mjs
+    bend tests/owned-search-observer.bend -o build/owned-search-observer-test
+    build/owned-search-observer-test --threads 1
+    bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence
+    bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence.c
+    node scripts/check-array-mode.mjs build/owned-search-equivalence.c
+    build/owned-search-equivalence --threads 1
+
 build:
     node scripts/build.mjs
 
@@ -57,6 +72,7 @@ test: build
     node tests/experiment-build.mjs
     node tests/archive-evidence.mjs
     node tests/search-observer.mjs
+    just owned-continuation-test
     node tests/process-cpu.mjs
     bend tests/search-profile.bend -o build/search-profile-test
     build/search-profile-test --threads 1

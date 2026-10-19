@@ -18,6 +18,7 @@ for(const script of ["generate-model", "generate-cubie", "generate-coordinates",
 run(process.execPath,["scripts/generate-corner-profile.mjs","--check-corner-first"]);
 run(process.execPath,["scripts/generate-h0-profile.mjs","--check"]);
 run(process.execPath,["scripts/generate-segmented-profile.mjs","--check"]);
+run(process.execPath,["scripts/generate-owned-search.mjs","--check"]);
 run("bend", ["PROOF.bend", "--verdict"]);
 for(const name of ["model", "cubie", "notation", "symmetry", "packed-symmetry", "coordinates"]) run("bend", [`src/${name}.bend`, "-o", `build/${name}.mjs`]);
 run("bend", ["src/main.bend", "-o", "build/rubend"]);

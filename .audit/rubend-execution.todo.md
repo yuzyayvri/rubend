@@ -168,10 +168,22 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
     - [x] Migrate runtime callers and generated variants in one wave.
     - [ ] Require unshared-array C, native cancellation, complete regression,
       all twenty-three laws, and fresh matched measurements.
+      Native-source v5 passes the complete suite, all23laws, and matched
+      cancellation at p9516.03ms with15retained owners. Final quality passes
+      1750jobs and sixty lengths but loses one Superflip lower bound. Keep
+      promotion rejected. A later host-only bound-reporting fix passes its
+      failing-before and focused rebuilt checks.
     - [ ] Run five same-binary A/A cohorts before a performance verdict. Keep
       the five-percent p95 floor closed if control noise exceeds it. Require a
       fresh five-cohort confirmation rather than selecting a lucky first run.
+      Both batches are complete. A/A short-case noise exceeds5percent, and
+      the final confirmation's lower-bound loss is retained. No further lucky
+      reruns are planned to clear this gate.
   - [ ] Complete remaining roadmap hypotheses and integration checks.
+    - [x] R03 owned store and isolated search. Twelve native/JS storage checks,
+      six rejecting mutations, and109325complete state comparisons pass.
+    - [ ] Migrate affine portfolio and runtime, compare full portfolio states,
+      and measure fixed work, native memory, deadlines, and completed contours.
 - [ ] Phase D: Keep the audit trail.
 - [ ] Phase E: Verify and hand back.
 - [ ] BLOCKED: independent review. User requires solo work, including no 6-family agents.

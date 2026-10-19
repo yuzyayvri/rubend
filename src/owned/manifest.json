@@ -1,0 +1,16 @@
+{
+  "format": "rubend-generated-owned-search-v1",
+  "sourceHashes": {
+    "src/search.bend": "a3527ec1fded8d81f632107eb915ca2c4a6dca46de61eefca9d2661b99c4e062",
+    "bench/owned-continuation.bend": "c4958b8c4c2cfb883a19703f573b595f8472415a7ed388fec1445cab0e3cb757"
+  },
+  "outputHashes": {
+    "src/owned/search.bend": "dc83382e5e74c88a3ac25cf39e87e2d35aed00a73c2c7f513f71a49492ea7fcb"
+  },
+  "scope": "Isolated owned search only. Portfolio/runtime/observer integration and performance remain pending.",
+  "defaultEngine": "Unchanged",
+  "capacities": {
+    "frames": 64,
+    "path": 32
+  }
+}
