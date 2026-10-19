@@ -211,6 +211,53 @@ No experiment or preview remains running. Four verified-dead scratch/IPC
 directories are removed after [saving their diagnostic data](r06-lifecycle-core-v1/pause-cleanup.json.gz).
 Tables, frozen binaries, source snapshots, and the dependency symlink stay intact.
 
+## Resumed ownership verification
+
+The source at 13e2557 is frozen as build/experiments/r06-raw-v3. Its actual
+raw-table worker passes repeated same-PID cancellation and solved recovery,
+fragmented and stale control, and final process/IPC removal. All sixteen host
+scenarios and sixteen toolchain gates pass, including the unchanged twenty-three
+laws through BendTT. The [functional receipt](r06-ownership-v3/functional.json.gz)
+and [frozen metadata](r06-ownership-v3/build-metadata.json.gz) preserve those
+results and source identities. The full regression is active.
+
+`node bench/control-ownership-inspect.mjs build/r06-reference-v1.c
+build/r06-batched-v2.c build/r06-owner-v3.c` identifies one child-admission
+function through its complete child-register mapping. Missing, ambiguous, and
+changed mappings reject rather than silently selecting another function.
+Mutation fixtures check borrow counts, seal counts, and changed-body detection.
+The reference has zero borrowed-location arguments. Both cooperative versions
+have five, and their child-admission bodies are byte-identical. All three have
+sixty-two seal sites in this function. The paused treatment therefore fails its
+intended emitted-C hypothesis. These observations do not prove a runtime cause.
+
+Five alternating cohorts compare v3 with the contemporary reference from
+62de4d8 on the same raw cache, CPU 2, nice 10, and 6,144-MiB memory cap. No build
+or preview overlaps this measurement. All 1,750 jobs pass, with no error,
+deadline coverage loss, changed input seal, or leaked IPC. All sixty answer
+lengths and lower bounds tie. The [raw receipt](r06-ownership-v3/deadline.json.gz)
+and [configuration](r06-ownership-v3/deadline-config.json.gz) retain all events
+and seals. First-answer nearest-rank p95 exceeds the five-percent floor in
+each group.
+
+| Group | Pairs | Reference p95 | v3 p95 |
+| --- | ---: | ---: | ---: |
+| Fast | 40 | 16 ms | 17 ms |
+| Exact | 15 | 31 ms | 45 ms |
+| Superflip | 5 | 2,293 ms | 2,520 ms |
+
+The Superflip regression is 9.90 percent. The small samples, millisecond clock,
+and background desktop activity limit the precision of the shorter latencies.
+No speed or default promotion is accepted. Earlier R01 quality failures remain
+visible and are not relabeled as isolated lifecycle costs.
+
+The next throwaway probe passes the cancellation result into the tail state,
+then either preserves or advances the intact affine session. It removes the
+higher-order table continuation without changing the pure search or portfolio.
+Its generator is bench/control-tail-probe.mjs and its isolated graph is under
+build/experiments/r06-tail-probe-v1. This is a compiler experiment, not verified
+product code or a performance claim. Independent review is not run.
+
 ## Open gates
 
 Broader hidden-browser cancel, playback, and fallback acceptance remains open.

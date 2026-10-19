@@ -1,6 +1,30 @@
 # Current state of Rubend
 
-## Safe pause
+## Active resume
+
+Yuzy resumed on 2026-10-19 in the managed writer below, with solo work, hidden
+previews, unchanged twenty-three laws, frequent commits, and verified pushes
+when finished. No subagents may run. Independent review remains not run.
+
+The paused R06 source is now frozen as build/experiments/r06-raw-v3. Actual
+raw-table cancellation, fragmented/stale control, retained PID, recovery, IPC
+cleanup, host fixtures, and all sixteen toolchain/proof checks pass. The
+rerunnable child-admission inspection finds the same emitted body as v2,
+including five borrowed-location arguments. The ownership hypothesis did not
+produce its intended C change.
+
+Five fresh matched-kernel cohorts pass all 1,750 application jobs and tie all
+sixty answer lengths and lower bounds. Superflip first-answer p95 is 2,293 ms
+for the contemporary reference and 2,520 ms for v3. That exceeds the five-percent
+latency floor, so v3 is not promoted. Full regression is active. A separate
+tail-state compiler probe is prepared outside production source. Neither C
+shape nor search work-step counts establish a speedup.
+
+The reproducible C-inspection tool and rejecting fixtures are committed at
+3ea769c. Read docs/verification/R06-LIFECYCLE.md for current receipts and the
+remaining roadmap gates. The following safe-pause section is historical.
+
+## Previous safe pause
 
 Yuzy explicitly paused on 2026-10-19, Asia/Manila, with15percent usage remaining.
 No owned experiment, build, native worker, or preview server remains running.
