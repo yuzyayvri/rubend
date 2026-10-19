@@ -153,8 +153,14 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
   - [x] Freeze and inspect the paused ownership treatment. Its child-admission
     body matches v2 exactly. Matched quality ties, but first-answer p95 rejects
     promotion. Keep the reference and all negative evidence.
-  - [ ] Run native cancellation, full regression, and all twenty-three laws.
-  - [ ] Run matched lifecycle and deadline comparisons without overlapping builds.
+  - [x] Run native cancellation, full regression, and all twenty-three laws.
+  - [x] Run matched lifecycle and deadline comparisons without overlapping builds.
+    Cancellation p95 is25.76ms with all fifteen owners retained. Quality ties,
+    but all three first-answer p95 groups miss the five-percent latency floor.
+  - [x] Test an intact-session tail-state compiler probe. Reject its intended
+    shape improvement because its child-admission function still matches v3.
+  - [ ] Isolate runtime control overhead using detached and cooperative paths
+    in the same sealed native binary, then follow the measured mechanism.
   - [ ] Complete remaining roadmap hypotheses and integration checks.
 - [ ] Phase D: Keep the audit trail.
 - [ ] Phase E: Verify and hand back.

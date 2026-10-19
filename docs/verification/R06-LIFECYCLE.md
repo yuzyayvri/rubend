@@ -219,7 +219,10 @@ fragmented and stale control, and final process/IPC removal. All sixteen host
 scenarios and sixteen toolchain gates pass, including the unchanged twenty-three
 laws through BendTT. The [functional receipt](r06-ownership-v3/functional.json.gz)
 and [frozen metadata](r06-ownership-v3/build-metadata.json.gz) preserve those
-results and source identities. The full regression is active.
+results and source identities. The [complete regression](r06-ownership-v3/regression.json.gz)
+passes `just test` and all sixteen final `just check` gates. The law dependency
+graph contains exactly twenty-three laws. Their source files are unchanged
+from the integrated main checkpoint.
 
 `node bench/control-ownership-inspect.mjs build/r06-reference-v1.c
 build/r06-batched-v2.c build/r06-owner-v3.c` identifies one child-admission
@@ -251,12 +254,50 @@ and background desktop activity limit the precision of the shorter latencies.
 No speed or default promotion is accepted. Earlier R01 quality failures remain
 visible and are not relabeled as isolated lifecycle costs.
 
-The next throwaway probe passes the cancellation result into the tail state,
-then either preserves or advances the intact affine session. It removes the
-higher-order table continuation without changing the pure search or portfolio.
-Its generator is bench/control-tail-probe.mjs and its isolated graph is under
-build/experiments/r06-tail-probe-v1. This is a compiler experiment, not verified
-product code or a performance claim. Independent review is not run.
+The [matched cancellation run](r06-ownership-v3/lifecycle.json.gz) also passes
+five alternating cohorts against the contemporary reference. All thirty
+cancellations and solved recovery requests pass. The cooperative path retains
+all fifteen owners and initializes five times rather than twenty. Its
+cancel-to-usable median is 22.85 ms, with a 1.96 to 25.76 ms range and 25.76 ms
+nearest-rank p95. Restart has a 2,358.78 ms median, a 2,222.14 to 2,419.37 ms
+range, and 2,419.37 ms p95. Both use CPU 2, nice 10, the same cache, and a
+6,144-MiB cap. No resource stop, forced cleanup, changed seal, or leaked process
+occurs. This meets the finite-run cancellation target but does not override
+the first-answer latency rejection.
+
+The throwaway tail-state probe preserves or advances the intact affine session
+after the cancellation result. It removes the higher-order table continuation
+without changing pure search or portfolio source. Native C emission and the
+root-module check pass. The raw IO entrypoint rejects proof-only checking
+because its existing foreign loader is outside the proof graph. This was an
+incorrect check mode, not a production proof failure.
+
+The [compiler result](r06-ownership-v3/tail-c-probe.json.gz) again has five
+borrowed-location arguments and the exact same child-admission body. The
+service-shape hypothesis is rejected for this probe. No native binary or timing
+is claimed. Its [provenance](r06-ownership-v3/tail-provenance.json.gz), generator
+bench/control-tail-probe.mjs, and isolated graph under
+build/experiments/r06-tail-probe-v1 remain recoverable.
+
+A same-binary detached/cooperative comparison now tests the runtime overhead
+separately from changed compiler output. Its detached wrapper removes only the
+control-FIFO environment variable and execs the same sealed v3 native binary.
+Both profiles seal that target in the existing warm adapter. Direct fixtures
+verify environment removal, exact arguments, retained PID through exec,
+collision rejection, and refusal of changed target bytes before writes. The
+[same-binary measurement](r06-ownership-v3/detached-quality.json.gz) passes all
+1,750 jobs with sixty answer-length and lower-bound ties. Superflip first-answer
+medians are 2,432 and 2,453 ms with overlapping ranges. Enabled polling is not
+supported as the main explanation for the earlier gap. Exact first-answer p95
+still differs, 32 versus 35 ms, so this is not a latency-floor promotion.
+
+The [minimal native compiler probe](r06-ownership-v3/channel-array-probe.json.gz)
+isolates reuse of an opaque channel as a trigger for global shared-array mode.
+Earlier descriptions of the extra arguments as ordinary borrowed locations
+were inaccurate. Read the [diagnosis and next treatment](../research/CONTROL-ARRAY-MODE.md).
+All sixteen toolchain gates and both new diagnostic-tool fixtures pass in
+[the final probe check](r06-ownership-v3/probe-check.json.gz). Independent review
+is not run.
 
 ## Open gates
 
