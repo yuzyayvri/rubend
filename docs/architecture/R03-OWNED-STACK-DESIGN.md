@@ -1,7 +1,8 @@
 # Owned search continuations
 
-Status is an isolated solo store and search implementation with bounded
-state-equivalence evidence. Portfolio migration and performance remain open.
+Status is an isolated solo store, search, affine portfolio, and runtime
+implementation. Bounded search and portfolio comparisons pass. Full regression
+and performance remain open.
 The relevant source is src/search.bend and src/portfolio.bend at81bb524.
 The prior coordinate-only and segmented outcomes do not predict this treatment.
 Independent design review cannot run under the solo instruction.
@@ -96,6 +97,14 @@ Schedule and append use affine lists. Incumbent restarts reset the continuation'
 logical occupancy and reuse its arrays. Meta and immutable best paths remain
 reusable where their current readers require it.
 
+The implemented queue is the nominal affine Tasks type, with NoTasks and
+MoreTasks constructors. It preserves the existing first-kept axis order and
+round-robin schedule. The first generic List<Task> implementation compiles but
+its recursive restart triggers shared-array mode. Single-task restart does not.
+Frozen-source probes reproduce that distinction. The nominal queue and full raw
+runtime emit unshared-array mode. A generic-list explanation broader than this
+reproduced case is not established. Simple array-list probes remain negative.
+
 Generate an isolated search/portfolio/runtime/fixed-work family from the frozen
 reference. Exact rewrite anchors and source hashes reject drift. Do not change
 the default search, table layout, or accepted bounds in this hypothesis. Keep
@@ -130,7 +139,7 @@ here before using it as a new caller contract.
 
 ## Resume implementation map
 
-The store and isolated search are now implemented. Read
+The isolated family is now implemented. Read
 docs/verification/R03-OWNED-STACKS.md for checks and remaining work.
 The resumed R06 diagnosis adds one prerequisite.
 Both stack candidates must emit unshared-array mode. A shared opaque control

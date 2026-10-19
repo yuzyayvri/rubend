@@ -184,6 +184,11 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
       six rejecting mutations, and109325complete state comparisons pass.
     - [ ] Migrate affine portfolio and runtime, compare full portfolio states,
       and measure fixed work, native memory, deadlines, and completed contours.
+      The nominal affine queue, two runtime failure paths, sticky restart,
+      descriptor order, and five rejecting generator fixtures pass. All21890
+      legacy snapshot pairs match in Light and Raw. The generic-list restart
+      array-mode failure is preserved and reproduced. Full regression, all23laws,
+      and isolated Light and Raw native lifecycle/failure checks pass.
 - [ ] Phase D: Keep the audit trail.
 - [ ] Phase E: Verify and hand back.
 - [ ] BLOCKED: independent review. User requires solo work, including no 6-family agents.

@@ -6,7 +6,8 @@ import {withArtifactLease} from "./artifact-lease.mjs";
 withArtifactLease();
 assert.ok(process.argv.length===2||(process.argv.length===3&&process.argv[2]==="--check"));
 const check=process.argv[2]==="--check",hash=text=>createHash("sha256").update(text).digest("hex");
-const source=readFileSync("src/search.bend","utf8"),store=readFileSync("bench/owned-continuation.bend","utf8");
+const source=readFileSync("src/search.bend","utf8"),store=readFileSync("bench/owned-continuation.bend","utf8"),portfolioSource=readFileSync("src/portfolio.bend","utf8"),mainSource=readFileSync("src/main.bend","utf8"),advancedSource=readFileSync("bench/advanced-main.bend","utf8");
+const fixedSource=readFileSync("bench/fixed-work.bend","utf8");
 const once=(text,from,to)=>{assert.equal(text.split(from).length,2,"Owned transform anchor changed: "+from);return text.replace(from,to);};
 function fields(text,start){
   let braces=1,parens=0,squares=0,quoted=false,escaped=false,at=start+1,begin=at;const result=[];
@@ -108,8 +109,114 @@ search=replaceDef(search,"initialize_checked",`def initialize_checked(accepted: 
 search=constructors(search,["Search"],(name,parts)=>{assert.equal(parts.length,3);if(!parts[1].includes(" <> "))return parts;const sequence=parts[1].split(" <> "),tail=sequence.pop();assert.equal(tail,"rest","Unrouted owned root continuation");parts[1]=sequence.reduceRight((rest,frame)=>"store_push("+frame+", "+rest+")",tail);return parts;});
 search=search.replace(/^import \.\/([a-z0-9-]+\.bend) as ([A-Za-z]+)$/gm,(_,file,alias)=>"import ../"+file+" as "+alias);
 assert.ok(!search.includes("+List<Frame>"));
-const record={format:"rubend-generated-owned-search-v1",sourceHashes:{"src/search.bend":hash(source),"bench/owned-continuation.bend":hash(store)},outputHashes:{"src/owned/search.bend":hash(search)},scope:"Isolated owned search only. Portfolio/runtime/observer integration and performance remain pending.",defaultEngine:"Unchanged",capacities:{frames:64,path:32}};
-const files={"src/owned/search.bend":search,"src/owned/manifest.json":JSON.stringify(record,null,2)+"\n"};
+const imports=(text,local)=>text.replace(/^import \.\/([a-z0-9-]+\.bend) as ([A-Za-z]+)$/gm,(_,file,alias)=>"import "+(local.has(file)?"./":"../")+file+" as "+alias);
+let portfolio=portfolioSource.replace("type Task is Data:","type Task is Type:").replaceAll("+List<S.Frame>","S.Store").replaceAll("+List<Task>","List<Task>").replaceAll("List.append(&2, Task,","List.append(&1, Task,");
+portfolio=replaceDef(portfolio,"task",once(definition(portfolio,"task").text,"Task{axis, S.root_frame(root, 0, S.Reduction{}) <> Nil{},","Task{axis, S.store_fresh(S.root_frame(root, 0, S.Reduction{})),"));
+const descriptor=`type Descriptor is Data:
+  Descriptor{axis: U32, root: C.Cubie}
+
+def descriptor_root(entry: Descriptor) -> C.Cubie:
+  match entry:
+    case Descriptor{axis, root}: root
+
+def contains(tasks: +List<Descriptor>, +root: C.Cubie) -> Bool:
+  match tasks:
+    case Nil{}: False{}
+    case Con{entry, rest}: same(descriptor_root(entry), root) || contains(rest, root)
+
+def keep_entry(duplicate: Bool, entry: Descriptor, acc: +List<Descriptor>) -> +List<Descriptor>:
+  match duplicate:
+    case True{}: acc
+    case False{}: List.append(&2, Descriptor, acc, [entry])
+
+def distinct(tasks: +List<Descriptor>, +acc: +List<Descriptor>) -> +List<Descriptor>:
+  match tasks:
+    case Nil{}: acc
+    case Con{+entry, rest}: distinct(rest, keep_entry(contains(acc, descriptor_root(entry)), entry, acc))
+
+def allocate(entries: +List<Descriptor>, +profile: S.Profile) -> List<Task>:
+  match entries:
+    case Nil{}: Nil{}
+    case Con{Descriptor{axis, root}, rest}: task(axis, root, profile) <> allocate(rest, profile)
+
+`;
+const descriptorStart=definition(portfolio,"task_root").start,descriptorEnd=definition(portfolio,"validated").start;
+portfolio=portfolio.slice(0,descriptorStart)+descriptor+portfolio.slice(descriptorEnd);
+portfolio=once(portfolio,"distinct([task(0, root, profile), task(1, first, profile), task(2, second, profile), task(3, C.inverse(root), profile), task(4, C.inverse(first), profile), task(5, C.inverse(second), profile)], Nil{})","allocate(distinct([Descriptor{0, root}, Descriptor{1, first}, Descriptor{2, second}, Descriptor{3, C.inverse(root)}, Descriptor{4, C.inverse(first)}, Descriptor{5, C.inverse(second)}], Nil{}), profile)");
+portfolio=once(portfolio,"Task{axis, S.root_frame(root, 0, S.Reduction{}) <> Nil{},","Task{axis, S.store_reset(S.root_frame(root, 0, S.Reduction{}), stack),");
+portfolio=once(portfolio,"Task{0, S.root_frame(root, 0, S.FullCube{}) <> Nil{},","Task{0, S.store_fresh(S.root_frame(root, 0, S.FullCube{})),");
+let finishSlice=definition(portfolio,"finish_slice").text;
+finishSlice=once(finishSlice,"  match result:\n","  match result:\n    case S.Search{table, stack, S.Meta{local_root, p1, ceiling, local_best, local_len, mode, bound, lower, local_nodes, S.ContinuationFailure{fault}, profile}}:\n      Session{table, tasks, root, best, length, established, (nodes + local_nodes - before : U32), request, S.ContinuationFailure{fault}}\n");
+portfolio=replaceDef(portfolio,"finish_slice",finishSlice);
+portfolio=portfolio.replaceAll("List<Task>","Tasks");
+portfolio=once(portfolio,"type Session is Type:","type Tasks is Type:\n  NoTasks{}\n  MoreTasks{entry: Task, rest: Tasks}\n\ntype Session is Type:");
+portfolio=replaceDef(portfolio,"allocate",`def allocate(entries: +List<Descriptor>, +profile: S.Profile) -> Tasks:
+  match entries:
+    case Nil{}: NoTasks{}
+    case Con{Descriptor{axis, root}, rest}: MoreTasks{task(axis, root, profile), allocate(rest, profile)}`);
+portfolio=replaceDef(portfolio,"append",`def append(tasks: Tasks, tail: Tasks) -> Tasks:
+  match tasks:
+    case NoTasks{}: tail
+    case MoreTasks{entry, rest}: MoreTasks{entry, append(rest, tail)}`);
+portfolio=replaceDef(portfolio,"restart",`def restart(tasks: Tasks, +best: +List<U32>, +length: U32) -> Tasks:
+  match tasks:
+    case NoTasks{}: NoTasks{}
+    case MoreTasks{entry, rest}: MoreTasks{restart_task(entry, best, length), restart(rest, best, length)}`);
+let taskLiterals=0;portfolio=portfolio.replace(/\[(Task\{[^\n]+?\})\]/g,(_,entry)=>{taskLiterals++;return "MoreTasks{"+entry+", NoTasks{}}";});assert.equal(taskLiterals,2);
+portfolio=portfolio.replaceAll("Session{table, Nil{},","Session{table, NoTasks{},");
+portfolio=once(portfolio,"Session{table, Con{Task{axis, stack, meta}, tasks},","Session{table, MoreTasks{Task{axis, stack, meta}, tasks},");
+portfolio=imports(portfolio,new Set(["search.bend"]));
+assert.ok(!portfolio.includes("+List<Task>")&&!portfolio.includes("+List<S.Frame>")&&!portfolio.includes("+tasks")&&!portfolio.includes("+stack"));
+let main=mainSource;
+for(const [name,result]of[["service","Array<U32>"],["service_controlled","Array<U32> & Control.Context"]]){
+  let body=definition(main,name).text;
+  body=once(body,"  match fuel active state:\n","  match fuel active state:\n    case _ _ P.Session{table, tasks, root, best, length, lower, nodes, request, S.ContinuationFailure{fault}}:\n      IO.die("+result+", 2, \"Owned continuation failure \" ++ U32.show(S.store_fault_code(fault)))\n");
+  main=replaceDef(main,name,body);
+}
+main=imports(main,new Set(["search.bend","portfolio.bend"]));
+let advanced=advancedSource;
+for(const name of["main","search"])advanced=once(advanced,"import ../src/"+name+".bend as ","import ../src/owned/"+name+".bend as ");
+let fixed=fixedSource;
+for(const name of["main","search","portfolio"])fixed=once(fixed,"import ../src/"+name+".bend as ","import ../src/owned/"+name+".bend as ");
+fixed=once(fixed,"import ./advanced-main.bend as A","import ./owned-advanced.bend as A\nimport ./owned-search-observer.bend as V");
+const frameStart=definition(fixed,"frame").start,frameEnd=definition(fixed,"meta").start;fixed=fixed.slice(0,frameStart)+fixed.slice(frameEnd);
+fixed=replaceDef(fixed,"tasks",`type TaskView is Type:
+  TaskView{entry: P.Task, text: String}
+
+type TaskViews is Type:
+  TaskViews{entries: P.Tasks, texts: +List<String>}
+
+def task_view(view: V.FramesView, +axis: U32, +state: S.Meta) -> TaskView:
+  match view:
+    case V.Frames{store, frames}:
+      TaskView{P.Task{axis, store, state}, "[" ++ U32.show(axis) ++ "," ++ meta(state) ++ "," ++ V.frames_text(frames) ++ "]"}
+    case V.FramesFailed{store}: TaskView{P.Task{axis, store, state}, "{\\"error\\":\\"Continuation observation failed\\"}"}
+
+def task_cons(first: TaskView, rest: TaskViews) -> TaskViews:
+  match first rest:
+    case TaskView{entry, text} TaskViews{entries, texts}: TaskViews{P.MoreTasks{entry, entries}, text <> texts}
+
+def tasks(entries: P.Tasks) -> TaskViews:
+  match entries:
+    case P.NoTasks{}: TaskViews{P.NoTasks{}, Nil{}}
+    case P.MoreTasks{P.Task{axis, stack, state}, rest}:
+      task_cons(task_view(V.frames(stack), axis, state), tasks(rest))`);
+let snapshot=definition(fixed,"snapshot").text;
+snapshot=once(snapshot,"def snapshot(","def snapshot_view(view: TaskViews, ");snapshot=once(snapshot,"entries: +List<P.Task>, ","");snapshot=once(snapshot,"-> IO(Unit):\n  do IO<Unit>:","-> IO(List<P.Task>):\n  match view:\n    case TaskViews{entries, texts}:\n      do IO<List<P.Task>>:");
+snapshot=snapshot.split("\n").map(line=>line.startsWith("    H.emit")||line.startsWith("    IO.print")?"    "+line:line).join("\n");
+snapshot=once(snapshot,"String.join(tasks(entries), \",\")","String.join(texts, \",\")");
+snapshot=snapshot.trim()+"\n        return entries\n\n";
+snapshot+=`def snapshot(+id: String, +original: M.Cube, initial_request: U32, slice: U32, entries: List<P.Task>, root: C.Cubie, best: +List<U32>, length: U32, lower: U32, nodes: U32, request: P.Request, status: S.Completion) -> IO(List<P.Task>):
+  snapshot_view(tasks(entries), id, original, initial_request, slice, root, best, length, lower, nodes, request, status)
+`;
+fixed=replaceDef(fixed,"snapshot",snapshot);
+fixed=once(fixed,"case 1n+p P.Session{table, +entries,","case 1n+p P.Session{table, entries,");
+fixed=fixed.replaceAll("        snapshot(id, original, initial_request, slice, entries, root, best, length, lower, nodes, request, status)","        entries : List<P.Task> <- snapshot(id, original, initial_request, slice, entries, root, best, length, lower, nodes, request, status)");
+assert.ok(!fixed.includes("+List<P.Task>")&&!fixed.includes("+entries"));
+fixed=fixed.replaceAll("List<P.Task>","P.Tasks");
+const files={"src/owned/search.bend":search,"src/owned/portfolio.bend":portfolio,"src/owned/main.bend":main,"bench/owned-advanced.bend":advanced,"bench/owned-fixed.bend":fixed};
+const record={format:"rubend-generated-owned-search-v1",sourceHashes:Object.fromEntries([["src/search.bend",source],["bench/owned-continuation.bend",store],["src/portfolio.bend",portfolioSource],["src/main.bend",mainSource],["bench/advanced-main.bend",advancedSource],["bench/fixed-work.bend",fixedSource]].map(([path,text])=>[path,hash(text)])),outputHashes:Object.fromEntries(Object.entries(files).map(([path,text])=>[path,hash(text)])),scope:"Isolated owned search, affine portfolio, fail-closed runtime, and complete legacy snapshot adapter. Performance remains pending.",defaultEngine:"Unchanged",capacities:{frames:64,path:32}};
+files["src/owned/manifest.json"]=JSON.stringify(record,null,2)+"\n";
 if(!check)mkdirSync("src/owned",{recursive:true});
 for(const [path,text]of Object.entries(files)){if(check)assert.equal(readFileSync(path,"utf8"),text,"Stale owned search: "+path);else{if(existsSync(path)&&!existsSync("src/owned/manifest.json"))throw Error("Refusing an unrecognized owned-search target");writeFileSync(path,text);}}
 console.log(JSON.stringify({passed:true,check,files:Object.keys(files),scope:record.scope}));
