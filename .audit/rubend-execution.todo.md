@@ -137,3 +137,24 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
   previews are stopped. Four verified-dead scratch/IPC directories are removed
   with recovery data saved. No table, frozen binary, source snapshot, or user
   dependency is removed. Latest WIP state and checkpoint are preserved locally.
+
+## Resumed ownership and remaining roadmap run
+
+- [x] Read the project checkpoint first using Resume storage.
+- [x] Reconstruct operational state.
+- [x] Diff done vs pending.
+- [x] Route the remaining work to the matching playbook and pick the verdict.
+- [ ] Verify the inherited claims against the original goal on the real artifact.
+- [x] Phase A: Frame. Keep the existing completion predicate and all quality floors.
+- [x] Phase B: Design the workflow. Freeze the ownership treatment, compare the
+  contemporary kernel, verify semantics and cancellation, then measure matched
+  fixed work and deadlines before resuming R03, R04, R05, and final R06 checks.
+- [ ] Phase C: Run the loop.
+  - [ ] Freeze and inspect the paused ownership treatment.
+  - [ ] Run native cancellation, full regression, and all twenty-three laws.
+  - [ ] Run matched lifecycle and deadline comparisons without overlapping builds.
+  - [ ] Complete remaining roadmap hypotheses and integration checks.
+- [ ] Phase D: Keep the audit trail.
+- [ ] Phase E: Verify and hand back.
+- [ ] BLOCKED: independent review. User requires solo work, including no 6-family agents.
+- [ ] Push verified changes when finished. No PR, merge, release, or deployment.
