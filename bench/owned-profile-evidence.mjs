@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {createHash} from "node:crypto";
+import {execFileSync} from "node:child_process";
+
+const hash=bytes=>createHash("sha256").update(bytes).digest("hex"),read=path=>JSON.parse(readFileSync(path,"utf8")),destination="docs/verification/r03-owned-profile-v1",rows=[];
+for(const name of["r03-owned-reference-profile-v3","r03-owned-profile-v3"]){
+  const directory="build/experiments/"+name,record=read(directory+"/result.json");assert.equal(record.passed,true);assert.equal(record.gracefulProfileFlush,true);assert.equal(record.jobs.length,10);assert.ok(record.jobs.every(job=>job.nodes===10000000));
+  const c=readFileSync(directory+"/profile.c","utf8"),profile=readFileSync(directory+"/profile.txt","utf8");assert.equal(hash(c),record.cSha256);assert.equal(hash(profile),record.profileSha256);
+  const lines=c.split("\n"),snippets=[];for(const row of profile.split("\n")){const match=row.match(/\(profile\.c:(\d+) @/);if(!match)continue;const number=Number(match[1]);assert.ok(number>0&&number<=lines.length);snippets.push({profileRow:row,line:number,generatedSource:lines.slice(Math.max(0,number-4),number+4).join("\n")});if(snippets.length===12)break;}
+  rows.push({name,record,profile,snippets,claim:"Samples include initialization and instrumented execution. Do not use their timings or percentages as release deltas. Source snippets identify generated array/ownership/dispatch operations only."});
+}
+const report={format:"rubend-owned-profile-evidence-v1",passed:true,rows,sourceHashes:Object.fromEntries(["bench/owned-fixed-profile.mjs","bench/owned-profile-evidence.mjs"].map(path=>[path,hash(readFileSync(path))])),nativeWorkPerSide:100000000,claim:"CPU activity is observed in native table reads, generated ownership work, and pure search dispatch. The owned diagnostic executes explicit run/advance boundaries per work step. This does not quantify their contribution to release overhead, establish hardware cache limits, or prove a universal cause.",excludedHostObservation:"elapsedMs is supplied by Engine and is not native semantic state. All native snapshot fields are retained.",earlierFailures:["The first attempt compared the host elapsedMs field and correctly rejected differing observations.","The second attempt completed all ten jobs but Engine.close used SIGTERM, so gprof did not flush. The successful diagnostic closes input and awaits a clean native EOF exit before host cleanup."]};
+writeFileSync("build/evidence/r03-owned-profile-summary-v1.json",JSON.stringify(report,null,2)+"\n",{flag:"wx"});mkdirSync(destination,{recursive:true});
+const entries=[["build/evidence/r03-owned-profile-summary-v1.json","summary"],...rows.map(row=>["build/experiments/"+row.name+"/result.json",row.name]),...[1,2,3].map(version=>["build/evidence/r03-owned-profile-build-v"+version+".json","resource-v"+version]),["build/experiments/r03-owned-reference-profile-v1/result.json","elapsed-observation-rejection"],["build/experiments/r03-owned-reference-profile-v2/result.json","signal-exit-without-profile"]];
+const receipts=entries.map(([source,name])=>JSON.parse(execFileSync(process.execPath,["bench/archive-evidence.mjs",source,destination+"/"+name+".json.gz"],{encoding:"utf8",maxBuffer:1048576})));
+writeFileSync(destination+"/index.json",JSON.stringify({receipts},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,archives:receipts.length,instrumentedOnly:true,nativeWorkPerSide:100000000}));

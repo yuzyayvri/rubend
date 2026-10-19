@@ -1,9 +1,9 @@
 # Owned continuation evidence
 
-The isolated store, search, affine portfolio, and runtime pass semantic and
-application checks. The default search and portfolio are unchanged. Timing,
-whole-engine memory, application quality, and independent review remain open.
-No promotion or search completeness claim follows from these checks.
+Promotion of this owned-continuation implementation is rejected. Semantic and
+application checks pass, but matched CPU, latency, lower-bound quality, and
+memory results miss the declared targets. The default solver stays unchanged.
+Independent review remains not run. No search-completeness claim follows.
 
 ## Storage boundary
 
@@ -115,10 +115,55 @@ One integration launcher was stopped after its command composition was found
 capable of masking an earlier failure. Its partial files remain preserved.
 The corrected all-success-required batch is the passing integration receipt.
 The reference timer had already completed its sealed build before that stop.
-Its live 500-slice comparison is still pending, along with the owned timer.
+Both sealed timers subsequently pass the live 500-slice comparison below.
 
 The frozen measurement plan requires at least ten percent repeated total-time
 improvement, unchanged deadline coverage and quality, and at most five percent
 first-answer p95 regression. Initialization and whole-engine RSS stay separate.
-No profiling or release timing result is available yet. Independent review and
-the comment reviewer remain not run under the solo instruction.
+Independent review and the comment reviewer remain not run under solo work.
+
+## Measured disposition
+
+The five-cohort equal-work run passes all 1,630 shallow warmups and 110 measured
+jobs. Every complete native snapshot agrees. Fast work costs 20.04 percent more
+process CPU, with a cohort-bootstrap 95 percent ratio interval of 1.1831 to
+1.2212. Exact work costs 11.83 percent more, with an interval of 1.0922 to
+1.1408. The five cohort ratios range from 1.1754 to 1.2391 for fast work and
+1.0752 to 1.1474 for exact work. Neither meets the speed target or the separate
+five-percent overhead ceiling. Native and host wall observations are retained
+separately in the [equal-work archive](r03-owned-measurement-v1/r03-owned-fixed-time-v1.json.gz).
+
+The matched application run passes all 1,750 jobs without errors, missing
+answers, forced cleanup, or source changes. All sixty deadline lengths tie.
+Four Superflip lower-bound pairs regress from sixteen to fifteen. The fifth
+pair ties at fifteen. These are native terminal bounds, not a host reporting
+artifact. First-answer p95 changes from 12 to 14 ms for fast cases, 21 to 32 ms
+for exact cases, and 1,752 to 2,099 ms for Superflip. Every group misses the
+five-percent latency floor. The tiny short-case clock limits remain relevant;
+they do not remove the CPU or lower-bound failures.
+
+Native peak RSS is 2,142,320 KiB for the persistent reference and 2,142,356 KiB
+for the owned variant in each cohort. This is not a useful whole-engine memory
+reduction. Warm-file initialization medians are 1,760.43 and 1,781.95 ms,
+respectively. Ranges are 1,754.03 to 1,805.06 ms and 1,747.52 to 1,852.45 ms.
+These are not cold-disk results. Ten native workers shut down and remove IPC.
+
+Separate instrumented runs complete ten identical ten-million-step jobs per
+side. Samples occur in native array reads, generated ownership operations,
+and search dispatch. The owned program has explicit generated run and advance
+boundaries per work step. The [profile archive](r03-owned-profile-v1/index.json)
+retains the generated-source snippets and full profiler text. Instrumentation
+and initialization affect these samples. Their percentages and timings do not
+quantify release overhead or establish a universal cause.
+
+Both release comparisons use CPU 2, nice 10, a 6,144-MiB cap, and a ten-minute
+batch cap, without concurrent builds, profiles, or previews. Desktop activity
+is uncontrolled. Five alternating fresh cohorts limit, rather than remove,
+that noise. The [measurement archive](r03-owned-measurement-v1/index.json)
+binds configurations, resource records, all jobs, scores, RSS, and initialization.
+
+The prototype remains recoverable for future compiler or representation work.
+No broader claim about all owned data structures follows. Standalone phase-two
+timing and structural allocation counts are not measured. Neither could
+override the failed whole-kernel CPU and deadline-quality gates. No profile is
+promoted, no new table is built, and no law is changed for this disposition.

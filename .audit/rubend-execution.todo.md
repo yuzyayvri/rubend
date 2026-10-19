@@ -54,7 +54,11 @@ app integration, and honest proof coverage, not an assumed world-class victory.
   - [x] Packed small-table memory pilot. Exact data and semantic checks pass; native RSS is 65.2% lower, with 60 deadline quality ties and slower initialization. Optional tier only, solo verification.
   - [x] Segmented raw foundation, full used-word identity, fixed-state equality, malformed inputs, and zero-geometry red/green checks. Not a measured or promoted memory tier.
   - [x] Segmented RSS/CPU/deadline comparisons. All jobs pass and memory drops45.9percent, but CPU misses the target and three Superflip lower bounds regress. Reject promotion; preserve the research profile and raw evidence.
-  - [ ] Owned stacks as a separate hypothesis. Independent review and package rollout remain open.
+  - [x] Owned stacks as a separate hypothesis. Native/JS storage, rejecting
+    mutations, complete state equality, full regression, and both native
+    runtime paths pass. Five-cohort CPU, deadline bounds, and RSS reject
+    promotion. Preserve the isolated research profile. Independent review
+    remains not run, and no rejected-profile package rollout is claimed.
 - [ ] R04. Modern symmetry-aware projection pilots, then admitted scaling.
   - [x] Solo H0 versus six-edge design grounding. Read pinned H48 primary design and Korf paper; dimensions are upstream expectations, not Bend measurements.
   - [x] Yuzy approved the five exact symmetry-law statements on 2026-10-18. Do not weaken the existing eighteen laws.
@@ -182,13 +186,16 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
   - [ ] Complete remaining roadmap hypotheses and integration checks.
     - [x] R03 owned store and isolated search. Twelve native/JS storage checks,
       six rejecting mutations, and109325complete state comparisons pass.
-    - [ ] Migrate affine portfolio and runtime, compare full portfolio states,
+    - [x] Migrate affine portfolio and runtime, compare full portfolio states,
       and measure fixed work, native memory, deadlines, and completed contours.
       The nominal affine queue, two runtime failure paths, sticky restart,
       descriptor order, and five rejecting generator fixtures pass. All21890
       legacy snapshot pairs match in Light and Raw. The generic-list restart
       array-mode failure is preserved and reproduced. Full regression, all23laws,
       and isolated Light and Raw native lifecycle/failure checks pass.
+      Five cohorts pass1740equal-work and1750deadline jobs, but CPU overhead,
+      four Superflip lower-bound losses, latency, and RSS reject promotion.
+      Profiler timings are excluded from release evidence. No default change.
 - [ ] Phase D: Keep the audit trail.
 - [ ] Phase E: Verify and hand back.
 - [ ] BLOCKED: independent review. User requires solo work, including no 6-family agents.

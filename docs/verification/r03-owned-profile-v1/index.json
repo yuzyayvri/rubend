@@ -1,0 +1,76 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-profile-summary-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/summary.json.gz",
+      "bytes": 674248,
+      "compressedBytes": 58191,
+      "sha256": "67c8e1db76c0a1d1f9af7139fc7da0c50255e91c57eedc1e9ac4d20e5808aa4d",
+      "compressedSha256": "14643ff70ae1441b10d730a2f074c18293663a4f79d66cf2def0aa071f562949",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-reference-profile-v3/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/r03-owned-reference-profile-v3.json.gz",
+      "bytes": 128419,
+      "compressedBytes": 6041,
+      "sha256": "cff3e29cc16d91903f4abe6164ce4cfffbb818a987187c9f6bcf6bed7254382f",
+      "compressedSha256": "8a6a87005c1a00b7d7bcb0ebc4330219c144fb186d0576d209cd67ba4a41faed",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-profile-v3/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/r03-owned-profile-v3.json.gz",
+      "bytes": 130231,
+      "compressedBytes": 6239,
+      "sha256": "04eca4e0d2ae146e83cc8515c895c47dcec89bad842ab4a805a6b2cc273c7ac5",
+      "compressedSha256": "b55461eea820bf10a6cbb10e3022f30b9d3a9285b3b34689df2461a22645269e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-profile-build-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/resource-v1.json.gz",
+      "bytes": 1906,
+      "compressedBytes": 959,
+      "sha256": "2409569e1a3f0f1bf6703762c8a6ef5baea21fed6a6b693272647d098167171f",
+      "compressedSha256": "b6d043613f9903aa27f9bd5309f1ed3bde04a8b1c58884e0d50f01d5fbc8f363",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-profile-build-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/resource-v2.json.gz",
+      "bytes": 1740,
+      "compressedBytes": 888,
+      "sha256": "71ddca613027a1e6d2b25d3f8f322dcaa86022b9653c9ca5bae91304e1346863",
+      "compressedSha256": "82060d659aa1b229b88519716ebe48f25d487a28751feeb6f7b8efc0b4d88e05",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-profile-build-v3.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/resource-v3.json.gz",
+      "bytes": 13234,
+      "compressedBytes": 2511,
+      "sha256": "e008b4d8fee4ddc322abfb2faaca2de00a21ebeb14b9198e4ff4d7f9d134bc44",
+      "compressedSha256": "dfb1f038c62d7557ac45a3a9f97881eb05311f7f3c7d8b3e2bc52eb54ecf361e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-reference-profile-v1/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/elapsed-observation-rejection.json.gz",
+      "bytes": 19722,
+      "compressedBytes": 3691,
+      "sha256": "f6db9562e2c88c635d5fcf1347ddd608a8040af89c400c899499adb327c14218",
+      "compressedSha256": "3722a04a109e39d279d049cce85b83e0a60eef13ddfebad6f7ecb50d9a81f317",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-reference-profile-v2/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-profile-v1/signal-exit-without-profile.json.gz",
+      "bytes": 122728,
+      "compressedBytes": 5176,
+      "sha256": "abd99008d1ab2ae7c651b574aa2c67081e50ceb67c13942b76eede8b3a71fae7",
+      "compressedSha256": "94a5c437f62bbb850f322c9b78a44f39c64eb316b95f8851f9ec920b41478958",
+      "roundtripPassed": true
+    }
+  ]
+}
