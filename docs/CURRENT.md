@@ -6,6 +6,27 @@ Yuzy resumed on 2026-10-19 in the managed writer below, with solo work, hidden
 previews, unchanged twenty-three laws, frequent commits, and verified pushes
 when finished. No subagents may run. Independent review remains not run.
 
+The single-owned control File treatment is implemented. Its emitted raw C
+restores BLK_SHR zero and the reference child-admission body. Focused IO, parser,
+native reuse, stable-descriptor, and real failure/cleanup checks pass. The
+complete final-source application suite and all sixteen toolchain/proof gates
+pass with the unchanged twenty-three laws. The FIFO-kind startup guard is
+included. The frozen raw binary is build/experiments/r06-raw-v5. build/rubend
+and its frontend now also contain this final source. Native and actual Bun
+FFI boundary checks pass. Broader hidden GUI/profile/package acceptance remains.
+Read docs/verification/R06-OWNED-CONTROL.md.
+
+The first v4 quality run passes1,750jobs and ties sixty answer lengths and
+lower bounds, but short-case first-answer p95 misses the five-percent floor.
+Same-binary A/A produces fast p95 values of13and16ms, beyond the five-percent
+noise limit. Latency acceptance is therefore inconclusive, not passed. A fresh
+final-source confirmation is active. No speed gain, profile promotion, or
+roadmap completion is claimed. Owned stacks and the remaining R04/R05/R06 work
+remain queued. The owned-stack implementation map now includes failure propagation
+and the global-array-mode gate.
+
+## Inherited ownership investigation
+
 The paused R06 source is now frozen as build/experiments/r06-raw-v3. Actual
 raw-table cancellation, fragmented/stale control, retained PID, recovery, IPC
 cleanup, host fixtures, and all sixteen toolchain/proof checks pass. The
@@ -24,8 +45,8 @@ A same-binary detached/cooperative comparison passes all1,750jobs and ties
 quality. Its first-answer ranges overlap. A minimal native test isolates reused
 opaque channels as a trigger for global shared-array mode. The extra location
 arguments were previously mislabeled as ordinary borrows. Read
-docs/research/CONTROL-ARRAY-MODE.md. The next treatment owns one nonblocking
-control File, preserving the Bend parser and pure engine. Neither C
+docs/research/CONTROL-ARRAY-MODE.md. This led to the File-owner treatment above,
+preserving the Bend parser and pure engine. Neither C
 shape nor search work-step counts establish a speedup.
 
 The reproducible C-inspection tool and rejecting fixtures are committed at

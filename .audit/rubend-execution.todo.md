@@ -159,8 +159,18 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
     but all three first-answer p95 groups miss the five-percent latency floor.
   - [x] Test an intact-session tail-state compiler probe. Reject its intended
     shape improvement because its child-admission function still matches v3.
-  - [ ] Isolate runtime control overhead using detached and cooperative paths
+  - [x] Isolate runtime control overhead using detached and cooperative paths
     in the same sealed native binary, then follow the measured mechanism.
+  - [ ] Implement the single-owned nonblocking control File treatment.
+    - [x] Ground and compare sketches sequentially. Shared opaque channel heats
+      all arrays; persistent File wins over reopen-per-checkpoint.
+    - [x] Add bounded IO and pure scanner fixtures before integration.
+    - [x] Migrate runtime callers and generated variants in one wave.
+    - [ ] Require unshared-array C, native cancellation, complete regression,
+      all twenty-three laws, and fresh matched measurements.
+    - [ ] Run five same-binary A/A cohorts before a performance verdict. Keep
+      the five-percent p95 floor closed if control noise exceeds it. Require a
+      fresh five-cohort confirmation rather than selecting a lucky first run.
   - [ ] Complete remaining roadmap hypotheses and integration checks.
 - [ ] Phase D: Keep the audit trail.
 - [ ] Phase E: Verify and hand back.

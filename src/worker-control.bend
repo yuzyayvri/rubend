@@ -1,8 +1,9 @@
 import Base
+import ./control-io.bend as ControlIO
 
-type Context is Data:
+type Context is Type:
   Detached{}
-  Attached{id: U32, channel: Chan(U32)}
+  Attached{file: File, value: U32, digits: U32}
 
 type Byte is Data:
   More{value: U32, digits: U32}
@@ -25,83 +26,69 @@ def byte(+code: U32, +value: U32, +digits: U32) -> Byte:
     case _:
       digit(U32.is_ge(code, 48) && U32.is_le(code, 57) && U32.is_lt(digits, 10) && (U32.is_lt(value, 429496729) || (U32.is_eq(value, 429496729) && U32.is_le(code, 53))), code, value, digits)
 
-def deliver(step: Byte, +channel: Chan(U32)) -> IO(U32 & U32):
+type Scan is Data:
+  Scanned{value: U32, digits: U32, matched: Bool}
+  Malformed{}
+
+def deliver(step: Byte, id: U32, matched: Bool) -> Scan:
   match step:
-    case More{value, digits}: IO.pure(U32 & U32, (value, digits))
-    case Send{id}:
-      do IO<U32 & U32>:
-        sent : Result<&1, &1, U32, Unit> <- Chan.send(U32, channel, id)
-        return (0, 0)
-    case Bad{}: IO.die(U32 & U32, 2, "Invalid engine control record")
+    case More{value, digits}: Scanned{value, digits, matched}
+    case Send{received}: Scanned{0, 0, matched || U32.is_eq(id, received)}
+    case Bad{}: Malformed{}
 
-def chunk(text: String, state: U32 & U32, +channel: Chan(U32)) -> IO(U32 & U32):
+def chunk(text: String, state: Scan, +id: U32) -> Scan:
   match text state:
-    case SNil{} state: IO.pure(U32 & U32, state)
-    case SCon{Chr{code}, rest} Tuple{value, digits}:
-      do IO<U32 & U32>:
-        parsed : U32 & U32 <- deliver(byte(code, value, digits), channel)
-        chunk(rest, parsed, channel)
-
-def reader(fuel: Nat, +channel: Chan(U32), read: File & Result<&1, &1, U32 & String, String>, state: U32 & U32) -> IO(Unit):
-  match fuel read state:
-    case 1n+p Tuple{file, Done{SCon{head, rest}}} state:
-      do IO<Unit>:
-        parsed : U32 & U32 <- chunk(SCon{head, rest}, state, channel)
-        next : File & Result<&1, &1, U32 & String, String> <- File.read(file, 64)
-        reader(p, channel, next, parsed)
-    case _ Tuple{file, result} _:
-      do IO<Unit>:
-        Chan.close(U32, channel)
-        File.close(file)
+    case _ Malformed{}: Malformed{}
+    case SNil{} state: state
+    case SCon{Chr{code}, rest} Scanned{value, digits, matched}:
+      chunk(rest, deliver(byte(code, value, digits), id, matched), id)
 
 def open_result(result: Result<&1, &1, U32 & String, String>) -> IO(Context):
   match result:
     case Fail{error}: IO.pure(Context, Detached{})
     case Done{path}:
       do IO<Context>:
-        file : File <- IO.try(File, File.open(path, "r"))
-        +channel : Chan(U32) <- Chan.new(U32, 32)
-        IO.spawn(Unit, IO.bind(File & Result<&1, &1, U32 & String, String>, Unit, File.read(file, 64), read => reader(100000000n, channel, read, (0, 0))))
-        return Attached{0, channel}
+        file : File <- IO.try(File, ControlIO.open_reader(path))
+        return Attached{file, 0, 0}
 
 def open() -> IO(Context):
   do IO<Context>:
     result : Result<&1, &1, U32 & String, String> <- IO.get_env("RUBEND_CONTROL_FIFO")
     open_result(result)
 
-def for_job(context: Context, id: U32) -> Context:
+def tag(id: U32) -> String:
+  ",\"jobId\":" ++ U32.show(id)
+
+def ready(context: Context) -> IO(Context):
   match context:
-    case Detached{}: Detached{}
-    case Attached{old, channel}: Attached{id, channel}
+    case Detached{}:
+      do IO<Context>:
+        IO.print("{\"type\":\"ready\"}")
+        return Detached{}
+    case Attached{file, value, digits}:
+      do IO<Context>:
+        IO.print("{\"type\":\"ready\",\"protocol\":2,\"jobIds\":true,\"cancel\":true}")
+        return Attached{file, value, digits}
 
-def tag(context: Context) -> String:
+def scanned(state: Scan, file: File) -> IO(Context & Bool):
+  match state:
+    case Scanned{value, digits, matched}: IO.pure(Context & Bool, (Attached{file, value, digits}, matched))
+    case Malformed{}: IO.die(Context & Bool, 2, "Invalid engine control record")
+
+def polled(read: File & Result<&1, &1, U32 & String, String>, value: U32, digits: U32, id: U32) -> IO(Context & Bool):
+  match read:
+    case Tuple{file, Done{text}}: scanned(chunk(text, Scanned{value, digits, False{}}, id), file)
+    case Tuple{file, Fail{Tuple{code, message}}}: IO.die(Context & Bool, 2, "Engine control read failed: " ++ U32.show(code))
+
+def checkpoint(pulse: U32, id: U32, context: Context) -> IO(Context & Bool):
+  match pulse context:
+    case 0 Attached{file, value, digits}:
+      do IO<Context & Bool>:
+        read : File & Result<&1, &1, U32 & String, String> <- ControlIO.read_ready(file)
+        polled(read, value, digits, id)
+    case _ context: IO.pure(Context & Bool, (context, False{}))
+
+def close(context: Context) -> IO(Unit):
   match context:
-    case Detached{}: ""
-    case Attached{id, channel}: ",\"jobId\":" ++ U32.show(id)
-
-def ready(context: Context) -> IO(Unit):
-  match context:
-    case Detached{}: IO.print("{\"type\":\"ready\"}")
-    case Attached{id, channel}: IO.print("{\"type\":\"ready\",\"protocol\":2,\"jobIds\":true,\"cancel\":true}")
-
-def polled(result: Poll<&1, &1, Maybe<&1, U32>, Unit>, id: U32) -> IO(Bool):
-  match result:
-    case Wait{rest}: IO.pure(Bool, False{})
-    case Ready{Some{received}}: IO.pure(Bool, U32.is_eq(id, received))
-    case Ready{None{}}: IO.die(Bool, 2, "Engine control channel closed")
-
-def poll(context: Context) -> IO(Bool):
-  match context:
-    case Detached{}: IO.pure(Bool, False{})
-    case Attached{id, channel}:
-      do IO<Bool>:
-        result : Poll<&1, &1, Maybe<&1, U32>, Unit> <- Chan.try_recv(U32, channel, 0)
-        polled(result, id)
-
-def checkpoint(pulse: U32, context: Context) -> IO(Bool):
-  match pulse:
-    case 0:
-      do IO<Bool>:
-        IO.sleep(0)
-        poll(context)
-    case _: IO.pure(Bool, False{})
+    case Detached{}: IO.pure(Unit, Unit{})
+    case Attached{file, value, digits}: File.close(file)
