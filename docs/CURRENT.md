@@ -9,7 +9,7 @@ when finished. No subagents may run. Independent review remains not run.
 The single-owned control File treatment is implemented. Its emitted raw C
 restores BLK_SHR zero and the reference child-admission body. Focused IO, parser,
 native reuse, stable-descriptor, and real failure/cleanup checks pass. The
-complete final-source application suite and all sixteen toolchain/proof gates
+complete v5 native-source application suite and all sixteen toolchain/proof gates
 pass with the unchanged twenty-three laws. The FIFO-kind startup guard is
 included. The frozen raw binary is build/experiments/r06-raw-v5. build/rubend
 and its frontend now also contain this final source. Native and actual Bun
@@ -27,6 +27,13 @@ and clean recovery/shutdown. No search speed gain or roadmap completion is
 claimed. Owned stacks and the remaining R04/R05/R06 work
 remain queued. The owned-stack implementation map now includes failure propagation
 and the global-array-mode gate.
+
+The R03 owned store and isolated search now have executable prototypes.
+Twelve storage checks pass in native and JavaScript, and six intended
+mutations are rejected. A native comparison matches every frame and metadata
+field across109,325observed states in15cases. This is bounded Light-profile
+evidence only. Portfolio/runtime integration and performance remain open.
+Read docs/verification/R03-OWNED-STACKS.md. The default solver is unchanged.
 
 A separate host reporting gap is also fixed. Stronger lower bounds now bypass
 counter-only progress throttling. The test first observes zero instead of

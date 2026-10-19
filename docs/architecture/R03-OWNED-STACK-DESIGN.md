@@ -1,6 +1,7 @@
 # Owned search continuations
 
-Status is a solo sketch, not an implementation or performance result.
+Status is an isolated solo store and search implementation with bounded
+state-equivalence evidence. Portfolio migration and performance remain open.
 The relevant source is src/search.bend and src/portfolio.bend at81bb524.
 The prior coordinate-only and segmented outcomes do not predict this treatment.
 Independent design review cannot run under the solo instruction.
@@ -129,7 +130,9 @@ here before using it as a new caller contract.
 
 ## Resume implementation map
 
-This remains unimplemented. The resumed R06 diagnosis adds one prerequisite.
+The store and isolated search are now implemented. Read
+docs/verification/R03-OWNED-STACKS.md for checks and remaining work.
+The resumed R06 diagnosis adds one prerequisite.
 Both stack candidates must emit unshared-array mode. A shared opaque control
 channel can change every array lookup even when pure search source is identical.
 Use the final File-owner runtime as the contemporary reference and preserve
@@ -139,7 +142,9 @@ Keep the first store local to the isolated search module, after Frame and
 before Search. This avoids a Frame/store import cycle and keeps the concrete
 element layout visible to the pinned compiler. A generic store can be compared
 later, but is not presumed faster. Stored Node and Retry omit their path list.
-The owner holds the frame array, one path array, occupancy, and sticky failure.
+The owner holds the frame array, one path array, frame occupancy, logical path
+length, and sticky failure. Reset must set logical path length to zero. Prefix
+reads must reject lengths beyond that cursor, rather than expose stale words.
 
 Overflow must propagate through the whole result boundary. Add an explicit
 continuation-failure completion only in the isolated family. Search.run stops
@@ -159,6 +164,6 @@ frame's reversed prefix at its recorded length. Compare every existing snapshot
 field with the frozen reference, not just solutions or aggregate counters.
 Keep this serialization outside release timing.
 
-No source, table, or benchmark is changed by this map. Required independent
+The default search, table, and portfolio remain unchanged. Required independent
 review remains not run under solo work. The capacity argument above still
 needs execution evidence and is not a new universally proved law.
