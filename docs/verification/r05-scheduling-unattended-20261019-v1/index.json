@@ -1,0 +1,292 @@
+{
+  "archives": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r05-scheduling-unattended-20261019-v1-plan.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/0-r05-scheduling-unattended-20261019-v1-plan.json.gz",
+      "bytes": 14521,
+      "compressedBytes": 6632,
+      "sha256": "30d0b375181d46745e00890fd33a6c1a7a5177be611072b731922f8f3d61151f",
+      "compressedSha256": "a00609687839e327d87c82901dbc1063fa22831ba7932d552d077ed4058538c3",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/status.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/1-status.json.gz",
+      "bytes": 1655,
+      "compressedBytes": 601,
+      "sha256": "03ee67685cbb39b2fb819a1a8eff32fa7df652940f7026b33be85eb358661e76",
+      "compressedSha256": "b3b0ca4b4136e30896a232361675538cd948c3dc7c14d6e815b710673335b88b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/source-manifest.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/2-source-manifest.json.gz",
+      "bytes": 2329,
+      "compressedBytes": 760,
+      "sha256": "de33f395319aabb8cbae709be9e35199457a354936c7d276d29cbd76b4651f3f",
+      "compressedSha256": "eec9b1a25cd837013a6befe2cf80f61eeacbed559c9fff6038e32f6181ec40db",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/build-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/3-build-result.json.gz",
+      "bytes": 2705,
+      "compressedBytes": 853,
+      "sha256": "a5080df55bdbcab1babecd5a17ddbc2158e611e1df63d6591edfa823101414f2",
+      "compressedSha256": "af45066131470a771fa99232b9f396df788aa423b5247d0eabb95694250e7871",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r05-scheduling-unattended-20261019-v1-build-and-guards.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/4-r05-scheduling-unattended-20261019-v1-build-and-guards.json.gz",
+      "bytes": 3150,
+      "compressedBytes": 1054,
+      "sha256": "7331a9f558845c2521f2566509ca579fac0d25a447dc1da63fa87c6657e64ec8",
+      "compressedSha256": "1ddc409a3c20880a9ba6e1c61268f6a52c4cbf66782f1ff3d12d577c7d2cb98e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r05-scheduling-unattended-20261019-v1-short-first.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/5-r05-scheduling-unattended-20261019-v1-short-first.json.gz",
+      "bytes": 2084,
+      "compressedBytes": 902,
+      "sha256": "2fa498db734c00148218d6c6356e8584694a951efe6f1d85153803600561fdc7",
+      "compressedSha256": "6318436e8418c3e94be0c56614afadd30723d38b45311745fec083da873a5b59",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r05-scheduling-unattended-20261019-v1-exact-reserve.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/6-r05-scheduling-unattended-20261019-v1-exact-reserve.json.gz",
+      "bytes": 2090,
+      "compressedBytes": 900,
+      "sha256": "731f366b49943341c242097d9b000e9f52c0a7d948d88166b50362f7587da65b",
+      "compressedSha256": "cd6de5c0e0fa77c2787f4b99088877cc8389dc29281bf601b831860af1b5bca9",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/short-first-config.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/7-short-first-config.json.gz",
+      "bytes": 1759,
+      "compressedBytes": 502,
+      "sha256": "7eea5b6496d2fc121c3edc025badd4a9ded7f343a307c7b441727695ed12e50b",
+      "compressedSha256": "8dabd790dfa25eb0e44ba3d8cc7fde6c7f0711a9a7ae0009506d4e5aa54e7d7e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/short-first-report.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/8-short-first-report.json.gz",
+      "bytes": 7466330,
+      "compressedBytes": 255880,
+      "sha256": "841401340c069b56b18ba13ed0765ca712bea406091246e17223aa91a132a33a",
+      "compressedSha256": "4e62d453029ed7a4b1d96a79697d54436b849f4eb29e5752001fe6f0eab8d706",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/short-first-score.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/9-short-first-score.json.gz",
+      "bytes": 5325,
+      "compressedBytes": 843,
+      "sha256": "34860320c0da1c56abc78ea20988de1f4e5906b11cd5658cc2441ed1653cf074",
+      "compressedSha256": "55985c972a4cc3f60c8051e265e8176afa6d9369adab8a646cb69dcee6bcdb10",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/short-first-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/10-short-first-result.json.gz",
+      "bytes": 5986,
+      "compressedBytes": 981,
+      "sha256": "f1ff8f97ee7179a6c9aacbe6bf11797339c0402592b19b9e4636023498539f70",
+      "compressedSha256": "6b5507f9a62ba9ae75b93ae9dad460379f12a21591e722ce00a2ae768acdbf50",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/exact-reserve-config.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/11-exact-reserve-config.json.gz",
+      "bytes": 1765,
+      "compressedBytes": 501,
+      "sha256": "4edd20718d575bf171980a23aa9d8e3232aeb6e2c49074c78d670563727e6539",
+      "compressedSha256": "aa32134cb0c3e8869501858eb5cbfe84cf0342a653c4e0e217002a5742b00b11",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/exact-reserve-report.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/12-exact-reserve-report.json.gz",
+      "bytes": 7314986,
+      "compressedBytes": 245818,
+      "sha256": "727ddf3d8fa2ba52750ac137cc7c41336722880a306edff79342bbb3b8ac86ce",
+      "compressedSha256": "743b9dbda93246f40762abf49dd4891e631dc69cd20ba8ea8a5a93caf0ccec82",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/exact-reserve-score.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/13-exact-reserve-score.json.gz",
+      "bytes": 5331,
+      "compressedBytes": 839,
+      "sha256": "8112b5fa4de36d9f185c20518bc15b79f223c9ade9a8d53ec048fd4c2262ea9e",
+      "compressedSha256": "66ff4ca0074e105c6aa1aa948ac542a6ff08c89b16ab66a7e35f63ccb6d08eb9",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/exact-reserve-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/14-exact-reserve-result.json.gz",
+      "bytes": 5992,
+      "compressedBytes": 974,
+      "sha256": "8eb98221ee84687b5a7af07a3fc59147c569078979ff047f26d2e43bd42b5f9a",
+      "compressedSha256": "ec9c7520b790ca3d42a5b171c08ed01773a3122c5d99dbdd2085a63a31d2c878",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r05-scheduling-unattended-20261019-v1/disposition.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r05-scheduling-unattended-20261019-v1/15-disposition.json.gz",
+      "bytes": 4330,
+      "compressedBytes": 748,
+      "sha256": "f5237b02ed31cb81c774a979371393aad5221fb6110d5077b3419862d7969f99",
+      "compressedSha256": "31d4c17114f6955e108229469a4a830386a96163a0977a226aabc12ca7dee47c",
+      "roundtripPassed": true
+    }
+  ],
+  "summary": {
+    "format": "rubend-scheduling-disposition-v1",
+    "passed": true,
+    "planRevision": "5bb62d4f78d7e099e09aaf608ff21e6f94715c8f",
+    "elapsedSeconds": 595.998,
+    "results": {
+      "short-first": {
+        "groups": {
+          "fast": {
+            "referenceP95Ms": 16,
+            "candidateP95Ms": 16,
+            "latencyFloorPassed": true,
+            "deadlineMs": 1000,
+            "baselineAnswered": 40,
+            "candidateAnswered": 40,
+            "paired": {
+              "wins": 0,
+              "ties": 40,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 0
+            },
+            "qualityFloorPassed": true,
+            "verdict": "tied"
+          },
+          "exact": {
+            "referenceP95Ms": 33,
+            "candidateP95Ms": 30,
+            "latencyFloorPassed": true,
+            "deadlineMs": 2000,
+            "baselineAnswered": 15,
+            "candidateAnswered": 15,
+            "paired": {
+              "wins": 0,
+              "ties": 15,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 0
+            },
+            "qualityFloorPassed": true,
+            "verdict": "tied"
+          },
+          "superflip": {
+            "referenceP95Ms": 2454,
+            "candidateP95Ms": 2704,
+            "latencyFloorPassed": false,
+            "deadlineMs": 5000,
+            "baselineAnswered": 5,
+            "candidateAnswered": 5,
+            "paired": {
+              "wins": 0,
+              "ties": 5,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 1
+            },
+            "qualityFloorPassed": false,
+            "verdict": "regressed-or-tradeoff"
+          }
+        },
+        "nativeJobs": 1750,
+        "independentCandidateReplays": 5405,
+        "disposition": "Reject promotion. Deadline lengths tie, but a Superflip lower bound and first-answer p95 regress. No default change."
+      },
+      "exact-reserve": {
+        "groups": {
+          "fast": {
+            "referenceP95Ms": 14,
+            "candidateP95Ms": 14,
+            "latencyFloorPassed": true,
+            "deadlineMs": 1000,
+            "baselineAnswered": 40,
+            "candidateAnswered": 40,
+            "paired": {
+              "wins": 0,
+              "ties": 40,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 0
+            },
+            "qualityFloorPassed": true,
+            "verdict": "tied"
+          },
+          "exact": {
+            "referenceP95Ms": 28,
+            "candidateP95Ms": 28,
+            "latencyFloorPassed": true,
+            "deadlineMs": 2000,
+            "baselineAnswered": 15,
+            "candidateAnswered": 15,
+            "paired": {
+              "wins": 0,
+              "ties": 15,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 0
+            },
+            "qualityFloorPassed": true,
+            "verdict": "tied"
+          },
+          "superflip": {
+            "referenceP95Ms": 2264,
+            "candidateP95Ms": 2465,
+            "latencyFloorPassed": false,
+            "deadlineMs": 5000,
+            "baselineAnswered": 5,
+            "candidateAnswered": 5,
+            "paired": {
+              "wins": 0,
+              "ties": 5,
+              "losses": 0,
+              "bothMissing": 0,
+              "coverageGains": 0,
+              "coverageLosses": 0,
+              "lowerGains": 0,
+              "lowerLosses": 1
+            },
+            "qualityFloorPassed": false,
+            "verdict": "regressed-or-tradeoff"
+          }
+        },
+        "nativeJobs": 1750,
+        "independentCandidateReplays": 5180,
+        "disposition": "Reject promotion. Deadline lengths tie, but a Superflip lower bound and first-answer p95 regress. No default change."
+      }
+    },
+    "independentReview": false,
+    "claim": "Finite five-cohort policy comparisons on reused canaries. Not a general speed or playing-strength ranking. Source layout and uncontrolled desktop activity limit cross-run timing comparisons."
+  }
+}

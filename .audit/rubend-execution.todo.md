@@ -73,6 +73,11 @@ app integration, and honest proof coverage, not an assumed world-class victory.
     - [x] Reference direct-contour comparison and fused-ranking disposition. Reference misses the ten-percent marginal gate; fused treatment is rejected and preserved. Runtime restored.
     - [ ] H0 application/remaining projection decisions and final strength comparisons. No promotion or world-class claim.
 - [ ] R05. Anytime and bounded scheduling pilots.
+  - [x] Short-first and exact-reserve serial budget pilots. Both five-cohort
+    runs pass1750jobs each and independent replay, but each loses one Superflip
+    lower bound and misses first-answer p95. Reject promotion; preserve default.
+  - [ ] Other ordering, premove, complementary projection, partition, and
+    separately admitted scaling work.
 - [ ] R06. Lifecycle, GUI, proof coverage, packaging, and final integration.
   - [x] Reproduce and fix stale exported lower bound. Failing-before test and rebuilt hidden GUI pass.
   - [x] Solo lifecycle sketch, versioned cooperative control, host state ownership,
@@ -207,8 +212,10 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [x] Verify the first optional-profile and staged-package queue from saved
   receipts. All three jobs pass in258.79seconds. Independent review is not run.
 - [x] Record Yuzy's21:51standing preference in AGENTS.md.
-- [ ] Prepare the next meaningful experiment, launch fixed tests, and end the
+- [x] Prepare the next meaningful experiment, launch fixed tests, and end the
   turn with an ETA. Read saved results on the next ping instead of polling.
   R05 now has isolated short-first and exact-reserve budget pilots. Run native
   budget/ownership/lifecycle and unchanged-law guards before five-cohort
   comparisons. Keep the default solver unchanged and record all policy losses.
+  Both runs are complete and rejected. Queue workers are stopped. The22:20
+  closeout records results and updates the public README under the usage limit.
