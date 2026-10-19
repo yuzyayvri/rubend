@@ -1,52 +1,43 @@
+<div align="center">
+
 # Rubend
 
-A Rubik's cube solver built in [Bend 2](https://github.com/bendlang/bend).
-Short solutions, honest answers, and a cube you can actually play with.
+A 3×3 cube solver, written in Bend 2.
 
-Turn the cube, enter a scramble, find a solution, and play it back at your own
-pace. Rubend runs locally, with a native solver and an interactive 3D workbench.
+[![Bend 2.0.37](https://img.shields.io/badge/Bend-2.0.37-cbe978?style=flat-square&labelColor=171c18)](https://github.com/bendlang/bend)
+[![Toolchain: Nix](https://img.shields.io/badge/toolchain-Nix-7aa2c9?style=flat-square&labelColor=171c18)](flake.nix)
+[![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-a8bda3?style=flat-square&labelColor=171c18)](LICENSE)
 
-![The Rubend workbench](docs/verification/portfolio-v1/ui-desktop.jpg)
+[Run it](#run-it) · [The engine](#the-engine) · [Experiments](#experiments) · [Verification](#verification)
 
-## Explore the cube
+</div>
 
-- Paste a scramble or edit stickers, with checks for impossible cube states.
-- Use **Fast** for a quick answer, or **Exact** to also search for the shortest
-  solution. If time runs out, keep the best verified answer found so far.
-- Play, pause, seek, and step through a solution forward or backward.
-- Export a replay-checked solution record, including its search bounds.
-- Use the sticker net when 3D rendering is unavailable.
+![Rubend's local workbench showing a four-move solution and playback controls](docs/verification/portfolio-v1/ui-desktop.jpg)
 
-Rubend solves the standard fixed-center 3×3 cube. It counts a half-turn as one
-move, just like a quarter-turn.
+I'm building Rubend to work on cube search, dependent types, and memory layout
+in Bend. The cube rules, search, pruning-table generators, and replay checks
+are implemented here. No third-party solver behind the interface.
 
-## Bend at the core
+The workbench connects a native engine to a Three.js renderer through a local
+Node service. Paste a scramble, edit stickers, or turn faces directly. Then
+solve, scrub through the moves, and export the result. There's a 2D sticker net
+if WebGL isn't available.
 
-The search, cube rules, pruning-table generation, and replay checks are written
-in Bend 2. JavaScript supplies the local service and interface, not a hidden
-third-party solver.
+## Run it
 
-Cube laws and the accepted-solution replay boundary are checked with Bend and
-its independent proof kernel. A verified solution means its moves solve the
-input. A completed optimal search is a stronger result; the full search engine
-has not been formally certified. Rubend keeps those claims separate.
-
-## Run locally
-
-From a checkout with Nix installed:
+With [Nix](https://nixos.org/download/) installed:
 
 ```sh
 nix run .
 ```
 
-The current Nix package targets x86-64 Linux. It pins Bend 2.0.37, Node.js, and
-the proof checker. The first build also downloads the matching Lean toolchain,
-so setup can take a while. No system configuration changes are required.
+Open the loopback URL printed in the terminal. No browser opens automatically.
+Solving runs on your machine.
 
-Open the local address printed in the terminal; no window opens automatically.
-Everything stays on your machine. The standard app uses small pruning tables.
-Larger experimental profiles are opt-in and are not loaded or generated during
-normal startup.
+The package currently targets **x86-64 Linux**. The flake pins the toolchain,
+including Bend 2.0.37 and the matching Lean dependency for BendTT. Expect the
+first build to download a fair amount. The default app generates small pruning
+tables; large experimental caches are opt-in.
 
 For development:
 
@@ -56,26 +47,67 @@ npm ci --ignore-scripts
 just dev
 ```
 
-Use `just check` for the proof/toolchain checks and `just test` for the build,
-independent cube checks, solver tests, and local-service tests.
+## The engine
 
-## How strong is it?
+Rubend uses two-phase search across three axis frames and their inverse
+positions, deduplicating identical roots. A single owned table moves between
+tasks instead of being cloned for each search. The native worker retains its
+tables across cooperative cancellation.
 
-Rubend is a working solver and an early development project. It finds short
-answers and establishes shallow optima, but difficult optimal solves can take
-longer than the available budget. It does not yet claim state-of-the-art speed
-or general formally certified optimality.
+**Fast** looks for an answer, then improves it. **Exact** also searches full-cube
+depth contours to raise a lower bound. Both keep the best verified answer when
+the time budget expires. Moves use HTM: a half-turn costs one, just like a
+quarter-turn.
 
-See the [performance and roadmap overview](docs/verification/ROADMAP-REPORT-2026-10-19.md)
-for measured results, memory tradeoffs, and what remains. Experimental tables
-and scheduling policies are adopted only when their results justify them.
+Every emitted answer passes Bend's replay-certificate check and another replay
+through Bend-generated JavaScript. An answer is marked optimal only when its
+established lower bound meets its length. A valid solution and a shortest
+solution aren't the same thing.
 
-The [current status](docs/CURRENT.md) records the latest results and unfinished
-work. The [build plan](docs/PLAN.md) covers the longer-term goals, and the
-[research notes](docs/research/FINDINGS.md) explain the choices.
+## Experiments
 
-## License
+Most of the work is in the pruning bounds and what they cost to read.
 
-Rubend is free software under the [GNU GPL, version 3 or later](LICENSE).
-Copyright © 2026 Yuzy. Third-party tools and any future reused code retain their
-own notices and licenses.
+- [Inverse bounds](docs/verification/R02-INVERSE.md) reuse the joint table rather
+  than allocate another one. The three-axis pilot cut CPU time by 37.8% on the
+  sixteen-position development set at its fixed lower-bound target. That's a
+  contour result, not an across-the-board solve-time claim.
+- [Packed small tables](docs/verification/R03-SMALL.md) reduced native RSS from
+  43,948 to 15,276 KiB in five paired runs, excluding Node and the browser.
+  Initialization got slower. It's an optional memory tier.
+- [The H0 table](docs/verification/R04-H0-TABLE.md) has 117,567,450 entries,
+  each matched against a separately implemented BFS.
+
+Some smaller representations and scheduling changes passed correctness checks
+but lost search progress within the same deadline. Those experiments stay in
+the repo too. Fewer allocations don't automatically mean a better solver.
+
+The [performance overview](docs/verification/ROADMAP-REPORT-2026-10-19.md)
+collects the results and rejected approaches. Hard optimal solves are still
+unfinished work.
+
+## Verification
+
+Inside `nix develop`:
+
+```sh
+just test
+just check
+just proof
+```
+
+`just test` builds the app and runs model, table, solver, worker, HTTP, and
+playback regressions. Independent checks use cubing.js and a breadth-first
+oracle through depth four. `just check` runs sixteen toolchain and proof checks;
+`just proof` runs the full proof entrypoint through BendTT.
+
+Twenty-three laws cover moves, replay certificates, symmetries, and pruning
+identities. Full search completeness and optimality aren't formally certified.
+The [proof coverage](docs/architecture/PROOF-COVERAGE.md) spells out the boundary.
+
+[Current work](docs/CURRENT.md) · [Research notes](docs/research/FINDINGS.md) · [Optional profiles](docs/benchmarks/ADVANCED-PROFILES.md)
+
+---
+
+GPL-3.0-or-later. Copyright © 2026 Yuzy.
+[License](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
