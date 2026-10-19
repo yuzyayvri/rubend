@@ -209,3 +209,6 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [x] Record Yuzy's21:51standing preference in AGENTS.md.
 - [ ] Prepare the next meaningful experiment, launch fixed tests, and end the
   turn with an ETA. Read saved results on the next ping instead of polling.
+  R05 now has isolated short-first and exact-reserve budget pilots. Run native
+  budget/ownership/lifecycle and unchanged-law guards before five-cohort
+  comparisons. Keep the default solver unchanged and record all policy losses.
