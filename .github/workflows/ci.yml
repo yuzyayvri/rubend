@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  BEND_NO_TELEMETRY: "1"
+
+jobs:
+  verify:
+    name: Tests, proofs, and package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@448cde739abec1eaf0646249e3d25bb8d9bc7702
+        with:
+          github_access_token: ${{ github.token }}
+          enable_kvm: false
+          extra_nix_config: |
+            max-jobs = 1
+            cores = 2
+            sandbox = true
+
+      - name: Check workflow syntax
+        run: |
+          mkdir -p build/ci
+          nix run --inputs-from . nixpkgs#actionlint -- .github/workflows/ci.yml 2>&1 | tee build/ci/workflow.log
+
+      - name: Install JavaScript dependencies
+        run: nix develop --command npm ci --ignore-scripts 2>&1 | tee build/ci/dependencies.log
+
+      - name: Check toolchain and proofs
+        run: nix develop --command just check 2>&1 | tee build/ci/check.log
+
+      - name: Run full regression suite
+        run: nix develop --command just test 2>&1 | tee build/ci/test.log
+
+      - name: Check sandboxed Nix package and runtime
+        run: nix flake check --no-update-lock-file --print-build-logs 2>&1 | tee build/ci/flake.log
+
+      - name: Export verified Linux package
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          nix build .#rubend --no-update-lock-file --print-build-logs 2>&1 | tee build/ci/package.log
+          mkdir -p build/delivery
+          closure=$(nix-store --query --requisites ./result)
+          mapfile -t store_paths <<< "$closure"
+          nix-store --export "${store_paths[@]}" | gzip -n > build/delivery/rubend-x86_64-linux.nar.gz
+          readlink -f result > build/delivery/store-path.txt
+          printf '%s\n' "$GITHUB_SHA" > build/delivery/commit.txt
+          cp LICENSE README.md THIRD_PARTY_NOTICES.md build/delivery/
+          cd build/delivery
+          sha256sum rubend-x86_64-linux.nar.gz store-path.txt commit.txt LICENSE README.md THIRD_PARTY_NOTICES.md > SHA256SUMS
+
+      - name: Upload verified package
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: rubend-x86_64-linux-${{ github.sha }}
+          path: build/delivery/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14
+
+      - name: Upload verification diagnostics
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/ci/
+            build/setup-check.json
+            build/manifest.json
+          if-no-files-found: warn
+          retention-days: 14

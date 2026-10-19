@@ -5,6 +5,7 @@
 A 3×3 cube solver, written in Bend 2.
 
 [![Bend 2.0.37](https://img.shields.io/badge/Bend-2.0.37-cbe978?style=flat-square&labelColor=171c18)](https://github.com/bendlang/bend)
+[![CI](https://img.shields.io/github/actions/workflow/status/yuzyayvri/rubend/ci.yml?branch=main&style=flat-square&labelColor=171c18)](https://github.com/yuzyayvri/rubend/actions/workflows/ci.yml)
 [![Toolchain: Nix](https://img.shields.io/badge/toolchain-Nix-7aa2c9?style=flat-square&labelColor=171c18)](flake.nix)
 [![License: GPL-3.0-or-later](https://img.shields.io/badge/license-GPL--3.0--or--later-a8bda3?style=flat-square&labelColor=171c18)](LICENSE)
 
@@ -104,6 +105,9 @@ oracle through depth four. `just check` runs sixteen toolchain and proof checks;
 Twenty-three laws cover moves, replay certificates, symmetries, and pruning
 identities. Full search completeness and optimality aren't formally certified.
 The [proof coverage](docs/architecture/PROOF-COVERAGE.md) spells out the boundary.
+
+[GitHub Actions](docs/verification/CI.md) runs the suite and Nix package checks.
+Successful main builds include a downloadable Linux Nix closure with checksums.
 
 [Current work](docs/CURRENT.md) · [Research notes](docs/research/FINDINGS.md) · [Optional profiles](docs/benchmarks/ADVANCED-PROFILES.md)
 
