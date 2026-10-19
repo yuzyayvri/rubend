@@ -126,3 +126,39 @@ default unchanged if the treatment fails.
 Build a bounded pure continuation store and its failing capacity fixtures, then
 migrate the isolated search and portfolio together. Reconcile any shape change
 here before using it as a new caller contract.
+
+## Resume implementation map
+
+This remains unimplemented. The resumed R06 diagnosis adds one prerequisite.
+Both stack candidates must emit unshared-array mode. A shared opaque control
+channel can change every array lookup even when pure search source is identical.
+Use the final File-owner runtime as the contemporary reference and preserve
+the historical R01 results separately.
+
+Keep the first store local to the isolated search module, after Frame and
+before Search. This avoids a Frame/store import cycle and keeps the concrete
+element layout visible to the pinned compiler. A generic store can be compared
+later, but is not presumed faster. Stored Node and Retry omit their path list.
+The owner holds the frame array, one path array, occupancy, and sticky failure.
+
+Overflow must propagate through the whole result boundary. Add an explicit
+continuation-failure completion only in the isolated family. Search.run stops
+on it. Portfolio.finish_slice propagates it before ordinary scheduling,
+incumbent, or lower-bound logic. The runtime fails before emitting done or
+optimal. Merely dropping the failed task would fabricate exhausted work.
+Test both a full frame store and a path write at its capacity before indexing.
+
+Deduplicate copied root descriptors before allocating affine Tasks. Keep the
+existing first-kept axis order. Scheduling and restart consume and return
+owned task lists. Restart resets logical occupancy and reuses both arrays;
+it must not clear an existing failure.
+
+The observation path must consume and return the same arrays while reconstructing
+legacy frames. Walk occupied cells from top to bottom and materialize each
+frame's reversed prefix at its recorded length. Compare every existing snapshot
+field with the frozen reference, not just solutions or aggregate counters.
+Keep this serialization outside release timing.
+
+No source, table, or benchmark is changed by this map. Required independent
+review remains not run under solo work. The capacity argument above still
+needs execution evidence and is not a new universally proved law.

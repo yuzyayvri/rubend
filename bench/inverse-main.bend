@@ -8,8 +8,8 @@ def worker(file: File) -> IO(Unit):
   do IO<Unit>:
     IO.print("{\"type\":\"initializing\"}")
     table : Array<U32> <- A.table()
-    +control : Control.Context <- Control.open()
-    Control.ready(control)
+    control : Control.Context <- Control.open()
+    control : Control.Context <- Control.ready(control)
     read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
     H.worker_loop_controlled(1000000n, table, read, S.RawInverseThree{}, control)
 

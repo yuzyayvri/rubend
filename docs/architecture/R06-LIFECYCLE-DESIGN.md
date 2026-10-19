@@ -52,6 +52,58 @@ records have direct checks. Candidate emission and budget checks still happen
 each slice. No progress cadence, search policy, or heuristic changes are bundled.
 Cancellation latency and deadline quality must be remeasured for this treatment.
 
+## Single-owned control file treatment
+
+The resumed compiler diagnosis in docs/research/CONTROL-ARRAY-MODE.md changes
+the ownership choice. A reused opaque channel globally enables shared-array
+mode in this pinned compiler. The same-binary measurement does not support
+polling as the main cost. Keep those negative results visible.
+
+The existing caller still opens control once, announces readiness, runs bounded
+jobs, and closes both pipes. Its internal contract becomes:
+
+```text
+open() -> IO(Context)
+ready(Context) -> IO(Context)
+checkpoint(pulse, jobId, Context) -> IO(Context × Bool)
+solve(table, Context, jobId) -> IO(table × Context)
+close(Context) -> IO(Unit)
+```
+
+Context is affine. Attached owns one File and the partial decimal value and
+digit count. Job identity remains a copied U32 outside the handle. Every
+checkpoint returns the same owner. The pure Bend scanner processes at most
+sixty-four bytes, preserves fragments, rejects malformed records, and cancels
+only on a complete current ID. No reader task, channel, or IO sleep remains.
+The search, portfolio, progress cadence, and table representation stay unchanged.
+
+A second viable sketch opens and closes the FIFO for every checkpoint. It
+avoids a shared handle but adds descriptor churn and cannot keep partial parser
+state behind a small owner contract. Select the persistent affine File. This
+exposes only checkpoint and job completion to callers and hides descriptor
+flags and fragment state. The old shared-channel design stays recoverable in
+frozen v3. This is a solo sequential comparison, not independent architecture
+review.
+
+Base has no nonblocking File read. Add two bounded runtime-only effects for
+nonblocking open and one read. Both preserve the File ownership contract. An
+empty nonblocking read is not EOF. EINTR and EAGAIN leave a retryable empty
+result. Actual EOF and descriptor errors fail the worker. Keep the foreign
+effect module outside PROOF.bend. Implement a JavaScript twin and fault tests
+for the boundary. No native code parses cube state, chooses moves, or searches.
+
+The earlier channel rationale is explicit in this document and commit81bb524.
+It avoided new foreign effects and pending reads per slice. Preserve bounded
+control and fallback behavior, change opaque-handle sharing, avoid compiler or
+generated-C patches, and treat restored array mode as a prerequisite rather
+than a speed result. The new tradeoff is a small pinned-runtime effect in
+exchange for eliminating a reproduced global mode change.
+
+Required gates are native and JavaScript IO faults, pure scanner boundaries,
+same-owner cancellation and cleanup, emitted `BLK_SHR 0`, complete regression,
+the unchanged twenty-three-law verdict, and fresh matched quality/lifecycle
+runs. Independent review remains not run under the solo instruction.
+
 ## Interfaces and state
 
 Engine has initializing, ready, searching, cancelling, failed, and closed states.

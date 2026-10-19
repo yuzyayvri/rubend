@@ -36,10 +36,14 @@ test: build
     node tests/engine.mjs
     node tests/engine-lifecycle.mjs
     node tests/native-lifecycle.mjs
+    node tests/native-control-failures.mjs
     bend tests/worker-control.bend -o build/worker-control-test
     node tests/worker-control.mjs
     bend tests/worker-control-batch.bend -o build/worker-control-batch-test
     node tests/worker-control-batch.mjs
+    bend src/worker-control.bend -o build/worker-control.mjs
+    node tests/worker-control-scan.mjs
+    just control-io-test
     node tests/http.mjs
     node tests/export.mjs
     node tests/model-client.mjs
@@ -84,6 +88,12 @@ test: build
     node tests/lifecycle-compare.mjs
     node tests/control-ownership-inspect.mjs
     node tests/control-detached-probe.mjs
+
+control-io-test:
+    bend tests/control-io.bend -o build/control-io-test
+    bend tests/control-io.bend -o build/control-io-test.c
+    clang -O2 build/control-io-test.c tests/control-read-wrap.c -Wl,--wrap=read -Wl,--wrap=__read_chk -Wl,--wrap=fcntl -o build/control-io-wrapped-test -lpthread -lm
+    node tests/control-io.mjs --wrapped
 
 audit:
     bend bench/audit.bend -o build/audit
