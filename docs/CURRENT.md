@@ -1,16 +1,20 @@
 # Current state of Rubend
 
-## Background-only interval
+## Latest unattended verification
 
 Yuzy requested an unattended local test queue on 2026-10-19 to avoid spending
-model usage while long checks run. Implementation pauses after launching the
-fixed queue. No heartbeat or automatic AI wakeup is created. The planned run ID
-is r06-unattended-20261019-v1. Read its plan at
-build/evidence/r06-unattended-20261019-v1-plan.json and its mutable status at
-build/experiments/r06-unattended-20261019-v1/status.json.
-Expected completion is about fifteen minutes after launch, with a thirty-minute
-aggregate queue cap. Results stay on disk until Yuzy pings again. Read
-docs/verification/BACKGROUND-TESTS.md before resuming or starting another build.
+model usage while long checks run. Run r06-unattended-20261019-v1 passed all
+three jobs and finished at 21:23:29 Manila, after 258.79 seconds. The detached
+worker has stopped. Six optional profiles pass build and array-mode checks,
+retained-owner cancellation, stable descriptors, fragmented and stale control,
+and thirty real native control failures. The staged package passes native,
+HTTP, export, and all sixteen toolchain checks with the unchanged 23 laws.
+This is not Nix sandbox, relocation, independent-review, or GUI acceptance.
+Read docs/verification/r06-unattended-20261019-v1/index.json for source-bound
+receipts. Yuzy resumed at 21:51 and made detached test batches the standing
+workflow. Prepare a meaningful fixed batch, launch it, and pause with an ETA.
+Do not poll long tests or create automatic model wakeups. Read
+docs/verification/BACKGROUND-TESTS.md before starting another batch.
 
 The H0 application comparison also passes all 1,750 jobs, with sixty paired
 deadline lengths and lower bounds tied. First-answer p95 is 13 versus 12 ms,

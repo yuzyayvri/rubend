@@ -200,3 +200,12 @@ prototype. Keep the existing authorization, resource, law, and solo boundaries.
 - [ ] Phase E: Verify and hand back.
 - [ ] BLOCKED: independent review. User requires solo work, including no 6-family agents.
 - [ ] Push verified changes when finished. No PR, merge, release, or deployment.
+
+## Token-saving test batches
+
+- [x] Build and test a detached queue with no automatic model wakeups.
+- [x] Verify the first optional-profile and staged-package queue from saved
+  receipts. All three jobs pass in258.79seconds. Independent review is not run.
+- [x] Record Yuzy's21:51standing preference in AGENTS.md.
+- [ ] Prepare the next meaningful experiment, launch fixed tests, and end the
+  turn with an ETA. Read saved results on the next ping instead of polling.
