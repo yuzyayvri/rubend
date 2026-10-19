@@ -16,8 +16,16 @@ produce its intended C change.
 Five fresh matched-kernel cohorts pass all 1,750 application jobs and tie all
 sixty answer lengths and lower bounds. Superflip first-answer p95 is 2,293 ms
 for the contemporary reference and 2,520 ms for v3. That exceeds the five-percent
-latency floor, so v3 is not promoted. Full regression is active. A separate
-tail-state compiler probe is prepared outside production source. Neither C
+latency floor, so v3 is not promoted. Full regression and all sixteen final
+toolchain/proof gates pass. Fresh matched cancellation p95 is 25.76 ms, with
+all fifteen cooperative table owners retained. A separate
+tail-state compiler probe is rejected after emitting the same hot function.
+A same-binary detached/cooperative comparison passes all1,750jobs and ties
+quality. Its first-answer ranges overlap. A minimal native test isolates reused
+opaque channels as a trigger for global shared-array mode. The extra location
+arguments were previously mislabeled as ordinary borrows. Read
+docs/research/CONTROL-ARRAY-MODE.md. The next treatment owns one nonblocking
+control File, preserving the Bend parser and pure engine. Neither C
 shape nor search work-step counts establish a speedup.
 
 The reproducible C-inspection tool and rejecting fixtures are committed at
