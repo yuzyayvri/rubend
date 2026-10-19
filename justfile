@@ -6,14 +6,18 @@ resource-evidence-test:
 
 owned-continuation-test:
     node scripts/generate-owned-search.mjs --check
+    node tests/owned-search-generator.mjs
     bend bench/owned-continuation.bend --verdict
     bend src/owned/search.bend --verdict
+    bend src/owned/portfolio.bend --verdict
     bend tests/owned-continuation.bend -o build/owned-continuation-test
     build/owned-continuation-test --threads 1
     bend tests/owned-continuation.bend -o build/owned-continuation-test.mjs
     node tests/owned-continuation.mjs
     bend tests/owned-search-observer.bend -o build/owned-search-observer-test
     build/owned-search-observer-test --threads 1
+    bend tests/owned-failures.bend -o build/owned-failures-test
+    node tests/owned-failures.mjs
     bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence
     bend bench/owned-search-equivalence.bend -o build/owned-search-equivalence.c
     node scripts/check-array-mode.mjs build/owned-search-equivalence.c

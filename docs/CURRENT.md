@@ -35,6 +35,14 @@ field across109,325observed states in15cases. This is bounded Light-profile
 evidence only. Portfolio/runtime integration and performance remain open.
 Read docs/verification/R03-OWNED-STACKS.md. The default solver is unchanged.
 
+The isolated affine portfolio and fail-closed runtime now also compile and pass
+focused checks. A nominal Tasks queue avoids the reproduced shared-array-mode
+trigger in recursive generic-list restart. All 21,890 portfolio snapshots match
+in every existing field in Light and Raw, including all 163 shallow optima per
+profile. Full application regression, all 23 laws, and isolated Light and Raw
+native cancellation and failure checks pass. Matched performance and
+broader hidden acceptance remain open. No stack promotion is claimed.
+
 A separate host reporting gap is also fixed. Stronger lower bounds now bypass
 counter-only progress throttling. The test first observes zero instead of
 zero, one, and two; the focused rebuilt native/HTTP/export suite and all23laws

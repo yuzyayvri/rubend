@@ -1,0 +1,205 @@
+{
+  "receipts": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-family-build-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-family-build-v2.json.gz",
+      "bytes": 2355,
+      "compressedBytes": 1132,
+      "sha256": "56367a1b0e112569d816e9087fd3833726731010371fe4196a030fbb321e4857",
+      "compressedSha256": "949b1835c20c574a7939953e9a7bd587d82ced35eebc329934761837ce16dc33",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-portfolio-equivalence-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-portfolio-equivalence-v2.json.gz",
+      "bytes": 2473,
+      "compressedBytes": 927,
+      "sha256": "3eb6ef65e55de04c4af15d25d291e6f0c33f2bc4f256d5c01d1270526ffc0067",
+      "compressedSha256": "eb7594ac25f482ae4e10573fcdc952de513cd84f1c2f7efe12745df1b5683434",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-queue-confirm-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-queue-confirm-v2.json.gz",
+      "bytes": 9771,
+      "compressedBytes": 3197,
+      "sha256": "62134d3f5f908ce25af528b213ff2dc702766979dca9adb863adc0852c7e9099",
+      "compressedSha256": "8d46bf68cc2bf5f721b4f13211f7e1470a9ad78f437287fa6b2ad6f6c635402d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-integration-v2.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-integration-v2.json.gz",
+      "bytes": 50264,
+      "compressedBytes": 9632,
+      "sha256": "8425427884e8d8bd5794921e047ad4b74243cd7cf941b69e6b6cd0357974a278",
+      "compressedSha256": "810f2ad0ba8f4d31f78b889a2ed82fb78727efbdfee36a3aa3a0227a6d0a5d8b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-family-build-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/rejected-generic-array-mode.json.gz",
+      "bytes": 2068,
+      "compressedBytes": 1046,
+      "sha256": "e9e6e6df4670f4ab66d04a0c0a562f8b1fd7746a019c2cbc427c871ae05dcefe",
+      "compressedSha256": "4d9ef98a6bb3b091af3c22433c99a82f27604d4a669650dfc1165f7c60f00420",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-portfolio-equivalence-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/reference-shallow-cap.json.gz",
+      "bytes": 3176,
+      "compressedBytes": 1230,
+      "sha256": "a2176cde082d90e97da298cf53f4e21484a7a1f46ab724f183fa629805d3be28",
+      "compressedSha256": "36d867352c8007dbb8e5e632657e85c803f2b0f19de2d22e9de2bb5b42931f76",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-integration-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/stopped-launcher.json.gz",
+      "bytes": 2011,
+      "compressedBytes": 909,
+      "sha256": "34806b5d7987b6ffefbd6874222e8676282f7153cf47975f5389d83c75e23887",
+      "compressedSha256": "5957dadbd9c49f32208de577d03c938a424726b94e8ec42007ae00e287133099",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-generic-confirm-v2/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/generic-restart-probe.json.gz",
+      "bytes": 4306,
+      "compressedBytes": 2113,
+      "sha256": "f7a3153452c4c3ad1d5ff07d8715da7ddebba3b82e92d7fd82da695b6e6ed155",
+      "compressedSha256": "1ca3c0909a671cda6981cd1161829a585812679976e7af837071d650b5cc324d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-nominal-confirm-v2/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/nominal-restart-probe.json.gz",
+      "bytes": 4662,
+      "compressedBytes": 2252,
+      "sha256": "1459a735775962c8aea022c14e602e639066dc81ab7da0c7f68b50568a0be6a9",
+      "compressedSha256": "5cbb359b262d52596d347c38acddb15f531edeb7ace2873fdacc23dd481391d8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r03-owned-array-probe-v5/result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/simple-list-probes.json.gz",
+      "bytes": 1961,
+      "compressedBytes": 893,
+      "sha256": "2383ed43df23c7a3902c5627f9b404aff8595b42cda3f9276ca084eadb58f9e2",
+      "compressedSha256": "2dd2e0e4705acbc81fc7e527e3a084e78aeef211647132832a253dc2ec82918d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-light-states-v1-compact.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-light-states-v1-compact.json.gz",
+      "bytes": 869861,
+      "compressedBytes": 61304,
+      "sha256": "5b95a89f0454a095d261007363ad3395d1cfbd1ffbcd7aba901207a21a3400e8",
+      "compressedSha256": "c14948d9e111466452e18bcdf6abf8a68db7527ed1591cc7059d6c76ab3b79ec",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-light-shallow-v2-compact.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-light-shallow-v2-compact.json.gz",
+      "bytes": 20174621,
+      "compressedBytes": 362363,
+      "sha256": "2967e7fe03506e5ba9b78f201e2e772b98ca69ea423a5aba59f40d9c87e8463d",
+      "compressedSha256": "0e862a80b8f2d9ec0fe52dee19abe9e4751aa42677cd2080f6b60ffe04ca0c1e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-raw-states-v1-compact.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-raw-states-v1-compact.json.gz",
+      "bytes": 1172551,
+      "compressedBytes": 86253,
+      "sha256": "78338e27e5cb092459c75869f895ee367501ed8f054827d22fb90c86fc330680",
+      "compressedSha256": "bbf5dcebca4b292ac3a827229bcbba4139be9042be88300ddbe26a0a5ad7d703",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-raw-shallow-v2-compact.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/r03-owned-raw-shallow-v2-compact.json.gz",
+      "bytes": 20051656,
+      "compressedBytes": 360939,
+      "sha256": "44f87acd5927bc40a4594e815b6155300cbf2d839f31f08b58f061586099fc36",
+      "compressedSha256": "c4adf7fcf4c0a3fcd657cc9e4c775aeab3da055c7984e14d491f6d6292390fc4",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r03-owned-family-summary-v1.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r03-owned-family-v1/summary.json.gz",
+      "bytes": 32306,
+      "compressedBytes": 4605,
+      "sha256": "8a34fe86c3c3a1d08da584e55bc209cecca3a9a687f15c515ad2dd0162324d28",
+      "compressedSha256": "b68ee0eb21e71ebdfdfdcca6a60005de67e673ca3ee8736fb4812d9701b234f5",
+      "roundtripPassed": true
+    }
+  ],
+  "reformatted": [
+    {
+      "source": "build/evidence/r03-owned-light-states-v1.json",
+      "originalSha256": "4a0586ebd985a26a4487af6aaddbbfedc044a38f4dea38e07dc4b28684f4f645",
+      "originalBytes": 5458165,
+      "compact": "build/evidence/r03-owned-light-states-v1-compact.json",
+      "compactSha256": "5b95a89f0454a095d261007363ad3395d1cfbd1ffbcd7aba901207a21a3400e8",
+      "compactBytes": 869861,
+      "objectRoundtrip": true,
+      "counts": {
+        "snapshots": 350,
+        "candidates": 170,
+        "nodes": 4560882
+      },
+      "referenceBinarySha256": "e318a169fa39611395fb0b78a44103d364f7bbdb09e5fa7cfbb75466f288b5d4",
+      "candidateBinarySha256": "bcc5213b1851e69a8e82d127fa28ba31f498c2f88977d9fd9a166fed6cf955f2"
+    },
+    {
+      "source": "build/evidence/r03-owned-light-shallow-v2.json",
+      "originalSha256": "5cdddb9d23ed377c54f3aca2747d66bfce903a72505c8ca7423e697ba0dfd13d",
+      "originalBytes": 120391519,
+      "compact": "build/evidence/r03-owned-light-shallow-v2-compact.json",
+      "compactSha256": "2967e7fe03506e5ba9b78f201e2e772b98ca69ea423a5aba59f40d9c87e8463d",
+      "compactBytes": 20174621,
+      "objectRoundtrip": true,
+      "counts": {
+        "snapshots": 10595,
+        "candidates": 10431,
+        "nodes": 20463599
+      },
+      "referenceBinarySha256": "e318a169fa39611395fb0b78a44103d364f7bbdb09e5fa7cfbb75466f288b5d4",
+      "candidateBinarySha256": "bcc5213b1851e69a8e82d127fa28ba31f498c2f88977d9fd9a166fed6cf955f2"
+    },
+    {
+      "source": "build/evidence/r03-owned-raw-states-v1.json",
+      "originalSha256": "e27cc3b999ef5e40f5a139c6876da293469cd136d6378baf56a361b0e1720ff4",
+      "originalBytes": 7686812,
+      "compact": "build/evidence/r03-owned-raw-states-v1-compact.json",
+      "compactSha256": "78338e27e5cb092459c75869f895ee367501ed8f054827d22fb90c86fc330680",
+      "compactBytes": 1172551,
+      "objectRoundtrip": true,
+      "counts": {
+        "snapshots": 350,
+        "candidates": 208,
+        "nodes": 4640882
+      },
+      "referenceBinarySha256": "e318a169fa39611395fb0b78a44103d364f7bbdb09e5fa7cfbb75466f288b5d4",
+      "candidateBinarySha256": "bcc5213b1851e69a8e82d127fa28ba31f498c2f88977d9fd9a166fed6cf955f2"
+    },
+    {
+      "source": "build/evidence/r03-owned-raw-shallow-v2.json",
+      "originalSha256": "8938b72e472e212b86cb78d4f8976050a29f19730b92236e875278e3082cee11",
+      "originalBytes": 119578256,
+      "compact": "build/evidence/r03-owned-raw-shallow-v2-compact.json",
+      "compactSha256": "44f87acd5927bc40a4594e815b6155300cbf2d839f31f08b58f061586099fc36",
+      "compactBytes": 20051656,
+      "objectRoundtrip": true,
+      "counts": {
+        "snapshots": 10595,
+        "candidates": 10431,
+        "nodes": 20450223
+      },
+      "referenceBinarySha256": "e318a169fa39611395fb0b78a44103d364f7bbdb09e5fa7cfbb75466f288b5d4",
+      "candidateBinarySha256": "bcc5213b1851e69a8e82d127fa28ba31f498c2f88977d9fd9a166fed6cf955f2"
+    }
+  ]
+}

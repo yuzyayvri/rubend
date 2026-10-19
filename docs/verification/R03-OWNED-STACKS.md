@@ -1,7 +1,7 @@
 # Owned continuation evidence
 
-The isolated store and search prototype pass their first semantic checks.
-The default search and portfolio are unchanged. Portfolio integration, timing,
+The isolated store, search, affine portfolio, and runtime pass semantic and
+application checks. The default search and portfolio are unchanged. Timing,
 whole-engine memory, application quality, and independent review remain open.
 No promotion or search completeness claim follows from these checks.
 
@@ -74,3 +74,51 @@ The [final foundation batch](r03-owned-foundation-v1/final-checks.json.gz) passe
 the reproduction target, all sixteen toolchain gates, the package rebuild,
 and its source/artifact checks. The emitted native comparison program has
 BLK_SHR zero. There is no performance or whole-application acceptance claim.
+
+## Affine portfolio and runtime
+
+The generator now also emits the isolated portfolio, runtime, raw entrypoint,
+and legacy-compatible fixed-work adapter. Root descriptors are deduplicated
+before allocating affine tasks. Restart reuses each task's arrays and preserves
+its sticky failure. The portfolio propagates ContinuationFailure before
+incumbent or completion logic. Both runtime service paths fail before a done
+or optimal event, even when the incumbent length already equals its lower bound.
+
+The first generic List<Task> queue compiled but emitted shared-array mode.
+Frozen-source probes localize the trigger to recursive task restart. Single-task
+restart, allocation, deduplication, and scheduling do not reproduce it. A nominal
+affine Tasks queue restores unshared mode in recursive restart, full advance,
+and the raw runtime. Simple generic array-list probes remain negative. This
+does not establish a broader compiler rule or a speed benefit.
+
+Light and Raw each match 350 general snapshots at 24 slices and 10,595 shallow
+snapshots at 64 slices. All 21,890 pairs preserve every existing snapshot field.
+All 163 known shallow optima per profile are established and independently
+replayed. The first six-slice shallow run failed the reference's completion
+requirement before testing the candidate. That bounded-work failure is retained.
+No metric or equality field was relaxed.
+
+The complete just test suite and all sixteen just check gates pass. Additional
+isolated Light and Raw runs pass real retained-owner cancellation, fragmented
+and stale control, stable descriptors, five native control failures, and process
+and IPC cleanup. The isolated Light HTTP and export checks pass. This does not
+replace the remaining hidden-browser and packaging acceptance lanes.
+
+The [family archive](r03-owned-family-v1/index.json) binds the frozen binaries,
+source graphs, complete compact snapshots, rejecting generic queue, diagnostic
+probes, integration receipts, and cache digest. Snapshot compaction is lossless
+and leaves every original record unchanged. The law-source guard compares all
+23 statements with origin/main. PROOF.bend matches the actual 13e2557 resume
+checkpoint, which already contains four segmented imports beyond main.
+
+One integration launcher was stopped after its command composition was found
+capable of masking an earlier failure. Its partial files remain preserved.
+The corrected all-success-required batch is the passing integration receipt.
+The reference timer had already completed its sealed build before that stop.
+Its live 500-slice comparison is still pending, along with the owned timer.
+
+The frozen measurement plan requires at least ten percent repeated total-time
+improvement, unchanged deadline coverage and quality, and at most five percent
+first-answer p95 regression. Initialization and whole-engine RSS stay separate.
+No profiling or release timing result is available yet. Independent review and
+the comment reviewer remain not run under the solo instruction.
