@@ -75,10 +75,10 @@ async function solve(){
 }
 $("solve-button").onclick=solve;$("cancel-button").onclick=()=>stop();
 async function jump(target,animate=false){
-  if(!solution)return;if(!animate)playing=false;if(busy){if(!animate)pendingSeek={target,solution};return;}playing=playing&&animate;const s=solution,n=Math.max(0,Math.min(s.moves.length,target));busy=true;sync();
-  try{const r=await model("apply",{facelets:s.origin,moves:s.moves.slice(0,n)});if(solution!==s)return;if(animate&&n===step+1)await scene?.turn(s.moves[step],r.facelets,duration());else scene?.set(r.facelets);facelets=r.facelets;step=n;save();}catch(e){message(e.message,true);}finally{busy=false;sync();const seek=pendingSeek;pendingSeek=null;if(seek&&seek.solution===solution)await jump(seek.target);}
+  if(!solution||modelClient.state!=="active"){playing=false;sync();return;}if(!animate)playing=false;if(busy){if(!animate)pendingSeek={target,solution};return;}playing=playing&&animate;const s=solution,n=Math.max(0,Math.min(s.moves.length,target));busy=true;sync();
+  try{const r=await model("apply",{facelets:s.origin,moves:s.moves.slice(0,n)});if(solution!==s)return;if(animate&&n===step+1)await scene?.turn(s.moves[step],r.facelets,duration());else scene?.set(r.facelets);facelets=r.facelets;step=n;save();}catch(e){playing=false;pendingSeek=null;message(e.message,true);}finally{busy=false;sync();const seek=pendingSeek;pendingSeek=null;if(seek&&seek.solution===solution)await jump(seek.target);}
 }
-async function play(){if(playing){playing=false;sync();return;}if(!solution)return;if(step>=solution.moves.length)await jump(0);playing=true;sync();while(playing&&solution&&step<solution.moves.length){await jump(step+1,true);}playing=false;sync();}
+async function play(){if(playing){playing=false;sync();return;}if(!solution||busy||searching||modelClient.state!=="active")return;playing=true;if(step>=solution.moves.length)await jump(0,true);sync();while(playing&&solution&&step<solution.moves.length){await jump(step+1,true);}playing=false;sync();}
 $("first-button").onclick=()=>jump(0);$("back-button").onclick=()=>jump(step-1);$("next-button").onclick=()=>jump(step+1,true);$("play-button").onclick=play;$("timeline").oninput=()=>jump(Number($("timeline").value));
 $("copy-button").onclick=async()=>{if(!solution)return;try{await navigator.clipboard.writeText(solution.moves.map(m=>moveNames[m]).join(" "));message("Moves copied.");}catch{message("Clipboard unavailable. Use Export to save the moves.");}};
 $("export-button").onclick=()=>{if(!solution)return;try{exportText=JSON.stringify(solveRecord(solution,lastRun??{}),null,2);$("export-record").value=exportText;$("export-dialog").showModal();}catch(e){message(e.message,true);}};

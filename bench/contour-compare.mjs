@@ -105,7 +105,7 @@ export async function compareContours(config,configPath){
         if(h0){process.env.RUBEND_H0_CACHE=config.h0Cache;process.env.RUBEND_H0_META_CACHE=config.h0Meta;}else{delete process.env.RUBEND_H0_CACHE;delete process.env.RUBEND_H0_META_CACHE;}
         let engine;
         try{
-          engine=new Engine({binary:config.binary});await engine.ready(120000);
+          engine=new Engine({binary:config.binary,eventProtocol:"fixed-work"});await engine.ready(120000);
           const worker={profile,identity:cpu(engine.child.pid),directory:engine.directory,shallowPassed:0};cohort.workers.push(worker);
           for(const item of warmup){await sample(engine,item,profile,config.target,hz);worker.shallowPassed++;}
           for(const item of round%2?[...items].reverse():items)cohort.jobs.push(await sample(engine,item,profile,config.target,hz));

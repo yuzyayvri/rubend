@@ -66,6 +66,8 @@ test: build
     node tests/http.mjs
     node tests/export.mjs
     node tests/model-client.mjs
+    node tests/keyboard-playback.mjs
+    node tests/contour-protocol.mjs
     node bench/corpus.mjs --check
     node tests/corpus.mjs
     node tests/scorecard.mjs
