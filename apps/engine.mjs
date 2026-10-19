@@ -93,6 +93,7 @@ export class Engine extends EventEmitter {
     if(this.cancelWait&&event.jobId===this.cancelWait.id&&["cancelled","done","invalid"].includes(event.type)){this.cancelWait.resolve(true);return;}
     const job=this.job;
     if(!job||(this.cooperative&&event.jobId!==job.id))return;
+    const previousLower=job.lower;
     if(!["candidate","progress","done","invalid"].includes(event.type)&&!(this.eventProtocol==="fixed-work"&&["snapshot","measurement"].includes(event.type)))throw Error("Unknown engine event");
     if(event.type==="candidate") {
       if(!Array.isArray(event.moves)||event.moves.length!==event.length||event.length>30||event.moves.some(m=>!Number.isInteger(m)||m<0||m>=18))throw Error("Invalid candidate shape");
@@ -108,7 +109,7 @@ export class Engine extends EventEmitter {
     if(event.type==="done"&&event.length!==job.bestLength)throw Error("Terminal length does not match the verified incumbent");
     if(event.optimal&&(!job.best||event.lower!==job.bestLength))throw Error("Unsubstantiated optimality status");
     if(event.type==="progress"){
-      const now=performance.now();if(now-job.lastProgress<50)return;job.lastProgress=now;
+      const now=performance.now();if(now-job.lastProgress<50&&event.lower===previousLower)return;job.lastProgress=now;
     }
     event.elapsedMs=Math.round(performance.now()-job.started);
     if(event.type==="done"||event.type==="invalid"){this.clearJob();this.setState("ready");}

@@ -1,8 +1,9 @@
 # Single-owned native control reader
 
-Status is verified core behavior and complete application regression. Final-source
-performance confirmation, optional-profile rollout, and hidden browser checks
-remain open. Work is solo. Independent review is not run.
+Status is verified core behavior and complete application regression. Matched
+cancellation meets its finite-run target. Deadline promotion remains rejected;
+optional-profile rollout and hidden browser checks remain open. Work is solo.
+Independent review is not run.
 
 ## Ownership and runtime boundary
 
@@ -75,8 +76,30 @@ The [five same-binary A/A cohorts](r06-owned-control-v1/aa-v4.json.gz) also pass
 and sixteen ms, beyond the five-percent control-noise limit. They also produce
 one Superflip lower-bound difference. The current short-case wall-time test
 cannot support a five-percent latency conclusion. Keep that gate inconclusive,
-not passed. Fresh five-cohort final-source confirmation is active. No favorable
-rerun replaces the earlier observations.
+not passed. No favorable rerun replaces the earlier observations.
+
+The [final-source confirmation](r06-owned-control-v1/quality-v5.json.gz) passes
+all 1,750 jobs and sixty answer lengths. Fast first-answer p95 ties at twelve ms,
+exact ties at twenty-eight ms, and Superflip is 1,669 against 1,751 ms. However,
+one Superflip lower-bound pair loses, including native terminal bounds fifteen
+against sixteen. The unchanged quality floor rejects promotion. A/A noise does
+not erase that result or establish a performance win.
+
+The [final matched cancellation run](r06-owned-control-v1/lifecycle-v5.json.gz)
+passes all thirty cancellations and solved recoveries over five alternating
+cohorts on CPU 2, nice 10, with the same cache and a 6,144-MiB cap. Cooperative
+cancel-to-usable median is 14.09 ms, range 1.19 to 16.03 ms, and nearest-rank p95
+16.03 ms. Restart median is 1,925.91 ms, range 1,909.83 to 1,944.84 ms, and p95
+1,944.84 ms. All fifteen cooperative owners persist, with five initializations
+instead of twenty. Every recovery solves the zero-move case, all processes and
+IPC are removed, no input seal changes, and no resource stop occurs. Startup
+is recorded separately and is not claimed faster.
+
+A later [host-only correction](../issues/progress-bound-throttle.md) ensures that
+stronger lower-bound events bypass counter-only throttling. Its red/green
+checks and rebuilt application pass. It does not change the frozen v5 native
+binary or retroactively clear the measured lower-bound loss. Future measurements
+must retain the new adapter's source identity.
 
 The data shape and rejected alternatives are in
 docs/architecture/R06-LIFECYCLE-DESIGN.md. The compiler diagnosis and preserved
