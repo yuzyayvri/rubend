@@ -1,5 +1,21 @@
 # Current state of Rubend
 
+## Private-review fixes and directed merge
+
+PR 1 is closed and PR 2 retains its full checkpoint plus the contour protocol
+and keyboard playback fixes. Five focused checks, the complete `just test`, and
+all sixteen `just check` gates pass. The full run finished at 23:46 Manila on
+October 19. Read docs/verification/PRIVATE-REVIEW-PASS-2.md and its source-bound
+receipts. No independent or real-browser verification is claimed for this pass.
+
+Yuzy explicitly directed merging on October 20 and repeated the direction after
+the independent-review gate was disclosed. Work remains solo and Astra remains
+prohibited. Main's twenty-seven diverged commits have exact patch counterparts
+in the PR, and its complete tree equals PR checkpoint 402e899. An ancestry-only
+merge preserves the previously tested source tree exactly. A redundant full
+confirmation is running unattended as private-review-merge-full-v1. Read its
+saved results on a later ping; do not poll or create an automatic wakeup.
+
 ## Latest unattended verification
 
 Yuzy requested an unattended local test queue on 2026-10-19 to avoid spending

@@ -68,9 +68,44 @@ Inspect these files after thirty-five minutes:
 
 A status file without `finishedAt` does not establish success. Inspect the
 resource receipt and process before interpreting a partial record. Failure or
-timeout must remain visible. Full-run results are pending at this checkpoint.
+timeout must remain visible. The original full run passed at 23:46 Manila on
+October 19. `just test` took 422.559 seconds and `just check` took 42.210 seconds.
+All sixteen toolchain/proof checks pass. The outer runner exited zero without
+a signal, timeout, or resource stop. Its source hashes still match the checkout.
+The [full receipt](private-review-pass-2/full.json.gz) and
+[resource receipt](private-review-pass-2/full-resource.json.gz) preserve the run.
 No native performance benchmark is necessary for these protocol and playback fixes.
 
 Independent review, comment review, and cross-model trail review are not run under
-the solo instruction. Their gates remain blocked. Current hidden-browser and Nix
+the solo instruction. Yuzy explicitly directed merging on October 20 and
+reiterated that direction after the missing review gate was disclosed. This is
+user-directed landing without independent review, not a retrospective review
+approval. Current hidden-browser and Nix
 package acceptance are not claimed. No Astra model or other subagent was invoked.
+
+## Ancestry reconciliation
+
+PR 2 initially conflicted with main because all twenty-seven commits after their
+common ancestor were already present under different commit identities.
+`git range-diff f6ffb07..origin/main f6ffb07..0c6e791` pairs each main commit with
+an equal patch through PR checkpoint `402e899`.
+
+More strongly, main `076682d` and checkpoint `402e899` have identical tree
+`c5f45214bd572c3ab9083a3b7557897b1994d918`. Checkpoint `402e899` is already an
+ancestor of the reviewed PR head. No main-only source change needs transplanting.
+The ancestry-only merge `51a4256` records main as a parent while preserving the
+complete PR tree. Both `0c6e791` and `51a4256` have tree
+`e5b7e60da780b360fe438bd084d9ea93cabda242`. The earlier passing full suite therefore
+covers the exact reconciled source, not an approximate conflict resolution.
+
+A second full confirmation was launched from `51a4256` using the existing
+file-backed runner and the same limits. Its receipts are under
+`build/evidence/private-review-merge-full-v1/` with the corresponding
+`private-review-merge-full-v1-resource.json`. This confirmation is pending and is
+not the evidence used to call the unchanged source tested. Do not poll it or
+automatically wake the agent.
+
+The installed pstack pending-merge helper failed before execution because its
+`commander` dependency was missing. Direct GitHub GraphQL reads confirmed both
+`autoMergeRequest` and `mergeQueueEntry` were null on the expected open PR, head,
+base branch, and base SHA. No protection change or pending merge was armed.
