@@ -1,7 +1,9 @@
 # Bounded scheduling pilots
 
-These are isolated solo experiments, not accepted policies. The default solver
-and all twenty-three laws remain unchanged. No independent design review runs.
+Both isolated experiments are measured and rejected for promotion. They pass
+native execution and replay checks but lose deadline lower-bound quality and
+first-answer latency. Read docs/verification/R05-SCHEDULING.md. The default
+solver and all twenty-three laws remain unchanged. Independent review is not run.
 
 ## Current flow
 

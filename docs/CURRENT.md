@@ -16,14 +16,21 @@ workflow. Prepare a meaningful fixed batch, launch it, and pause with an ETA.
 Do not poll long tests or create automatic model wakeups. Read
 docs/verification/BACKGROUND-TESTS.md before starting another batch.
 
-The next prepared batch is r05-scheduling-unattended-20261019-v1. It compares
-short-first and exact-reserve slice policies against the current round-robin
-reference under raw inverse-three. Only generated isolated portfolios and
-runtimes change; the default search, ordering, restarts, and 23 laws do not.
-Read docs/architecture/R05-SCHEDULING-DESIGN.md. Compilation, budget checks,
-pure verdicts, lifecycle checks, and the unchanged-law gate precede two
-five-cohort deadline comparisons. Results are pending. Passing native jobs is
-not policy acceptance. The queue must finish before another source commit.
+The R05 queue r05-scheduling-unattended-20261019-v1 also passed its execution
+checks, finishing at 22:13:10 Manila in 595.998 seconds. All 3,500 native jobs
+and 10,585 independently replayed candidate events pass. Both policies tie
+all sixty deadline answer lengths, but each loses one Superflip native lower
+bound and misses its first-answer latency floor. Neither policy is promoted.
+The default search, ordering, restarts, and 23 laws remain unchanged. Read
+docs/verification/R05-SCHEDULING.md and the source-bound archive beside it.
+The worker has stopped. No further tests are left running from either queue.
+
+Yuzy requested a bounded closeout and public-facing README refresh at 22:20,
+with 19 percent of the five-hour usage window remaining. This pass records
+measured dispositions and updates the overview rather than starting another
+expensive feature or repeating completed tests. See
+docs/verification/ROADMAP-REPORT-2026-10-19.md for the consolidated roadmap,
+strength, benchmarks, and remaining limitations. The roadmap is not complete.
 
 The H0 application comparison also passes all 1,750 jobs, with sixty paired
 deadline lengths and lower bounds tied. First-answer p95 is 13 versus 12 ms,

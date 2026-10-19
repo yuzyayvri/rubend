@@ -301,9 +301,13 @@ is not run.
 
 ## Open gates
 
-Broader hidden-browser cancel, playback, and fallback acceptance remains open.
-Optional-profile native lifecycle checks, deadline-quality measurements,
-packaging, and final integration remain open. No new default
+Six optional profiles now pass native retained-owner cancellation, stable
+descriptors, fragmented/stale control, and thirty real control failures. The
+staged package passes native, HTTP, export, and unchanged-law/toolchain checks.
+Read [the detached queue results](r06-unattended-20261019-v1/index.json).
+This is not all-profile hidden GUI or current Nix sandbox/relocation acceptance.
+Broader hidden-browser cancel, playback, fallback, remaining profile coverage,
+deadline-quality acceptance, and final integration remain open. No new default
 profile, general speedup, world-class strength, or formal search completeness
 claim follows from this work. Required independent review stays blocked under
 the solo instruction.
