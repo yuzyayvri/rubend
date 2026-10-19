@@ -74,6 +74,12 @@ and required notices for reused code.
 
 ## Evidence and resources
 
+Yuzy requires every published commit to have a GitHub-verified signature and a
+single-line subject with no body. Use the existing registered SSH signing key,
+repository-local signing configuration, and .githooks. Never pass a merge commit
+description. Keep GitHub merge-message defaults blank. Validate new history with
+scripts/commit-policy.mjs before pushing. Do not bypass these checks.
+
 Small, bounded local tests are normal implementation work. Large table builds,
 long searches, external compute, installation of GPU stacks, system changes, and
 new services need authorization. Do not disable security mitigations for a speed
