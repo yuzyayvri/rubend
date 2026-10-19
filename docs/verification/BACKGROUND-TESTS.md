@@ -41,3 +41,8 @@ Inspect its logs and use a fresh run ID for a deliberate retry.
 The [runner tests](background-runner-v1/tests.json.gz) exercise detached success,
 fail-fast behavior, source-change rejection, duplicate launch, and preservation
 of existing receipts. No independent review ran under the solo instruction.
+
+The [first completed queue](r06-unattended-20261019-v1/index.json) passed all
+three jobs in 258.79 seconds. This observed duration helps estimate similar
+queues; it does not predict longer benchmark or table-generation workloads.
+Yuzy confirmed this as the standing token-saving workflow at 21:51 Manila.

@@ -1,0 +1,139 @@
+{
+  "archives": [
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-plan.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/0-r06-unattended-20261019-v1-plan.json.gz",
+      "bytes": 14665,
+      "compressedBytes": 6608,
+      "sha256": "89c20f4543ba09afab2c7670a23319e915cc43b1601074879a77f9c3266abc9a",
+      "compressedSha256": "3db574c8a9f79cb4200ee7bb0aba4c34b3a0038fc5a0cca81d71f85a269b9ffb",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r06-unattended-20261019-v1/status.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/1-status.json.gz",
+      "bytes": 1634,
+      "compressedBytes": 586,
+      "sha256": "50ac0b6cd95de2b8d0910d8902cc643f297df02002072aeac3971c968d417ebf",
+      "compressedSha256": "da2dd42f2be73a8e0835ddb04001cdf10c409ce5c20069937ab60ec759f2ec84",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-optional-build.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/2-r06-unattended-20261019-v1-optional-build.json.gz",
+      "bytes": 6176,
+      "compressedBytes": 1241,
+      "sha256": "477a2c2d2afb8427698f21c22a38e492c66a76b8b2fd0ac45c21a6328fac9e46",
+      "compressedSha256": "f19feb6c32f933a9ea469efb18a21b2e30c51cb69764ad5bad0ec530cbfceed8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-optional-lifecycle.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/3-r06-unattended-20261019-v1-optional-lifecycle.json.gz",
+      "bytes": 10834,
+      "compressedBytes": 1486,
+      "sha256": "251c0214afb21e04da39a836176838fb84339ae5aed571e27cb48e6836fa7971",
+      "compressedSha256": "76bb5da9ee2bf03931e24c132cf6ee7409a4f2e5779c1c47d1b93bc7e3008e9f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-staged-package.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/4-r06-unattended-20261019-v1-staged-package.json.gz",
+      "bytes": 2844,
+      "compressedBytes": 1152,
+      "sha256": "5e7e5ae139d0596c14dfaf2287d32739d505c8a1b031d4b8a4e04cade37c5dfd",
+      "compressedSha256": "6bda58dfb79126b3d3ade3dc54d7272dac06a009f1149259ad639185321a7aa1",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r06-unattended-20261019-v1/build-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/5-build-result.json.gz",
+      "bytes": 12562,
+      "compressedBytes": 5616,
+      "sha256": "963d34c55477f995efee622761f8293b766c125f2dd328a6d9c99915e36523f8",
+      "compressedSha256": "523778a679046708732d261e486ad0fb952e65e15380ec899b80e99bf904e367",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r06-unattended-20261019-v1/profiles-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/6-profiles-result.json.gz",
+      "bytes": 12158,
+      "compressedBytes": 5332,
+      "sha256": "bfd0a9e8b0776c7081b27031afedced405ad114a80d81dca43dd5bbd55cc2896",
+      "compressedSha256": "2168ed4332e39a736c9c9485847082bb29ad17b2497164aaa34516adf5efeb0b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r06-unattended-20261019-v1/package-result.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/7-package-result.json.gz",
+      "bytes": 11379,
+      "compressedBytes": 5386,
+      "sha256": "b9b71b1d9e2d6962ecc7fe2690b3f698c2136a1bc5e3edbbdfa5fc99cab70319",
+      "compressedSha256": "fe0d6347547d9ec32c0a1e366f334e6d8911343d6c0c8e15d6420dc6bdd8be0a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-summary.json",
+      "destination": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/docs/verification/r06-unattended-20261019-v1/8-r06-unattended-20261019-v1-summary.json.gz",
+      "bytes": 2022,
+      "compressedBytes": 753,
+      "sha256": "2111b167ea41881d81e631e312e6d93df7e3a8e2357d2e97ec9776bcfbf8aaa1",
+      "compressedSha256": "043dd43b69695ad6c9e05d6e4228ba17d81427c0906ed0e51531e911d94c70db",
+      "roundtripPassed": true
+    }
+  ],
+  "summary": {
+    "format": "rubend-background-results-v1",
+    "passed": true,
+    "planRevision": "7a3dd430b0293e0785d4668e7e081bba0c31f6a5",
+    "startedAt": "2026-10-19T13:19:10.611Z",
+    "finishedAt": "2026-10-19T13:23:29.401Z",
+    "elapsedSeconds": 258.79,
+    "jobs": [
+      {
+        "id": "optional-build",
+        "state": "passed",
+        "startedAt": "2026-10-19T13:19:10.674Z",
+        "receipt": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-optional-build.json",
+        "finishedAt": "2026-10-19T13:21:23.616Z",
+        "exitCode": 0,
+        "signal": null,
+        "receiptSha256": "477a2c2d2afb8427698f21c22a38e492c66a76b8b2fd0ac45c21a6328fac9e46"
+      },
+      {
+        "id": "optional-lifecycle",
+        "state": "passed",
+        "startedAt": "2026-10-19T13:21:23.639Z",
+        "receipt": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-optional-lifecycle.json",
+        "finishedAt": "2026-10-19T13:22:24.641Z",
+        "exitCode": 0,
+        "signal": null,
+        "receiptSha256": "251c0214afb21e04da39a836176838fb84339ae5aed571e27cb48e6836fa7971"
+      },
+      {
+        "id": "staged-package",
+        "state": "passed",
+        "startedAt": "2026-10-19T13:22:24.660Z",
+        "receipt": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/evidence/r06-unattended-20261019-v1-staged-package.json",
+        "finishedAt": "2026-10-19T13:23:29.391Z",
+        "exitCode": 0,
+        "signal": null,
+        "receiptSha256": "5e7e5ae139d0596c14dfaf2287d32739d505c8a1b031d4b8a4e04cade37c5dfd"
+      }
+    ],
+    "lifecycleProfiles": 6,
+    "realNativeControlFailures": 30,
+    "stagedPackage": [
+      {
+        "stage": "/home/yuzy/.codex/worktrees/roadmap-r01/rubend/build/experiments/r06-unattended-20261019-v1/package",
+        "stagedNativeAndModulesVerified": true,
+        "httpAndAbortRecovery": true,
+        "engineAndReplay": true,
+        "unchangedLawAndToolchainChecks": 16,
+        "nixSandboxOrRelocationClaim": false
+      }
+    ],
+    "independentReview": false,
+    "automaticModelWakeups": false
+  }
+}

@@ -26,6 +26,14 @@ Yuzy subsequently required solo work. Do not spawn, resume, or delegate to any
 subagent. Perform implementation and checks directly. Do not claim independent
 review for solo work; record any resulting review gate as not run.
 
+Yuzy's 2026-10-19 token-saving workflow is to prepare fixed test files and
+bounded local queues, launch them detached, then end the chat turn with an
+estimated time to ping again. Do not spend model turns polling long tests.
+Do not create AI heartbeats or automatic model wakeups. On the next ping,
+inspect the saved results before changing sources or launching another batch.
+Use docs/verification/BACKGROUND-TESTS.md. This changes waiting behavior, not
+the verification requirements, resource limits, or solo-work boundary.
+
 Yuzy later authorized more local CPU and RAM after inspecting headroom. Use
 docs/benchmarks/RESOURCE-POLICY.md instead of the older two-core/eight-GiB
 allocation ceiling below. Keep desktop headroom, low priority, matched benchmark
