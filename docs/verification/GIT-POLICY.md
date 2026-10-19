@@ -60,3 +60,27 @@ Preserve local work first. Do not merge the old unsigned graph back into main.
 GitHub documents [signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification)
 and [SSH signing configuration](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key).
 The local allowed-signers file and private key paths are never committed.
+
+## Migration receipt
+
+The [history receipt](signing-history-v1/history.json.gz) records 111 replacement
+commits across the three published branches, including the initial policy commit.
+GitHub verified every signature as valid and associated with Yuzy before the
+atomic replacement. Every mapped tree is identical and all messages are subject
+only. Six old descriptions were removed, including the PR 2 squash body.
+The final receipt commit is added afterward and checked separately.
+
+The original bundle is `.cache/history-signing-mAT8gW/original.bundle`.
+Unpublished experimental branches and the detached roadmap checkout were left
+unchanged. The three temporary signing-check branches were removed.
+
+The [hook checks](signing-history-v1/hooks.json.gz) confirm rejection of an
+unsigned push and a description, and acceptance of a signed subject. No remote
+ref is changed by those probes. GitHub [ruleset 25420163](https://github.com/yuzyayvri/rubend/rules/25420163)
+actively requires verified signatures on every branch with no bypass actors.
+Its [configuration receipt](signing-history-v1/ruleset.json.gz) preserves that
+setting. Both GitHub merge-message defaults are `BLANK`.
+
+The API rejected a separate `commit_message_pattern` rule with HTTP 422, so
+server-side message-pattern enforcement is not claimed. Commit bodies are
+blocked by the local hook and omitted by the configured merge defaults.
