@@ -19,11 +19,21 @@ Read docs/verification/R06-OWNED-CONTROL.md.
 The first v4 quality run passes1,750jobs and ties sixty answer lengths and
 lower bounds, but short-case first-answer p95 misses the five-percent floor.
 Same-binary A/A produces fast p95 values of13and16ms, beyond the five-percent
-noise limit. Latency acceptance is therefore inconclusive, not passed. A fresh
-final-source confirmation is active. No speed gain, profile promotion, or
-roadmap completion is claimed. Owned stacks and the remaining R04/R05/R06 work
+noise limit. Latency acceptance is therefore inconclusive, not passed. The v5
+confirmation passes all1,750jobs and sixty answer lengths but loses one
+Superflip lower-bound pair, including native terminal bounds. Promotion remains
+rejected. Matched cancellation p95 is16.03ms, with all fifteen owners retained
+and clean recovery/shutdown. No search speed gain or roadmap completion is
+claimed. Owned stacks and the remaining R04/R05/R06 work
 remain queued. The owned-stack implementation map now includes failure propagation
 and the global-array-mode gate.
+
+A separate host reporting gap is also fixed. Stronger lower bounds now bypass
+counter-only progress throttling. The test first observes zero instead of
+zero, one, and two; the focused rebuilt native/HTTP/export suite and all23laws
+pass after the change. Read docs/issues/progress-bound-throttle.md. This does
+not explain away the v5 native lower-bound loss. New comparisons must record
+the changed host adapter.
 
 ## Inherited ownership investigation
 

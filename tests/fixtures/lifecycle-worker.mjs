@@ -21,6 +21,11 @@ input.on("line",line=>{
   if(mode==="bad-terminal"){emit({type:"done",jobId,length:0,lower:0,optimal:0});return;}
   if(mode==="fixed-events"){emit({type:"snapshot",jobId,state:[]});emit({type:"measurement",jobId,nativeMs:1});}
   if(mode==="bad-replay"){emit({type:"candidate",jobId,moves:[],length:0,lower:0});return;}
+  if(mode==="burst-lower"){
+    const events=[0,0,1,1,2].map((lower,index)=>({type:"progress",jobId,lower,nodes:index+1}));
+    events.push({type:"candidate",jobId,moves:[16,13,10,7,4,1,17,14,11,8,5,2],length:12,lower:2,optimal:0},{type:"done",jobId,length:12,lower:2,optimal:0});
+    process.stdout.write(events.map(event=>JSON.stringify(event)+"\n").join(""));return;
+  }
   if(facelets==="UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB"){
     emit({type:"candidate",...(legacy?{}:{jobId}),moves:[],length:0,lower:0});
     emit({type:"done",...(legacy?{}:{jobId}),length:0,lower:0,optimal:1});

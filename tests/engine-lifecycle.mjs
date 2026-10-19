@@ -67,6 +67,14 @@ try{
     assert.deepEqual(types,eventProtocol==="solver"?["error"]:["snapshot","measurement","candidate","done"]);await close(engine);checks.push(eventProtocol+" event boundary");
   }
   {
+    const engine=make("burst-lower");await engine.ready();const events=[];
+    await new Promise((done,reject)=>{engine.solve(input,event=>{events.push(event);if(event.type==="error")reject(Error(event.message));if(event.type==="done")done();}).catch(reject);});
+    const progress=events.filter(event=>event.type==="progress");
+    assert.deepEqual([...new Set(progress.map(event=>event.lower))],[0,1,2],"Every stronger lower bound must reach the client despite progress throttling");
+    for(let index=1;index<progress.length;index++)if(progress[index].lower===progress[index-1].lower)assert.ok(progress[index].elapsedMs-progress[index-1].elapsedMs>=50,"Counter-only progress remains throttled");
+    assert.equal(events.find(event=>event.type==="candidate").length,12);await close(engine);checks.push("stronger bounds bypass progress throttle");
+  }
+  {
     const engine=make("cooperative");await engine.ready();await engine.solve(input,()=>{});
     await assert.rejects(engine.solve(input,()=>{}),/already working/);const cancelled=engine.cancel();const closed=engine.close();assert.equal(engine.close(),closed);await Promise.all([cancelled,closed]);checks.push("close during cancellation");
   }
