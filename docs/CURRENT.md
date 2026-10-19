@@ -16,6 +16,15 @@ workflow. Prepare a meaningful fixed batch, launch it, and pause with an ETA.
 Do not poll long tests or create automatic model wakeups. Read
 docs/verification/BACKGROUND-TESTS.md before starting another batch.
 
+The next prepared batch is r05-scheduling-unattended-20261019-v1. It compares
+short-first and exact-reserve slice policies against the current round-robin
+reference under raw inverse-three. Only generated isolated portfolios and
+runtimes change; the default search, ordering, restarts, and 23 laws do not.
+Read docs/architecture/R05-SCHEDULING-DESIGN.md. Compilation, budget checks,
+pure verdicts, lifecycle checks, and the unchanged-law gate precede two
+five-cohort deadline comparisons. Results are pending. Passing native jobs is
+not policy acceptance. The queue must finish before another source commit.
+
 The H0 application comparison also passes all 1,750 jobs, with sixty paired
 deadline lengths and lower bounds tied. First-answer p95 is 13 versus 12 ms,
 22 versus 22 ms, and 1,674 versus 1,675 ms. There is no observed canary quality
