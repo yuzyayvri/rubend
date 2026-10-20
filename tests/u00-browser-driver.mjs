@@ -4,7 +4,7 @@ import {apply,solved} from "../apps/model.mjs";
 
 const names=[..."URFDLB"].flatMap(f=>[f,f+"2",f+"'"]);
 async function observe(tab){
-  await tab.getAXState();
+  await tab.getAXState({emit:false});
   const value=JSON.parse(await tab.playwright.locator("#rubend-test-diagnostics").textContent());
   assert.equal(value.format,"rubend-dom-diagnostics-v1");assert.ok(value.diagnostics);assert.equal(value.diagnostics.modelState,"active");return value;
 }
@@ -18,9 +18,9 @@ export async function shallow(tab,directory,role){
   await enter(tab,"R U R' U'");await solve(tab);const value=await observe(tab),d=value.diagnostics;canonical(value);
   assert.equal(d.solution.moves.length,4);assert.equal(d.solution.lower,4);assert.equal(d.solution.optimal,true);assert.equal(d.searching,false);assert.equal(apply(d.solution.origin,d.solution.moves),solved);
   await save(tab,directory,role+"-shallow",value);
-  await tab.playwright.locator("#export-button").press("Enter");await tab.getAXState();const exported=JSON.parse(await tab.playwright.locator("#export-record").evaluate(el=>el.value));
+  await tab.playwright.locator("#export-button").press("Enter");await tab.getAXState({emit:false});const exported=JSON.parse(await tab.playwright.locator("#export-record").evaluate(el=>el.value));
   assert.equal(exported.htm,4);assert.equal(exported.lowerBound,4);assert.equal(exported.replayCertified,true);assert.equal(exported.searchOptimal,true);assert.equal(apply(exported.facelets,exported.moves.map(m=>names.indexOf(m))),solved);
-  await save(tab,directory,role+"-export",exported);await tab.playwright.locator("#close-export").press("Enter");await tab.getAXState();return value;
+  await save(tab,directory,role+"-export",exported);await tab.playwright.locator("#close-export").press("Enter");await tab.getAXState({emit:false});return value;
 }
 export async function playback(tab,directory){
   await tab.playwright.locator("#guide-button").click();await tab.getAXState();await tab.playwright.locator("#reduced-motion").check();await tab.playwright.locator("#close-guide").click();await tab.getAXState();

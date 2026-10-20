@@ -18,11 +18,12 @@ does not expose session tokens. `tests/ui-fixture-session.mjs` checks delayed
 startup abort, model-failure fixture delivery, incompatible readiness, origin
 protection, and process cleanup without claiming real-browser execution.
 
-Remaining work includes cancellation across profiles in the GUI, native death
-during search, failure at rewind, repeated live seeks, context loss and recovery,
-2D fallback, narrow layout, clipboard denial, downloaded records, saved state,
-and isolated import/launch of the actual CI artifact. The earlier successful
-CI export is not evidence for import and launch.
+Remaining work includes cancellation across profiles in the GUI, repeated
+live seeks and control isolation during native work, clipboard denial,
+downloaded records, and browser acceptance of the imported CI package.
+Native failure, failed rewind, delayed readiness, context recovery, fallback,
+layout, persistence, and isolated artifact import/HTTP launch now have receipts
+below. U01 is still not complete.
 
 ## Development regression
 
@@ -138,3 +139,44 @@ recorded content width is 375 pixels inside the requested 390-pixel viewport.
 The corrected v3 validator checks fit and overflow instead of exact equality.
 Accepting and rejecting dimension fixtures protect that distinction. This is
 not a product-layout fix. Both earlier failed runs remain preserved.
+
+[The v3 check archive](u01-ui-checks-v3/index.json) passes all focused tests,
+saved replay/cleanup checks, and sixteen toolchain/proof gates. All 1,257 seals
+match. The worker is gone, with no resource stop.
+
+## Rewind, native failure, and delayed readiness
+
+[The lifecycle browser archive](u01-lifecycle-browser-v1/index.json) adds three
+real-browser scenarios without changing production code. A model-worker fixture
+allows the first playback apply and throws on the rewind apply. The committed
+step and facelets remain unchanged, ten Space presses do not restart playback,
+pending requests settle, and the retained exported solution still replays.
+
+A separate session starts the existing hard development case in native exact
+search. `bench/u01-native-failure.mjs` verifies the recorded wrapper, server,
+native PID/start identities, and native IPC argument before issuing SIGKILL to
+that single test owner. The browser settles with an explicit native error,
+searching stops, and solving becomes unavailable. Its model remains active.
+The helper rejects a stale native identity before any signal. It adds no HTTP
+control endpoint and cannot silently retarget a reused PID.
+
+The delayed-readiness fixture keeps solving disabled while model input remains
+usable and canonical. No solve is queued. The fixture stops before its 25-second
+readiness delay, and its process/IPC cleanup passes. This is a live GUI readiness
+check with a delayed fixture, not a cold large-table startup measurement.
+
+The initial rewind driver read the healthy first step before animation committed.
+It now waits for visible `1 / 4` before requesting rewind. Both attempts are
+preserved. Four session wrappers and all recorded owners stop cleanly. Temporary
+tabs close. Full accessibility trees are no longer emitted by every shared
+shallow-solve observation, but the driver still samples and checks current state.
+
+The same focused runner now verifies these receipts and the stale-identity
+rejection. It uses three GiB, one low-priority CPU, and a five-minute cap.
+Expected duration is two minutes. No app rebuild, full-suite repeat, table build,
+or benchmark is needed for these test-only changes.
+
+```sh
+nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v4
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v4-plan.json
+```

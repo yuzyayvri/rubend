@@ -8,7 +8,7 @@ import {proxyTarget} from "./support/ui-proxy.mjs";
 import {nativeIdentity} from "../bench/startup-measure.mjs";
 import {inputs} from "../scripts/manifest.mjs";
 
-const mode=process.argv[2],runId=process.argv[3];assert.ok(["delayed","model-failure","bad-protocol","acceptance","fallback"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4);if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);
+const mode=process.argv[2],runId=process.argv[3];assert.ok(["delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4);if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);
 const directory=mkdtempSync(resolve(tmpdir(),"rubend-ui-fixture-")),env={...process.env,PORT:"0",RUBEND_BINARY:resolve("build/rubend")};
 const evidence=runId?resolve("build/evidence/next-plan",runId.startsWith("u01")?"U01":"U00",runId):null;if(evidence){assert.equal(existsSync(evidence),false);mkdirSync(evidence,{recursive:true});}
 const state={format:"rubend-ui-fixture-session-v1",mode,state:"starting",startedAt:new Date().toISOString(),wrapper:nativeIdentity(process.pid),sourceHashes:inputs(),native:[]};
@@ -39,9 +39,9 @@ try{
     const target=proxyTarget(req.headers,req.url,origin,upstream);if(!target){res.writeHead(403);res.end();return;}
     if(req.url==="/__test/diagnostics.mjs"){res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});res.end(readFileSync("tests/fixtures/ui-diagnostics.mjs"));return;}
     if(["acceptance","fallback"].includes(mode)&&req.url==="/__test/setup.js"){res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});res.end("const rubendTestFallback="+String(mode==="fallback")+";\n"+readFileSync("tests/fixtures/ui-acceptance-setup.js","utf8"));return;}
-    if(mode==="model-failure"&&req.url==="/worker.js"){
+    if(["model-failure","rewind-failure"].includes(mode)&&req.url==="/worker.js"){
       res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});
-      res.end('self.addEventListener("message",event=>{if(event.data.type==="apply"){event.stopImmediatePropagation();throw Error("Deliberate cube-worker fixture failure");}});\n'+readFileSync("build/web/worker.js","utf8"));return;
+      res.end('let rubendFixtureApplies=0;self.addEventListener("message",event=>{if(event.data.type==="apply"&&++rubendFixtureApplies==='+String(mode==="rewind-failure"?2:1)+'){event.stopImmediatePropagation();throw Error("Deliberate cube-worker fixture failure");}});\n'+readFileSync("build/web/worker.js","utf8"));return;
     }
     const headers={...req.headers,host:upstream.host};if(headers.origin)headers.origin=upstream.origin;
     const forwarded=request(target,{method:req.method,headers},response=>{

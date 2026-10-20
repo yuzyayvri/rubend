@@ -1,5 +1,18 @@
 # Current state of Rubend
 
+## Latest checkpoint
+
+U01 now has real-browser receipts for worker failure during rewind, native
+death during active search, and truthful delayed readiness with canonical input.
+All sessions are stopped and their recorded IPC is removed. Production code
+is unchanged. Read docs/verification/next-plan/U01/u01-lifecycle-browser-v1/index.json.
+The preceding focused/proof queue passed with 1,257 matching seals and no
+resource stop. Its archive is docs/verification/next-plan/U01/u01-ui-checks-v3/index.json.
+The next queue is u01-ui-checks-v4, capped at three GiB and five minutes.
+Inspect its saved results before source edits. Clipboard/download, remaining
+GUI/package cases, raw timing, and new proof-law approval remain open.
+The concise roadmap is docs/verification/next-plan/PROGRESS.md.
+
 ## Approved next implementation programme
 
 Yuzy approved docs/architecture/NEXT-IMPLEMENTATION-PLAN.md on 2026-10-20.

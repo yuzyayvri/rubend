@@ -1,0 +1,136 @@
+{
+  "format": "rubend-u01-lifecycle-browser-archive-v1",
+  "status": "partial U01 acceptance",
+  "productionCodeChanged": false,
+  "rewindFailure": {
+    "passed": true,
+    "retainedStep": 1,
+    "spacePresses": 10,
+    "exportReplay": true
+  },
+  "nativeSearchFailure": {
+    "passed": true,
+    "signal": "SIGKILL",
+    "identityChecked": true,
+    "errorSettled": true
+  },
+  "delayedReadiness": {
+    "passed": true,
+    "solvingDisabled": true,
+    "canonicalInput": true,
+    "startupAbortedBeforeReady": true
+  },
+  "firstRewindAttempt": "Driver observed before the healthy animation committed. The corrected v2 waits for visible 1 / 4. Both attempts and cleanup are preserved.",
+  "sessions": [
+    "u01-live-rewind-v1",
+    "u01-live-rewind-v2",
+    "u01-live-native-v1",
+    "u01-live-warming-v1"
+  ],
+  "cleanup": "Four wrappers, servers, and recorded native owners stopped; IPC removed; temporary tabs closed.",
+  "images": [
+    "rewind-failure.jpg",
+    "native-failed-settled.jpg",
+    "warming-input-isolated.jpg"
+  ],
+  "archives": [
+    {
+      "path": "0-u01-live-native-v1-native-failed-settled.json.gz",
+      "sha256": "51c1c495f732abfaa0f7e2ded0a952770f712eb53b250f9e904cba0f7b4becef",
+      "compressedSha256": "a34f5b4273ae58bce2ace86355ef5f782dbe3ee72b50d9acd7245b3cc4438eb1"
+    },
+    {
+      "path": "1-u01-live-native-v1-native-kill.json.gz",
+      "sha256": "1a367414b59706aec926d6698987d11eb2d5cc9bc3669fbe3aa518ee7c0a6288",
+      "compressedSha256": "38cea41004ea6a21dd673b276eaf6949d3f424679efc8ce00d63c811710eae99"
+    },
+    {
+      "path": "2-u01-live-native-v1-native-search-running.json.gz",
+      "sha256": "9a7505cde00ff3770e879a83fb1617368bf9c8ec94bf0c054d470317facbb35a",
+      "compressedSha256": "7b6f7142a85b26ea48588c1de0dab9895df4abd1ca8a8b1d6bb5b7ad8ad8d257"
+    },
+    {
+      "path": "3-u01-live-native-v1-session.json.gz",
+      "sha256": "d80be0def3158bf49b5ed1c9384a6099dec4fb4bd934298274a1d0ed67128dd9",
+      "compressedSha256": "327af592ca9f06b775a83b3c1c11c9d61fc2c6b796fb99e2cba37e346e258793"
+    },
+    {
+      "path": "4-u01-live-rewind-v1-rewind-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f"
+    },
+    {
+      "path": "5-u01-live-rewind-v1-driver-observation.json.gz",
+      "sha256": "ce5569c9fc121a74a4b79dc3c577561c5af47d9c1546d94c6d6c363944e09ca1",
+      "compressedSha256": "79aee0b9cf52a07c6f376f290f6eada46f6a19516af9af28012be61d95e03880"
+    },
+    {
+      "path": "6-u01-live-rewind-v1-session.json.gz",
+      "sha256": "907e403f5c17cf233485c916671d6bdd3406994db6b2a9974dde5ed044a0d213",
+      "compressedSha256": "9544d61dcd999fb74d0e8474df17a176781012fbdca8a9e3fe8fe6cc281550fa"
+    },
+    {
+      "path": "7-u01-live-rewind-v1-rewind-shallow.json.gz",
+      "sha256": "33df30fd6b114911a2b34f2ba9131fe1e9c80e34f7b3435a5938424b6f6a8db2",
+      "compressedSha256": "e23da407ceeb9ea5bc969bb9d1e45896e2b23654689bce16f8261422222d8233"
+    },
+    {
+      "path": "8-u01-live-rewind-v2-rewind-shallow.json.gz",
+      "sha256": "cd128c809240eeda9fc5f71cf7fbc46fed36cb8ca9d142f7b31b3ddea9e7d331",
+      "compressedSha256": "43cc95a4e36e33a7193d30d496a281e59a6f3a5e21e26c27eaff7b6caf85c249"
+    },
+    {
+      "path": "9-u01-live-rewind-v2-session.json.gz",
+      "sha256": "181e13d6aa434a513362832ed3acec571fa60aa3b40d0a1d8adafbd4552d8cf9",
+      "compressedSha256": "6713083d584a54070937bdcbfd3583726c68d687f418b7adfe010063fea628db"
+    },
+    {
+      "path": "10-u01-live-rewind-v2-rewind-retained-export.json.gz",
+      "sha256": "1d67640a70903e5b6501d38fc3bd572df3f971069d1e3dc292f0052019b21d94",
+      "compressedSha256": "6960f2d5eadb2f52474375b272561be506e9126a355528c3a37f3ff5203a8797"
+    },
+    {
+      "path": "11-u01-live-warming-v1-session.json.gz",
+      "sha256": "2c29eb94fd422f946a4c6c8a7a907f706c3ff7803707525788116cd0e0dfac26",
+      "compressedSha256": "4fa2a01c64aea66ed83481070440b139629a975e665b9e64f2faa742d35bfcb6"
+    },
+    {
+      "path": "12-u01-live-warming-v1-warming-input-isolated.json.gz",
+      "sha256": "de1e5d05c58298cdcbb6851adb24a635a860ea69a78787c204b601d828c103c3",
+      "compressedSha256": "e7bcbd7565790f5b253a5ec99ea12ed89e1eef7c54164e9ea1bedb36bcf3f19a"
+    },
+    {
+      "path": "13-u01-live-rewind-v2-rewind-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f"
+    },
+    {
+      "path": "14-u01-live-rewind-v2-rewind-failure.json.gz",
+      "sha256": "b0e703ed1435148d380160a87ae61532778922189d7a33eea5ad6df28228205b",
+      "compressedSha256": "47b869b0c3f1efcca31383513437c66afa678a7a793e4e10cfd4f33a4a83d68a"
+    },
+    {
+      "path": "15-evidence-u01-live-rewind-v1-resource.json.gz",
+      "sha256": "213c8b792278f05db4fb787ab2a9961eb79a4c606705c7b6b90d4e1423644602",
+      "compressedSha256": "5db5b82c5cce220237ecc6e0fc215f8a656331cd48b9569fe6b92d06f4214847"
+    },
+    {
+      "path": "16-evidence-u01-live-rewind-v2-resource.json.gz",
+      "sha256": "6226087e905c36ee98d29eeb37d0e41be1ec81eabda7bee22ffc747a62331240",
+      "compressedSha256": "d57c08c2fef657efec895100712029d8c052b7c3d44eb636e9a9226d0a297c45"
+    },
+    {
+      "path": "17-evidence-u01-live-native-v1-resource.json.gz",
+      "sha256": "0ecd614f6380cc45604249f3ef9a0234d4eb30ef7255c059a002539c2b83427b",
+      "compressedSha256": "b09b3b361240dde93e383e380130b37c2e0ebfd53abde3c8522cdf567dd7c038"
+    },
+    {
+      "path": "18-evidence-u01-live-warming-v1-resource.json.gz",
+      "sha256": "d11cd7c311a84e07e3f6ef81b47762da7c390724ba40cd05b77cf9f3d882bdc7",
+      "compressedSha256": "54e49ba164da468c24b0ae67e10d127e0b509e8b4febca32eb68269bc0d3693d"
+    }
+  ],
+  "performanceClaim": false,
+  "independentReview": false,
+  "u01Complete": false
+}
