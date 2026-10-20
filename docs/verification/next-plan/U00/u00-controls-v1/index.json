@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "format": "rubend-u00-archive-v1",
+    "passed": true,
+    "revision": "7f0ea6df85262d18517c50299ce140f2b22d4721",
+    "startedAt": "2026-10-20T11:03:26.059Z",
+    "finishedAt": "2026-10-20T11:11:55.447Z",
+    "elapsedSeconds": 509.388,
+    "successfulJobs": 3500,
+    "verdicts": {
+      "small": "stable-on-this-sample",
+      "raw": "inconclusive"
+    },
+    "independentReview": false
+  },
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-controls-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/0-u00-controls-v1-plan.json.gz",
+      "bytes": 131299,
+      "compressedBytes": 52038,
+      "sha256": "acfbf78f0de7d1aa307edfed95049baa8f605c4f8ee473ab79e4dc9771b4b762",
+      "compressedSha256": "96cc4c9e3b8287dcde5de4f87de26a51cca6cf1b6dcfe989c4e980f659be11cc",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/1-status.json.gz",
+      "bytes": 1462,
+      "compressedBytes": 552,
+      "sha256": "703501b9795208c42f440b42a39989712d14c76a54cf60070a702d862889a6cb",
+      "compressedSha256": "c045038ed6927d412a94e242bef103a3d60e9c255c1ffb45a7a81262bbaa0a14",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-controls-v1-freeze.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/2-u00-controls-v1-freeze.json.gz",
+      "bytes": 4615,
+      "compressedBytes": 1808,
+      "sha256": "e3f7452d297db882e0ca1522613a143776cdbaf6f816611f4d179f7b9b33ac08",
+      "compressedSha256": "9074470086450a60c7729269c76f801b3942b48b58ea989b91743c40b5de8eeb",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-controls-v1-small-aa.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/3-u00-controls-v1-small-aa.json.gz",
+      "bytes": 1284,
+      "compressedBytes": 768,
+      "sha256": "85caf94ea3288498342d4eb0c8fe3931b107ea7831d850f28f27e53c8a925b4c",
+      "compressedSha256": "e94c73e4330d3d3cc3928f6c9c2dab3f64964c25089265f87fe6ec103d71e9b4",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-controls-v1-raw-aa.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/4-u00-controls-v1-raw-aa.json.gz",
+      "bytes": 1270,
+      "compressedBytes": 767,
+      "sha256": "8732e4828c25c47b12a63832af78c175165ecf5f5bcac593b5a4fe47ffb334c9",
+      "compressedSha256": "f10e76e235011d9ad29d9ea9a2fc4e9f7e5849d5ad0ca684364465b2b6815a70",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/inventory.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/5-inventory.json.gz",
+      "bytes": 18094,
+      "compressedBytes": 6993,
+      "sha256": "47035117c3f26dc2c6d207a5301f59c6d77c1f5c9685864fd42b7bb6d57800d2",
+      "compressedSha256": "a170c2d6aa3f732e56b26445c39cf383cf39e7f1a80a135350ef91cb6f71c589",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/small-aa-report.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/6-small-aa-report.json.gz",
+      "bytes": 7240191,
+      "compressedBytes": 225451,
+      "sha256": "bc5a66c066e9efb53a3ee2892f743afaa00d62bb1f1536bb15d7f27ead8e541b",
+      "compressedSha256": "5140cfbd7ebd7590cfb2a476903477123228206a7a74eaee66560923ea358e29",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/raw-aa-report.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/7-raw-aa-report.json.gz",
+      "bytes": 7314291,
+      "compressedBytes": 229122,
+      "sha256": "ecd8060fd01c10a109967e9e1848ab42796ca5db87490f8c87d7fa521bbd169f",
+      "compressedSha256": "f2dbcf09e12c4acccbfe82158c991717e2beec71ff74619ef15bbb571e2a640b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/small-aa-diagnostic.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/8-small-aa-diagnostic.json.gz",
+      "bytes": 2520,
+      "compressedBytes": 608,
+      "sha256": "11cd7716a48637795339a8fb08e4a794017d971f775bdae0518ce3163c2e5253",
+      "compressedSha256": "3d4e51130f2f71bc31a6d1ec37f87ff26d9aba99f630c05a95844048c7d2b43f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-controls-v1/raw-aa-diagnostic.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-controls-v1/9-raw-aa-diagnostic.json.gz",
+      "bytes": 2494,
+      "compressedBytes": 631,
+      "sha256": "b63398e1fec41d3f59cefc46e60d1b65c73dba6ce794e7c3e1e35471cf1cb562",
+      "compressedSha256": "4b0f8b8cb92aa068c852333667f3d7c6e44c34412c6116092fdad1cdbf09c59b",
+      "roundtripPassed": true
+    }
+  ]
+}

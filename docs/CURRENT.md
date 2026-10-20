@@ -10,6 +10,16 @@ This approval does not grant publication, merge, release, deployment, or new
 large-table generation authority. U00 is in progress, not accepted.
 Read docs/verification/next-plan/U00/README.md before resuming this programme.
 
+The first U00 queue passed all three execution jobs at 19:11:55 Manila on
+2026-10-20 in 509.388 seconds. The default app is frozen, all six historical
+native snapshots verify, and 3,500 native A/A jobs pass without quality or
+terminal-bound differences. The small control is stable on this sample. Raw
+RawJoint remains inconclusive, with a 20 versus 24 ms exact first-answer p95
+and a 12 ms fast p95 below the five-percent clock-resolution threshold.
+No control was promoted. All workers/IPC stopped and the holdout was not
+evaluated. The archive is docs/verification/next-plan/U00/u00-controls-v1/index.json.
+U00 now needs targeted timing attribution, its live lanes, and theorem proposals.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

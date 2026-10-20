@@ -95,3 +95,34 @@ corpora are sealed before use. Read results on the next ping, not by polling.
 The focused fixture check `node tests/u00-aa.mjs` currently passes a stable
 synthetic case, three explicit inconclusive cases, and seven rejecting cases.
 This verifies classification behavior, not product performance.
+
+## First batch result
+
+[The complete archive](u00-controls-v1/index.json) retains the source-bound
+inventory, original plan, resource receipts, both raw reports, and diagnostics.
+All three jobs pass, including the current build, unchanged 23-law verdict,
+sixteen toolchain checks, and 3,500 native jobs. Elapsed queue time is 509.388
+seconds. There are no resource stops, changed source seals, remaining worker
+owners, or recorded IPC directories. All six historical source snapshots agree
+with their own metadata. The release holdout was not evaluated.
+
+Both sides of each A/A run use the same binary and data. The small control ties
+all deadline answer lengths and bounds; its first-answer p95 values are 36/36 ms
+fast, 35/35 ms exact, and 1,597/1,593 ms Superflip. This is stability on this
+finite sample, not a performance gain.
+
+RawJoint also ties every deadline answer and bound. Its fast p95 is 12/12 ms,
+where five percent is smaller than one millisecond. Exact p95 is 20/24 ms over
+fifteen observations per side, making this nearest-rank p95 the sample maximum.
+The 24 ms event belongs to exact case 1, round 2, control-b. Every repeat of that
+case returns the same first move list at 420,000 native work steps. This rules
+out a different first-answer path in those observations, not CPU/cache/scheduler
+variation. Superflip p95 is 1,608/1,539 ms. Raw timing acceptance stays inconclusive.
+
+The next diagnostic must preserve the full job sequence and frozen binary.
+It will separate unrounded host arrival from the public rounded clock and
+record per-thread native CPU/context-switch observations, process page faults,
+and host work around first-candidate observation. It cannot recover the native
+emission instant from a pipe arrival. Scheduler wait accounting is disabled on
+this machine and will not be enabled. Instrumented timings will not replace
+release timings or retroactively clear the old noise gate.
