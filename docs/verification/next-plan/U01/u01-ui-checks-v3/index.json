@@ -1,0 +1,34 @@
+{
+  "format": "rubend-u01-ui-check-archive-v1",
+  "passed": true,
+  "finishedAt": "2026-10-20T17:39:50.880Z",
+  "sourceSeals": 1257,
+  "workerGone": true,
+  "resourceStops": false,
+  "clipboardDenial": "unverified",
+  "download": "unverified",
+  "browserRerun": false,
+  "independentReview": false,
+  "files": [
+    {
+      "path": "plan.json.gz",
+      "sha256": "ce216bee519ef63d255531d94888e6d56f6dd1087a374f9d59a161178fecb8b9",
+      "compressedSha256": "ebde7ad69555566dc4974ed233620aa3514e781980a9a0e27ccbf0bdf0830b55"
+    },
+    {
+      "path": "status.json.gz",
+      "sha256": "846ce378d07b3b7c79e50f5dfb29d884c07134a87a0a61045f3bc791adc58221",
+      "compressedSha256": "65425f3910874aed0f9f2cbda68954bac084cc6dc93ba4d9d360708c5e2cffd8"
+    },
+    {
+      "path": "resource.json.gz",
+      "sha256": "ada438f45911143bf32210b997a6ca166a0834ee47283138d55e1966185ecf8f",
+      "compressedSha256": "7a84a94e5d081ad5c51c529a3fd4e336da9e4e910d635e0bad9245105fae75b4"
+    },
+    {
+      "path": "result.json.gz",
+      "sha256": "6420d1f93122bef7f05f0639dd8c321f918521d422acfe44edb14bb880a30075",
+      "compressedSha256": "6e5e8e95a22674e70920d0b15f45d21359ea41465ff6eb66ab035b6e33a94a85"
+    }
+  ]
+}
