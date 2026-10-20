@@ -1,5 +1,9 @@
 # Proof and trust plan
 
+The next implementation units have separately proposed semantic statements in
+[NEXT-PROOF-STATEMENTS.md](NEXT-PROOF-STATEMENTS.md). They are awaiting approval;
+no corresponding new law has been added or enabled by the approved work plan.
+
 Original domain-obligation plan. Some obligations are now implemented; use
 [PROOF-COVERAGE.md](PROOF-COVERAGE.md) for the exact current proof scope.
 Do not infer completion of this entire plan from a successful proof check.
