@@ -1,0 +1,196 @@
+{
+  "format": "rubend-u01-browser-acceptance-archive-v1",
+  "status": "partial",
+  "productionCodeChanged": false,
+  "checks": {
+    "actualContextLossAndRestoration": "passed",
+    "canonicalStepWhileContextLost": "passed",
+    "noWebglSolveExportAndPlayback": "passed",
+    "sameOriginCanonicalReload": "passed",
+    "narrow390PixelLayout": "passed",
+    "clipboardDenial": "unverified, browser replaced fixture method",
+    "download": "unverified, no observable download event"
+  },
+  "sessions": [
+    "u01-live-acceptance-v1",
+    "u01-live-acceptance-v2",
+    "u01-live-fallback-v1"
+  ],
+  "cleanup": "All three session wrappers, servers, and recorded native owners stopped; IPC removed; tabs closed; viewport reset.",
+  "fixtureVersions": {
+    "u01-live-acceptance-v1": "Initial early setup without permission-policy header or clipboard-reference diagnostic. Context, reload, and layout receipts precede those fixture-only additions.",
+    "u01-live-acceptance-v2": "Explicit permission policy and a diagnostic showing fixtureMethodIntact false.",
+    "u01-live-fallback-v1": "Final setup with only WebGL contexts disabled; 2D context behavior is unchanged."
+  },
+  "currentProducerHashes": {
+    "tests/fixtures/ui-acceptance-setup.js": "8ec185c16656e84dcfdd64a543bf4c769c4922e5767a90da1d71dc99bee9109e",
+    "tests/ui-fixture-server.mjs": "f6d2da21059ff5dc122d381be9fe4105175b89127382bce9c0f57da9f5d09f49",
+    "tests/u01-browser-driver.mjs": "e8a1cae53444664f83ec8981847599bda69b87b5d6666796c2ad8104c980488f"
+  },
+  "archives": [
+    {
+      "path": "0-u01-live-acceptance-v1-context-lost.json.gz",
+      "sha256": "039bcfa165d184cc5f64fbe7247b774beea997972bd96100aaab351616bfc179",
+      "compressedSha256": "e7408900cb23ce7dc44737c1d81cc9498020debdbf232b3992f64c8a9f288938",
+      "bytes": 2250,
+      "roundtripPassed": true
+    },
+    {
+      "path": "1-u01-live-acceptance-v1-renderer-shallow.json.gz",
+      "sha256": "cb1722e82cb34641582814d77a32457cd4a0bac29bb7ca423070244f546e6ac7",
+      "compressedSha256": "f68f7bc3988356066a7bb7bd45d7441cb30c1cbf73cf28a2207bd84ec370d382",
+      "bytes": 2252,
+      "roundtripPassed": true
+    },
+    {
+      "path": "2-u01-live-acceptance-v2-clipboard-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "bytes": 397,
+      "roundtripPassed": true
+    },
+    {
+      "path": "3-u01-live-acceptance-v2-clipboard-observation.json.gz",
+      "sha256": "0c2b3bb46b92adb26bd9f24a32594298e9a4ec58b20878db5069fb4b6e23827c",
+      "compressedSha256": "0024d14ebe91a612034a3aaad9f51e84c01e8e16e739136966f413e22ab5cfb4",
+      "bytes": 2557,
+      "roundtripPassed": true
+    },
+    {
+      "path": "4-u01-live-acceptance-v2-session.json.gz",
+      "sha256": "2d8a8f80bfdbbef9f16fb03c36abeb454a1d69be6b1887164ff257ce6e937b3d",
+      "compressedSha256": "984640c9bb39b6600f0494dd46d25292a2a5dce8a2dbbed9d6b2f2381fe04244",
+      "bytes": 11946,
+      "roundtripPassed": true
+    },
+    {
+      "path": "5-u01-live-acceptance-v2-clipboard-shallow.json.gz",
+      "sha256": "271d66bc1eab3e5227a0156cec7966f403ef8217b8d21eeedb69fe39e007a13f",
+      "compressedSha256": "a9bbe4915c49329843ea579e06c572ef0e8ade14c9ecf1a2aa647d8f52ed8d44",
+      "bytes": 2262,
+      "roundtripPassed": true
+    },
+    {
+      "path": "6-u01-live-acceptance-v1-narrow-layout.json.gz",
+      "sha256": "965c9733169e3b9ed27d156f9a5e2f89206166edfd04e772fa33b7f9fe0bf4f4",
+      "compressedSha256": "628f7696925c41c3dae6a79ef67e2c96c6e77c740949208648ceee349bad02a7",
+      "bytes": 735,
+      "roundtripPassed": true
+    },
+    {
+      "path": "7-u01-live-acceptance-v1-saved-state-reloaded.json.gz",
+      "sha256": "4becb85ed6c4fe2e6b23dc426bf17068e7891412819a2fcee4acda0111d66bf9",
+      "compressedSha256": "1323b752b776ea4b7614776cf8e82099d4ece2013541186104b1b2ac3b164d15",
+      "bytes": 3151,
+      "roundtripPassed": true
+    },
+    {
+      "path": "8-u01-live-acceptance-v1-download-observation.json.gz",
+      "sha256": "2a20487afc0bcb01836e09d44d737f985d03cd132c8f57552501ebbf73f5a528",
+      "compressedSha256": "e8203e57e93786b7078ae6ec0029450ec31c8ba62bae09eab4b5bec2182cad31",
+      "bytes": 82,
+      "roundtripPassed": true
+    },
+    {
+      "path": "9-u01-live-fallback-v1-narrow-layout.json.gz",
+      "sha256": "fa452062d2b8c4495d5aa6ff808ffbe82da31d79781758357f7498e097b17078",
+      "compressedSha256": "e23f10df99ed9847a5d31a268a029ed2d5410b9ead1e5f01d8acfd9025eeb799",
+      "bytes": 2368,
+      "roundtripPassed": true
+    },
+    {
+      "path": "10-u01-live-fallback-v1-fallback-solved.json.gz",
+      "sha256": "394fa0dff7b536ec1b560739758d39edc0f56faac090370e3f0fb5a7c3e29abf",
+      "compressedSha256": "5df079bbb4d60a51ec50cf48935eaa2f7a734cc5409aa9ef27ac4ab9026fb81c",
+      "bytes": 6927,
+      "roundtripPassed": true
+    },
+    {
+      "path": "11-u01-live-acceptance-v1-context-restored.json.gz",
+      "sha256": "0736787ad4becb878cdf5632045de9eb05266b9ea64fa837c79d67aecbc96549",
+      "compressedSha256": "28a6402ec991a974112d488577b7a6ce958d9220f83a5b7e0aa299b61758fde5",
+      "bytes": 2251,
+      "roundtripPassed": true
+    },
+    {
+      "path": "12-u01-live-acceptance-v1-session.json.gz",
+      "sha256": "440dfb84f51c3563a513603277aeb98ee86840016c3642bddc8b2bd537224d48",
+      "compressedSha256": "23d697cf6344ad63bb78810fb2cdcc8f3d42f6639376ba2cb82fb6b09414ef57",
+      "bytes": 11946,
+      "roundtripPassed": true
+    },
+    {
+      "path": "13-u01-live-acceptance-v1-context-lost-step.json.gz",
+      "sha256": "487336b025fe19d5deb442194afbfd40267b9846805d716955171bdfa971d817",
+      "compressedSha256": "9cf501f2b7a57fb18c7fc60238332f73a9d78f83b5ef07f8585f8fd5f1f1f22f",
+      "bytes": 2223,
+      "roundtripPassed": true
+    },
+    {
+      "path": "14-u01-live-fallback-v1-fallback-shallow.json.gz",
+      "sha256": "f503182cfbb45349fb3f341948affecaebc3b61535fcbbdb9c347e059cb46c18",
+      "compressedSha256": "84b22dbf79d94658ad8100cc34044ea74eab5ff93c943db08f3e7015febcd5d8",
+      "bytes": 2092,
+      "roundtripPassed": true
+    },
+    {
+      "path": "15-u01-live-acceptance-v1-renderer-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "bytes": 397,
+      "roundtripPassed": true
+    },
+    {
+      "path": "16-u01-live-fallback-v1-fallback-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "bytes": 397,
+      "roundtripPassed": true
+    },
+    {
+      "path": "17-u01-live-fallback-v1-session.json.gz",
+      "sha256": "0f57ba63dfa0a7f4da5f62549ce6c82313caf666a53325c98fee789ada2d928a",
+      "compressedSha256": "5107bc0cfb486bf57a57494da104980ae48f5651c3d8c0234f8bae244b8337db",
+      "bytes": 11944,
+      "roundtripPassed": true
+    },
+    {
+      "path": "18-evidence-u01-live-acceptance-v1-resource.json.gz",
+      "sha256": "30ca895f8a6d5bdc63182c9be2185af6f0db7efddf972b5fd29f62373be1c92b",
+      "compressedSha256": "ad5651b2ff7d786efe080fe9710f0e801fefaf862a44a8c3bce2698194b4ec8c",
+      "bytes": 1065,
+      "roundtripPassed": true
+    },
+    {
+      "path": "19-evidence-u01-live-acceptance-v2-resource.json.gz",
+      "sha256": "e6674b7e2631a273933c07826bb6b9c03ffd9415721a38e63bb9799ad7b9ed58",
+      "compressedSha256": "b974e5916082033a9f462d4a43de0b6d474762cd6f2ad2490ff23dd23a4b4e16",
+      "bytes": 1064,
+      "roundtripPassed": true
+    },
+    {
+      "path": "20-evidence-u01-live-fallback-v1-resource.json.gz",
+      "sha256": "488a0a834442d9635cafa20cd9e4ac50f8d9a721531fb2f41ad382504fe5efed",
+      "compressedSha256": "fda35147621c899137b1bfd5f56c9c6efb11ab3945668905ab48c0ce6923d55e",
+      "bytes": 1056,
+      "roundtripPassed": true
+    }
+  ],
+  "images": [
+    {
+      "path": "context-restored.jpg",
+      "sha256": "b74fc17e46bd282239a3ad3e12bbcfe72f7dbf156c0a902d9ed94ab55068bc94"
+    },
+    {
+      "path": "fallback-solved.jpg",
+      "sha256": "724422285fa5f041d2306bf0e91506cc5cdd3e0c54a277a6fdec622538147e8c"
+    },
+    {
+      "path": "narrow-layout.jpg",
+      "sha256": "f1cf3651f0536efd98f673679305cd35e597a4aee2b1ae3a8a794831e8d846e0"
+    }
+  ],
+  "independentReview": false,
+  "performanceClaim": false,
+  "u01Complete": false
+}

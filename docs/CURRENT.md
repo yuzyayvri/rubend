@@ -85,6 +85,20 @@ seals match, both resource jobs pass, and the worker is gone. Compressed records
 are docs/verification/next-plan/U01/u01-delivery-v1/index.json. This is not yet
 package GUI acceptance or a clean-machine claim for another kernel/platform.
 
+The next U01 browser pass adds actual context-loss/restoration, canonical
+stepping while lost, no-WebGL solve/export/playback, same-origin saved-state
+reload, and 390-pixel layout receipts. Three sessions and all native owners
+stop cleanly. Tabs close and the temporary viewport resets. Production code
+does not change. Read docs/verification/next-plan/U01/u01-browser-acceptance-v1/index.json.
+
+Clipboard denial and download remain unverified. The browser environment
+replaces the denial fixture method, and neither inspected activation produces
+an observable download event. Preserve both negative observations and strict
+assertions. Read docs/issues/browser-clipboard-download-acceptance.md.
+The fixed u01-ui-checks-v1 queue rechecks focused tests, saved canonical replay,
+cleanup, and unchanged proof gates. Inspect it on the next ping before edits.
+The concise unit-by-unit status is docs/verification/next-plan/PROGRESS.md.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

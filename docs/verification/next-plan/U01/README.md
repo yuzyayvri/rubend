@@ -82,3 +82,51 @@ graph. Its isolated entrypoint passes the existing HTTP, native-replay, origin,
 session, invalid-input, cancellation, and recovery checks. The host store and
 repository are not mounted. All 1,197 source seals and resource receipts verify.
 The detached worker has stopped. This does not establish package GUI acceptance.
+
+## Browser recovery and fallback
+
+[The partial browser archive](u01-browser-acceptance-v1/index.json) retains
+twenty-one compressed JSON records and three representative screenshots.
+The actual `WEBGL_lose_context` extension loses and restores the renderer.
+Canonical state and the solution survive. Stepping while the context is lost
+agrees with Bend replay, and restoration keeps that committed state. The saved
+screenshot shows the renderer drawing the cube again after restoration.
+
+A separate early fixture disables only WebGL context creation. The app still
+solves and exports the four-move oracle case, steps, and plays to solved with
+no renderer. Both ordinary and fallback controls fit a 390-pixel viewport.
+Reload at the same origin restores the committed canonical cube, without
+inventing a restored solution record. All three wrappers, servers, and recorded
+native owners stop. IPC is removed. Tabs close and the viewport resets.
+
+The acceptance fixture uses a script before the app module and visible
+test-only context buttons. Production files are unchanged. Compared with
+adding product diagnostics or hooks, this keeps the tested interaction intact.
+Design exploration and review were solo. No independent review is claimed.
+
+Clipboard denial fails its intended precondition. The browser replaces the
+fixture's exact denial function, recorded as `fixtureMethodIntact: false`.
+Copy reports success despite the override and explicit permission policy.
+Download activation has no observable event after keyboard and pointer probes.
+These are not passing acceptance checks. Keep them open under
+[the observation issue](../../../issues/browser-clipboard-download-acceptance.md).
+The exported modal record remains canonical, but that alone is not a download.
+
+`tests/u01-browser-driver.mjs` keeps renderer, fallback, persistence, layout,
+clipboard, and download checks separately rerunnable. A failed observation
+does not prevent unrelated scenarios from producing their own receipts.
+`tests/ui-acceptance-setup.mjs` verifies the isolated setup semantics without
+accessing a user's clipboard. The fixture-session test now checks five modes,
+including early script order and permission policy. Those tests are not GUI
+results. `bench/u01-ui-checks.mjs` prepares the next focused detached queue.
+
+```sh
+nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v1
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v1-plan.json
+```
+
+One serial job uses 4 GiB, low-priority CPU 2, and a five-minute hard cap.
+Expected duration is two minutes. It checks focused fixture/model/playback/
+export tests, saved replay and process cleanup, and existing proof/toolchain
+gates. It does not rebuild the app, repeat the full suite, or rerun a browser.
+Passing it cannot close clipboard/download or the remaining U01 matrix.

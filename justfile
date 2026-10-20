@@ -73,6 +73,7 @@ test: build
     node tests/latency-probe.mjs
     node tests/ui-proxy-origin.mjs
     node tests/ui-fixture-session.mjs
+    node tests/ui-acceptance-setup.mjs
     node tests/u01-check-plan.mjs
     node tests/keyboard-playback.mjs
     node tests/contour-protocol.mjs

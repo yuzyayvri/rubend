@@ -8,7 +8,7 @@ import {proxyTarget} from "./support/ui-proxy.mjs";
 import {nativeIdentity} from "../bench/startup-measure.mjs";
 import {inputs} from "../scripts/manifest.mjs";
 
-const mode=process.argv[2],runId=process.argv[3];assert.ok(["delayed","model-failure","bad-protocol"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4);if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);
+const mode=process.argv[2],runId=process.argv[3];assert.ok(["delayed","model-failure","bad-protocol","acceptance","fallback"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4);if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);
 const directory=mkdtempSync(resolve(tmpdir(),"rubend-ui-fixture-")),env={...process.env,PORT:"0",RUBEND_BINARY:resolve("build/rubend")};
 const evidence=runId?resolve("build/evidence/next-plan",runId.startsWith("u01")?"U01":"U00",runId):null;if(evidence){assert.equal(existsSync(evidence),false);mkdirSync(evidence,{recursive:true});}
 const state={format:"rubend-ui-fixture-session-v1",mode,state:"starting",startedAt:new Date().toISOString(),wrapper:nativeIdentity(process.pid),sourceHashes:inputs(),native:[]};
@@ -35,15 +35,17 @@ try{
   let origin;
   state.server=nativeIdentity(child.pid);state.native=readFileSync(`/proc/${child.pid}/task/${child.pid}/children`,"utf8").trim().split(/\s+/).filter(Boolean).map(Number).flatMap(pid=>{const identity=nativeIdentity(pid);if(!identity)return[];const fifo=readFileSync(`/proc/${pid}/cmdline`,"utf8").split("\0").find(a=>a.endsWith("/input")&&a.includes("rubend-"));return[{...identity,ipcDirectory:fifo?resolve(fifo,".."):null}];});
   server=createServer((req,res)=>{
+    if(["acceptance","fallback"].includes(mode))res.setHeader("Permissions-Policy","clipboard-write=()");
     const target=proxyTarget(req.headers,req.url,origin,upstream);if(!target){res.writeHead(403);res.end();return;}
     if(req.url==="/__test/diagnostics.mjs"){res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});res.end(readFileSync("tests/fixtures/ui-diagnostics.mjs"));return;}
+    if(["acceptance","fallback"].includes(mode)&&req.url==="/__test/setup.js"){res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});res.end("const rubendTestFallback="+String(mode==="fallback")+";\n"+readFileSync("tests/fixtures/ui-acceptance-setup.js","utf8"));return;}
     if(mode==="model-failure"&&req.url==="/worker.js"){
       res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});
       res.end('self.addEventListener("message",event=>{if(event.data.type==="apply"){event.stopImmediatePropagation();throw Error("Deliberate cube-worker fixture failure");}});\n'+readFileSync("build/web/worker.js","utf8"));return;
     }
     const headers={...req.headers,host:upstream.host};if(headers.origin)headers.origin=upstream.origin;
     const forwarded=request(target,{method:req.method,headers},response=>{
-      if(req.url==="/"){let html="";response.setEncoding("utf8");response.on("data",data=>html+=data);response.on("end",()=>{const headers={...response.headers};delete headers["content-length"];res.writeHead(response.statusCode,headers);res.end(html.replace("</body>",'<script type="module" src="/__test/diagnostics.mjs"></script></body>'));});}
+      if(req.url==="/"){let html="";response.setEncoding("utf8");response.on("data",data=>html+=data);response.on("end",()=>{const headers={...response.headers};delete headers["content-length"];res.writeHead(response.statusCode,headers);if(["acceptance","fallback"].includes(mode))html=html.replace("<head>",'<head><script src="/__test/setup.js"></script>');res.end(html.replace("</body>",'<script type="module" src="/__test/diagnostics.mjs"></script></body>'));});}
       else{res.writeHead(response.statusCode,response.headers);response.pipe(res);}
     });
     forwarded.on("error",error=>{if(!res.headersSent)res.writeHead(502);res.end(error.message);});req.pipe(forwarded);res.on("close",()=>forwarded.destroy());
