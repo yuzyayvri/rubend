@@ -1,5 +1,21 @@
 # Current state of Rubend
 
+## Approved next implementation programme
+
+Yuzy approved docs/architecture/NEXT-IMPLEMENTATION-PLAN.md on 2026-10-20.
+Start at U00 against a7a087235b20b38767b216b0ab90523ac1a2b13f. Preserve the
+signed, subject-only commit policy, solo work, hidden previews, current resource
+admission, unchanged laws, and detached tests without model polling or wakeups.
+This approval does not grant publication, merge, release, deployment, or new
+large-table generation authority. U00 is in progress, not accepted.
+Read docs/verification/next-plan/U00/README.md before resuming this programme.
+
+Both private-review full confirmations have finished successfully, including
+just test and all sixteen just check gates. The older "running" reference below
+is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed
+Nix package/runtime checks and package export. Download/import and broader GUI
+acceptance are still open; a green package export does not close those gates.
+
 ## Private-review fixes and directed merge
 
 PR 1 is closed and PR 2 retains its full checkpoint plus the contour protocol
