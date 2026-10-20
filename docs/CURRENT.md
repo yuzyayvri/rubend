@@ -95,9 +95,13 @@ Clipboard denial and download remain unverified. The browser environment
 replaces the denial fixture method, and neither inspected activation produces
 an observable download event. Preserve both negative observations and strict
 assertions. Read docs/issues/browser-clipboard-download-acceptance.md.
-The fixed u01-ui-checks-v1 queue rechecks focused tests, saved canonical replay,
+The fixed u01-ui-checks-v2 queue rechecks focused tests, saved canonical replay,
 cleanup, and unchanged proof gates. Inspect it on the next ping before edits.
 The concise unit-by-unit status is docs/verification/next-plan/PROGRESS.md.
+The first UI-check plan was refused before tests because its four-GiB ceiling
+could not leave eight GiB of desktop reserve. The fresh v2 plan requests three
+GiB, above the previous focused check's recorded peak, with all reserve and
+runtime enforcement unchanged. Preserve the failed v1 status and log.
 
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below

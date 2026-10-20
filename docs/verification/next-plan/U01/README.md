@@ -121,12 +121,15 @@ including early script order and permission policy. Those tests are not GUI
 results. `bench/u01-ui-checks.mjs` prepares the next focused detached queue.
 
 ```sh
-nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v1
-nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v1-plan.json
+nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v2
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v2-plan.json
 ```
 
-One serial job uses 4 GiB, low-priority CPU 2, and a five-minute hard cap.
+One serial job uses 3 GiB, low-priority CPU 2, and a five-minute hard cap.
 Expected duration is two minutes. It checks focused fixture/model/playback/
 export tests, saved replay and process cleanup, and existing proof/toolchain
 gates. It does not rebuild the app, repeat the full suite, or rerun a browser.
 Passing it cannot close clipboard/download or the remaining U01 matrix.
+The first plan's four-GiB ceiling was refused by resource admission before tests.
+The three-GiB ceiling uses the prior focused receipt's observed peak for sizing.
+The eight-GiB desktop reserve and all enforcement remain unchanged.
