@@ -8,11 +8,13 @@ import {inputs} from "../scripts/manifest.mjs";
 import {nativeIdentity} from "./startup-measure.mjs";
 import {proxyTarget} from "../tests/support/ui-proxy.mjs";
 
-const id=process.argv[2];assert.equal(process.argv.length,3);assert.match(id,/^u00-live-[a-z0-9-]+$/);
+const [id,specPath,profileId]=process.argv.slice(2);assert.ok(process.argv.length===3||process.argv.length===5);assert.match(id,/^u00-live-[a-z0-9-]+$/);
 const root=process.cwd(),directory=resolve("build/evidence/next-plan/U00",id);assert.equal(existsSync(directory),false);mkdirSync(directory,{recursive:true});
 const hash=path=>createHash("sha256").update(readFileSync(path)).digest("hex"),manifest=JSON.parse(readFileSync("build/manifest.json","utf8"));assert.deepEqual(manifest.sourceHashes,inputs());
 const baseline=resolve("build/experiments/u00-controls-v1/control");assert.equal(hash(resolve(baseline,"build/rubend")),manifest.nativeSha256);assert.equal(hash("build/rubend"),manifest.nativeSha256);
-const state={format:"rubend-u00-live-session-v1",state:"starting",startedAt:new Date().toISOString(),wrapper:nativeIdentity(process.pid),binarySha256:manifest.nativeSha256,sourceHashes:inputs(),servers:[],timingClaim:false};
+let profile=null;
+if(specPath){const spec=JSON.parse(readFileSync(specPath,"utf8"));assert.equal(spec.format,"rubend-u00-profile-spec-v1");profile=spec.profiles.find(p=>p.id===profileId);assert.ok(profile,"Unknown sealed profile");const metadata=JSON.parse(readFileSync(profile.binary+".json","utf8"));assert.equal(hash(profile.binary),metadata.binarySha256);for(const [path,expected]of Object.entries(metadata.sourceHashes))assert.equal(hash(path),expected);}
+const state={format:"rubend-u00-live-session-v1",state:"starting",startedAt:new Date().toISOString(),wrapper:nativeIdentity(process.pid),binarySha256:profile?hash(profile.binary):manifest.nativeSha256,profile,sourceHashes:inputs(),servers:[],timingClaim:false};
 const statusPath=resolve(directory,"session.json"),save=()=>{const pending=statusPath+".tmp";writeFileSync(pending,JSON.stringify(state,null,2)+"\n");renameSync(pending,statusPath);};save();
 const processes=[],proxies=[];let closing=false,finish;const stop=new Promise(done=>{finish=done;});
 function children(pid){
@@ -23,8 +25,11 @@ function children(pid){
 for(const signal of["SIGINT","SIGTERM"])process.on(signal,()=>finish(signal));
 const timer=setTimeout(()=>finish("session-time-limit"),540000);
 try{
-  for(const [role,cwd]of[["baseline",baseline],["head",root]]){
-    const child=spawn(process.execPath,["apps/server.mjs"],{cwd,env:{...process.env,PORT:"0",RUBEND_BINARY:resolve(cwd,"build/rubend")},stdio:["ignore","pipe","pipe"]});
+  for(const [role,cwd]of(profile?[["head",root]]:[["baseline",baseline],["head",root]])){
+    const env={...process.env,PORT:"0",RUBEND_BINARY:profile?profile.binary:resolve(cwd,"build/rubend")};
+    for(const key of["RUBEND_APP_COMMAND","RUBEND_JOINT_CACHE","RUBEND_CORNER_CACHE","RUBEND_H0_CACHE","RUBEND_H0_META_CACHE","RUBEND_CORNER_POLICY","RUBEND_H0_POLICY","RUBEND_SEGMENTED_POLICY"])delete env[key];
+    Object.assign(env,profile?.env);
+    const child=spawn(process.execPath,["apps/server.mjs"],{cwd,env,stdio:["ignore","pipe","pipe"]});
     const row={role,server:nativeIdentity(child.pid),root:cwd,origin:null,native:[],stderr:""};state.servers.push(row);
     const closed=new Promise(done=>child.once("close",(code,signal)=>{row.exitCode=code;row.signal=signal;if(!closing)finish("unexpected-server-exit");done();}));processes.push({child,closed,row});
     child.stderr.on("data",data=>{row.stderr=(row.stderr+data).slice(-4000);});

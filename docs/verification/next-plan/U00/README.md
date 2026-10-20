@@ -247,3 +247,38 @@ The live supervisor accepts an optional sealed profile specification and id.
 It runs only that profile's head server, so two large table owners cannot
 overlap. The default two-server baseline/head mode is unchanged. Each session
 records the selected binary, cache paths, process identities, and cleanup.
+
+## Completed browser lanes
+
+[The second browser archive](u00-browser-profiles-v1/index.json) completes
+lanes 5 and 10. All six preserved profiles solve the four-move oracle case
+and export a replay-certified interval of four through four. The packed small
+profile is distinct from the default control. Each session runs serially with
+one native owner. Inverse playback also agrees with canonical replay.
+
+The negative lane supplies a native readiness event declaring unsupported
+protocol three. Engine refuses it before any solve request reaches the fixture.
+The browser shows Engine offline and disables solving. This tests protocol
+capability refusal, not corrupt-cache recovery. The native geometry checks
+remain in the separate integration archive.
+
+The same archive preserves a preparatory U01 model-worker failure check.
+A real module worker throws when playback first requests move application.
+Twenty Space key presses and both arrow keys do not start an error loop.
+The diagnostic timer advances, pending requests reach zero, canonical state
+and the retained answer stay unchanged, and export still replays to solved.
+The fixture changes worker behavior only for this local test. No production
+interaction changed and no operator interaction-review gate is claimed closed.
+
+All eight sessions stop cleanly. Their wrappers, servers, and native identities
+are gone, and recorded IPC directories are removed. Binary source graphs and
+all cache hashes still agree. `bench/u00-browser-archive.mjs` rechecks these
+records and canonical exports before archiving them. Three representative
+screenshots and complete compressed JSON records are retained.
+
+[The machine-readable status](status.json) keeps all ten completed browser
+lanes separate from U00 acceptance. Raw release timing remains inconclusive.
+The new fixed regression queue runs `just check` followed by `just test` with
+four low-priority lanes, 4 GiB, and a thirty-minute total ceiling. It includes
+the fixture server's three-mode bridge, origin, abort, and cleanup regression.
+No model wakeup or polling is scheduled.

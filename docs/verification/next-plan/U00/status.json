@@ -1,0 +1,36 @@
+{
+  "format": "rubend-u00-status-v1",
+  "accepted": false,
+  "integrationBase": "a7a087235b20b38767b216b0ab90523ac1a2b13f",
+  "controlInventory": "u00-controls-v1/index.json",
+  "nativeProfileEvidence": "u00-profiles-v1/index.json",
+  "defaultBrowserEvidence": "u00-live-v2/index.json",
+  "optionalBrowserEvidence": "u00-browser-profiles-v1/index.json",
+  "liveLanesPassed": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "profiles": [
+    {"id": "default", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": true},
+    {"id": "small", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false},
+    {"id": "inverse", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false},
+    {"id": "corner", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false},
+    {"id": "corner-first", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false},
+    {"id": "h0", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false},
+    {"id": "segmented", "nativeIntegration": "passed", "browserSolveExport": "passed", "default": false}
+  ],
+  "controlTiming": {
+    "small": "stable on the recorded finite sample",
+    "rawJoint": "inconclusive",
+    "diagnostic": "u00-latency-v1/index.json",
+    "limitation": "Unrounded arrival and scheduled CPU until observation vary. Page faults are zero. The observer does not recover native emission time or identify frequency, cache, and scheduling contributions."
+  },
+  "rejectedPromotions": ["segmented", "owned-continuations", "fused-h0", "short-first", "exact-reserve", "cooperative-search-latency"],
+  "openProofStatements": "../../../architecture/NEXT-PROOF-STATEMENTS.md",
+  "newDomainLawsApproved": false,
+  "establishedLawsChanged": false,
+  "performancePromotion": false,
+  "independentReview": "not run, explicit solo instruction",
+  "remaining": [
+    "Resolve or explicitly disposition the raw release timing acceptance gate without lowering its floor.",
+    "Complete U01 renderer, failure, persistence, clipboard, download, and actual delivered-package acceptance.",
+    "Obtain separate approval before adding proposed domain laws."
+  ]
+}

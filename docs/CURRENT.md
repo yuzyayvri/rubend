@@ -45,6 +45,23 @@ Cache digests are unchanged, owners are stopped, and IPC cleanup passes.
 Read docs/verification/next-plan/U00/u00-profiles-v1/index.json.
 This is functional evidence, not browser acceptance or a performance verdict.
 
+The remaining two U00 browser lanes now pass. Each of the six preserved
+profiles solves and exports the known four-move optimum in a hidden tab,
+with one native owner at a time. Binary graphs and cache digests agree with
+the sealed integration records. An unsupported readiness protocol fails closed
+in the real browser. Read docs/verification/next-plan/U00/status.json and
+docs/verification/next-plan/U00/u00-browser-profiles-v1/index.json.
+All ten live lanes have receipts, but the raw timing gate remains inconclusive.
+U00 is not marked accepted and no search treatment is promoted.
+
+A preparatory U01 worker-failure lane also passes in the actual browser.
+After a deliberate model-worker exception, twenty Space presses and arrow
+seeks leave playback stopped, requests settled, and the retained answer
+unchanged. The diagnostic timer advances and the answer still exports and
+replays. This does not close the remaining U01 acceptance matrix. Production
+code is unchanged. The next fixed queue reruns full regression and proof checks
+for the new test infrastructure. Read its saved results on the next ping.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed
