@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from "node:fs";
+import {resolve} from "node:path";
+import {spawnSync} from "node:child_process";
+import {createHash} from "node:crypto";
+
+const [id,owner]=process.argv.slice(2);assert.equal(process.argv.length,4);assert.match(id,/^u00-[a-z0-9-]+$/);const historicalRoot=resolve(owner);
+const run=(program,args)=>{const r=spawnSync(program,args,{encoding:"utf8"});assert.equal(r.status,0,r.stderr);return r.stdout.trim();};
+const revision=run("git",["rev-parse","HEAD"]),directory=resolve("build/experiments",id),sourceHashes={};
+for(const path of run("git",["ls-files","-z"]).split("\0").filter(Boolean))sourceHashes[path]=createHash("sha256").update(readFileSync(path)).digest("hex");
+const evidence=resolve("build/evidence/next-plan/U00");mkdirSync(evidence,{recursive:true});
+const specPath=resolve(evidence,id+"-spec.json"),planPath=resolve("build/evidence",id+"-plan.json");assert.ok(!existsSync(specPath)&&!existsSync(planPath),"Use a fresh immutable run id");
+const qualityConfig=resolve(historicalRoot,"build/evidence/r06-quality-config-v5.json");assert.ok(existsSync(qualityConfig));
+const spec={format:"rubend-u00-batch-spec-v1",revision,directory,historicalRoot,qualityConfig,historicalControls:["build/experiments/r06-raw-v5","build/experiments/r06-reference-v1","build/experiments/r06-corner-first-v1","build/experiments/r04-h0-application-v1","build/r02-inverse-three-v1","build/r03-small-direct-v2"]};
+const orders={format:"rubend-u00-standing-orders-v1",approvedOn:"2026-10-20",approvedAgainst:"a7a087235b20b38767b216b0ab90523ac1a2b13f",revision,plan:"docs/architecture/NEXT-IMPLEMENTATION-PLAN.md",order:["U00","U01","U02","U03","U04","U05","U06","U07"],solo:true,hiddenPreviews:true,signedSubjectOnly:true,publicationAuthorized:false,newDomainLawsApproved:false,newLargeTableGenerationAuthorized:false,automaticWakeups:false,jobCapsSeconds:600,scope:"Freeze current default and validate historical native snapshots. Five alternating same-binary A/A cohorts for default and raw v5. No new solver treatment, holdout evaluation, large table generation, or promotion."};
+const save=(path,record)=>writeFileSync(path,JSON.stringify(record,null,2)+"\n",{flag:"wx"});save(specPath,spec);
+const ordersPath=resolve(evidence,"orders.json");
+if(existsSync(ordersPath)){const previous=JSON.parse(readFileSync(ordersPath,"utf8"));for(const field of["approvedAgainst","plan","solo","hiddenPreviews","publicationAuthorized","newDomainLawsApproved","newLargeTableGenerationAuthorized","automaticWakeups"])assert.equal(previous[field],orders[field],"Standing authority changed");}else save(ordersPath,orders);
+for(const path of[specPath,ordersPath,qualityConfig,...Object.values(JSON.parse(readFileSync(qualityConfig,"utf8")).corpora).map(c=>c.path)])sourceHashes[path]=createHash("sha256").update(readFileSync(path)).digest("hex");
+const jobs=[{id:"freeze",memoryMiB:4096,seconds:600,cpus:[2,3,4,5],command:[process.execPath,"bench/u00-control.mjs","freeze",specPath]},{id:"small-aa",memoryMiB:4096,seconds:600,cpus:[2],command:[process.execPath,"bench/u00-control.mjs","small-aa",specPath]},{id:"raw-aa",memoryMiB:5632,seconds:600,cpus:[2],command:[process.execPath,"bench/u00-control.mjs","raw-aa",specPath]}];
+save(planPath,{format:"rubend-background-tests-v1",id,root:process.cwd(),revision,sourceHashes,jobs,expectedMinutes:15,queueHardLimitMinutes:30,scope:orders.scope});
+console.log(JSON.stringify({planPath,specPath,orders:ordersPath,expectedMinutes:15,maximumMinutes:30,rawMemoryMiB:5632,rawResidentOwners:2,automaticModelWakeups:false}));

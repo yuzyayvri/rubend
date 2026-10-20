@@ -68,6 +68,7 @@ test: build
     node tests/model-client.mjs
     node tests/fixture-portability.mjs
     node tests/commit-policy.mjs
+    node tests/u00-aa.mjs
     node tests/keyboard-playback.mjs
     node tests/contour-protocol.mjs
     node bench/corpus.mjs --check

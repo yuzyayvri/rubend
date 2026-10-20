@@ -52,6 +52,11 @@ snapshot and the current Bend graph. Keep the historical reference, corner, and
 H0 snapshots identified separately; a source path relative to another checkout
 must be resolved against that artifact's owner, not silently called corruption.
 
+The raw v5 entry selects RawJoint, not RawInverseThree. Use it specifically for
+the current lifecycle noise control. Preserve the inverse-three binary as a
+separately identified historical heuristic control; do not attribute RawJoint
+A/A results to an inverse-three benchmark.
+
 Run five alternating A/A cohorts per selected control using the same binary on
 both sides and the existing shallow/fast/exact/Superflip canaries. The warm
 adapter retains two workers, so raw A/A admission must account for both arrays.
@@ -66,3 +71,27 @@ rerun to select a favorable result or treat this batch as U00 completion.
 
 U00 live lanes, exact proposed theorem statements, and remaining noise diagnosis
 are still open after preparation of the first batch.
+
+## Run the first batch
+
+After the source is committed, prepare and launch with a fresh id:
+
+```sh
+nix develop --command node bench/u00-plan.mjs u00-controls-v1 /absolute/path/to/historical-checkout
+nix develop --command node bench/background-tests.mjs start build/evidence/u00-controls-v1-plan.json
+```
+
+The queue has three serial jobs capped at ten minutes each. The freeze/build
+and small A/A jobs use a 4-GiB ceiling. Raw A/A uses a 5.5-GiB ceiling for both
+resident workers together, subject to fresh admission and the eight-GiB desktop
+reserve. It does not reserve another memory budget for each worker.
+
+The queue status is build/experiments/u00-controls-v1/status.json. Control
+identities and raw/diagnostic reports are inside the same directory. Per-job
+resource receipts are build/evidence/u00-controls-v1-JOB.json. Standing orders
+are build/evidence/next-plan/U00/orders.json. Runtime specifications and copied
+corpora are sealed before use. Read results on the next ping, not by polling.
+
+The focused fixture check `node tests/u00-aa.mjs` currently passes a stable
+synthetic case, three explicit inconclusive cases, and seven rejecting cases.
+This verifies classification behavior, not product performance.
