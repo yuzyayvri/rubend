@@ -1,0 +1,339 @@
+{
+  "summary": {
+    "format": "rubend-u00-profile-archive-v1",
+    "passed": true,
+    "revision": "74cb8e2e30320885d0a04319aa054bae581e589b",
+    "startedAt": "2026-10-20T16:03:27.874Z",
+    "finishedAt": "2026-10-20T16:07:24.529Z",
+    "profiles": [
+      {
+        "profile": "small",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      },
+      {
+        "profile": "inverse",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      },
+      {
+        "profile": "corner",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      },
+      {
+        "profile": "corner-first",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      },
+      {
+        "profile": "h0",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      },
+      {
+        "profile": "segmented",
+        "engine": true,
+        "http": true,
+        "controlFailureCases": 5,
+        "sourceGraphIdentical": true
+      }
+    ],
+    "realControlFailures": 30,
+    "noNativeRebuild": true,
+    "performanceClaim": false,
+    "browserCoverage": false,
+    "independentReview": false
+  },
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-profiles-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/0-u00-profiles-v1-plan.json.gz",
+      "bytes": 140144,
+      "compressedBytes": 55117,
+      "sha256": "66cf00d151bad2b3639535b00c0a7f15584ca24142d29eebad6c2336073925e0",
+      "compressedSha256": "d6fe970dce8214f384fd08daf4986a50161ac117f6d1001a0e6243ffe38f3857",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/1-status.json.gz",
+      "bytes": 1091,
+      "compressedBytes": 480,
+      "sha256": "c1215e484c3948275f159d02847098b1a9ca0bc7f8ab52d383d008c22f0e7aa3",
+      "compressedSha256": "b08359892ef119675adbdb455664221cbd6681297124acec678a30906cc62c8a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-profiles-v1-spec.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/2-u00-profiles-v1-spec.json.gz",
+      "bytes": 2763,
+      "compressedBytes": 551,
+      "sha256": "426f1af60f35ec76c7628978d10dcbcc0a07c09f2053130acfad8ffe0bb10f2d",
+      "compressedSha256": "91e484799822781c878da0884d093217f198fd870bd3bd1a10b9ebc58f48505d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-profiles-v1-gates.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/3-u00-profiles-v1-gates.json.gz",
+      "bytes": 2402,
+      "compressedBytes": 1165,
+      "sha256": "c9ac88d8fdf5aacc2a2b8a78e0a5fc9290d8b18da1e942916d761d81dc69560a",
+      "compressedSha256": "4a0567ec162951473dd986c51bab9a6962cdc8308101342e93184da91640e5c2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-profiles-v1-profiles.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/4-u00-profiles-v1-profiles.json.gz",
+      "bytes": 10489,
+      "compressedBytes": 1608,
+      "sha256": "d0e4d61eb3d6583d037115fa35ce093910a5bbc77d5436cbf6761adf031e045f",
+      "compressedSha256": "908872ec4af35ab7992a99bb57c31535fcd586b8afdc942f52d6206d55e6946a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/gates.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/5-gates.json.gz",
+      "bytes": 112,
+      "compressedBytes": 104,
+      "sha256": "680cf55b482bfaa5b98d02b0a0c6af92faf8e51105619abd20a182ccfc4c7d2f",
+      "compressedSha256": "f6e803c99241a4ca3b9532763768c93e5dfd67239c71206e588a828349ffb4ae",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/profiles.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/6-profiles.json.gz",
+      "bytes": 1698,
+      "compressedBytes": 562,
+      "sha256": "06094a61b8ba166293f9664df73f90a2476d1be19b3049b7d36b00b5c9789761",
+      "compressedSha256": "81e2745284d2a134fdc54e20d07061e438aad9e601e30f11f93af6af916b8789",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/small-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/7-small-engine.json.gz",
+      "bytes": 9618,
+      "compressedBytes": 1471,
+      "sha256": "71371ec6d86747ec582526361cf66dc8285e5e7462924ca142ad99313ac99e7b",
+      "compressedSha256": "747fb5350f7f677bbc05b352f163cff407e12c3d186a0214413a9556f2dc1d60",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/small-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/8-small-http.json.gz",
+      "bytes": 435,
+      "compressedBytes": 286,
+      "sha256": "82a59cbc44a34736715e6e7aa167894197477031c0281fcce3517b2da1c1cbc3",
+      "compressedSha256": "28ab30244372a79d91d646e6bdaa5489e97bcbae6bdee70dc88ff2bfdc08e80e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/small-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/9-small-native-lifecycle.json.gz",
+      "bytes": 888,
+      "compressedBytes": 432,
+      "sha256": "af832a861bd1cb95be8608407be2aa64ed6ae55b945bccf4340ab36735d6d633",
+      "compressedSha256": "44f8e02373042971af6e56bfaffc6202f689147bdfca2d4fc056b6b8b2145c55",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/small-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/10-small-native-control-failures.json.gz",
+      "bytes": 901,
+      "compressedBytes": 333,
+      "sha256": "a8ece4899863b0212b093a4c2e78dcb9d98f452d5f6bf0ecbedcdae8822fa1d4",
+      "compressedSha256": "4be358b6ee3d20b9b059d5d9ff9d5d492c4d1dc031bb3c978297f9f15e9c0962",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/inverse-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/11-inverse-engine.json.gz",
+      "bytes": 9625,
+      "compressedBytes": 1496,
+      "sha256": "477d1b002ee31004226301a45a6e0874f842859de122a04a4cd970bd614b98f1",
+      "compressedSha256": "c0c0a7f9770834b627b62d3bcc938cec787f33787118a975dc2311bf03621ee6",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/inverse-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/12-inverse-http.json.gz",
+      "bytes": 438,
+      "compressedBytes": 291,
+      "sha256": "a02357fdfd6a77dda2cc2a58f418c59addc777fa7772178d3f273e7b8539c14d",
+      "compressedSha256": "c10c6d39593325b8d97c8992efcf782889e5b675a771f2f1d2684a528c2ac587",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/inverse-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/13-inverse-native-lifecycle.json.gz",
+      "bytes": 893,
+      "compressedBytes": 437,
+      "sha256": "41937fd2ec09ce6959df4dfaa05efa8a7dc32f6e422ffd7fe2d35d3bace67ba6",
+      "compressedSha256": "9b119ea8769f816affe7e050ee0ab22d21f5cc70ae6f9dd02d232a4eee727e59",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/inverse-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/14-inverse-native-control-failures.json.gz",
+      "bytes": 903,
+      "compressedBytes": 336,
+      "sha256": "c232681216130f04d78b1c195a090e03e92de6033a8ccc8fba501a26773ef1ab",
+      "compressedSha256": "a323a92346f527b58a7e6238fe2f2ee95a045e337a328bc0ff4c251c0ec0c5df",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/15-corner-engine.json.gz",
+      "bytes": 9624,
+      "compressedBytes": 1503,
+      "sha256": "02d5af56d6eaea198e229496e60f72df9dec3dbd23f1e4722605f83c269c53e5",
+      "compressedSha256": "4e60d830d01aee5c2918a8fa38fc86206e099474b09dbefaa4442400cb651f8c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/16-corner-http.json.gz",
+      "bytes": 437,
+      "compressedBytes": 290,
+      "sha256": "14c8bd34b0820f70200f53fe2cead61ea7c62832dbf4fcf3b07bcc609d698307",
+      "compressedSha256": "d429b24dd1776d5098e991c8a0091364e94917224ceec4f42d84bbacda7d8dd0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/17-corner-native-lifecycle.json.gz",
+      "bytes": 889,
+      "compressedBytes": 438,
+      "sha256": "86a254f9249b6222980799ef675c41bce8d0e07e1dc2b7a21e99778694f358fd",
+      "compressedSha256": "43157b162afec900857ebb49767bb1fd8ef90c6da01c9483c0d605f20834dfbd",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/18-corner-native-control-failures.json.gz",
+      "bytes": 902,
+      "compressedBytes": 336,
+      "sha256": "f88bf1e257c104af9ad4d3767c3ab95e66f18e9c43731343a948b22d9ecb5d1f",
+      "compressedSha256": "3b2ebf30d9ee5971e0d6a0903ff887718961aa5ca0ef207a918567ffd1630e9a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-first-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/19-corner-first-engine.json.gz",
+      "bytes": 9630,
+      "compressedBytes": 1508,
+      "sha256": "29e2ba0effdd3592f11558e068afc405200fcfcad68013039e151b3e8fc8e6cc",
+      "compressedSha256": "dbae036f0bb173f6c28d595715f44a31b48f8c47217b6b61e23aeb81f92f219f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-first-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/20-corner-first-http.json.gz",
+      "bytes": 443,
+      "compressedBytes": 294,
+      "sha256": "c9c48fc1dbdeed164214d37ea195836e8a1202a3ce4e6d6413ea37e1aca4d63f",
+      "compressedSha256": "a4144f79343ed6dca620bf2e22c4cd04a7f4ce8835f1b20006bb7e24637a62e5",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-first-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/21-corner-first-native-lifecycle.json.gz",
+      "bytes": 894,
+      "compressedBytes": 438,
+      "sha256": "e2a279cf85f107aa561e28be39f8dbc09c2cbf40a9f2fcc45c1fee5a24e90dc3",
+      "compressedSha256": "023cfd1eb656837f8630a9fc69813bba7129277bb7a8e829106e81866783e517",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/corner-first-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/22-corner-first-native-control-failures.json.gz",
+      "bytes": 908,
+      "compressedBytes": 339,
+      "sha256": "16f0aa280cc01da848457f7c3a93a407b8e4de3736d38f059f259379aa2a1f1b",
+      "compressedSha256": "5023d9c9b0a4ebd2417c9d82679af58126e8f0381134d7948d2ab45e56a09bf2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/h0-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/23-h0-engine.json.gz",
+      "bytes": 9620,
+      "compressedBytes": 1489,
+      "sha256": "e643d50d8a95b6021fc8ffef21b88c852b372ebf65b57623694832536e780de0",
+      "compressedSha256": "61beec03c33091cee753b33d9ed3755947b67f583877add9c69c8c96657106c9",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/h0-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/24-h0-http.json.gz",
+      "bytes": 433,
+      "compressedBytes": 286,
+      "sha256": "99ec852426d98181e8d8006834625878a5a84d3305b11e9c25f2ad32ca9b9f5c",
+      "compressedSha256": "6ea2af2ac70b54ce5b2cb1354ed270e62766687f5c51b9c05df53fecd7d01ffd",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/h0-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/25-h0-native-lifecycle.json.gz",
+      "bytes": 886,
+      "compressedBytes": 437,
+      "sha256": "eedbe576a15443f9e58b4b5db8f71a7405e6579591760f15cc542177fa1a697b",
+      "compressedSha256": "6e8dff52a92d54c6aab658bd280c9bb585fdcb8dc188319cc774ea0a5c517b4c",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/h0-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/26-h0-native-control-failures.json.gz",
+      "bytes": 898,
+      "compressedBytes": 333,
+      "sha256": "0c77036697e4aac6dd9bd7a2208cfb652bea1ccc70a7b8f48d030b8a2486d61b",
+      "compressedSha256": "291c6c8ab767a8e1be686bfb013f5dcbed0c0a5f612a18521fecfe73524edaa7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/segmented-engine.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/27-segmented-engine.json.gz",
+      "bytes": 9631,
+      "compressedBytes": 1508,
+      "sha256": "51ca88bd893e5c466032a64bed2f0bd85c92702ad4f58e101486a3331f803170",
+      "compressedSha256": "9c8ed6374da797a9e66820c33335d12ab895c1eda0fc4c61ec9e7d507874fede",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/segmented-http.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/28-segmented-http.json.gz",
+      "bytes": 439,
+      "compressedBytes": 291,
+      "sha256": "7d2db60dc4f9cfb887f2c3da460f248e7995f296ff1dab583c050b7ad1ff24a5",
+      "compressedSha256": "57e3471903271ecc2d8e2ba3e31e6ef019c5dfe8e2340e73092b2a64234650c1",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/segmented-native-lifecycle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/29-segmented-native-lifecycle.json.gz",
+      "bytes": 882,
+      "compressedBytes": 430,
+      "sha256": "eda4546aa6380348cb538ca7dee1875d10c92059efe1035c027fc870a074b070",
+      "compressedSha256": "28e4016c8b38184891abb63ac1ce286de74667c00461bea01751fe97c9438894",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-profiles-v1/segmented-native-control-failures.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-profiles-v1/30-segmented-native-control-failures.json.gz",
+      "bytes": 905,
+      "compressedBytes": 337,
+      "sha256": "3c43d164b55c145e2ebe64048cc77969e7f5214b3e446fface563cffd44c7cc2",
+      "compressedSha256": "bff3bb5526d6caf2b68ceb414b893e28a2a103b21eb9803eae95bd9c04562551",
+      "roundtripPassed": true
+    }
+  ]
+}

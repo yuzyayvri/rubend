@@ -37,6 +37,14 @@ Optional-profile browser coverage and the capability-mismatch live lane remain
 open. The proof statements in docs/architecture/NEXT-PROOF-STATEMENTS.md are
 drafted for separate approval; no new law or pruning rule is enabled.
 
+The sealed optional-profile queue passed at 00:07:24 Manila on October 21.
+All six preserved native binaries match the current source graph and pass
+Engine, HTTP, retained-owner cancellation, and thirty real control failures.
+Existing profile/goal guards and all sixteen toolchain/proof gates pass.
+Cache digests are unchanged, owners are stopped, and IPC cleanup passes.
+Read docs/verification/next-plan/U00/u00-profiles-v1/index.json.
+This is functional evidence, not browser acceptance or a performance verdict.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

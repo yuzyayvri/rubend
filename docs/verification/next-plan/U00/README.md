@@ -228,3 +228,22 @@ nix develop --command node bench/background-tests.mjs start build/evidence/u00-p
 Both jobs use 4 GiB, with caps of ten and fifteen minutes. Expected duration is
 about ten minutes. The queue does not clear optional-profile browser coverage
 or add a performance claim. Read saved results on the next ping.
+
+## Profile integration result
+
+[The profile archive](u00-profiles-v1/index.json) retains the complete source
+seals, cache identities, resource receipts, and all twenty-four integration
+records. Both jobs passed at 00:07:24 Manila on October 21. All six profiles
+pass Engine, HTTP, retained-owner cancellation, and five real native control
+failures each. The existing profile geometry and exact-bound goal checks pass
+in native and generated JavaScript where applicable. All sixteen toolchain
+gates pass with the established laws unchanged. No binary or table was rebuilt.
+
+`bench/u00-profiles-archive.mjs` rejects failed jobs, changed seals or receipts,
+missing profile records, and live native owners before creating the archive.
+Real-browser profile and capability-mismatch checks remain separate.
+
+The live supervisor accepts an optional sealed profile specification and id.
+It runs only that profile's head server, so two large table owners cannot
+overlap. The default two-server baseline/head mode is unchanged. Each session
+records the selected binary, cache paths, process identities, and cleanup.
