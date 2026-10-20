@@ -95,13 +95,18 @@ Clipboard denial and download remain unverified. The browser environment
 replaces the denial fixture method, and neither inspected activation produces
 an observable download event. Preserve both negative observations and strict
 assertions. Read docs/issues/browser-clipboard-download-acceptance.md.
-The fixed u01-ui-checks-v2 queue rechecks focused tests, saved canonical replay,
+The fixed u01-ui-checks-v3 queue rechecks focused tests, saved canonical replay,
 cleanup, and unchanged proof gates. Inspect it on the next ping before edits.
 The concise unit-by-unit status is docs/verification/next-plan/PROGRESS.md.
 The first UI-check plan was refused before tests because its four-GiB ceiling
 could not leave eight GiB of desktop reserve. The fresh v2 plan requests three
 GiB, above the previous focused check's recorded peak, with all reserve and
 runtime enforcement unchanged. Preserve the failed v1 status and log.
+The v2 focused tests passed, but its receipt checker incorrectly required
+client content width to equal the requested viewport width. The v3 checker
+accepts positive content widths up to 390 and rejects horizontal overflow.
+It includes accepting 375/390-width and rejecting overflow fixtures. This fixes
+test logic, not product layout. Preserve the v2 failure too.
 
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below

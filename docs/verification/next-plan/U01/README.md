@@ -121,8 +121,8 @@ including early script order and permission policy. Those tests are not GUI
 results. `bench/u01-ui-checks.mjs` prepares the next focused detached queue.
 
 ```sh
-nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v2
-nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v2-plan.json
+nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v3
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v3-plan.json
 ```
 
 One serial job uses 3 GiB, low-priority CPU 2, and a five-minute hard cap.
@@ -133,3 +133,8 @@ Passing it cannot close clipboard/download or the remaining U01 matrix.
 The first plan's four-GiB ceiling was refused by resource admission before tests.
 The three-GiB ceiling uses the prior focused receipt's observed peak for sizing.
 The eight-GiB desktop reserve and all enforcement remain unchanged.
+The v2 focused tests passed before a receipt-validator assertion failed. The
+recorded content width is 375 pixels inside the requested 390-pixel viewport.
+The corrected v3 validator checks fit and overflow instead of exact equality.
+Accepting and rejecting dimension fixtures protect that distinction. This is
+not a product-layout fix. Both earlier failed runs remain preserved.

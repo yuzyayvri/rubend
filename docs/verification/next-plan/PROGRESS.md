@@ -22,9 +22,12 @@ Clipboard denial and downloaded-file verification are explicitly unverified.
 The [recorded observation gap](../../issues/browser-clipboard-download-acceptance.md)
 must not be hidden by a passing fixture or proof check.
 
-The next detached queue is `u01-ui-checks-v2`. It rechecks saved canonical
+The next detached queue is `u01-ui-checks-v3`. It rechecks saved canonical
 browser records and cleanup, the focused fixture/model/playback/export tests,
 and `just check`. It does not repeat the completed full build or rerun a
 browser. Expected duration is two minutes, with a five-minute hard cap.
 The first plan was refused before tests because a 4-GiB ceiling lacked desktop
 headroom. The fresh plan requests 3 GiB and retains the eight-GiB reserve.
+The second run passed focused tests but found a bad receipt-validator assertion.
+Content width need not equal viewport width. The corrected check rejects
+overflow and accepts the recorded 375-pixel content within the 390-pixel viewport.
