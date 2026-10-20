@@ -73,3 +73,12 @@ The second job downloads about 89 MB. The uncompressed import stream is capped
 at two GiB. No new pruning table, package build, deployment, or system change
 is part of this queue. Read its saved result on the next ping without polling.
 Package browser acceptance remains separate even if these checks pass.
+
+[The actual delivery archive](u01-delivery-v1/index.json) passes both jobs at
+01:00:41 Manila on October 21. The GitHub ZIP digest and all six delivered
+checksums match. All 67 closure paths import into the private store. The
+installed package manifest agrees with its native/modules and current source
+graph. Its isolated entrypoint passes the existing HTTP, native-replay, origin,
+session, invalid-input, cancellation, and recovery checks. The host store and
+repository are not mounted. All 1,197 source seals and resource receipts verify.
+The detached worker has stopped. This does not establish package GUI acceptance.

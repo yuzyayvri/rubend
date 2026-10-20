@@ -77,6 +77,14 @@ Read docs/verification/next-plan/U01/README.md and the saved queue result on
 the next ping. Delivery is not yet verified and no broader browser result is
 claimed. The raw timing acceptance gate remains inconclusive.
 
+The actual delivery queue passed at 01:00:41 Manila on October 21. The pinned
+CI ZIP digest, six delivery checksums, and 67 imported closure paths verify.
+The installed package passes HTTP/native replay and cancellation in a private
+store namespace without the host store or repository mounted. All 1,197 source
+seals match, both resource jobs pass, and the worker is gone. Compressed records
+are docs/verification/next-plan/U01/u01-delivery-v1/index.json. This is not yet
+package GUI acceptance or a clean-machine claim for another kernel/platform.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

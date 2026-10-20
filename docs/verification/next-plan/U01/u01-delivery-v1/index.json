@@ -1,0 +1,26 @@
+{
+  "format": "rubend-u01-delivery-archive-v1",
+  "passed": true,
+  "finishedAt": "2026-10-20T17:00:41.238Z",
+  "sourceSeals": 1197,
+  "workerGone": true,
+  "artifactId": 12205837803,
+  "runId": 39291425745,
+  "commit": "a7a087235b20b38767b216b0ab90523ac1a2b13f",
+  "closurePaths": 67,
+  "privateStoreImport": true,
+  "installedHttpReplayAndCancellation": true,
+  "hostStoreMounted": false,
+  "repositoryMounted": false,
+  "browserAcceptance": false,
+  "independentReview": false,
+  "files": [
+    {"path":"plan.json.gz","sha256":"d526314431f6003eada6e6a770d6212b4fb64999244bfe31adc525c0daaa553f"},
+    {"path":"status.json.gz","sha256":"764713e8ca6b38ff3417d9cede114e870737074fb2bb207b9bb4af2deac336e0"},
+    {"path":"focused-resource.json.gz","sha256":"149ea04f3a03f5ff5f9851aecee1f713f08c785f9f4bc242d6c4e307120121dc"},
+    {"path":"delivery-resource.json.gz","sha256":"3716f2feaa41b6806a2f23dd2b3e4586b84552ac7faaa0aba39b39572e8fed54"},
+    {"path":"focused.json.gz","sha256":"623ef68ec656627a9886d556bb930c84288e225019ca06d74079999e88e746bb"},
+    {"path":"provenance.json.gz","sha256":"651604a6f2cd17e2884922700f26501fc73c1f2e09cc2f995d8ecde6997ff981"},
+    {"path":"delivery.json.gz","sha256":"6c8de8b759c4fdd7c57cbc7173bd0cc22327335c2134eef9717df966961f2821"}
+  ]
+}
