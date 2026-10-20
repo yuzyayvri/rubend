@@ -1,0 +1,15 @@
+{
+  "format": "rubend-u01-check-archive-v1",
+  "passed": true,
+  "revision": "9b73f82c5880b807dcb556f2492d9f1648d7962c",
+  "sourceSeals": 1190,
+  "finishedAt": "2026-10-20T16:26:40.059Z",
+  "workerGone": true,
+  "proof": {"path": "proof.json.gz", "sha256": "019fa1854a487cc17c825a011777e23b3ab15623dbb0ab57865788b07fcf680f"},
+  "regression": {"path": "regression.json.gz", "sha256": "76a6f3e874c6a3678d17b9d3ffab9c802eec15d41c9434f335df3a08853af791"},
+  "plan": {"path": "plan.json.gz", "sha256": "cf1d2687d2c1f429aa763db647fe926abc2d838979d48a5f666607b743f2534b"},
+  "status": {"path": "status.json.gz", "sha256": "7cdcd8b9ae79bcaba4dfe0f1483172f0fedbb2a34991b97ab06a2269d1db3066"},
+  "resourceStops": false,
+  "independentReview": false,
+  "scope": "Full just test and sixteen just check gates after browser-test infrastructure changes. No performance promotion or complete U01 acceptance."
+}

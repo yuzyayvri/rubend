@@ -62,6 +62,13 @@ replays. This does not close the remaining U01 acceptance matrix. Production
 code is unchanged. The next fixed queue reruns full regression and proof checks
 for the new test infrastructure. Read its saved results on the next ping.
 
+That queue passed at 00:26:40 Manila on October 21. All sixteen just check
+gates and the complete just test pass at 9b73f82. All 1,190 tracked source
+seals and resource receipts verify, with no resource stop or surviving worker.
+The compressed records are docs/verification/next-plan/U01/u01-checks-v2/index.json.
+Continue delivered-package and remaining browser acceptance without repeating
+this complete suite for unchanged source.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed
