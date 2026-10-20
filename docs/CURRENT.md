@@ -69,6 +69,14 @@ The compressed records are docs/verification/next-plan/U01/u01-checks-v2/index.j
 Continue delivered-package and remaining browser acceptance without repeating
 this complete suite for unchanged source.
 
+The next fixed queue is u01-delivery-v1. It checks the actual exported CI
+package in a fresh private Nix store and an empty runtime mount namespace,
+reusing existing HTTP/native-replay/cancellation assertions. Source and artifact
+identities are pinned. The host Nix store is not imported into or mounted.
+Read docs/verification/next-plan/U01/README.md and the saved queue result on
+the next ping. Delivery is not yet verified and no broader browser result is
+claimed. The raw timing acceptance gate remains inconclusive.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

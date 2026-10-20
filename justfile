@@ -64,6 +64,7 @@ test: build
     node tests/worker-control-scan.mjs
     just control-io-test
     node tests/http.mjs
+    node tests/http-args.mjs
     node tests/export.mjs
     node tests/model-client.mjs
     node tests/fixture-portability.mjs

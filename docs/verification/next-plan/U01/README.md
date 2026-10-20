@@ -23,3 +23,53 @@ during search, failure at rewind, repeated live seeks, context loss and recovery
 2D fallback, narrow layout, clipboard denial, downloaded records, saved state,
 and isolated import/launch of the actual CI artifact. The earlier successful
 CI export is not evidence for import and launch.
+
+## Development regression
+
+[The full regression archive](u01-checks-v2/index.json) passes all sixteen
+`just check` gates and the complete `just test` at 9b73f82. The queue finished
+at 00:26:40 Manila on October 21. All 1,190 source seals and receipt digests
+match. The worker is gone and neither job hit a resource stop. No independent
+review ran. This does not close the remaining browser and delivery checks.
+
+## Fixed delivered-package check
+
+`bench/u01-delivery.mjs` pins successful GitHub run 39291425745, package artifact
+12205837803, its ZIP digest, and source commit a7a0872. It verifies the complete
+ZIP entry set and every delivered checksum before using the NAR. It rejects
+expired or replaced artifacts, failed runs, wrong commits, and changed source
+graphs. The artifact is still available when this queue is prepared.
+
+The check imports into a fresh store under its ignored run directory. It does
+not write the host Nix store or contact the Nix daemon. The installed app runs
+with only that imported `/nix` tree, kernel process/device interfaces, a temporary
+directory, and an empty working directory. The runtime has no repository or
+host store mounted. Its environment is cleared and loopback networking stays
+shared so the existing HTTP suite can reach it. This is a filesystem/environment
+relocation check on this supported host, not a different kernel or browser.
+
+The existing HTTP suite gains explicit argument support for the isolated
+entrypoint. It retains the same origin/session guards, invalid inputs, streamed
+four-move optimum, cancellation, and recovery assertions. A focused regression
+checks three rejected argument shapes and the normal explicit Node entrypoint.
+No product code or installed package is changed. Native solving occurs inside
+the delivered package through HTTP, not through a substitute engine.
+
+This design avoids a second HTTP implementation and any package rebuild.
+The data shape is one pinned delivery identity and one fresh private store.
+The rejected alternative copied the HTTP checks into a separate driver and
+would duplicate its acceptance rules. Design review is a solo sequential pass.
+
+After committing source, use a fresh run id:
+
+```sh
+nix develop --command node bench/u01-delivery.mjs plan u01-delivery-v1
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-delivery-v1-plan.json
+```
+
+The serial jobs use 4 GiB and CPU 2 at low priority. The focused checks have a
+two-minute cap and delivery has ten minutes. Expected duration is five minutes.
+The second job downloads about 89 MB. The uncompressed import stream is capped
+at two GiB. No new pruning table, package build, deployment, or system change
+is part of this queue. Read its saved result on the next ping without polling.
+Package browser acceptance remains separate even if these checks pass.

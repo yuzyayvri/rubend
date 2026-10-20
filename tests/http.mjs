@@ -4,7 +4,9 @@ import { once } from "node:events";
 import { writeFileSync, mkdirSync } from "node:fs";
 import { apply, solved } from "../apps/model.mjs";
 
-const child=spawn(process.env.RUBEND_APP_COMMAND??process.execPath,process.env.RUBEND_APP_COMMAND?[]:["apps/server.mjs"],{cwd:process.env.RUBEND_APP_COMMAND?"/tmp":process.cwd(),stdio:["ignore","pipe","pipe"],env:{...process.env,PORT:"0"}});
+const appArgs=process.env.RUBEND_APP_COMMAND?JSON.parse(process.env.RUBEND_APP_ARGS??"[]"):["apps/server.mjs"];
+assert.ok(Array.isArray(appArgs)&&appArgs.every(a=>typeof a==="string"&&!a.includes("\0")),"App arguments must be an array of strings without NUL");
+const child=spawn(process.env.RUBEND_APP_COMMAND??process.execPath,appArgs,{cwd:process.env.RUBEND_APP_COMMAND?"/tmp":process.cwd(),stdio:["ignore","pipe","pipe"],env:{...process.env,PORT:"0"}});
 let errors="";child.stderr.on("data",d=>errors+=d);
 try{
  const origin=await new Promise((resolve,reject)=>{let out="";child.stdout.on("data",d=>{out+=d;const m=out.match(/Rubend local: (http:\/\/127\.0\.0\.1:\d+)/);if(m)resolve(m[1]);});child.once("exit",()=>reject(Error(errors)));});
