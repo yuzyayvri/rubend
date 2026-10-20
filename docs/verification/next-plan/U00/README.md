@@ -126,3 +126,46 @@ and host work around first-candidate observation. It cannot recover the native
 emission instant from a pipe arrival. Scheduler wait accounting is disabled on
 this machine and will not be enabled. Instrumented timings will not replace
 release timings or retroactively clear the old noise gate.
+
+## Fixed timing-attribution batch
+
+The diagnostic uses the original complete five-cohort raw A/A configuration and
+the original sealed RawJoint binary. No shortened request, first-answer cancel,
+or new corpus replaces the workload. `bench/u00-latency.mjs` verifies the old
+configuration, binary, metadata, and production host adapter before planning.
+
+The warm adapter gains an optional engine factory used only by this diagnostic.
+The default path still constructs the normal Engine. A custom factory is marked
+explicitly as diagnostic in the report, so its instrumented timings cannot be
+silently presented as release evidence. This is preferred to global prototype
+patching or a separate prefix-only benchmark that would change cache/work history.
+
+`bench/latency-probe.mjs` records the first accepted candidate using the same
+job-start clock as Engine without rounding. It retains the public integer
+elapsed time unchanged. Native observations sum live thread scheduled CPU and
+context switches and record process page-fault deltas. Thread identities and
+counter monotonicity are checked. Unknown counters remain unknown, not zero.
+Each counter-read window and host CPU/event-loop observation is retained.
+
+CPU until host observation is not CPU until native emission. The native worker
+can continue searching before the host reads the pipe. Read windows, post-emission
+work, observer startup/overhead, and disabled scheduler wait accounting remain
+explicit limitations. No precise causal split is claimed merely by subtracting
+CPU from wall time. Results are stratified by case and profile, with the full
+trace retained. Every first solution/work-step prefix must match an original
+control prefix before equal-work interpretation is allowed.
+
+Prepare the fixed queue after committing sources:
+
+```sh
+nix develop --command node bench/u00-latency.mjs plan u00-latency-v1
+nix develop --command node bench/background-tests.mjs start build/evidence/u00-latency-v1-plan.json
+```
+
+The first job runs the parser/observer, warm-adapter default/custom, A/A analyzer,
+engine lifecycle, and sixteen toolchain/proof checks. The second records one
+instrumented raw comparison with the same two-owner 5.5-GiB ceiling and CPU 2.
+Each job is capped at ten minutes. Expected queue duration is about eight minutes.
+Read build/experiments/u00-latency-v1/status.json on the next ping. Trace, raw
+report, and per-case summary remain in that directory. Do not poll or rerun to
+clear the old acceptance gate.

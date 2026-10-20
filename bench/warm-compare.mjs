@@ -118,11 +118,13 @@ function summarize(result){
   }
   result.passed=result.errors.length===0&&result.rounds.length===result.config?.iterations&&result.rounds.every(r=>r.status==="ok");
 }
-export async function compareWarm(input,sourcePath=null){
+export async function compareWarm(input,sourcePath=null,{createEngine}={}){
   const result={format:"rubend-warm-comparison-v1",startedAt:new Date().toISOString(),conditions:{clock:"Engine elapsedMs is rounded to one millisecond; deadline selection uses that observed clock",work:"Native nodes are search state-machine work steps, not expanded nodes",startup:"Recorded separately. Host hashes warm files, not a cold-disk claim. Generated profiles build tables per fresh worker.",limits:"Run externally with bench/run-limited.mjs. The resource receipt binds actual affinity, memory, priority, and wall cap.",claim:"No strength or speed verdict before repeated evidence and independent review"},passed:false,rounds:[],errors:[],seals:{},afterSeals:{}};
   try{
     if(sourcePath!==null){assert.ok(isAbsolute(sourcePath),"Configuration path must be absolute");result.seals[sourcePath]=await seal(sourcePath);assert.deepEqual(JSON.parse(readFileSync(sourcePath,"utf8")),input,"Configuration file differs from input");assert.deepEqual(identity(sourcePath),result.seals[sourcePath].identity,"Configuration changed while reading");}
     const config=configuration(input);result.config=config;
+    result.conditions.customEngineFactory=Boolean(createEngine);
+    if(createEngine)result.conditions.claim="Custom diagnostic engine factory. Instrumented timings are not release performance evidence.";
     const paths=["bench/warm-compare.mjs","bench/startup-measure.mjs","apps/engine.mjs","apps/model.mjs","build/model.mjs","build/cubie.mjs","build/notation.mjs"].map(p=>resolve(root,p));
     paths.push(...Object.values(config.corpora).map(c=>c.path),...config.profiles.flatMap(profileFiles));
     for(const path of new Set(paths))result.seals[path]=await seal(path);
@@ -139,7 +141,7 @@ export async function compareWarm(input,sourcePath=null){
         const order=iteration%2?[...config.profiles].reverse():config.profiles;
         for(const p of order){
           for(const path of profileFiles(p))assert.deepEqual(identity(path),result.seals[path].identity,`Input identity changed: ${path}`);
-          const started=performance.now(),engine=environment(p.env,()=>new Engine({binary:p.binary}));engines[p.id]=engine;
+          const started=performance.now(),engine=environment(p.env,()=>createEngine?createEngine({binary:p.binary},{profile:p.id,round:iteration}):new Engine({binary:p.binary}));engines[p.id]=engine;
           originals[p.id]={child:engine.child,stopped:engine.childStopped,directory:engine.directory};
           const worker={profile:p.id,generation:engine.generation,processIdentity:nativeIdentity(engine.child.pid),ipcDirectory:engine.directory,rss:[],shutdown:null};round.workers.push(worker);
           worker.monitor=setInterval(()=>worker.rss.push(sampleNativeRss(worker.processIdentity,"sample",started)),config.rssSampleMs);

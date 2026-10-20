@@ -7,6 +7,7 @@ import {pathToFileURL} from "node:url";
 import {compareWarm} from "../bench/warm-compare.mjs";
 import {solved,apply} from "../apps/model.mjs";
 import {nativeIdentity} from "../bench/startup-measure.mjs";
+import {Engine} from "../apps/engine.mjs";
 
 const directory=mkdtempSync(resolve(tmpdir(),"rubend-warm-fixture-")),digest=path=>createHash("sha256").update(readFileSync(path)).digest("hex");
 const cache=resolve(directory,"cache"),binary=resolve(directory,"native"),metadata=resolve(directory,"native.json");
@@ -32,7 +33,9 @@ async function run(mode="ok",mutatePath=null,measure=compareWarm,sourcePath=null
   return result;
 }
 try{
-  const ok=await run();assert.equal(ok.passed,true,JSON.stringify(ok.errors));assert.equal(ok.counts.successfulJobs,40);assert.equal(ok.rounds.length,5);
+  const ok=await run();assert.equal(ok.passed,true,JSON.stringify(ok.errors));assert.equal(ok.counts.successfulJobs,40);assert.equal(ok.rounds.length,5);assert.equal(ok.conditions.customEngineFactory,false);
+  const contexts=[],custom=await run("ok",null,(config,path)=>compareWarm(config,path,{createEngine:(options,context)=>{contexts.push(context);return new Engine(options);}}));
+  assert.equal(custom.passed,true,JSON.stringify(custom.errors));assert.equal(custom.counts.successfulJobs,40);assert.equal(custom.conditions.customEngineFactory,true);assert.match(custom.conditions.claim,/not release performance/);assert.equal(contexts.length,10);assert.deepEqual([...new Set(contexts.map(c=>c.round))],[0,1,2,3,4]);
   const generated=structuredClone(base);
   for(const p of generated.profiles){p.tableSource="generated";delete p.cache;delete p.cacheBytes;delete p.cacheSha256;p.env={};}
   const generatedResult=await compareWarm(generated);assert.equal(generatedResult.passed,true,JSON.stringify(generatedResult.errors));assert.equal(generatedResult.counts.successfulJobs,40);
