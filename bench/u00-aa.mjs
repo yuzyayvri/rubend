@@ -3,6 +3,7 @@ import {scorecard,compareScorecards} from "./scorecard.mjs";
 
 export function analyzeAa(report){
   assert.equal(report.format,"rubend-warm-comparison-v1");assert.equal(report.passed,true);assert.deepEqual(report.errors,[]);
+  assert.notEqual(report.conditions?.customEngineFactory,true,"Instrumented reports cannot clear the release A/A noise gate");
   const config=report.config,ids=config.profiles.map(p=>p.id);assert.equal(ids.length,2);assert.notEqual(ids[0],ids[1]);
   assert.deepEqual(...config.profiles.map(({id,...profile})=>profile),"A/A must use the same binary, data, and environment");
   assert.equal(config.iterations,5);assert.equal(report.rounds.length,5);assert.ok(report.rounds.every(r=>r.status==="ok"));

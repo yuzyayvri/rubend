@@ -70,6 +70,7 @@ test: build
     node tests/commit-policy.mjs
     node tests/u00-aa.mjs
     node tests/latency-probe.mjs
+    node tests/ui-proxy-origin.mjs
     node tests/keyboard-playback.mjs
     node tests/contour-protocol.mjs
     node bench/corpus.mjs --check

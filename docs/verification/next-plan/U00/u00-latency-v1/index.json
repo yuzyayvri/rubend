@@ -1,0 +1,89 @@
+{
+  "summary": {
+    "format": "rubend-u00-latency-archive-v1",
+    "passed": true,
+    "revision": "bc22aff08688dcc2d53210a763e7f744248f8249",
+    "startedAt": "2026-10-20T14:59:19.195Z",
+    "finishedAt": "2026-10-20T15:03:52.647Z",
+    "nativeJobs": 1750,
+    "samples": 120,
+    "firstPrefixesMatchingOriginal": true,
+    "performanceVerdict": "inconclusive",
+    "schedulerWaitAccountingAvailable": false,
+    "independentReview": false
+  },
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-latency-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/0-u00-latency-v1-plan.json.gz",
+      "bytes": 133406,
+      "compressedBytes": 52928,
+      "sha256": "4a0af5887b11369368d762a9b58df56df9f6e6ca1cc1e716069dde9d3136ccc9",
+      "compressedSha256": "464d1811eda452d5cf7d030c114e781184f91337f29796ae3a9d9e9d6f2e78a8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-latency-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/1-status.json.gz",
+      "bytes": 1085,
+      "compressedBytes": 483,
+      "sha256": "d580edbfcc0d59cb180bf875568323342d0c32d4edb812e89e8292146cce4eef",
+      "compressedSha256": "272bbec68d575eed61d066c1defa21ef0d686cd63e46b1871424abc1930d4379",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-latency-v1-checks.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/2-u00-latency-v1-checks.json.gz",
+      "bytes": 18049,
+      "compressedBytes": 2902,
+      "sha256": "d15f9ff0213c1d4bdff63bb6afc34a86b70aa789ce7b87ba857301a114c97d17",
+      "compressedSha256": "4bcd7896f67adee9259f33489ef4b8a8012d06383f8e8ae93e1edddc74faf863",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-latency-v1-trace.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/3-u00-latency-v1-trace.json.gz",
+      "bytes": 1477,
+      "compressedBytes": 872,
+      "sha256": "eb47bef5ed3920f46c4cda1398892f832935aa5cd0a703d3263ddcff486e3857",
+      "compressedSha256": "1be79ffd293dbbbf6c8c245af8114c327b9f10546828a5b125e9b14cf057bd99",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-latency-v1/checks.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/4-checks.json.gz",
+      "bytes": 599,
+      "compressedBytes": 390,
+      "sha256": "e8d6f102a985d2462e75bed4a333b07a61167700b86d0f2853dc88ab9902c327",
+      "compressedSha256": "19ed4585b04cfa584963e05f88cf4ab7faca32d30fa6fbe5b54bd87e77341fc3",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-latency-v1/warm-report.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/5-warm-report.json.gz",
+      "bytes": 7315005,
+      "compressedBytes": 229512,
+      "sha256": "446fe3d9354bbd54b5f972ccd688099d5fb9293c1c63b09322300c6a03870c4a",
+      "compressedSha256": "a1f08cf7d318c4ab7b31ace83f5b17c39dd9276e9368d8e27ae40a9d4c7b5634",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-latency-v1/timing-trace.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/6-timing-trace.json.gz",
+      "bytes": 398195,
+      "compressedBytes": 34413,
+      "sha256": "3d3403956d517ef36ccfb1c388d1e90932ada41bc2b05b3400889cc9d920d939",
+      "compressedSha256": "4b39506bad0c708db5c954114b81df166ba52f8ce6edc87455c413b81e4a98b8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-latency-v1/timing-summary.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-latency-v1/7-timing-summary.json.gz",
+      "bytes": 31216,
+      "compressedBytes": 2747,
+      "sha256": "83dd7dab693f2beb1833e82d85588aef9eb0e0aaf3033ea6c32845e683953869",
+      "compressedSha256": "094a473cc235dfcfe21bdbec9d02abfa48ec129cf2536135b8daba67fa39f363",
+      "roundtripPassed": true
+    }
+  ]
+}

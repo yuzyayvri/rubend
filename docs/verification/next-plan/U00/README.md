@@ -169,3 +169,62 @@ Each job is capped at ten minutes. Expected queue duration is about eight minute
 Read build/experiments/u00-latency-v1/status.json on the next ping. Trace, raw
 report, and per-case summary remain in that directory. Do not poll or rerun to
 clear the old acceptance gate.
+
+## Diagnostic and initial browser results
+
+[The diagnostic archive](u00-latency-v1/index.json) preserves all 1,750 jobs,
+120 traces, producer identities, resource receipts, and summaries. Checks and
+trace complete successfully at 23:03:52 Manila on October 20. All first prefixes
+match the original control. No counter is missing, but scheduler wait accounting
+remains unavailable. Observed page-fault deltas are all zero.
+
+The instrumented exact p95 is 22.8854 ms for control-a and 19.7588 ms for
+control-b. Each still contains only fifteen observations. The slow exact case
+has variable scheduled CPU until observation, not merely different rounded
+timestamps. The CPU window includes post-emission work and counter-read skew.
+This does not identify frequency/cache/scheduler effects precisely and does
+not clear the original release gate. Instrumented reports are now explicitly
+rejected by the ordinary A/A classifier to prevent accidental promotion.
+
+[The first browser matrix](u00-live-v2/index.json) covers U00 lanes 1, 2, 3, 4,
+6, 7, 8, and 9 on the small profile. A hidden frozen-control tab and a hidden
+current-app tab return the same four-move exact answer and export. A test-only
+DOM mirror exposes the app's own diagnostics to the read-only browser driver;
+it changes no production code and is not a rendering-performance benchmark.
+Canonical states at steps one/two, completed playback, backstep, and rewind
+agree with Bend-generated replay. Invalid input preserves revision and state.
+A 250 ms hard solve retains a 20-move answer with lower bound twelve and no
+optimal label. A separate no-answer case preserves missing coverage. Cancellation
+and resubmission end with a fresh verified optimum. Solved input returns zero.
+
+The initial pointer click after a full-page screenshot failed in the browser
+driver. The receipt-producing run uses the controls' keyboard activation.
+No pointer-coverage claim is made. Both live wrappers end cleanly with native
+owners gone and IPC removed. Temporary browser tabs are closed. Lane 5 and
+lane 10 are still pending; no complete live or independent-review verdict exists.
+
+## Next fixed profile checks
+
+Six preserved binaries under the historical checkout's
+build/experiments/r06-unattended-20261019-v1/profiles directory match the current
+Bend dependency graph exactly. Reuse these rather than rebuild them. Keep their
+packed, inverse, corner, corner-first, H0, and segmented identities explicit.
+Auxiliary data stays at its existing sealed owner paths; do not copy or rebuild
+the large caches merely to satisfy the current working directory.
+
+`bench/u00-profiles.mjs` prepares two serial jobs. The first compiles/runs the
+existing profile and exact-bound goal guards, checks generated JS domain results,
+and runs focused fixtures plus sixteen toolchain/proof gates. No new Bend source
+or law is written. The second checks all six source-identical binaries through
+Engine, HTTP, native lifecycle, and five real native control failures each.
+Cache digests are streamed before/after the checks. Preserve each profile's
+native and HTTP receipt before the generic test output is reused.
+
+```sh
+nix develop --command node bench/u00-profiles.mjs plan u00-profiles-v1 /absolute/path/to/historical-checkout
+nix develop --command node bench/background-tests.mjs start build/evidence/u00-profiles-v1-plan.json
+```
+
+Both jobs use 4 GiB, with caps of ten and fifteen minutes. Expected duration is
+about ten minutes. The queue does not clear optional-profile browser coverage
+or add a performance claim. Read saved results on the next ping.

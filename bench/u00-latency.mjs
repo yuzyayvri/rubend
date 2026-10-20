@@ -8,7 +8,7 @@ import {LatencyProbeEngine,summarizeLatencyTrace} from "./latency-probe.mjs";
 
 const [mode,argument]=process.argv.slice(2);assert.equal(process.argv.length,4);assert.ok(["plan","check","trace"].includes(mode));
 const read=path=>JSON.parse(readFileSync(path,"utf8")),hash=path=>createHash("sha256").update(readFileSync(path)).digest("hex"),save=(path,data)=>writeFileSync(path,JSON.stringify(data,null,2)+"\n",{flag:"wx"});
-function run(program,args){const r=spawnSync(program,args,{encoding:"utf8",timeout:300000,maxBuffer:8*1024*1024});if(r.stdout)process.stdout.write(r.stdout);if(r.stderr)process.stderr.write(r.stderr);assert.ifError(r.error);assert.equal(r.status,0,program+" failed");return r.stdout.trim();}
+function run(program,args){const r=spawnSync(program,args,{encoding:"utf8",timeout:300000,maxBuffer:8*1024*1024});if(r.stdout&&program!=="git")process.stdout.write(r.stdout);if(r.stderr)process.stderr.write(r.stderr);assert.ifError(r.error);assert.equal(r.status,0,program+" failed");return r.stdout.trim();}
 const producers=["bench/u00-latency.mjs","bench/latency-probe.mjs","bench/warm-compare.mjs","bench/scorecard.mjs","apps/engine.mjs"];
 if(mode==="plan"){
   assert.match(argument,/^u00-latency-[a-z0-9-]+$/);const id=argument,directory=resolve("build/experiments",id),revision=run("git",["rev-parse","HEAD"]);

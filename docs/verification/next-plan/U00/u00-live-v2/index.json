@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "format": "rubend-u00-live-verified-v1",
+    "passed": true,
+    "lanesCovered": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pendingLanes": [
+      5,
+      10
+    ],
+    "trunkApplicationSourceIdentical": true,
+    "testOnlyDomBridge": true,
+    "defaultSmallProfileOnly": true,
+    "canonicalReceipts": 12,
+    "cards": {
+      "head-hard-timeout": [
+        {
+          "deadlineMs": 250,
+          "planned": 1,
+          "errors": 0,
+          "answered": 1,
+          "noAnswer": 0,
+          "meanAnsweredLength": 20,
+          "p95FirstMs": 20,
+          "oracle": {
+            "eligible": 0,
+            "answered": 0,
+            "meanAnsweredExcess": null
+          },
+          "exact": {
+            "planned": 1,
+            "completed": 0,
+            "restrictedMeanMs": 250
+          }
+        }
+      ],
+      "head-no-answer": [
+        {
+          "deadlineMs": 250,
+          "planned": 1,
+          "errors": 0,
+          "answered": 0,
+          "noAnswer": 1,
+          "meanAnsweredLength": null,
+          "p95FirstMs": null,
+          "oracle": {
+            "eligible": 0,
+            "answered": 0,
+            "meanAnsweredExcess": null
+          },
+          "exact": {
+            "planned": 1,
+            "completed": 0,
+            "restrictedMeanMs": 250
+          }
+        }
+      ]
+    },
+    "independentReview": false,
+    "performanceClaim": false,
+    "producerHashes": {
+      "tests/u00-browser-driver.mjs": "1bc2a3a559629ac8278473e5f360515d66685ed0bf1bb33c5688f02a8214e5ad",
+      "tests/fixtures/ui-diagnostics.mjs": "076ad652a1e46ff37e28346674ed58ba2819d9b290b74299d05bd7f0555ae928"
+    }
+  },
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-verified-shallow.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/0-head-verified-shallow.json.gz",
+      "bytes": 2248,
+      "compressedBytes": 558,
+      "sha256": "da49bbae21372d1fedc2a382ee48b2c4588c317e5818dc4a5b7f91b9a28c9097",
+      "compressedSha256": "79de67a7e590c7ec26ad6cd079cd150869d6daeba8f2294b590d5c3a2f10725b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/baseline-shallow.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/1-baseline-shallow.json.gz",
+      "bytes": 2250,
+      "compressedBytes": 556,
+      "sha256": "2a7efef0010d61e8879e4fbf21ab15d6a610a1bc167f63a394ce3d7e2f74cbe3",
+      "compressedSha256": "70be28bc7dd6f79918c57c2477505bb140b8cab9a8275d9b44790bfc453f6d12",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-step-1.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/2-head-step-1.json.gz",
+      "bytes": 2260,
+      "compressedBytes": 576,
+      "sha256": "e58944a9100d72a233b3fd335ef555220b52c7ec18e4a95cf311dbe353b7d9a4",
+      "compressedSha256": "19241a456715311d6f405cd2d9a2c0126a8d4cdbdea4db0e53ba19e24bbf6142",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-keyboard-step-2.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/3-head-keyboard-step-2.json.gz",
+      "bytes": 2219,
+      "compressedBytes": 555,
+      "sha256": "870b13ad3b2a7ee8c39c46d1315894199c1880501caeffba426f26d03f535ef6",
+      "compressedSha256": "5a8a01b67b70af99d0cb65cd4db1f0183c2a620dd95ec06ba518b6f689813e12",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-playback-complete.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/4-head-playback-complete.json.gz",
+      "bytes": 2219,
+      "compressedBytes": 547,
+      "sha256": "3cc2215e48b3f94cb509426ae7ae0ebbd43954ed9d0c136d4bbfa6aa7ec54271",
+      "compressedSha256": "8bd9aa3e7a433cd1b152b7b82bff85d104e70b6c2f75d3e3bc9306f961e86040",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-rewind.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/5-head-rewind.json.gz",
+      "bytes": 2230,
+      "compressedBytes": 552,
+      "sha256": "f978586b73c22d80dc6cdb31bbd72728a60230b6fbcf6aaa06f2435cf8e6cc01",
+      "compressedSha256": "ca790d3d38bea16e6a3038b5935102fe087ba9e2242214756223256f77d3f9e3",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-hard-timeout.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/6-head-hard-timeout.json.gz",
+      "bytes": 3663,
+      "compressedBytes": 730,
+      "sha256": "d4d4b0f6e07cf2b907227974f65cf2fde074f5bcf44f130f152496dc2cc9a478",
+      "compressedSha256": "793cf49a63b540b6636dde9186884a7a0edad91580f6569cb2d3ad6646c20faa",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-no-answer.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/7-head-no-answer.json.gz",
+      "bytes": 1798,
+      "compressedBytes": 517,
+      "sha256": "571c901e0f24ce7b6d6217ea074a4aa4e819f39db8c042174e4c94bda3396a51",
+      "compressedSha256": "565c3a3cc6397a4000973211fddef90d3d31dfcd050ad171b765e4181021614f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-cancelled.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/8-head-cancelled.json.gz",
+      "bytes": 3447,
+      "compressedBytes": 714,
+      "sha256": "a827bec03d7860cf74934ca5bd212a9e5c6f8987b265962ebea27546b9eddc94",
+      "compressedSha256": "98ba143c6cff52bbaabeb31cc50cceb9e3e202655bf5370790d7314f641ef243",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-resubmitted.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/9-head-resubmitted.json.gz",
+      "bytes": 2231,
+      "compressedBytes": 553,
+      "sha256": "a096c1b9da0a7128efaf3ab6a9ed343dd0bd4f2b52d4386373643637a14e00c8",
+      "compressedSha256": "41efdb2deec3f655973cd2b6109de772f8428e20530eead38794d4f208a293df",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-invalid.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/10-head-invalid.json.gz",
+      "bytes": 2249,
+      "compressedBytes": 560,
+      "sha256": "36a5a333afaa0ec1858904e80951b17bae4b23305fa00e22ec95a64cd537ca03",
+      "compressedSha256": "3e58b4f764d27e41ccdea50ec62c29913b010fe927c62650e77d93996b7d3577",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-solved.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/11-head-solved.json.gz",
+      "bytes": 1755,
+      "compressedBytes": 505,
+      "sha256": "c59a9ccfe99927105a81f851631df6119e7e71fc460af91b13a42745bc1880ab",
+      "compressedSha256": "5f6c8698816e1cec1dfaf302d3176f5a90c12f1f7898164ebb161aaac0c16d45",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/head-verified-export.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/12-head-verified-export.json.gz",
+      "bytes": 397,
+      "compressedBytes": 267,
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/baseline-export.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/13-baseline-export.json.gz",
+      "bytes": 397,
+      "compressedBytes": 267,
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/browser-summary.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/14-browser-summary.json.gz",
+      "bytes": 562,
+      "compressedBytes": 329,
+      "sha256": "da229280773f54a42610e0368b180668637904e5c5ce048ccedac98ce0a4c3a4",
+      "compressedSha256": "8e6a66300dfd03fac567fc6c1fc006d8c7c18f9c10c7f9a254569f15ddc4a2bf",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U00/u00-live-v2/session.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-live-v2/15-session.json.gz",
+      "bytes": 13181,
+      "compressedBytes": 5969,
+      "sha256": "f482f49b76b490a8cdb4b4a9ed67e65e286ce6e163c0de51db1529fe388ef507",
+      "compressedSha256": "8461ec066cd700712cf4af92fb32cad109cfeffb854738f54f057bcaec65e0eb",
+      "roundtripPassed": true
+    }
+  ],
+  "images": [
+    "head-verified-shallow",
+    "head-hard-timeout",
+    "head-playback-complete"
+  ]
+}

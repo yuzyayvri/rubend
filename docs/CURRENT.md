@@ -20,6 +20,23 @@ No control was promoted. All workers/IPC stopped and the holdout was not
 evaluated. The archive is docs/verification/next-plan/U00/u00-controls-v1/index.json.
 U00 now needs targeted timing attribution, its live lanes, and theorem proposals.
 
+The fixed latency diagnostic also passed at 23:03:52 Manila on 2026-10-20.
+All 1,750 jobs pass and all 120 first-answer prefixes match the original control.
+Unrounded exact first-answer p95 remains different, 22.8854 versus 19.7588 ms;
+all measured minor/major page-fault deltas are zero. Native CPU consumed until
+host observation varies too. This excludes neither cache nor frequency effects
+and does not recover native emission time. Scheduler wait accounting is disabled.
+The original raw timing gate remains inconclusive, not cleared by instrumentation.
+Read docs/verification/next-plan/U00/u00-latency-v1/index.json.
+
+Eight U00 live scenarios now have actual hidden-browser and canonical-replay
+receipts for the default small app, including baseline/head agreement, exact
+export, keyboard/playback/rewind, invalid input, timeouts, missing answers, and
+cancel/resubmit. Both servers, their native workers, and temporary tabs stopped.
+Optional-profile browser coverage and the capability-mismatch live lane remain
+open. The proof statements in docs/architecture/NEXT-PROOF-STATEMENTS.md are
+drafted for separate approval; no new law or pruning rule is enabled.
+
 Both private-review full confirmations have finished successfully, including
 just test and all sixteen just check gates. The older "running" reference below
 is historical. GitHub run 39291425745 also passed at a7a0872, including sandboxed

@@ -4,6 +4,7 @@ import {createServer,request} from "node:http";
 import {chmodSync,mkdtempSync,readFileSync,rmSync,writeFileSync} from "node:fs";
 import {tmpdir} from "node:os";
 import {resolve} from "node:path";
+import {proxyTarget} from "./support/ui-proxy.mjs";
 
 const mode=process.argv[2];assert.ok(["delayed","model-failure"].includes(mode));
 const directory=mkdtempSync(resolve(tmpdir(),"rubend-ui-fixture-")),env={...process.env,PORT:"0",RUBEND_BINARY:resolve("build/rubend")};
@@ -26,13 +27,13 @@ try{
   });
   let origin;
   server=createServer((req,res)=>{
-    if(req.headers.host!==origin.host||req.headers.origin&&req.headers.origin!==origin.origin||!req.url.startsWith("/")||req.url.startsWith("//")){res.writeHead(403);res.end();return;}
+    const target=proxyTarget(req.headers,req.url,origin,upstream);if(!target){res.writeHead(403);res.end();return;}
     if(mode==="model-failure"&&req.url==="/worker.js"){
       res.writeHead(200,{"Content-Type":"text/javascript","Cache-Control":"no-store"});
       res.end('self.addEventListener("message",event=>{if(event.data.type==="apply"){event.stopImmediatePropagation();throw Error("Deliberate cube-worker fixture failure");}});\n'+readFileSync("build/web/worker.js","utf8"));return;
     }
     const headers={...req.headers,host:upstream.host};if(headers.origin)headers.origin=upstream.origin;
-    const forwarded=request(new URL(req.url,upstream),{method:req.method,headers},response=>{res.writeHead(response.statusCode,response.headers);response.pipe(res);});
+    const forwarded=request(target,{method:req.method,headers},response=>{res.writeHead(response.statusCode,response.headers);response.pipe(res);});
     forwarded.on("error",error=>{if(!res.headersSent)res.writeHead(502);res.end(error.message);});req.pipe(forwarded);res.on("close",()=>forwarded.destroy());
   });
   server.listen(0,"127.0.0.1",()=>{origin=new URL(`http://127.0.0.1:${server.address().port}`);console.log(`Rubend UI fixture ${mode}: ${origin.origin}`);});

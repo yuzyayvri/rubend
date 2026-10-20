@@ -19,7 +19,7 @@ assert.equal(analyzeAa(make()).verdict,"stable-on-this-sample");
   const result=analyzeAa(r);assert.equal(result.groups.exact.deadlineTied,false);assert.equal(result.groups.exact.nativeDifferences,1);assert.equal(result.verdict,"inconclusive");
 }
 let rejected=0;
-for(const change of[r=>r.passed=false,r=>r.errors.push("error"),r=>r.counts.successfulJobs--,r=>r.rounds[0].jobs.pop(),r=>r.config.profiles[1].binary="/different",r=>r.rounds[0].jobs[0].status="error",r=>r.rounds[0].jobs.find(j=>j.group==="fast").events[0].moves=[0]]){
+for(const change of[r=>r.passed=false,r=>r.errors.push("error"),r=>r.counts.successfulJobs--,r=>r.rounds[0].jobs.pop(),r=>r.config.profiles[1].binary="/different",r=>r.rounds[0].jobs[0].status="error",r=>r.rounds[0].jobs.find(j=>j.group==="fast").events[0].moves=[0],r=>r.conditions={customEngineFactory:true}]){
   const r=make();change(r);assert.throws(()=>analyzeAa(r));rejected++;
 }
 console.log(JSON.stringify({passed:true,stableFixture:true,latencyAndClockAndQualityStayInconclusive:true,rejectedFixtures:rejected,notProductPerformance:true}));
