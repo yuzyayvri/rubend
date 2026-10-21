@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
 import {writeFile,mkdir,readFile} from "node:fs/promises";
 import {apply,solved} from "../apps/model.mjs";
-import {shallow} from "./u00-browser-driver.mjs";
+import {shallow,playback,cancelResubmit,invalid} from "./u00-browser-driver.mjs";
 
 const names=[..."URFDLB"].flatMap(f=>[f,f+"2",f+"'"]);
+export async function profileWorkflow(tab,directory,profile,hardInput){await shallow(tab,directory,profile);await playback(tab,directory);await cancelResubmit(tab,directory,hardInput);await invalid(tab,directory);return{profile,passed:true};}
 async function observe(tab){await tab.getAXState({emit:false});const v=JSON.parse(await tab.playwright.locator("#rubend-test-diagnostics").textContent()),d=v.diagnostics;assert.equal(d.modelState,"active");assert.equal(d.pendingModelRequests,0);if(d.solution)assert.equal(d.facelets,apply(d.solution.origin,d.solution.moves.slice(0,d.step)));return v;}
 async function save(tab,directory,name,value){await mkdir(directory,{recursive:true});await writeFile(directory+"/"+name+".json",JSON.stringify(value,null,2)+"\n",{flag:"wx"});await writeFile(directory+"/"+name+".jpg",await tab.screenshot({fullPage:true}),{flag:"wx"});}
 export async function rendererRecovery(tab,directory){

@@ -13,7 +13,7 @@ async function save(tab,directory,name,value){
   await mkdir(directory,{recursive:true});await writeFile(directory+"/"+name+".json",JSON.stringify(value,null,2),{flag:"wx"});await writeFile(directory+"/"+name+".jpg",await tab.screenshot({fullPage:true}),{flag:"wx"});
 }
 async function enter(tab,text){await tab.playwright.locator("#cube-input").fill(text);await tab.playwright.locator("#apply-button").click();}
-async function solve(tab){await tab.playwright.locator("#exact-mode").click();await tab.playwright.locator("#solve-button").click();await tab.playwright.locator("#cancel-button").waitFor({state:"hidden",timeoutMs:10000});}
+async function solve(tab){await tab.playwright.getByText("Bend 2 · Local",{exact:true}).waitFor({state:"visible",timeoutMs:30000});await tab.playwright.locator("#exact-mode").click();await tab.playwright.locator("#solve-button").click();await tab.playwright.locator("#cancel-button").waitFor({state:"hidden",timeoutMs:10000});}
 export async function shallow(tab,directory,role){
   await enter(tab,"R U R' U'");await solve(tab);const value=await observe(tab),d=value.diagnostics;canonical(value);
   assert.equal(d.solution.moves.length,4);assert.equal(d.solution.lower,4);assert.equal(d.solution.optimal,true);assert.equal(d.searching,false);assert.equal(apply(d.solution.origin,d.solution.moves),solved);
@@ -23,7 +23,7 @@ export async function shallow(tab,directory,role){
   await save(tab,directory,role+"-export",exported);await tab.playwright.locator("#close-export").press("Enter");await tab.getAXState({emit:false});return value;
 }
 export async function playback(tab,directory){
-  await tab.playwright.locator("#guide-button").click();await tab.getAXState();await tab.playwright.locator("#reduced-motion").check();await tab.playwright.locator("#close-guide").click();await tab.getAXState();
+  await tab.playwright.locator("#guide-button").click();await tab.getAXState({emit:false});await tab.playwright.locator("#reduced-motion").check();await tab.playwright.locator("#close-guide").click();await tab.getAXState({emit:false});
   await tab.playwright.locator("#next-button").press("Enter");let value=await observe(tab);assert.equal(value.diagnostics.step,1);canonical(value);await save(tab,directory,"head-step-1",value);
   await tab.playwright.locator("#camera-button").press("ArrowRight");value=await observe(tab);assert.equal(value.diagnostics.step,2);canonical(value);await save(tab,directory,"head-keyboard-step-2",value);
   await tab.playwright.locator("#play-button").press("Enter");await tab.playwright.getByText("4 / 4",{exact:true}).waitFor({state:"visible",timeoutMs:5000});value=await observe(tab);assert.equal(value.diagnostics.facelets,solved);assert.equal(value.diagnostics.playing,false);canonical(value);await save(tab,directory,"head-playback-complete",value);

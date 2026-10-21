@@ -8,8 +8,8 @@ import {inputs} from "../scripts/manifest.mjs";
 import {nativeIdentity} from "./startup-measure.mjs";
 import {proxyTarget} from "../tests/support/ui-proxy.mjs";
 
-const [id,specPath,profileId]=process.argv.slice(2);assert.ok(process.argv.length===3||process.argv.length===5);assert.match(id,/^u00-live-[a-z0-9-]+$/);
-const root=process.cwd(),directory=resolve("build/evidence/next-plan/U00",id);assert.equal(existsSync(directory),false);mkdirSync(directory,{recursive:true});
+const [id,specPath,profileId]=process.argv.slice(2);assert.ok(process.argv.length===3||process.argv.length===5);assert.match(id,/^u0[01]-live-[a-z0-9-]+$/);
+const root=process.cwd(),directory=resolve("build/evidence/next-plan",id.startsWith("u01")?"U01":"U00",id);assert.equal(existsSync(directory),false);mkdirSync(directory,{recursive:true});
 const hash=path=>createHash("sha256").update(readFileSync(path)).digest("hex"),manifest=JSON.parse(readFileSync("build/manifest.json","utf8"));assert.deepEqual(manifest.sourceHashes,inputs());
 const baseline=resolve("build/experiments/u00-controls-v1/control");assert.equal(hash(resolve(baseline,"build/rubend")),manifest.nativeSha256);assert.equal(hash("build/rubend"),manifest.nativeSha256);
 let profile=null;
@@ -50,6 +50,7 @@ try{
   state.state="ready";save();state.stopReason=await stop;
 }catch(error){state.error=String(error.stack??error);state.stopReason="startup-failure";}
 finally{
+  for(const row of state.servers)row.beforeStop=row.native.map(n=>({pid:n.pid,ownerRetained:nativeIdentity(n.pid)?.startTicks===n.startTicks}));
   closing=true;clearTimeout(timer);for(const proxy of proxies){proxy.closeAllConnections();proxy.close();}for(const p of processes)p.child.kill("SIGTERM");
   const force=setTimeout(()=>{for(const p of processes){p.child.kill("SIGKILL");for(const n of p.row.native){const current=nativeIdentity(n.pid);if(current?.startTicks===n.startTicks)try{process.kill(n.pid,"SIGKILL");}catch{}}}},3000);
   await Promise.all(processes.map(p=>p.closed));clearTimeout(force);

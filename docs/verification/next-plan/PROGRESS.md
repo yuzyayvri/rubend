@@ -6,7 +6,7 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
-| U01. Application and delivery | Full regression and existing proof gates pass. Actual CI-package import and isolated installed HTTP/native replay pass. Worker-failure keyboard recovery, failed rewind, native death during search, delayed readiness, renderer recovery, fallback, persistence, and narrow layout have browser receipts. Cross-profile GUI/control cases, package GUI, and clipboard/download coverage stay open. |
+| U01. Application and delivery | Full regression and existing proof gates pass. Actual CI-package import and isolated HTTP/native replay pass. Cross-profile and installed-package GUI workflows now pass. Worker/rewind/native failures, readiness, renderer recovery, fallback, persistence, and narrow layout have receipts. Clipboard/download and under-load seek coverage stay open. |
 | U02. Existing-bound inference and coordinate reuse | Not implemented in this programme. Exact proof statements are drafted, not approved as new laws. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
@@ -17,12 +17,12 @@ is claimed. Work stays solo, local, signed, and subject-only.
 The latest completed delivery evidence is
 [the isolated CI-package archive](U01/u01-delivery-v1/index.json).
 The latest browser evidence is
-[the lifecycle acceptance archive](U01/u01-lifecycle-browser-v1/index.json).
+[the cross-profile and actual-package GUI archive](U01/u01-cross-profile-gui-v1/index.json).
 Clipboard denial and downloaded-file verification are explicitly unverified.
 The [recorded observation gap](../../issues/browser-clipboard-download-acceptance.md)
 must not be hidden by a passing fixture or proof check.
 
-The next detached queue is `u01-ui-checks-v4`. It rechecks saved canonical
+The next detached queue is `u01-ui-checks-v5`. It rechecks saved canonical
 browser records and cleanup, the focused fixture/model/playback/export tests,
 and `just check`. It does not repeat the completed full build or rerun a
 browser. Expected duration is two minutes, with a five-minute hard cap.
@@ -34,3 +34,7 @@ overflow and accepts the recorded 375-pixel content within the 390-pixel viewpor
 The corrected v3 queue passed all focused/proof checks with 1,257 matching
 seals. The v4 queue extends that checker to the new lifecycle receipts and
 the native fault helper's stale-identity rejection. No full rebuild is repeated.
+The v4 queue passed with 1,306 matching seals. V5 adds six profile workflows,
+installed-package GUI/cleanup, and post-GUI cache hashes. No package download,
+import, rebuild, or table generation is repeated. The first failed package
+cleanup snapshot remains preserved.

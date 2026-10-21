@@ -5,7 +5,9 @@ import {randomBytes} from "node:crypto";
 import {resolve} from "node:path";
 import {nativeIdentity} from "../bench/startup-measure.mjs";
 
-for(const mode of["delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback"]){
+assert.ok(process.argv.length===2||(process.argv.length===3&&process.argv[2]==="--delivered"));
+const modes=process.argv[2]==="--delivered"?Array(3).fill("delivered"):["delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback"];
+for(const mode of modes){
   const id="u01-live-fixture-"+randomBytes(8).toString("hex"),directory=resolve("build/evidence/next-plan/U01",id),child=spawn(process.execPath,["tests/ui-fixture-server.mjs",mode,id],{stdio:["ignore","pipe","pipe"]});
   let stderr="";child.stderr.on("data",d=>stderr+=d);const stopped=new Promise(done=>child.once("close",(code,signal)=>done({code,signal})));
   try{
@@ -19,8 +21,8 @@ for(const mode of["delayed","model-failure","rewind-failure","bad-protocol","acc
       assert.equal(session.ready,false);if(mode==="bad-protocol")assert.match(session.error,/Unsupported engine protocol/);
     }
   }finally{
-    child.kill("SIGTERM");const timer=setTimeout(()=>child.kill("SIGKILL"),5000);const result=await stopped;clearTimeout(timer);assert.equal(result.code,0,stderr);assert.equal(result.signal,null);
+    child.kill("SIGTERM");await new Promise(done=>setTimeout(done,1));child.kill("SIGTERM");const timer=setTimeout(()=>child.kill("SIGKILL"),5000);const result=await stopped;clearTimeout(timer);assert.equal(result.code,0,stderr);assert.equal(result.signal,null);
   }
-  const state=JSON.parse(readFileSync(resolve(directory,"session.json"),"utf8"));assert.equal(state.state,"stopped-cleanly");assert.notEqual(nativeIdentity(state.wrapper.pid)?.startTicks,state.wrapper.startTicks);assert.notEqual(nativeIdentity(state.server.pid)?.startTicks,state.server.startTicks);assert.ok(state.native.length>0,"The fixture must record its native owner before testing cleanup");for(const n of state.native){assert.notEqual(nativeIdentity(n.pid)?.startTicks,n.startTicks);assert.equal(existsSync(n.ipcDirectory),false);}
+  const state=JSON.parse(readFileSync(resolve(directory,"session.json"),"utf8"));assert.equal(state.state,"stopped-cleanly");assert.equal(state.forcedStop,false);assert.equal(state.applicationGone,true);assert.notEqual(nativeIdentity(state.wrapper.pid)?.startTicks,state.wrapper.startTicks);assert.notEqual(nativeIdentity(state.server.pid)?.startTicks,state.server.startTicks);assert.ok(state.native.length>0,"The fixture must record its native owner before testing cleanup");for(const n of state.native){assert.notEqual(nativeIdentity(n.pid)?.startTicks,n.startTicks);assert.equal(existsSync(n.ipcDirectory),false);}if(mode==="delivered"){assert.ok(state.application);assert.notEqual(nativeIdentity(state.application.pid)?.startTicks,state.application.startTicks);assert.equal(state.delivery.artifactId,12205837803);assert.equal(state.delivery.hostStoreMounted,false);assert.equal(state.delivery.repositoryMounted,false);assert.ok(state.native.every(n=>n.isolated));}
 }
-console.log(JSON.stringify({passed:true,modes:6,diagnosticBridge:true,originGuard:true,startupAbortCleanup:true,browserClaim:false}));
+console.log(JSON.stringify({passed:true,modes:modes.length,delivered:process.argv[2]==="--delivered",repeatedTerminationRequested:true,diagnosticBridge:true,originGuard:true,startupAbortCleanup:modes.includes("delayed"),browserClaim:false}));

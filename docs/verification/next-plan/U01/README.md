@@ -180,3 +180,53 @@ or benchmark is needed for these test-only changes.
 nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v4
 nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v4-plan.json
 ```
+
+## Cross-profile and actual-package GUI acceptance
+
+[V4 passed](u01-ui-checks-v4/index.json) with 1,306 matching seals and no live
+worker or resource stop. [The new GUI archive](u01-cross-profile-gui-v1/index.json)
+retains ninety compressed JSON records and two representative screenshots.
+All six preserved profiles pass solve/export, canonical keyboard/playback/rewind,
+cancel/resubmit, and invalid-input isolation. Profiles run serially with one
+low-priority CPU and three GiB. Each original native PID/start identity remains
+present before shutdown, then stops and removes its recorded IPC. This does
+not promote the rejected or experimental profiles' performance.
+
+The imported CI package passes the same browser workflow. The runtime mounts
+only its private store, kernel process/device interfaces, temporary storage,
+and an empty working directory. Host store and repository remain unavailable.
+The proxy serves its actual frontend/worker and adds only the diagnostic mirror.
+Native digest and manifest/source identity are checked before launch. No NAR
+transfer, import, or build is repeated.
+
+The first package GUI workflow passed, but its immediate cleanup snapshot still
+observed the native owner after the outer wrapper exited. A later scoped probe
+found it gone. That failed snapshot is preserved. The supervisor now signals
+the installed application owner, then waits for its namespace wrapper. Its
+three-second forced fallback cannot count as clean shutdown. Exit status now
+reflects cleanup success. A fresh GUI workflow and three explicit supervisor
+repeats pass without force and with both application/native identities gone.
+This fixes test supervision, not product code. See
+[the resolved issue](../../../issues/installed-gui-supervision.md).
+
+The ordinary fixture regression does not require the ignored imported store.
+`tests/ui-fixture-session.mjs --delivered` explicitly checks it separately.
+Existing supervision and one hidden browser tab are reused. Design/review is
+solo. No independent review, new law, or production change is claimed.
+
+Four cache hashes matched before GUI work. V5 rehashes them afterward and checks
+fourteen passing sessions, owner retention, focused regressions, and `just check`.
+The failed first package snapshot stays outside the passing set. Post-GUI cache
+equality is pending, not inferred from the preflight. Clipboard/download and
+under-load seeking remain open.
+
+```sh
+nix develop --command node bench/u01-ui-checks.mjs caches u01-ui-checks-v5
+nix develop --command node bench/u01-ui-checks.mjs plan u01-ui-checks-v5
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-ui-checks-v5-plan.json
+```
+
+The v5 preflight already ran. Do not overwrite its immutable file. Use a fresh
+id for any deliberate new batch. The queued job uses three GiB, low-priority
+CPU 2, and a five-minute cap. Expected duration is two minutes. It performs no
+browser rerun, package rebuild, table generation, or performance comparison.

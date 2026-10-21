@@ -2,15 +2,20 @@
 
 ## Latest checkpoint
 
-U01 now has real-browser receipts for worker failure during rewind, native
-death during active search, and truthful delayed readiness with canonical input.
-All sessions are stopped and their recorded IPC is removed. Production code
-is unchanged. Read docs/verification/next-plan/U01/u01-lifecycle-browser-v1/index.json.
-The preceding focused/proof queue passed with 1,257 matching seals and no
-resource stop. Its archive is docs/verification/next-plan/U01/u01-ui-checks-v3/index.json.
-The next queue is u01-ui-checks-v4, capped at three GiB and five minutes.
-Inspect its saved results before source edits. Clipboard/download, remaining
-GUI/package cases, raw timing, and new proof-law approval remain open.
+All six preserved optional profiles and the actual imported CI package now
+pass combined browser solve/export/playback/cancel/resubmit/invalid-input checks.
+Profile owners remain unchanged before shutdown. All passing sessions stopped.
+Production code is unchanged. Read
+docs/verification/next-plan/U01/u01-cross-profile-gui-v1/index.json.
+The first package cleanup snapshot failed and is preserved. The test supervisor
+now stops the application before its namespace wrapper. A fresh GUI workflow
+and three supervisor repeats pass without force, with owners gone.
+The preceding focused/proof queue passed with 1,306 matching seals and no
+resource stop. Read docs/verification/next-plan/U01/u01-ui-checks-v4/index.json.
+Next is u01-ui-checks-v5, capped at three GiB and five minutes. It rehashes
+the four caches after the GUI runs. Inspect saved results before source edits.
+Clipboard/download, under-load seeks, raw timing, and new proof-law approval
+remain open. No optimization is promoted.
 The concise roadmap is docs/verification/next-plan/PROGRESS.md.
 
 ## Approved next implementation programme
