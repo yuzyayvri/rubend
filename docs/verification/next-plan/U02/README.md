@@ -53,8 +53,12 @@ The [two-ply pilot](u02-exclusion-precommit-v2/index.json) also passes all
 `U R` has forward bounds `[1,2,2]`; applying its final-move mask as a first-move
 mask would remove `R'` from the actual shortest solution `R' U'`. The candidate's
 inverse-derived first mask preserves that move. No increased lower bound occurs
-in this shallow pilot, and no speed benefit is claimed. The four-ply oracle is
-still pending. The first guard archive is preserved as a narrower native check.
+in this shallow pilot, and no speed benefit is claimed. The
+[four-ply oracle](u02-exclusion-v1/index.json) subsequently passed all 46,741
+states, 63,036 transitions and four actual mutation counterexamples. All
+1,541 source seals and receipts verify, with unchanged cache and no resource
+stop. There are still no bound increases on that shallow set. The first guard
+archive is preserved as a narrower native check.
 
 After committing, launch a fresh bounded queue:
 
@@ -70,10 +74,12 @@ The existing thread heartbeat resumes after the batch. No model polling,
 production change, new database, benchmark verdict, publication, or deployment
 is part of the queue.
 
-On continuation, inspect and archive receipts before edits. Reproduce any
-failed mutation or oracle assertion. Then implement the exact approved general
-proof statements and their concrete subgroup/data bridges before isolated
-search integration. Compare the bound treatment independently of coordinate
+The [supporting proof kernel](PROOF-KERNEL.md) now passes Bend and BendTT.
+It does not instantiate the concrete joint-subgroup/data or packed-inverse
+premises. The next queue is `u02-proof-v1`, not another exhaustive oracle run.
+On continuation, inspect and archive its receipts before edits. Construct the
+remaining exact subgroup/data/inversion bridges before isolated search
+integration. Compare the bound treatment independently of coordinate
 reuse and task scheduling. No default changes until the roadmap's correctness,
 quality and stable-control performance gates pass. Independent review is not
 run under the solo instruction.

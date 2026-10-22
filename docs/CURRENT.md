@@ -16,21 +16,29 @@ states, ZIP/assets, cleanup, focused tests and all sixteen proof/toolchain gates
 pass with no resource stop; the worker is gone. Read
 docs/verification/next-plan/U01/u01-installed-checks-v1/index.json.
 
-U02 now has an isolated pure Bend subgroup-exclusion candidate and an exhaustive
-KPuzzle shortest-path-DAG checker. Distinct final/first mask types prevent
-using forward exclusions as next-move masks. The precommit root proof verdict,
-candidate type/termination verdict, native synthetic checks and intended
-compile rejection pass. An independent two-ply pilot checks all 262 states and
-finds all four required mutation counterexamples, including the invalid
-forward-as-first pruning of `R'` from the shortest solution to `U R`.
-Formal NP01–NP03 proofs and concrete data bridges are
-still pending. Existing production search and 23 laws are unchanged. Read
-docs/verification/next-plan/U02/README.md.
-The next detached queue is `u02-exclusion-v1`, estimated five minutes and capped
-at thirteen. It checks all shortest first/last move unions through depth four
-against existing immutable joint data and requires actual negative-mutation
-witnesses. The heartbeat should read its saved results before tracked edits.
-No speedup, accepted new pruning rule, or completed roadmap is claimed.
+U02's isolated exclusion preflight passed all 46,741 states through depth four,
+63,036 independent transitions and four actual mutation counterexamples.
+All 1,541 source seals and both resource-receipt hashes match; the worker is
+gone and the joint cache is unchanged. No extra bound increase was observed
+on this shallow set, so no speed benefit is claimed. Read
+docs/verification/next-plan/U02/u02-exclusion-v1/index.json.
+
+Supporting subgroup proof kernels now pass both Bend and BendTT, including
+reference word replay/length/involution, final-move exclusion under explicit
+target/admissibility witnesses, positive coverage and inverse first-move
+transfer under an explicit reconstruction bridge. A reference target instance
+passes. Two invalid proof fixtures are rejected by both public entrypoints.
+Translated claim headers are preserved so the remaining premises are visible.
+Exact NP01–NP03 are not complete. Concrete joint-subgroup membership, loaded
+data, packed/reference and inverse reconstruction bridges remain open. Production
+search and the established 23 laws are unchanged. Read
+docs/verification/next-plan/U02/PROOF-KERNEL.md.
+
+The next detached queue is `u02-proof-v1`, estimated two minutes with a
+three-minute cap. It rechecks the supporting kernels and unchanged toolchain
+gates, reusing the completed finite oracle. The heartbeat should read its
+results before tracked edits. No speedup, accepted new pruning rule, or
+completed roadmap is claimed.
 
 The following entries preserve the preceding U01 checkpoints.
 

@@ -5,6 +5,10 @@ to the request naming those three statements. NP04–NP08 still await approval.
 Approval permits proving the exact statements below, not assuming their data
 premises or enabling unchecked pruning. No statement replaces or weakens any
 of the existing 23 laws. NP01–NP03 are not yet implemented as Bend laws.
+Supporting reference kernels are checked separately in
+[the U02 proof record](../verification/next-plan/U02/PROOF-KERNEL.md).
+They retain uninstantiated target, admissibility and inverse-bridge premises
+and do not replace the exact statements below.
 
 The statements below are the semantic contracts to approve. A concrete Bend
 encoding must express the same quantifiers, premises, and conclusion. A material
