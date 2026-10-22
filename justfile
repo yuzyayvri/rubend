@@ -77,6 +77,7 @@ test: build
     node tests/u01-native-failure.mjs
     node tests/u01-check-plan.mjs
     node tests/delivery-pins.mjs
+    node tests/background-result-check.mjs
     node tests/keyboard-playback.mjs
     node tests/ui-design.mjs
     node tests/contour-protocol.mjs

@@ -31,6 +31,12 @@ authority prevents all useful in-scope progress. NP04–NP08 and large table
 generation still need separate approval. The October 22 main push was a
 completed specific request, not blanket publication authority for later units.
 
+After a queue reports passed, run `node bench/check-background-results.mjs RUN-ID`
+before editing sources. It checks revision, source seals, resource commands,
+limits and receipts, verifies the worker is gone, and preserves compressed
+records. A passed status alone is not that verification. If the queue is still
+active, end the turn instead of polling or starting duplicate work.
+
 On 2026-10-17 Yuzy approved `docs/architecture/OPTIMIZATION-ROADMAP.md`, requested
 autonomous implementation, and authorized pushing verified changes when done.
 This supersedes the older no-push boundary below. It does not authorize PR

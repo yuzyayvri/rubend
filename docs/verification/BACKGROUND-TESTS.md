@@ -1,5 +1,29 @@
 # Unattended local checks
 
+On October 23 Yuzy requested automatic continuations in this same chat.
+The existing `continue-rubend-roadmap` heartbeat now resumes every thirty
+minutes. This supersedes the earlier no-wakeup instruction for this task.
+The queue itself remains model-free. Do not create a second automation or a
+custom message process. Keep the computer and app running for local work.
+
+After a run passes, verify and archive it before source edits:
+
+```sh
+node bench/check-background-results.mjs FRESH-RUN-ID
+```
+
+The checker verifies the current revision, every source seal, both plan copies,
+ordered job results, resource hashes, commands and limits, and worker identity.
+It archives JSON receipts under the corresponding roadmap unit and verifies
+existing compressed files instead of overwriting them. A duplicate invocation
+on the unchanged completed run returns the same index. `--verify-only` skips
+archive writes. The eight negative fixtures cover unfinished work, source and
+receipt changes, a live worker, wrong revision, missing jobs, command drift and
+limit drift. The actual completed coordinate queue was checked and archived,
+then checked again without changes. These checks are not independent review.
+
+The older queue descriptions below preserve their original scopes and timings.
+
 The background runner executes a fixed local command queue without a model,
 heartbeat, automatic message, or AI wakeup. It stops when the queue passes or
 when a job, source seal, or resource check fails. It does not implement new
