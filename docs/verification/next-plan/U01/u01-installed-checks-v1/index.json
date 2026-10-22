@@ -1,0 +1,13 @@
+{
+  "format": "rubend-installed-consistency-v1",
+  "passed": true,
+  "revision": "88b10d1",
+  "sourceSeals": 1547,
+  "finishedAt": "2026-10-22T18:07:04.254Z",
+  "checks": ["current ZIP and installed web assets", "saved installed-package GUI replay and cleanup", "focused test infrastructure and model/playback/export", "sixteen proof/toolchain gates"],
+  "workerGone": true,
+  "resourceStops": false,
+  "browserRerun": false,
+  "independentReview": false,
+  "archives": ["0-u01-installed-checks-v1-plan.json.gz", "1-status.json.gz", "2-u01-installed-checks-v1-focused.json.gz", "3-focused.json.gz"]
+}

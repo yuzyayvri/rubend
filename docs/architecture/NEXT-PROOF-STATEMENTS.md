@@ -1,8 +1,10 @@
 # Proposed proof statements for the next implementation units
 
-Status is awaiting separate approval. The implementation plan is approved, but
-these statements have not been added as Bend laws or used to enable new pruning.
-They do not replace or weaken any of the existing 23 laws.
+Yuzy separately approved NP01–NP03 on October 23 by replying "Yeah. Approved."
+to the request naming those three statements. NP04–NP08 still await approval.
+Approval permits proving the exact statements below, not assuming their data
+premises or enabling unchecked pruning. No statement replaces or weakens any
+of the existing 23 laws. NP01–NP03 are not yet implemented as Bend laws.
 
 The statements below are the semantic contracts to approve. A concrete Bend
 encoding must express the same quantifiers, premises, and conclusion. A material

@@ -6,13 +6,19 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
-| U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks are queued. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | Not implemented in this programme. Exact proof statements are drafted, not approved as new laws. |
+| U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
+| U02. Existing-bound inference and coordinate reuse | NP01–NP03 approved. An isolated pure Bend exclusion candidate passes type/termination and native synthetic checks. Exhaustive shallow shortest-path-DAG and mutation checks are queued. General proofs, loaded-data bridges, integration and measured comparisons remain pending. Coordinate reuse has not started. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
 | U05. Exact-context failure cache and partitioned search | Not started. No incomplete search is cached as a completed failure. |
-| U06. Proof bridges and UI efficiency | Proposed statements exist. Established 23 laws remain unchanged. Full completeness/data linkage and new UI efficiency work remain open. |
+| U06. Proof bridges and UI efficiency | NP01–NP03 approved; the other proposals still need approval. Established 23 laws remain unchanged. Full completeness/data linkage and new UI efficiency work remain open. |
 | U07. Holdout and competitors | Not started. The release holdout remains unopened. |
+
+Autonomous continuation now uses the existing Codex thread heartbeat
+`continue-rubend-roadmap`, every thirty minutes, at Yuzy's explicit October 23
+request. It reads detached receipts first and does not duplicate running work.
+This replaces only the previous no-wakeup instruction, not other authority
+gates. The next queue is `u02-exclusion-v1`; see [its fixed scope](U02/README.md).
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
@@ -50,7 +56,8 @@ completed run. Main and successful GitHub CI run 39787894581 share revision
 The `u01-delivery-redesign-v1` queue passed with 1,479 matching seals and no
 resource stop. The actual current installed package subsequently passed GUI
 acceptance checks, not inferred from the older package receipts. The next queue
-is `u01-installed-checks-v1`, expected two minutes with a three-minute cap. It
-checks saved replay/cleanup, ZIP/assets, focused tests, and existing proof gates.
+was `u01-installed-checks-v1`. It passed saved replay/cleanup, ZIP/assets,
+focused tests and existing proof gates with 1,547 matching seals. Its
+[archive](U01/u01-installed-checks-v1/index.json) preserves those results.
 The [redesign record](../../design/REDESIGN-2026-10-22.md) explains the two
 working directions and selection. No search-strength gain is claimed.

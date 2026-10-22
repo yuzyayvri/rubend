@@ -2,6 +2,35 @@
 
 ## Latest checkpoint
 
+Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
+roadmap execution with scheduled continuations in this same chat. Codex heartbeat
+`continue-rubend-roadmap` is active every thirty minutes. This supersedes the
+earlier no-wakeup boundary for this task. Detached batches, source seals,
+resource caps, signed subject-only local commits, hidden previews, solo work
+and no Astra remain. NP04–NP08, new large-table generation and publication
+remain separately gated. Do not create another automation or a message script.
+
+The installed-package consistency queue passed at 02:07:04 Manila on October 23.
+All 1,547 source seals and its receipt digest match. Saved canonical GUI
+states, ZIP/assets, cleanup, focused tests and all sixteen proof/toolchain gates
+pass with no resource stop; the worker is gone. Read
+docs/verification/next-plan/U01/u01-installed-checks-v1/index.json.
+
+U02 now has an isolated pure Bend subgroup-exclusion candidate and an exhaustive
+KPuzzle shortest-path-DAG checker. Distinct final/first mask types prevent
+using forward exclusions as next-move masks. The precommit root proof verdict,
+candidate type/termination verdict, native synthetic checks and intended
+compile rejection pass. Formal NP01–NP03 proofs and concrete data bridges are
+still pending. Existing production search and 23 laws are unchanged. Read
+docs/verification/next-plan/U02/README.md.
+The next detached queue is `u02-exclusion-v1`, estimated five minutes and capped
+at thirteen. It checks all shortest first/last move unions through depth four
+against existing immutable joint data and requires actual negative-mutation
+witnesses. The heartbeat should read its saved results before tracked edits.
+No speedup, accepted new pruning rule, or completed roadmap is claimed.
+
+The following entries preserve the preceding U01 checkpoints.
+
 On October 23 the completed redesign queue was rechecked before edits. All
 1,493 source seals and three resource-receipt digests match. Focused checks,
 full `just test`, and all sixteen `just check` gates passed without resource

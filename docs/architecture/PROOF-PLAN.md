@@ -1,8 +1,10 @@
 # Proof and trust plan
 
 The next implementation units have separately proposed semantic statements in
-[NEXT-PROOF-STATEMENTS.md](NEXT-PROOF-STATEMENTS.md). They are awaiting approval;
-no corresponding new law has been added or enabled by the approved work plan.
+[NEXT-PROOF-STATEMENTS.md](NEXT-PROOF-STATEMENTS.md). Yuzy separately approved
+NP01–NP03 on October 23. Their exact quantifiers and premises remain the
+implementation contract. NP04–NP08 still await approval. No corresponding new
+law has been added or enabled yet, and the established 23 laws are unchanged.
 
 Original domain-obligation plan. Some obligations are now implemented; use
 [PROOF-COVERAGE.md](PROOF-COVERAGE.md) for the exact current proof scope.

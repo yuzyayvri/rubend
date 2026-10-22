@@ -18,6 +18,19 @@ never invent success.
 
 ## Current boundary
 
+On 2026-10-23 Yuzy approved the exact NP01–NP03 statements in
+`docs/architecture/NEXT-PROOF-STATEMENTS.md` and requested autonomous roadmap
+execution with automatic messages to this same chat after detached runs.
+This supersedes the older no-heartbeat/no-wakeup instruction for this task.
+Use the existing Codex heartbeat `continue-rubend-roadmap`, not a custom
+message-injection script or a second automation. Keep fixed detached batches,
+source seals, resource admission, solo work, and the no-Astra restriction.
+The heartbeat checks every thirty minutes. Do not duplicate active work or
+spend model turns polling. Pause the heartbeat when done or when missing
+authority prevents all useful in-scope progress. NP04–NP08 and large table
+generation still need separate approval. The October 22 main push was a
+completed specific request, not blanket publication authority for later units.
+
 On 2026-10-17 Yuzy approved `docs/architecture/OPTIMIZATION-ROADMAP.md`, requested
 autonomous implementation, and authorized pushing verified changes when done.
 This supersedes the older no-push boundary below. It does not authorize PR
