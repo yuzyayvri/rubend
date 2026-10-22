@@ -68,16 +68,22 @@ It rejects eight bad receipt/source/lifecycle cases, is in `just test`, and
 verified the actual completed queue twice without changing its archive. Read
 docs/verification/next-plan/U02/u02-axis-v1/index.json.
 
-The next queue is `u02-pipeline-v2`, estimated five minutes with a thirteen-minute
-cap. It records conditional joint-stage counts on fixed pilot/development roots
-and one-prefix parents by residual and predecessor context. Counts are modeled
-from actual sealed bound values, not native timings or complete contour visits.
-No release holdout, new PDB, production pruning or speedup is claimed. Read
-docs/verification/next-plan/U02/PIPELINE-DIAGNOSTIC.md. Inspect and archive its
-saved results before further sources edits. Universal packed/reference
-refinement, loaded-data admissibility and concrete inverse reconstruction remain
-open. Source-isolated native comparison and real allocation/latency costs still
-need measurement before integration or promotion.
+The conditional pipeline queue passed with 1,604 matching seals, no resource
+stop and its worker gone. Read
+docs/verification/next-plan/U02/u02-pipeline-v2/index.json. Its root-near counts
+guide a new source-isolated sixteen-field cached-axis Search, which updates FB
+and RL only after the preceding bound passes. Candidate and audit pure modules
+pass both checkers, and the candidate worker compiles. Native equivalence is
+not yet verified. The next fixed queue is `u02-axis-search-v1`, estimated eight
+minutes with a twenty-eight-minute cap. It compares complete original stack
+fields, metadata and answers on 163 shallow and sixteen pilot/development cases.
+A separate native audit checks coordinates before every advance. Read
+docs/verification/next-plan/U02/CACHED-AXIS-SEARCH.md. Inspect and archive its
+results before further source edits. There is no speed claim, production change,
+new PDB or release-holdout use. Universal packed/reference refinement,
+loaded-data admissibility and concrete inverse reconstruction remain open.
+Actual native allocation, latency and stable matched controls still need
+measurement before integration or promotion.
 
 The following entries preserve the preceding U01 checkpoints.
 
