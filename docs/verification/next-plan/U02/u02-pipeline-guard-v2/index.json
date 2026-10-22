@@ -1,0 +1,17 @@
+{
+  "format": "rubend-pipeline-diagnostic-guard-v2",
+  "passed": true,
+  "rootVerdict": true,
+  "diagnosticTypeTerminationVerdict": true,
+  "predecessorSourceFence": true,
+  "sixCutStages": true,
+  "tightBoundsPass": true,
+  "offByOneCounterexample": {"correctStage": 0, "mutatedStage": 1},
+  "zeroGuard": true,
+  "probe": "queued separately",
+  "modeledWorkNotNativeTiming": true,
+  "performanceClaim": false,
+  "productionIntegrated": false,
+  "independentReview": false,
+  "archives": ["0-u02-pipeline-v2-guard.json.gz", "1-u02-pipeline-v2-guard-resource.json.gz"]
+}

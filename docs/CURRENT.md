@@ -61,12 +61,23 @@ frame allocation, conditional probe costs or solver speed. Production sources
 and established laws remain unchanged. Read
 docs/verification/next-plan/U02/COORDINATE-REUSE.md.
 
-The next detached queue is `u02-axis-v1`, estimated two minutes with a
-three-minute cap. It reuses those functional results and rechecks artifact
-seals plus unchanged proof/toolchain gates. The heartbeat should read results
-before tracked edits. Universal packed/reference refinement, loaded-data
-admissibility and concrete inverse reconstruction remain open. No production
-pruning, speedup or completed roadmap is claimed.
+The coordinate confirmation passed with 1,591 matching seals, no resource stop
+and its worker gone. The canonical checker now verifies and archives completed
+queues with one command: `node bench/check-background-results.mjs RUN-ID`.
+It rejects eight bad receipt/source/lifecycle cases, is in `just test`, and
+verified the actual completed queue twice without changing its archive. Read
+docs/verification/next-plan/U02/u02-axis-v1/index.json.
+
+The next queue is `u02-pipeline-v2`, estimated five minutes with a thirteen-minute
+cap. It records conditional joint-stage counts on fixed pilot/development roots
+and one-prefix parents by residual and predecessor context. Counts are modeled
+from actual sealed bound values, not native timings or complete contour visits.
+No release holdout, new PDB, production pruning or speedup is claimed. Read
+docs/verification/next-plan/U02/PIPELINE-DIAGNOSTIC.md. Inspect and archive its
+saved results before further sources edits. Universal packed/reference
+refinement, loaded-data admissibility and concrete inverse reconstruction remain
+open. Source-isolated native comparison and real allocation/latency costs still
+need measurement before integration or promotion.
 
 The following entries preserve the preceding U01 checkpoints.
 
