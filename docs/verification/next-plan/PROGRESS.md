@@ -1,12 +1,12 @@
 # Approved roadmap progress
 
-Updated October 21, 2026, Asia/Manila. No overall completion or new speedup
+Updated October 22, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
-| U01. Application and delivery | Full regression and existing proof gates pass. Actual CI-package import and isolated HTTP/native replay pass. Cross-profile and installed-package GUI workflows now pass. Worker/rewind/native failures, readiness, renderer recovery, fallback, persistence, and narrow layout have receipts. Clipboard/download and under-load seek coverage stay open. |
+| U01. Application and delivery | Pre-redesign regression, profiles, and CI-package GUI passed. The requested full UI redesign is implemented locally. New live desktop/narrow, replay/export, theme, sticker editor, and notation-rail checks pass. Search-time arrow bypass is fixed, with failing-before evidence and nine passing keyboard scenarios. New full regression/proof queue is pending. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | Not implemented in this programme. Exact proof statements are drafted, not approved as new laws. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
@@ -17,12 +17,13 @@ is claimed. Work stays solo, local, signed, and subject-only.
 The latest completed delivery evidence is
 [the isolated CI-package archive](U01/u01-delivery-v1/index.json).
 The latest browser evidence is
-[the cross-profile and actual-package GUI archive](U01/u01-cross-profile-gui-v1/index.json).
+[the redesigned local UI archive](U01/redesign-final-v1/index.json).
+The prior delivered package does not contain the new UI or keyboard fix.
 Clipboard denial and downloaded-file verification are explicitly unverified.
 The [recorded observation gap](../../issues/browser-clipboard-download-acceptance.md)
 must not be hidden by a passing fixture or proof check.
 
-The next detached queue is `u01-ui-checks-v5`. It rechecks saved canonical
+The earlier detached queue was `u01-ui-checks-v5`. It rechecked saved canonical
 browser records and cleanup, the focused fixture/model/playback/export tests,
 and `just check`. It does not repeat the completed full build or rerun a
 browser. Expected duration is two minutes, with a five-minute hard cap.
@@ -38,3 +39,10 @@ The v4 queue passed with 1,306 matching seals. V5 adds six profile workflows,
 installed-package GUI/cleanup, and post-GUI cache hashes. No package download,
 import, rebuild, or table generation is repeated. The first failed package
 cleanup snapshot remains preserved.
+
+V5 passed with 1,483 matching seals, unchanged caches, and clean termination.
+The next queue is `u01-redesign-v1`. It includes a failing frozen-source keyboard
+control, focused UI/model/export checks, full rebuilt `just test`, and
+`just check`. Expected duration is twelve minutes; cap is twenty-six.
+The [redesign record](../../design/REDESIGN-2026-10-22.md) explains the two
+working directions and selection. No search-strength gain is claimed.

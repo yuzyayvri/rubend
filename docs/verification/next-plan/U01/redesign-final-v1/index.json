@@ -1,0 +1,150 @@
+{
+  "format": "rubend-ui-redesign-final-v1",
+  "status": "live checks passed; full regression pending",
+  "sourceSession": "u01-live-redesign-v3",
+  "actualRebuiltApp": true,
+  "desktopViewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": {
+    "searchKeyboardStep": 0,
+    "repeatedSeekSettlement": true,
+    "mobileNotationRailBothEnds": true,
+    "shallowOptimumAndExport": true,
+    "canonicalPlayback": true,
+    "defaultLight": true,
+    "storedDarkPreserved": true,
+    "narrowControlsFit": true,
+    "stickerNet54Cells": true,
+    "fixedCenters": true,
+    "unchangedEditorSave": true
+  },
+  "baseline": {
+    "browserStep": 3,
+    "unitFailure": "1 !== 0"
+  },
+  "cleanup": "Wrapper, server, and native owner stopped; IPC removed; temporary browser tabs closed; viewport reset.",
+  "staticContrast": {
+    "pairs": 6,
+    "minimumRatio": 4.798851611940286,
+    "fullAccessibilityAudit": false
+  },
+  "images": [
+    "desktop.jpg",
+    "dark.jpg",
+    "mobile.jpg",
+    "sticker-net.jpg"
+  ],
+  "archives": [
+    {
+      "path": "0-u01-live-redesign-v3-desktop-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f"
+    },
+    {
+      "path": "1-u01-live-redesign-v3-search-keyboard.json.gz",
+      "sha256": "e0c302ac3f254b4a9e00d3e45f11831c03678bb47656a619cb4e5c8335e27289",
+      "compressedSha256": "8e28769673cb8025892ac430ae56e31f4b54dbe0b9d03b027c2be2517a69fadd"
+    },
+    {
+      "path": "2-u01-live-redesign-v3-mobile-notation-rail.json.gz",
+      "sha256": "4e0e0f1a3088db26078afff7b41442c469bd621503e2f4e1e34a5dd32301021b",
+      "compressedSha256": "7180507b79aa89510963992830a4cc461edfacd7ed122797b791398828fb7252"
+    },
+    {
+      "path": "3-u01-live-redesign-v3-after-cancel-export.json.gz",
+      "sha256": "68aff86d6687d2e9c16ba8fd99195312378c34594183308b2ef95a019003bd90",
+      "compressedSha256": "df1e8fc4846862af5de2305f8b73c1174c8d1a2eada8bcb5d3e8babf9f116390"
+    },
+    {
+      "path": "4-u01-live-redesign-v3-head-step-1.json.gz",
+      "sha256": "23c8e1b059a74e22e001e980625ed34cea2ab2688d99dc4b03b5cf8ff1cafa7c",
+      "compressedSha256": "beb7e55b2ebc6fe774d42c67419720c39344039f6cfad91cb5117d1e5bbfc683"
+    },
+    {
+      "path": "5-u01-live-redesign-v3-repeated-seeks-settled.json.gz",
+      "sha256": "f61122355b02bb96afe91418a4991ea88b3aa715b0b0e89d1d9e7feddc12064f",
+      "compressedSha256": "6e1b0f4789c00518dec1199106ee3fed8cff88e4728556af2ff35ba970d86651"
+    },
+    {
+      "path": "6-u01-live-redesign-v3-mobile-editor-saved.json.gz",
+      "sha256": "da1be4d1cae22e6274a4ee71d796161f51130b9a6813071875216a787b07e85b",
+      "compressedSha256": "8275a4e7b58f44e85d85b58bb644a3f8d2601f453ad5166b42100a639813fbcf"
+    },
+    {
+      "path": "7-u01-live-redesign-v3-head-rewind.json.gz",
+      "sha256": "85e1ddb58e91e685874a5ce06dd01a8021273f555fe555a60e1bc0d401cdc990",
+      "compressedSha256": "48247a8a9179f654681b0d88d6bebafb1db09547aec8e8583fe9c67ad580c043"
+    },
+    {
+      "path": "8-u01-live-redesign-v3-dark-desktop.json.gz",
+      "sha256": "27dafb2742d0da69a49cc8d206fc9cc429feff09cc3738addcf590d9c4358f97",
+      "compressedSha256": "d3b9c905fe49b68c00818d6bcfedc90f54cae5eb7f817ecdebec878fc59a5309"
+    },
+    {
+      "path": "9-u01-live-redesign-v3-head-playback-complete.json.gz",
+      "sha256": "d56e751cfe126c0a449814969009159ba9fc630bd484329b3b423835b26cd016",
+      "compressedSha256": "3b8c07ac804055e8f691bf646bca9d2014ef2ab0b40243cefbb88aec0ed181b9"
+    },
+    {
+      "path": "10-u01-live-redesign-v3-narrow-layout.json.gz",
+      "sha256": "b01a4fdcf79b73e315814b193c6cd36002ebb4d407fb2f578d645aa544011957",
+      "compressedSha256": "16a7d5e52cf84ce1b56ba6099ca0e4167946fe26c9bf79b72447645117898df2"
+    },
+    {
+      "path": "11-u01-live-redesign-v3-native-search-running.json.gz",
+      "sha256": "202ad9b3e3ac2da01cee04b1991ef10742c3263689663d7c67df17c869834662",
+      "compressedSha256": "3ce4d6d1d87acd41e05038ffb209a83141eb25484ac4f70fddb9d0112910fcce"
+    },
+    {
+      "path": "12-u01-live-redesign-v3-mobile-sticker-net.json.gz",
+      "sha256": "55aa74b51e9c022093a111c766f7c9f46bbd8489a2104ca2ce3d17954ab87f3e",
+      "compressedSha256": "aab590c7e38241c2d63deaa452fea7c90c752a73d35400f46fa8015167b4e9a8"
+    },
+    {
+      "path": "13-u01-live-redesign-v3-saved-state-reloaded.json.gz",
+      "sha256": "24073cd5376c0666ea27e60d06a6e8eeb02dd5dff7a0e16b877211e804e9466e",
+      "compressedSha256": "d4fa0443d180a556ec6786cb66d0e9062cfd58c8f9e660021030ab2dd91fb234"
+    },
+    {
+      "path": "14-u01-live-redesign-v3-theme-contract.json.gz",
+      "sha256": "aefa08800b6128d902439c3155a268b85b43d3b2f7a82dba8167ed40e0cef301",
+      "compressedSha256": "25c702c3b9af2fdae731f326da5d0d12e6962eced6fffb92b846b9cda259e524"
+    },
+    {
+      "path": "15-u01-live-redesign-v3-head-keyboard-step-2.json.gz",
+      "sha256": "55f3330590743f71716d9e8f7b064833bc05ce2da7e7ffe27fbedf104c169235",
+      "compressedSha256": "8892fb5ad60e52674854f0720b2e2e7aa75ce0a63b31860ac1fa0ed052a05e9f"
+    },
+    {
+      "path": "16-u01-live-redesign-v3-desktop-shallow.json.gz",
+      "sha256": "ce82071131d46cb3ad75d8c047b75d6b9aab59706f14f986061885f3fda58a86",
+      "compressedSha256": "ffcb7bffd585cbd898b01b039feba3b82d19da87f943f7d70d5c450f33f804b0"
+    },
+    {
+      "path": "17-u01-live-redesign-v3-session.json.gz",
+      "sha256": "9aacdb655b11c63c63a5aa7cb1d7c72137769ebb5548013207f22d212e260acd",
+      "compressedSha256": "2a6d2b34e628ea69a08bd4fed1384494b614ec42460319951564d92e6726dd6a"
+    },
+    {
+      "path": "18-evidence-u01-live-redesign-v3-resource.json.gz",
+      "sha256": "13a8ec1085a183e570c0a7763ee0fc4413a9701c7e9863b3d59a870a0a7b3de8",
+      "compressedSha256": "cd82ce3a9752fc4a7120b74cd85aa5330fff721eb882009fa257afa9464189fd"
+    },
+    {
+      "path": "19-evidence-ui-redesign-build-v5.json.gz",
+      "sha256": "cdbd7657770b790bd9599bb18dd5d590831e9115d102bb96bcf73c6df23c58e5",
+      "compressedSha256": "09528645e23769dc7c3cdf4baf0739061ff7a27cc821c2b85b65d5a6402ed32a"
+    }
+  ],
+  "backendSearchChanged": false,
+  "lawsChanged": false,
+  "performanceClaim": false,
+  "independentReview": false,
+  "operatorInteractionReview": "pending before any separately authorized merge"
+}

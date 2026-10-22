@@ -1,6 +1,7 @@
 # Keyboard seeks bypassed the search lock
 
-Status is implemented locally. Full rebuilt-browser confirmation is pending.
+Status is implemented and rebuilt-browser confirmed locally. Full regression
+is queued separately, not yet claimed complete.
 
 The live pre-fix probe pressed ArrowRight three times while the native search
 was active and next/play/timeline controls were disabled. The committed step

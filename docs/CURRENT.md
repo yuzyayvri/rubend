@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+On October 22 Yuzy requested a full UI/UX redesign. The paper-workbench layout
+is implemented locally after two working visual prototypes. Actual rebuilt
+desktop/narrow checks pass for solve/export/playback, theme persistence, sticker
+editing, and notation-rail tracking. A confirmed search-time keyboard bypass is
+fixed: the live probe moves from failing step three to correct step zero, and
+the actual-main regression passes nine scenarios. Native search and 23 laws
+are unchanged. Read docs/design/REDESIGN-2026-10-22.md and
+docs/verification/next-plan/U01/REDESIGN.md. Next is u01-redesign-v1, a full
+source-sealed regression/proof queue with a twelve-minute estimate and
+twenty-six-minute cap. Read it before changing tracked sources.
+The previous u01-ui-checks-v5 run passed with 1,483 seals, cache hashes unchanged,
+and its worker gone. Old profile/CI-package evidence remains bound to its older
+source graph, not the redesigned UI. Current CI delivery is not claimed.
+Clipboard/download observations and raw timing remain open. No optimization,
+new law, publication, deployment, or merge is claimed or authorized here.
+
+The following checkpoint is the pre-redesign baseline.
+
 All six preserved optional profiles and the actual imported CI package now
 pass combined browser solve/export/playback/cancel/resubmit/invalid-input checks.
 Profile owners remain unchanged before shutdown. All passing sessions stopped.

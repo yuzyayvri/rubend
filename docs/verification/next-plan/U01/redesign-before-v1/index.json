@@ -1,0 +1,69 @@
+{
+  "format": "rubend-ui-redesign-before-v1",
+  "baselineKeyboard": {
+    "expectedStep": 0,
+    "actualStep": 3,
+    "controlsDisabled": true,
+    "unitFailure": "1 !== 0",
+    "baselineSourceSha256": "7ede4fbb70e71f632ffdfed80eb263d7c7275b638ca5e5eaa2b8b01f87938e76",
+    "frozenSource": "build/experiments/u00-controls-v1/control/apps/web/main.mjs"
+  },
+  "prototypes": {
+    "sheet": "Selected. Warm paper, serif wordmark, cube-first field, adjacent search, full-width numbered notation strip.",
+    "ledger": "Rejected. Dark drawing board with right-hand vertical move ledger and lower search controls. Fragmented read/interaction order."
+  },
+  "prototypeScope": "Visual exploration with the preserved controller build, not acceptance of the repaired production bundle. Final rebuilt-browser checks remain pending.",
+  "images": [
+    "sheet.jpg",
+    "ledger.jpg"
+  ],
+  "archives": [
+    {
+      "path": "0-u01-live-design-ledger-v1-session.json.gz",
+      "sha256": "69e6471a5a30b9ae04156d0f8aaff35a7d53a59d8e5d781fe93b3651722977f8",
+      "compressedSha256": "4cbe1dac05fd1dfaa23e9c6e867c4f0d2f8002fd432e2a1d41747ea7176fd7de"
+    },
+    {
+      "path": "1-u01-live-design-sheet-v1-session.json.gz",
+      "sha256": "4924b87ed3db55e6fe17d2d19b8f1018ed0edf63574a83048322a1d19f7eee3a",
+      "compressedSha256": "6e5f9ca80e1ebbec739f5c998d38186206e6ae5dd5493ae2d425cb60002b5e82"
+    },
+    {
+      "path": "2-u01-live-under-load-before-v1-search-keyboard.json.gz",
+      "sha256": "15ef3185a983cb2cb5be04b5b240bec30777451085b9dafc12f119d7058c495c",
+      "compressedSha256": "881f0b04da59fccfd40dc9382f4d53b7e4d01bbf1b9800343ec2aa4fd726850b"
+    },
+    {
+      "path": "3-u01-live-under-load-before-v1-after-cancel-export.json.gz",
+      "sha256": "68aff86d6687d2e9c16ba8fd99195312378c34594183308b2ef95a019003bd90",
+      "compressedSha256": "df1e8fc4846862af5de2305f8b73c1174c8d1a2eada8bcb5d3e8babf9f116390"
+    },
+    {
+      "path": "4-u01-live-under-load-before-v1-native-search-running.json.gz",
+      "sha256": "c078bb07a3db3730f56a3b7b0e5a5ed124c151dd90a05d3e2b194f498ae65a99",
+      "compressedSha256": "9b73356603f46917ad941b3d9d484e44be45d338bd5e053ec0d54c45783cada4"
+    },
+    {
+      "path": "5-u01-live-under-load-before-v1-session.json.gz",
+      "sha256": "0d884920dc7b5e03f5bfb9b8687774625e8ac853e5ccf49ad16b7cf4085e3712",
+      "compressedSha256": "dd775dafcf3e807880076784e2a5bb2e17bc5f20a100f0cd0d1037ca8d2dc27d"
+    },
+    {
+      "path": "6-evidence-u01-live-under-load-before-v1-resource.json.gz",
+      "sha256": "1c554341f79710fb6fb20c1978e008c8447003519c526851ba17186a72159822",
+      "compressedSha256": "92b17662e9f4fdd9f529aba498fc893d6d918aa07693e76f96cdf1a47657983c"
+    },
+    {
+      "path": "7-evidence-u01-live-design-sheet-v1-resource.json.gz",
+      "sha256": "a6b716988b6ac4071920e81171ea85c39f2139107698d71ab10b04cfa6d04e5b",
+      "compressedSha256": "d408d21d0ed663d5f41d99b991084e7f34e0058540939dd4a4313e4047f671e0"
+    },
+    {
+      "path": "8-evidence-u01-live-design-ledger-v1-resource.json.gz",
+      "sha256": "723b3fa2e5a03eb98e1364267ec6c1b5ad9dde9aa5322924d982503f8c370fd2",
+      "compressedSha256": "36076f43946c4bb71424430187276f8cbad5a6083a3108f92182bce7692144a4"
+    }
+  ],
+  "independentReview": false,
+  "performanceClaim": false
+}
