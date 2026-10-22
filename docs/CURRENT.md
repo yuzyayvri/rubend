@@ -2,6 +2,29 @@
 
 ## Latest checkpoint
 
+On October 23 the completed redesign queue was rechecked before edits. All
+1,493 source seals and three resource-receipt digests match. Focused checks,
+full `just test`, and all sixteen `just check` gates passed without resource
+stops. Its worker is gone. The compressed records are
+docs/verification/next-plan/U01/u01-redesign-v1/index.json.
+Yuzy explicitly requested pushing after the run on October 22. Main
+fast-forwarded to 369f480, and GitHub confirmed all 23 outgoing commits Verified.
+GitHub CI run 39787894581 subsequently passed at that same revision.
+
+The next local queue is `u01-delivery-redesign-v1`. It pins that successful
+run and artifact 12429624367, checks the actual ZIP and delivered checksums,
+imports into a fresh private store, checks installed web assets, and exercises
+installed HTTP/native replay and three supervisor shutdowns. No package build
+or large table is repeated. Expected duration is five minutes, capped at
+twelve, with three GiB and one low-priority lane. Read the saved queue results
+before further tracked edits. Current-package browser acceptance remains
+pending until its actual installed entrypoint has been driven in a hidden tab.
+Clipboard/download and raw timing remain open. New law statements still need
+separate approval. No new push, merge, release, or deployment is authorized by
+the completed October 22 push request.
+
+The following October 22 entry records the pre-queue redesign checkpoint.
+
 On October 22 Yuzy requested a full UI/UX redesign. The paper-workbench layout
 is implemented locally after two working visual prototypes. Actual rebuilt
 desktop/narrow checks pass for solve/export/playback, theme persistence, sticker

@@ -1,6 +1,7 @@
 # Redesign verification
 
-The selected paper-workbench UI is implemented locally. It preserves the Bend
+The selected paper-workbench UI is implemented and was pushed to main on
+October 22 at Yuzy's explicit request. It preserves the Bend
 model/native transport, source-bound replay, and all sixty controller targets.
 The [design record](../../../design/REDESIGN-2026-10-22.md) names the alternatives
 and the [keyboard issue](../../../issues/keyboard-seek-during-search.md).
@@ -26,7 +27,8 @@ both ends of a long mobile rail, native shallow optimum/export, canonical
 playback, stored theme, and sticker-net boundaries/save. A full audit of
 accessibility, touch gestures, or rendering performance is not claimed.
 
-The next fixed queue runs a negative frozen-source control and focused checks,
+The completed [full regression queue](u01-redesign-v1/index.json) passes a
+negative frozen-source control and focused checks,
 then complete `just test`, then `just check`. Full regression intentionally
 rebuilds development artifacts rather than treating the visual prototype as proof.
 It also checks saved browser replay, current source identity, and cleanup.
@@ -46,5 +48,7 @@ Old GUI/CI receipts remain historical, not relabeled to the new source graph.
 The optional delivered-artifact fixture correctly requires matching sources;
 the old artifact is not a current redesigned package. Clipboard denial and
 actual downloaded-file verification remain open under their observation issue.
-Nix sandbox packaging and a new hosted CI artifact are not claimed for this
-redesign. Publication remains separately gated.
+GitHub CI run 39787894581 passed at the published revision 369f480, including
+sandboxed packaging and export. The fresh installed-artifact import and GUI
+acceptance still need their own receipts. Further publication remains separately
+gated.

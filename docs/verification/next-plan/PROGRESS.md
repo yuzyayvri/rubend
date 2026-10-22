@@ -1,12 +1,12 @@
 # Approved roadmap progress
 
-Updated October 22, 2026, Asia/Manila. No overall completion or new speedup
+Updated October 23, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
-| U01. Application and delivery | Pre-redesign regression, profiles, and CI-package GUI passed. The requested full UI redesign is implemented locally. New live desktop/narrow, replay/export, theme, sticker editor, and notation-rail checks pass. Search-time arrow bypass is fixed, with failing-before evidence and nine passing keyboard scenarios. New full regression/proof queue is pending. Clipboard/download verification stays open. |
+| U01. Application and delivery | Redesign, keyboard repair, live desktop/narrow checks, full regression, and proof gates passed and were pushed to main on request. Current GitHub CI passed. Fresh redesigned-package import and installed native/HTTP acceptance is queued. Older package GUI checks remain source-bound to the older UI. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | Not implemented in this programme. Exact proof statements are drafted, not approved as new laws. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
@@ -41,8 +41,15 @@ import, rebuild, or table generation is repeated. The first failed package
 cleanup snapshot remains preserved.
 
 V5 passed with 1,483 matching seals, unchanged caches, and clean termination.
-The next queue is `u01-redesign-v1`. It includes a failing frozen-source keyboard
-control, focused UI/model/export checks, full rebuilt `just test`, and
-`just check`. Expected duration is twelve minutes; cap is twenty-six.
+The `u01-redesign-v1` queue passed its failing frozen-source keyboard control,
+focused UI/model/export checks, full rebuilt `just test`, and `just check`.
+All 1,493 source seals and receipt digests verify, with no resource stop and
+the worker gone. Its [archive](U01/u01-redesign-v1/index.json) preserves the
+completed run. Main and successful GitHub CI run 39787894581 share revision
+369f480. All 23 commits in the explicitly requested push are GitHub Verified.
+The next queue is `u01-delivery-redesign-v1`, expected five minutes with a
+twelve-minute cap. It downloads and imports the new artifact without rebuilding
+the package or regenerating tables. Installed-package GUI follows on the next
+ping. Current acceptance is not inferred from the older package receipts.
 The [redesign record](../../design/REDESIGN-2026-10-22.md) explains the two
 working directions and selection. No search-strength gain is claimed.

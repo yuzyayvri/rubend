@@ -1,7 +1,8 @@
 # Keyboard seeks bypassed the search lock
 
-Status is implemented and rebuilt-browser confirmed locally. Full regression
-is queued separately, not yet claimed complete.
+Status is fixed. Rebuilt-browser checks, full regression, and proof gates pass
+in [the completed source-bound queue](../verification/next-plan/U01/u01-redesign-v1/index.json).
+The fix was pushed to main at Yuzy's explicit request on October 22.
 
 The live pre-fix probe pressed ArrowRight three times while the native search
 was active and next/play/timeline controls were disabled. The committed step
