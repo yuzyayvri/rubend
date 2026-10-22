@@ -6,6 +6,11 @@ Actual joint-subgroup membership, loaded-data admissibility, packed/reference
 refinement and the concrete inverse reconstruction bridge remain open. No
 production search imports the kernel, and the established 23 laws are unchanged.
 
+The later [reference-target proof](REFERENCE-TARGETS.md) instantiates target
+identity, member closure and masks. It does not establish the packed-coordinate,
+loaded-data or inverse reconstruction premises. The kernel confirmation passed
+with 1,555 matching seals in [its archive](u02-proof-v1/index.json).
+
 ## Reference definitions
 
 `bench/subgroup-proof-kernel.bend` uses `src/model.bend`, not packed cubies.

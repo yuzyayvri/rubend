@@ -74,11 +74,12 @@ The existing thread heartbeat resumes after the batch. No model polling,
 production change, new database, benchmark verdict, publication, or deployment
 is part of the queue.
 
-The [supporting proof kernel](PROOF-KERNEL.md) now passes Bend and BendTT.
-It does not instantiate the concrete joint-subgroup/data or packed-inverse
-premises. The next queue is `u02-proof-v1`, not another exhaustive oracle run.
-On continuation, inspect and archive its receipts before edits. Construct the
-remaining exact subgroup/data/inversion bridges before isolated search
+The [supporting proof kernel](PROOF-KERNEL.md) and its confirmation pass.
+The later [reference target proof](REFERENCE-TARGETS.md) instantiates actual
+reference closure and masks, but not the packed-coordinate, loaded-data or
+inverse reconstruction premises. The next queue is `u02-target-v3`, not another
+exhaustive oracle run. On continuation, inspect and archive its receipts before
+edits. Construct the remaining exact projection/data/inversion bridges before isolated search
 integration. Compare the bound treatment independently of coordinate
 reuse and task scheduling. No default changes until the roadmap's correctness,
 quality and stable-control performance gates pass. Independent review is not

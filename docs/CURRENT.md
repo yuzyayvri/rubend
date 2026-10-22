@@ -29,16 +29,33 @@ target/admissibility witnesses, positive coverage and inverse first-move
 transfer under an explicit reconstruction bridge. A reference target instance
 passes. Two invalid proof fixtures are rejected by both public entrypoints.
 Translated claim headers are preserved so the remaining premises are visible.
-Exact NP01–NP03 are not complete. Concrete joint-subgroup membership, loaded
-data, packed/reference and inverse reconstruction bridges remain open. Production
+Exact NP01–NP03 are not complete. Concrete packed/joint target refinement,
+loaded-data and inverse reconstruction bridges remain open. Production
 search and the established 23 laws are unchanged. Read
 docs/verification/next-plan/U02/PROOF-KERNEL.md.
 
-The next detached queue is `u02-proof-v1`, estimated two minutes with a
-three-minute cap. It rechecks the supporting kernels and unchanged toolchain
-gates, reusing the completed finite oracle. The heartbeat should read its
-results before tracked edits. No speedup, accepted new pruning rule, or
-completed roadmap is claimed.
+The `u02-proof-v1` confirmation passed with 1,555 matching seals, unchanged
+proof/toolchain gates, no resource stop and its worker gone. Read
+docs/verification/next-plan/U02/u02-proof-v1/index.json.
+
+The concrete reference UD/FB/RL predicates now have Bend/BendTT proofs of
+identity membership, selected-move closure, inverse-member closure and exact
+18-bit mask correspondence. An axis-indexed witness instantiates the generic
+coverage kernel with these actual targets. Its admissibility premise is still
+explicit. A deterministic generator reads the model's sticker permutations;
+11,502 reference/packed samples and 6,000 preserving transitions pass, with a
+real slice-orientation mutation counterexample. A deliberately swapped proof
+witness fails on the expected s6 versus observed s3 mismatch. Two earlier
+verifier failures are preserved. Read
+docs/verification/next-plan/U02/REFERENCE-TARGETS.md.
+
+The next detached queue is `u02-target-v3`, estimated two minutes with a
+three-minute cap. It rechecks generation and reference target proofs with
+unchanged toolchain gates, without repeating the finite samples or rebuilding
+the app. The heartbeat should read results before tracked edits. Universal
+packed/reference refinement, loaded-data admissibility and concrete inverse
+reconstruction remain open. No production pruning, speedup or completed roadmap
+is claimed.
 
 The following entries preserve the preceding U01 checkpoints.
 

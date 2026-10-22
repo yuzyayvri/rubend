@@ -1,0 +1,15 @@
+{
+  "format": "rubend-proof-kernel-confirmation-v1",
+  "passed": true,
+  "revision": "0b726db",
+  "sourceSeals": 1555,
+  "finishedAt": "2026-10-22T19:05:07.329Z",
+  "supportingKernelVerdicts": true,
+  "proofToolchainChecks": 16,
+  "workerGone": true,
+  "resourceStops": false,
+  "formalNp01To03Complete": false,
+  "productionIntegrated": false,
+  "independentReview": false,
+  "archives": ["0-u02-proof-v1-plan.json.gz", "1-status.json.gz", "2-u02-proof-v1-confirm.json.gz", "3-confirmation.json.gz"]
+}
