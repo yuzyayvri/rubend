@@ -1,0 +1,18 @@
+{
+  "format": "rubend-reference-target-confirmation-v3",
+  "passed": true,
+  "revision": "bd179e2",
+  "sourceSeals": 1577,
+  "finishedAt": "2026-10-22T19:37:52.724Z",
+  "generatorCheck": true,
+  "referenceTargetBendttVerdict": true,
+  "proofToolchainChecks": 16,
+  "workerGone": true,
+  "resourceStops": false,
+  "formalPackedRefinement": false,
+  "formalLoadedDataAdmissibility": false,
+  "formalInverseReconstruction": false,
+  "productionIntegrated": false,
+  "independentReview": false,
+  "archives": ["0-u02-target-v3-plan.json.gz", "1-status.json.gz", "2-u02-target-v3-confirm.json.gz", "3-confirmation.json.gz"]
+}

@@ -49,13 +49,24 @@ witness fails on the expected s6 versus observed s3 mismatch. Two earlier
 verifier failures are preserved. Read
 docs/verification/next-plan/U02/REFERENCE-TARGETS.md.
 
-The next detached queue is `u02-target-v3`, estimated two minutes with a
-three-minute cap. It rechecks generation and reference target proofs with
-unchanged toolchain gates, without repeating the finite samples or rebuilding
-the app. The heartbeat should read results before tracked edits. Universal
-packed/reference refinement, loaded-data admissibility and concrete inverse
-reconstruction remain open. No production pruning, speedup or completed roadmap
-is claimed.
+The reference target confirmation passed with 1,577 matching seals, no resource
+stop and its worker gone. Its archive is
+docs/verification/next-plan/U02/u02-target-v3/index.json.
+
+The separate U02 forward-coordinate reuse prototype now passes 100,000 native
+whole-vector checks, all 85,140 transition entries, and 38,000 JavaScript vector
+comparisons. The wrong-frame and corrupted-transition controls have actual
+counterexamples. Its owned-array mode is checked. This does not measure extra
+frame allocation, conditional probe costs or solver speed. Production sources
+and established laws remain unchanged. Read
+docs/verification/next-plan/U02/COORDINATE-REUSE.md.
+
+The next detached queue is `u02-axis-v1`, estimated two minutes with a
+three-minute cap. It reuses those functional results and rechecks artifact
+seals plus unchanged proof/toolchain gates. The heartbeat should read results
+before tracked edits. Universal packed/reference refinement, loaded-data
+admissibility and concrete inverse reconstruction remain open. No production
+pruning, speedup or completed roadmap is claimed.
 
 The following entries preserve the preceding U01 checkpoints.
 
