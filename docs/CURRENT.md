@@ -20,7 +20,10 @@ U02 now has an isolated pure Bend subgroup-exclusion candidate and an exhaustive
 KPuzzle shortest-path-DAG checker. Distinct final/first mask types prevent
 using forward exclusions as next-move masks. The precommit root proof verdict,
 candidate type/termination verdict, native synthetic checks and intended
-compile rejection pass. Formal NP01–NP03 proofs and concrete data bridges are
+compile rejection pass. An independent two-ply pilot checks all 262 states and
+finds all four required mutation counterexamples, including the invalid
+forward-as-first pruning of `R'` from the shortest solution to `U R`.
+Formal NP01–NP03 proofs and concrete data bridges are
 still pending. Existing production search and 23 laws are unchanged. Read
 docs/verification/next-plan/U02/README.md.
 The next detached queue is `u02-exclusion-v1`, estimated five minutes and capped

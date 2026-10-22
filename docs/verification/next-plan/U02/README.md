@@ -48,6 +48,14 @@ array mode zero, and the intended FirstMask/FinalMask compile rejection.
 These are not formal NP01–NP03 proofs. Array mode on this array-free candidate
 does not establish ownership of a future integrated search kernel.
 
+The [two-ply pilot](u02-exclusion-precommit-v2/index.json) also passes all
+262 states and finds all four required mutation counterexamples. In particular,
+`U R` has forward bounds `[1,2,2]`; applying its final-move mask as a first-move
+mask would remove `R'` from the actual shortest solution `R' U'`. The candidate's
+inverse-derived first mask preserves that move. No increased lower bound occurs
+in this shallow pilot, and no speed benefit is claimed. The four-ply oracle is
+still pending. The first guard archive is preserved as a narrower native check.
+
 After committing, launch a fresh bounded queue:
 
 ```sh

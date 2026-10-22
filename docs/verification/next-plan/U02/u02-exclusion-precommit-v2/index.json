@@ -1,0 +1,18 @@
+{
+  "format": "rubend-subgroup-precommit-v2",
+  "passed": true,
+  "rootProofVerdict": true,
+  "candidateTypeAndTerminationVerdict": true,
+  "nativeSyntheticChecks": true,
+  "wrongMaskTypeRejected": true,
+  "independentOracleDepth": 2,
+  "independentOracleStates": 262,
+  "actualMutationCounterexamples": 4,
+  "forwardAsFirstWitness": {"scramble": "U R", "solution": "R' U'", "forwardBounds": [1, 2, 2]},
+  "cacheUnchanged": true,
+  "formalNp01To03Proofs": false,
+  "productionIntegrated": false,
+  "performanceClaim": false,
+  "independentReview": false,
+  "archives": ["0-u02-exclusion-precommit-v2.json.gz", "1-u02-exclusion-precommit-v2-resource.json.gz", "2-u02-exclusion-pilot-v2.json.gz"]
+}
