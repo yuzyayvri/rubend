@@ -8,7 +8,7 @@ const bundled=await build({stdin:{contents:source,resolveDir:process.cwd()+"/app
 const program=new vm.Script(`(async()=>{${bundled.outputFiles[0].text}\n})()`);
 const solved="UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB";
 let checks=0;
-for(const scenario of["healthy","healthy-replay","failed-before-space","failed-at-end","failed-during-rewind","request-error","busy-space","searching-keyboard"]){
+for(const scenario of["healthy","healthy-replay","failed-before-space","failed-at-end","failed-during-rewind","request-error","busy-space","seek-coalescing","searching-keyboard"]){
   const elements=new Map(),keys=new Map(),workers=[];
   function element(){return {style:{},dataset:{},children:[],value:"0",checked:true,open:false,tagName:"BUTTON",classList:{add(){},remove(){},toggle(){}},setAttribute(){},addEventListener(){},append(...items){this.children.push(...items);},replaceChildren(...items){this.children=items;},querySelectorAll(){return this.children.filter(x=>x.tagName==="BUTTON");},showModal(){this.open=true;},close(){this.open=false;}};}
   const get=id=>{if(!elements.has(id))elements.set(id,element());return elements.get(id);};
@@ -35,6 +35,7 @@ for(const scenario of["healthy","healthy-replay","failed-before-space","failed-a
   if(scenario==="failed-during-rewind")failNext=true;
   if(scenario==="request-error")rejectNext=true;
   if(scenario==="busy-space"){holdNext=true;get("next-button").onclick();}
+  if(scenario==="seek-coalescing"){holdNext=true;get("next-button").onclick();get("timeline").value="2";await get("timeline").oninput();get("timeline").value="0";await get("timeline").oninput();}
   context.keyboard=keys.get("keydown");
   context.key={key:scenario==="searching-keyboard"?"ArrowRight":" ",code:scenario==="searching-keyboard"?"ArrowRight":"Space",target:{tagName:"BODY"},preventDefault(){}};
   if(scenario==="searching-keyboard"){assert.equal(diagnostics().searching,true);assert.equal(get("next-button").disabled,true);assert.equal(get("timeline").disabled,true);}
@@ -46,6 +47,7 @@ for(const scenario of["healthy","healthy-replay","failed-before-space","failed-a
   assert.equal(diagnostics().pendingModelRequests,0);
   assert.equal(diagnostics().solution.moves.length,2,"Retain the verified solution");
   if(scenario.startsWith("healthy"))assert.equal(diagnostics().step,2);
+  if(scenario==="seek-coalescing")assert.equal(diagnostics().step,0,"The final queued seek must win");
   if(scenario.startsWith("failed-")){assert.equal(diagnostics().modelState,"failed");assert.equal(get("play-button").disabled,true);assert.equal(get("export-button").disabled,false);}
   console.log(JSON.stringify({passed:true,scenario,step:diagnostics().step,playing:diagnostics().playing}));checks++;
 }

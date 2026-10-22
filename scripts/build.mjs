@@ -27,7 +27,7 @@ run(process.execPath,["scripts/check-array-mode.mjs","build/rubend.c"]);
 if(!process.argv.includes("--engine-only")) {
   mkdirSync("build/web", { recursive: true });
   await build({ entryPoints: ["apps/web/main.mjs", "apps/web/worker.mjs"], bundle: true, format: "esm", outdir: "build/web", minify: true, sourcemap: true, target: "es2022" });
-  for(const file of ["index.html", "style.css"]) copyFileSync(`apps/web/${file}`, `build/web/${file}`);
+  for(const file of ["index.html", "style.css", "favicon.svg"]) copyFileSync(`apps/web/${file}`, `build/web/${file}`);
 }
 assert.deepEqual(inputs(),sourceHashes,"Sources changed during the build; rebuild before using these artifacts.");
 const bend=spawnSync("bend",["version"],{encoding:"utf8",env:{...process.env,BEND_NO_TELEMETRY:"1"}});

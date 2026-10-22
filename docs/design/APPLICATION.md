@@ -1,5 +1,9 @@
 # Application design
 
+The current visual implementation and comparison are recorded in
+[the October 22 redesign](REDESIGN-2026-10-22.md). The specification below is
+historical; it is not a description of the new layout.
+
 Original design specification. The local application is now implemented; use
 [PORTFOLIO.md](../verification/PORTFOLIO.md) for actual checks and limitations.
 

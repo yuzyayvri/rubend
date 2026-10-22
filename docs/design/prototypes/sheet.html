@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eeeae0">
+  <meta name="description" content="A local Rubik's cube solver written in Bend.">
+  <title>Rubend · Cube workbench</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="identity"><h1><a href="/" aria-label="Rubend home">rubend</a></h1><span class="edition">3 × 3<br>HTM</span></div>
+    <div class="face-order" aria-label="Face order U R F D L B"><span>U</span><span>R</span><span>F</span><span>D</span><span>L</span><span>B</span></div>
+    <div class="mast-tools"><span id="engine-state" class="engine-state"><i></i>Engine warming up</span><button id="guide-button" class="text-action">Controls</button><button id="theme-button" class="theme-switch" aria-label="Switch to dark appearance">◐</button></div>
+  </header>
+  <main class="workbench">
+    <section class="specimen" aria-label="Interactive cube workspace">
+      <div class="specimen-heading"><span class="label">Position</span><span id="cube-state">Solved position</span><button id="camera-button" class="text-action" aria-label="Reset camera">Reset view ↺</button></div>
+      <div id="stage" class="stage" role="img" aria-label="Interactive 3D cube. Drag to orbit. Click a face to turn it.">
+        <div id="canvas-host"></div>
+        <div class="corner corner-a" aria-hidden="true"></div><div class="corner corner-b" aria-hidden="true"></div><div class="corner corner-c" aria-hidden="true"></div><div class="corner corner-d" aria-hidden="true"></div>
+        <div id="fallback" class="fallback" role="status" hidden><span class="label">2D mode</span><p>The 3D renderer is unavailable.<br>Input, solving, and playback still work.</p><button id="fallback-edit" class="line-button">Open sticker net</button></div>
+        <div class="stage-caption"><span>Fixed centres · URFDLB</span><span>Drag to orbit / click to turn</span></div>
+      </div>
+      <div class="turnbar"><div id="turn-buttons" class="turn-buttons" aria-label="Face turns"></div><span class="key-hint"><kbd>Shift</kbd> inverse<br><kbd>Alt</kbd> half-turn</span></div>
+    </section>
+    <aside class="console" aria-label="Cube input and search controls">
+      <section class="position-panel">
+        <div class="panel-heading"><h2>Set a position</h2><button id="reset-button" class="text-action">Reset</button></div>
+        <div class="position-actions"><button id="scramble-button" class="line-button">Scramble</button><button id="edit-button" class="line-button">Sticker net</button></div>
+        <label class="label" for="cube-input">Moves or 54 facelets</label>
+        <textarea id="cube-input" rows="2" maxlength="4096" spellcheck="false" placeholder="R U R' U' F2"></textarea>
+        <div class="input-actions"><span class="notation-note">U R F D L B · ′ · 2</span><button id="apply-button" class="text-action">Apply ↵</button></div>
+        <p id="input-error" class="error-message" role="alert" hidden></p>
+      </section>
+      <section class="search-panel">
+        <h2>Search</h2>
+        <div class="mode-picker" role="group" aria-label="Search mode"><button id="fast-mode" class="mode selected" aria-pressed="true">Fast + improve</button><button id="exact-mode" class="mode" aria-pressed="false">Exact</button></div>
+        <p id="mode-description" class="mode-description">Find a solution, then improve it.</p>
+        <div class="budget-heading"><label for="budget">Budget</label><output id="budget-value" for="budget">2 seconds</output></div>
+        <input id="budget" type="range" min="0" max="4" step="1" value="2" aria-label="Search budget" aria-valuetext="2 seconds">
+        <div class="budget-ticks" aria-hidden="true"><span>.25s</span><span>1s</span><span>2s</span><span>5s</span><span>15s</span></div>
+        <button id="solve-button" class="primary-action" disabled><span>Solve</span><span aria-hidden="true">↗</span></button><button id="cancel-button" class="stop-action" hidden>Stop search</button>
+        <div id="search-status" class="search-status" role="status" aria-live="polite">Ready.</div><div class="search-track" aria-hidden="true"><div id="search-progress"></div></div>
+        <dl class="metrics"><div><dt>Best / HTM</dt><dd id="best-length">—</dd></div><div><dt>Lower bound</dt><dd id="lower-bound">—</dd></div><div><dt>Elapsed</dt><dd id="search-time">—</dd></div></dl>
+        <details class="engine-details"><summary>Runtime details</summary><p id="node-count">No search yet.</p><p id="render-stat">Renderer starting.</p><p>A verified solution is replay-checked. Search optimality is not a formal proof of the whole search engine.</p></details>
+      </section>
+    </aside>
+    <section class="sequence" aria-labelledby="solution-heading">
+      <div class="sequence-heading"><h2 id="solution-heading">No solution yet</h2><span id="solution-badge" class="solution-badge" hidden>Replay verified</span><div class="sequence-actions"><button id="copy-button" class="text-action" disabled>Copy moves</button><button id="export-button" class="text-action" disabled>Export record ↗</button></div></div>
+      <div id="moves" class="moves" aria-label="Solution moves"><p class="empty-moves">The move sequence appears here after a search.</p></div>
+      <div class="transport"><div class="transport-buttons"><button id="first-button" aria-label="Back to start" disabled>⇤</button><button id="back-button" aria-label="Previous move" disabled>←</button><button id="play-button" class="play-button" aria-label="Play solution" disabled>▶</button><button id="next-button" aria-label="Next move" disabled>→</button></div><span id="step-count">0 / 0</span><input id="timeline" type="range" min="0" max="0" value="0" aria-label="Solution position" disabled><label class="speed-control" for="speed">Speed<select id="speed"><option value="500">Slow</option><option value="250" selected>Normal</option><option value="100">Fast</option></select></label></div>
+    </section>
+  </main>
+  <footer class="footnote"><span>Bend 2 / local engine</span><span><kbd>Space</kbd> play / <kbd>← →</kbd> step</span></footer>
+  <dialog id="edit-dialog" aria-labelledby="edit-title"><div class="dialog-heading"><h2 id="edit-title">Sticker net</h2><button id="close-edit" class="close-button" aria-label="Close sticker editor">×</button></div><p>Choose a colour, then a sticker. Centres stay fixed.</p><div id="palette" class="palette" role="group" aria-label="Sticker color"></div><div id="cube-net" class="cube-net"></div><p id="edit-error" class="error-message" role="alert" hidden></p><div class="dialog-actions"><button id="cancel-edit" class="line-button">Cancel</button><button id="save-edit" class="primary-action">Use position ↵</button></div></dialog>
+  <dialog id="guide-dialog" aria-labelledby="guide-title"><div class="dialog-heading"><h2 id="guide-title">Controls & guarantees</h2><button id="close-guide" class="close-button" aria-label="Close guide">×</button></div><dl class="guide-list"><div><dt>Position</dt><dd>Drag to orbit. Click a face, or use U R F D L B. Shift reverses a turn; Alt makes a half-turn. The camera never changes the canonical frame.</dd></div><div><dt>Playback</dt><dd>Space plays or pauses. Arrow keys step. The slider reconstructs the committed cube from checked replay.</dd></div><div><dt>Search</dt><dd>Fast mode improves a verified answer. Exact mode also searches shorter lengths. A timeout does not establish optimality.</dd></div><div><dt>Guarantees</dt><dd>Every accepted solution is replay-checked. A search-optimal result means the lower bound meets the verified length. The full search engine is not formally certified.</dd></div></dl><label class="motion-toggle"><input id="reduced-motion" type="checkbox"> Reduce turn animation</label></dialog>
+  <dialog id="export-dialog" aria-labelledby="export-title"><div class="dialog-heading"><h2 id="export-title">Solve record</h2><button id="close-export" class="close-button" aria-label="Close solve record">×</button></div><p>Position, moves, and search bounds. If download is unavailable, select and copy the JSON.</p><label class="label" for="export-record">Replay-checked record</label><textarea id="export-record" rows="12" readonly spellcheck="false"></textarea><div class="dialog-actions"><button id="select-record" class="line-button">Select record</button><button id="download-record" class="primary-action">Download JSON ↓</button></div></dialog>
+</body>
+</html>

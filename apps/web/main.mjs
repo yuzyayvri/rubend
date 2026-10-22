@@ -2,6 +2,7 @@ import { CubeScene, faceColors } from "./scene.mjs";
 import {solveRecord} from "../export.mjs";
 import {refineSolution} from "../solve-state.mjs";
 import {ModelClient} from "./model-client.mjs";
+import {notationScroll} from "./notation-rail.mjs";
 
 const $=id=>document.getElementById(id),faces="URFDLB",moveNames=[...faces].flatMap(f=>[f,`${f}2`,`${f}'`]),solved=[...faces].map(f=>f.repeat(9)).join("");
 const worker=new Worker(new URL("./worker.js",import.meta.url),{type:"module"});
@@ -30,33 +31,33 @@ function sync(){
   $("turn-buttons").querySelectorAll("button").forEach(b=>b.disabled=busy||modelUnavailable);
   for(const id of ["reset-button","apply-button","scramble-button","edit-button"])$(id).disabled=busy;
   for(const id of ["apply-button","scramble-button","edit-button","save-edit"])$(id).disabled=busy||modelUnavailable;
-  $("moves").querySelectorAll("button").forEach((b,i)=>{b.disabled=modelUnavailable||busy||searching;b.classList.toggle("past",i<step);b.classList.toggle("current",i===step);b.setAttribute("aria-current",i===step?"step":"false");});
+  $("moves").querySelectorAll("button").forEach((b,i)=>{b.disabled=modelUnavailable||busy||searching;b.classList.toggle("past",i<step);b.classList.toggle("current",i===step);b.setAttribute("aria-current",i===step?"step":"false");if(!searching&&i===Math.min(step,solution.moves.length-1)){const rail=$("moves");if(rail.scrollWidth>rail.clientWidth)rail.scrollLeft=notationScroll(rail.scrollLeft,b.offsetLeft,b.offsetWidth,rail.clientWidth);}});
 }
 function save(){try{localStorage.setItem("rubend-cube",facelets);}catch{}}
-function stop(keep=true){playing=false;if(searchController){searchController.abort();searchController=null;}searching=false;$("search-progress").style.width="0%";if(keep&&solution)message("Search stopped. Keeping your verified solution.");sync();}
-function clearSolution(){solution=null;pendingSeek=null;lastRun=null;step=0;$("node-count").textContent="No positions searched yet.";$("moves").replaceChildren(Object.assign(document.createElement("p"),{className:"empty-moves",textContent:"A scrambled cube, a little thinking, and a clear sequence of turns."}));$("solution-heading").textContent="Your solution will appear here.";$("solution-badge").hidden=true;for(const id of ["best-length","lower-bound","search-time"])$(id).textContent="—";}
-async function setCube(text){stop(false);revision++;facelets=text;scene?.set(facelets);clearSolution();save();error("");message("Ready when you are.");sync();}
-function manual(move){if(busy)return Promise.resolve();queue=queue.then(async()=>{if($("edit-dialog").open||busy)return;stop(false);revision++;clearSolution();busy=true;sync();try{const result=await model("apply",{facelets,moves:[move]});await scene?.turn(move,result.facelets,duration());facelets=result.facelets;save();error("");message("One turn closer. Or a little further.");}catch(e){error(e.message);}finally{busy=false;sync();}});return queue;}
+function stop(keep=true){playing=false;if(searchController){searchController.abort();searchController=null;}searching=false;$("search-progress").style.width="0%";if(keep&&solution)message("Search stopped. Verified solution retained.");sync();}
+function clearSolution(){solution=null;pendingSeek=null;lastRun=null;step=0;$("node-count").textContent="No positions searched yet.";$("moves").replaceChildren(Object.assign(document.createElement("p"),{className:"empty-moves",textContent:"The move sequence appears here after a search."}));$("solution-heading").textContent="No solution yet";$("solution-badge").hidden=true;for(const id of ["best-length","lower-bound","search-time"])$(id).textContent="—";}
+async function setCube(text){stop(false);revision++;facelets=text;scene?.set(facelets);clearSolution();save();error("");message("Ready.");sync();}
+function manual(move){if(busy)return Promise.resolve();queue=queue.then(async()=>{if($("edit-dialog").open||busy)return;stop(false);revision++;clearSolution();busy=true;sync();try{const result=await model("apply",{facelets,moves:[move]});await scene?.turn(move,result.facelets,duration());facelets=result.facelets;save();error("");message("Position updated.");}catch(e){error(e.message);}finally{busy=false;sync();}});return queue;}
 for(let f=0;f<6;f++){const b=document.createElement("button");b.type="button";b.setAttribute("aria-label",`Turn ${faces[f]} face`);const i=document.createElement("i");i.style.background=faceColors[f];b.append(i,faces[f]);b.onclick=e=>manual(f*3+(e.altKey?1:e.shiftKey?2:0));$("turn-buttons").append(b);}
-async function input(){if(busy)return;try{const result=await model("input",{text:$("cube-input").value});await setCube(result.facelets);message(result.moves.length?`Applied ${result.moves.length} moves from solved.`:"Cube checked and ready.");}catch(e){error(e.message);}}
+async function input(){if(busy)return;try{const result=await model("input",{text:$("cube-input").value});await setCube(result.facelets);message(result.moves.length?`${result.moves.length} moves applied.`:"Cube checked and ready.");}catch(e){error(e.message);}}
 $("apply-button").onclick=input;
 $("cube-input").addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key==="Enter")input();});
-$("scramble-button").onclick=async()=>{try{const r=await model("scramble");await setCube(r.facelets);$("cube-input").value=r.moves.map(m=>moveNames[m]).join(" ");message("A fresh 25-move scramble. Make yourself at home.");}catch(e){error(e.message);}};
+$("scramble-button").onclick=async()=>{try{const r=await model("scramble");await setCube(r.facelets);$("cube-input").value=r.moves.map(m=>moveNames[m]).join(" ");message("25-move scramble applied.");}catch(e){error(e.message);}};
 $("reset-button").onclick=()=>{setCube(solved);$("cube-input").value="";};
 $("camera-button").onclick=()=>scene?.home();
-function chooseMode(value){mode=value;for(const [id,m]of[["fast-mode","fast"],["exact-mode","exact"]]){$(id).classList.toggle("selected",m===mode);$(id).setAttribute("aria-pressed",String(m===mode));}$("mode-description").textContent=mode==="fast"?"A quick answer, then fewer moves as time allows.":"Try to prove the shortest length. Hard cubes can take longer.";}
+function chooseMode(value){mode=value;for(const [id,m]of[["fast-mode","fast"],["exact-mode","exact"]]){$(id).classList.toggle("selected",m===mode);$(id).setAttribute("aria-pressed",String(m===mode));}$("mode-description").textContent=mode==="fast"?"Find a solution, then improve it.":"Search shorter lengths as well. Hard positions take longer.";}
 $("fast-mode").onclick=()=>chooseMode("fast");$("exact-mode").onclick=()=>chooseMode("exact");
-$("budget").oninput=()=>{$("budget-value").textContent=`${budgets[Number($("budget").value)]/1000} seconds`;};
+$("budget").oninput=()=>{$("budget-value").textContent=`${budgets[Number($("budget").value)]/1000} seconds`;$("budget").setAttribute("aria-valuetext",$("budget-value").textContent);};
 function showSolution(event,origin){
   solution={moves:event.moves,origin,optimal:Boolean(event.optimal),lower:event.lower,elapsedMs:event.elapsedMs};step=0;facelets=origin;scene?.set(facelets);
   $("moves").replaceChildren();for(let i=0;i<event.moves.length;i++){const b=document.createElement("button");b.className="move-chip";b.textContent=moveNames[event.moves[i]];b.setAttribute("aria-label",`Move ${i+1}: ${b.textContent}`);b.onclick=()=>jump(i+1);$("moves").append(b);}
   if(event.moves.length===0)$("moves").append(Object.assign(document.createElement("p"),{className:"empty-moves",textContent:"Already home. No turns needed."}));
-  $("solution-heading").textContent=event.optimal?`${event.length} moves. Shortest by search.`:`${event.length} moves. Every turn checked.`;
-  $("solution-badge").textContent=event.optimal?"Shortest · replay certified":"Replay certified";$("solution-badge").hidden=false;
+  $("solution-heading").textContent=event.optimal?`${event.length} moves · search optimal`:`${event.length} moves · verified`;
+  $("solution-badge").textContent=event.optimal?"Search optimal · replay checked":"Replay checked";$("solution-badge").hidden=false;
   $("best-length").replaceChildren(document.createTextNode(String(event.length)),Object.assign(document.createElement("small"),{textContent:"HTM"}));sync();
 }
 async function solve(){
-  if(searching||busy||!ready)return;error("");playing=false;const origin=facelets,rev=revision,controller=new AbortController();searchController=controller;searching=true;clearSolution();sync();message("Looking for the way back…");const budgetMs=budgets[Number($("budget").value)],started=performance.now();lastRun={origin,mode,budgetMs,events:[]};
+  if(searching||busy||!ready)return;error("");playing=false;const origin=facelets,rev=revision,controller=new AbortController();searchController=controller;searching=true;clearSolution();sync();message("Searching.");const budgetMs=budgets[Number($("budget").value)],started=performance.now();lastRun={origin,mode,budgetMs,events:[]};
   try{
     const response=await fetch("/api/solve",{method:"POST",headers:{"Content-Type":"application/json","X-Rubend-Token":token},body:JSON.stringify({facelets:origin,mode,budgetMs,id:rev}),signal:controller.signal});
     if(!response.ok){const data=await response.json();throw Error(data.error);}
@@ -68,8 +69,8 @@ async function solve(){
       if(event.lower!==undefined)$("lower-bound").textContent=String(event.lower);
       if(event.nodes!==undefined)$("node-count").textContent=`${event.nodes.toLocaleString()} search steps. One native CPU worker.`;
       const elapsed=performance.now()-started;$("search-time").textContent=`${(elapsed/1000).toFixed(2)}s`;$("search-progress").style.width=`${Math.min(99,elapsed/budgetMs*100)}%`;
-      if(event.type==="candidate")message(event.optimal?"Shortest length established by complete search.":"Verified answer found. Looking for fewer turns…");
-      if(event.type==="done"){if(solution){message(event.optimal?"Shortest length established by complete search.":"Time well spent. Your best verified answer is ready.");}else message("No answer within this budget. Try more thinking time.");}
+      if(event.type==="candidate")message(event.optimal?"Optimal length established by search.":"Verified solution. Still searching.");
+      if(event.type==="done"){if(solution){message(event.optimal?"Optimal length established by search.":"Search finished. Best verified solution retained.");}else message("No solution found in this run.");}
     }}
   }catch(e){if(e.name!=="AbortError")message(e.message,true);}finally{if(searchController===controller){searchController=null;searching=false;$("search-progress").style.width=solution?"100%":"0%";sync();}}
 }
@@ -88,10 +89,10 @@ $("close-export").onclick=()=>$("export-dialog").close();
 function paintNet(){for(let f=0;f<6;f++)for(let s=0;s<9;s++){const b=$(`sticker-${f*9+s}`);b.style.background=faceColors[faces.indexOf(draft[f*9+s])];b.textContent=s===4?faces[f]:"";b.setAttribute("aria-label",`${faces[f]} sticker ${s+1}: ${draft[f*9+s]}${s===4?", fixed center":""}`);}$("palette").querySelectorAll("button").forEach((b,i)=>{b.classList.toggle("selected",faces[i]===paint);b.setAttribute("aria-pressed",String(faces[i]===paint));});}
 for(let f=0;f<6;f++){const p=document.createElement("button");p.style.background=faceColors[f];p.textContent=faces[f];p.setAttribute("aria-label",`Paint ${faces[f]} color`);p.onclick=()=>{paint=faces[f];paintNet();};$("palette").append(p);const group=document.createElement("div");group.className="net-face";group.dataset.face=faces[f];const label=document.createElement("span");label.textContent=faces[f];group.append(label);for(let s=0;s<9;s++){const i=f*9+s,b=document.createElement("button");b.id=`sticker-${i}`;b.disabled=s===4;b.onclick=()=>{draft=draft.slice(0,i)+paint+draft.slice(i+1);paintNet();};group.append(b);}$("cube-net").append(group);}
 function openEditor(){stop(false);draft=facelets;$("edit-error").hidden=true;paintNet();$("edit-dialog").showModal();}
-$("edit-button").onclick=openEditor;$("fallback-edit").onclick=openEditor;$("close-edit").onclick=()=>$("edit-dialog").close();$("cancel-edit").onclick=()=>$("edit-dialog").close();$("save-edit").onclick=async()=>{try{const r=await model("validate",{facelets:draft});await setCube(r.facelets);$("edit-dialog").close();message("Cube checked. Ready to solve.");}catch(e){$("edit-error").textContent=e.message;$("edit-error").hidden=false;}};
+$("edit-button").onclick=openEditor;$("fallback-edit").onclick=openEditor;$("close-edit").onclick=()=>$("edit-dialog").close();$("cancel-edit").onclick=()=>$("edit-dialog").close();$("save-edit").onclick=async()=>{try{const r=await model("validate",{facelets:draft});await setCube(r.facelets);$("edit-dialog").close();message("Position checked. Ready.");}catch(e){$("edit-error").textContent=e.message;$("edit-error").hidden=false;}};
 $("guide-button").onclick=()=>$("guide-dialog").showModal();$("close-guide").onclick=()=>$("guide-dialog").close();$("reduced-motion").checked=matchMedia("(prefers-reduced-motion: reduce)").matches;
 function theme(value){document.documentElement.dataset.theme=value;$("theme-button").setAttribute("aria-label",`Switch to ${value==="dark"?"light":"dark"} appearance`);try{localStorage.setItem("rubend-theme",value);}catch{}}
-try{theme(localStorage.getItem("rubend-theme")??"dark");}catch{theme("dark");}$("theme-button").onclick=()=>theme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+try{theme(localStorage.getItem("rubend-theme")??"light");}catch{theme("light");}$("theme-button").onclick=()=>theme(document.documentElement.dataset.theme==="dark"?"light":"dark");
 document.addEventListener("keydown",e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)||e.ctrlKey||e.metaKey||$("edit-dialog").open||$("guide-dialog").open||$("export-dialog").open)return;const f=faces.indexOf(e.key.toUpperCase());if(f>=0){e.preventDefault();manual(f*3+(e.altKey?1:e.shiftKey?2:0));}else if(e.code==="Space"){e.preventDefault();play();}else if(e.key==="ArrowRight"){e.preventDefault();jump(step+1,true);}else if(e.key==="ArrowLeft"){e.preventDefault();jump(step-1);}});
 try{const saved=localStorage.getItem("rubend-cube");if(saved){const r=await model("validate",{facelets:saved});facelets=r.facelets;scene?.set(facelets);}}catch{}
 let sessionTimer,sessionClosed=false;
