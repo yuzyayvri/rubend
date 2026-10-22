@@ -77,11 +77,16 @@ pass both checkers. The native equivalence queue passed all 179 cases across
 control, candidate and audit workers. Every original stack field, metadata and
 answer agrees, and 34,159 audited advances have consistent coordinates. All
 1,618 seals match, there is no resource stop, and the worker is gone. Read
-docs/verification/next-plan/U02/u02-axis-search-v1/index.json. The next fixed
-queue is `u02-axis-cost-v1`, estimated ten minutes with a twenty-eight-minute cap.
-It collects fresh native A/A, conditional A/B, startup, RSS and separate gprof
-evidence. Read docs/verification/next-plan/U02/CACHED-AXIS-COST.md. Inspect and
-archive its results before further source edits. There is no speed claim, production change,
+docs/verification/next-plan/U02/u02-axis-search-v1/index.json. The pilot native
+cost queue passed with 1,631 matching seals and no resource stop. Fresh pilot
+A/A meets its gate. The observed A/B paired native-time ratio has median 0.8947,
+but its profiler mainly measures initialization. Overall performance acceptance
+is inconclusive; deadline quality is unmeasured. Read
+docs/verification/next-plan/U02/CACHED-AXIS-PILOT.md. The next queue is
+`u02-axis-cost-confirm-v1`, with four development cases, five-million-step
+measurements and a separate twenty-million-step profiler run. Expected duration
+is ten minutes, with a twenty-eight-minute cap. Inspect and archive its results
+before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and concrete inverse reconstruction remain open.
 Actual native allocation, latency and stable matched controls still need

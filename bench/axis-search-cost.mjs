@@ -24,12 +24,18 @@ export function summarizeCost(rows){
   return{ratios,medianRatio:median(values),minimumRatio:Math.min(...values),maximumRatio:Math.max(...values),allCohortsAtLeast100ms:ratios.every(x=>x.a>=100&&x.b>=100),withinFivePercent:values.every(x=>Math.abs(x-1)<=0.05)};
 }
 
+export function costSpec(path){
+  const spec=path?JSON.parse(readFileSync(path,"utf8")):{format:"rubend-axis-search-cost-spec-v1",split:"pilot",fuel:1000000,profileFuel:1000000,target:20,count:4,iterations:5};
+  assert.deepEqual(Object.keys(spec).sort(),["format","split","fuel","profileFuel","target","count","iterations"].sort());
+  assert.equal(spec.format,"rubend-axis-search-cost-spec-v1");assert.ok(["pilot","development"].includes(spec.split));assert.ok([1000000,5000000].includes(spec.fuel));assert.ok([1000000,20000000].includes(spec.profileFuel));assert.equal(spec.target,20);assert.equal(spec.count,4);assert.equal(spec.iterations,5);return spec;
+}
+
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  assert.equal(process.argv.length,4);
+  assert.ok(process.argv.length===4||process.argv.length===5);const spec=costSpec(process.argv[4]);
   const directory=resolve(process.argv[2]),output=resolve(process.argv[3]),cache=resolve(".cache/joint/phase1-v1.raw"),cacheSha256="2ccfd40fdc0cf4769c58d9646f6b0ea787571ce5200b5d124c8f17dcc70f73b5";
   async function seal(){const h=createHash("sha256");for await(const chunk of createReadStream(cache))h.update(chunk);assert.equal(h.digest("hex"),cacheSha256);}
   await seal();
-  const cases=loadCorpus("pilot").slice(0,4),rows=[],report={format:"rubend-axis-search-cost-v1",passed:false,cacheSha256,cacheCondition:"Warm file pages from preflight digest; fresh worker per side and cohort",cases,rows,workers:[],errors:[],fuel:1000000,target:20,releaseHoldoutOpened:false,performanceAcceptance:false,productionIntegrated:false,independentReview:false};
+  const cases=loadCorpus(spec.split).slice(0,spec.count),rows=[],report={format:"rubend-axis-search-cost-v1",passed:false,spec,cacheSha256,cacheCondition:"Warm file pages from preflight digest; fresh worker per side and cohort",cases,rows,workers:[],errors:[],fuel:spec.fuel,target:spec.target,releaseHoldoutOpened:false,performanceAcceptance:false,productionIntegrated:false,independentReview:false};
   Object.assign(process.env,{RUBEND_JOINT_CACHE:cache,RUBEND_CONTOUR_PROFILE:"inverse-three",RUBEND_CONTOUR_TARGET:"20"});
   const cpu=pid=>parseCpu(readFileSync("/proc/"+pid+"/stat","utf8"),pid),rss=pid=>Number(readFileSync("/proc/"+pid+"/status","utf8").match(/^VmRSS:\s+(\d+)/m)?.[1]??0);
   try{
@@ -47,9 +53,9 @@ if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
             const hostMs=performance.now()-start,after=cpu(engine.child.pid);assert.equal(after.startTicks,before.startTicks);
             assert.ok(events.every(e=>["candidate","measurement","done"].includes(e.type)));
             const terminal=events.filter(e=>e.type==="done"),measure=events.filter(e=>e.type==="measurement");assert.equal(terminal.length,1);assert.equal(measure.length,1);
-            const d=terminal[0],m=measure[0];assert.ok([0,1].includes(m.status));assert.equal(m.target,20);assert.equal(m.profile,3);assert.equal(d.lower,m.bound);assert.ok(Number.isInteger(d.nodes)&&d.nodes>0&&d.nodes<=1000000);assert.equal(d.optimal,m.status===1?1:0);assert.ok(Number.isSafeInteger(m.nativeMs)&&m.nativeMs>=0);
+            const d=terminal[0],m=measure[0];assert.ok([0,1].includes(m.status));assert.equal(m.target,spec.target);assert.equal(m.profile,3);assert.equal(d.lower,m.bound);assert.ok(Number.isInteger(d.nodes)&&d.nodes>0&&d.nodes<=spec.fuel);assert.equal(d.optimal,m.status===1?1:0);assert.ok(Number.isSafeInteger(m.nativeMs)&&m.nativeMs>=0);
             assert.ok(d.lower>=0&&d.lower<=d.length&&d.length<=31);
-            const complete=d.lower>=20||d.optimal===1;if(!complete)assert.equal(d.nodes,1000000);
+            const complete=d.lower>=spec.target||d.optimal===1;if(!complete)assert.equal(d.nodes,spec.fuel);
             const candidates=events.filter(e=>e.type==="candidate");
             if(d.length<31){assert.equal(candidates.length,1);assert.equal(m.moves.length,d.length);assert.equal(apply(item.facelets,m.moves),solved);assert.deepEqual(candidates[0].moves,m.moves);}else{assert.equal(candidates.length,0);assert.deepEqual(m.moves,[]);assert.equal(d.optimal,0);}
             const result={length:d.length,lower:d.lower,nodes:d.nodes,optimal:d.optimal,moves:m.moves,status:m.status};
