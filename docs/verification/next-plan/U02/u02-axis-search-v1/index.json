@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-axis-search-v1",
+  "revision": "df7eb29f87e6195b0c1959dc7ee77ad718f46ac4",
+  "sourceSeals": 1618,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-22T20:54:38.200Z",
+  "finishedAt": "2026-10-22T20:56:29.438Z",
+  "archives": [
+    {
+      "path": "0-u02-axis-search-v1-plan.json.gz",
+      "sha256": "0ebb525283624693373f4698b46c7c3a9ca04e676983f6d4d92ada14471fbcb6",
+      "compressedSha256": "de18dec958bc7257b1f80efe9e26ebd4b845f43a97a62884562b6ec4d30817f1"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "e7fa7475c1f950cd447661640984a604a5d7bcc962609a46a6ebb4015ad1342f",
+      "compressedSha256": "881606df15d42f51e88d0bf1831f06dbb9883aa1461b74bf2f17acb6b73c6ce6"
+    },
+    {
+      "path": "2-u02-axis-search-v1-compile.json.gz",
+      "sha256": "04fccdcfbc09a45a5ac1dc8c2b59e9ccd36a99bd28547369533597d46e177e6d",
+      "compressedSha256": "78a6ebd5336f07789aab670522dbf05b704df41aba442d963ef9c578d513fe8b"
+    },
+    {
+      "path": "3-u02-axis-search-v1-functional.json.gz",
+      "sha256": "ed0d9a570c89b3d802528626c1d7e4bd226c8de14a75c0ff3b6a9d19ab3cd159",
+      "compressedSha256": "a3babbdaef04afaa882f0d8fa05dd3ba884f3e181b31c1d0e051563ae78b1359"
+    },
+    {
+      "path": "4-u02-axis-search-v1-confirm.json.gz",
+      "sha256": "1b039948a98a4430d9aa76cfcb5a72ef5a282bdee16b6ebe9f3d64f43ed8c009",
+      "compressedSha256": "f88e4bd2ff13c05a0afcc47f1c86749d3d0034e70d78de999b856bc7176ed669"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "28eb093d42ffb69f42bf298307a9143a259fe13951bd471c67b87b0eb4a9f323",
+      "compressedSha256": "e669ff38cb67b7d2965b49aee20f095d621f28f55347a266f7b0fc1260b8d10e"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "c82728ed3c4f85cd870e73b4516ebe5b4667722a3a07751730f253565920b757",
+      "compressedSha256": "e72381d2faad756e13003fed97c03a63579a7d73828307571e5628fdadd7fb7a"
+    },
+    {
+      "path": "7-functional.json.gz",
+      "sha256": "0323b5052f00165a5fd5137420166e9d6a6487cb18033c2777e3077149556041",
+      "compressedSha256": "38cfefc039195daf6d1c3402f0918bd8ddd682251540159f54019020d2e9ecd4"
+    }
+  ]
+}
