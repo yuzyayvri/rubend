@@ -8,8 +8,9 @@ import {proxyTarget} from "./support/ui-proxy.mjs";
 import {nativeIdentity} from "../bench/startup-measure.mjs";
 import {inputs} from "../scripts/manifest.mjs";
 import {createHash} from "node:crypto";
+import {deliveryPin} from "../bench/delivery-pins.mjs";
 
-const mode=process.argv[2],runId=process.argv[3];assert.ok(["normal","delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback","delivered","design-sheet","design-ledger"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4);if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);
+const mode=process.argv[2],runId=process.argv[3],deliveryRunId=process.argv[4]??"u01-delivery-v1";assert.ok(["normal","delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback","delivered","design-sheet","design-ledger"].includes(mode));assert.ok(process.argv.length===3||process.argv.length===4||(process.argv.length===5&&mode==="delivered"));if(runId)assert.match(runId,/^u0[01]-live-[a-z0-9-]+$/);assert.match(deliveryRunId,/^u01-delivery-[a-z0-9-]+$/);
 const directory=mkdtempSync(resolve(tmpdir(),"rubend-ui-fixture-")),env={...process.env,PORT:"0",RUBEND_BINARY:resolve("build/rubend")};
 const evidence=runId?resolve("build/evidence/next-plan",runId.startsWith("u01")?"U01":"U00",runId):null;if(evidence){assert.equal(existsSync(evidence),false);mkdirSync(evidence,{recursive:true});}
 const state={format:"rubend-ui-fixture-session-v1",mode,state:"starting",startedAt:new Date().toISOString(),wrapper:nativeIdentity(process.pid),sourceHashes:inputs(),native:[]};
@@ -24,7 +25,7 @@ if(mode==="delayed"){
 }
 let program=process.execPath,args=["apps/server.mjs"];
 if(mode==="delivered"){
-  const d=JSON.parse(readFileSync("build/experiments/u01-delivery-v1/delivery.json","utf8"));assert.equal(d.passed,true);assert.equal(d.artifactId,12205837803);assert.equal(d.privateStore,resolve("build/experiments/u01-delivery-v1/store-root"));assert.match(d.logicalStorePath,/^\/nix\/store\/[a-z0-9]{32}-rubend-[A-Za-z0-9._-]+$/);
+  const d=JSON.parse(readFileSync(resolve("build/experiments",deliveryRunId,"delivery.json"),"utf8")),pin=deliveryPin(d.pinName);assert.equal(d.passed,true);for(const k of["runId","artifactId","commit","zipSha256"])assert.equal(d[k],pin[k],"Delivered identity mismatch: "+k);assert.equal(d.privateStore,resolve("build/experiments",deliveryRunId,"store-root"));assert.match(d.logicalStorePath,/^\/nix\/store\/[a-z0-9]{32}-rubend-[A-Za-z0-9._-]+$/);
   const build=d.privateStore+d.logicalStorePath+"/share/rubend/build",manifest=JSON.parse(readFileSync(build+"/manifest.json","utf8"));assert.deepEqual(manifest.sourceHashes,inputs());assert.equal(createHash("sha256").update(readFileSync(build+"/rubend")).digest("hex"),manifest.nativeSha256);state.delivery={artifactId:d.artifactId,logicalStorePath:d.logicalStorePath,privateStore:d.privateStore,hostStoreMounted:false,repositoryMounted:false};
   program="bwrap";args=["--unshare-user","--uid","0","--gid","0","--unshare-pid","--die-with-parent","--new-session","--ro-bind",d.privateStore+"/nix","/nix","--proc","/proc","--dev","/dev","--tmpfs","/tmp","--dir","/work","--chdir","/work","--clearenv","--setenv","HOME","/tmp","--setenv","TMPDIR","/tmp","--setenv","PORT","0",d.logicalStorePath+"/bin/rubend"];
 }
