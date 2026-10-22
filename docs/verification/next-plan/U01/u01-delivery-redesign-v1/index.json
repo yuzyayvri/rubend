@@ -1,0 +1,33 @@
+{
+  "format": "rubend-redesigned-delivery-v1",
+  "passed": true,
+  "checkRevision": "0bc4435",
+  "artifactRevision": "369f480ca8a0af485c2c7b2c885bc9f09f8dc869",
+  "artifactId": 12429624367,
+  "githubRun": 39787894581,
+  "zipSha256": "ad938f114f6f565c269ba746d26f26aa3193cae974ad9808e5fec4adcc8e9dbe",
+  "sourceSeals": 1479,
+  "finishedAt": "2026-10-22T16:40:16.272Z",
+  "closurePaths": 67,
+  "verifiedDeliveryChecksums": 6,
+  "verifiedWebAssets": ["index.html", "style.css", "favicon.svg"],
+  "hostStoreMounted": false,
+  "repositoryMounted": false,
+  "environmentCleared": true,
+  "installedHttpAndNativeReplay": true,
+  "supervisorShutdownRepeats": 3,
+  "proofToolchainChecks": 16,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "archives": [
+    "0-u01-delivery-redesign-v1-plan.json.gz",
+    "1-status.json.gz",
+    "2-u01-delivery-redesign-v1-focused.json.gz",
+    "3-u01-delivery-redesign-v1-delivery.json.gz",
+    "4-provenance.json.gz",
+    "5-focused.json.gz",
+    "6-delivery.json.gz",
+    "7-supervisor.json.gz"
+  ]
+}

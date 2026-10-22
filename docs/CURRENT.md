@@ -11,14 +11,24 @@ Yuzy explicitly requested pushing after the run on October 22. Main
 fast-forwarded to 369f480, and GitHub confirmed all 23 outgoing commits Verified.
 GitHub CI run 39787894581 subsequently passed at that same revision.
 
-The next local queue is `u01-delivery-redesign-v1`. It pins that successful
-run and artifact 12429624367, checks the actual ZIP and delivered checksums,
-imports into a fresh private store, checks installed web assets, and exercises
-installed HTTP/native replay and three supervisor shutdowns. No package build
-or large table is repeated. Expected duration is five minutes, capped at
-twelve, with three GiB and one low-priority lane. Read the saved queue results
-before further tracked edits. Current-package browser acceptance remains
-pending until its actual installed entrypoint has been driven in a hidden tab.
+The `u01-delivery-redesign-v1` queue passed with 1,479 matching seals, 67 imported
+closure paths, six delivery checksums, installed web assets, HTTP/native replay,
+and three clean supervisor shutdowns. Artifact 12429624367 is the actual
+redesigned package from successful CI run 39787894581. Read
+docs/verification/next-plan/U01/u01-delivery-redesign-v1/index.json.
+The actual installed entrypoint now also passes hidden-browser solve/export,
+canonical playback, cancellation/resubmission, invalid input isolation, theme
+persistence, search-time keyboard locking, repeated seeks, mobile move-rail
+tracking, and sticker-editor checks. It runs without the host store or repository
+mounted. All owners and IPC stop cleanly; the temporary tab closes and viewport
+resets. Read docs/verification/next-plan/U01/u01-installed-redesign-gui-v1/index.json.
+
+The next queue is `u01-installed-checks-v1`, expected two minutes with a
+three-minute cap. It rechecks ZIP/assets, saved browser replay and cleanup,
+focused tests, and unchanged proof gates. No package rebuild, large table,
+full regression repeat, or new browser run is needed. Read its saved results
+before further tracked edits. Production sources remain unchanged from the
+fully tested redesigned build.
 Clipboard/download and raw timing remain open. New law statements still need
 separate approval. No new push, merge, release, or deployment is authorized by
 the completed October 22 push request.

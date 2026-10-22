@@ -6,7 +6,7 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
-| U01. Application and delivery | Redesign, keyboard repair, live desktop/narrow checks, full regression, and proof gates passed and were pushed to main on request. Current GitHub CI passed. Fresh redesigned-package import and installed native/HTTP acceptance is queued. Older package GUI checks remain source-bound to the older UI. Clipboard/download verification stays open. |
+| U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks are queued. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | Not implemented in this programme. Exact proof statements are drafted, not approved as new laws. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
@@ -15,10 +15,10 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | U07. Holdout and competitors | Not started. The release holdout remains unopened. |
 
 The latest completed delivery evidence is
-[the isolated CI-package archive](U01/u01-delivery-v1/index.json).
+[the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
 The latest browser evidence is
-[the redesigned local UI archive](U01/redesign-final-v1/index.json).
-The prior delivered package does not contain the new UI or keyboard fix.
+[the installed redesigned-package archive](U01/u01-installed-redesign-gui-v1/index.json).
+The earlier delivered package remains historical and is not relabeled.
 Clipboard denial and downloaded-file verification are explicitly unverified.
 The [recorded observation gap](../../issues/browser-clipboard-download-acceptance.md)
 must not be hidden by a passing fixture or proof check.
@@ -47,9 +47,10 @@ All 1,493 source seals and receipt digests verify, with no resource stop and
 the worker gone. Its [archive](U01/u01-redesign-v1/index.json) preserves the
 completed run. Main and successful GitHub CI run 39787894581 share revision
 369f480. All 23 commits in the explicitly requested push are GitHub Verified.
-The next queue is `u01-delivery-redesign-v1`, expected five minutes with a
-twelve-minute cap. It downloads and imports the new artifact without rebuilding
-the package or regenerating tables. Installed-package GUI follows on the next
-ping. Current acceptance is not inferred from the older package receipts.
+The `u01-delivery-redesign-v1` queue passed with 1,479 matching seals and no
+resource stop. The actual current installed package subsequently passed GUI
+acceptance checks, not inferred from the older package receipts. The next queue
+is `u01-installed-checks-v1`, expected two minutes with a three-minute cap. It
+checks saved replay/cleanup, ZIP/assets, focused tests, and existing proof gates.
 The [redesign record](../../design/REDESIGN-2026-10-22.md) explains the two
 working directions and selection. No search-strength gain is claimed.
