@@ -38,8 +38,15 @@ native/JavaScript checksum parity and unchanged laws pass. The actual Goal guard
 admits restricted Subgroup finishing only. No distance table, pruning or
 production change. Read docs/verification/next-plan/U04/PHASE2-PROJECTION.md
 and docs/verification/next-plan/U04/u04-phase2-v1/index.json.
-Next, compare native corner-class recomputation with a mapper from the cached
-full corner-permutation coordinate. Keep initialization and memory separate.
+The mapper preflight passed `u04-mapper-v1`, canonically verified with 2,209 seals
+and four receipts, worker gone/no resource stop. Every entry, both actual data
+corruptions, 30 work guards and native checksums pass. The timing comparison is
+inconclusive. All samples are below 100 ms and two A/A cohorts exceed the noise
+limit. The six-sample profile cannot resolve the full limiter. Prepare a separate
+50-million-probe duration check with unchanged helper algorithms and floors.
+Do not rerun the short comparison unchanged. Read
+docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
+docs/verification/next-plan/U04/u04-mapper-v1/index.json.
 U06 video/operator/package/general-performance gates remain open.
 No push/merge/deploy or new-law authority.
 
