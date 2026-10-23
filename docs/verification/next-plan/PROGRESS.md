@@ -7,7 +7,7 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | Corner routing confirmed with 1,741 seals. All 72 `cp`/`ep`/`eh`/`eo` update statements pass both checkers, eight proof-rejection controls and backend checks. Their confirmation follows. Corner orientation, typed packing, inverse, input reachability and loaded bounds remain open. Deadline quality and performance acceptance remain open after inconclusive development A/A. |
+| U02. Existing-bound inference and coordinate reuse | Four-field routing confirmed with 1,762 seals. Typed packing now proves all forty component readbacks and its actual facelet view; both checkers, six rejection controls and backend checks pass. Confirmation follows. Move preservation, corner arithmetic, inverse, input reachability and loaded bounds remain open. Deadline quality and performance acceptance remain inconclusive. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
 | U05. Exact-context failure cache and partitioned search | Not started. No incomplete search is cached as a completed failure. |
@@ -18,7 +18,7 @@ Autonomous continuation now uses the existing Codex thread heartbeat
 `continue-rubend-roadmap`, every thirty minutes, at Yuzy's explicit October 23
 request. It reads detached receipts first and does not duplicate running work.
 This replaces only the previous no-wakeup instruction, not other authority
-gates. The next queue is `u02-packed-routing-all-v1`; see [its fixed scope](U02/PACKED-MOVE-FIELDS.md).
+gates. The next queue is `u02-typed-packing-v1`; see [its fixed scope](U02/TYPED-PACKING.md).
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
