@@ -101,9 +101,14 @@ controls and unchanged proof gates pass. Explicit Nissy slack is zero, not the
 CLI default twenty. No relative-speed or formal-optimality result. Read
 docs/verification/next-plan/U07/REFERENCE-CALIBRATION.md and
 docs/verification/next-plan/U07/u07-reference-v1/index.json and
-docs/issues/nissy-optimal-slack.md. Next, prepare one explicit cold-process
-lifecycle with owned cancellation/cleanup and deadline-arrival checks for the
-retained Rubend binary and calibrated references. Keep the release holdout closed.
+docs/issues/nissy-optimal-slack.md. The cold-lifecycle archive verifies 2,481 seals
+and three receipts, worker gone/no resource stop. All six process controls and
+nine real shallow calibrations pass with replay-valid paths. Real children exit
+without forced termination; all three Rubend native owners and IPC directories
+are gone. Unchanged proof/toolchain gates pass. The owned-stdin shutdown defect
+and its failing source are preserved. Read
+docs/verification/next-plan/U07/COLD-LIFECYCLE.md. No pilot/release evaluation or
+relative-performance acceptance is included.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and

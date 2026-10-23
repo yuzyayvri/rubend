@@ -1,0 +1,60 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-cold-v1",
+  "revision": "79d243fc19b2dcde2ab216969ceb6232401de9e4",
+  "sourceSeals": 2481,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T23:17:37.735Z",
+  "finishedAt": "2026-10-23T23:18:28.261Z",
+  "archives": [
+    {
+      "path": "0-u07-cold-v1-plan.json.gz",
+      "sha256": "709ea90e6f2f1bf660dc5b88331e05efb708272bbac1338dd8b6b379b76356e4",
+      "compressedSha256": "c8abe47444e4ea26ca2ee6260b01bf6d52ae3dd28c06e467ad2a909eef2817e1"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "06fe54e07f1f0b2bc4113dec4578361f935292fe77f3fa7b27e01670bf32c11b",
+      "compressedSha256": "f0dd5a9fb448df13377bf903effb0b920071bcd1082bcd4b7e8a490f83d6f812"
+    },
+    {
+      "path": "2-u07-cold-v1-preflight.json.gz",
+      "sha256": "c29bb417d24b7eb42614ab67e7c153bf9c1a3b58daec4b06c32e06d17a8a167f",
+      "compressedSha256": "172c97cb00124040d6151dc0fa66f8f8670012b3500636ecc1080c0ae07af59a"
+    },
+    {
+      "path": "3-u07-cold-v1-calibrate.json.gz",
+      "sha256": "a3462c802c4f0179221ac6fa53c3637b6fecdd9e0a7732d48b64f7e9e89267b4",
+      "compressedSha256": "c51932f5fab4fe9a4e10c87a8ccd20b41c813dc3c606989b18fb976e81fc96c7"
+    },
+    {
+      "path": "4-u07-cold-v1-confirm.json.gz",
+      "sha256": "a7bc81bd003e39b89539cc4ba12e822b6c20e6a7afaf268dbce3363bbddbc084",
+      "compressedSha256": "10b97b303b5118fbcaf5fc888a505cc0583eeaf4273d079ea2cd3b5d1e801229"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "63248766bb410c1628bb693d209547dc212ec19b329e7b3813b867608a05f944",
+      "compressedSha256": "d14348be2eff1513ffd9e2f81f8d92caf3204df77d74df3b703c5c6241ae8c23"
+    },
+    {
+      "path": "6-controls.json.gz",
+      "sha256": "7489ad9149243d003e34c0b84f6d79a13139e084e2cd8c14647f5824d2b8b358",
+      "compressedSha256": "a7b153572450af030e33f225bb79fed61889f573de39a7875789b52a3eb60e4f"
+    },
+    {
+      "path": "7-observation.json.gz",
+      "sha256": "ed498684788badaa679a34755340cf821b16f3396f64a3f697985327c70f942a",
+      "compressedSha256": "07f97561065cf72ba888ad6759f77359162fe803d0f8f6aaa38c8e102e0b98b1"
+    },
+    {
+      "path": "8-ready.json.gz",
+      "sha256": "d33285626fb1eb7361305736898f65602762420b4a8ba33d570376863725cbd0",
+      "compressedSha256": "4e45d09f27cf99f27ac00a7c1b937c23006a4bf8004cfe2bbd67f8c0985bc93f"
+    }
+  ]
+}
