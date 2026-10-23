@@ -21,8 +21,18 @@ for expected reasons. The accepted app is unchanged. Read
 docs/verification/next-plan/U06/MESH-RETENTION-PREFLIGHT.md and
 docs/verification/next-plan/U06/u06-retain-preflight-v1/index.json.
 
-No active queue. Next, freeze and run the old/retained browser comparison with
-pose, cadence, paint and recovery guards. No performance result yet.
+Retained-scene browser comparison passed evidence verification with 2,171 seals,
+three receipts and fifteen partial records. Pose/color/identity/recovery and
+zero-idle checks pass, but cadence acceptance is inconclusive. Three of five A/A
+cohorts exceed the noise floor, up to16.37percent; candidate cadence also misses
+some floors. Keep retention private/unpromoted. Do not rerun unchanged cohorts
+for luck. Accepted app unchanged. Read
+docs/verification/next-plan/U06/MESH-RETENTION-COMPARISON.md and
+docs/verification/next-plan/U06/u06-render-retain-v1/index.json.
+
+No active queue. Next, ground U04's phase-two projection in the actual search and
+coordinate code, then prepare a bounded pilot without new domain laws or a large
+table build. U06 video/operator/package/general-performance gates stay open.
 Operator review, video, package rollout and general performance acceptance remain
 open. No push/merge/deploy or new-law authority.
 

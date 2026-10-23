@@ -1,0 +1,18 @@
+{
+  "format": "rubend-render-retain-spec-v1",
+  "cohorts": 5,
+  "settleMs": 500,
+  "idleMs": 2000,
+  "orbitMs": 1200,
+  "turnMs": 80,
+  "turns": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+  "setUpdates": 16,
+  "hostWidth": 720,
+  "hostHeight": 520,
+  "arms": ["control", "aa", "retained"],
+  "maximumActiveP95Ratio": 1.05,
+  "minimumActiveRateRatio": 0.95,
+  "maximumPaintMs": 50,
+  "productChanged": false,
+  "performanceAcceptance": false
+}
