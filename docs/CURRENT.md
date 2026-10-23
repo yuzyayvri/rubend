@@ -34,10 +34,28 @@ canonical-color checks pass. Temporary server stopped, renderer disposed and
 owned hidden tab closed. Read docs/verification/next-plan/U06/RENDERING-BASELINE.md
 and docs/verification/next-plan/U06/u06-render-baseline-v1/index.json.
 
-Next, implement demand scheduling alone and compare against the sealed old scene
-in five alternating browser cohorts. Keep mesh retention separate. Full-app
-recovery, operator review and performance promotion remain open. The app browser
-is outside the server's resource cgroup. No browser CPU/RSS enforcement claim.
+U06 demand rendering passed canonical verification with 2,075 seals, three
+receipts and all fifteen partial records, worker gone and no resource stop.
+Control submits 113–117 idle frames per two seconds; demand submits zero in all
+five samples. A/A and active cadence floors pass, with no general speed claim.
+All 303 canonical-color checks, 315 repaint checks and fifteen WebGL recovery
+cycles pass. Normal candidate repaint peaks at 19 ms. Mesh rebuilding remains
+unchanged. `just check` and focused tests pass. Owned hidden tab is closed.
+Read docs/verification/next-plan/U06/DEMAND-RENDERING.md and
+docs/verification/next-plan/U06/u06-render-demand-v2/index.json.
+
+V1 failed its 240-second browser completion deadline. All 2,073 source seals,
+executed receipts and uncommitted candidate sources are preserved under
+docs/verification/next-plan/U06/u06-render-demand-v1-failed/index.json.
+It has no captured browser result and no performance verdict. The v2 recovery
+saves completed samples incrementally and uses bounded browser milestone waits.
+Workload, resource caps and acceptance floors are unchanged.
+
+Next, rebuild the app and run the full local regression before its hidden browser
+acceptance lanes. The prebuilt app is not rebuilt for these edits yet. Full-app
+recovery, operator review and performance promotion remain open. Keep mesh retention separate.
+The app browser is outside the server's resource cgroup. No browser CPU/RSS
+enforcement claim. No new law or proof label.
 
 U04 move ordering/phase-two projection, U06 bridges/UI efficiency and U07 final
 comparisons remain open. No default, application/CPU gain, publication or large

@@ -1,0 +1,81 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u06-render-demand-v1",
+  "revision": "616f7d5072eea0cff44e54f3ae273049e71bfb40",
+  "sourceSeals": 2073,
+  "workerGone": true,
+  "executedJobs": 2,
+  "plannedJobs": 3,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read measure.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 12,
+  "browserResultCaptured": false,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-render-demand-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/0-u06-render-demand-v1-plan.json.gz",
+      "bytes": 280740,
+      "compressedBytes": 99129,
+      "sha256": "3f96c38118c15c25ae39e47136dda11ff2214549e88a3476812fdf1ae35e0d7b",
+      "compressedSha256": "b3fe3aefff2a3ca933f396204458dc489e7e5ad2b10a073a09c8af4f8efc7add",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-render-demand-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/1-status.json.gz",
+      "bytes": 1374,
+      "compressedBytes": 645,
+      "sha256": "1cdc9be8b5e55fe3d07f012e4e52320ac6f9d28d62592bf3a72dd8c293bcfe48",
+      "compressedSha256": "fd55c2850e537003291362008745e2e6719ba98278fb1a50dab058124db5ebc2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-render-demand-v1-prepare.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/2-u06-render-demand-v1-prepare.json.gz",
+      "bytes": 1529,
+      "compressedBytes": 846,
+      "sha256": "70397763bb84866db209f05ab8599d4a8637d27783921196008a9943493db0e5",
+      "compressedSha256": "c741e7854556cbdcdaf0343a570d5b255a548ffdf61a6857014c5f439cf6bc84",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-render-demand-v1-measure.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/3-u06-render-demand-v1-measure.json.gz",
+      "bytes": 1783,
+      "compressedBytes": 893,
+      "sha256": "4303aa0152b898a881e62f33528dc5ef155523cfe67de023dc60bff98cb51be8",
+      "compressedSha256": "e6cc40cfb391dbaff6cceff7cf0473cd87315ff41beeb4694af4c5f7bd5d51e0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-render-demand-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/4-failed-sources.json.gz",
+      "bytes": 151686,
+      "compressedBytes": 51333,
+      "sha256": "50838556898c7127cea0319a3cbc8108af93afbe22b683b7d652d4efc58ab3db",
+      "compressedSha256": "2e7feb28fe69bc8db410be6ff51f6aa208de1b92843c10f30aaf54cf9479c6db",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-render-demand-v1/compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/5-compile.json.gz",
+      "bytes": 13725,
+      "compressedBytes": 6540,
+      "sha256": "fb770305779ee67f8cdd24ca659ddd5c17db7fad918d154cca2584d7d4a4092e",
+      "compressedSha256": "54200666d84569226a6b7eedea1e40109669b0234360aa42f2c858f703e55415",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-render-demand-v1/ready.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-render-demand-v1-failed/6-ready.json.gz",
+      "bytes": 150,
+      "compressedBytes": 150,
+      "sha256": "44ef5a19ab091aedb7c40f27c1ccbea2023f779dfc1c877588db18f55e895d82",
+      "compressedSha256": "562a96b75843e3d08cc14195d95eff8b8a9babb333b78866aad287a7026e58ab",
+      "roundtripPassed": true
+    }
+  ]
+}

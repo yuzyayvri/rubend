@@ -1,4 +1,4 @@
-import { CubeScene, faceColors } from "./scene.mjs";
+import { CubeScene, faceColors, renderLabel } from "./scene.mjs";
 import {solveRecord} from "../export.mjs";
 import {refineSolution} from "../solve-state.mjs";
 import {ModelClient} from "./model-client.mjs";
@@ -107,7 +107,7 @@ async function session(){
 }
 await session();
 window.rubendDiagnostics=()=>({facelets,revision,solution:solution?{...solution}:null,step,searching,playing,renderer:scene?.stats()??null,model:"Bend 2",modelState:modelClient.state,pendingModelRequests:modelClient.pending.size,lastRun});
-window.addEventListener("pagehide",()=>{sessionClosed=true;clearTimeout(sessionTimer);modelClient.close();searchController?.abort();},{once:true});
+window.addEventListener("pagehide",()=>{sessionClosed=true;clearTimeout(sessionTimer);modelClient.close();searchController?.abort();scene?.dispose();},{once:true});
 window.addEventListener("pageshow",event=>{if(event.persisted)location.reload();});
-setInterval(()=>{const stats=scene?.stats();if(stats?.averageFrameMs){$("render-stat").textContent=`Rendering: ${(1000/stats.averageFrameMs).toFixed(0)} fps · p95 ${stats.p95FrameMs.toFixed(1)} ms · ${stats.frames} recent frames.`;}else $("render-stat").textContent="2D controls remain available without a 3D renderer.";},1000);
+setInterval(()=>{$("render-stat").textContent=renderLabel(scene?.stats());},1000);
 sync();

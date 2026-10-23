@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync,readdirSync} from "node:fs";
+import {resolve} from "node:path";
+import {createHash} from "node:crypto";
+import {execFileSync} from "node:child_process";
+
+assert.equal(process.argv.length,3);const id=process.argv[2];assert.match(id,/^u0[0-7]-[a-z0-9-]+$/);
+const root=process.cwd(),directory=resolve("build/experiments",id),destination=resolve("docs/verification/next-plan","U"+id.slice(1,3),id+"-failed"),hash=p=>createHash("sha256").update(readFileSync(p)).digest("hex"),read=p=>JSON.parse(readFileSync(p,"utf8")),planPath=resolve("build/evidence",id+"-plan.json"),plan=read(planPath),state=read(resolve(directory,"status.json"));
+assert.equal(plan.id,id);assert.equal(plan.root,root);assert.equal(state.state,"failed");assert.equal(state.planSha256,hash(planPath));assert.deepEqual(read(resolve(directory,"plan.json")),plan);assert.equal(execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),plan.revision);
+for(const[p,h]of Object.entries(plan.sourceHashes)){assert.ok(resolve(p).startsWith(root+"/"));assert.equal(hash(p),h,"Failed-run source changed before preservation: "+p);}
+let worker=null;try{const raw=readFileSync("/proc/"+state.worker.pid+"/stat","utf8");worker=raw.slice(raw.lastIndexOf(")")+2).trim().split(/\s+/)[19];}catch(error){assert.equal(error.code,"ENOENT");}assert.notEqual(worker,state.worker.startTicks,"Failed worker is still alive");assert.ok(state.jobs.length>0&&state.jobs.length<=plan.jobs.length);
+const records=[planPath,resolve(directory,"status.json")];
+for(let i=0;i<state.jobs.length;i++){
+  const row=state.jobs[i],job=plan.jobs[i],receipt=read(row.receipt);assert.equal(row.id,job.id);assert.equal(receipt.name,id+"-"+job.id);assert.equal(receipt.cwd,root);assert.deepEqual(receipt.command,job.command);for(const k of["memoryMiB","seconds","cpus"])assert.deepEqual(receipt.limits[k],job[k]);assert.equal(hash(receipt.command[0]),receipt.binarySha256);assert.equal(receipt.exitCode,row.exitCode);assert.equal(receipt.signal,row.signal);
+  if(i<state.jobs.length-1){assert.equal(row.state,"passed");assert.equal(row.exitCode,0);assert.equal(receipt.stoppedFor,null);assert.equal(hash(row.receipt),row.receiptSha256);}else{assert.equal(row.state,"failed");assert.notEqual(row.exitCode,0);}records.push(row.receipt);
+}
+const compile=read(resolve(directory,"compile.json"));assert.equal(compile.passed,true);if(compile.bundle){assert.equal(hash(compile.bundle),compile.bundleSha256);for(const[p,h]of Object.entries(compile.dependencies))assert.equal(hash(p),h);}
+const dirty=execFileSync("git",["status","--porcelain=v1","-z","--untracked-files=all"],{encoding:"utf8"}).split("\0").filter(Boolean).map(line=>line.slice(3)).filter(p=>plan.sourceHashes[p]&&/^(apps|bench|tests|docs)\//.test(p)&&/\.(mjs|json|md)$/.test(p)),contents=Object.fromEntries(dirty.map(p=>[p,readFileSync(p,"utf8")]));
+const sourcePath=resolve(directory,"failed-sources.json");writeFileSync(sourcePath,JSON.stringify({format:"rubend-failed-source-snapshot-v1",revision:plan.revision,sourceHashes:Object.fromEntries(dirty.map(p=>[p,plan.sourceHashes[p]])),contents})+"\n",{flag:"wx"});records.push(sourcePath,resolve(directory,"compile.json"),resolve(directory,"ready.json"));
+const partials=readdirSync(directory).filter(p=>/^progress-\d{2}\.json$/.test(p));for(const name of readdirSync(directory).filter(p=>/^(?:progress-\d{2}|failed-observation|observation)\.json$/.test(p)))records.push(resolve(directory,name));
+mkdirSync(destination,{recursive:true});const archives=records.map((p,i)=>JSON.parse(execFileSync(process.execPath,["bench/archive-evidence.mjs",p,resolve(destination,i+"-"+p.split("/").at(-1)+".gz")],{encoding:"utf8"})));
+const result={format:"rubend-failed-background-preservation-v1",passed:false,preserved:true,id,revision:plan.revision,sourceSeals:Object.keys(plan.sourceHashes).length,workerGone:true,executedJobs:state.jobs.length,plannedJobs:plan.jobs.length,failure:state.error,dirtySourceFiles:dirty.length,browserResultCaptured:records.some(p=>/\/(failed-observation|observation)\.json$/.test(p)),partialSamples:partials.length,performanceAcceptance:false,independentReview:false,archives};writeFileSync(resolve(destination,"index.json"),JSON.stringify(result,null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({preserved:true,passed:false,id,sourceSeals:result.sourceSeals,dirtySourceFiles:dirty.length,index:resolve(destination,"index.json")}));
