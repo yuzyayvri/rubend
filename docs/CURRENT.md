@@ -93,6 +93,18 @@ docs/verification/next-plan/U04/u04-seed-bank-v1/index.json. Next, freeze U/R/F
 single-bank arms and run family validation plus matched-work pilot comparison.
 Reuse the unchanged binary; do not claim strength from the functional guard.
 
+The seed-quality screen passed canonical verification with 1,990 seals, five
+receipts, no stop and worker gone. All three arms fail the frozen quality floor.
+U/F have zero distinct wins and two losses; R has one fast-mode20-to19 win and
+the same two exact-bound losses,13-to0 and14-to13. Development was skipped.
+The pilot reconciles14,520snapshots,9,078original replays,1,840child replays and
+176million work steps. Nineteen of twenty A/A pairs are noisy. No promotion.
+Read docs/verification/next-plan/U04/SEED-BANK-QUALITY.md and
+docs/verification/next-plan/U04/u04-seed-quality-v1/index.json. Next, freeze a
+separate fast-only R refinement, reuse its saved pilot strata and confirm on
+development512–519 without seeding exact requests. Begin non-pruning U05
+duplicate-work preparation separately; U04 move ordering/projection stay open.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
