@@ -11,6 +11,7 @@ export function simplify(n){
   return{value,proof:children==="{==}"?step:step==="{==}"?children:"Equal.trans(Bool, "+text(n)+", "+text(middle)+", "+text(value)+", "+children+", "+step+")"};
 }
 export function parse(source,variables=["cp","co","ep","eh","eo"]){
+  const bitNames=variables.flatMap(v=>Array.from({length:32},(_,i)=>v+i));assert.equal(new Set(bitNames).size,bitNames.length,"Ambiguous bit variable names");
   const tokens=source.match(/\.\|\.|\.&\.|\.\^\.|<<|>>|[():]|\d+n?|[A-Za-z_][A-Za-z_0-9]*/g);assert.equal(tokens.join(""),source.replace(/\s/g,""),"Unsupported packing syntax");let at=0;
   const precedence={".|.":1,".^.":2,".&.":3,"<<":4,">>":4};
   function expression(min=0){

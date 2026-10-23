@@ -8,4 +8,5 @@ for(const [source,expected]of [["((word >> 4n) .&. 15 : U32)",w=>(w>>>4)&15],["(
   for(const word of [0,1,255,256,2147483648,4294967295,305419896]){const pack=nodes=>nodes.reduce((n,b,i)=>n+(evaluate(b,word)?2**i:0),0);assert.equal(pack(bits),expected(word));assert.equal(pack(simple),expected(word));checks++;}
 }
 assert.throws(()=>parse("word + 1",["word"]));assert.throws(()=>parse("other",["word"]));assert.throws(()=>parse("word << word",["word"]));assert.throws(()=>simplify(["not","word0"]));
-console.log(JSON.stringify({passed:true,semanticsChecks:checks,rejections:4}));
+assert.throws(()=>parse("v1",["v1","v11"]),/Ambiguous bit variable names/);assert.throws(()=>parse("word",["word","word"]),/Ambiguous bit variable names/);assert.equal(parse("vA",Array.from({length:12},(_,i)=>"v"+String.fromCharCode(65+i)))[0],"vA0");
+console.log(JSON.stringify({passed:true,semanticsChecks:checks,rejections:6}));
