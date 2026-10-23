@@ -14,7 +14,15 @@ model-failure workflows pass. Viewport reset, owned tabs closed and all native,
 server and IPC owners cleaned up. Review images are saved at
 docs/verification/next-plan/U06/review-demand/index.json.
 
-No active queue. Next, prototype mesh retention separately from idle scheduling.
+Retained-scene preflight passed canonical verification with 2,152 seals/two
+receipts, worker gone/no stop. All eighteen animations and 23 final pose/color
+checks pass. Candidate identities stay stable; all three actual corruptions fail
+for expected reasons. The accepted app is unchanged. Read
+docs/verification/next-plan/U06/MESH-RETENTION-PREFLIGHT.md and
+docs/verification/next-plan/U06/u06-retain-preflight-v1/index.json.
+
+No active queue. Next, freeze and run the old/retained browser comparison with
+pose, cadence, paint and recovery guards. No performance result yet.
 Operator review, video, package rollout and general performance acceptance remain
 open. No push/merge/deploy or new-law authority.
 

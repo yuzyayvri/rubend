@@ -1,6 +1,6 @@
 # Approved roadmap progress
 
-Updated October 23, 2026, Asia/Manila. No overall completion or new speedup
+Updated October 24, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
@@ -23,7 +23,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U03. Six-edge PDB and compression | Native small-table pilot passed with 1,911 verified seals. Six one-to-three-edge tables equal the independent reference across 22,224 entries and 400,032 directed edges. Refusal/corruption controls pass. No six-edge build, production bound, compression or performance promotion. |
 | U04. Ordering, premoves, and phase-two projection | Fixed-work fast-only R coverage gains remain scoped to that experiment. Native deadline confirmation fails the floor with zero wins and four longer answers among 80 fresh pairs. Archive verifies 2,041 seals and 552 candidate replays. Timing control is noisy. No policy integration/default. Move ordering/projection remain open. |
 | U05. Exact-context failure cache and partitioned search | Native non-pruning observation passed with 2,026 verified seals. All saved control states match. One repeat among 52,567 completed spans on four roots does not justify a cache on this workload. No cache, partitions, NP06/NP07 approval or pruning. |
-| U06. Proof bridges and UI efficiency | Demand rendering passes scene gates, rebuilt recipe coverage and actual-app desktop/fallback/model-failure acceptance. GUI archive verifies 2,132 seals and clean owners/IPC. Review images saved. Mesh retention is next. Video/operator/package/general-performance and proof/data-linkage gates remain open. |
+| U06. Proof bridges and UI efficiency | Demand rendering passes scene/app gates; GUI verifies 2,132 seals and clean owners/IPC. Retention preflight verifies 2,152 seals, all 18 animations/23 pose checks and three actual corruption counterexamples. Accepted app unchanged; retained-scene browser comparison is next. Video/operator/package/general-performance and proof/data-linkage gates remain open. |
 | U07. Holdout and competitors | Not started. The release holdout remains unopened. |
 
 Autonomous continuation now uses the existing Codex thread heartbeat
