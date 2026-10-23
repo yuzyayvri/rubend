@@ -1,0 +1,65 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-axis-cost-confirm-v1",
+  "revision": "23d36f85eb7a88251a679d7df2b114716a867566",
+  "sourceSeals": 1645,
+  "jobs": 4,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-22T23:45:07.560Z",
+  "finishedAt": "2026-10-22T23:47:32.516Z",
+  "archives": [
+    {
+      "path": "0-u02-axis-cost-confirm-v1-plan.json.gz",
+      "sha256": "9ba714a8fa7b60688bee2443532d79a2653c2eba75d5a8f2223e2b5f17b99a5f",
+      "compressedSha256": "ff4638198856e1158476535f0a7b6d1dd65b91eeedf4cc1efef1b90351e21564"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "432c41b8047c374efabdfa7ddb82488255c0318ced31557f0c40558e53fff7f1",
+      "compressedSha256": "21e42955a31e922e2b63d3e6a1e5b12d656955557d71acae9e53183c42cb7885"
+    },
+    {
+      "path": "2-u02-axis-cost-confirm-v1-compile.json.gz",
+      "sha256": "aa4c9056944d71ff8bc07b1384073b4caf9b4e73d5848a537d7391597fd5f5b8",
+      "compressedSha256": "c8f81c12b400cb58793cb5c8e6029a77ed8585004f7b220dddfaedc78722f297"
+    },
+    {
+      "path": "3-u02-axis-cost-confirm-v1-profile.json.gz",
+      "sha256": "9f24dd88babf7f773d252a9eb4442ce754f68358908e8d2d91b77b938103744b",
+      "compressedSha256": "2c68bd16f6a4e40d6a8543d94b0f4d9dd0ec949721feb045a853a1d6cca13665"
+    },
+    {
+      "path": "4-u02-axis-cost-confirm-v1-measure.json.gz",
+      "sha256": "8a39e0a5bb954e8af92a7ea055e2e62937dd9286de21b8d5881d4cb4d3d98da4",
+      "compressedSha256": "9cddd5b6f298f2f8dac75604bf677a5969d29b8974889289c0df1b9f6c211936"
+    },
+    {
+      "path": "5-u02-axis-cost-confirm-v1-confirm.json.gz",
+      "sha256": "2dc414c3bd989fed4ac014ee836e2c851a91fd43ea49aabdd20e05af5a2cd754",
+      "compressedSha256": "990ed6089fbc1509320afa0f2424922009b93fe37ef763519a7c3fad3d362554"
+    },
+    {
+      "path": "6-compile.json.gz",
+      "sha256": "b7308e031582721108c2665ebda3f98095abefa9374ed299190bcf3c2dbe041c",
+      "compressedSha256": "f26daa2ddb70e38927b0bd0b2ef59b317caf1b7eae887c4e6ee9c241746924e3"
+    },
+    {
+      "path": "7-confirmation.json.gz",
+      "sha256": "052f7448c503f1fac4bd9355c91fdd6fd03d10e247f8139561f9782111ef1bf7",
+      "compressedSha256": "fd5b258ca44c9a72071d9118cc9f272e42ad0a87f838e42ab3dafbcbb17e6fe6"
+    },
+    {
+      "path": "8-cost.json.gz",
+      "sha256": "1b399db89c12075e45778736cd208cdaeb838f828856f3cd84d13d80190b41f7",
+      "compressedSha256": "59c7a22e8f0b888a0d0573d1d669a7eaa723e85b78e5dbbac3e73224e0db5016"
+    },
+    {
+      "path": "9-profile.json.gz",
+      "sha256": "05e30c56868cebc5b12c6029851e1f991ee7ed51410b195b966aab96465196ba",
+      "compressedSha256": "218ea98c02cca3e08bff1ce676db8591c90ac240ffd91fb83013537daccd569b"
+    }
+  ]
+}

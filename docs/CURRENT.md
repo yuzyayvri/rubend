@@ -82,10 +82,15 @@ cost queue passed with 1,631 matching seals and no resource stop. Fresh pilot
 A/A meets its gate. The observed A/B paired native-time ratio has median 0.8947,
 but its profiler mainly measures initialization. Overall performance acceptance
 is inconclusive; deadline quality is unmeasured. Read
-docs/verification/next-plan/U02/CACHED-AXIS-PILOT.md. The next queue is
-`u02-axis-cost-confirm-v1`, with four development cases, five-million-step
-measurements and a separate twenty-million-step profiler run. Expected duration
-is ten minutes, with a twenty-eight-minute cap. Inspect and archive its results
+docs/verification/next-plan/U02/CACHED-AXIS-PILOT.md. Development confirmation
+is archived with 1,645 matching seals. One same-binary cohort differs by 5.33
+percent, so A/B was skipped under the unchanged gate. Additional on-CPU time
+means scheduler delay alone does not explain it. The longer profile points
+to lookup/read code but does not identify the noise cause. The next queue is
+`u02-noise-v1`, a control-only scheduler/fault/frequency diagnostic that reuses
+the verified binary. It is not a fresh acceptance attempt. Expected duration
+is two minutes, with a three-minute cap. Read
+docs/verification/next-plan/U02/DEVELOPMENT-CONTROL-NOISE.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and concrete inverse reconstruction remain open.
