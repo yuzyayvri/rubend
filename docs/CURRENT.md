@@ -23,6 +23,18 @@ bounded ordering work does not require a U03 winner. U05 and final U07
 integration retain their actual dependencies. NP04–NP08, full database builds,
 publication and all other existing authority gates remain unchanged.
 
+U03's coordinate/action preflight passed with 1,865 matching seals, worker gone
+and no resource stop. The one-to-six-edge prototype passes 11,112 exhaustive
+small codecs, 200,016 small transitions, 18,432 sampled six-edge transitions
+and 22,800 full-cube projections against KPuzzle. Three actual corruptions
+have counterexamples. The archive is
+docs/verification/next-plan/U03/u03-edge-pattern-v1/index.json.
+No database is generated, no new law is assumed, and no native-cost or
+performance result is claimed. Read
+docs/verification/next-plan/U03/EDGE-PATTERN-PREFLIGHT.md. Inspect and archive
+the saved evidence. Next work is native feasibility/cost
+admission and separate U04 task-ordering diagnostics, not more U02 expansion.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
