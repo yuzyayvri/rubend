@@ -24,7 +24,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U04. Ordering, premoves, and phase-two projection | Projection codecs/actions and all 40,320 mapper entries pass. Longer mapper archive verifies 2,231 seals and native checksums. Samples now clear the duration floor, but two A/A cohorts still fail. No timing promotion or unchanged rerun. Prior fast-only gains stay experimental; native deadlines failed. No distance table, pruning or policy integration. |
 | U05. Exact-context failure cache and partitioned search | Finite prefix checks pass. Private ledger archive verifies 2,318 seals, forty transitions, 24 scope changes, twelve full ledgers, five corruptions and native parity. No actual worker-exhaustion certificate, global theorem, NP06/NP07 proof or pruning. |
 | U06. Proof bridges and UI efficiency | Demand rendering passes scene/app gates. Retention browser evidence verifies 2,171 seals, stable object identities, 870 poses and 513 colors, but A/A cadence is noisy in three cohorts. Retention stays private/unpromoted; accepted app unchanged. Video/operator/package/general-performance and proof/data-linkage gates remain open. |
-| U07. Holdout and competitors | Not started. The release holdout remains unopened. |
+| U07. Holdout and competitors | Comparison-record preflight verifies 2,332 seals, 45 fixture rows and negative controls. Existing reference artifacts are being prepared for bounded convention/replay calibration. No measured relative performance, final freeze or release-holdout evaluation. |
 
 Autonomous continuation now uses the existing Codex thread heartbeat
 `continue-rubend-roadmap`, every thirty minutes, at Yuzy's explicit October 23

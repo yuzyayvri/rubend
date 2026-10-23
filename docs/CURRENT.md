@@ -87,8 +87,15 @@ unchanged gates pass. Prefix evidence was reused. Read
 docs/verification/next-plan/U05/LEDGER-PREFLIGHT.md and
 docs/verification/next-plan/U05/u05-ledger-v2/index.json. No actual worker
 partitions, certified exhaustion, NP07 proof or production/global-bound change.
-Next, prepare U07 comparison-record/convention checks without opening the release
-holdout, generating competitor tables or selecting a new engine configuration.
+U07's comparison-record archive verifies 2,332 seals/two receipts, worker gone/no
+stop. All 45 fixture rows, fifteen record corruptions, ten aggregate corruptions,
+seven notation refusals and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U07/COMPARISON-RECORDS.md and
+docs/verification/next-plan/U07/u07-records-v1/index.json. No actual solver
+comparison, release holdout or final configuration freeze occurred.
+Next, prepare bounded calibration of the already installed reference tools.
+Nissy binary/table hashes match the earlier smoke record. Do not generate tables
+or equate its cold-process interface with the bundled reference's worker clock.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
