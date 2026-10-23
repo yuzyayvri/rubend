@@ -1,0 +1,21 @@
+import assert from "node:assert/strict";
+
+const fields=meta=>meta[1],key=meta=>JSON.stringify([meta[0],...fields(meta).filter((_,i)=>[0,1,3,4].includes(i))]),taskKey=task=>JSON.stringify([task[0],task[1][0],fields(task[1])[3]]),sameExceptNodes=(a,b)=>assert.deepEqual(a.filter((_,i)=>i!==6),b.filter((_,i)=>i!==6));
+export function analyzeContourEvents(events,snapshots,cases){
+  const groups=new Map(),completed=[],censored=[];for(const event of events){assert.equal(event.type,"contour");assert.ok(Number.isInteger(event.slice)&&event.slice>0);const k=event.id+"/"+event.slice;groups.set(k,[...(groups.get(k)??[]),event]);}
+  let consumed=0,totalWork=0,restarts=0,incumbents=0;
+  for(const item of cases){const rows=snapshots.filter(s=>s.id===item.id);assert.ok(rows.length>=2);let epoch=0;const trackers=new Map();
+    const fresh=(task,tainted=false)=>{const m=fields(task[1]);return{id:item.id,epoch,axis:task[0],stage:m[3],contour:key(task[1]),start:m[6],best:m[2],tainted};};
+    const stop=(tracker,nodes,reason)=>{assert.ok(nodes>=tracker.start);censored.push({...tracker,workSteps:nodes-tracker.start,reason});tracker.start=nodes;tracker.tainted=true;};
+    for(const task of rows[0].state[2])trackers.set(taskKey(task),fresh(task));
+    for(let i=1;i<rows.length;i++){const before=rows[i-1],after=rows[i],batch=groups.get(item.id+"/"+after.slice)??[],delta=after.nodes-before.nodes;consumed+=batch.length;totalWork+=delta;if(!delta){assert.equal(batch.length,0);continue;}assert.equal(before.status,0);const task=before.state[2][0];assert.ok(task);const id=taskKey(task),tracker=trackers.get(id);assert.ok(tracker);let cursor=fields(task[1]).slice();assert.equal(tracker.contour,key(task[1]));if(cursor[2]!==before.length){stop(tracker,cursor[6],"shared-incumbent-update");cursor[2]=before.length;tracker.best=before.length;}
+      for(const event of batch){assert.equal(event.axis,task[0]);assert.deepEqual(event.before[0],task[1][0]);assert.deepEqual(event.after[0],task[1][0]);const a=fields(event.before),b=fields(event.after);assert.equal(a.length,8);assert.equal(b.length,8);sameExceptNodes(a,cursor);assert.ok(a[6]>=cursor[6]);assert.equal(b[6],a[6]+1);assert.ok(b[6]<=fields(task[1])[6]+delta);assert.equal(a[7],0);assert.ok(b[2]<=a[2]);assert.equal(tracker.contour,key(event.before));
+        const crossing=key(event.before)!==key(event.after),incumbent=b[2]!==a[2];if(incumbent){incumbents++;stop(tracker,b[6],"local-incumbent-update");tracker.contour=key(event.after);tracker.best=b[2];}else if(crossing){assert.equal(a[3],b[3]);assert.equal(b[7],0);assert.equal(b[4],a[4]+1);assert.equal(b[0],a[0]<12?a[0]+1:0);assert.equal(b[1],a[0]<12?a[1]:a[1]+1);const record={...tracker,end:b[6],workSteps:b[6]-tracker.start,incumbentLength:a[2],exhaustionObserved:true};assert.ok(record.workSteps>0);if(tracker.tainted)censored.push({...record,reason:"interrupted-contour"});else completed.push(record);tracker.start=b[6];tracker.contour=key(event.after);tracker.tainted=false;tracker.best=b[2];}else if(b[7]!==a[7])stop(tracker,b[6],"terminal-without-contour-transition");cursor=b.slice();
+      }
+      const updated=after.state[2].find(t=>taskKey(t)===id),first=before.length===31&&after.length<31;if(updated){assert.equal(fields(updated[1])[6],fields(task[1])[6]+delta);if(!first){sameExceptNodes(fields(updated[1]),cursor);assert.equal(tracker.contour,key(updated[1]));}}else assert.notEqual(cursor[7],0,"Removed task needs terminal evidence");
+      if(first){restarts++;for(const old of before.state[2]){const t=trackers.get(taskKey(old));if(t)stop(t,taskKey(old)===id?fields(task[1])[6]+delta:fields(old[1])[6],"first-incumbent-restart");}epoch++;trackers.clear();for(const current of after.state[2])trackers.set(taskKey(current),fresh(current));}else if(!updated)trackers.delete(id);
+    }
+    for(const task of rows.at(-1).state[2]){const tracker=trackers.get(taskKey(task));if(tracker)stop(tracker,fields(task[1])[6],"budget-ended");}
+  }
+  assert.equal(consumed,events.length,"Unexpected event id or slice");return{completed,censored,eventCount:events.length,totalWorkSteps:totalWork,firstIncumbentRestarts:restarts,localIncumbentEvents:incumbents,exactPriorContourWorkMeasured:completed.length>0,completedFailureCertificates:false,treeNodeVisitsMeasured:false};
+}

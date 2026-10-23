@@ -43,6 +43,21 @@ Read docs/verification/next-plan/U03/NATIVE-COST-PLAN.md and
 docs/verification/next-plan/U04/ORDERING-OBSERVATION.md. Archive is
 docs/verification/next-plan/U03/u03-native-feasibility-v1/index.json.
 
+The small-table/exact-observer batch passed canonical verification with 1,911
+seals, four receipts, no resource stop and worker gone. Six native tables pass
+22,224 entry comparisons and 400,032 directed-edge/decreasing-path audits, plus
+three native refusal and three corruption controls. The U04 observer preserves
+all 330 canonical snapshots, replays 228 candidates, and measures 843 completed
+contours separately from 179 censored spans. These are work-step counts, not
+tree-node visits or completeness certificates. No speed promotion follows.
+Both pure modules pass BendTT and unchanged proof/toolchain checks pass. Read
+docs/verification/next-plan/U03/SMALL-TABLE-PILOT.md and
+docs/verification/next-plan/U04/EXACT-CONTOUR-OBSERVATION.md. Inspect and
+canonically archive completed results before tracked edits. Archive is
+docs/verification/next-plan/U03/u03-pilot-u04-events-v1/index.json. The next U04
+step is a bounded task-order treatment with fairness and unchanged work quanta.
+U05 remains unstarted, U06 proof bridges partial and U07 holdout unopened.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
