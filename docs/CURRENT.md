@@ -106,11 +106,14 @@ edge-label words and edge-orientation flips for all eighteen moves and arbitrary
 now has forty proved component readbacks and an actual `Cubie.to_facelets`
 view theorem. Both checkers, six expected rejection controls and 80,000 backend
 component comparisons pass. The shared bit compiler reproduces all 72 existing
-routing proofs byte-for-byte, so their evidence is reused. Packed move
-preservation, corner-orientation arithmetic, inverse, input reachability and
-loaded admissibility remain open. The next queue is `u02-typed-packing-v1`,
-estimated two minutes with a three-minute cap. Read
-docs/verification/next-plan/U02/TYPED-PACKING.md. Inspect and archive its results
+routing proofs byte-for-byte, so their evidence is reused. Packing confirmation
+passed with 1,776 matching seals. Corner-orientation arithmetic now proves
+typed packing is preserved by all eighteen actual packed moves. Both checkers,
+six rejection controls, 36,000 move cases, 18,000 legacy comparisons and direct
+delta/layout checks pass. The combined five-field move relation, inverse,
+input reachability and loaded admissibility remain open. The next queue is
+`u02-corner-orientation-v1`, estimated two minutes with a three-minute cap. Read
+docs/verification/next-plan/U02/CORNER-ORIENTATION.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and the packed inverse reconstruction remain open.
