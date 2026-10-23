@@ -7,7 +7,7 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | Complete typed packed moves, inverse-word transport and all twenty actual inverse-position lookups pass both checkers and fixed guards. Latest archive has 1,812 seals, 20,480 root and 20,060 raw-word lookups. Full inverse orientation/assembly, input reachability and loaded bounds remain open. Deadline quality and performance acceptance remain inconclusive. |
+| U02. Existing-bound inference and coordinate reuse | Complete typed packed moves and actual `Cubie.inverse` reconstruction pass both checkers and fixed guards for reaching-word roots. Latest archive has 1,823 seals and 1,024 full inverse backend cases. Validated-input reachability, coordinate/target linkage and loaded bounds remain open. Deadline quality and performance acceptance remain inconclusive. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
 | U05. Exact-context failure cache and partitioned search | Not started. No incomplete search is cached as a completed failure. |
@@ -30,6 +30,11 @@ archived. [Its boundary](U02/PACKED-REPLAY.md) retains the actual
 The [inverse-position guard](U02/u02-inverse-positions-v1/index.json) is verified
 and archived. [Its proof boundary](U02/INVERSE-POSITIONS.md) leaves inverse
 orientation and packed assembly open. It does not promote U03–U07.
+The [full packed-inverse guard](U02/u02-packed-inverse-v1/index.json) is verified
+and archived. [Its proof boundary](U02/PACKED-INVERSE.md) retains validated-input
+reachability, coordinate/target linkage and loaded-distance admissibility.
+The reconstructed inverse is now the actual function, not a premise.
+No production pruning or performance acceptance follows from this result.
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).

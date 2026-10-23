@@ -143,9 +143,19 @@ Both actual-source weight corruptions have counterexamples and four expected
 proof rejections. The full inverse orientation/assembly remains open. Read
 docs/verification/next-plan/U02/INVERSE-POSITIONS.md and
 docs/verification/next-plan/U02/u02-inverse-positions-v1/index.json.
+The complete actual `Cubie.inverse` and reconstruction bridge passed their
+fixed guard with 1,823 matching seals, no resource stop and the worker gone.
+Both pure checkers prove inverse-word correspondence for every reaching-word
+root. All five words agree on 1,024 backend roots. Three actual-source
+corruptions and a wrong-root claim have counterexamples and eight expected
+proof rejections. The bit-name collision is reproduced and now rejected;
+all previous routing, packing and packed-move proof bytes stay identical.
+Read docs/verification/next-plan/U02/PACKED-INVERSE.md and
+docs/verification/next-plan/U02/u02-packed-inverse-v1/index.json.
 There is no general speed claim, production change,
 new PDB or release-holdout use. Validated-input refinement, loaded-data
-admissibility and the packed inverse reconstruction remain open.
+admissibility remain open. The packed inverse bridge no longer assumes the
+inverse function for reaching-word roots.
 Actual native allocation, latency and stable matched controls still need
 measurement before integration or promotion.
 
