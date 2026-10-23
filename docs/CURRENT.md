@@ -71,6 +71,17 @@ docs/verification/next-plan/U04/u04-prior-order-v1/index.json. Next, check
 one-move premove path composition and independent replay before a candidate
 generation treatment. Do not repeat unchanged ordering cohorts for luck.
 
+The premove path preflight passed with 1,943 verified seals, four receipts,
+worker gone and no resource stop. It passes 7,296 frame cases, 14,592 independent
+replays, 2,375 normalization cases, three actual corruption counterexamples and
+native packet checksum parity. Pure definitions pass BendTT. Bounded large
+archival, eight original receipt/seal negatives and unchanged gates also pass.
+No candidate search or strength result follows. Read
+docs/verification/next-plan/U04/PREMOVE-PATHS.md and
+docs/verification/next-plan/U04/u04-premove-paths-v1/index.json. Next, implement
+a bounded seeded candidate bank with original-root certificate validation and
+an untouched original exact-search authority.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
