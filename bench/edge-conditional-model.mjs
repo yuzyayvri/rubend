@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+
+export function conditionalPolicies(){const policies=[];for(let count=1;count<=3;count++){for(let pattern=0;pattern<2;pattern++)policies.push({name:`exact-p${pattern}-${count}`,value:r=>r.exact[pattern*3+count-1]});policies.push({name:`exact-max-${count}`,value:r=>Math.max(r.exact[count-1],r.exact[count+2])});}for(let base=0;base<=6;base++){for(let pattern=0;pattern<2;pattern++)policies.push({name:`two-bit-p${pattern}-base${base}`,value:r=>r.decoded[base][pattern]});policies.push({name:`two-bit-max-base${base}`,value:r=>Math.max(...r.decoded[base])});}return policies;}
+
+export function summarizeConditional(rows,expectedByRoot){
+  const policies=conditionalPolicies(),seen=new Set(),counts=Object.fromEntries(Object.keys(expectedByRoot).map(id=>[id,0])),totals=Object.fromEntries(policies.map(p=>[p.name,{visits:0,hypotheticalCuts:0,byRadius:{},witnesses:[]}]));
+  for(const row of rows){assert.ok(Object.hasOwn(expectedByRoot,row.id));assert.equal(row.goal,"FullCube");for(const n of[row.nodes,row.left,row.length,row.contour])assert.ok(Number.isSafeInteger(n)&&n>=0);assert.ok(row.left>0&&row.length>0);assert.equal(row.left+row.length,row.contour);const key=JSON.stringify([row.id,row.nodes]);assert.equal(seen.has(key),false,"Duplicate observed visit");seen.add(key);counts[row.id]++;assert.equal(row.exact.length,6);row.exact.forEach((n,i)=>assert.ok(Number.isInteger(n)&&n>=0&&n<=[3,5,6,3,5,6][i]));assert.equal(row.decoded.length,7);for(const values of row.decoded){assert.equal(values.length,2);values.forEach((n,p)=>assert.ok(Number.isInteger(n)&&n>=0&&n<=row.exact[p*3+2],"Compressed estimate exceeds exact reference"));}
+    for(const policy of policies){const estimate=policy.value(row),cut=estimate>row.left,total=totals[policy.name],radius=total.byRadius[row.left]??={visits:0,hypotheticalCuts:0};total.visits++;radius.visits++;if(cut){total.hypotheticalCuts++;radius.hypotheticalCuts++;if(total.witnesses.length<8)total.witnesses.push({id:row.id,nodes:row.nodes,left:row.left,length:row.length,contour:row.contour,estimate});}}
+  }
+  assert.deepEqual(counts,expectedByRoot,"Missing observed visits");return{visits:seen.size,byRoot:counts,policies:totals,combination:"maximum, never sum",hypotheticalOnly:true,descendantWorkSavingsMeasured:false,cpuSavingsMeasured:false,performanceAcceptance:false};
+}

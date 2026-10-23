@@ -55,9 +55,15 @@ and three actual corruptions pass. Twenty-one synthetic native checksums agree.
 The pure module and unchanged proof/toolchain gates pass. Read
 docs/verification/next-plan/U03/TWO-BIT-PREFLIGHT.md and
 docs/verification/next-plan/U03/u03-two-bit-v1/index.json.
-Next, screen exact/compressed information on U05's saved native FullCube entry
-contexts after existing bounds. Do not change traversal or call hypothetical
-cuts a measured speedup. The sample is exploratory, not holdout confirmation.
+U03's saved-context screen passed canonical verification with 2,265 seals/three
+receipts, worker gone/no stop. All 52,584 cubes, 315,504 projection ranks and
+736,176 codec lookups pass. Its information result is inconclusive. Every saved
+radius is 7–13, above the six-step maximum reference distance. Zero hypothetical
+cuts is guaranteed by that mismatch. Do not infer a negative larger-PDB result
+or a performance result. Read
+docs/verification/next-plan/U03/CONDITIONAL-INFORMATION.md and
+docs/issues/small-edge-screen-range.md. Add a range-sensitivity guard from the
+saved aggregates without repeating cube/rank work. Then continue U05 preparation.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and

@@ -1,0 +1,7 @@
+import assert from "node:assert/strict";
+import {summarizeConditional} from "../bench/edge-conditional-model.mjs";
+
+const a={id:"a",goal:"FullCube",nodes:1,left:2,length:1,contour:3,exact:[1,2,3,1,2,1],decoded:Array.from({length:7},()=>[2,1])},b={id:"a",goal:"FullCube",nodes:2,left:1,length:2,contour:3,exact:[1,1,1,1,1,1],decoded:Array.from({length:7},()=>[1,1])},c={id:"b",goal:"FullCube",nodes:1,left:1,length:1,contour:2,exact:[1,2,2,1,2,3],decoded:Array.from({length:7},()=>[1,2])},rows=[a,b,c],expected={a:2,b:1},result=summarizeConditional(rows,expected);assert.equal(result.visits,3);assert.equal(result.policies["exact-max-3"].hypotheticalCuts,2);assert.equal(result.policies["exact-max-1"].hypotheticalCuts,0);assert.equal(result.policies["two-bit-max-base3"].hypotheticalCuts,1);assert.equal(result.policies["exact-p1-3"].hypotheticalCuts,1);
+const sumCounterexample={left:b.left,overlap:b.exact[0]+b.exact[3],maximum:Math.max(b.exact[0],b.exact[3])};assert.ok(sumCounterexample.overlap>sumCounterexample.left);assert.ok(sumCounterexample.maximum<=sumCounterexample.left);
+const corruptions=[data=>data.pop(),data=>data.push({...data[0]}),data=>{data[0].left=0;},data=>{data[0].goal="Reduction";},data=>{data[0].decoded[0][0]=4;},data=>{data[0].contour++;},data=>{data[0].exact[0]=NaN;}];for(const change of corruptions){const bad=structuredClone(rows);change(bad);assert.throws(()=>summarizeConditional(bad,expected));}
+console.log(JSON.stringify({passed:true,modelCorruptions:corruptions.length,overlappingSumCounterexample:sumCounterexample}));
