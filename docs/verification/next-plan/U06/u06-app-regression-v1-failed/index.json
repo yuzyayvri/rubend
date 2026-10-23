@@ -1,0 +1,64 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u06-app-regression-v1",
+  "revision": "9dc6454c13a8bd542feb927a8c9866074e13a39c",
+  "sourceSeals": 2105,
+  "workerGone": true,
+  "executedJobs": 1,
+  "plannedJobs": 2,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read regression.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 4,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-app-regression-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-app-regression-v1-failed/0-u06-app-regression-v1-plan.json.gz",
+      "bytes": 285291,
+      "compressedBytes": 100483,
+      "sha256": "9a39b690cb9f2df9ba96ac52600bef17171a44a3f2106b111a7b3810e6165a69",
+      "compressedSha256": "4068b7a2b1a04b21f7eb642a5a8c6d715eaeb1dd6aff10406107733c4812c577",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-app-regression-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-app-regression-v1-failed/1-status.json.gz",
+      "bytes": 1008,
+      "compressedBytes": 547,
+      "sha256": "757c80d40ea3600c2290151e0453d5a4b307cde07c3659fc4d711df23dafc350",
+      "compressedSha256": "a5651da1a8e85bce6e355a271cf395dd509e101a6913ec88ee812c6e635cc5d0",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-app-regression-v1-regression.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-app-regression-v1-failed/2-u06-app-regression-v1-regression.json.gz",
+      "bytes": 24130,
+      "compressedBytes": 6052,
+      "sha256": "f896db328314d3d95cddb4357e9955593693f983b4b40a9552d29e77d883858c",
+      "compressedSha256": "13eb4a6de1944a5257cdbc574e72ec69c68e7d6169c9ada89c99ded8ab329788",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-app-regression-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-app-regression-v1-failed/3-failed-sources.json.gz",
+      "bytes": 103509,
+      "compressedBytes": 35052,
+      "sha256": "01daf59e4ce5f21ae31a72b82d169d58dfddfda6d0ed4c64ba28b8a894bdacd2",
+      "compressedSha256": "5438c1b835d0cf6e6610a1d7385cee25d5775a1185849ad54de202e8c74ac44d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-app-regression-v1/failed-build.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-app-regression-v1-failed/4-failed-build.json.gz",
+      "bytes": 20474,
+      "compressedBytes": 7482,
+      "sha256": "3494d6f2236f5ab45af415b041142bad6522126655ccc76fd8aa026cef454a36",
+      "compressedSha256": "8d04b1bd25cd8cac82006896c50187c6d528b1329b9854f9708dfebca2ce162b",
+      "roundtripPassed": true
+    }
+  ]
+}

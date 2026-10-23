@@ -80,6 +80,10 @@ test: build
     node tests/background-result-check.mjs
     node tests/keyboard-playback.mjs
     node tests/ui-design.mjs
+    node tests/frame-driver.mjs
+    node tests/render-baseline-model.mjs
+    node tests/render-demand-model.mjs
+    node tests/render-demand-fixture.mjs
     node tests/contour-protocol.mjs
     node bench/corpus.mjs --check
     node tests/corpus.mjs

@@ -1,0 +1,45 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u06-app-recovery-v1",
+  "revision": "9dc6454c13a8bd542feb927a8c9866074e13a39c",
+  "sourceSeals": 2119,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T15:32:45.819Z",
+  "finishedAt": "2026-10-23T15:35:15.146Z",
+  "archives": [
+    {
+      "path": "0-u06-app-recovery-v1-plan.json.gz",
+      "sha256": "d9bd604d92dd67c3553ae6e3ddd6dc04cb7344b97da2d7799b9a44b858fea094",
+      "compressedSha256": "8ea51f25ed2adf3301bcc74b776f36c12a17ff96e01dffa9c824e334a158045a"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "3aab5fd839b75fccb8cb60eac373341134b443b162b1ba74e816008164ed63e6",
+      "compressedSha256": "6463a35a87fb2cd38ace0e7ce37156aa89eb291ab2005fa336fb968d4490ab28"
+    },
+    {
+      "path": "2-u06-app-recovery-v1-remainder.json.gz",
+      "sha256": "78a02841edfe143776be481b389c5ec290a5e0d43b9745c464b3523168071b5c",
+      "compressedSha256": "e9111c31b5e7ca108689df615ba5c26612e7a94f17a09f27e567115886c5323b"
+    },
+    {
+      "path": "3-u06-app-recovery-v1-artifacts.json.gz",
+      "sha256": "3b9233989b47c5a2ace16c046602274e7f7d80de1b4a8755240eb5cd9daf9339",
+      "compressedSha256": "06f4eb35ae51f446dfbaf5ec70ca679eed041b4e20bc2302d101c4fae0febfbe"
+    },
+    {
+      "path": "4-confirmation.json.gz",
+      "sha256": "ec2bf14903aa3bc1048d5f6f90bc6fbb6943f51067a2fbdb5bb605ab2ca62b2b",
+      "compressedSha256": "f646a1b7ffb86e9b0c7330c6750af1baaaa6d2951e1b250e72d7bd9ef5d89f21"
+    },
+    {
+      "path": "5-regression.json.gz",
+      "sha256": "7e9bd8ac1f42394e63617d8011c691a2e8deafbeab573ab16d7757b9ce18f1b9",
+      "compressedSha256": "1f9b9fcfd089c660c72003d09b75eb4b3357e7cf6c8eed76db5918c845ea8d5e"
+    }
+  ]
+}

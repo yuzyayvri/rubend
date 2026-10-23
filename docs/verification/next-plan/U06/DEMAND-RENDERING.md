@@ -93,3 +93,36 @@ The scene treatment meets this fixture's gates. General performance acceptance,
 browser CPU/RSS limits, GPU completion, packaging, full application workflows,
 real visibility transitions and operator interaction review remain open.
 Rebuild the app and run its regression/browser lanes before the next UI treatment.
+
+## Application regression recovery
+
+The rebuilt app completes its build and the first 48 top-level test commands.
+The full recipe then fails linking the keyboard fixture because its substitute
+scene lacks the new `renderLabel` export. This is an actual failing-before
+regression, not a rendering performance verdict. The
+[failed-run archive](u06-app-regression-v1-failed/index.json) preserves 2,105
+source seals, the failed receipt, original recipe and actual built artifact hashes.
+The run remains failed. It cannot be cited as a complete passing suite.
+
+The repaired fixture re-exports the real label function and includes scene
+disposal in its substitute class. The same focused test now passes all nine
+keyboard scenarios. No keyboard assertion or product behavior is weakened.
+
+Recovery derives the remaining 49 commands from the unchanged recipe. It verifies
+the exact failure line, source delta and sealed rebuilt assets before reusing the
+48-command prefix. New recovery fixtures reject missing, duplicate or malformed
+failure boundaries. The prefix is not rebuilt or repeated. A successful recovery
+can establish complete recipe coverage across the two source-checked runs, not a
+successful original `just test` process. Full browser acceptance remains separate.
+
+The [recovery archive](u06-app-recovery-v1/index.json) verifies 2,119 source seals,
+two receipts, worker termination and no resource stop. All 49 remainder commands
+pass, including the repaired keyboard test and the new frame guards. The original
+48-command prefix and actual rebuilt artifacts pass the reuse checks. This covers
+all 97 top-level recipe commands across the two runs. The original process remains
+failed, and the recovery record says so. The existing raw cache digest matches.
+
+The native binary, emitted C, manifest and built UI assets are sealed. Next, run
+the actual hidden-app workflows for playback, idle diagnostics, camera/resize,
+reduced motion, renderer and model recovery, export and search interaction. This
+recovery does not claim a browser rerun, package rollout or operator review.

@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+U06 demand rendering is committed as signed `9dc6454`. Its scene-only comparison
+passes. The rebuilt app's complete 97-command test recipe is now covered by a
+source-checked 48-command prefix plus the repaired 49-command remainder.
+The recovery archive verifies 2,119 seals/two receipts, worker gone/no stop:
+docs/verification/next-plan/U06/u06-app-recovery-v1/index.json.
+
+No active queue. Next, run hidden actual-app browser acceptance, then consider
+mesh retention separately. Operator review, package rollout and general
+performance acceptance remain open. No push/merge/deploy or new-law authority.
+
+## Current unit evidence
+
 The fast-only R refinement confirms fixed-work answer coverage gains on three
 of sixteen fast request/budget pairs, involving two fresh development roots.
 There are no losses. All eighty exact paired runs preserve every saved state.
@@ -51,9 +63,18 @@ It has no captured browser result and no performance verdict. The v2 recovery
 saves completed samples incrementally and uses bounded browser milestone waits.
 Workload, resource caps and acceptance floors are unchanged.
 
-Next, rebuild the app and run the full local regression before its hidden browser
-acceptance lanes. The prebuilt app is not rebuilt for these edits yet. Full-app
-recovery, operator review and performance promotion remain open. Keep mesh retention separate.
+V1 app regression rebuilt the actual app and passed 48 top-level recipe commands,
+then failed linking the keyboard fixture's missing renderLabel export. The failure
+and built artifact hashes are preserved with 2,105 source seals at
+docs/verification/next-plan/U06/u06-app-regression-v1-failed/index.json.
+The fixture now re-exports the real helper; all nine keyboard scenarios pass.
+
+The `u06-app-recovery-v1` queue passed and was canonically archived. All 49
+remaining commands pass; the unchanged 48-command prefix and actual rebuilt
+artifacts match. All 97 top-level commands are covered across both runs, while
+the original process remains failed. No browser benchmark is repeated. Run
+hidden full-app acceptance next. Operator review and performance promotion
+remain open. Keep mesh retention separate.
 The app browser is outside the server's resource cgroup. No browser CPU/RSS
 enforcement claim. No new law or proof label.
 
