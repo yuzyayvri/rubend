@@ -97,11 +97,14 @@ matching seals. Embedding injectivity and word-cancellation confirmation passed
 with 1,703 matching seals. A constructed reference state-inversion bridge now
 passes both pure checkers for roots presented by reaching words. It connects
 the kernel's exact word convention and instantiates its first-move theorem
-without assuming inversion. Packed `Cubie.inverse`, validated-input reachability
-and loaded admissibility remain open. The guard checks missing orientation and
-root-self mistakes plus 1,000 backend cases. The next queue is
-`u02-reference-inversion-v1`, estimated two minutes with a three-minute cap. Read
-docs/verification/next-plan/U02/REFERENCE-INVERSION.md. Inspect and archive its results
+without assuming inversion. Confirmation passed with 1,725 matching seals.
+Inspection of the pinned Base shows proof-visible `U32` Boolean words, enabling
+the first actual packed-field proofs. Corner-permutation routing now passes
+the pure verdict for all eighteen moves and all 32-bit words. Orientation,
+edge fields, packed inverse, input reachability and loaded admissibility remain
+open. The next queue is `u02-packed-routing-v1`, estimated three minutes with a
+three-minute cap. Read
+docs/verification/next-plan/U02/PACKED-CORNER-ROUTING.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and the packed inverse reconstruction remain open.
