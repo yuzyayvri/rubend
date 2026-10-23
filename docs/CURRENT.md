@@ -79,10 +79,16 @@ endpoint-orbit comparisons, four compiled corruptions, two missing-endpoint
 controls and native checksum parity pass. Unchanged compile/native data was
 reused and unchanged proof/toolchain gates pass. The original run stays failed.
 Read docs/verification/next-plan/U05/PARTITION-PREFLIGHT.md and
-docs/issues/partition-prefix-list-adapter.md. Next, implement private ledger
-bookkeeping with explicit short-word coverage and full scope identity. Finite
-prefix evidence is not universal coverage. No ledger, worker partitions, NP07
-proof or production/global-bound change yet.
+docs/issues/partition-prefix-list-adapter.md. The ledger `u05-ledger-v2` archive
+verifies 2,318 seals/three receipts, worker gone/no stop. All forty transitions,
+24 scope changes, 21 refusals, four malformed packets, twelve full ledgers and
+five actual corruptions pass. Ten native packets agree; both pure modules and
+unchanged gates pass. Prefix evidence was reused. Read
+docs/verification/next-plan/U05/LEDGER-PREFLIGHT.md and
+docs/verification/next-plan/U05/u05-ledger-v2/index.json. No actual worker
+partitions, certified exhaustion, NP07 proof or production/global-bound change.
+Next, prepare U07 comparison-record/convention checks without opening the release
+holdout, generating competitor tables or selecting a new engine configuration.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
