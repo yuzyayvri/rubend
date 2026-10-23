@@ -49,8 +49,16 @@ profile identifies the packed corner calculation as the dominant helper work.
 No promotion or unchanged rerun. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-LONG.md and
 docs/verification/next-plan/U04/u04-mapper-long-v1/index.json.
-Next, use U03's six audited small edge tables for a bounded compression study.
-Do not generate a full six-edge database or add an unapproved domain law.
+U03's `u03-two-bit-v1` archive verifies 2,242 seals/three receipts, worker gone/no
+resource stop. All 154,368 entry/base comparisons, 188 boundary checks, 99 refusals
+and three actual corruptions pass. Twenty-one synthetic native checksums agree.
+The pure module and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U03/TWO-BIT-PREFLIGHT.md and
+docs/verification/next-plan/U03/u03-two-bit-v1/index.json.
+Next, screen exact/compressed information on U05's saved native FullCube entry
+contexts after existing bounds. Do not change traversal or call hypothetical
+cuts a measured speedup. The sample is exploratory, not holdout confirmation.
+No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
 docs/verification/next-plan/U04/u04-mapper-v1/index.json.
