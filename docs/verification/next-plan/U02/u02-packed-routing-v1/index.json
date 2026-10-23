@@ -1,0 +1,35 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-packed-routing-v1",
+  "revision": "3d309d5c9123d6ebd7e202e1187da8b09e1fc01e",
+  "sourceSeals": 1741,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T02:32:16.185Z",
+  "finishedAt": "2026-10-23T02:32:19.516Z",
+  "archives": [
+    {
+      "path": "0-u02-packed-routing-v1-plan.json.gz",
+      "sha256": "e1fc0352525e3874dda7515badb1f4b2d92b126927b75c2309ae0ce081d8cba4",
+      "compressedSha256": "112e02cfea6b10561825b9ea691356aa0b5ee98b098773d91f73bf8e2d3c5fcf"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "6707fe03686456f8d94365fe5c2d661586c74bc13bc6dd62f5e0ff6eb197b2bd",
+      "compressedSha256": "71b1afc5fcd3a4bc081f11292f3cf15b8670b6282149775526d4ef27a4a6cfe5"
+    },
+    {
+      "path": "2-u02-packed-routing-v1-confirm.json.gz",
+      "sha256": "9c87f7a155f13f48b260e19b4a3b7241437b9db41eb6d6645a36b1065797683b",
+      "compressedSha256": "e51f22d45d6b47548a2a5f4af1d100f6db1e79ce3b82da144625aac0c474205b"
+    },
+    {
+      "path": "3-confirmation.json.gz",
+      "sha256": "fda134db91d268396537753385eefa3636b37800c38a37b242b89560fabe2d33",
+      "compressedSha256": "9aeeb2084fba4a19fb4dd477a3a53043912a527fb9afdce8f8bf82b2c93bbcc9"
+    }
+  ]
+}
