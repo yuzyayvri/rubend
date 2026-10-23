@@ -30,11 +30,18 @@ for luck. Accepted app unchanged. Read
 docs/verification/next-plan/U06/MESH-RETENTION-COMPARISON.md and
 docs/verification/next-plan/U06/u06-render-retain-v1/index.json.
 
-No active queue. Next, ground U04's phase-two projection in the actual search and
-coordinate code, then prepare a bounded pilot without new domain laws or a large
-table build. U06 video/operator/package/general-performance gates stay open.
-Operator review, video, package rollout and general performance acceptance remain
-open. No push/merge/deploy or new-law authority.
+The private phase-two projection passed `u04-phase2-v1`. Canonical verification
+checks 2,196 seals/three receipts, worker gone/no resource stop. All 40,320 corner
+codecs, 403,200 class actions, 2,240 decodes and 5,120 sampled child projections
+pass. All three actual corruptions have counterexamples. The pure module,
+native/JavaScript checksum parity and unchanged laws pass. The actual Goal guard
+admits restricted Subgroup finishing only. No distance table, pruning or
+production change. Read docs/verification/next-plan/U04/PHASE2-PROJECTION.md
+and docs/verification/next-plan/U04/u04-phase2-v1/index.json.
+Next, compare native corner-class recomputation with a mapper from the cached
+full corner-permutation coordinate. Keep initialization and memory separate.
+U06 video/operator/package/general-performance gates remain open.
+No push/merge/deploy or new-law authority.
 
 ## Current unit evidence
 
