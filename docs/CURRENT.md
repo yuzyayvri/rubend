@@ -82,6 +82,17 @@ docs/verification/next-plan/U04/u04-premove-paths-v1/index.json. Next, implement
 a bounded seeded candidate bank with original-root certificate validation and
 an untouched original exact-search authority.
 
+The seed-bank guard passed and is canonically archived with 1,963 seals, three
+receipts, worker gone and no stop. All 330 disabled control states match. Its
+1,056 snapshots, 646 original candidate events, 75 child replays and 13,756,750
+work steps reconcile. The bank did 740,000 seeded steps but admitted no better
+original answer in this guard. Certificate, bound-isolation, budget tails,
+shallow, owned-array, cache and unchanged proof gates pass. Read
+docs/verification/next-plan/U04/SEED-BANK.md and
+docs/verification/next-plan/U04/u04-seed-bank-v1/index.json. Next, freeze U/R/F
+single-bank arms and run family validation plus matched-work pilot comparison.
+Reuse the unchanged binary; do not claim strength from the functional guard.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
