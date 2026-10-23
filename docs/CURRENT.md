@@ -29,11 +29,19 @@ small codecs, 200,016 small transitions, 18,432 sampled six-edge transitions
 and 22,800 full-cube projections against KPuzzle. Three actual corruptions
 have counterexamples. The archive is
 docs/verification/next-plan/U03/u03-edge-pattern-v1/index.json.
-No database is generated, no new law is assumed, and no native-cost or
-performance result is claimed. Read
-docs/verification/next-plan/U03/EDGE-PATTERN-PREFLIGHT.md. Inspect and archive
-the saved evidence. Next work is native feasibility/cost
-admission and separate U04 task-ordering diagnostics, not more U02 expansion.
+No database was generated or new law assumed. Read
+docs/verification/next-plan/U03/EDGE-PATTERN-PREFLIGHT.md.
+The native-feasibility queue also passed, canonically verified with 1,885 seals,
+all four receipts, worker gone and no resource stop. Its six-edge helper median
+was 117 ms per 100,000 calls across five samples, range 116–120 ms. This is not
+a database ETA or engine improvement. Several smaller helpers were noisy.
+U04's unchanged round-robin baseline passed 330 snapshots and 228 independent
+candidate replays. All 6,960,000 work steps reconcile, but the 115 observed
+crossings remain coarse. Next, prepare small native one-to-three-edge table
+generation and exact contour-change observation, preserving baseline states.
+Read docs/verification/next-plan/U03/NATIVE-COST-PLAN.md and
+docs/verification/next-plan/U04/ORDERING-OBSERVATION.md. Archive is
+docs/verification/next-plan/U03/u03-native-feasibility-v1/index.json.
 
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
