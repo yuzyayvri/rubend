@@ -2,6 +2,27 @@
 
 ## Latest checkpoint
 
+Execution priority correction on October 23. U02 has expanded into a broader
+proof programme without an accepted performance gain. Do not treat closing all
+of those proof gaps as a blanket prerequisite for U03–U07. The approved plan
+allows U03 after U02's measured disposition even without a win. U02 remains
+incomplete and unpromoted; its current performance disposition is inconclusive.
+Keep unchecked pruning off and preserve every open proof obligation.
+
+The `u02-slice-finish-v1` recovery passed and was canonically verified with
+1,858 seals, worker gone and no resource stop. The private profile passes
+495 codec cases, 2,003 coordinate cases and 4,096 rank comparisons. Production
+coordinates and native-cost acceptance remain unchanged. Read
+docs/verification/next-plan/U02/u02-slice-finish-v1/index.json.
+
+The checked private-profile/runtime-strip checkpoint and U02 non-promotion
+disposition are recorded in docs/verification/next-plan/U02/DISPOSITION.md.
+Continue with U03's bounded feasibility and cost preparation. Do not extend
+the U02 proof chain by default. U04's
+bounded ordering work does not require a U03 winner. U05 and final U07
+integration retain their actual dependencies. NP04–NP08, full database builds,
+publication and all other existing authority gates remain unchanged.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
@@ -163,17 +184,25 @@ All alias depths and the exact reflexive control pass, ruling out the loop
 alone. The constructor-guard prototype passes both checkers and all 4,096
 low-mask backend comparisons. A private full coordinate profile with that
 boundary now passes an initial universal typed mask verdict too.
-The next queue is `u02-slice-coordinate-profile-v1`, estimated six minutes with
-a fifteen-minute cap. It checks the private profile's complete 495-placement
-codecs, source-corruption controls, backend comparisons and unchanged gates.
+The private profile passed both checkers for the universal mask relation and
+all four 495-placement codec statements. The guard then failed in runtime
+fixture extraction, which removed adjacent type declarations. Before edits,
+all 1,847 original seals, failed receipts and successful formal artifacts were
+verified and captured. The focused regression fails with `unknown: First`
+before the type-preserving strip fix and passes afterward.
+The next queue is `u02-slice-finish-v1`, estimated three minutes with a
+ten-minute cap. It verifies the captured exact formal artifacts and unchanged
+code dependencies, then finishes source-corruption controls, backend and
+toolchain gates. It reuses the four passing formal stages instead of repeating
+them. The original failed guard remains failed.
 Production coordinate source and checker fuel remain unchanged. Native cost
 and integration are not accepted by these proof checks. The earlier flat
 placement probe's SIGKILL remains unexplained; the smaller branching type is
 prepared, not yet verified. Read
 docs/issues/slice-mask-verdict-mismatch.md and
 docs/verification/next-plan/U02/u02-slice-verdict-v1/index.json.
-New slice implementation remains uncommitted. Inspect and archive the next
-completed guard before source edits.
+New slice implementation and runtime harness fix remain uncommitted. Inspect
+and archive the next completed guard before source edits.
 There is no general speed claim, production change,
 new PDB or release-holdout use. Validated-input refinement, loaded-data
 admissibility remain open. The packed inverse bridge no longer assumes the

@@ -41,8 +41,18 @@ The next test applies that boundary to a private copy of the full coordinate
 expression, where the disagreement actually appeared. The universal typed mask
 relation for that candidate now passes both checkers in an initial probe. Its
 complete 495-placement and rejection guard is `u02-slice-coordinate-profile-v1`.
-The source-isolated copy leaves production unchanged. Complete proof, native
-cost and integration are still separate gates. No kernel fuel changes.
+The source-isolated copy leaves production unchanged. Its complete proof passed
+both checkers, including all four codec statements on 495 placements. The guard
+then failed while extracting a runtime corruption fixture. Splitting only at
+`def` also removed adjacent `type` declarations and caused `unknown: G0`.
+
+A focused regression reproduced the same failure as `unknown: First`.
+`stripBendEqualities` now preserves type blocks while removing false equality
+claims. The emitted two-choice fixture passes. The fixed
+`u02-slice-finish-v1` batch checks the frozen successful formal artifacts and
+finishes corruption, backend and toolchain checks. It does not rerun those
+unchanged proof checks or relabel the original failed guard as passing.
+Native cost and integration remain separate gates. No kernel fuel changes.
 
 Do not weaken the statements, bypass the kernel or promote pruning to avoid
 this gate. The suitable representation and complete slice-codec verdict remain

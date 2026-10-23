@@ -3,6 +3,18 @@
 Updated October 23, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
+performance evidence. Complete closure of its expanding proof programme is not
+a blanket gate on the remaining roadmap. The approved U03 dependency requires
+a measured U02 disposition, not a win. Next, checkpoint the verified private
+slice recovery and begin bounded U03 feasibility/cost preparation. Keep unchecked
+pruning disabled and all proof gaps explicit. U04 ordering can be evaluated
+without a U03 winner. No new-law or large-build approval is inferred.
+
+The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
+Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
+comparisons. This is not a production integration or accepted performance gain.
+
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
@@ -42,11 +54,16 @@ unaccepted. The [disagreement record](../../issues/slice-mask-verdict-mismatch.m
 preserves the gate. The [normalization controls](U02/u02-rank-normalization-v1/index.json)
 passed with 1,829 seals, including every alias depth and the private guard's
 4,096 backend masks. An initial universal mask verdict now passes for the
-source-isolated full coordinate profile. Its complete guard is next as
-`u02-slice-coordinate-profile-v1`, estimated six minutes with a fifteen-minute
-cap, three GiB and four low-priority lanes. Production code and checker budget
-stay unchanged. Native cost, integration and legal-mask coverage remain open.
-No complete slice proof, full target link or U03–U07 progress is claimed yet.
+source-isolated full coordinate profile. The complete mask and four codec
+statements on 495 placements subsequently passed both checkers. The guard failed
+afterward because runtime proof stripping removed type declarations. All 1,847
+source seals and successful formal artifacts were captured before the fix.
+The focused regression now passes. The next fixed recovery batch is
+`u02-slice-finish-v1`, estimated three minutes with a ten-minute cap, three GiB
+and four low-priority lanes. It reuses unchanged formal evidence and finishes
+corruption, backend and toolchain checks. Production code and checker budget
+stay unchanged. Native cost, integration, legal-mask coverage and the full target
+link remain open. U03–U07 have not advanced.
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
