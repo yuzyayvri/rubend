@@ -18,10 +18,23 @@ not justify a cache probe on the current workload. No cache/pruning or NP06/NP07
 approval. Read docs/verification/next-plan/U05/NATIVE-DUPLICATE-OBSERVATION.md
 and docs/verification/next-plan/U05/u05-interior-v1/index.json.
 
-Next, return to the promising U04 fast-only policy's native deadline/first-answer
-probe before integration. U04 move ordering/phase-two projection, U06 bridges/UI
-efficiency and U07 final comparisons remain open. Publication and large builds
-are gated.
+The native deadline queue `u04-deadline-v1` passed canonical verification with
+2,041 seals, three receipts, worker gone and no stop. Its 236 requests and 552
+candidate replays pass, but the treatment fails the frozen quality floor.
+Fresh confirmation has zero wins and four longer answers among 80 paired runs.
+Coverage and lower bounds hold. Same-binary p95 spreads exceed five percent, so
+no latency gain follows. Keep the default unchanged and do not rerun this policy
+unchanged for luck. Read docs/verification/next-plan/U04/DEADLINE-SEED-PROBE.md
+and docs/verification/next-plan/U04/u04-deadline-v1/index.json.
+
+Next, measure U06's actual idle frame submissions and scene-object allocations
+before changing either policy. Hidden preview must retain visible document
+semantics for a valid rendering comparison. Keep demand scheduling and mesh
+retention as separate treatments. No scene optimization is implemented yet.
+
+U04 move ordering/phase-two projection, U06 bridges/UI efficiency and U07 final
+comparisons remain open. No default, application/CPU gain, publication or large
+build is authorized by this probe.
 
 ## Earlier checkpoints
 

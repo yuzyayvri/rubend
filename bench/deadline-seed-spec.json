@@ -1,0 +1,18 @@
+{
+  "format": "rubend-deadline-seed-spec-v1",
+  "candidateSeed": 3,
+  "controlSeed": 18,
+  "budgetsMs": [100, 1000],
+  "cohorts": 5,
+  "confirmationOffset": 520,
+  "confirmationCases": 8,
+  "diagnosticOffsets": [512, 518],
+  "aaCopies": 2,
+  "warmupBudgetMs": 25,
+  "profile": "raw-inverse-three",
+  "qualityFloor": "no paired coverage, length or deadline-bound loss",
+  "repeatableStrength": "at least one confirmation root/deadline gains in all five cohorts, with no paired loss and stable A/A quality",
+  "timingNoiseFraction": 0.05,
+  "firstAnswerP95RegressionFraction": 0.05,
+  "promotion": false
+}

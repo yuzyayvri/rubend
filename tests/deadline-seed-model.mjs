@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import {apply,solved} from "../bench/fixed-work-model.mjs";
+import {scoreDeadlineRecords,summarizeDeadlineScores} from "../bench/deadline-seed-model.mjs";
+
+const root=apply(solved,[0]),row={id:"fixture",kind:"confirmation",baseId:"root/100",seed:18,arm:0,cohort:0,budgetMs:100,facelets:root},initial={type:"point",id:row.id,tick:0,length:31,lower:0,nodes:0,status:0,elapsedMs:2},candidate={type:"candidate",id:row.id,tick:1,length:1,lower:0,nodes:20000,optimal:0,moves:[2]},available={type:"point",id:row.id,tick:1,length:1,lower:0,nodes:20000,status:0,elapsedMs:100},done={type:"done",id:row.id,length:1,lower:0,nodes:40000,originalNodes:40000,seedNodes:0,ticks:2,accepted:0,fault:0,status:0,elapsedMs:101},records=[{type:"ready"},{type:"begin",id:row.id,seed:18,budgetMs:100},initial,candidate,available,done],score=r=>scoreDeadlineRecords(r,[row]);
+const atDeadline=score(records);assert.equal(atDeadline.summaries[0].length,1);assert.equal(atDeadline.summaries[0].firstAnswerMs,100);assert.equal(atDeadline.replays,1);
+const late=structuredClone(records);late[4].elapsedMs=101;const missed=score(late);assert.equal(missed.summaries[0].length,31);assert.equal(missed.summaries[0].covered,false);assert.equal(missed.summaries[0].firstAnswerMs,null);assert.equal(missed.lateCandidates,1);
+let rejected=0;
+for(const corrupt of[r=>{r[3].moves=[0];},r=>{r.splice(3,1);},r=>{r[4].lower=2;},r=>{r[4].elapsedMs=1;},r=>{r[5].nodes++;},r=>{r[5].seedNodes=1;},r=>{r[5].elapsedMs=99;},r=>{r[5].fault=1;},r=>{r.pop();},r=>{r.push({type:"ready"});},r=>{r[4].nodes=19999;},r=>{r[5].ticks=0;}]){const altered=structuredClone(records);corrupt(altered);assert.throws(()=>score(altered));rejected++;}
+const spec={cohorts:5,budgetsMs:[100],timingNoiseFraction:0.05,firstAnswerP95RegressionFraction:0.05},summary=(kind,arm,cohort,length=1,firstAnswerMs=50)=>({...row,id:[kind,arm,cohort].join("-"),baseId:kind+"/100",kind,arm,cohort,length,lower:0,covered:length<31,firstAnswerMs:length<31?firstAnswerMs:null,censoredLatencyMs:length<31?firstAnswerMs:100}),summaries=[];
+for(const kind of["confirmation","diagnostic"])for(let cohort=0;cohort<5;cohort++)for(const arm of[0,1])summaries.push(summary(kind,arm,cohort));for(const arm of[0,1])summaries.push(summary("aa",arm,0));
+assert.equal(summarizeDeadlineScores({summaries},spec).disposition,"unconfirmed-deadline-benefit");
+const losing=structuredClone(summaries);losing.find(r=>r.kind==="confirmation"&&r.arm===1).length=31;assert.equal(summarizeDeadlineScores({summaries:losing},spec).disposition,"rejected-deadline-quality-floor");
+const noisy=structuredClone(summaries);noisy.find(r=>r.kind==="aa"&&r.arm===1).firstAnswerMs=60;assert.equal(summarizeDeadlineScores({summaries:noisy},spec).disposition,"inconclusive-noisy-control");
+const winning=structuredClone(summaries);for(const r of winning)if(r.kind==="confirmation"&&r.arm===0)r.length=2;assert.equal(summarizeDeadlineScores({summaries:winning},spec).disposition,"confirmed-native-deadline-only");
+const slow=structuredClone(summaries);for(const r of slow)if(r.kind==="confirmation"&&r.arm===1)r.firstAnswerMs=60;assert.equal(summarizeDeadlineScores({summaries:slow},spec).disposition,"rejected-first-answer-floor");
+console.log(JSON.stringify({passed:true,rejectedFixtures:rejected,deadlineBoundaryInclusive:true,lateCertificateExcluded:true,censoredCoverageRetained:true,pairedLossAndNoiseDetected:true,repeatabilityAndFirstAnswerFloor:true}));
