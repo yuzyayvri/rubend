@@ -134,6 +134,15 @@ rechecked the complete move module after its signed commit and reused its
 unchanged backend/rejection evidence. Read
 docs/verification/next-plan/U02/PACKED-REPLAY.md and
 docs/verification/next-plan/U02/u02-packed-replay-v1/index.json.
+All twenty actual packed position lookups passed the fixed guard with 1,812
+matching seals, no resource stop and its worker gone. Both pure checkers
+connect each lookup to its inverse-word label for every reaching word.
+Two-sided reference composition derives match equivalence rather than assuming
+unique positions. The backend passes 20,480 root and 20,060 raw-word lookups.
+Both actual-source weight corruptions have counterexamples and four expected
+proof rejections. The full inverse orientation/assembly remains open. Read
+docs/verification/next-plan/U02/INVERSE-POSITIONS.md and
+docs/verification/next-plan/U02/u02-inverse-positions-v1/index.json.
 There is no general speed claim, production change,
 new PDB or release-holdout use. Validated-input refinement, loaded-data
 admissibility and the packed inverse reconstruction remain open.

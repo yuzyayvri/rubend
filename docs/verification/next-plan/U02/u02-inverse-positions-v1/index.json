@@ -1,0 +1,40 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-inverse-positions-v1",
+  "revision": "2dc8d2e5da029ea4ad3f6cbf9f06040e6da30098",
+  "sourceSeals": 1812,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T05:29:20.593Z",
+  "finishedAt": "2026-10-23T05:31:12.215Z",
+  "archives": [
+    {
+      "path": "0-u02-inverse-positions-v1-plan.json.gz",
+      "sha256": "c88640ec321c2a38acf5fefd5259e721d03d6d1802f69979cc1bbda74d8c6ff0",
+      "compressedSha256": "568b3ab38b6c9073ac871d9514a2c16c1d014bdce96f875b9869195625fe0185"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "5b3c56af6bd41470c46117f1454735be633a143a120ad92510a516a441fb992d",
+      "compressedSha256": "28b1243ce612248fc81b82ce4274a095cf1ab350a5706211086502632fb2e392"
+    },
+    {
+      "path": "2-u02-inverse-positions-v1-guard.json.gz",
+      "sha256": "2e1481e539d1b6e9f96d972096efc4c3f0eb388df8ace9ce78ee7777db12889c",
+      "compressedSha256": "abf7907c44bdd2f8f954cb552d11ac30ab67fa4f2dcb57524551652386da7284"
+    },
+    {
+      "path": "3-guard.json.gz",
+      "sha256": "f1957e6fe42a9cbb136bfe0962194b08990e53fabacc3545b963a8b1d747e158",
+      "compressedSha256": "752f235c6f52223d9955882cad3842f4cbd557a9fa9d21e63ee4952ac73f9d8e"
+    },
+    {
+      "path": "4-samples.json.gz",
+      "sha256": "266e7f4f48de511bfec0bef41f3943d82b9142d44137fe945582caaed5243241",
+      "compressedSha256": "fa15500dc9484479174b7d4033ba828ef029987599e563938415c9c4b0a020c4"
+    }
+  ]
+}
