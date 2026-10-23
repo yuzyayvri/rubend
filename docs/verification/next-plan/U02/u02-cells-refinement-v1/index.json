@@ -1,0 +1,35 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-cells-refinement-v1",
+  "revision": "c6648006dd4d40677d04493739504a4f50bac8b8",
+  "sourceSeals": 1691,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T01:17:11.076Z",
+  "finishedAt": "2026-10-23T01:17:12.825Z",
+  "archives": [
+    {
+      "path": "0-u02-cells-refinement-v1-plan.json.gz",
+      "sha256": "8bd32855098c0f1a30147b5245584ec2ac2358fbdd52ae06e90c1ad74ba3ac30",
+      "compressedSha256": "58def87e0fc2eda8b94d75fd1131849f3f8d3eebdb652807acdb6de26b46a37c"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "c9e76ea9a7ade5a6d24912aaef53fecf3faa3de963f4597f8a4a4d3ff6966707",
+      "compressedSha256": "f023af84ab071cea373b1de9588e0ace0ee2b4c6b64bf9d646ddc0f730fa59d6"
+    },
+    {
+      "path": "2-u02-cells-refinement-v1-confirm.json.gz",
+      "sha256": "928bde661fd83c567af77cee0a3cff705e5d835ed1880e69ab239b2ccdc05b28",
+      "compressedSha256": "1be00b0352e638dc08179562f9bcc665805ccc98ad1918fbcf912c5edfacd427"
+    },
+    {
+      "path": "3-confirmation.json.gz",
+      "sha256": "fd879e424ffc0b3f565cdd05ed5af1ba2e6ec105b881e36c5e74761a2bc28d05",
+      "compressedSha256": "e0e0af216dda610297abcc81e4c2ef4fdbdd5c01ac97ca48423e69afe220e0a3"
+    }
+  ]
+}

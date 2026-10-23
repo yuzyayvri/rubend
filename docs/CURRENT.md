@@ -91,13 +91,15 @@ diagnostic passed with 1,673 matching seals. Its 24 requests show no major fault
 or large runnable-wait spikes; the timing cause remains unproved. The failed
 acceptance gate is not retried. Work returns to the reference proof bridge.
 Finite-cell confirmation passed with 1,681 matching seals. A field-wise proof
-now connects every typed whole-state move and finite replay word to the existing
-facelet specification. The initial pure Bend/BendTT verdict passes. The new
-guard checks actual wrong-transport rejection, the solved view and unchanged
-runtime behavior. Packed linkage and inverse reconstruction remain open.
-The next queue is `u02-cells-refinement-v1`, with a two-minute estimate and
-three-minute cap. Read
-docs/verification/next-plan/U02/CELL-REFINEMENT.md. Inspect and archive its results
+connects every typed whole-state move and finite replay word to the existing
+facelet specification. Its guard and post-commit confirmation pass with 1,691
+matching seals. Whole-state embedding injectivity, inverse-move action and
+inverse-word cancellation now pass the initial pure verdict. Word cancellation
+does not prove inversion of the represented cube state. The new guard checks
+swapped-cell and wrong-word-order rejection. Packed linkage and the actual NP03
+state-inverse bridge remain open. The next queue is `u02-cell-inverse-v1`, with
+a two-minute estimate and three-minute cap. Read
+docs/verification/next-plan/U02/CELL-WORD-CANCELLATION.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and concrete inverse reconstruction remain open.

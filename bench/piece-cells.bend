@@ -1041,3 +1041,93 @@ def replay_refinement(+word: +List<M.Move>, +cells: PieceCells) -> {to_facelets(
     case Nil{}: {==}
     case Con{+move, +rest}:
       Equal.trans(M.Cube, to_facelets(replay(rest, turn(move, cells))), M.replay(rest, to_facelets(turn(move, cells))), M.replay(rest, M.turn(move, to_facelets(cells))), replay_refinement(rest, turn(move, cells)), Equal.cong(M.Cube, M.Cube, view => M.replay(rest, view), to_facelets(turn(move, cells)), M.turn(move, to_facelets(cells)), move_refinement(move, cells)))
+
+def cells_ext(+a0: Corner, +a1: Corner, +a2: Corner, +a3: Corner, +a4: Corner, +a5: Corner, +a6: Corner, +a7: Corner, +a8: Edge, +a9: Edge, +a10: Edge, +a11: Edge, +a12: Edge, +a13: Edge, +a14: Edge, +a15: Edge, +a16: Edge, +a17: Edge, +a18: Edge, +a19: Edge, +b0: Corner, +b1: Corner, +b2: Corner, +b3: Corner, +b4: Corner, +b5: Corner, +b6: Corner, +b7: Corner, +b8: Edge, +b9: Edge, +b10: Edge, +b11: Edge, +b12: Edge, +b13: Edge, +b14: Edge, +b15: Edge, +b16: Edge, +b17: Edge, +b18: Edge, +b19: Edge, e0: {a0 == b0 : Corner}, e1: {a1 == b1 : Corner}, e2: {a2 == b2 : Corner}, e3: {a3 == b3 : Corner}, e4: {a4 == b4 : Corner}, e5: {a5 == b5 : Corner}, e6: {a6 == b6 : Corner}, e7: {a7 == b7 : Corner}, e8: {a8 == b8 : Edge}, e9: {a9 == b9 : Edge}, e10: {a10 == b10 : Edge}, e11: {a11 == b11 : Edge}, e12: {a12 == b12 : Edge}, e13: {a13 == b13 : Edge}, e14: {a14 == b14 : Edge}, e15: {a15 == b15 : Edge}, e16: {a16 == b16 : Edge}, e17: {a17 == b17 : Edge}, e18: {a18 == b18 : Edge}, e19: {a19 == b19 : Edge}) -> {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}:
+  %e0 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{_, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e1 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, _, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e2 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, _, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e3 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, _, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e4 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, _, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e5 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, _, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e6 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, _, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e7 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, _, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e8 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, _, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e9 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, _, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e10 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, _, b11, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e11 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, _, b12, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e12 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, _, b13, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e13 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, _, b14, b15, b16, b17, b18, b19} : PieceCells}
+  %e14 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, _, b15, b16, b17, b18, b19} : PieceCells}
+  %e15 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, _, b16, b17, b18, b19} : PieceCells}
+  %e16 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, _, b17, b18, b19} : PieceCells}
+  %e17 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, _, b18, b19} : PieceCells}
+  %e18 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, _, b19} : PieceCells}
+  %e19 : {PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19} == PieceCells{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, _} : PieceCells}
+  {==}
+
+def corner_project_recover(+state: Corner) -> {corner_recover(CornerColors{corner_color0(state), corner_color1(state), corner_color2(state)}) == state : Corner}:
+  match state:
+    case C00{}: {==}
+    case C01{}: {==}
+    case C02{}: {==}
+    case C10{}: {==}
+    case C11{}: {==}
+    case C12{}: {==}
+    case C20{}: {==}
+    case C21{}: {==}
+    case C22{}: {==}
+    case C30{}: {==}
+    case C31{}: {==}
+    case C32{}: {==}
+    case C40{}: {==}
+    case C41{}: {==}
+    case C42{}: {==}
+    case C50{}: {==}
+    case C51{}: {==}
+    case C52{}: {==}
+    case C60{}: {==}
+    case C61{}: {==}
+    case C62{}: {==}
+    case C70{}: {==}
+    case C71{}: {==}
+    case C72{}: {==}
+
+def edge_project_recover(+state: Edge) -> {edge_recover(EdgeColors{edge_color0(state), edge_color1(state)}) == state : Edge}:
+  match state:
+    case E00{}: {==}
+    case E01{}: {==}
+    case E10{}: {==}
+    case E11{}: {==}
+    case E20{}: {==}
+    case E21{}: {==}
+    case E30{}: {==}
+    case E31{}: {==}
+    case E40{}: {==}
+    case E41{}: {==}
+    case E50{}: {==}
+    case E51{}: {==}
+    case E60{}: {==}
+    case E61{}: {==}
+    case E70{}: {==}
+    case E71{}: {==}
+    case E80{}: {==}
+    case E81{}: {==}
+    case E90{}: {==}
+    case E91{}: {==}
+    case E100{}: {==}
+    case E101{}: {==}
+    case E110{}: {==}
+    case E111{}: {==}
+
+def recover_facelets(view: M.Cube) -> PieceCells:
+  match view:
+    case M.Cube{a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53}:
+      PieceCells{corner_recover(CornerColors{a8, a9, a20}), corner_recover(CornerColors{a6, a18, a38}), corner_recover(CornerColors{a0, a36, a47}), corner_recover(CornerColors{a2, a45, a11}), corner_recover(CornerColors{a29, a26, a15}), corner_recover(CornerColors{a27, a44, a24}), corner_recover(CornerColors{a33, a53, a42}), corner_recover(CornerColors{a35, a17, a51}), edge_recover(EdgeColors{a5, a10}), edge_recover(EdgeColors{a7, a19}), edge_recover(EdgeColors{a3, a37}), edge_recover(EdgeColors{a1, a46}), edge_recover(EdgeColors{a32, a16}), edge_recover(EdgeColors{a28, a25}), edge_recover(EdgeColors{a30, a43}), edge_recover(EdgeColors{a34, a52}), edge_recover(EdgeColors{a23, a12}), edge_recover(EdgeColors{a21, a41}), edge_recover(EdgeColors{a50, a39}), edge_recover(EdgeColors{a48, a14})}
+
+def state_roundtrip(+cells: PieceCells) -> {recover_facelets(to_facelets(cells)) == cells : PieceCells}:
+  match cells:
+    case PieceCells{+c0, +c1, +c2, +c3, +c4, +c5, +c6, +c7, +e0, +e1, +e2, +e3, +e4, +e5, +e6, +e7, +e8, +e9, +e10, +e11}:
+      cells_ext(corner_recover(CornerColors{corner_color0(c0), corner_color1(c0), corner_color2(c0)}), corner_recover(CornerColors{corner_color0(c1), corner_color1(c1), corner_color2(c1)}), corner_recover(CornerColors{corner_color0(c2), corner_color1(c2), corner_color2(c2)}), corner_recover(CornerColors{corner_color0(c3), corner_color1(c3), corner_color2(c3)}), corner_recover(CornerColors{corner_color0(c4), corner_color1(c4), corner_color2(c4)}), corner_recover(CornerColors{corner_color0(c5), corner_color1(c5), corner_color2(c5)}), corner_recover(CornerColors{corner_color0(c6), corner_color1(c6), corner_color2(c6)}), corner_recover(CornerColors{corner_color0(c7), corner_color1(c7), corner_color2(c7)}), edge_recover(EdgeColors{edge_color0(e0), edge_color1(e0)}), edge_recover(EdgeColors{edge_color0(e1), edge_color1(e1)}), edge_recover(EdgeColors{edge_color0(e2), edge_color1(e2)}), edge_recover(EdgeColors{edge_color0(e3), edge_color1(e3)}), edge_recover(EdgeColors{edge_color0(e4), edge_color1(e4)}), edge_recover(EdgeColors{edge_color0(e5), edge_color1(e5)}), edge_recover(EdgeColors{edge_color0(e6), edge_color1(e6)}), edge_recover(EdgeColors{edge_color0(e7), edge_color1(e7)}), edge_recover(EdgeColors{edge_color0(e8), edge_color1(e8)}), edge_recover(EdgeColors{edge_color0(e9), edge_color1(e9)}), edge_recover(EdgeColors{edge_color0(e10), edge_color1(e10)}), edge_recover(EdgeColors{edge_color0(e11), edge_color1(e11)}), c0, c1, c2, c3, c4, c5, c6, c7, e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, corner_project_recover(c0), corner_project_recover(c1), corner_project_recover(c2), corner_project_recover(c3), corner_project_recover(c4), corner_project_recover(c5), corner_project_recover(c6), corner_project_recover(c7), edge_project_recover(e0), edge_project_recover(e1), edge_project_recover(e2), edge_project_recover(e3), edge_project_recover(e4), edge_project_recover(e5), edge_project_recover(e6), edge_project_recover(e7), edge_project_recover(e8), edge_project_recover(e9), edge_project_recover(e10), edge_project_recover(e11))
+
+def facelets_injective(+a: PieceCells, +b: PieceCells, evidence: {to_facelets(a) == to_facelets(b) : M.Cube}) -> {a == b : PieceCells}:
+  Equal.trans(PieceCells, a, recover_facelets(to_facelets(a)), b, Equal.sym(PieceCells, recover_facelets(to_facelets(a)), a, state_roundtrip(a)), Equal.trans(PieceCells, recover_facelets(to_facelets(a)), recover_facelets(to_facelets(b)), b, Equal.cong(M.Cube, PieceCells, recover_facelets, to_facelets(a), to_facelets(b), evidence), state_roundtrip(b)))
