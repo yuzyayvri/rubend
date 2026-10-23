@@ -23,6 +23,7 @@ for(const k of kinds){
   }));
 }
 const allSlots=kinds.flatMap(k=>k.slots.flat());assert.equal(new Set(allSlots).size,48);assert.deepEqual(Array.from({length:54},(_,i)=>i).filter(i=>!allSlots.includes(i)),[4,13,22,31,40,49]);
+for(const p of permutations){assert.deepEqual([...p].sort((a,b)=>a-b),Array.from({length:54},(_,i)=>i));for(const i of[4,13,22,31,40,49])assert.equal(p[i],i);}
 const lines=["import Base","import ../src/model.bend as M",""];
 for(const k of kinds){
   const lower=k.name.toLowerCase(),colorType=k.name+"Colors",vars=Array.from({length:k.size},(_,i)=>"a"+i),rotateState=s=>k.states[s.piece*k.size+(s.orientation+1)%k.size].name;
@@ -43,6 +44,24 @@ const facelets=Array.from({length:54},(_,i)=>{const f=fields.find(f=>f.kind.slot
 lines.push("","def to_facelets(cells: PieceCells) -> M.Cube:","  match cells:","    case PieceCells{"+fields.map(f=>"+"+f.name).join(", ")+"}:","      M.Cube{"+facelets.join(", ")+"}","","def indices(cells: PieceCells) -> +List<U32>:","  match cells:","    case PieceCells{"+pattern+"}:","      ["+fields.map(f=>f.kind.name.toLowerCase()+"_index("+f.name+")").join(", ")+"]","");
 const params=fields.map(f=>f.name+": U32").join(", "),initial="PieceCells{"+fields.map(f=>f.kind.name.toLowerCase()+"_test_at("+f.name+")").join(", ")+"}";
 lines.push("def test_facelets("+params+") -> M.Cube:","  to_facelets("+initial+")","","def test_turn(move: U32, "+params+") -> M.Cube:","  to_facelets(turn(M.from_index(move), "+initial+"))","","def test_indices(move: U32, "+params+") -> +List<U32>:","  indices(turn(M.from_index(move), "+initial+"))","");
-const text=lines.join("\n"),path="bench/piece-cells.bend",manifest=JSON.stringify({format:"rubend-piece-cells-v1",sourceHashes:{"src/model.bend":hash(model),"src/cubie.bend":hash(cubie)},outputSha256:hash(text),kinds:kinds.map(({name,slots,colors,maps})=>({name,slots,colors,maps})),scope:"Finite cell decoding, injectivity and orientation rotation proofs. Whole-state move refinement, inverse reconstruction and packed correspondence are not yet proved."},null,2)+"\n";
+lines.push("def solved_cells() -> PieceCells:","  PieceCells{"+fields.map(f=>f.kind.prefix+f.i+"0{}").join(", ")+"}","","def solved_refinement() -> {to_facelets(solved_cells()) == M.solved() : M.Cube}:","  {==}","");
+const labels=Array.from({length:54},(_,i)=>"a"+i),others=Array.from({length:54},(_,i)=>"b"+i),cube=xs=>"M.Cube{"+xs.join(", ")+"}";
+lines.push("def cube_ext("+[...labels.map(v=>"+"+v+": U32"),...others.map(v=>"+"+v+": U32"),...labels.map((v,i)=>"e"+i+": {"+v+" == b"+i+" : U32}")].join(", ")+") -> {"+cube(labels)+" == "+cube(others)+" : M.Cube}:");
+for(let i=0;i<54;i++)lines.push("  %e"+i+" : {"+cube(labels)+" == "+cube(others.map((v,j)=>j<i?labels[j]:j===i?"_":v))+" : M.Cube}");
+lines.push("  {==}","");
+for(const k of kinds)for(let rotations=1;rotations<k.size;rotations++)for(let side=0;side<k.size;side++){
+  let rotated="state";for(let i=0;i<rotations;i++)rotated=k.name.toLowerCase()+"_rotate("+rotated+")";
+  const lower=k.name.toLowerCase();lines.push("def "+lower+"_project_"+rotations+"_"+side+"(+state: "+k.name+") -> {"+lower+"_color"+side+"("+rotated+") == "+lower+"_color"+((side-rotations+k.size)%k.size)+"(state) : U32}:","  match state:",...k.states.map(s=>"    case "+s.name+"{}: {==}"),"");
+}
+lines.push("def move_refinement(+move: M.Move, +cells: PieceCells) -> {to_facelets(turn(move, cells)) == M.turn(move, to_facelets(cells)) : M.Cube}:","  match move cells:");
+for(const [m,name]of moves.entries()){
+  const left=Array.from({length:54},(_,at)=>{
+    const f=fields.find(f=>f.kind.slots[f.i].includes(at));if(!f)return String(Math.floor(at/9));const map=f.kind.maps[m][f.i];let value=f.kind.prefix.toLowerCase()+map.source;for(let i=0;i<map.rotations;i++)value=f.kind.name.toLowerCase()+"_rotate("+value+")";return f.kind.name.toLowerCase()+"_color"+f.kind.slots[f.i].indexOf(at)+"("+value+")";
+  });
+  const proofs=Array.from({length:54},(_,at)=>{const f=fields.find(f=>f.kind.slots[f.i].includes(at));if(!f)return"{==}";const map=f.kind.maps[m][f.i];return map.rotations?f.kind.name.toLowerCase()+"_project_"+map.rotations+"_"+f.kind.slots[f.i].indexOf(at)+"("+f.kind.prefix.toLowerCase()+map.source+")":"{==}";});
+  lines.push("    case M."+name+"{} PieceCells{"+fields.map(f=>"+"+f.name).join(", ")+"}:","      cube_ext("+[...left,...permutations[m].map(at=>facelets[at]),...proofs].join(", ")+")");
+}
+lines.push("","def replay(word: +List<M.Move>, cells: PieceCells) -> PieceCells:","  match word:","    case Nil{}: cells","    case Con{move, rest}: replay(rest, turn(move, cells))","","def replay_refinement(+word: +List<M.Move>, +cells: PieceCells) -> {to_facelets(replay(word, cells)) == M.replay(word, to_facelets(cells)) : M.Cube}:","  match word:","    case Nil{}: {==}","    case Con{+move, +rest}:","      Equal.trans(M.Cube, to_facelets(replay(rest, turn(move, cells))), M.replay(rest, to_facelets(turn(move, cells))), M.replay(rest, M.turn(move, to_facelets(cells))), replay_refinement(rest, turn(move, cells)), Equal.cong(M.Cube, M.Cube, view => M.replay(rest, view), to_facelets(turn(move, cells)), M.turn(move, to_facelets(cells)), move_refinement(move, cells)))","");
+const text=lines.join("\n"),path="bench/piece-cells.bend",manifest=JSON.stringify({format:"rubend-piece-cells-v1",sourceHashes:{"src/model.bend":hash(model),"src/cubie.bend":hash(cubie)},outputSha256:hash(text),kinds:kinds.map(({name,slots,colors,maps})=>({name,slots,colors,maps})),scope:"Finite cell codecs and rotation identities, whole-state one-move and word refinement statements. Verification receipts determine their checked status. Inverse reconstruction and packed correspondence remain open."},null,2)+"\n";
 if(check){assert.equal(readFileSync(path,"utf8"),text);assert.equal(readFileSync("bench/piece-cells.manifest.json","utf8"),manifest);}else{writeFileSync(path,text);writeFileSync("bench/piece-cells.manifest.json",manifest);}
-console.log(JSON.stringify({passed:true,check,cells:20,statesPerKind:24,wholeStateRefinement:false}));
+console.log(JSON.stringify({passed:true,check,cells:20,statesPerKind:24,wholeStateRefinementStatement:true}));

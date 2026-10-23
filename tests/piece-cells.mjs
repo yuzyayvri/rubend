@@ -20,5 +20,5 @@ for(const sample of samples){
   }
 }
 assert.ok(mutation,"The actual wrong-rotation module must disagree with the reference");
-writeFileSync(resolve(process.argv[4]),JSON.stringify({passed:true,seed:"rubend-piece-cells-v1",typedSamples:2000,legalViews,moveComparisons:comparisons,indexRoundtrips:comparisons,mutation,wholeStateRefinementProved:false,packedRefinementProved:false,inverseReconstructionProved:false,independentReview:false})+"\n",{flag:"wx"});
+writeFileSync(resolve(process.argv[4]),JSON.stringify({passed:true,seed:"rubend-piece-cells-v1",typedSamples:2000,legalViews,moveComparisons:comparisons,indexRoundtrips:comparisons,mutation,sampleEvidenceOnly:true,universalProofEvaluated:false,packedRefinementProved:false,inverseReconstructionProved:false,independentReview:false})+"\n",{flag:"wx"});
 console.log(JSON.stringify({passed:true,typedSamples:2000,legalViews,moveComparisons:comparisons,actualWrongRotationCounterexample:true}));

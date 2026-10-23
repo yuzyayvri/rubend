@@ -90,11 +90,14 @@ to lookup/read code but does not identify the noise cause. The control-only
 diagnostic passed with 1,673 matching seals. Its 24 requests show no major faults
 or large runnable-wait spikes; the timing cause remains unproved. The failed
 acceptance gate is not retried. Work returns to the reference proof bridge.
-New finite corner and edge cell enums have checked codec injectivity and local
-rotation proofs. Whole-state move commutation, packed linkage and inverse
-reconstruction remain open. The next queue is `u02-cells-v1`, with a two-minute
-estimate and three-minute cap. Read
-docs/verification/next-plan/U02/PIECE-CELLS.md. Inspect and archive its results
+Finite-cell confirmation passed with 1,681 matching seals. A field-wise proof
+now connects every typed whole-state move and finite replay word to the existing
+facelet specification. The initial pure Bend/BendTT verdict passes. The new
+guard checks actual wrong-transport rejection, the solved view and unchanged
+runtime behavior. Packed linkage and inverse reconstruction remain open.
+The next queue is `u02-cells-refinement-v1`, with a two-minute estimate and
+three-minute cap. Read
+docs/verification/next-plan/U02/CELL-REFINEMENT.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and concrete inverse reconstruction remain open.
