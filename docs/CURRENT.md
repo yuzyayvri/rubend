@@ -10,11 +10,18 @@ Canonical archive: docs/verification/next-plan/U04/u04-fast-only-v1/index.json,
 latency, CPU or default promotion is established. U05's non-pruning collector
 passes its pure kernel and fourteen context guards in the same archive.
 
-Next, prepare bounded native U05 duplicate-work collection with per-quantum
-control equality. No cache/pruning or NP06/NP07 approval. Then return to the
-promising U04 fast-only policy's native deadline/first-answer probe before any
-integration. U04 move ordering/phase-two projection, U06 bridges/UI efficiency
-and U07 final comparisons remain open. Publication and large builds are gated.
+U05 native observation passed and was canonically archived with 2,026 seals,
+three receipts, worker gone and no resource stop. Every saved control/observer
+state matches. All 48 incumbent replays and 2,048 sampled cube roundtrips pass.
+One repeat among 52,567 completed spans has a 19-step repeated span. This does
+not justify a cache probe on the current workload. No cache/pruning or NP06/NP07
+approval. Read docs/verification/next-plan/U05/NATIVE-DUPLICATE-OBSERVATION.md
+and docs/verification/next-plan/U05/u05-interior-v1/index.json.
+
+Next, return to the promising U04 fast-only policy's native deadline/first-answer
+probe before integration. U04 move ordering/phase-two projection, U06 bridges/UI
+efficiency and U07 final comparisons remain open. Publication and large builds
+are gated.
 
 ## Earlier checkpoints
 
