@@ -42,8 +42,15 @@ The mapper preflight passed `u04-mapper-v1`, canonically verified with 2,209 sea
 and four receipts, worker gone/no resource stop. Every entry, both actual data
 corruptions, 30 work guards and native checksums pass. The timing comparison is
 inconclusive. All samples are below 100 ms and two A/A cohorts exceed the noise
-limit. The six-sample profile cannot resolve the full limiter. Prepare a separate
-50-million-probe duration check with unchanged helper algorithms and floors.
+limit. The separate `u04-mapper-long-v1` archive verifies 2,231 seals/four receipts.
+All counts, checksums and gates pass. Its samples clear 100 ms, but two A/A
+cohorts still exceed five percent. Timing remains inconclusive. The longer
+profile identifies the packed corner calculation as the dominant helper work.
+No promotion or unchanged rerun. Read
+docs/verification/next-plan/U04/PHASE2-MAPPER-LONG.md and
+docs/verification/next-plan/U04/u04-mapper-long-v1/index.json.
+Next, use U03's six audited small edge tables for a bounded compression study.
+Do not generate a full six-edge database or add an unapproved domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
 docs/verification/next-plan/U04/u04-mapper-v1/index.json.
