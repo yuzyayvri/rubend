@@ -123,6 +123,17 @@ projections; the first rejected probe is preserved. Read
 docs/verification/next-plan/U02/PACKED-MOVE.md and
 docs/verification/next-plan/U02/u02-packed-move-v1/index.json.
 Packed inverse, input reachability and loaded admissibility remain open.
+The packed replay extension also passed its fixed guard, with 1,798 matching
+seals, no resource stop and its worker gone. Both pure checkers prove packing
+injectivity, actual packed move/word cancellation, reaching-word root
+correspondence, inverted solutions and the reference kernel bridge on packed
+replay. All 1,024 roots, cancellations and inverted solutions pass the backend
+driver. Two wrong conventions have actual counterexamples and four expected
+proof rejections. `Cubie.inverse` remains a separate obligation. The batch also
+rechecked the complete move module after its signed commit and reused its
+unchanged backend/rejection evidence. Read
+docs/verification/next-plan/U02/PACKED-REPLAY.md and
+docs/verification/next-plan/U02/u02-packed-replay-v1/index.json.
 There is no general speed claim, production change,
 new PDB or release-holdout use. Validated-input refinement, loaded-data
 admissibility and the packed inverse reconstruction remain open.
