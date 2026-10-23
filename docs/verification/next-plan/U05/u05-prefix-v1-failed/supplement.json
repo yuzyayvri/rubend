@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "preserved": true,
+  "nativeCensusRows": 20,
+  "bendSnapshotSources": 11,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/native.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/supplement-native.json.gz",
+      "bytes": 1125,
+      "compressedBytes": 341,
+      "sha256": "9825f5f1b368ba9b74559bfefe409cc1f8c3c685ce82c78efe4b038d78398a5f",
+      "compressedSha256": "03b3a40b9a60865c935fcadbb17a19aaf219e16a074d3dd469519f1bc61f5f3b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/prefix-native.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/supplement-build.json.gz",
+      "bytes": 1654,
+      "compressedBytes": 849,
+      "sha256": "5e567ffe5f1bac553a3a04afa33b07c0814acfa595a5ef7b03ddda5faa31ecc3",
+      "compressedSha256": "76dc951667ce0cfdde5ddea62d5327ab726ae1394637c0c4b69bd038c77a7a2d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/failed-bend-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/supplement-bend-sources.json.gz",
+      "bytes": 151641,
+      "compressedBytes": 18577,
+      "sha256": "cf86dbd86556ccede0e3007c0c9518eaacad3dad3c05eb83688c9f4db982b3bd",
+      "compressedSha256": "9cba1423bdeb1e6cb3280825f143eb97ae6f0070e8d7d781e3a7cd1a4d09992c",
+      "roundtripPassed": true
+    }
+  ]
+}

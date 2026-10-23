@@ -68,9 +68,21 @@ twelve corruption controls and unchanged gates pass. Original counts are
 unchanged; no cube/rank/codec work was repeated. Read
 docs/verification/next-plan/U03/RANGE-GUARD.md and
 docs/verification/next-plan/U03/u03-range-v1/index.json.
-Continue U05's private existing-mask prefix preflight, before ledger or workers.
-Its design is docs/verification/next-plan/U05/PARTITION-PREFLIGHT.md.
-No partition coverage result exists yet. NP07 remains unapproved.
+The `u05-prefix-v1` queue failed at the test adapter's application move-list
+limit while reading 43,254 valid prefix IDs. All 2,284 source seals, executed
+receipts, twenty native rows and eleven frozen Bend sources are preserved under
+docs/verification/next-plan/U05/u05-prefix-v1-failed/. The app limit is unchanged.
+A separate depth-bounded census reader passes the failing-before regression and
+thirteen boundary/malformed controls. The `u05-prefix-recovery-v1` archive verifies
+2,307 seals/three receipts, worker gone/no stop. All twenty censuses, twelve finite
+endpoint-orbit comparisons, four compiled corruptions, two missing-endpoint
+controls and native checksum parity pass. Unchanged compile/native data was
+reused and unchanged proof/toolchain gates pass. The original run stays failed.
+Read docs/verification/next-plan/U05/PARTITION-PREFLIGHT.md and
+docs/issues/partition-prefix-list-adapter.md. Next, implement private ledger
+bookkeeping with explicit short-word coverage and full scope identity. Finite
+prefix evidence is not universal coverage. No ledger, worker partitions, NP07
+proof or production/global-bound change yet.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and

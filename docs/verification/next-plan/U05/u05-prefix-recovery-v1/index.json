@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u05-prefix-recovery-v1",
+  "revision": "fa8dd8be1db26788d0979a1bc5312b95321d02ce",
+  "sourceSeals": 2307,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T20:52:42.652Z",
+  "finishedAt": "2026-10-23T20:53:27.965Z",
+  "archives": [
+    {
+      "path": "0-u05-prefix-recovery-v1-plan.json.gz",
+      "sha256": "6fe87e2ae277b0647b29acb27e3dfe3829437dca3a5c64516c9fd6dead083af2",
+      "compressedSha256": "da26d292febe080d4988e1d676b19327a4212ddda9a561c27fe145cd13633fef"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "11de473df38b96887f74fc73ef4ac6514a2175fde41df0621cb77ca9a1074146",
+      "compressedSha256": "028ee9feeb5096c7b7173c78cad8bfe33b31a54fa6b7aff26d64ab7f5db7f2f8"
+    },
+    {
+      "path": "2-u05-prefix-recovery-v1-preflight.json.gz",
+      "sha256": "00884f0c217485f0cd04be367a6391bd49437dd73fe01e14115fb14ad2417370",
+      "compressedSha256": "f33b614dad5746abd7ff9e2363a00ecb4e5ddd3e1d91b2b7bc282bf4bcba60da"
+    },
+    {
+      "path": "3-u05-prefix-recovery-v1-oracle.json.gz",
+      "sha256": "8f0c1584f40cd74e0d13e609f0802e6f91baae41f8804576402458db3cf1f063",
+      "compressedSha256": "f5a02026b5441645a3d6c236d9719875a56035cbc4a99db7003486375c360f7a"
+    },
+    {
+      "path": "4-u05-prefix-recovery-v1-confirm.json.gz",
+      "sha256": "7d044e3ca477e529041b16742f60d25792bcc8700be01b5ff4dd261466c45f73",
+      "compressedSha256": "6c165d6d52dd935c887b96985fa842054dfb6e15d9fde62a9aeda9ed8c99d47b"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "9f837551415df71b3ba2196bcb05f345311bff98f4d79a64cd81193883c4f2a5",
+      "compressedSha256": "0d944ab4f32ba978693466262e27b2ba7e3b0f10aad9e620a2d32267889c33ea"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "b57ad674e7a14789886e5b6b55d63a4b461d86ca68ae1dd12c797b03ff5a1900",
+      "compressedSha256": "843d96d39a41716e4ba517ba03ead6c1b4b7049d2dea88b44fd74ebb4a0d90e4"
+    },
+    {
+      "path": "7-oracle.json.gz",
+      "sha256": "ba7543755f7425de6e33cba24ed5c4a5fde59c718b6d9a752d5c8c4f5a390367",
+      "compressedSha256": "4382397edea1629ff5425c53a38d4424592b5ae80b4bbc7e74f2e3c3d12d562b"
+    }
+  ]
+}
