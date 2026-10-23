@@ -7,7 +7,7 @@ is claimed. Work stays solo, local, signed, and subject-only.
 | --- | --- |
 | U00. Controls and evidence | All ten browser lanes have receipts. Native profile checks pass. Raw A/A timing remains inconclusive, so acceptance and performance promotion stay open. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | Corner-twist confirmation passed with 1,790 seals. An initial complete packed-move, facelet and finite-word probe passes both checkers. Its fixed backend/rejection guard is next; new code remains uncommitted until it passes. Packed inverse, input reachability and loaded bounds remain open. Deadline quality and performance acceptance remain inconclusive. |
+| U02. Existing-bound inference and coordinate reuse | Complete typed packed-move, facelet and finite-word refinement passes both checkers and the fixed guard with 1,786 seals. All 36,000 move and 256 replay cases pass; three actual corruptions are rejected. Packed inverse, input reachability and loaded bounds remain open. Deadline quality and performance acceptance remain inconclusive. |
 | U03. Six-edge PDB and compression | Not started. New large-table generation still needs separate admission and authority. Existing corner/H0 data is preserved. |
 | U04. Ordering, premoves, and phase-two projection | Not started in this programme. Earlier rejected scheduling treatments remain rejected. |
 | U05. Exact-context failure cache and partitioned search | Not started. No incomplete search is cached as a completed failure. |
@@ -19,12 +19,11 @@ Autonomous continuation now uses the existing Codex thread heartbeat
 request. It reads detached receipts first and does not duplicate running work.
 This replaces only the previous no-wakeup instruction, not other authority
 gates. Corner-orientation confirmation is [archived](U02/u02-corner-orientation-v1/index.json).
-The next queue is `u02-packed-move-v1`, expected four minutes with a ten-minute
-hard cap, three GiB and four low-priority lanes. It verifies the combined move
-relation, deterministic generation, six expected proof rejections, actual
-backend counterexamples and whole-cube/replay comparisons. No default or
-pruning changes are included. U03–U07 remain in the states shown above; this
-proof work does not imply those units have been implemented.
+The [combined packed-move guard](U02/u02-packed-move-v1/index.json) is verified
+and archived. [Its proof boundary](U02/PACKED-MOVE.md) distinguishes typed
+state preservation from packed inversion and validation reachability.
+No default or pruning changes are included. U03–U07 remain in the states shown
+above; this proof work does not imply those units have been implemented.
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
