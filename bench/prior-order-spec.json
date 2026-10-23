@@ -1,0 +1,12 @@
+{
+  "format": "rubend-prior-order-spec-v1",
+  "budgets": [160000, 640000],
+  "cohorts": 5,
+  "aaCohorts": 2,
+  "pilotCases": 4,
+  "developmentCases": 8,
+  "publicSuperflip": true,
+  "policy": "ascending last fully completed Improve contour cost, stable unknowns and ties, once per complete round, exact slots retained",
+  "rawProfile": "inverse-three",
+  "promotion": false
+}

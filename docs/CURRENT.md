@@ -58,6 +58,19 @@ docs/verification/next-plan/U03/u03-pilot-u04-events-v1/index.json. The next U04
 step is a bounded task-order treatment with fairness and unchanged work quanta.
 U05 remains unstarted, U06 proof bridges partial and U07 holdout unopened.
 
+The prior-contour ordering queue passed and its canonical archive verifies
+1,921 seals, five receipts, worker gone and no resource stop. All control states
+match. The pilot improves two distinct case/budget/request pairs with no losses;
+all thirty-two disjoint development pairs tie across five cohorts. The pilot
+gain is not confirmed. Fifteen of twenty A/A timing pairs exceed five-percent
+spread. Keep round robin. No speed, deadline-quality or promotion claim.
+The complete original large traces were preserved through a bounded streaming
+archive recovery, then verified by the unchanged canonical checker. Read
+docs/verification/next-plan/U04/PRIOR-CONTOUR-ORDER.md and
+docs/verification/next-plan/U04/u04-prior-order-v1/index.json. Next, check
+one-move premove path composition and independent replay before a candidate
+generation treatment. Do not repeat unchanged ordering cohorts for luck.
+
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
 `continue-rubend-roadmap` is active every thirty minutes. This supersedes the
