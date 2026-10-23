@@ -152,6 +152,28 @@ proof rejections. The bit-name collision is reproduced and now rejected;
 all previous routing, packing and packed-move proof bytes stay identical.
 Read docs/verification/next-plan/U02/PACKED-INVERSE.md and
 docs/verification/next-plan/U02/u02-packed-inverse-v1/index.json.
+The source-prefix diagnostic passed collection with 1,832 matching seals,
+worker gone and no resource stop. This is not proof acceptance. The first five
+definitions pass both checkers; native BendTT reports `coordinate_shape: out
+of fuel`. The pinned conversion budget is 400,000,000 steps and is unchanged.
+The existing coordinate module passes its standalone verdict. Both direct
+reflexivity and congruence-form shape proofs hit the normalization gate.
+The normalization controls passed with 1,829 verified seals and the worker gone.
+All alias depths and the exact reflexive control pass, ruling out the loop
+alone. The constructor-guard prototype passes both checkers and all 4,096
+low-mask backend comparisons. A private full coordinate profile with that
+boundary now passes an initial universal typed mask verdict too.
+The next queue is `u02-slice-coordinate-profile-v1`, estimated six minutes with
+a fifteen-minute cap. It checks the private profile's complete 495-placement
+codecs, source-corruption controls, backend comparisons and unchanged gates.
+Production coordinate source and checker fuel remain unchanged. Native cost
+and integration are not accepted by these proof checks. The earlier flat
+placement probe's SIGKILL remains unexplained; the smaller branching type is
+prepared, not yet verified. Read
+docs/issues/slice-mask-verdict-mismatch.md and
+docs/verification/next-plan/U02/u02-slice-verdict-v1/index.json.
+New slice implementation remains uncommitted. Inspect and archive the next
+completed guard before source edits.
 There is no general speed claim, production change,
 new PDB or release-holdout use. Validated-input refinement, loaded-data
 admissibility remain open. The packed inverse bridge no longer assumes the

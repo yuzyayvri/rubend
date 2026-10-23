@@ -35,6 +35,18 @@ and archived. [Its proof boundary](U02/PACKED-INVERSE.md) retains validated-inpu
 reachability, coordinate/target linkage and loaded-distance admissibility.
 The reconstructed inverse is now the actual function, not a premise.
 No production pruning or performance acceptance follows from this result.
+The [source-prefix diagnostic](U02/u02-slice-verdict-v1/index.json) completed
+with 1,832 verified seals. Native BendTT reports reduction-fuel exhaustion at
+`coordinate_shape`, after five accepted definitions. The slice proof remains
+unaccepted. The [disagreement record](../../issues/slice-mask-verdict-mismatch.md)
+preserves the gate. The [normalization controls](U02/u02-rank-normalization-v1/index.json)
+passed with 1,829 seals, including every alias depth and the private guard's
+4,096 backend masks. An initial universal mask verdict now passes for the
+source-isolated full coordinate profile. Its complete guard is next as
+`u02-slice-coordinate-profile-v1`, estimated six minutes with a fifteen-minute
+cap, three GiB and four low-priority lanes. Production code and checker budget
+stay unchanged. Native cost, integration and legal-mask coverage remain open.
+No complete slice proof, full target link or U03–U07 progress is claimed yet.
 
 The latest completed delivery evidence is
 [the redesigned CI-package archive](U01/u01-delivery-redesign-v1/index.json).
