@@ -22,6 +22,15 @@ receipt changes, a live worker, wrong revision, missing jobs, command drift and
 limit drift. The actual completed coordinate queue was checked and archived,
 then checked again without changes. These checks are not independent review.
 
+Receipts up to 32 MiB use the original synchronous archiver. Larger JSON traces
+use bounded streamed compression, capped at 128 MiB input, with source-identity,
+JSON, hash and roundtrip checks. JSON validation remains memory-bounded rather
+than streaming. Both paths preserve source bytes and reject overwrites.
+`tests/streamed-archive.mjs bench/archive-streamed-evidence.mjs` checks the
+larger path and its hard cap. `tests/background-large-archive.mjs` checks
+automatic canonical selection and stable repeat verification. The original
+eight source/receipt negative controls remain unchanged.
+
 The older queue descriptions below preserve their original scopes and timings.
 
 The background runner executes a fixed local command queue without a model,

@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import {mkdirSync,writeFileSync,readFileSync,existsSync,rmSync} from "node:fs";
+import {resolve} from "node:path";
+import {createHash,randomBytes} from "node:crypto";
+import {execFileSync} from "node:child_process";
+import {gunzipSync} from "node:zlib";
+import {checkBackgroundResults} from "../bench/check-background-results.mjs";
+
+const id="u04-archive-fixture-"+randomBytes(8).toString("hex"),directory=resolve("build/experiments",id),archive=resolve("docs/verification/next-plan/U04",id),planPath=resolve("build/evidence",id+"-plan.json"),hash=b=>createHash("sha256").update(b).digest("hex"),bytes=JSON.stringify({passed:true,fixture:true,raw:"x".repeat(33554432)}),source=resolve(directory,"large.json"),receipt=resolve(directory,"receipt.json");assert.equal(existsSync(directory),false);assert.equal(existsSync(archive),false);mkdirSync(directory);const job={id:"fixture",command:[process.execPath,"fixture"],memoryMiB:128,seconds:1,cpus:[2]},resourceBytes=JSON.stringify({format:"rubend-local-experiment-v1",command:job.command,limits:{memoryMiB:128,seconds:1,cpus:[2]},exitCode:0,stoppedFor:null});writeFileSync(source,bytes);writeFileSync(receipt,resourceBytes);const plan={format:"rubend-background-tests-v1",id,root:process.cwd(),revision:execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),sourceHashes:{[source]:hash(bytes)},jobs:[job]},planBytes=JSON.stringify(plan),state={state:"passed",planSha256:hash(planBytes),startedAt:"fixture",finishedAt:"fixture",worker:{pid:2147483647,startTicks:"0"},jobs:[{id:"fixture",state:"passed",receipt,receiptSha256:hash(resourceBytes)}]};writeFileSync(planPath,planBytes);writeFileSync(resolve(directory,"plan.json"),planBytes);writeFileSync(resolve(directory,"status.json"),JSON.stringify(state));
+try{
+  const first=await checkBackgroundResults(id),second=await checkBackgroundResults(id);assert.deepEqual(first,second);const index=JSON.parse(readFileSync(first.index,"utf8")),entry=index.archives.find(a=>a.path.endsWith("-large.json.gz"));assert.ok(entry);assert.equal(gunzipSync(readFileSync(resolve(archive,entry.path))).toString("utf8"),bytes);assert.equal(entry.sha256,hash(bytes));console.log(JSON.stringify({passed:true,canonicalLargeArchive:true,repeatedArchiveStable:true,originalBytesPreserved:true}));
+}finally{rmSync(directory,{recursive:true});rmSync(archive,{recursive:true,force:true});rmSync(planPath);}

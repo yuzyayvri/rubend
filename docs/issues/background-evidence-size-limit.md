@@ -23,5 +23,7 @@ Its compressed JSON records contain the original native traces, not summaries.
 
 Recovery receipts are `build/evidence/u04-prior-archive-development-v2.json`
 and `build/evidence/u04-prior-archive-pilot-v2.json`, preserved alongside the
-archive. Automatic size-based selection and a checker regression are the next
-maintenance step. Independent review was not run under the solo restriction.
+archive. Automatic size-based selection now uses the new helper above 32 MiB.
+The full canonical fixture, repeat verification, original eight negative controls
+and unchanged synchronous-archiver fixtures pass. The new helper also rejects
+inputs above 128 MiB. Independent review was not run under the solo restriction.
