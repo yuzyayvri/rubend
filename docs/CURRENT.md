@@ -2,6 +2,22 @@
 
 ## Latest checkpoint
 
+The fast-only R refinement confirms fixed-work answer coverage gains on three
+of sixteen fast request/budget pairs, involving two fresh development roots.
+There are no losses. All eighty exact paired runs preserve every saved state.
+Canonical archive: docs/verification/next-plan/U04/u04-fast-only-v1/index.json,
+2,010seals/four receipts, worker gone, no resource stop. No application deadline,
+latency, CPU or default promotion is established. U05's non-pruning collector
+passes its pure kernel and fourteen context guards in the same archive.
+
+Next, prepare bounded native U05 duplicate-work collection with per-quantum
+control equality. No cache/pruning or NP06/NP07 approval. Then return to the
+promising U04 fast-only policy's native deadline/first-answer probe before any
+integration. U04 move ordering/phase-two projection, U06 bridges/UI efficiency
+and U07 final comparisons remain open. Publication and large builds are gated.
+
+## Earlier checkpoints
+
 Execution priority correction on October 23. U02 has expanded into a broader
 proof programme without an accepted performance gain. Do not treat closing all
 of those proof gaps as a blanket prerequisite for U03–U07. The approved plan
@@ -104,6 +120,16 @@ docs/verification/next-plan/U04/u04-seed-quality-v1/index.json. Next, freeze a
 separate fast-only R refinement, reuse its saved pilot strata and confirm on
 development512–519 without seeding exact requests. Begin non-pruning U05
 duplicate-work preparation separately; U04 move ordering/projection stay open.
+
+The `u04-fast-only-v1` batch passed and was canonically verified. The separate
+post-hoc refinement gains coverage on three fresh fast budget pairs with no
+losses; all eighty exact paired runs preserve full state equality. The original
+all-request matrix remains rejected. U05's typed collector, BendTT and fourteen
+context guards pass; native duplicate-rate collection and any cache remain
+unimplemented. Read
+docs/verification/next-plan/U04/FAST-SEED-REFINEMENT.md and
+docs/verification/next-plan/U05/DUPLICATE-PREFLIGHT.md. No new law, pruning,
+default or publication. Inspect completed results before edits.
 
 Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
 roadmap execution with scheduled continuations in this same chat. Codex heartbeat
