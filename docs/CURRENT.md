@@ -93,16 +93,18 @@ acceptance gate is not retried. Work returns to the reference proof bridge.
 Finite-cell confirmation passed with 1,681 matching seals. A field-wise proof
 connects every typed whole-state move and finite replay word to the existing
 facelet specification. Its guard and post-commit confirmation pass with 1,691
-matching seals. Whole-state embedding injectivity, inverse-move action and
-inverse-word cancellation now pass the initial pure verdict. Word cancellation
-does not prove inversion of the represented cube state. The new guard checks
-swapped-cell and wrong-word-order rejection. Packed linkage and the actual NP03
-state-inverse bridge remain open. The next queue is `u02-cell-inverse-v1`, with
-a two-minute estimate and three-minute cap. Read
-docs/verification/next-plan/U02/CELL-WORD-CANCELLATION.md. Inspect and archive its results
+matching seals. Embedding injectivity and word-cancellation confirmation passed
+with 1,703 matching seals. A constructed reference state-inversion bridge now
+passes both pure checkers for roots presented by reaching words. It connects
+the kernel's exact word convention and instantiates its first-move theorem
+without assuming inversion. Packed `Cubie.inverse`, validated-input reachability
+and loaded admissibility remain open. The guard checks missing orientation and
+root-self mistakes plus 1,000 backend cases. The next queue is
+`u02-reference-inversion-v1`, estimated two minutes with a three-minute cap. Read
+docs/verification/next-plan/U02/REFERENCE-INVERSION.md. Inspect and archive its results
 before further source edits. There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
-loaded-data admissibility and concrete inverse reconstruction remain open.
+loaded-data admissibility and the packed inverse reconstruction remain open.
 Actual native allocation, latency and stable matched controls still need
 measurement before integration or promotion.
 

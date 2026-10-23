@@ -45,3 +45,25 @@ def test_numbers(word: +List<M.Move>) -> +List<U32>:
 
 def test_inverse(word: +List<U32>) -> +List<U32>:
   test_numbers(inverse_word(test_moves(word)))
+
+def inverse_snoc(+prefix: +List<M.Move>, +last: M.Move) -> {inverse_word(List.append(&2, M.Move, prefix, last <> Nil{})) == M.inverse(last) <> inverse_word(prefix) : +List<M.Move>}:
+  match prefix:
+    case Nil{}: {==}
+    case Con{+head, +rest}:
+      Equal.cong(+List<M.Move>, +List<M.Move>, word => List.append(&2, M.Move, word, M.inverse(head) <> Nil{}), inverse_word(List.append(&2, M.Move, rest, last <> Nil{})), M.inverse(last) <> inverse_word(rest), inverse_snoc(rest, last))
+
+def inverse_involution(+word: +List<M.Move>) -> {inverse_word(inverse_word(word)) == word : +List<M.Move>}:
+  match word:
+    case Nil{}: {==}
+    case Con{+head, +rest}:
+      Equal.trans(+List<M.Move>, inverse_word(inverse_word(head <> rest)), M.inverse(M.inverse(head)) <> inverse_word(inverse_word(rest)), head <> rest, inverse_snoc(inverse_word(rest), M.inverse(head)), Equal.trans(+List<M.Move>, M.inverse(M.inverse(head)) <> inverse_word(inverse_word(rest)), head <> inverse_word(inverse_word(rest)), head <> rest, Equal.cong(M.Move, +List<M.Move>, move => move <> inverse_word(inverse_word(rest)), M.inverse(M.inverse(head)), head, L.inverse_involution(head)), Equal.cong(+List<M.Move>, +List<M.Move>, word => head <> word, inverse_word(inverse_word(rest)), rest, inverse_involution(rest))))
+
+def cancel_reverse(+word: +List<M.Move>, +cells: P.PieceCells) -> {P.replay(word, P.replay(inverse_word(word), cells)) == cells : P.PieceCells}:
+  %inverse_involution(word) : {P.replay(_, P.replay(inverse_word(word), cells)) == cells : P.PieceCells}
+  cancel_word(inverse_word(word), cells)
+
+def inverse_kernel_word(+word: +List<M.Move>) -> {inverse_word(word) == K.forward_word(K.inverse_suffix(word)) : +List<M.Move>}:
+  match word:
+    case Nil{}: {==}
+    case Con{+head, +rest}:
+      Equal.cong(+List<M.Move>, +List<M.Move>, word => List.append(&2, M.Move, word, M.inverse(head) <> Nil{}), inverse_word(rest), K.forward_word(K.inverse_suffix(rest)), inverse_kernel_word(rest))
