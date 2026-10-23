@@ -1,0 +1,35 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-noise-v1",
+  "revision": "60dfaad6724ae839d17c14114ccfe6bc73b0f837",
+  "sourceSeals": 1673,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T00:17:41.335Z",
+  "finishedAt": "2026-10-23T00:18:15.476Z",
+  "archives": [
+    {
+      "path": "0-u02-noise-v1-plan.json.gz",
+      "sha256": "d37cc7288eae1ce36a10a5871f11ae6e349aa380a687b147ad5309a2dd9f707d",
+      "compressedSha256": "66f1ac22fc1c804c38b5efc1b9797452ffa3d9f0cfa52f0949954f1c55d9645a"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "b5915b6e3cc7b05f55d86bf026e2115d9fed916446b1517a83578c68ea722bf6",
+      "compressedSha256": "1dd149233141dd57116192a49064497f97ed1a3cde506e053f8ffd1a35fddaf9"
+    },
+    {
+      "path": "2-u02-noise-v1-diagnose.json.gz",
+      "sha256": "42e0d0dd4cf9f90bc9d520655add552ba7f8d3bfd574b52e28180955bfc53364",
+      "compressedSha256": "68d7d7974d583c657fc9d0e8502047dceb9ccfde981731e531ea6bcbcb85e3ec"
+    },
+    {
+      "path": "3-diagnostic.json.gz",
+      "sha256": "5a14ca788d8c415f90bf9958b0eebb3a7bd071aee6a75b2d0511a41b4efc8be4",
+      "compressedSha256": "5742c09fc2513738bb0d534e8c45772824bb6da0569ff4dfd528cba8cac3c895"
+    }
+  ]
+}
