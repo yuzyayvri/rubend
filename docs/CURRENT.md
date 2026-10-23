@@ -110,11 +110,20 @@ routing proofs byte-for-byte, so their evidence is reused. Packing confirmation
 passed with 1,776 matching seals. Corner-orientation arithmetic now proves
 typed packing is preserved by all eighteen actual packed moves. Both checkers,
 six rejection controls, 36,000 move cases, 18,000 legacy comparisons and direct
-delta/layout checks pass. The combined five-field move relation, inverse,
-input reachability and loaded admissibility remain open. The next queue is
-`u02-corner-orientation-v1`, estimated two minutes with a three-minute cap. Read
-docs/verification/next-plan/U02/CORNER-ORIENTATION.md. Inspect and archive its results
-before further source edits. There is no general speed claim, production change,
+delta/layout checks pass. Its confirmation passed with 1,790 matching seals,
+no resource stop and its worker gone. The archive is
+docs/verification/next-plan/U02/u02-corner-orientation-v1/index.json.
+An initial complete five-field move, facelet and finite-word refinement probe
+passes both pure checkers. A required explicit equality connects the two
+corner-word projections; the first rejected probe is preserved. The new
+generator and backend/rejection driver remain uncommitted until their fixed
+guard passes. The next queue is `u02-packed-move-v1`, estimated four minutes
+with a ten-minute cap. It checks deterministic generation, the complete pure
+module, three actual move corruptions through both checkers and emitted
+JavaScript, whole-cube/replay samples, and unchanged proof/toolchain gates.
+Inspect and archive its results before further source edits. Packed inverse,
+input reachability and loaded admissibility remain open.
+There is no general speed claim, production change,
 new PDB or release-holdout use. Universal packed/reference refinement,
 loaded-data admissibility and the packed inverse reconstruction remain open.
 Actual native allocation, latency and stable matched controls still need
