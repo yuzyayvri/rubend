@@ -27,10 +27,17 @@ no latency gain follows. Keep the default unchanged and do not rerun this policy
 unchanged for luck. Read docs/verification/next-plan/U04/DEADLINE-SEED-PROBE.md
 and docs/verification/next-plan/U04/u04-deadline-v1/index.json.
 
-Next, measure U06's actual idle frame submissions and scene-object allocations
-before changing either policy. Hidden preview must retain visible document
-semantics for a valid rendering comparison. Keep demand scheduling and mesh
-retention as separate treatments. No scene optimization is implemented yet.
+U06 baseline passed canonical verification with 2,056 seals, three receipts,
+worker gone and no stop. All five visible-document idle samples submit 120 frames
+in two seconds. Each measured set creates 80 new meshes and 26 groups. All 101
+canonical-color checks pass. Temporary server stopped, renderer disposed and
+owned hidden tab closed. Read docs/verification/next-plan/U06/RENDERING-BASELINE.md
+and docs/verification/next-plan/U06/u06-render-baseline-v1/index.json.
+
+Next, implement demand scheduling alone and compare against the sealed old scene
+in five alternating browser cohorts. Keep mesh retention separate. Full-app
+recovery, operator review and performance promotion remain open. The app browser
+is outside the server's resource cgroup. No browser CPU/RSS enforcement claim.
 
 U04 move ordering/phase-two projection, U06 bridges/UI efficiency and U07 final
 comparisons remain open. No default, application/CPU gain, publication or large
