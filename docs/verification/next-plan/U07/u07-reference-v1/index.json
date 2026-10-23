@@ -1,0 +1,60 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-reference-v1",
+  "revision": "227f10373e7296f025ae62b74e06fb2c9ceff0f5",
+  "sourceSeals": 2460,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T22:32:55.504Z",
+  "finishedAt": "2026-10-23T22:33:41.022Z",
+  "archives": [
+    {
+      "path": "0-u07-reference-v1-plan.json.gz",
+      "sha256": "ebb31eb06d5c3ab025290cbb3f356cfad8fa0e13c9a8dfdba85d5e13cfc63d2a",
+      "compressedSha256": "c733f6d0fbb2757fc950d1c1e5149aa4666aab7343af5e8542d93fbb54c1ef9e"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "375509da3ca08996add3de2ec863dc0534a3faf96fd9b6ebaded90f433f4741a",
+      "compressedSha256": "6ca0613dbc465a9ff0142f2871b50cdb2ee1e0f5541b6668337833bf3fb5cce5"
+    },
+    {
+      "path": "2-u07-reference-v1-preflight.json.gz",
+      "sha256": "64c1f1ceddcbc4db913fb1993d654d8bd3ba0457cecd7c86787ff73d0b600845",
+      "compressedSha256": "9d92c790c2633cbd9cceef8181d082ff38b745ae9ceddf40ca7da2b89add8958"
+    },
+    {
+      "path": "3-u07-reference-v1-calibrate.json.gz",
+      "sha256": "0e6f0a6486f765d2df3efec7b508125e46e1cf57daf878d7bb34e3559395565b",
+      "compressedSha256": "8841c827c3d92192dc345126380c70511ab5cc7e2dece3a01c138c179db18bbe"
+    },
+    {
+      "path": "4-u07-reference-v1-confirm.json.gz",
+      "sha256": "7f425be10a25e6aa67f4abc4542a4a6983d5c2ddd8003e338faf3f54663f2d2f",
+      "compressedSha256": "a6015cd57a1890bb96697754bb3dc5e836e0abb33b3e91baf908771d0ddfbc96"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "2710d2876c8fc399060f208b4068c2e11655cf25947febeddc2ad2d0d88be0fc",
+      "compressedSha256": "86004f158a5a123e2fc40595ad7d8125b4bf6ddfadf987d99fac9e15713be49d"
+    },
+    {
+      "path": "6-inputs.json.gz",
+      "sha256": "a98c151d1cfe812e72765f487ccad2846a183baa801713ca67e5d40fc2e343af",
+      "compressedSha256": "0dbe80aa90e0936e97e02c08ab5f883688bb5eb95f8320111ab286b18f7ca053"
+    },
+    {
+      "path": "7-observation.json.gz",
+      "sha256": "a6a3ab69ea11ce8719b402ea82bf1b3ecc4c2d8b78d61548c1504c74659fbeed",
+      "compressedSha256": "52a2aa04d7530ff3fa11aa1571498ce6060f2943dd5feb258f2da9406d8dee75"
+    },
+    {
+      "path": "8-ready.json.gz",
+      "sha256": "4ff0467cf8b7ad6e3a83097e86d4ef6aa8b35d649b9e156b5c929d648915b619",
+      "compressedSha256": "04f0513a326cd3d0b614fa889b786253698aa7714647d290a6ad8a386565f23e"
+    }
+  ]
+}

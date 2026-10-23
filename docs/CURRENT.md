@@ -93,9 +93,17 @@ seven notation refusals and unchanged proof/toolchain gates pass. Read
 docs/verification/next-plan/U07/COMPARISON-RECORDS.md and
 docs/verification/next-plan/U07/u07-records-v1/index.json. No actual solver
 comparison, release holdout or final configuration freeze occurred.
-Next, prepare bounded calibration of the already installed reference tools.
-Nissy binary/table hashes match the earlier smoke record. Do not generate tables
-or equate its cold-process interface with the bundled reference's worker clock.
+The reference-calibration archive verifies 2,460 seals/three receipts, worker
+gone/no stop. All fourteen planned paths replay; cubing also passes KPuzzle
+input/output checks and its process exits normally. The staged cache is read-only
+and original artifacts/115runtime source hashes are unchanged. Twelve provenance
+controls and unchanged proof gates pass. Explicit Nissy slack is zero, not the
+CLI default twenty. No relative-speed or formal-optimality result. Read
+docs/verification/next-plan/U07/REFERENCE-CALIBRATION.md and
+docs/verification/next-plan/U07/u07-reference-v1/index.json and
+docs/issues/nissy-optimal-slack.md. Next, prepare one explicit cold-process
+lifecycle with owned cancellation/cleanup and deadline-arrival checks for the
+retained Rubend binary and calibrated references. Keep the release holdout closed.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
