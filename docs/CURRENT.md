@@ -8,9 +8,15 @@ source-checked 48-command prefix plus the repaired 49-command remainder.
 The recovery archive verifies 2,119 seals/two receipts, worker gone/no stop:
 docs/verification/next-plan/U06/u06-app-recovery-v1/index.json.
 
-No active queue. Next, run hidden actual-app browser acceptance, then consider
-mesh retention separately. Operator review, package rollout and general
-performance acceptance remain open. No push/merge/deploy or new-law authority.
+Actual rebuilt-app acceptance passed in `u06-gui-demand-v1`. Canonical archive
+verifies 2,132 seals/four receipts, worker gone/no stop. Desktop, no-WebGL and
+model-failure workflows pass. Viewport reset, owned tabs closed and all native,
+server and IPC owners cleaned up. Review images are saved at
+docs/verification/next-plan/U06/review-demand/index.json.
+
+No active queue. Next, prototype mesh retention separately from idle scheduling.
+Operator review, video, package rollout and general performance acceptance remain
+open. No push/merge/deploy or new-law authority.
 
 ## Current unit evidence
 
