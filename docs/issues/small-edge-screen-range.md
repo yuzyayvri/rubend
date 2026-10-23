@@ -16,3 +16,9 @@ upper bound. Derive that verdict from saved per-radius counts. Reuse the passing
 cube/rank/codec evidence rather than rerunning the unchanged trace analysis.
 Test an all-high-radius sample, a sample with eligible radii, missing counts and
 conflicting policy histograms. No new search, table or law is needed for this fix.
+
+The reporting guard is now implemented and [canonically checked](../verification/next-plan/U03/u03-range-v1/index.json).
+The focused regression failed before the fix and passes afterward. Twelve
+malformed observation/histogram controls pass. All original counts are preserved
+and the derived verdict is inconclusive. The missing lower-radius sample remains
+an observation gap. No larger-PDB or performance conclusion is established.

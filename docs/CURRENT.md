@@ -62,8 +62,15 @@ radius is 7–13, above the six-step maximum reference distance. Zero hypothetic
 cuts is guaranteed by that mismatch. Do not infer a negative larger-PDB result
 or a performance result. Read
 docs/verification/next-plan/U03/CONDITIONAL-INFORMATION.md and
-docs/issues/small-edge-screen-range.md. Add a range-sensitivity guard from the
-saved aggregates without repeating cube/rank work. Then continue U05 preparation.
+docs/issues/small-edge-screen-range.md. The range guard passed canonical
+verification with 2,271 seals/two receipts, worker gone/no stop. Its regression,
+twelve corruption controls and unchanged gates pass. Original counts are
+unchanged; no cube/rank/codec work was repeated. Read
+docs/verification/next-plan/U03/RANGE-GUARD.md and
+docs/verification/next-plan/U03/u03-range-v1/index.json.
+Continue U05's private existing-mask prefix preflight, before ledger or workers.
+Its design is docs/verification/next-plan/U05/PARTITION-PREFLIGHT.md.
+No partition coverage result exists yet. NP07 remains unapproved.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
