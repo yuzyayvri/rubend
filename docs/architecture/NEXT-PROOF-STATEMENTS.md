@@ -9,7 +9,11 @@ formulation in [its proof record](../verification/next-plan/U02/NP01-GROUP.md).
 Validation reachability, optimized target correspondence and loaded admissibility
 remain open. NP03's [reference-group formulation](../verification/next-plan/U02/NP03-GROUP.md)
 now uses the actual proved inverse-word reconstruction without an inverse
-callback premise. NP02 has not yet been implemented in that formulation.
+callback premise. NP02's [finite-family formulation](../verification/next-plan/U02/NP02-FAMILY.md)
+checks a nonempty indexed family with exact root values and complete move
+coverage. Its concrete eight-stabilizer instance proves the public `R U`
+lower bound of two. All three complete guards pass. Application bridges remain
+open, and no production pruning follows from these reference proofs.
 The earlier supporting reference kernels are checked separately in
 [the U02 proof record](../verification/next-plan/U02/PROOF-KERNEL.md).
 They retain uninstantiated target, admissibility and inverse-bridge premises

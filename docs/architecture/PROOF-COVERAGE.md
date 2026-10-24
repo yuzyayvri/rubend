@@ -26,9 +26,12 @@ The separately checked [NP01 reference-group formulation](../verification/next-p
 quantifies explicit subgroups and global Nat bounds over word-presented typed
 legal states. The [NP03 formulation](../verification/next-plan/U02/NP03-GROUP.md)
 uses the actual inverse-word solution transfer without an inverse callback
-premise. Both pass their complete source/negative/backend guards. These are
+premise. The [NP02 formulation](../verification/next-plan/U02/NP02-FAMILY.md)
+checks finite indexed families, exact evaluated root values and complete move
+coverage. Its eight oriented-corner stabilizers provide a concrete complete
+instance. All three pass their complete source, negative and backend guards. These are
 additional approved reference statements, not changes to the 23 root laws.
-NP02, validated-input reachability, optimized target correspondence, loaded-data
+Validated-input reachability, optimized target correspondence, loaded-data
 admissibility and complete optimized-search certification remain open.
 
 The native engine calls `Certificate.certify` before it emits an answer. This

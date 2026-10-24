@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u02-np02-family-v1` archive verifies 2,615 seals and three receipts, worker
+gone and no resource stop. Both generic finite-family forms and the complete
+eight-stabilizer instance pass. All twelve bad-proof entrypoints, 4,225 index
+checks, 4,225 order checks, 6,431 words and 51,448 bound checks pass. Deterministic
+generation preserves the first stabilizer block. The public `R U` instance has
+a proved lower bound and independently checked solution of two moves. Existing
+23 laws and toolchain gates remain unchanged. NP01–NP03 reference formulations
+are checked, not connected to production pruning. Read
+docs/verification/next-plan/U02/NP02-FAMILY.md. Input, loaded-data, target and
+optimized traversal bridges remain open. No performance or independent-review
+claim follows.
+
 October 24 completion order. Finish the roadmap implementation and required
 verification, then research and locally set up additional 3x3 solvers and run
 the final comparative benchmark/report. Coordinate the U07 closing evaluation
@@ -233,6 +245,16 @@ counterexample verifies sixteen products, four inverses, 856 oracle states and
 1,152 edges. Forward distance two differs from inverse distance one. Unchanged
 gates pass. Read docs/verification/next-plan/U02/NP03-GROUP.md. NP02 and
 application/data bridges remain open; no pruning or incremental inverse update.
+The next fixed queue is `u02-np02-family-v1`, expected three minutes and capped
+at twelve. Generic NP02 finite-family and numeric lower-bound forms pass both
+focused checkers. Bound packages tie global functions and subgroup witnesses to
+exact root values; every move must choose a valid finite-family index. One
+corner stabilizer and then a complete eight-stabilizer family also pass focused
+checks, including all eighteen coverage choices and the public R U lower-bound
+two instance. The full guard adds twelve bad-proof entrypoints, deterministic
+generation, index/order/bound/backend coverage controls and unchanged gates.
+Read docs/verification/next-plan/U02/NP02-FAMILY.md. No optimized/data bridge,
+actual pruning or stronger application certificate is implied.
 The existing raw cache is unchanged. No full six-edge database or production
 pruning. Only approved NP01–NP03 are being formalized; other new laws remain
 separately gated.
