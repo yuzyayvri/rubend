@@ -18,6 +18,15 @@ slice recovery and begin bounded U03 feasibility/cost preparation. Keep unchecke
 pruning disabled and all proof gaps explicit. U04 ordering can be evaluated
 without a U03 winner. No new-law or large-build approval is inferred.
 
+The certificate-derived reaching bridge passes its complete guard. Its
+[recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
+seals and two receipts, worker gone and no stop. All 464 native cases match the
+independent checksum, both faulty templates reproduce their original failures,
+and unchanged gates pass. Earlier proof and JavaScript evidence is reused.
+An accepted replay certificate now supplies the typed reaching word without
+assuming validator completeness. Packed-root admission, target linkage,
+loaded-data and optimized traversal obligations remain open. Pruning stays off.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.

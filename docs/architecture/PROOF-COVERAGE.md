@@ -34,6 +34,16 @@ additional approved reference statements, not changes to the 23 root laws.
 Validated-input reachability, optimized target correspondence, loaded-data
 admissibility and complete optimized-search certification remain open.
 
+The separately checked [certificate-reaching bridge](../verification/next-plan/U02/CERTIFICATE-REACHING.md)
+recovers a typed reaching word from the actual `Certificate<cube>`. It proves
+that the current 54-field Boolean solved predicate implies equality with solved,
+then applies arbitrary-facelet word cancellation and typed replay refinement.
+The result's equality is tied to the original input. Both proof checkers,
+negative sources, independent replay and 464 native packet cases pass.
+This supplies a post-incumbent reference witness, not a universal validator
+theorem or admission of the engine's actual packed root. Target, loaded-data
+and optimized traversal bridges remain open. No pruning is enabled.
+
 The native engine calls `Certificate.certify` before it emits an answer. This
 returns an accepted value only with evidence that Bend model replay is solved.
 The bridge independently replays the emitted numeric move list through

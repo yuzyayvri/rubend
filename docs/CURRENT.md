@@ -2,6 +2,20 @@
 
 ## Latest checkpoint
 
+The `u02-certificate-recovery-v2` archive verifies 2,691 seals and two receipts,
+worker gone and no resource stop. All 464 native cases match checksum3997635194.
+Both faulty-template controls reproduce their exact parser and kind diagnostics.
+The unchanged 23-law and toolchain gates pass. The run took about 56 seconds.
+It reuses checked proofs, twelve false-proof rejections, 6,431 word-derived
+witnesses, 55 saved answers, 488 refusals, 256 arbitrary-U32 cancellations and
+three runtime corruptions. The two earlier fixture failures stay preserved as
+failed runs, including compressed source and record snapshots.
+An actual accepted certificate now supplies an exact typed reaching word for
+its original facelet input. Read
+docs/verification/next-plan/U02/CERTIFICATE-REACHING.md. Packed-root admission,
+target/data linkage, traversal and general validator completeness remain open.
+No production pruning, performance gain or independent review is claimed.
+
 The `u02-np02-family-v1` archive verifies 2,615 seals and three receipts, worker
 gone and no resource stop. Both generic finite-family forms and the complete
 eight-stabilizer instance pass. All twelve bad-proof entrypoints, 4,225 index
