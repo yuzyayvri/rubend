@@ -181,6 +181,15 @@ admitted children across twenty roots. These synthetic radius/history contexts
 are not actual visit frequencies. Distances are reused; unchanged gates pass.
 Read docs/verification/next-plan/U04/SMALL-CONDITIONAL.md. No CPU or quality gain,
 universal admissibility proof, production pruning or speed acceptance follows.
+The `u04-small-observe-v1` archive verifies 2,569 seals and three receipts, worker
+gone and no resource stop. All six control/observed continuations and metadata
+match at exact work counts. All 15,609 actual phase-two points pass. The product
+would exclude 6,828 entries, not independent saved subtrees. Three pilot prefixes
+reach the point cap, commutator/pilot1 reach the work cap, and solved input exits
+normally. Eight candidate replays, two source faults, ten record controls, pure
+observer verdict and unchanged gates pass. Read
+docs/verification/next-plan/U04/SMALL-OBSERVATION.md. No pruning, portfolio
+frequency, timing, CPU or quality gain is claimed.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read

@@ -1,0 +1,55 @@
+import Base
+import ../src/search.bend as S
+import ../src/cubie.bend as C
+import ../src/tables.bend as T
+import ../src/joint-cache.bend as Cache
+import ../src/main.bend as H
+import ./fixed-work.bend as F
+import ./small-product-observer.bend as O
+
+__ROOTS__
+
+def point_texts(points: +List<+List<U32>>) -> +List<String>:
+  match points:
+    case Nil{}: Nil{}
+    case Con{row, rest}: F.numbers(row) <> point_texts(rest)
+
+def control(state: S.Search, small: Array<U32>, id: U32, steps: U32) -> IO(Array<U32> & Array<U32>):
+  match state:
+    case S.Search{table, stack, meta}:
+      do IO<Array<U32> & Array<U32>>:
+        IO.print("{\"type\":\"control\",\"id\":" ++ U32.show(id) ++ ",\"steps\":" ++ U32.show(steps) ++ ",\"meta\":" ++ F.meta(meta) ++ ",\"frames\":[" ++ String.join(F.frames(stack), ",") ++ "]}")
+        return (table, small)
+
+def snapshot(table: Array<U32>, +stack: +List<S.Frame>, +meta: S.Meta, small: Array<U32>, points: +List<+List<U32>>, +steps: U32, quota: U32, +id: U32, +root: C.Cubie) -> IO(Array<U32> & Array<U32>):
+  do IO<Array<U32> & Array<U32>>:
+    IO.print("{\"type\":\"observed\",\"id\":" ++ U32.show(id) ++ ",\"steps\":" ++ U32.show(steps) ++ ",\"quota\":" ++ U32.show(quota) ++ ",\"meta\":" ++ F.meta(meta) ++ ",\"frames\":[" ++ String.join(F.frames(stack), ",") ++ "],\"points\":[" ++ String.join(point_texts(List.reverse(&2, +List<U32>, points)), ",") ++ "]}")
+    control(S.run(U32.to_nat(steps), S.initialize(table, root, S.Improve{}, S.Light{})), small, id, steps)
+
+def finished(state: O.Observed, id: U32, root: C.Cubie) -> IO(Array<U32> & Array<U32>):
+  match state:
+    case O.Observed{S.Search{table, stack, meta}, small, points, steps, quota}:
+      snapshot(table, stack, meta, small, points, steps, quota, id, root)
+
+def cases(fuel: Nat, +at: U32, owners: Array<U32> & Array<U32>) -> IO(Unit):
+  match fuel owners:
+    case 0n _: IO.print("{\"type\":\"done\",\"cases\":6}")
+    case 1n+rest Tuple{table, small}:
+      do IO<Unit>:
+        +root : C.Cubie = input(at)
+        owners : Array<U32> & Array<U32> <- finished(O.run(2000000n, O.Observed{S.initialize(table, root, S.Improve{}, S.Light{}), small, Nil{}, 0, 4096}), at, root)
+        cases(rest, (at + 1 : U32), owners)
+
+def start(args: List<String>) -> IO(Unit):
+  match args:
+    case Con{program, Con{path, Nil{}}}:
+      do IO<Unit>:
+        small : Array<U32> <- Cache.load(path, [255 : U32^18n], 0, 235200)
+        IO.print("{\"type\":\"start\",\"goal\":1,\"profile\":0,\"maximumSteps\":2000000,\"pointCap\":4096,\"cases\":6}")
+        cases(6n, 0, (T.generate(), small))
+    case _: IO.die(Unit, 2, "Expected audited product words")
+
+def main() -> IO(Unit):
+  do IO<Unit>:
+    args : List<String> <- IO.args()
+    start(args)
