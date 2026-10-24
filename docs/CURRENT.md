@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+The complete bounded unpruned reference is verified and archived under
+`u06-bounded-reference-v4`. Canonical verification checks 2,800 seals and its
+current resource receipt, worker gone and no new resource stop. Both proof
+checkers and sixteen false-proof entrypoints pass. The independent oracle
+checks 3,502 states and 4,716 edges. All 153 bound queries, 36 raw-center controls,
+three packet corruptions and 189 native packets agree, checksum2582377809.
+Found results carry within-radius replay evidence. Excluded results refute every
+solving word within the radius, including the empty path and all eighteen moves.
+The unchanged 23-law/toolchain gate is explicitly reused from its actual archived
+passing execution after all 87 current inputs and execution provenance match.
+Six corrupted reuse records fail. No fresh root-gate execution is claimed.
+Earlier inspector failure, unadmitted finite job and resource-stopped confirmation
+remain preserved in their original states. Read
+docs/verification/next-plan/U06/BOUNDED-REFERENCE.md. Optimized traversal and
+loaded-data refinement remain open. No stronger app label or speedup is claimed.
+The next independent U03 work must make the small edge information screen
+relevant to actual residual radii. Larger tables and NP04–NP08 remain gated.
+
 The `u02-packed-certificate-v2` archive verifies 2,751 seals and three receipts,
 worker gone and no resource stop. All 1,079 actual validator-output admissions
 and inverse checks, 10,240 bit refusals, 64 root mismatches, 64 failed

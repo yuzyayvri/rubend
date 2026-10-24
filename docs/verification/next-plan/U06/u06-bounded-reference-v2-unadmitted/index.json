@@ -1,0 +1,80 @@
+{
+  "format": "rubend-unadmitted-background-preservation-v1",
+  "id": "u06-bounded-reference-v2",
+  "revision": "5455938481947c932fcaa715ff128febabef14fb",
+  "preserved": true,
+  "passed": false,
+  "sourceSeals": 2722,
+  "workerGone": true,
+  "executedJobs": 1,
+  "plannedJobs": 3,
+  "unadmittedJob": "finite",
+  "missingReceiptNotFabricated": true,
+  "dirtySourceFiles": 11,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v2-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/0-u06-bounded-reference-v2-plan.json.gz",
+      "bytes": 371453,
+      "compressedBytes": 130193,
+      "sha256": "2a02f2daa37ece97a482627a64ae4889a56d7e760e08838033aee11fc875354d",
+      "compressedSha256": "0e7e66ee920ba115905363d43bcd6ee2dcace15ef9824b414e8e6d45f6b94abb",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v2/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/1-status.json.gz",
+      "bytes": 1376,
+      "compressedBytes": 643,
+      "sha256": "e4605a713402a1fb69eed951de247a9545a22007276b707a694427acc5aaff05",
+      "compressedSha256": "a5a3f59fa465a457bae78c2a766f7c1716ceb4fb6ae7dae9b587d86968306fae",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v2-proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/2-u06-bounded-reference-v2-proof.json.gz",
+      "bytes": 1044,
+      "compressedBytes": 607,
+      "sha256": "77cdd451bffeae80a63485755a06bc8770d74b64e73a2d5c815a36a9627c44d4",
+      "compressedSha256": "1924c792a31364d743770910b150bc1a35fea6330d3b36d2f692b95745f32136",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v2/proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/3-proof.json.gz",
+      "bytes": 78613,
+      "compressedBytes": 13894,
+      "sha256": "f325027c341be3c2fc4f2f82901e13e9c991039f8f880c29604b74c7d061458f",
+      "compressedSha256": "55baf30a7d85782e1fde4cb908dc676683978a6636c94253ff6b00a9b047532b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v2/translation-inspection.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/4-translation-inspection.json.gz",
+      "bytes": 19789,
+      "compressedBytes": 2000,
+      "sha256": "7187d8f9fc6d33d5d0ad552a11b25846e18b828343da864efbbefb3c9e77223a",
+      "compressedSha256": "f60181af95d4c49054ac743e1b2e4e33a920e3979df2de24b8f8e55dfc649c29",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v2/unadmitted-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/5-unadmitted-sources.json.gz",
+      "bytes": 153074,
+      "compressedBytes": 50872,
+      "sha256": "c0ebf830a89d068dc416e592cd742f3ec9eab13444205679d6c5c9976969afb0",
+      "compressedSha256": "5957f2b5c06a0ce9f4dbe5ffb17c0c400d53ed41026784d09f9aa322bce331ea",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v2/unadmitted.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v2-unadmitted/6-unadmitted.json.gz",
+      "bytes": 1196,
+      "compressedBytes": 703,
+      "sha256": "abb1d54a7e90a5fda80a03b780ff3a0e5430866830e7f52d595439d5dee48cd6",
+      "compressedSha256": "4133874e1010e9b5c0f5db3353ad2badc2a2d49759f73fa86eafca54ae168eec",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}

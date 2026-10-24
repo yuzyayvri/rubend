@@ -1,0 +1,51 @@
+import Base
+import {{MODEL}} as M
+import {{SOLVED}} as S
+import {{KERNEL}} as K
+import {{WORDS}} as I
+
+def NoSolution(-radius: Nat, -cube: M.Cube) -> Type:
+  @+word: +List<M.Move> -> K.Le(K.length(word), radius) -> {M.replay(word, cube) == M.solved() : M.Cube} -> Empty
+
+type BRTGoal<-cube: M.Cube> is Type:
+  BRTSolved{same: {cube == M.solved() : M.Cube}}
+  BRTUnsolved{reject: {cube == M.solved() : M.Cube} -> Empty}
+
+type BRTResult<-radius: Nat, -cube: M.Cube> is Type:
+  BRTFound{+word: +List<M.Move>, within: K.Le(K.length(word), radius), solution: {M.replay(word, cube) == M.solved() : M.Cube}}
+  BRTExcluded{absent: NoSolution(radius, cube)}
+
+def classify(+cube: M.Cube, +value: Bool, evidence: {M.is_solved(cube) == value : Bool}) -> BRTGoal<cube>:
+  match value:
+    case True{}: BRTSolved{S.solved_equal(cube, evidence)}
+    case False{}: BRTUnsolved{same => K.false_clash(Equal.trans(Bool, False{}, M.is_solved(cube), True{}, Equal.sym(Bool, M.is_solved(cube), False{}, evidence), Equal.cong(M.Cube, Bool, M.is_solved, cube, M.solved(), same)))}
+
+def goal(+cube: M.Cube) -> BRTGoal<cube>:
+  classify(cube, M.is_solved(cube), {==})
+
+def zero_excludes(+cube: M.Cube, +word: +List<M.Move>, reject: {cube == M.solved() : M.Cube} -> Empty, within: K.Le(K.length(word), 0n), solution: {M.replay(word, cube) == M.solved() : M.Cube}) -> Empty:
+  match word:
+    case Nil{}: reject(solution)
+    case Con{head, tail}: within
+
+def zero(+cube: M.Cube, decision: BRTGoal<cube>) -> BRTResult<0n, cube>:
+  match decision:
+    case BRTSolved{same}: BRTFound{Nil{}, Unit{}, same}
+    case BRTUnsolved{reject}: BRTExcluded{+word => within => solution => zero_excludes(cube, word, reject, within, solution)}
+
+{{ROUTE}}
+
+{{MERGE}}
+
+def search(+radius: Nat, +cube: M.Cube) -> BRTResult<radius, cube>:
+  match radius:
+    case 0n: zero(cube, goal(cube))
+    case 1n+rest: merge(rest, cube, goal(cube), {{CHILDREN}})
+
+def packet(-radius: Nat, -cube: M.Cube, result: BRTResult<radius, cube>) -> +List<U32>:
+  match result:
+    case BRTFound{word, within, solution}: 1 <> I.test_numbers(word)
+    case BRTExcluded{absent}: [0]
+
+def test_search(+radius: U32, +cube: M.Cube) -> +List<U32>:
+  packet(U32.to_nat(radius), cube, search(U32.to_nat(radius), cube))

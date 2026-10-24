@@ -59,6 +59,23 @@ formal optimality proof.
 
 ## Executable evidence beyond the laws
 
+The separately checked [bounded reference](../verification/next-plan/U06/BOUNDED-REFERENCE.md)
+instantiates original S04 without pruning, tables, caches or partial traversal.
+For every natural radius and arbitrary facelet cube, its completed result
+contains either a replay-proved solving word within that radius or a function
+excluding every such solving word. The empty word and all eighteen first moves
+are covered. Both checkers accept the exact result type and structural search.
+Sixteen false-proof entrypoints, an independent 3,502-state oracle, 153 bound
+queries, 36 raw-center controls and 189 native packets pass.
+
+This proves the reference's completed outcomes, not that optimized search
+refines it. Its numeric packets do not serialize formal proof objects, and one
+found result at a larger radius is not automatically shortest. The existing
+23-law/toolchain gate is reused from an actual archived passing execution with
+all 87 inputs unchanged, with six altered-record controls. No fresh root-gate
+run or stronger application label is claimed. Optimized pruning, loaded data,
+scheduling and completion refinement remain open.
+
 - 10,000 moves cross-checked against independent cubing.js KPuzzle semantics.
 - 1,000 arbitrary legal states, 18,000 packed/specification move comparisons,
   inverse/frame roundtrips, and 2,000 subgroup-frame checks.

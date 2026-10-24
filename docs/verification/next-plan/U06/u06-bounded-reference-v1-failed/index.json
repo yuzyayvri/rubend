@@ -1,0 +1,55 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u06-bounded-reference-v1",
+  "revision": "5455938481947c932fcaa715ff128febabef14fb",
+  "sourceSeals": 2712,
+  "workerGone": true,
+  "executedJobs": 1,
+  "plannedJobs": 3,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read proof.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 6,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v1-failed/0-u06-bounded-reference-v1-plan.json.gz",
+      "bytes": 369863,
+      "compressedBytes": 129655,
+      "sha256": "c22bdc656d2e39dcc2ee43265e3871cded7d94397ec8905807e1191412969d85",
+      "compressedSha256": "1c047310bfe5a7de62e48a0b38e5b5e55d9f95aa8cce5e24846ebde125f77978",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v1-failed/1-status.json.gz",
+      "bytes": 997,
+      "compressedBytes": 550,
+      "sha256": "575d17eb2061f13214d425e04cb50595a2bc86559e8f7f89bdf839b6cc8ef3a5",
+      "compressedSha256": "3f9aac8a75036ff198a174ff74fcba57432205482327c552a6d76d013844d171",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v1-proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v1-failed/2-u06-bounded-reference-v1-proof.json.gz",
+      "bytes": 2045,
+      "compressedBytes": 1055,
+      "sha256": "fbbbb79ed3aa9587b1068a4839e00fffb90c40322775b862d7f61ada50daf6ca",
+      "compressedSha256": "591ec7f792c4ce7be9eb49a915df2b5986a602af6b83ec7dc1d42d325669db2f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v1-failed/3-failed-sources.json.gz",
+      "bytes": 139274,
+      "compressedBytes": 46868,
+      "sha256": "b42c1ec5c4f201d01966d993c988519c50d79197b06553160a81b7df035b950f",
+      "compressedSha256": "5f9338586194cf3316800856d41e2f376b8a9f33d035964b164edf5794ac9444",
+      "roundtripPassed": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Approved roadmap progress
 
-Updated October 24, 2026, Asia/Manila. No overall completion or new speedup
+Updated October 25, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
 October 24 finish order. Complete the roadmap and its required verification,
@@ -35,6 +35,17 @@ three receipts, worker gone and no stop. All 1,079 admissions/inverse checks,
 pass. An admitted actual packed root now has checked forward and inverse
 reference views. Target/data, traversal and performance claims remain open.
 
+U06's complete bounded unpruned reference passes its full guard. The
+[archive](U06/u06-bounded-reference-v4/index.json) verifies 2,800 seals and its
+current receipt, worker gone and no new stop. Both proof checkers and sixteen
+false-proof entrypoints pass. The independent oracle checks 3,502 states and
+4,716 edges. All 153 bound queries, 36 raw-center controls, three packet faults
+and 189 native packets pass. The unchanged root gate is explicitly reused after
+all 87 inputs and archived execution provenance match. Six reuse corruptions
+fail. Earlier failed, unadmitted and stopped runs retain their states.
+Original S04 reference only. Optimized traversal, loaded data and stronger
+application labels remain outside this result.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
@@ -47,7 +58,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U03. Six-edge PDB and compression | Small-table compression passes finite checks. The saved-context information screen is inconclusive because radii 7–13 exceed the six-step references. Its executable range guard verifies 2,271 seals and twelve negative controls without repeating projections. No larger-PDB rejection, new database, production bound or promotion. |
 | U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
-| U06. Proof bridges and UI efficiency | Demand rendering passes scene/app gates. Retention browser evidence verifies 2,171 seals, stable object identities, 870 poses and 513 colors, but A/A cadence is noisy in three cohorts. Retention stays private/unpromoted; accepted app unchanged. Video/operator/package/general-performance and proof/data-linkage gates remain open. |
+| U06. Proof bridges and UI efficiency | Complete bounded unpruned reference verifies 2,800 seals, sixteen false-proof checks and 189 native packets. Root gate is explicitly reused across 87 identical inputs. Demand rendering passes scene/app gates. Retention remains inconclusive and private. Optimized/data refinement, video/operator/package and general-performance gates remain open. |
 | U07. Holdout and competitors | Cold pilot verifies 2,501 seals and three receipts. All60requests accounted for, clean exits and27scorer controls. Both anytime backends cover20/20requests on four reused roots. Rubend19/20/20/20 versus bundled min2phase21/20/20/21 in every cohort. Nissy exact0/20before deadline. Exploratory only. No speed promotion, final freeze or release holdout. |
 
 Autonomous continuation now uses the existing Codex thread heartbeat
