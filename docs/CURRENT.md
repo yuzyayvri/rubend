@@ -172,6 +172,15 @@ existing-bound cut, universal admissibility proof, production integration, or
 speed gain is claimed. Clipboard/download acceptance remains open because the only connected
 browser still has the recorded observation limitations. The temporary capability
 check tab is closed; no unsupported browser connection or test hook was added.
+The `u04-small-conditional-v1` archive verifies 2,539 seals and three receipts,
+worker gone and no resource stop. All 640 child facts and 8,960 actual Search
+admission masks reconcile on 64 distinct restricted-walk roots. Two actual
+source corruptions, malformed cache input, sixteen record corruptions and thirty
+residual-boundary checks pass. The product hypothetically excludes 376 of 23,932
+admitted children across twenty roots. These synthetic radius/history contexts
+are not actual visit frequencies. Distances are reused; unchanged gates pass.
+Read docs/verification/next-plan/U04/SMALL-CONDITIONAL.md. No CPU or quality gain,
+universal admissibility proof, production pruning or speed acceptance follows.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
