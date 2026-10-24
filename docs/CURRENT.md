@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u03-four-edge-v1` archive verifies 2,805 seals and four receipts, worker
+gone and no resource stop. Every 190,080-state codec and 3,421,440 transitions
+pass. Both complete table audits cover 380,160 states and 6,842,880 edges,
+with diameter eight for both frozen patterns. The actual half-capacity native
+mutation refuses before seed, and all three altered-data controls reject.
+Raw 380,160-byte payloads stay ignored. One planning run took 2.984/2.839 seconds
+inside generation, excluding serialization. Generation and audit job wall/RSS
+are recorded separately. Those receipts do not contain measured CPU time.
+Their archived plan's CPU-record wording is corrected in the report, not by
+inventing missing data. No speed comparison, six-edge ETA, new law or pruning.
+Read docs/verification/next-plan/U03/FOUR-EDGE-PILOT.md.
+
 The `u03-native-checkpoint-v1` archive verifies 2,791 seals and three receipts,
 worker gone and no resource stop. All 34 native file restarts, six native
 crashes after read/close, six repeats and eleven malformed native controls
