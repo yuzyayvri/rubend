@@ -109,6 +109,16 @@ are gone. Unchanged proof/toolchain gates pass. The owned-stdin shutdown defect
 and its failing source are preserved. Read
 docs/verification/next-plan/U07/COLD-LIFECYCLE.md. No pilot/release evaluation or
 relative-performance acceptance is included.
+The `u07-pilot-v1` archive verifies 2,501 seals and three receipts, worker gone/no
+resource stop. All sixty serial requests are retained, with no errors, unavailable
+backends, forced stops or surviving native/IPC owners. Both anytime backends cover
+20/20 requests on four reused pilot roots. Every cohort has Rubend lengths
+19/20/20/20 and bundled min2phase lengths21/20/20/21. Nissy's zero-slack exact
+configuration is censored in20/20 requests. The 27 scorer corruption controls,
+fixture-only regression and unchanged gates pass. Read
+docs/verification/next-plan/U07/COLD-PILOT.md. Four roots repeated five times are
+not twenty independent inputs. No tuned winner, exact-work comparison, kernel
+speed, CPU/RSS gain, new default, final freeze or release holdout follows.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
