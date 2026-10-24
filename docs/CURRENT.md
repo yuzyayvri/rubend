@@ -207,6 +207,13 @@ direct and 48.81ns mapped, not an accepted speedup. Profiles confirm query-time
 projection is removed. Do not rerun unchanged work or promote either path.
 Read docs/verification/next-plan/U04/PRODUCT-PROBE-COST.md. CPU-side variation,
 refinement and actual solver benefit remain open; no pruning is enabled.
+The `u02-np01-group-v1` archive verifies 2,573 seals and three receipts, worker
+gone and no resource stop. Both checkers accept the quantified NP01 reference
+law, genuine typed-word subgroup/global Nat bound, positive-word decomposition
+and concrete identity instance. All eight false-proof entrypoints, 6,430 split
+and prefix-recovery cases, 6,431 bound checks and unchanged gates pass. Read
+docs/verification/next-plan/U02/NP01-GROUP.md. Validator reachability, optimized
+target/data bridges and NP02/03 remain open; no pruning or stronger label.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read

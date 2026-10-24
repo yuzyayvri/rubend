@@ -4,11 +4,14 @@ Yuzy separately approved NP01–NP03 on October 23 by replying "Yeah. Approved."
 to the request naming those three statements. NP04–NP08 still await approval.
 Approval permits proving the exact statements below, not assuming their data
 premises or enabling unchecked pruning. No statement replaces or weakens any
-of the existing 23 laws. NP01–NP03 are not yet implemented as Bend laws.
-Supporting reference kernels are checked separately in
+of the existing 23 laws. NP01 now has a checked quantified typed-reference-group
+formulation in [its proof record](../verification/next-plan/U02/NP01-GROUP.md).
+Validation reachability, optimized target correspondence and loaded admissibility
+remain open. NP02 and NP03 have not yet been implemented in that formulation.
+The earlier supporting reference kernels are checked separately in
 [the U02 proof record](../verification/next-plan/U02/PROOF-KERNEL.md).
 They retain uninstantiated target, admissibility and inverse-bridge premises
-and do not replace the exact statements below.
+and do not certify the optimized application.
 
 The statements below are the semantic contracts to approve. A concrete Bend
 encoding must express the same quantifiers, premises, and conclusion. A material

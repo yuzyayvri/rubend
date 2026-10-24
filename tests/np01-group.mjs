@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import {writeFileSync} from "node:fs";
+import {resolve} from "node:path";
+import {pathToFileURL} from "node:url";
+import {array,list,encode,apply,solved,inverse} from "../apps/model.mjs";
+import {apply as independentApply} from "../bench/fixed-work-model.mjs";
+import {randomSource} from "./support.mjs";
+
+assert.equal(process.argv.length,4);const G=(await import(pathToFileURL(resolve(process.argv[2])))).default,output=resolve(process.argv[3]);assert.deepEqual(array(G.test_split(list([]))),[]);assert.equal(G.test_bound(list([])),0);let splitChecks=0,recoveryChecks=0,boundChecks=1;
+function check(word){const prefix=word.slice(0,-1),last=word.at(-1),packet=array(G.test_split(list(word)));assert.deepEqual(packet,[last,...prefix]);assert.deepEqual([...packet.slice(1),packet[0]],word);assert.equal(packet.length,word.length);splitChecks++;const recovered=encode(G.test_recovery(list(prefix),last)),expected=independentApply(solved,[inverse(last)]);assert.equal(recovered,expected);recoveryChecks++;const state=independentApply(solved,word);assert.equal(state,apply(solved,word));assert.equal(G.test_bound(list(word)),Number(state!==solved));boundChecks++;}
+let layer=[[]];for(let depth=1;depth<=3;depth++){layer=layer.flatMap(prefix=>Array.from({length:18},(_,last)=>[...prefix,last]));for(const word of layer)check(word);}const random=randomSource("rubend-np01-group-v1");for(let i=0;i<256;i++)check(Array.from({length:1+random(64)},()=>random(18)));
+const root=independentApply(solved,[2]),solution=[0],lastState=independentApply(solved,[0]),lastInverse=independentApply(solved,[2]);assert.equal(independentApply(root,solution),solved);assert.notEqual(lastState,solved);const nonInverseClosedTarget=new Set([solved,lastState]);assert.equal(nonInverseClosedTarget.has(lastState),true);assert.equal(nonInverseClosedTarget.has(lastInverse),false);assert.equal(nonInverseClosedTarget.has(root),false);
+const counterexamples=[{kind:"weaken-tightness-to-radius-minus-one",root,solution,radius:1,bound:0,target:"whole cube group",lastInTarget:true,originalTight:false,weakenedTight:true},{kind:"omit-inverse-closure",root,solution,radius:1,bound:1,target:[solved,lastState],lastInTarget:true,inverseLastInTarget:false,targetIsSubgroup:false},{kind:"false-admissibility",root:solved,path:[],target:"whole cube group",bound:1,pathLength:0,admissible:false}];
+writeFileSync(output,JSON.stringify({passed:true,format:"rubend-np01-group-finite-v1",splitChecks,recoveryChecks,boundChecks,allPositiveWordsThroughLength:3,longWordCases:256,maximumLongWordLength:64,emptyWordHasNoPositiveSplit:true,counterexamples,finiteChecksNotUniversalProof:true,validatedInputReachabilityProved:false,loadedDataAdmissibilityProved:false,productionIntegrated:false,independentReview:false},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,splitChecks,recoveryChecks,boundChecks,counterexamples:counterexamples.length}));
