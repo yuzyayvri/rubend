@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u02-packed-certificate-v2` archive verifies 2,751 seals and three receipts,
+worker gone and no resource stop. All 1,079 actual validator-output admissions
+and inverse checks, 10,240 bit refusals, 64 root mismatches, 64 failed
+certificates, 256 raw equality cases and three padding refusals pass. All five
+comparison-kernel mutations have counterexamples. The 570 native packets match
+checksum141886355. Sixteen bad-proof entrypoints and the actual primitive-Bool
+regression pass. Unchanged 23-law/toolchain gates pass. The failed initial
+run and its proof/source snapshot remain preserved. Read
+docs/verification/next-plan/U02/PACKED-CERTIFICATE.md. An admitted actual packed
+root now has checked forward and actual-inverse reference views, tied to the
+original accepted certificate. Target/data and optimized traversal bridges
+remain open. Pruning is off. No speedup, holdout or publication is claimed.
+
 The `u02-certificate-recovery-v2` archive verifies 2,691 seals and two receipts,
 worker gone and no resource stop. All 464 native cases match checksum3997635194.
 Both faulty-template controls reproduce their exact parser and kind diagnostics.

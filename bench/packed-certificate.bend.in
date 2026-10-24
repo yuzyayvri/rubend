@@ -1,0 +1,78 @@
+import Base
+import {{MODEL}} as M
+import {{CUBIE}} as C
+import {{CERTIFICATE}} as Cert
+import {{CELLS}} as P
+import {{WORDS}} as I
+import {{ROOTS}} as R
+import {{EQUALITY}} as E
+import {{REACHING}} as W
+import {{PACKING}} as T
+import {{INVERSE}} as A
+
+def equal(left: C.Cubie, right: C.Cubie) -> Bool:
+  match left right:
+    case C.Cubie{a0, a1, a2, a3, a4} C.Cubie{b0, b1, b2, b3, b4}:
+      U32.is_eq(a0, b0) && U32.is_eq(a1, b1) && U32.is_eq(a2, b2) && U32.is_eq(a3, b3) && U32.is_eq(a4, b4)
+
+def equality_fields(+a0: U32, +a1: U32, +a2: U32, +a3: U32, +a4: U32, +b0: U32, +b1: U32, +b2: U32, +b3: U32, +b4: U32, evidence: E.TreeEvidence(E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTLeaf{a0, b0}, E.CRTLeaf{a1, b1}}, E.CRTLeaf{a2, b2}}, E.CRTLeaf{a3, b3}}, E.CRTLeaf{a4, b4}})) -> {C.Cubie{a0, a1, a2, a3, a4} == C.Cubie{b0, b1, b2, b3, b4} : C.Cubie}:
+  match evidence:
+    case Tuple{Tuple{Tuple{Tuple{e0, e1}, e2}, e3}, e4}:
+      A.cube_ext(C.Cubie{a0, a1, a2, a3, a4}, C.Cubie{b0, b1, b2, b3, b4}, e0, e1, e2, e3, e4)
+
+def equal_reflect(+left: C.Cubie, +right: C.Cubie, evidence: {equal(left, right) == True{} : Bool}) -> {left == right : C.Cubie}:
+  match left right:
+    case C.Cubie{+a0, +a1, +a2, +a3, +a4} C.Cubie{+b0, +b1, +b2, +b3, +b4}:
+      equality_fields(a0, a1, a2, a3, a4, b0, b1, b2, b3, b4, E.reflect_tree(E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTLeaf{a0, b0}, E.CRTLeaf{a1, b1}}, E.CRTLeaf{a2, b2}}, E.CRTLeaf{a3, b3}}, E.CRTLeaf{a4, b4}}, evidence))
+
+type PCTWitness<-facelets: M.Cube, -packed: C.Cubie> is Data:
+  PCTRoot{+word: +List<M.Move>, facelets_same: {facelets == P.to_facelets(R.root(word)) : M.Cube}, packed_same: {packed == T.pack(R.root(word)) : C.Cubie}}
+
+def matched(+facelets: M.Cube, +packed: C.Cubie, +word: +List<M.Move>, facelets_same: {facelets == P.to_facelets(R.root(word)) : M.Cube}, evidence: Maybe<&1, {equal(packed, T.pack(R.root(word))) == True{} : Bool}>) -> Maybe<&2, PCTWitness<facelets, packed>>:
+  match evidence:
+    case None{}: None{}
+    case Some{same}: Some{PCTRoot{word, facelets_same, equal_reflect(packed, T.pack(R.root(word)), same)}}
+
+def from_reaching(+facelets: M.Cube, +packed: C.Cubie, witness: W.CRTWitness<facelets>) -> Maybe<&2, PCTWitness<facelets, packed>>:
+  match witness:
+    case W.CRTReaching{+word, facelets_same}:
+      matched(facelets, packed, word, facelets_same, Cert.true_evidence(equal(packed, T.pack(R.root(word)))))
+
+def admit(+facelets: M.Cube, +packed: C.Cubie, certificate: Cert.Certificate<facelets>) -> Maybe<&2, PCTWitness<facelets, packed>>:
+  from_reaching(facelets, packed, W.from_certificate(facelets, certificate))
+
+def word(-facelets: M.Cube, -packed: C.Cubie, witness: PCTWitness<facelets, packed>) -> +List<M.Move>:
+  match witness:
+    case PCTRoot{word, facelets_same, packed_same}: word
+
+def forward_view(+facelets: M.Cube, +packed: C.Cubie, witness: PCTWitness<facelets, packed>) -> {C.to_facelets(packed) == facelets : M.Cube}:
+  match witness:
+    case PCTRoot{+word, facelets_same, packed_same}:
+      Equal.trans(M.Cube, C.to_facelets(packed), C.to_facelets(T.pack(R.root(word))), facelets, Equal.cong(C.Cubie, M.Cube, C.to_facelets, packed, T.pack(R.root(word)), packed_same), Equal.trans(M.Cube, C.to_facelets(T.pack(R.root(word))), P.to_facelets(R.root(word)), facelets, T.view_refinement(R.root(word)), Equal.sym(M.Cube, facelets, P.to_facelets(R.root(word)), facelets_same)))
+
+def inverse_view(+facelets: M.Cube, +packed: C.Cubie, +witness: PCTWitness<facelets, packed>) -> {C.to_facelets(C.inverse(packed)) == P.to_facelets(R.inverse_root(word(facelets, packed, witness))) : M.Cube}:
+  match witness:
+    case PCTRoot{+word, facelets_same, packed_same}:
+      Equal.trans(M.Cube, C.to_facelets(C.inverse(packed)), C.to_facelets(C.inverse(T.pack(R.root(word)))), P.to_facelets(R.inverse_root(word)), Equal.cong(C.Cubie, M.Cube, cube => C.to_facelets(C.inverse(cube)), packed, T.pack(R.root(word)), packed_same), A.inverse_view(word))
+
+def packet(-facelets: M.Cube, -packed: C.Cubie, result: Maybe<&2, PCTWitness<facelets, packed>>) -> +List<U32>:
+  match result:
+    case None{}: [0]
+    case Some{witness}: 1 <> I.test_numbers(word(facelets, packed, witness))
+
+def certified_packet(+facelets: M.Cube, +packed: C.Cubie, certificate: Maybe<&2, Cert.Certificate<facelets>>) -> +List<U32>:
+  match certificate:
+    case None{}: [0]
+    case Some{certificate}: packet(facelets, packed, admit(facelets, packed, certificate))
+
+def test_admit(+facelets: M.Cube, packed: C.Cubie, numbers: +List<U32>) -> +List<U32>:
+  certified_packet(facelets, packed, Cert.certify(facelets, I.test_moves(numbers)))
+
+def test_expected(numbers: +List<U32>) -> +List<U32>:
+  T.packed_words(T.pack(R.root(I.test_moves(numbers))))
+
+def test_inverse(packed: C.Cubie) -> +List<U32>:
+  T.packed_words(C.inverse(packed))
+
+def test_inverse_reference(numbers: +List<U32>) -> +List<U32>:
+  T.packed_words(T.pack(R.inverse_root(I.test_moves(numbers))))

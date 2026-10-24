@@ -27,6 +27,14 @@ An accepted replay certificate now supplies the typed reaching word without
 assuming validator completeness. Packed-root admission, target linkage,
 loaded-data and optimized traversal obligations remain open. Pruning stays off.
 
+Exact admission of the actual five-word packed root passes its full guard.
+The [archive](U02/u02-packed-certificate-v2/index.json) verifies 2,751 seals and
+three receipts, worker gone and no stop. All 1,079 admissions/inverse checks,
+10,240 bit refusals, mismatch/padding controls, five kernel mutations and
+570 native packets pass. Sixteen false-proof entrypoints and unchanged gates
+pass. An admitted actual packed root now has checked forward and inverse
+reference views. Target/data, traversal and performance claims remain open.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
@@ -35,7 +43,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | --- | --- |
 | U00. Controls and evidence | Native diagnostic verifies 2,485 seals and three receipts. Ten identical-helper processes match independent checksums, and all five CPU/wall pairs stay within five percent. Stable only in this diagnostic. Historical A/A remains unexplained and inconclusive. No mapper or browser timing promotion. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | NP01–NP03 full guards pass. NP02 verifies 2,615 seals and three receipts, twelve bad-proof rejections and a genuine eight-subgroup complete-cover instance. Validated-input reachability, target linkage, loaded bounds and optimized traversal remain open. No production pruning or accepted performance gain. |
+| U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Small-table compression passes finite checks. The saved-context information screen is inconclusive because radii 7–13 exceed the six-step references. Its executable range guard verifies 2,271 seals and twelve negative controls without repeating projections. No larger-PDB rejection, new database, production bound or promotion. |
 | U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |

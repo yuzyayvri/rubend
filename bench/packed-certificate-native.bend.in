@@ -1,0 +1,25 @@
+import Base
+import {{MODEL}} as M
+import {{CUBIE}} as C
+import {{ADMISSION}} as A
+
+type PCTNativeCase is Data:
+  PCTCase{facelets: +List<U32>, packed: C.Cubie, solution: +List<U32>}
+
+def mix(values: +List<U32>, sum: U32) -> U32:
+  match values:
+    case Nil{}: sum
+    case Con{value, rest}: mix(rest, ((sum * 16777619 : U32) .^. value : U32))
+
+def parsed(packed: C.Cubie, solution: +List<U32>, sum: U32, cube: Maybe<&2, M.Cube>) -> U32:
+  match cube:
+    case None{}: 0
+    case Some{cube}: mix(A.test_admit(cube, packed, solution), sum)
+
+def run(cases: List<PCTNativeCase>, sum: U32) -> U32:
+  match cases:
+    case Nil{}: sum
+    case Con{PCTCase{facelets, packed, solution}, rest}: run(rest, parsed(packed, solution, sum, M.from_list(facelets)))
+
+def main() -> IO(Unit):
+  IO.print(U32.show(run({{CASES}}, 17)))

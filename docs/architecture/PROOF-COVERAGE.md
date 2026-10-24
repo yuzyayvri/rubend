@@ -40,8 +40,13 @@ that the current 54-field Boolean solved predicate implies equality with solved,
 then applies arbitrary-facelet word cancellation and typed replay refinement.
 The result's equality is tied to the original input. Both proof checkers,
 negative sources, independent replay and 464 native packet cases pass.
-This supplies a post-incumbent reference witness, not a universal validator
-theorem or admission of the engine's actual packed root. Target, loaded-data
+The [packed admission bridge](../verification/next-plan/U02/PACKED-CERTIFICATE.md)
+compares all five words of an actual packed root with that witness's checked
+packing. Successful admission carries exact equality, including every padding
+bit. Its forward and actual `Cubie.inverse` facelet views are checked. Both
+checkers and negative sources pass, with 1,079 finite admissions/inverse checks,
+10,240 bit refusals and 570 native packet checks. This is a post-certificate
+admission contract, not universal validator completeness. Target, loaded-data
 and optimized traversal bridges remain open. No pruning is enabled.
 
 The native engine calls `Certificate.certify` before it emits an answer. This
