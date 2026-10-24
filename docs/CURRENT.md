@@ -198,6 +198,15 @@ mode and unchanged gates pass. No cube rerank or new frame field. Read
 docs/verification/next-plan/U04/COORDINATE-MAPPED-PROBE.md. The product bytes are
 unchanged, old mapper timing stays inconclusive, and no pruning is enabled.
 Cost, refinement and integration remain open.
+The `u04-small-cost-v1` archive verifies 2,632 seals and three receipts, worker
+gone and no resource stop. All fifteen 32-million-query samples match independent
+checksums, with zero mismatches and sufficient duration. Both separate profiles
+and unchanged gates pass. The verdict is inconclusive A/A noise: two cohorts
+exceed five percent in both clocks. Descriptive native wall medians are 235.92ns
+direct and 48.81ns mapped, not an accepted speedup. Profiles confirm query-time
+projection is removed. Do not rerun unchanged work or promote either path.
+Read docs/verification/next-plan/U04/PRODUCT-PROBE-COST.md. CPU-side variation,
+refinement and actual solver benefit remain open; no pruning is enabled.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
