@@ -22,6 +22,25 @@ receipt changes, a live worker, wrong revision, missing jobs, command drift and
 limit drift. The actual completed coordinate queue was checked and archived,
 then checked again without changes. These checks are not independent review.
 
+If a proof queue's last job was refused for desktop headroom before admission,
+no resource receipt exists for that job. Preserve that distinct state with
+`node bench/preserve-unadmitted-background.mjs RUN-ID`. It accepts only the
+exact pre-spawn headroom refusal, verifies the unchanged plan and passed jobs,
+and records the missing receipt as unadmitted. It never fabricates a receipt.
+Use a fresh bounded recovery plan and reuse passing evidence for unchanged
+sources. Keep the desktop reserve and all enforcement enabled.
+
+For an executed job stopped by `aggregate-rss-limit` with `SIGKILL`, use
+`node bench/preserve-stopped-background.mjs RUN-ID`. The resource command can
+have a null exit code while its queue wrapper reports 1. This strict path
+preserves both statuses and verifies source seals, receipts and check-process
+cleanup. It does not reinterpret the stop as a test failure or success.
+
+Do not rerun a completed gate solely because another job was interrupted.
+Source-bound reuse must verify its actual successful archived execution,
+complete current input set, hashes, command, binary, limits and confirmation.
+Keep altered-record controls and label reuse explicitly, not as a fresh run.
+
 Receipts up to 32 MiB use the original synchronous archiver. Larger JSON traces
 use bounded streamed compression, capped at 128 MiB input, with source-identity,
 JSON, hash and roundtrip checks. JSON validation remains memory-bounded rather
