@@ -135,6 +135,15 @@ frozen rule skips long-cost and profile runs. They are not measured performance
 results. Keep ordering private and unpromoted, with no unchanged lucky rerun.
 Read docs/verification/next-plan/U04/MOVE-ORDER-STUDY.md. Existing proof/toolchain
 gates pass. No new default, law, native-deadline or application-speed claim.
+The `u05-worker-v1` archive verifies2,447seals/four receipts, worker gone/no stop.
+All1,124jobs, five real replay-certified hits and two partial probes pass.
+The independent oracle checks213,933states. One no-hit scope closes only after
+all244required jobs exhaust. Five hit scopes retire without exclusion.323exact
+receipt retries and twelve record/two manifest-scope corruptions pass. The actual
+early-exhaustion native corruption fails admission. Existing raw cache hash and
+identity, pure wrapper verdict and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U05/PARTITION-WORKER.md. No NP07 proof, production/global
+bound update, worker-pool/scaling result, new data/law or performance promotion.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
