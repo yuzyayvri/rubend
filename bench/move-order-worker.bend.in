@@ -1,0 +1,122 @@
+import Base
+import ../src/main.bend as H
+import ../src/model.bend as M
+import ../src/cubie.bend as C
+import ../src/search.bend as S
+import ../src/portfolio.bend as P
+import ../src/tables.bend as T
+import ./fixed-work.bend as F
+import ./LOCAL-SEARCH.bend as O
+import ./LOCAL-PORTFOLIO.bend as Q
+import ./LOCAL-CONTROL.bend as A
+import ./LOCAL-ORDERED.bend as B
+
+type Work is Type:
+  Control{state: P.Session}
+  Ordered{state: Q.Session}
+
+type View is Type:
+  View{state: Work, best: +List<U32>, length: U32, lower: U32, nodes: U32, status: U32}
+
+def inspect(state: Work) -> View:
+  match state:
+    case Control{P.Session{table, tasks, root, +best, +length, +lower, +nodes, request, +status}}:
+      View{Control{P.Session{table, tasks, root, best, length, lower, nodes, request, status}}, best, length, lower, nodes, S.completion_code(status)}
+    case Ordered{Q.Session{table, tasks, root, +best, +length, +lower, +nodes, request, +status}}:
+      View{Ordered{Q.Session{table, tasks, root, best, length, lower, nodes, request, status}}, best, length, lower, nodes, O.completion_code(status)}
+
+def advance(limit: U32, state: Work) -> Work:
+  match state:
+    case Control{state}: Control{A.advance(limit, state)}
+    case Ordered{state}: Ordered{B.advance(limit, state)}
+
+def table(state: Work) -> Array<U32>:
+  match state:
+    case Control{P.Session{table, tasks, root, best, length, lower, nodes, request, status}}: table
+    case Ordered{Q.Session{table, tasks, root, best, length, lower, nodes, request, status}}: table
+
+def point(changed: Bool, id: String, tick: U32, length: U32, lower: U32, nodes: U32, status: U32, elapsed: Nat) -> IO(Unit):
+  match changed:
+    case False{}: IO.pure(Unit, Unit{})
+    case True{}:
+      IO.print("{\"type\":\"point\",\"id\":\"" ++ id ++ "\",\"tick\":" ++ U32.show(tick) ++ ",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"status\":" ++ U32.show(status) ++ ",\"elapsedMs\":" ++ Nat.show(elapsed) ++ "}")
+
+def continue_or_finish(active: Bool, state: Work, +id: String, budget: U32, tick: U32, +length: U32, +lower: U32, +nodes: U32, +status: U32, elapsed: Nat, rest: Work -> U32 -> U32 -> IO(Array<U32>)) -> IO(Array<U32>):
+  match active:
+    case True{}: rest(advance((budget - nodes : U32), state), length, lower)
+    case False{}:
+      do IO<Array<U32>>:
+        IO.print("{\"type\":\"done\",\"id\":\"" ++ id ++ "\",\"length\":" ++ U32.show(length) ++ ",\"lower\":" ++ U32.show(lower) ++ ",\"nodes\":" ++ U32.show(nodes) ++ ",\"ticks\":" ++ U32.show(tick) ++ ",\"status\":" ++ U32.show(status) ++ ",\"elapsedMs\":" ++ Nat.show(elapsed) ++ "}")
+        return table(state)
+
+def observed(view: View, +id: String, +original: M.Cube, +started: Nat, +budget: U32, +tick: U32, +old_length: U32, old_lower: U32, rest: Work -> U32 -> U32 -> IO(Array<U32>)) -> IO(Array<U32>):
+  match view:
+    case View{state, best, +length, +lower, +nodes, +status}:
+      do IO<Array<U32>>:
+        H.emit_for(U32.is_lt(length, old_length), original, best, length, lower, nodes, U32.is_eq(status, 1), ",\"id\":\"" ++ id ++ "\",\"tick\":" ++ U32.show(tick))
+        now : Nat <- IO.now()
+        +elapsed : Nat = Nat.sub(now, started)
+        point(U32.is_eq(tick, 0) || U32.is_lt(length, old_length) || U32.is_gt(lower, old_lower) || U32.is_ne(status, 0), id, tick, length, lower, nodes, status, elapsed)
+        continue_or_finish(U32.is_lt(nodes, budget) && U32.is_eq(status, 0), state, id, budget, tick, length, lower, nodes, status, elapsed, rest)
+
+def loop(fuel: Nat, +id: String, +original: M.Cube, +started: Nat, +budget: U32, +tick: U32, old_length: U32, old_lower: U32, state: Work) -> IO(Array<U32>):
+  match fuel:
+    case 0n: IO.die(Array<U32>, 2, "Move-order study fuel exhausted")
+    case 1n+p:
+      observed(inspect(state), id, original, started, budget, tick, old_length, old_lower, w => len => low => loop(p, id, original, started, budget, (tick + 1 : U32), len, low, w))
+
+def initialize(ordered: Bool, table: Array<U32>, +original: M.Cube, +root: C.Cubie, +mode: U32) -> Work:
+  match ordered:
+    case False{}: Control{P.initialize(table, original, root, P.request_mode(U32.is_eq(mode, 2)), S.Light{})}
+    case True{}: Ordered{Q.initialize(table, original, root, Q.request_mode(U32.is_eq(mode, 2)), O.Light{})}
+
+def solve(valid: C.Validation, +original: M.Cube, +id: String, +arm: U32, +mode: U32, +budget: U32, table: Array<U32>) -> IO(Array<U32>):
+  match valid:
+    case C.Valid{root}:
+      do IO<Array<U32>>:
+        IO.print("{\"type\":\"begin\",\"id\":\"" ++ id ++ "\",\"arm\":" ++ U32.show(arm) ++ ",\"request\":" ++ U32.show(mode) ++ ",\"workBudget\":" ++ U32.show(budget) ++ "}")
+        started : Nat <- IO.now()
+        loop(2000n, id, original, started, budget, 0, 31, 0, initialize(U32.is_eq(arm, 1), table, original, root, mode))
+    case _: IO.die(Array<U32>, 2, "Invalid move-order cube")
+
+def admitted(ok: Bool, value: Maybe<&2, M.Cube>, id: String, arm: U32, mode: U32, budget: U32, table: Array<U32>) -> IO(Array<U32>):
+  match ok value:
+    case True{} Some{+original}: solve(C.validate(original), original, id, arm, mode, budget, table)
+    case _ _: IO.die(Array<U32>, 2, "Invalid move-order request")
+
+def parsed(value: Maybe<&2, M.Cube>, id: String, arm: Maybe<&2, U32>, mode: Maybe<&2, U32>, budget: Maybe<&2, U32>, table: Array<U32>) -> IO(Array<U32>):
+  match arm mode budget:
+    case Some{+arm} Some{+mode} Some{+budget}: admitted(U32.is_le(arm, 2) && (U32.is_eq(mode, 0) || U32.is_eq(mode, 2)) && U32.is_le(budget, 8000000), value, id, arm, mode, budget, table)
+    case _ _ _: IO.die(Array<U32>, 2, "Invalid move-order numbers")
+
+def command(args: +List<String>, table: Array<U32>) -> IO(Array<U32>):
+  match args:
+    case Con{id, Con{text, Con{arm, Con{mode, Con{budget, Nil{}}}}}}: parsed(M.from_list(H.colors(text)), id, U32.read(arm), U32.read(mode), U32.read(budget), table)
+    case _: IO.die(Array<U32>, 2, "Expected id, facelets, arm, request and work budget")
+
+def commands(lines: +List<String>, table: Array<U32>) -> IO(Array<U32>):
+  match lines:
+    case Nil{}: IO.pure(Array<U32>, table)
+    case Con{SNil{}, rest}: commands(rest, table)
+    case Con{line, rest}:
+      do IO<Array<U32>>:
+        table : Array<U32> <- command(String.split(line, Chr{9}), table)
+        commands(rest, table)
+
+def start(args: List<String>) -> IO(Unit):
+  match args:
+    case Con{program, Con{path, Nil{}}}:
+      do IO<Unit>:
+        file : File <- IO.try(File, File.open(path, "r"))
+        read : File & Result<&1, &1, U32 & String, String> <- File.read(file, 4096)
+        text : String <- F.read_requests(16n, "", read)
+        table : Array<U32> <- H.checked_table(Array.size(U32, T.generate()))
+        IO.print("{\"type\":\"ready\"}")
+        table : Array<U32> <- commands(String.split(text, Chr{10}), table)
+        IO.pure(Unit, Unit{})
+    case _: IO.die(Unit, 2, "Expected move-order request file")
+
+def main() -> IO(Unit):
+  do IO<Unit>:
+    args : List<String> <- IO.args()
+    start(args)

@@ -127,6 +127,14 @@ All128native cursor packets agree withJavaScript. The pure module, generated
 Search and unchanged proof/toolchain gates pass. Production search stays unchanged.
 Read docs/verification/next-plan/U04/PHASE2-MOVE-ORDER.md. No new pruning or table,
 policy promotion, full-search quality/cost result, new law or release case.
+The `u04-move-study-v1` archive verifies2,422seals/six receipts, worker gone/no stop.
+All168guards and480fresh development528–535requests pass with285candidate replays.
+Quality work accounts for192,000,000Search.advance calls. A/A and repeated states
+are stable. All160control/treatment pairs tie on length and lower bound, so the
+frozen rule skips long-cost and profile runs. They are not measured performance
+results. Keep ordering private and unpromoted, with no unchanged lucky rerun.
+Read docs/verification/next-plan/U04/MOVE-ORDER-STUDY.md. Existing proof/toolchain
+gates pass. No new default, law, native-deadline or application-speed claim.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
