@@ -144,6 +144,15 @@ early-exhaustion native corruption fails admission. Existing raw cache hash and
 identity, pure wrapper verdict and unchanged proof/toolchain gates pass. Read
 docs/verification/next-plan/U05/PARTITION-WORKER.md. No NP07 proof, production/global
 bound update, worker-pool/scaling result, new data/law or performance promotion.
+The `u05-pool-v1` archive verifies2,470seals/four receipts, worker gone/no stop.
+Both normal and retry worker pairs are ready concurrently onCPU2/3under the5GiB
+aggregate ceiling. Every1,124result and ledger outcome matches the single-worker
+reference. A worker exits2after one valid job;243missing jobs prevent commitment.
+Checkpoint replay and244-job retry recover with exactly one identical duplicate.
+All five owners are gone, process groups stay inside the resource runner, cache
+and source seals hold, and fixture/actual corruption/proof gates pass. Read
+docs/verification/next-plan/U05/PARTITION-POOL.md. No scaling speedup, NP07 proof,
+production/global bound or application change is established.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
