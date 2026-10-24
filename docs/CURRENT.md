@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u03-four-conditional-v1` archive verifies 2,842 seals and both receipts,
+worker gone and no resource stop. All 53,004 saved entries, 212,016 independent
+projection checks, 106,008 prefix comparisons and old-policy counts reconcile.
+Eight model controls and the max-versus-sum witness pass. Four-edge maximum
+adds no hypothetical cuts over three-edge maximum on either dataset.
+The raw set has 32 radius-seven entries eligible for an eight-step table and
+52,552 entries outside that discriminatory range. Neither pattern cuts those
+32. The structured small set remains 420/420 cuts with either maximum.
+Keep four-edge integration unpromoted. This does not reject a larger six-edge
+database. The 800-ms CPU observation is offline analysis, not native probe or
+search savings. No search/data regeneration, new law, pruning or holdout. Read
+docs/verification/next-plan/U03/FOUR-EDGE-CONDITIONAL.md.
+
 The `u00-cpu-observer-v1` archive verifies 2,821 seals and both receipts,
 worker gone and no resource stop. Direct and waited-child CPU calibration,
 failed exit seven, stdout/stderr retention, eight malformed records and
