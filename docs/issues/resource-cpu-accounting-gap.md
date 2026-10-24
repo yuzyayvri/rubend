@@ -17,4 +17,8 @@ observer. A small opt-in whole-command observer can reuse that method for later
 benchmark commands without changing the general resource runner. It must keep
 command CPU, waited-child CPU, observer work, wall time and peak-RSS semantics
 explicit, preserve nonzero exits and validate the metric against actual work.
-This gap stays open until that new observer's executable guard passes.
+The [opt-in observer guard](../verification/next-plan/U00/CPU-OBSERVER.md) now
+passes direct, waited-child and failed-command calibration, eight malformed
+records and output-collision checks. Later bounded commands can opt in to that
+observer. The general resource runner is unchanged. Historical CPU values
+remain unavailable, and no old planning or timing result is reclassified.

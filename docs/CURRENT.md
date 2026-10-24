@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u00-cpu-observer-v1` archive verifies 2,821 seals and both receipts,
+worker gone and no resource stop. Direct and waited-child CPU calibration,
+failed exit seven, stdout/stderr retention, eight malformed records and
+preexisting-output refusal all pass. Observed fixture CPU is 270/450/120 ms,
+agreeing with independent Node counters within the declared quantization.
+These are calibration fixtures, not solver performance. Existing GNU Time
+identity is checked. Resource runner and root inputs are unchanged.
+Whole-command CPU remains distinct from inner/warm intervals, and its maximum
+RSS is not aggregate tree RSS. Earlier missing counters stay unavailable.
+No solver, new proof, holdout or publishing. Read
+docs/verification/next-plan/U00/CPU-OBSERVER.md.
+
 The `u03-four-edge-v1` archive verifies 2,805 seals and four receipts, worker
 gone and no resource stop. Every 190,080-state codec and 3,421,440 transitions
 pass. Both complete table audits cover 380,160 states and 6,842,880 edges,

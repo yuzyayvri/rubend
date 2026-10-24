@@ -1,0 +1,45 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u00-cpu-observer-v1",
+  "revision": "f3f5494b2253bbfe594cf1d11f60cc9a934e7b01",
+  "sourceSeals": 2821,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T22:31:33.517Z",
+  "finishedAt": "2026-10-24T22:31:35.972Z",
+  "archives": [
+    {
+      "path": "0-u00-cpu-observer-v1-plan.json.gz",
+      "sha256": "8080ce350c1978c26891ea65ef23a6e1bc8e429406ceb01d0298a81218f7a303",
+      "compressedSha256": "830fe17757716e096bec006032f015fe4a9304b0b5020fbf3e53475aaccd3990"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "ddd76a58f88b2e0ec4c3831f931b53060b506013bb419fa833ff4c7585c459be",
+      "compressedSha256": "44e11f0286a2cc3b51cb720953f6f4393311e04d35aa7be1833a2be5178d5f45"
+    },
+    {
+      "path": "2-u00-cpu-observer-v1-measure.json.gz",
+      "sha256": "babd9e4775e0372134ccdafffc25e573a901a9f84f1aae911d9b4e697321f766",
+      "compressedSha256": "3196c9a0e6e875c246375b666a976e9a192e3c6e43e53ef5a474fdced858e181"
+    },
+    {
+      "path": "3-u00-cpu-observer-v1-confirm.json.gz",
+      "sha256": "291c3a1e7cd5014460ea29bd6518349fad49db2020673db65b463ea41d3e7ae8",
+      "compressedSha256": "5e9e2259140f045b11a08426ad4761c4c510a85bae2d26a5ca3c9ab430856148"
+    },
+    {
+      "path": "4-confirmation.json.gz",
+      "sha256": "1bee299793c464bebef66acc74d302b637092b9fd860ba71d28d9fc682caa72f",
+      "compressedSha256": "aaa6e5a9fb912803498a63486ebdcaee7b02aa5484a11c4456f7a50f5fe8007d"
+    },
+    {
+      "path": "5-observer.json.gz",
+      "sha256": "cd021ea69f062a44699d740c7d754f5295acc4027c975abdbe67318a9815618e",
+      "compressedSha256": "d41809590dddc0d545ffcc06d2c47989bc306fca8b00741d9866e588cbb41b72"
+    }
+  ]
+}

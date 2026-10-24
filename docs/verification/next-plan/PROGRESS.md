@@ -91,13 +91,20 @@ Single-run wall/RSS planning evidence only. CPU time is absent, explicitly
 correcting the archived scope wording. No speedup or six-edge ETA.
 NP04/NP05 and complete six-edge builds remain gated.
 
+The [opt-in command CPU observer](U00/CPU-OBSERVER.md) passes canonical
+verification with 2,821 seals and both receipts, worker gone and no stop.
+Direct/waited-child calibration, failed exit seven, raw-output preservation,
+eight malformed records and output-collision checks pass. The general resource
+runner and root inputs stay unchanged. Old missing CPU counters are not filled.
+No solver benchmark or warm-interval CPU claim.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
 
 | Unit | Current state |
 | --- | --- |
-| U00. Controls and evidence | Native diagnostic verifies 2,485 seals and three receipts. Ten identical-helper processes match independent checksums, and all five CPU/wall pairs stay within five percent. Stable only in this diagnostic. Historical A/A remains unexplained and inconclusive. No mapper or browser timing promotion. |
+| U00. Controls and evidence | Command CPU observer verifies 2,821 seals/two receipts, actual direct/waited-child/failed-command calibration and eight malformed-record controls. General limiter unchanged. Earlier stable native A/A is diagnostic only. Historical mapper/browser noise remains unexplained and inconclusive. No speed promotion. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Four-edge pilot verifies 2,805 seals/four receipts. All 190,080 codecs, 3,421,440 transitions and two complete 380,160-state/6,842,880-edge audits pass, diameter eight. Tiny native file restart also passes. Single-run resource planning only, no measured CPU time or speedup. Larger-format costs, NP04/NP05 and six-edge builds remain gated. No production promotion. |
