@@ -190,6 +190,14 @@ normally. Eight candidate replays, two source faults, ten record controls, pure
 observer verdict and unchanged gates pass. Read
 docs/verification/next-plan/U04/SMALL-OBSERVATION.md. No pruning, portfolio
 frequency, timing, CPU or quality gain is claimed.
+The `u04-small-mapped-v1` archive verifies 2,601 seals and three receipts, worker
+gone and no resource stop. All 80,640 maps and 15,609 saved point queries agree
+with their oracles. Native checksum 957906193, three actual source faults,
+eighteen refusals, loaded-distance preservation, both pure checkers, owned-array
+mode and unchanged gates pass. No cube rerank or new frame field. Read
+docs/verification/next-plan/U04/COORDINATE-MAPPED-PROBE.md. The product bytes are
+unchanged, old mapper timing stays inconclusive, and no pruning is enabled.
+Cost, refinement and integration remain open.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
