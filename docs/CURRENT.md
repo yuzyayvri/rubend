@@ -2,6 +2,29 @@
 
 ## Latest checkpoint
 
+The `u03-low-range-v1` archive verifies 2,791 seals and three receipts, worker
+gone and no resource stop. Its 24 distinct independently optimum-three roots
+produce 420 actual fresh FullCube entries, all with remaining radius one.
+The unchanged packed-small Light control and observer agree at all 192
+checkpoints. All 564 position checks, 2,520 independent projection checks and
+5,880 conservative lookups pass. The maximum of both one-, two- and three-edge
+references would exclude 225, 409 and 420 of those recorded entries respectively.
+These are hypothetical entry cuts, not saved subtree work or CPU savings.
+The roots are deliberately structured and seeded with certified incumbents,
+not uniform inputs or a first-answer benchmark. All three collector faults,
+eight record corruptions and 17,496 filter cases pass. Candidate payloads are
+reused, and the unchanged root gate is explicitly reused across 87 exact inputs.
+No pruning, new candidate PDB, NP04–NP08 proof, speedup, holdout or publishing.
+Read
+docs/verification/next-plan/U03/LOW-RANGE-NATIVE.md.
+
+This pass requests separate approval of the exact NP04–NP07 statements in
+docs/architecture/NEXT-PROOF-STATEMENTS.md to finish the gated U03/U05 proofs.
+They cover conservative decode, six-edge projection bounds, completed-failure
+cache reuse and fully covered partition exhaustion. Keep them unimplemented
+until that specific human approval. Large builds and pushing remain separate.
+Other approved work and the existing automation continue while that is pending.
+
 The complete bounded unpruned reference is verified and archived under
 `u06-bounded-reference-v4`. Canonical verification checks 2,800 seals and its
 current resource receipt, worker gone and no new resource stop. Both proof
@@ -17,8 +40,8 @@ Earlier inspector failure, unadmitted finite job and resource-stopped confirmati
 remain preserved in their original states. Read
 docs/verification/next-plan/U06/BOUNDED-REFERENCE.md. Optimized traversal and
 loaded-data refinement remain open. No stronger app label or speedup is claimed.
-The next independent U03 work must make the small edge information screen
-relevant to actual residual radii. Larger tables and NP04–NP08 remain gated.
+The separate low-radius U03 screen now supplies relevant diagnostic support.
+Larger tables and NP04–NP08 remain gated.
 
 The `u02-packed-certificate-v2` archive verifies 2,751 seals and three receipts,
 worker gone and no resource stop. All 1,079 actual validator-output admissions

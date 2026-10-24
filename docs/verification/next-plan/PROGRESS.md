@@ -46,6 +46,17 @@ fail. Earlier failed, unadmitted and stopped runs retain their states.
 Original S04 reference only. Optimized traversal, loaded data and stronger
 application labels remain outside this result.
 
+U03's separate [low-radius screen](U03/LOW-RANGE-NATIVE.md) passes canonical
+verification with 2,791 seals and three receipts, worker gone and no stop.
+Twenty-four distinct independently optimum-three roots produce 420 actual
+FullCube entries at remaining radius one. All 192 control/observer checkpoints,
+564 position checks, 2,520 projection checks and 5,880 codec lookups pass.
+The maximum of both one-, two- and three-edge references would exclude 225,
+409 and 420 recorded entries respectively. These are hypothetical opportunities
+on deliberately structured seeded prefixes, not measured subtree or CPU savings.
+No new distance payload or production pruning. Exact NP04–NP07 approval remains
+pending for the gated U03/U05 proofs, separately from larger builds or pushing.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
@@ -55,7 +66,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U00. Controls and evidence | Native diagnostic verifies 2,485 seals and three receipts. Ten identical-helper processes match independent checksums, and all five CPU/wall pairs stay within five percent. Stable only in this diagnostic. Historical A/A remains unexplained and inconclusive. No mapper or browser timing promotion. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
-| U03. Six-edge PDB and compression | Small-table compression passes finite checks. The saved-context information screen is inconclusive because radii 7–13 exceed the six-step references. Its executable range guard verifies 2,271 seals and twelve negative controls without repeating projections. No larger-PDB rejection, new database, production bound or promotion. |
+| U03. Six-edge PDB and compression | Low-radius archive verifies 2,791 seals and three receipts. All 420 actual shallow FullCube entries have relevant residual radius one. Three-edge maximum would exclude all 420, hypothetically. Full prefix states and independent projection/codec queries agree. Structured seeded roots only, no saved-work or CPU claim. The older radii 7–13 screen remains inconclusive. NP04/NP05 and larger builds remain gated. No production promotion. |
 | U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
 | U06. Proof bridges and UI efficiency | Complete bounded unpruned reference verifies 2,800 seals, sixteen false-proof checks and 189 native packets. Root gate is explicitly reused across 87 identical inputs. Demand rendering passes scene/app gates. Retention remains inconclusive and private. Optimized/data refinement, video/operator/package and general-performance gates remain open. |
