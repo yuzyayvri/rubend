@@ -161,7 +161,19 @@ Fourteen sample and three aggregate corruption controls and unchanged gates pass
 The disposition is stable in this diagnostic only. Historical noise remains
 unexplained; mapper and browser acceptance stay inconclusive. Read
 docs/verification/next-plan/U00/NATIVE-AA-CPU.md. No engine-speed claim follows.
-No distance regeneration, full six-edge database, pruning or new domain law.
+The `u04-ep4-ccp-v1` archive verifies 2,510 seals and three receipts, worker gone
+and no resource stop. All 235,200 product distances, 2,352,000 directed edges,
+1,680 codecs, 16,800 transitions, 10,240 actual-cube child projections and three
+source corruptions pass. The maximum projected distance is ten. Its 228,449
+strict improvements over separate EP4/corner-class distances do not establish
+improvement over Rubend's existing phase-two bounds. Generated payloads stay
+outside Git. Read docs/verification/next-plan/U04/SMALL-PRODUCT.md. No actual
+existing-bound cut, universal admissibility proof, production integration, or
+speed gain is claimed. Clipboard/download acceptance remains open because the only connected
+browser still has the recorded observation limitations. The temporary capability
+check tab is closed; no unsupported browser connection or test hook was added.
+The existing raw cache is unchanged. No full six-edge database, production
+pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
 docs/verification/next-plan/U04/u04-mapper-v1/index.json.
