@@ -214,6 +214,14 @@ and concrete identity instance. All eight false-proof entrypoints, 6,430 split
 and prefix-recovery cases, 6,431 bound checks and unchanged gates pass. Read
 docs/verification/next-plan/U02/NP01-GROUP.md. Validator reachability, optimized
 target/data bridges and NP02/03 remain open; no pruning or stronger label.
+The `u02-np03-group-v1` archive verifies 2,593 seals and three receipts, worker
+gone and no resource stop. Both checkers accept NP03 with actual inverse-word
+reconstruction and no inverse callback premise. All eight wrong-source
+entrypoints and 6,431 inverse/transfer cases pass. The proper U4 subgroup
+counterexample verifies sixteen products, four inverses, 856 oracle states and
+1,152 edges. Forward distance two differs from inverse distance one. Unchanged
+gates pass. Read docs/verification/next-plan/U02/NP03-GROUP.md. NP02 and
+application/data bridges remain open; no pruning or incremental inverse update.
 The existing raw cache is unchanged. No full six-edge database, production
 pruning or new domain law.
 Do not rerun the short comparison unchanged. Read

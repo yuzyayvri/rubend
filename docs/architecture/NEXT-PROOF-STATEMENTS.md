@@ -7,7 +7,9 @@ premises or enabling unchecked pruning. No statement replaces or weakens any
 of the existing 23 laws. NP01 now has a checked quantified typed-reference-group
 formulation in [its proof record](../verification/next-plan/U02/NP01-GROUP.md).
 Validation reachability, optimized target correspondence and loaded admissibility
-remain open. NP02 and NP03 have not yet been implemented in that formulation.
+remain open. NP03's [reference-group formulation](../verification/next-plan/U02/NP03-GROUP.md)
+now uses the actual proved inverse-word reconstruction without an inverse
+callback premise. NP02 has not yet been implemented in that formulation.
 The earlier supporting reference kernels are checked separately in
 [the U02 proof record](../verification/next-plan/U02/PROOF-KERNEL.md).
 They retain uninstantiated target, admissibility and inverse-bridge premises
