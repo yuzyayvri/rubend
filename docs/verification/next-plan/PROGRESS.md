@@ -57,6 +57,14 @@ on deliberately structured seeded prefixes, not measured subtree or CPU savings.
 No new distance payload or production pruning. Exact NP04–NP07 approval remains
 pending for the gated U03/U05 proofs, separately from larger builds or pushing.
 
+The [U06 refinement inventory](U06/REFINEMENT-GAPS.md) passes canonical
+verification with 2,796 seals and both receipts, worker gone and no stop.
+All seven actual native entrypoints, 54 reference queries, 36 independent
+packet replays and six source-mutation controls pass. A concrete non-shortest
+bounded answer checks the distinction between replay and optimality.
+This completes the requested gap identification. The seven named implications
+remain unproved. No production change, stronger label or performance claim.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
@@ -69,7 +77,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U03. Six-edge PDB and compression | Low-radius archive verifies 2,791 seals and three receipts. All 420 actual shallow FullCube entries have relevant residual radius one. Three-edge maximum would exclude all 420, hypothetically. Full prefix states and independent projection/codec queries agree. Structured seeded roots only, no saved-work or CPU claim. The older radii 7–13 screen remains inconclusive. NP04/NP05 and larger builds remain gated. No production promotion. |
 | U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
-| U06. Proof bridges and UI efficiency | Complete bounded unpruned reference verifies 2,800 seals, sixteen false-proof checks and 189 native packets. Root gate is explicitly reused across 87 identical inputs. Demand rendering passes scene/app gates. Retention remains inconclusive and private. Optimized/data refinement, video/operator/package and general-performance gates remain open. |
+| U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Latest archive verifies 2,796 seals, both receipts, 54 reference queries, 36 independent packet replays and six mutation controls. Seven optimized-reference implications remain open. Root gate is explicitly reused across 87 identical inputs. Demand rendering passes scene/app gates. Retention remains inconclusive and private. Video/operator/package and general-performance gates remain open. |
 | U07. Holdout and competitors | Cold pilot verifies 2,501 seals and three receipts. All60requests accounted for, clean exits and27scorer controls. Both anytime backends cover20/20requests on four reused roots. Rubend19/20/20/20 versus bundled min2phase21/20/20/21 in every cohort. Nissy exact0/20before deadline. Exploratory only. No speed promotion, final freeze or release holdout. |
 
 Autonomous continuation now uses the existing Codex thread heartbeat

@@ -76,6 +76,14 @@ all 87 inputs unchanged, with six altered-record controls. No fresh root-gate
 run or stronger application label is claimed. Optimized pruning, loaded data,
 scheduling and completion refinement remain open.
 
+The [optimized-reference gap inventory](../verification/next-plan/U06/REFINEMENT-GAPS.md)
+names seven missing implications, including the pre-search input boundary,
+concrete targets, loaded data, contour simulation and interruption. Its fixed
+guard inspects actual entrypoints and checks the export distinction against
+real reference packets. It does not prove any missing implication or enable
+a stronger label. In particular, a bounded found result can exceed the true
+optimum. Numeric packets do not serialize the reference's proof fields.
+
 - 10,000 moves cross-checked against independent cubing.js KPuzzle semantics.
 - 1,000 arbitrary legal states, 18,000 packed/specification move comparisons,
   inverse/frame roundtrips, and 2,000 subgroup-frame checks.

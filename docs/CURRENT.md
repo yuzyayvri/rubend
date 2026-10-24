@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u06-refinement-v1` archive verifies 2,796 seals and both receipts, worker
+gone and no resource stop. All seven native entrypoints' import/type inventories
+pass, including the owned profile's continuation-failure constructor. Three
+altered-source inventories and three actual export-source mutations reject.
+All 54 actual reference queries and 36 independent packet replays pass.
+A U root at radius two returns the valid two-move answer U U2 despite its
+one-move optimum. The export/progress boundary keeps that distinction.
+Seven concrete optimized-reference implications remain open and are named
+in the report. This completes gap identification, not those missing proofs.
+Checked reference and 87-input root/toolchain evidence is explicitly reused.
+No new theorem, production change, performance result, holdout or independent review.
+Read docs/verification/next-plan/U06/REFINEMENT-GAPS.md.
+
 The `u03-low-range-v1` archive verifies 2,791 seals and three receipts, worker
 gone and no resource stop. Its 24 distinct independently optimum-three roots
 produce 420 actual fresh FullCube entries, all with remaining radius one.
