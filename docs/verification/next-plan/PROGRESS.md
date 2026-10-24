@@ -65,6 +65,16 @@ bounded answer checks the distinction between replay and optimality.
 This completes the requested gap identification. The seven named implications
 remain unproved. No production change, stronger label or performance claim.
 
+The [U03 checkpoint guard](U03/CHECKPOINT-PREFLIGHT.md) passes canonical
+verification with 2,779 seals and three receipts, worker gone and no stop.
+All 34 real process restarts, six repeats, six injected worker exits and nine
+record corruptions pass. Six completed tiny tables exactly match uninterrupted
+Bend and the audited native references. Four native-memory restore checksums
+agree. A fresh pure verdict and both earlier failure regressions pass.
+Both failed runs remain preserved. Default stack, product limits and builder
+are unchanged. Native file IO and larger scratch/cost estimates remain open.
+No new law, large build, performance gain or production pruning.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.

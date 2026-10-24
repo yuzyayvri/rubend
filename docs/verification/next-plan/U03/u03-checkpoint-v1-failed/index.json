@@ -1,0 +1,73 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u03-checkpoint-v1",
+  "revision": "5e8b16dee61172512e4be77fa3e1d4e2d065789d",
+  "sourceSeals": 2758,
+  "workerGone": true,
+  "executedJobs": 2,
+  "plannedJobs": 3,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read restart.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 6,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-checkpoint-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/0-u03-checkpoint-v1-plan.json.gz",
+      "bytes": 375809,
+      "compressedBytes": 131708,
+      "sha256": "dc49d9ab1a01e2a0593153758524f16bf88b4e268b59133cb45095a3a0450473",
+      "compressedSha256": "9638d830424a04bb2b7b8c7a8224c6cdbd3b2e88e2895a7d560f822c708acbac",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-checkpoint-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/1-status.json.gz",
+      "bytes": 1369,
+      "compressedBytes": 643,
+      "sha256": "98d0bcbda166fa38c58b8d6ff17319e15bf6baa671a74f2982bb9fab6e4ce2d4",
+      "compressedSha256": "1f24a809605a13f443afe5411ddb9d3828ec5db6513741f65865051d8a86eea9",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-checkpoint-v1-compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/2-u03-checkpoint-v1-compile.json.gz",
+      "bytes": 1025,
+      "compressedBytes": 594,
+      "sha256": "f900aea993ba3e02a8565036ce8364fccac2bb8eac9c5f817e90acca45ade6c8",
+      "compressedSha256": "f780c6b8f7bb9e19984d6c5cc9ff95db20863e9b2c60acaa167e462f34fece0d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-checkpoint-v1-restart.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/3-u03-checkpoint-v1-restart.json.gz",
+      "bytes": 1955,
+      "compressedBytes": 979,
+      "sha256": "15e2f4374b4c507bd57dc12208aa379859bfc1c6226d12e0235287d18b28ae90",
+      "compressedSha256": "32533c7d499f1593351d3fd9f0ee7557af727cc72b1254fab72f8d80e6e63061",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-checkpoint-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/4-failed-sources.json.gz",
+      "bytes": 141138,
+      "compressedBytes": 47295,
+      "sha256": "0e19b3bc821806b45c0054bdee8e5d22e03ecd7721b93ae5b8c7b14107da8c93",
+      "compressedSha256": "9ddcac42fddb1870936587c6952e8c8c28179162833b12183232a98f8be6257f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-checkpoint-v1/compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-checkpoint-v1-failed/5-compile.json.gz",
+      "bytes": 294,
+      "compressedBytes": 253,
+      "sha256": "f509d3479cdd6aa80618d453618af5a913f8987f6a5a1fdd40eb909e86bd33cb",
+      "compressedSha256": "fd4fb7459875f7442d27d86cdd46186f7e5ba21156cbbf38f16d7ca7fe5dc185",
+      "roundtripPassed": true
+    }
+  ]
+}

@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u03-checkpoint-v3` archive verifies 2,779 seals and three receipts, worker
+gone and no resource stop. All 34 fresh-process restarts, six repeated inputs,
+six real worker exits and nine corrupted-checkpoint controls pass. All six
+completed tiny tables exactly match uninterrupted Bend and the previously
+audited native references. Four native in-memory restore checksums agree.
+The changed pure adapter passes a fresh verdict. Both earlier UI-list-limit
+and Base List.length stack failures reproduce in regression checks and remain
+preserved as failed runs. Product limits, default stack and builder are unchanged.
+The 87-input root gate is source-identically reused. Native file IO and larger
+scratch/cost estimates remain open. No large build, new law, speedup or pruning.
+Read
+docs/verification/next-plan/U03/CHECKPOINT-PREFLIGHT.md.
+
 The `u06-refinement-v1` archive verifies 2,796 seals and both receipts, worker
 gone and no resource stop. All seven native entrypoints' import/type inventories
 pass, including the owned profile's continuation-failure constructor. Three
