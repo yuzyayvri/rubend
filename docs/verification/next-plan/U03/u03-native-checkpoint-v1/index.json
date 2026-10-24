@@ -1,0 +1,60 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u03-native-checkpoint-v1",
+  "revision": "b0e32c5482902cbc693c6d1c91f1b7542d344752",
+  "sourceSeals": 2791,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T21:29:54.317Z",
+  "finishedAt": "2026-10-24T21:30:01.684Z",
+  "archives": [
+    {
+      "path": "0-u03-native-checkpoint-v1-plan.json.gz",
+      "sha256": "5678e51630e868a2a875799f529361c0f2098d0b3d2d4f07cf35e735caa6855d",
+      "compressedSha256": "a7edae061de36a7eabcef95fc5b1e31044ebe81116deab14499b3a9f0db11bf5"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "4c8e3e274728782afcecf78f747dc8abc3bb53303c0d63cdb7bca55e10cc0054",
+      "compressedSha256": "a175f6a6bc459270ef5ea8f2ed205048bc864a8971fc5aa17276e92594145218"
+    },
+    {
+      "path": "2-u03-native-checkpoint-v1-compile.json.gz",
+      "sha256": "e4c5486233a0a406d82d38fe4c9c8ce06427009e3303dd91e65962ba78f2c05e",
+      "compressedSha256": "47599b26ea0d7be509a33272a82b9cb44ab0e2417dcd98c3e203054c4d5ea158"
+    },
+    {
+      "path": "3-u03-native-checkpoint-v1-restart.json.gz",
+      "sha256": "3035e2dac05b0e5272401a74d3669692407a01c31bc4d97d28635b9d17afbf22",
+      "compressedSha256": "0f2b1157526a22cf3699d4566126503354b5e94d22d3ba972777dbfedb440be2"
+    },
+    {
+      "path": "4-u03-native-checkpoint-v1-confirm.json.gz",
+      "sha256": "a19245870d9d861c6cc8aee363ac95ad1eb6914e9147418519eed3bf988b3351",
+      "compressedSha256": "c951bc5765d581f3a9f27ccbd8c46eddabdbc65313993c6da9cec063c7429c44"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "97df16f954dcbaa7d7b82c19952290a07dd2494ad4b8f4799e74e8c60c7ac779",
+      "compressedSha256": "5e3926d176fb5bfac9d909e70d464a96bc5f12d8bf382fcdb4bb69dcc6bdc37f"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "adafd1db4377ed03e76686c2d667a272a564e501c2353bdb03ac45fbbafe7766",
+      "compressedSha256": "d3174074d66863dbe3c7705bdf55cb00c5fe3bdf76f1fbca88ecc6ace693fc63"
+    },
+    {
+      "path": "7-native.json.gz",
+      "sha256": "ac35cfee7752c6882545c53597bf7472587e38f1db9e1c75d905a424b5be6db9",
+      "compressedSha256": "f3ec1631180ea2d79c9e278277e37deac76786670c69430d395c29adb6d464e7"
+    },
+    {
+      "path": "8-restart.json.gz",
+      "sha256": "3143f2cde52de24ba8c7f79e2bf90a1e5f22ec5e7d41dfd40c5612c20f5451dd",
+      "compressedSha256": "d3dbb2cb493db62f4040ecfdcd99b26345805444b6f9add157c13ae9cf313811"
+    }
+  ]
+}

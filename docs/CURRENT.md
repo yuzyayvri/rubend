@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u03-native-checkpoint-v1` archive verifies 2,791 seals and three receipts,
+worker gone and no resource stop. All 34 native file restarts, six native
+crashes after read/close, six repeats and eleven malformed native controls
+pass. Six completed tiny tables exactly match the audited native references.
+The largest payload is 42,246 bytes within the 65,536-byte cap. Every fresh
+native owner reads the payload from disk and exits. Source/payload/result hashes
+and owned-array mode pass. Pure and 87-input root gates are explicitly reused.
+Short reads fail closed. Larger chunking, scratch/cost admission and NP04/NP05
+remain open. No large six-edge build, pruning, production change or speedup.
+Read
+docs/verification/next-plan/U03/NATIVE-CHECKPOINT.md.
+
 The `u03-checkpoint-v3` archive verifies 2,779 seals and three receipts, worker
 gone and no resource stop. All 34 fresh-process restarts, six repeated inputs,
 six real worker exits and nine corrupted-checkpoint controls pass. All six
