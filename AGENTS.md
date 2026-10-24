@@ -18,6 +18,19 @@ never invent success.
 
 ## Current boundary
 
+On 2026-10-24 Yuzy required roadmap completion, then a primary-source research
+and local setup pass for additional 3x3 solvers, then controlled comparative
+benchmarks and a numerical report. Coordinate U07 with that final pass so the
+holdout is opened only after configurations are frozen and no final evaluation
+is duplicated. Keep solution quality, coverage, time, CPU, memory, initialization,
+timeouts and proof limits explicit. Preserve competitor revisions and licenses.
+Only after the full roadmap and report are complete, delete the existing
+`continue-rubend-roadmap` automation. Do not stop at implementation alone.
+Yuzy will read the report and decide separately whether to approve a push to
+main. This supersedes every earlier standing push authorization. No push,
+merge, release or deployment is authorized now. Existing gates for unapproved
+laws, large/costly builds, cloud/GPU work and system changes remain in force.
+
 On 2026-10-23 Yuzy approved the exact NP01–NP03 statements in
 `docs/architecture/NEXT-PROOF-STATEMENTS.md` and requested autonomous roadmap
 execution with automatic messages to this same chat after detached runs.
@@ -26,8 +39,9 @@ Use the existing Codex heartbeat `continue-rubend-roadmap`, not a custom
 message-injection script or a second automation. Keep fixed detached batches,
 source seals, resource admission, solo work, and the no-Astra restriction.
 The heartbeat checks every thirty minutes. Do not duplicate active work or
-spend model turns polling. Pause the heartbeat when done or when missing
-authority prevents all useful in-scope progress. NP04–NP08 and large table
+spend model turns polling. Pause it if missing authority prevents all useful
+in-scope progress. Delete it only after the full workflow and report above are
+complete. NP04–NP08 and large table
 generation still need separate approval. The October 22 main push was a
 completed specific request, not blanket publication authority for later units.
 

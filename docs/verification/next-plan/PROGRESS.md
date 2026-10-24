@@ -3,6 +3,13 @@
 Updated October 24, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+October 24 finish order. Complete the roadmap and its required verification,
+then research/build additional 3x3 competitors, run the final comparative pass,
+and deliver a reproducible numerical report. Coordinate this with U07 so the
+holdout is frozen and used once. Only then delete the existing scheduled task.
+Yuzy decides on a push to main after reading the report. No push or merge is
+currently authorized. Existing law, resource and system-change gates remain.
+
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not
 a blanket gate on the remaining roadmap. The approved U03 dependency requires

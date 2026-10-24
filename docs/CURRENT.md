@@ -2,6 +2,17 @@
 
 ## Latest checkpoint
 
+October 24 completion order. Finish the roadmap implementation and required
+verification, then research and locally set up additional 3x3 solvers and run
+the final comparative benchmark/report. Coordinate the U07 closing evaluation
+with that pass rather than duplicating or tuning on the holdout. Preserve raw
+records, revisions, licenses, fair resources, censored failures and uncertainty.
+Deliver the numerical report here, then delete the existing scheduled task.
+Yuzy will review the report and separately authorize any push to main. Earlier
+push authority does not apply. No publishing, merge, release or deployment now.
+Existing approval gates for new laws, large/costly builds and system changes
+remain unchanged. The scheduler prompt already records this order.
+
 U06 demand rendering is committed as signed `9dc6454`. Its scene-only comparison
 passes. The rebuilt app's complete 97-command test recipe is now covered by a
 source-checked 48-command prefix plus the repaired 49-command remainder.
@@ -222,13 +233,15 @@ counterexample verifies sixteen products, four inverses, 856 oracle states and
 1,152 edges. Forward distance two differs from inverse distance one. Unchanged
 gates pass. Read docs/verification/next-plan/U02/NP03-GROUP.md. NP02 and
 application/data bridges remain open; no pruning or incremental inverse update.
-The existing raw cache is unchanged. No full six-edge database, production
-pruning or new domain law.
+The existing raw cache is unchanged. No full six-edge database or production
+pruning. Only approved NP01–NP03 are being formalized; other new laws remain
+separately gated.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
 docs/verification/next-plan/U04/u04-mapper-v1/index.json.
 U06 video/operator/package/general-performance gates remain open.
-No push/merge/deploy or new-law authority.
+No push/merge/deploy authority. NP04–NP08 and large/costly builds need separate
+approval.
 
 ## Current unit evidence
 

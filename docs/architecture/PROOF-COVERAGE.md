@@ -22,6 +22,15 @@ completeness theorem.
 
 ## Actual candidate boundary
 
+The separately checked [NP01 reference-group formulation](../verification/next-plan/U02/NP01-GROUP.md)
+quantifies explicit subgroups and global Nat bounds over word-presented typed
+legal states. The [NP03 formulation](../verification/next-plan/U02/NP03-GROUP.md)
+uses the actual inverse-word solution transfer without an inverse callback
+premise. Both pass their complete source/negative/backend guards. These are
+additional approved reference statements, not changes to the 23 root laws.
+NP02, validated-input reachability, optimized target correspondence, loaded-data
+admissibility and complete optimized-search certification remain open.
+
 The native engine calls `Certificate.certify` before it emits an answer. This
 returns an accepted value only with evidence that Bend model replay is solved.
 The bridge independently replays the emitted numeric move list through
