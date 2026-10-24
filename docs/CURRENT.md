@@ -153,6 +153,14 @@ All five owners are gone, process groups stay inside the resource runner, cache
 and source seals hold, and fixture/actual corruption/proof gates pass. Read
 docs/verification/next-plan/U05/PARTITION-POOL.md. No scaling speedup, NP07 proof,
 production/global bound or application change is established.
+The `u00-aa-cpu-v1` archive verifies 2,485 seals and three receipts, worker gone
+and no resource stop. All ten identical-helper processes match the independent
+50-million-probe checksums. All five pairs stay within five percent for both
+whole-process CPU and wall time. Native work ranges from 1,444 to 1,524 ms.
+Fourteen sample and three aggregate corruption controls and unchanged gates pass.
+The disposition is stable in this diagnostic only. Historical noise remains
+unexplained; mapper and browser acceptance stay inconclusive. Read
+docs/verification/next-plan/U00/NATIVE-AA-CPU.md. No engine-speed claim follows.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
