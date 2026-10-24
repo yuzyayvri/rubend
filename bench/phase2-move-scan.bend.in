@@ -1,0 +1,32 @@
+def PREFIX_result(result: MODULE.Search, +mask: U32, checksum: U32, count: U32, ok: Bool) -> Scan:
+  match result:
+    case MODULE.Search{table, Nil{}, meta}:
+      Scan{table, 0, mask, checksum, count, False{}, ok}
+    case MODULE.Search{table, Con{MODULE.Node{cube, a, b, c, left, previous, next, phase, path, length}, Nil{}}, meta}:
+      Scan{table, next, mask, checksum, count, True{}, ok}
+    case MODULE.Search{table, Con{MODULE.Node{C.Cubie{cp, co, ep, eh, eo}, a, b, c, left, previous, child_next, phase, Con{+move, Nil{}}, length}, Con{MODULE.Node{cube, pa, pb, pc, pl, pp, next, pg, path, plen}, Nil{}}}, meta}:
+      +bit = (1 << U32.to_nat(move) : U32)
+      Scan{table, next, U32.or(mask, bit), (checksum + cp * 3 + co * 5 + ep * 7 + eh * 11 + eo * 13 + a * 17 + b * 19 + c * 23 + left * 29 + previous * 31 + move * 37 + child_next * 41 + length * 43 : U32), (count + 1 : U32), True{}, ok && U32.is_eq(U32.and(mask, bit), 0)}
+    case MODULE.Search{table, stack, meta}:
+      Scan{table, 0, mask, checksum, count, False{}, False{}}
+
+def PREFIX_loop(fuel: Nat, state: Scan, +cube: C.Cubie, +a: U32, +b: U32, +c: U32, +radius: U32, +previous: U32, +phase: MODULE.Goal) -> Scan:
+  match fuel state:
+    case 0n state: state
+    case _ Scan{table, cursor, mask, checksum, count, False{}, ok}:
+      Scan{table, cursor, mask, checksum, count, False{}, ok}
+    case 1n+p Scan{table, cursor, mask, checksum, count, True{}, ok}:
+      PREFIX_loop(p, PREFIX_result(MODULE.node_open(False{}, table, MODULE.Node{cube, a, b, c, radius, previous, cursor, phase, Nil{}, 0}, Nil{}, MODULE.Meta{cube, 0, 21, Nil{}, 31, MODULE.Improve{}, 0, 0, 0, MODULE.Running{}, MODULE.Light{}}), mask, checksum, count, ok), cube, a, b, c, radius, previous, phase)
+
+def PREFIX_phase(+kind: U32) -> MODULE.Goal:
+  match kind:
+    case 0: MODULE.Reduction{}
+    case 1: MODULE.Subgroup{}
+    case _: MODULE.FullCube{}
+
+def PREFIX_scan(table: Array<U32>, +cube: C.Cubie, +kind: U32, radius: U32, previous: U32) -> Scan:
+  +sub = U32.is_eq(kind, 1)
+  a = Q.encode(choose_coord(sub, Q.Corners{}, Q.Twist{}), cube)
+  b = Q.encode(choose_coord(sub, Q.Edges{}, Q.Flip{}), cube)
+  c = Q.encode(choose_coord(sub, Q.Middle{}, Q.Slice{}), cube)
+  PREFIX_loop(20n, Scan{table, 0, 0, 0, 0, True{}, True{}}, cube, a, b, c, radius, previous, PREFIX_phase(kind))

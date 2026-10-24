@@ -119,6 +119,14 @@ fixture-only regression and unchanged gates pass. Read
 docs/verification/next-plan/U07/COLD-PILOT.md. Four roots repeated five times are
 not twenty independent inputs. No tuned winner, exact-work comparison, kernel
 speed, CPU/RSS gain, new default, final freeze or release holdout follows.
+The `u04-move-v2` archive verifies2,401seals/three receipts, worker gone/no stop.
+All59,049bucket assignments,123boundaries,eleven resume points,fourteen refusals
+and two actual cursor corruptions pass. Generated Search matches4,800native
+child sets and160independent scores. Goal-routing corruption has3,200counterexamples.
+All128native cursor packets agree withJavaScript. The pure module, generated
+Search and unchanged proof/toolchain gates pass. Production search stays unchanged.
+Read docs/verification/next-plan/U04/PHASE2-MOVE-ORDER.md. No new pruning or table,
+policy promotion, full-search quality/cost result, new law or release case.
 No distance regeneration, full six-edge database, pruning or new domain law.
 Do not rerun the short comparison unchanged. Read
 docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
