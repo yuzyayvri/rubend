@@ -2,6 +2,14 @@
 
 ## Latest checkpoint
 
+The existing `continue-rubend-roadmap` automation is paused at the proof-authority
+gate, not deleted and not complete. Its prompt, schedule and target are preserved.
+No detached run is active. The next required U03/U05 work needs explicit human
+approval of exact NP04–NP07. Full six-edge build admission and browser acceptance
+remain separate. Competitor research/setup and the final report remain pending;
+the holdout is unopened and nothing is pushed. Read
+docs/verification/next-plan/RESUME-GATES.md before resuming.
+
 The `u00-native-cpu-v2` archive verifies 3,290 seals and three receipts,
 worker gone and no stop. All eighty requests and independent candidate replays,
 forty measured warm windows, ten record mutations and every shallow optimum

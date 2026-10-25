@@ -10,6 +10,13 @@ holdout is frozen and used once. Only then delete the existing scheduled task.
 Yuzy decides on a push to main after reading the report. No push or merge is
 currently authorized. Existing law, resource and system-change gates remain.
 
+The existing automation is now paused, not deleted, at the required NP04–NP07
+approval gate. No detached run is active. Its prompt, schedule and target remain
+unchanged. The [resume record](RESUME-GATES.md) names the exact statements,
+separate large-build and browser limits, and the still-pending additional
+competitor research and final report. The roadmap is not complete and the
+release holdout remains unopened. No push or merge occurred.
+
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not
 a blanket gate on the remaining roadmap. The approved U03 dependency requires
