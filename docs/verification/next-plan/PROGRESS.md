@@ -1,6 +1,6 @@
 # Approved roadmap progress
 
-Updated October 25, 2026, Asia/Manila. No overall completion or new speedup
+Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
 October 24 finish order. Complete the roadmap and its required verification,
@@ -77,6 +77,27 @@ and concrete Unit-quotient examples, then audits only the second table. Both
 builds, the first graph audit and root87 evidence are reused. This does not yet
 instantiate global six-edge commutation or universal codec/storage refinement.
 The initial affine-callback proof failure and source remain preserved.
+
+The [six-edge conditional archive](U03/u03-six-conditional-v1/index.json)
+verifies 3,682 seals and both receipts, worker gone and no stop. All 318,024
+projection comparisons, 212,016 prefix comparisons and twelve model controls
+pass, with complete earlier count/radius reconciliation and all 53,004 rows
+retained. Six-edge maximum adds only two cuts to 52,584 raw-profile entries.
+Each completed trace interval has nineteen steps, static union 38. The 420
+structured small-profile entries gain none. No CPU benefit or performance
+acceptance is established. Keep the existing profile; do not promote six-edge
+pruning or add compression. Preserve all data and explicit partial-proof gaps.
+Continue U05 rather than expanding this unselected treatment.
+
+The completed [six-edge conditional screen](U03/SIX-EDGE-CONDITIONAL.md) compares
+both audited full tables on all 53,004 fixed saved contexts. Its twelve invalid
+record controls, overlapping/censored interval tests and strict-radius guards
+pass development checks. The queue retains every joined query, all root/radius
+strata, 318,024 independent projection checks and 212,016 prefix comparisons.
+It requires exact earlier three/four count reconciliation. Both populations
+remain separate. Observed interval unions are not measured saved work or CPU.
+The five-minute queue repeats no search, build, full audit or holdout evaluation.
+No production pruning, completed NP05 or performance acceptance is inferred.
 
 The completed [combined build/audit queue](U03/INDEPENDENT-SIX-AUDIT.md) continues
 pattern one with unchanged native code, then checks every pattern-zero graph

@@ -35,6 +35,31 @@ refinements. Screen the real six-edge marginal information next, without
 pruning or repeating completed builds/audits. The holdout is untouched.
 Read docs/verification/next-plan/U03/NP05-PROJECTION-PATH.md.
 
+The `u03-six-conditional-v1` archive verifies 3,682 seals and two receipts,
+worker gone and no stop. All 318,024 projection comparisons, 212,016 prefix
+comparisons, twelve malformed-record controls and old policy/radius totals
+pass. All 53,004 joined rows are retained. The raw inverse-three population
+gets only two extra candidate cuts among 52,584 entries, one per pattern.
+Both have nineteen-step completed intervals, a static union of 38 steps.
+The structured small-Light population gets no extra cuts. There is no measured
+CPU benefit or performance acceptance. Retain the existing profile and keep
+six-edge pruning and compression unpromoted. Both full tables and their audits
+remain preserved; unselected production refinement gaps stay explicit.
+Continue approved U05 safety work. No holdout, competitor setup or push.
+Read docs/verification/next-plan/U03/SIX-EDGE-CONDITIONAL.md.
+
+The completed queue `u03-six-conditional-v1` screens all 53,004 unchanged
+saved FullCube contexts using both complete audited six-edge tables. Six nested
+projections per entry must match the actual Bend projector and independent
+ranking; all earlier three/four totals and radius strata must reconcile.
+Every joined query is retained. Raw entry/exhaustion spans are matched by full
+context, with overlapping spans unioned and unfinished entries right-censored.
+Those are static trace counts, not saved work or CPU. Twelve model corruptions
+and overlap/censoring/range/equality controls pass development checks.
+The five-minute fixed queue does not rerun search, generation or graph audits,
+enable pruning, instantiate the remaining production proofs or open the holdout.
+Read docs/verification/next-plan/U03/SIX-EDGE-CONDITIONAL.md.
+
 The completed queue `u03-np05-path-v1` checks the finite-path projection kernel.
 It carries each commutation instance
 as one structural certificate node, preserving actual legal replay roots,
