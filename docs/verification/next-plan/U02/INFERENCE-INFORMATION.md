@@ -73,3 +73,39 @@ loaded-bound admissibility or optimized traversal. They do not enable pruning,
 certification, a performance claim, competitor setup, the release holdout or
 publication. Preserve receipts and every query before changing measured sources.
 Canonical verification remains required after the detached queue completes.
+
+## Verified screen result
+
+The [canonical archive](u02-inference-information-v1/index.json) verifies 3,988
+source seals and two resource receipts. The worker is gone and no resource stop
+occurred. All 61,440 classifier triples, 52,584 cube roundtrips and cached-UD
+index agreements, 315,504 index/bound domain checks and 157,752 actual candidate
+packet comparisons pass. The independent wrong-direction counterexample and
+all twelve bad-record controls pass. Every query is retained, checksum
+3,770,093,908, with 170,663 distinct joint-cache probes.
+
+| Saved root | Entries | Forward complete-mask cuts | Inverse complete-mask cuts | Entries with first exclusions | Predecessor-permitted moves | Hypothetical first exclusions |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| pilot-0-exact | 13,146 | 2,983 | 3,630 | 11,595 | 175,662 | 121,073 |
+| pilot-1-exact | 13,146 | 2,517 | 4,886 | 11,796 | 175,059 | 127,767 |
+| pilot-2-exact | 13,147 | 3,546 | 3,189 | 10,956 | 175,758 | 113,824 |
+| pilot-3-exact | 13,145 | 4,167 | 2,621 | 11,010 | 175,686 | 111,310 |
+| Total | 52,584 | 13,213 | 14,326 | 45,357 | 702,165 | 473,974 |
+
+Forward and inverse complete-mask counts overlap. Their union has 22,141
+completed entries and three censored entries. The within-root static interval
+union is 420,710 recorded steps. Do not add the two cut counts, interpret these
+intervals as actual saved work, or treat partial first-move exclusions as whole
+subtree cuts. All four roots and residual radii seven through thirteen remain
+in the denominator. Repeated entries are not independent cube samples.
+
+The offline command consumes 3.24 s CPU and 3.27 s wall in this single analysis.
+Its maximum command RSS is 401,876 KiB, not aggregate tree RSS. These numbers
+describe analysis and IO only, not native search or candidate probe cost.
+
+This is a substantial scoped opportunity signal, not a performance verdict.
+Continue with an isolated forward complete-coverage treatment first, preserving
+ordinary traversal and inverse policy as controls. Keep inverse first-move
+masking separate. Measure real native behavior/cost and keep concrete target,
+loaded-data and traversal proof gaps explicit before any production pruning or
+promotion. The whole roadmap and final comparative report remain unfinished.

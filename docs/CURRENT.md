@@ -4,15 +4,17 @@
 
 The October 26 roadmap reconciliation is in
 docs/verification/next-plan/ROADMAP-RECONCILIATION.md. U01's actual clipboard and
-physical-download gap is closed in signed local checkpoint `7dfc405`. The next
-fixed unit is `u02-inference-information-v1`, an offline opportunity screen on
-all 52,584 saved actual RawInverseThree entries. It compares distinct forward
-final-move and inverse first-move exclusions without enabling pruning. This is
-a genuinely unfinished U02 disposition step, not a repeat of the rejected
-cached-axis, six-edge or two-worker comparisons. The 1.5-GiB CPU2 observation
-and 512-MiB confirmation have a five-minute total cap. No new native build,
-search, table, competitor or final holdout is used. Read its receipts before
-edits on the next wakeup. The whole roadmap and final report remain incomplete.
+physical-download gap is closed in signed local checkpoint `7dfc405`.
+`u02-inference-information-v1` passes canonical verification with 3,988 seals,
+two receipts, no resource stop and worker gone. All 52,584 actual saved entries
+and 61,440 classifier triples pass. Forward masks cover all moves at 13,213
+entries, inverse masks at 14,326; these overlap. Partial first masks hypothetically
+exclude 473,974 of 702,165 predecessor-permitted moves. The complete-mask static
+interval union is 420,710 steps, not measured saved work or CPU. No pruning is
+enabled. This signal warrants an isolated forward-only native treatment, with
+inverse masking and concrete target/data proof gaps kept separate. No new table,
+competitor or final holdout was used. The whole roadmap/report remain incomplete.
+Read docs/verification/next-plan/U02/INFERENCE-INFORMATION.md.
 
 Yuzy's October 25 broad approval removes the NP04–NP08 and necessary local
 generation/audit authority gates. The existing `continue-rubend-roadmap`

@@ -6,8 +6,12 @@ is claimed. Work stays solo, local, signed, and subject-only.
 The [October 26 reconciliation](ROADMAP-RECONCILIATION.md) maps every treatment
 family to evidence, disposition and remaining obligations. U01 clipboard and
 physical-download acceptance is closed by signed checkpoint `7dfc405`.
-The next fixed unit, [U02 inference information](U02/INFERENCE-INFORMATION.md),
-checks all 52,584 actual saved post-pipeline entries without new pruning.
+The completed [U02 inference information](U02/INFERENCE-INFORMATION.md) verifies
+3,988 seals/two receipts, worker gone and no stop. It checks all 52,584 actual
+entries and 61,440 triples without new pruning. Forward/inverse complete masks
+cover 13,213/14,326 entries with overlap. Their static interval union is 420,710
+steps, not actual saved work or CPU. The signal warrants a separate forward-only
+native treatment and concrete target/data correctness work before promotion.
 The entire roadmap is not finished. U07 final research/setup, freeze, evaluation,
 current delivery/regression and report remain pending. Older chronological
 entries below retain their original narrower boundaries; they are not fresh
@@ -358,7 +362,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | --- | --- |
 | U00. Controls and evidence | Native engine CPU accounting verifies 3,290 seals/three receipts, eighty requests/replays and clock-on/off state equality. Short warm windows remain timing-inconclusive. Binary/helper/root proof reuse is explicit, with the raw fresh-flag erratum retained. Production protocol, whole-command observer and limiter are unchanged. Historical mapper/browser noise remains unexplained. No speed promotion. |
 | U01. Application and delivery | Redesign, lifecycle/profile browser matrix and actual CI-package import/launch pass. Actual policy denial and the 397-byte physical download now pass, with 3,947 seals/two receipts, restored user file and clean native/IPC ownership. Final source includes demand rendering, so U07 still needs its current delivery check. Operator review remains before merge. |
-| U02. Existing-bound inference and coordinate reuse | NP01–NP03, inverse/replay and post-certificate packed admission components pass. Cached-axis cost stays inconclusive/private. The next actual-entry inference screen remains unfinished. Concrete target/data/traversal and validator-completeness gaps remain explicit; no new production pruning or accepted performance gain. |
+| U02. Existing-bound inference and coordinate reuse | NP01–NP03, inverse/replay and post-certificate packed admission components pass. Cached-axis cost stays inconclusive/private. The 52,584-entry inference screen passes with a substantial hypothetical signal, not saved CPU. Forward-only native treatment and concrete target/data/traversal work remain. No new production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Both full six-edge tables and independent reference-graph audits pass. NP04 semantic and NP05 path components pass within their partial concrete-refinement boundary. The 53,004-entry screen verifies 3,682 seals/two receipts and finds only two extra nineteen-step raw cut spans. Retain the existing profile; no new pruning, compression or speed promotion. |
 | U04. Ordering, premoves, and phase-two projection | Product-order portfolio study verifies 2,952 seals and six receipts. All 168 guards and 480 requests pass. All 160 final-quality pairs tie, so longer cost and profile work are skipped. Keep it private and unpromoted. Earlier mapped helper timing remains inconclusive and is not retried unchanged. No new pruning or accepted whole-solver gain. |
 | U05. Exact-context failure cache and partitioned search | Native partitions, ledger and recovery pass. NP06/NP07 conditional semantic and actual typed-reference NP08 laws pass, latest safety archive 3,757 seals/three receipts. Scaling archive verifies 3,825 seals/four receipts and 22,480 measured results, but 8.23% duplicate-pair noise forces inconclusive. Retain cache-off and serial; no universal optimized witness or speed promotion. |
