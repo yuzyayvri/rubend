@@ -2,6 +2,20 @@
 
 ## Latest checkpoint
 
+The `u00-native-cpu-v2` archive verifies 3,290 seals and three receipts,
+worker gone and no stop. All eighty requests and independent candidate replays,
+forty measured warm windows, ten record mutations and every shallow optimum
+pass. Clock-on/off and repeated-order search states agree. Initialization CPU
+has median 218.041 ms over five observations. All warm requests are below the
+100-ms timing floor, so performance remains unresolved. Max native RSS is
+44,028 KiB; host-inclusive observation tree peak is 254,572 KiB.
+The original one-slice failure remains preserved and reproducibly rejected.
+Binary, pure-helper proof and root87 evidence are reused, not rerun. The raw
+confirmation's incorrect fresh-proof flag has a checked archived erratum;
+the producer now derives that flag. No engine, public protocol, first-answer
+CPU, peer or holdout change. Read
+docs/verification/next-plan/U00/NATIVE-CPU-WINDOWS.md.
+
 The `u00-process-cpu-v1` archive verifies 3,237 seals and three receipts,
 worker gone and no resource stop. All fifteen windows, twenty commands, five
 actual clock/backend controls and fourteen model controls pass. Five consumed

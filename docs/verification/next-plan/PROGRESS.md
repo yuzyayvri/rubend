@@ -70,6 +70,16 @@ or treat reported resolution as accuracy. This prepares future warm-window
 accounting. Engine instrumentation and existing timing adapters are unchanged.
 No solver result, competitor research, table generation or holdout.
 
+The [native CPU-window batch](U00/NATIVE-CPU-WINDOWS.md) passes canonical
+verification with 3,290 seals and three receipts, worker gone and no stop.
+All eighty requests and independent answer replays, forty measured request
+windows, ten record mutations and every shallow optimum pass. Clock-on/off
+and repeated-order search states agree. The original insufficient guard still
+rejects. Binary and pure-helper verdict are reused. The raw fresh-proof flag
+has an archived erratum and the producer is corrected. Initialization median
+is 218.041 ms CPU over five observations. All warm requests are shorter than
+100 ms, so timing stays unresolved. No engine, final holdout or peer changes.
+
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
 seals and two receipts, worker gone and no stop. All 464 native cases match the
@@ -174,7 +184,7 @@ comparisons. This is not a production integration or accepted performance gain.
 
 | Unit | Current state |
 | --- | --- |
-| U00. Controls and evidence | Native CPU-window calibration verifies 3,237 seals/three receipts, fifteen windows, twenty commands and actual wrong-clock/error/backend controls. Whole-command observer and general limiter stay unchanged. Solver instrumentation is not integrated. Earlier stable native A/A is diagnostic only. Historical mapper/browser noise remains unexplained and inconclusive. No speed promotion. |
+| U00. Controls and evidence | Native engine CPU accounting verifies 3,290 seals/three receipts, eighty requests/replays and clock-on/off state equality. Short warm windows remain timing-inconclusive. Binary/helper/root proof reuse is explicit, with the raw fresh-flag erratum retained. Production protocol, whole-command observer and limiter are unchanged. Historical mapper/browser noise remains unexplained. No speed promotion. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Binary checkpoint archive verifies 2,951 seals/three receipts, eighteen real layer restarts and both full four-edge table comparisons. Raw CPU and manifest records are preserved. Four-edge information adds no cuts over three-edge maximum and stays unpromoted. Full six-edge generation, scratch/audit costs and NP04/NP05 remain gated. No larger-PDB rejection or speedup. |
