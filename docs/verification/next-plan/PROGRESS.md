@@ -40,6 +40,11 @@ and both final four-edge tables match the audited references. The archive retain
 37 command CPU records and eighteen manifests. Main-workflow CPU is 5.79 s in
 one planning run, including seeds, repeats and crashes. Three-chunk transport
 is verified at 760,320 bytes. No six-edge costs, ETA, proof or production pruning.
+The [build-admission brief](U03/BUILD-ADMISSION.md) verifies 3,013 seals and two
+receipts, worker gone and no stop. All six cardinalities, actual unboxed storage
+checks and eight corruptions pass. No large buffer is allocated. Full checkpoint
+geometry is 170,311,680 bytes in 650 chunks, not a measured RSS or ETA. The
+four-edge-only boundary and large-build, audit and proof gates remain closed.
 
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691

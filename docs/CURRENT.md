@@ -2,6 +2,16 @@
 
 ## Latest checkpoint
 
+The `u03-build-admission-v1` archive verifies 3,013 seals and two receipts,
+worker gone and no resource stop. All six cardinalities, emitted unboxed U32
+storage checks and eight source/record controls pass. Six-edge geometry requires
+67,108,864 capacity cells and a 170,311,680-byte raw checkpoint in 650 chunks.
+These are static counts, not an RSS estimate or allocation. The current native
+checkpoint still admits four edges only. Full build, generation and audit costs,
+proof approval and large-run authority remain open. Existing helper and checkpoint
+evidence is reused, not extrapolated or rerun. Read
+docs/verification/next-plan/U03/BUILD-ADMISSION.md.
+
 The `u03-binary-checkpoint-v1` archive verifies 2,951 seals and three receipts,
 worker gone and no resource stop. All eighteen fresh layer restarts, two repeats,
 two crashes, thirteen native controls and eighteen manifest controls pass.
