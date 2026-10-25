@@ -46,6 +46,26 @@ All raw payloads, manifests and counters are retained. This is built-unverified,
 not a from-scratch speed result or a valid production bound. Pattern one,
 independent full graph audits and NP05/refinement remain.
 
+The [combined build/audit archive](U03/u03-six-cycle-v1/index.json) verifies
+3,577 seals and four receipts, worker gone and no stop. Pattern one completes
+all 42,577,920 entries at terminal depth ten. Pattern zero passes its complete
+766,402,560-edge independent graph audit with unique goal, valid distances,
+decreasing successors and exact coverage. All 1,330,560 actual codec endpoint
+and 11,975,040 zero-orientation transition reflections pass. Pattern-one native
+CPU is 928.44 s from depth three. First-audit whole-command CPU is 215.50 s,
+wall 59.93 s in one planning run. No solver-speed or scaling claim. Pattern-one
+audit, NP05 and concrete projection/refinement remain before pruning admission.
+
+The completed [combined build/audit queue](U03/INDEPENDENT-SIX-AUDIT.md) continues
+pattern one with unchanged native code, then checks every pattern-zero graph
+edge using independent ranking and pinned KPuzzle actions. Development controls
+pass against the complete four-edge reference, including two actual source
+faults that wrongly accept their respective bad fixtures. Four fixed Node
+ranges cover all states/orientations, codec endpoints and zero-orientation
+transition reflections. Separate job caps preserve the thirty-minute total
+ceiling. Data certification and source/cleanup checks precede any later pruning.
+NP05 and universal projection/refinement remain unproved.
+
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not
 a blanket gate on the remaining roadmap. The approved U03 dependency requires

@@ -11,6 +11,28 @@ approved U03/U05 units. The roadmap and final comparative report are not
 complete. The holdout is unopened and nothing is pushed. Read
 docs/verification/next-plan/OCT25-AUTHORITY.md.
 
+The `u03-six-cycle-v1` archive verifies 3,577 seals and four receipts, worker
+gone and no stop. Pattern one completes all 42,577,920 entries at terminal
+depth ten in eight accepted continuations. Pattern zero passes all 766,402,560
+independent reference-graph edges, distance domains, unique goal and decreasing
+successors. All codec endpoint and zero-orientation transition reflections pass.
+Pattern-one native CPU is 928.44 s from depth three, not a fresh seed.
+The first audit consumes 215.50 s whole-command CPU and 59.93 s wall in one
+planning run. No solver-speed or scaling claim. Pattern-one graph audit,
+NP05 and concrete projection/refinement remain. Pruning stays disabled.
+Read docs/verification/next-plan/U03/INDEPENDENT-SIX-AUDIT.md.
+
+The completed queue `u03-six-cycle-v1` reuses the tested native binary to
+continue pattern one, then independently audits the complete pattern-zero
+distance graph. The auditor passes development controls on the fully audited
+four-edge table and detects both actual edge/successor source faults. Four
+fixed local processes cover all 42,577,920 states and 766,402,560 directed edges,
+with separate actual Bend codec/transition reflection and serial histogram
+checks. Pattern-one build cap twenty-two minutes, first audit cap four minutes,
+whole queue thirty minutes. Raw evidence and cleanup are mandatory. No pruning,
+NP05, formal app certification, final holdout or solver-speed claim is inferred.
+Read docs/verification/next-plan/U03/INDEPENDENT-SIX-AUDIT.md.
+
 The `u03-six-build-p0-v1` archive verifies 3,529 seals and three receipts,
 worker gone and no stop. Eight accepted native continuations reach and expand
 all 42,577,920 entries at terminal depth ten. Every input/output word satisfies
