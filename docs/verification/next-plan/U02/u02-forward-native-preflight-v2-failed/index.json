@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "preserved": true,
+  "revision": "8ea3050d78470acf41e12b904a689f7cbf89a6df",
+  "receiptExitCode": 1,
+  "resourceStop": false,
+  "failure": "Generator exact-replacement assertion finds two source patterns, not one, before creating output or invoking Bend",
+  "generatedDirectoryCreated": false,
+  "bendOrNativeStarted": false,
+  "sourceSnapshotBeforeEdits": true,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "76dad5c275d848a9ead7600689b8013a569b5ab0962fa9366a87e7bb9b91c5ca",
+      "compressedSha256": "6aaf7e69eaaddab8415cb446303ac2845e13e723fef560bb128813c823cae0bb"
+    },
+    {
+      "path": "failed-sources.json.gz",
+      "sha256": "b4da6a86d0e673e2614b759ffa53457d4d9c516b593f09c3cfa4543d76f0882a",
+      "compressedSha256": "0c33bedc34783a18bf48d2fe6d8f71a6c8cf8f84493b4d34c716330a6d2fd127"
+    },
+    {
+      "path": "preserver.mjs.gz",
+      "sha256": "b58f9dbfcc5255254fd2e0b87e2b15a990bdf2591e27d2a6e5a390814cf95373",
+      "compressedSha256": "9b9a7accca9f6670da378a514ff2e9a3c8ef7a2c9565c4fe9fd3666a7bbe1e51"
+    }
+  ]
+}

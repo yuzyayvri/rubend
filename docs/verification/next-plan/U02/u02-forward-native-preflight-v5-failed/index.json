@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "preserved": true,
+  "revision": "8ea3050d78470acf41e12b904a689f7cbf89a6df",
+  "receiptExitCode": 1,
+  "resourceStop": false,
+  "nativeStarted": false,
+  "sourceSnapshotBeforeEdits": true,
+  "rootAndCandidateVerdictsPassed": true,
+  "positiveGateAndRecordControlsPassed": true,
+  "failure": "Bad-scope negative fixture has an unannotated True initializer, so emitter rejects its type before the intended runtime negative test",
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "78d4f76af3fb54bada89e3c2eaf67c555d1a8c06488c732121350addbcc447b9",
+      "compressedSha256": "cba73236def1de527c50eb11d07fa8bc1d6e1b5e345b97b07336d5dc128ae350"
+    },
+    {
+      "path": "failed-sources.json.gz",
+      "sha256": "807b02dad96bc4eef34772283631d08d9e12e48dab2f4742fddc58ba4d027230",
+      "compressedSha256": "c2ed5027a3f4fec7b210878470457f4dae5a51cfd33b85579a4fd8d63a17c977"
+    },
+    {
+      "path": "preserver.mjs.gz",
+      "sha256": "8a23170281234d77f8afa84c05b41740e7e5824e175fd296ef5fd115924b82b8",
+      "compressedSha256": "c64905615d5f3a63784317aa4eb15dcee37b6b7828b35989ec3d437d1c1bb1f8"
+    }
+  ]
+}

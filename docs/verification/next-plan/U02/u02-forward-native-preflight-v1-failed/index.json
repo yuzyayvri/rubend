@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "preserved": true,
+  "revision": "8ea3050d78470acf41e12b904a689f7cbf89a6df",
+  "receiptExitCode": 1,
+  "resourceStop": false,
+  "failure": "Generator's exact-replacement assertion finds two Tuple patterns, not one, before creating output or invoking Bend",
+  "generatedDirectoryCreated": false,
+  "bendOrNativeStarted": false,
+  "sourceSnapshotBeforeEdits": true,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "6f99039fe49adb7f02638b371044c5e7f730904f4416a4c762b98a5bcdca67f0",
+      "compressedSha256": "ff40f1c354d8744881ed14856c0d3e805efb13cddff6a024f4c3806e8c02698b"
+    },
+    {
+      "path": "failed-sources.json.gz",
+      "sha256": "faec77e5090cd925c28dad0e9d0e871fe484bdb7a154ea69df18cd9ffda3df83",
+      "compressedSha256": "6b663ad348aa104c5131777d99ffdcfb80dc4d4364b7526cd7f0baa18f2f33e6"
+    },
+    {
+      "path": "preserver.mjs.gz",
+      "sha256": "d89a9935f2479952517add780462b156504777db6852fe6f6e803239b9185ecb",
+      "compressedSha256": "c57c5d61fda6d5fd2ba06798b436582929ba46d875770307f6cd8f7cb7a4bcae"
+    }
+  ]
+}

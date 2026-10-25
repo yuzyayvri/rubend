@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "preserved": true,
+  "revision": "8ea3050d78470acf41e12b904a689f7cbf89a6df",
+  "receiptExitCode": 1,
+  "resourceStop": false,
+  "failure": "Root verdict lacks pinned BENDTT/Lean environment outside nix develop; infrastructure failure is not a semantic verdict",
+  "generatedDirectoryCreated": true,
+  "bendStarted": true,
+  "nativeStarted": false,
+  "sourceSnapshotBeforeEdits": true,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "27dce32eef2a1b16950e8f471a91fb6d2f066d5b36ca8c74df4cdf15b1520bc5",
+      "compressedSha256": "9078444e3e6dc286c25fadad88ee41cc195806ea3e0f93cf515e1084406afd82"
+    },
+    {
+      "path": "failed-sources.json.gz",
+      "sha256": "a203c466b4a8d5fa6fcada04df5f88bbe4ad4916f7063bc416bbf799793b4bf4",
+      "compressedSha256": "b8d74eda1bc3a9e35ad6caaa0a9f79afb1ff73324b1b2cc7481c3bdc25f1b3ed"
+    },
+    {
+      "path": "preserver.mjs.gz",
+      "sha256": "7e3ad0a9f42e7394d7391ddeafba1cc9739de3c575393d0eb348a333af04ee3a",
+      "compressedSha256": "6552ca1ca55bb63d37ff4a68f9fd340b9f356fd61cb39c7a8a80f9e7386e5cec"
+    }
+  ]
+}

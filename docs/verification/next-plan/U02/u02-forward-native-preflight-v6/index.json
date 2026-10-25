@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "scope": "Pure generated gate and preflight controls only, native guard still pending",
+  "resourceStop": false,
+  "rootVerdictFresh": false,
+  "candidateKernelVerdictFresh": false,
+  "rootAndCandidateVerdictsSourceIdenticallyReusedFromV5": true,
+  "classifierTriples": 61440,
+  "scopeCases": 240,
+  "savedEntries": 52584,
+  "recordControls": 12,
+  "actualBehaviorMutants": 3,
+  "allBehaviorMutantsCompile": true,
+  "nativeGuardPending": true,
+  "productionPruningEnabled": false,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "7c865851859affbd20a745f2d19599449f6a86ab1b486a58e970d44a8b01283b",
+      "compressedSha256": "bb651b67a8e206ae128bc324bd1c250651a9baa40d233b4e9228f48834d657b9"
+    },
+    {
+      "path": "result.json.gz",
+      "sha256": "3ce0ecf02b267c21eb04a88ed7e27e013e2816032b6791dd50c97ee5f3c11b0f",
+      "compressedSha256": "0da31f4c46584e498787974eada50f4770cd9fabefeeb9eb9cf5d5158b7a911f"
+    },
+    {
+      "path": "archiver.mjs.gz",
+      "sha256": "3d0c387f74d1e86dca7a6da98b4c6837cbbd3a1a0f335dc92ca638d36f20908b",
+      "compressedSha256": "7435cfdd65bfd15e50638aa2a33d585f4b642d2fb51ed2bc0ba5c179cc7eecd3"
+    }
+  ]
+}

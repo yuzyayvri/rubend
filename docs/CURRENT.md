@@ -2,6 +2,22 @@
 
 ## Latest checkpoint
 
+The next fixed batch is `u02-forward-native-v1`, a private forward-only
+complete-coverage candidate with no production changes. The pure preflight
+passes through v7, including three actual behavior mutants and source-identical reuse of
+v5's passing root/candidate verdicts, 61,440 triples, 240 goal/profile cases and
+52,584 saved entries. Five earlier preparation failures are preserved, not
+relabeled. The candidate passes a transient tightness flag through existing
+lookups without new table reads or stack fields; inverse masking stays separate.
+Native verification remains pending. The batch builds control/candidate, runs
+fresh `just check`, then checks 8,056 native requests against independent shallow
+geometry and original-root replay, protected-profile behavior and four owners'
+cleanup. Internal or outer SIGKILL cannot count as clean termination. The batch
+has a 24-minute total cap under 3 GiB, nice 10 and desktop reserve.
+Read its detached receipts before edits. No timing acceptance, concrete full
+target/data proof, holdout, competitor setup or push is claimed. Read
+docs/verification/next-plan/U02/FORWARD-NATIVE.md.
+
 The October 26 roadmap reconciliation is in
 docs/verification/next-plan/ROADMAP-RECONCILIATION.md. U01's actual clipboard and
 physical-download gap is closed in signed local checkpoint `7dfc405`.

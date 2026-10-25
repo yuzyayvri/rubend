@@ -1,0 +1,8 @@
+import assert from "node:assert/strict";
+import {apply,solved} from "./fixed-work-model.mjs";
+
+export function checkCoverageContour(events,item,profile,fuel=200000){
+  assert.ok(events.every(e=>["measurement","candidate","done"].includes(e.type)));const pick=type=>{const xs=events.filter(e=>e.type===type);assert.equal(xs.length,1,"Missing or duplicate "+type);const{elapsedMs,...value}=xs[0];return value;},done=pick("done"),{nativeMs,...measurement}=pick("measurement");assert.ok(Number.isFinite(nativeMs)&&nativeMs>=0);assert.equal(measurement.profile,profile);assert.equal(measurement.target,20);assert.ok([0,1].includes(measurement.status));assert.equal(done.optimal,Number(measurement.status===1));assert.equal(done.lower,measurement.bound);for(const v of[done.nodes,done.lower,done.length])assert.ok(Number.isInteger(v)&&v>=0);assert.ok(done.nodes<=fuel&&done.lower<=done.length&&done.length<=31);const complete=done.optimal===1||done.lower>=20;if(!complete)assert.equal(done.nodes,fuel);const answers=events.filter(e=>e.type==="candidate");
+  if(done.length<31){assert.equal(answers.length,1);assert.equal(measurement.moves.length,done.length);assert.deepEqual(answers[0].moves,measurement.moves);assert.equal(apply(item.facelets,measurement.moves),solved);assert.equal(answers[0].length,done.length);}else{assert.equal(answers.length,0);assert.deepEqual(measurement.moves,[]);assert.equal(done.optimal,0);}
+  if(item.depth!==undefined){assert.equal(done.optimal,1,"Known shallow case did not finish");assert.equal(done.length,item.depth,"Known optimum disagrees");assert.equal(done.lower,item.depth);}return{done,measurement,complete,independentReplays:answers.length};
+}

@@ -1,0 +1,29 @@
+{
+  "passed": false,
+  "preserved": true,
+  "revision": "8ea3050d78470acf41e12b904a689f7cbf89a6df",
+  "receiptExitCode": null,
+  "resourceStop": "aggregate-rss-limit",
+  "failure": "Fresh root verdict stopped by actual aggregate RSS limit under 1536MiB after successful generation; no verdict/native result",
+  "generatedDirectoryCreated": true,
+  "bendStarted": true,
+  "nativeStarted": false,
+  "sourceSnapshotBeforeEdits": true,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "c586d9667cba31b1b8d75c59477dfe181902827d9de3a4b5762faf3be3675509",
+      "compressedSha256": "9d9a490015f36b33bb0a06864f7a0e3184ef0b7272eeddb53b935401db49b2cd"
+    },
+    {
+      "path": "failed-sources.json.gz",
+      "sha256": "b94996f8d009b2e6a7326aa806950439a385db750f84d9324b7a67ab80f0f639",
+      "compressedSha256": "f400484de49a30d96f15bf8ead325b6c81f8c88968a9662cd45f51992c603cd5"
+    },
+    {
+      "path": "preserver.mjs.gz",
+      "sha256": "afea3f2a46b8d57f5b60b580feba69a828563682f830b49f2579445ec00bd37b",
+      "compressedSha256": "3ab35da16a8638057be00fc8673b0e23da36fe5148fa39b166e1c93c3eca48e1"
+    }
+  ]
+}
