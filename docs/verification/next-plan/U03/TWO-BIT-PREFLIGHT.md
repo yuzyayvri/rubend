@@ -1,5 +1,10 @@
 # Small edge-table two-bit preflight
 
+Historical finite preflight. Yuzy's October 25 grant now approves NP04–NP08.
+The subsequent [NP04 unit](NP04-CONSERVATIVE.md) adds its quantified semantic
+proof and concrete checks. The original result and its earlier approval status
+below remain unchanged as historical evidence.
+
 Reuse the six audited native tables from `u03-pilot-u04-events-v1`. They contain
 22,224 valid entries across one-, two- and three-edge domains. Do not regenerate
 distances or extrapolate their distributions to the full six-edge database.

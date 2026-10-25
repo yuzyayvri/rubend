@@ -11,6 +11,18 @@ NP04 and continue U03/U05. The roadmap and final comparative report are not
 complete. The holdout is unopened and nothing is pushed. Read
 docs/verification/next-plan/OCT25-AUTHORITY.md.
 
+The `u03-np04-v2` archive verifies 3,379 seals and three receipts, worker gone
+and no stop. Both positive proof entrypoints, twelve false-proof entrypoints
+and native compilation are source-identically reused. All 193,545 fresh scalar
+checks and 71 list lookups pass; native/host checksum is 256,391,068. The real
+artifact-collision regression passes, old failure remains preserved, and
+metadata is unchanged. The proof translation and mutation sources are bundled.
+This checks quantified Nat scalar/block/index and overflow semantics, with
+finite U32 reflection. Universal symbolic U32/bit-storage and loaded-data proofs
+remain separate. No production pruning, performance or holdout change. Read
+docs/verification/next-plan/U03/NP04-CONSERVATIVE.md. Older authority statuses
+below are historical; the October 25 grant above is current.
+
 The `u00-native-cpu-v2` archive verifies 3,290 seals and three receipts,
 worker gone and no stop. All eighty requests and independent candidate replays,
 forty measured warm windows, ten record mutations and every shallow optimum

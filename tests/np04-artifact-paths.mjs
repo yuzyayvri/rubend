@@ -1,0 +1,6 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync} from "node:fs";
+import {resolve} from "node:path";
+import {fileHash} from "../bench/reference-provenance.mjs";
+
+assert.equal(process.argv.length,4);const directory=resolve(process.argv[2]),output=resolve(process.argv[3]),prior=resolve("build/experiments/u03-np04-v1"),compiled=JSON.parse(readFileSync(resolve(prior,"compile.json"),"utf8")),oldPath=resolve(prior,"native.json"),newPath=resolve(directory,"native-result.json"),receipt=JSON.parse(readFileSync("build/evidence/u03-np04-v1-oracle.json","utf8"));assert.match(receipt.stderr,/EEXIST/);assert.ok(receipt.stderr.includes(oldPath));assert.equal(fileHash(oldPath),compiled.artifacts[oldPath]);assert.throws(()=>assert.equal(compiled.artifacts[oldPath],undefined));assert.equal(compiled.artifacts[newPath],undefined);assert.notEqual(newPath,resolve(directory,"native.json"));assert.equal(JSON.parse(readFileSync(oldPath,"utf8")).format,"rubend-experiment-build-v1");writeFileSync(output,JSON.stringify({passed:true,actualEexistReproducedFromReceipt:true,originalBuildMetadataSha256:fileHash(oldPath),originalDestinationRejected:true,separateResultPath:newPath,metadataPreserved:true,acceptanceAssertionsUnchanged:true})+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,originalCollisionDetected:true,resultAndMetadataSeparated:true}));

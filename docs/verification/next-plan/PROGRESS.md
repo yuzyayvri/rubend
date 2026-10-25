@@ -18,6 +18,15 @@ limits remain, as do proof, data, holdout and verification requirements.
 Next implement NP04 and continue the required U03/U05 work. The roadmap,
 additional competitors and final report remain incomplete. No push or merge.
 
+The [NP04 recovery](U03/NP04-CONSERVATIVE.md) verifies 3,379 seals and three
+receipts, worker gone and no stop. Both positive checker results, twelve false
+entrypoints and native build are reused unchanged. All 193,545 fresh scalar
+checks and 71 lookups pass, checksum 256,391,068. Artifact destinations are
+separate and the old EEXIST failure remains preserved. Quantified Nat
+scalar/block/index and bounded-sum semantics are checked. Universal symbolic
+U32/bit-storage refinement, loaded-data validity and NP05 remain open.
+No production pruning or performance claim follows.
+
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not
 a blanket gate on the remaining roadmap. The approved U03 dependency requires

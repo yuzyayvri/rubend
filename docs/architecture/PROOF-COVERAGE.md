@@ -4,6 +4,13 @@
 and the independently built BendTT kernel. This is not a proof of the entire
 application or compiler.
 
+The separate approved [NP04 component](../verification/next-plan/U03/NP04-CONSERVATIVE.md)
+checks quantified Nat conservative decoding, finite-block valid-index semantics,
+inherited admissibility and bounded-sum arithmetic. Its 193,545 actual U32/native
+comparisons are finite reflection, not a universal U32 or bit-storage theorem.
+Loaded-data validity and optimized pruning remain outside this result.
+The original 23-law root graph is unchanged and its evidence is reused.
+
 | Module | Checked obligation |
 | --- | --- |
 | Toolchain | Boolean flip roundtrip; setup plumbing only |

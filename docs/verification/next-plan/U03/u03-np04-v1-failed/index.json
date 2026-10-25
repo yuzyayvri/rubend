@@ -1,0 +1,82 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u03-np04-v1",
+  "revision": "b4b675425945f164861726830af624cc18e92189",
+  "sourceSeals": 3349,
+  "workerGone": true,
+  "executedJobs": 3,
+  "plannedJobs": 4,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read oracle.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 6,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-np04-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/0-u03-np04-v1-plan.json.gz",
+      "bytes": 463185,
+      "compressedBytes": 158345,
+      "sha256": "aeea32efac1e37a6f941c55c4424532b66eaf249349c4c82e4810ed5da203775",
+      "compressedSha256": "4b0884007071b978447ee03feda74fccc6dfb8e9846398c30965950b323d38ec",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-np04-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/1-status.json.gz",
+      "bytes": 1715,
+      "compressedBytes": 705,
+      "sha256": "b5d4fc70980bae357bf9efd1b4c6b78c24009411c7694f60794241f628a261ca",
+      "compressedSha256": "7b544b7ab6d84fad6e02c63d8bef7d6d379e31d96f7515d1a8bb4b87483bf77b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-np04-v1-proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/2-u03-np04-v1-proof.json.gz",
+      "bytes": 975,
+      "compressedBytes": 586,
+      "sha256": "d7ccfa08588dd31bc207b9daa1b28768194f100e52b13845ba00e83648acf543",
+      "compressedSha256": "d6e32501ddfb5400d3bcbca89bb5bd74ef68750342998ca3f3b2687b9cf3bff6",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-np04-v1-native.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/3-u03-np04-v1-native.json.gz",
+      "bytes": 1004,
+      "compressedBytes": 596,
+      "sha256": "a2741e1c12a6e39239b736cf3946066494fbe26871d28c71b52712c9c85f6f9b",
+      "compressedSha256": "107b82e1d12eb2b72caee1dd302f3f0ab49d21db5e2392bc5460f88272fb2737",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u03-np04-v1-oracle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/4-u03-np04-v1-oracle.json.gz",
+      "bytes": 1638,
+      "compressedBytes": 869,
+      "sha256": "27e62114569e3f39f440119c22ef6ab425f2fa87252d42793709dbd673a9a9f7",
+      "compressedSha256": "ea0a4a19f7c3163db207e18a4da084c70c94d20436b50a96c948eab01d899051",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-np04-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/5-failed-sources.json.gz",
+      "bytes": 161650,
+      "compressedBytes": 54795,
+      "sha256": "a772728e4ae7671ed2d29a182dc80c2a8aaa26cc66e358e7b28a07657bfa2160",
+      "compressedSha256": "7d37bcff82059a718d2dd15c2200a92cf6b657b2658d22cb1aae42b2c78719e6",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u03-np04-v1/compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U03/u03-np04-v1-failed/6-compile.json.gz",
+      "bytes": 508,
+      "compressedBytes": 312,
+      "sha256": "3342841ba6075bd4b92fe77078ddebe22fe193afe31aea1f3eeb18cb43becb39",
+      "compressedSha256": "a44379590b16ebec732f5ea23f733e09c4813a52259f4c7a734267e92de2210c",
+      "roundtripPassed": true
+    }
+  ]
+}
