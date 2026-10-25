@@ -15,7 +15,7 @@ NP04–NP08 statements and necessary local roadmap generation, builds and audits
 The existing automation is active again on the same schedule and target.
 Do not repeat those approval requests. Engineering resource admission and all
 limits remain, as do proof, data, holdout and verification requirements.
-Next implement NP04 and continue the required U03/U05 work. The roadmap,
+Continue the required U03/U05 work. The roadmap,
 additional competitors and final report remain incomplete. No push or merge.
 
 The [NP04 recovery](U03/NP04-CONSERVATIVE.md) verifies 3,379 seals and three
@@ -36,6 +36,15 @@ Single-planning-run native CPU is 44.16 s including controls; max native RSS
 271,412 KiB, outer tree peak 758,092 KiB. This is actual resumability, not a
 full-table or cost ETA result. Full data, NP05 and production pruning remain
 unverified, not unapproved.
+
+The [first full build](U03/SIX-EDGE-BUILD.md) verifies 3,529 seals and three
+receipts, worker gone and no stop. Pattern zero reaches and expands all
+42,577,920 entries at terminal depth ten in eight accepted continuations.
+Native CPU is 954.60 s from depth three, max native RSS 271,412 KiB. The
+host-inclusive job takes 976.371 s and peaks at 421,152 KiB tree RSS.
+All raw payloads, manifests and counters are retained. This is built-unverified,
+not a from-scratch speed result or a valid production bound. Pattern one,
+independent full graph audits and NP05/refinement remain.
 
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not

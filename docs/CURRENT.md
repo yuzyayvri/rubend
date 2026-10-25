@@ -6,10 +6,23 @@ Yuzy's October 25 broad approval removes the NP04–NP08 and necessary local
 generation/audit authority gates. The existing `continue-rubend-roadmap`
 automation is active again, with the grant in its prompt and the same schedule
 and target. Do not ask again for those approvals. Resource limits, source seals,
-resumable admission and truthful proof/data boundaries remain. Next implement
-NP04 and continue U03/U05. The roadmap and final comparative report are not
+resumable admission and truthful proof/data boundaries remain. Continue the
+approved U03/U05 units. The roadmap and final comparative report are not
 complete. The holdout is unopened and nothing is pushed. Read
 docs/verification/next-plan/OCT25-AUTHORITY.md.
+
+The `u03-six-build-p0-v1` archive verifies 3,529 seals and three receipts,
+worker gone and no stop. Eight accepted native continuations reach and expand
+all 42,577,920 entries at terminal depth ten. Every input/output word satisfies
+monotonicity, goal/range and actual-counter checks. Final payload SHA is
+87f57eb05d6e1ec226212d523a4ba63f5fdb63e6de133602537daa566a8ac492.
+Native CPU is 954.60 s from the already built depth-three checkpoint, not from
+a fresh seed. Max native RSS is 271,412 KiB; outer job takes 976.371 s with
+421,152 KiB tree peak. Eight ignored payloads total 1,362,493,440 bytes.
+The table is built-unverified, not eligible for pruning. Pattern one, independent
+full graph audits and NP05/refinement remain. No solver speed or optimality
+claim follows. Read
+docs/verification/next-plan/U03/SIX-EDGE-BUILD.md.
 
 The `u03-six-checkpoint-v1` archive verifies 3,467 seals and four receipts,
 worker gone and no stop. All eight full-capacity checkpoints, six restarts,
