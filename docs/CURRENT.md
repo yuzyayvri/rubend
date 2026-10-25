@@ -48,6 +48,30 @@ remain preserved; unselected production refinement gaps stay explicit.
 Continue approved U05 safety work. No holdout, competitor setup or push.
 Read docs/verification/next-plan/U03/SIX-EDGE-CONDITIONAL.md.
 
+The `u05-safety-v2` archive verifies 3,757 seals and three receipts, worker
+gone and no stop. Both proof entrypoints and all twenty-four rejected source
+variants pass. All 4,225 radius pairs, 4,225 index pairs, 1,494 actual reference
+move cases, 4,482 packets and 2,988 independent replays pass, checksum
+2,661,727,883. NP06 exact-key/radius and NP07 conditional coverage/exclusion
+are checked; NP08 uses the actual typed inverse-snoc/composition identity and
+reconstruction. Four unchanged runtime units and root87 are reused.
+No optimized exhaustion/coverage witness, cache, new dual state, global label
+or performance promotion is manufactured. Keep the cache unselected and measure
+bounded one/two-worker scaling separately. No holdout or push.
+Read docs/verification/next-plan/U05/EXACT-WORK-SAFETY.md.
+
+The completed queue `u05-safety-v2` checks the new NP06 exact-context/radius, NP07
+coverage/exhaustion and NP08 typed left-inverse/reconstruction statements pass
+their development BendTT verdict. The guard requires twenty-four rejected
+false-proof entrypoints, 8,450 radius/index cases, 1,494 actual reference move
+cases and independent replay, including a wrong-right-action counterexample.
+Four unchanged interior/partition runtime evidence sets and the root87 gate
+are reused by exact source/artifact identities. No runtime cache, new dual
+state, global completion label, native build or performance claim is enabled.
+Proof and runtime witness/refinement boundaries remain separate. The fixed
+queue is capped at eight minutes. The final holdout and publication are untouched.
+Read docs/verification/next-plan/U05/EXACT-WORK-SAFETY.md.
+
 The completed queue `u03-six-conditional-v1` screens all 53,004 unchanged
 saved FullCube contexts using both complete audited six-edge tables. Six nested
 projections per entry must match the actual Bend projector and independent

@@ -89,6 +89,26 @@ acceptance is established. Keep the existing profile; do not promote six-edge
 pruning or add compression. Preserve all data and explicit partial-proof gaps.
 Continue U05 rather than expanding this unselected treatment.
 
+The [U05 safety archive](U05/u05-safety-v2/index.json) verifies 3,757 seals
+and three receipts, worker gone and no stop. Both proof entrypoints pass and
+all twenty-four false-proof entrypoints reject. All 4,225 radius pairs, 4,225
+index pairs, 1,494 actual reference move cases, 4,482 packets and 2,988 independent
+replays pass, checksum 2,661,727,883. NP06 exact-key/radius, NP07 conditional
+finite coverage/lower bound and NP08 actual typed left action/reconstruction
+are checked. Four actual runtime units and root87 are reused unchanged.
+The optimized engine's witness/refinement gaps remain. No cache or stronger
+label is enabled. Next measure bounded one/two-worker scaling separately.
+
+The completed [U05 safety guard](U05/EXACT-WORK-SAFETY.md), `u05-safety-v2`, checks
+the approved NP06 exact-key failure reuse, NP07 certified finite coverage and
+NP08 actual typed left-action/reconstruction statements. Their development
+BendTT verdict passes. The eight-minute fixed guard tests twenty-four false
+proof entrypoints, 4,225 radius pairs, 4,225 index pairs, 1,494 actual reference
+move cases and 2,988 independent replay checks. Prior interior, serial ledger,
+native partition and two-worker failure/retry results are source-identically
+reused. Mathematical predicates do not manufacture runtime exhaustion or
+coverage. No cache, unchecked lower bound, native engine build or speed claim.
+
 The completed [six-edge conditional screen](U03/SIX-EDGE-CONDITIONAL.md) compares
 both audited full tables on all 53,004 fixed saved contexts. Its twelve invalid
 record controls, overlapping/censored interval tests and strict-radius guards

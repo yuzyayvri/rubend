@@ -19,6 +19,14 @@ Both six-edge reference graphs pass full independent finite data audits.
 Global concrete six-edge commutation, universal codec and native/storage
 refinements are not discharged. This is not a production pruning admission.
 
+The [exact-work safety record](../verification/next-plan/U05/EXACT-WORK-SAFETY.md)
+checks approved NP06 exact-context completed-failure reuse, NP07 finite
+coverage/exhaustion exclusion and NP08 typed-reference left inverse action and
+reconstruction. Both checkers, twenty-four false-proof entrypoints and independent
+reference replay checks pass. The actual optimized enumerator must still supply
+its failure and coverage witnesses. No cache, new global label or optimized
+dual-state refinement is certified by naming those predicates.
+
 | Module | Checked obligation |
 | --- | --- |
 | Toolchain | Boolean flip roundtrip; setup plumbing only |
