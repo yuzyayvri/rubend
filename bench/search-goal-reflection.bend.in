@@ -1,0 +1,43 @@
+import Base
+import {{MODEL}} as M
+import {{CUBIE}} as C
+import {{SEARCH}} as S
+import {{CERTIFICATE}} as Cert
+import {{EQUALITY}} as E
+import {{REFERENCE}} as R
+
+def fields_goal(+cp: U32, +co: U32, +ep: U32, +eh: U32, +eo: U32, evidence: E.TreeEvidence(E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTLeaf{cp, 1985229328}, E.CRTLeaf{co, 0}}, E.CRTLeaf{ep, 1985229328}}, E.CRTLeaf{eh, 47768}}, E.CRTLeaf{eo, 0}})) -> {C.Cubie{cp, co, ep, eh, eo} == C.solved() : C.Cubie}:
+  match evidence:
+    case Tuple{Tuple{Tuple{Tuple{e0, e1}, e2}, e3}, e4}:
+      %e0 : {C.Cubie{cp, co, ep, eh, eo} == C.Cubie{_, 0, 1985229328, 47768, 0} : C.Cubie}
+      %e1 : {C.Cubie{cp, co, ep, eh, eo} == C.Cubie{cp, _, 1985229328, 47768, 0} : C.Cubie}
+      %e2 : {C.Cubie{cp, co, ep, eh, eo} == C.Cubie{cp, co, _, 47768, 0} : C.Cubie}
+      %e3 : {C.Cubie{cp, co, ep, eh, eo} == C.Cubie{cp, co, ep, _, 0} : C.Cubie}
+      %e4 : {C.Cubie{cp, co, ep, eh, eo} == C.Cubie{cp, co, ep, eh, _} : C.Cubie}
+      {==}
+
+def packed_goal(+cube: C.Cubie, evidence: {S.solved(cube) == True{} : Bool}) -> {cube == C.solved() : C.Cubie}:
+  match cube:
+    case C.Cubie{+cp, +co, +ep, +eh, +eo}:
+      fields_goal(cp, co, ep, eh, eo, E.reflect_tree(E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTBranch{E.CRTLeaf{cp, 1985229328}, E.CRTLeaf{co, 0}}, E.CRTLeaf{ep, 1985229328}}, E.CRTLeaf{eh, 47768}}, E.CRTLeaf{eo, 0}}, evidence))
+
+def facelet_goal(+cube: C.Cubie, evidence: {S.solved(cube) == True{} : Bool}) -> {C.to_facelets(cube) == M.solved() : M.Cube}:
+  %packed_goal(cube, evidence) : {C.to_facelets(cube) == C.to_facelets(_) : M.Cube}
+  {==}
+
+def zero_reference(+cube: C.Cubie, evidence: {S.solved(cube) == True{} : Bool}) -> R.BRTResult<0n, C.to_facelets(cube)>:
+  R.BRTFound{Nil{}, Unit{}, facelet_goal(cube, evidence)}
+
+def packet(+cube: C.Cubie, evidence: Maybe<&1, {S.solved(cube) == True{} : Bool}>) -> +List<U32>:
+  match evidence:
+    case None{}: [0]
+    case Some{same}: R.packet(0n, C.to_facelets(cube), zero_reference(cube, same))
+
+def test_goal(+cube: C.Cubie) -> +List<U32>:
+  packet(cube, Cert.true_evidence(S.solved(cube)))
+
+def test_runtime_goal(cube: C.Cubie) -> U32:
+  Bool.to_u32(S.solved(cube))
+
+def test_reference_goal(cube: C.Cubie) -> U32:
+  Bool.to_u32(M.is_solved(C.to_facelets(cube)))

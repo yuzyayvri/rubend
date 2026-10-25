@@ -1,0 +1,20 @@
+import Base
+import {{CUBIE}} as C
+import {{GOAL}} as G
+
+def values(words: +List<U32>, sum: U32) -> U32:
+  match words:
+    case Nil{}: sum
+    case Con{word, rest}: values(rest, ((sum * 16777619 : U32) .^. word : U32))
+
+def cube_mix(cube: C.Cubie, sum: U32) -> U32:
+  match cube:
+    case C.Cubie{cp, co, ep, eh, eo}: values([cp, co, ep, eh, eo], sum)
+
+def run(cases: +List<C.Cubie>, sum: U32) -> U32:
+  match cases:
+    case Nil{}: sum
+    case Con{+cube, rest}: run(rest, values(G.test_goal(cube), (cube_mix(cube, sum) * 33 + G.test_runtime_goal(cube) : U32)))
+
+def main() -> IO(Unit):
+  IO.print(U32.show(run({{CASES}}, 17)))

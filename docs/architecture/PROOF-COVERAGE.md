@@ -76,6 +76,16 @@ all 87 inputs unchanged, with six altered-record controls. No fresh root-gate
 run or stronger application label is claimed. Optimized pruning, loaded data,
 scheduling and completion refinement remain open.
 
+The supporting [actual search-goal reflection](../verification/next-plan/U06/SEARCH-GOAL-REFLECTION.md)
+checks each of the seven real profile predicates. For every five-word packed
+value, a true predicate implies equality with `Cubie.solved`, facelet equality
+with the model's solved cube and a real zero-radius reference result containing
+the empty replay-proved word. The raw-word converse is not claimed. Fifty-two
+padding counterexamples show why it would be false. All seven profile verdicts,
+sixteen negative checker entrypoints, 8,365 sealed JavaScript checks and two
+native checksums pass. This is a positive goal bridge, not a contour-exhaustion
+theorem, validator proof or stronger application label.
+
 The [optimized-reference gap inventory](../verification/next-plan/U06/REFINEMENT-GAPS.md)
 names seven missing implications, including the pre-search input boundary,
 concrete targets, loaded data, contour simulation and interruption. Its fixed

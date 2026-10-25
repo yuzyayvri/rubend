@@ -1,0 +1,61 @@
+{
+  "format": "rubend-stopped-background-preservation-v1",
+  "id": "u06-search-goal-v1",
+  "revision": "513768d652941dde312d184017e13d509870c662",
+  "preserved": true,
+  "passed": false,
+  "sourceSeals": 3077,
+  "workerGone": true,
+  "repositoryCheckProcessesGone": true,
+  "executedJobs": 1,
+  "passedJobs": 0,
+  "stopped": {
+    "jobId": "proof",
+    "wrapperExitCode": 1,
+    "commandExitCode": null,
+    "commandSignal": "SIGKILL",
+    "reason": "aggregate-rss-limit",
+    "peakTreeRssKiB": 1594364,
+    "memoryMiB": 1536
+  },
+  "dirtySourceFiles": 8,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-search-goal-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-search-goal-v1-stopped/0-u06-search-goal-v1-plan.json.gz",
+      "bytes": 422999,
+      "compressedBytes": 146618,
+      "sha256": "cb4906db6401ff01a9b5fd8dc310edc7a0b7dfb8bb69bfbcc03f994af5825f69",
+      "compressedSha256": "7074f049e454d180d039104e1782c5195d9dfa0eddd8c851e8ed4f936533930b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-search-goal-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-search-goal-v1-stopped/1-status.json.gz",
+      "bytes": 991,
+      "compressedBytes": 548,
+      "sha256": "e9fd62af7ecfe547dfbe6ee143d5e54c01f5a1df86aafdf95ac7c2d16740a865",
+      "compressedSha256": "8eacd1a2877cba814e037014c83d087785d71bb0cdc8c9f4a3505fd59621ab06",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-search-goal-v1-proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-search-goal-v1-stopped/2-u06-search-goal-v1-proof.json.gz",
+      "bytes": 1052,
+      "compressedBytes": 618,
+      "sha256": "4c5d518d99aaf485384fa8112a079902864b76cca282eb32e10f20d062bdbeab",
+      "compressedSha256": "d8ea9d640883abf70a6e4fe1119b060768309319044d96f1e6fd437072a836b7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-search-goal-v1/stopped-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-search-goal-v1-stopped/3-stopped-sources.json.gz",
+      "bytes": 163275,
+      "compressedBytes": 54403,
+      "sha256": "70faffddedbfb3ae5372a96033ca0e9f9108bd3daa10a14ec4c229d7bc1fc9a7",
+      "compressedSha256": "263689556c530b334fba0d1777e6e5341f2357234900855233633801e89dde79",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}

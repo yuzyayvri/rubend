@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u06-search-goal-v3` sealed finish verifies 3,177 seals and three receipts,
+worker gone and no resource stop. All eight input-omission controls, 8,365 fresh
+JS profile checks, 3,661 reference-goal checks and both 1,195-case native executions
+pass. Both native checksums are 704,264,323. The seven actual profile verdicts
+and sixteen false-proof entrypoints are reused from verified v2 evidence.
+The actual positive Search.solved predicate now yields packed identity, facelet
+solved equality and a real zero-radius empty-word reference witness. Fifty-two
+padding examples refute a raw-word converse. Earlier stopped and provisional
+evidence remains preserved, not relabeled. This is not optimized completeness,
+input reachability, loaded-data proof, production integration or a stronger label.
+NP04–NP07 and large build authority remain open. Read
+docs/verification/next-plan/U06/SEARCH-GOAL-REFLECTION.md.
+
 The `u03-storage-capacity-v1` archive verifies 3,026 seals and three receipts,
 worker gone and no resource stop. All 4,102 arithmetic cases, five stream sizes,
 five corruptions and both full 42,577,920-word payload checks pass. The synthetic

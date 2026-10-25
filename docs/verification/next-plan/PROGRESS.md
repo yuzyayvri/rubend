@@ -52,6 +52,15 @@ payloads passes independent streaming checks. Writer and rewriter CPU are
 Outer host-inclusive tree peak is 443,160 KiB. Raw counters are preserved.
 No cube distances, BFS, search, speed comparison or full-build ETA or authority.
 
+The [S04 goal-reflection unit](U06/SEARCH-GOAL-REFLECTION.md) passes its sealed
+finish with 3,177 verified seals and three receipts, worker gone and no stop.
+Eight omission controls, 8,365 fresh JS checks and both native checksums pass.
+Seven actual profile verdicts and sixteen rejected proof entrypoints are reused
+from the passing proof archive. The actual positive solved predicate implies
+packed identity, facelet solved equality and a zero-radius reference witness.
+Fifty-two padding examples refute the raw converse. Earlier stopped/provisional
+evidence remains preserved. This does not close optimized completeness or data.
+
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
 seals and two receipts, worker gone and no stop. All 464 native cases match the

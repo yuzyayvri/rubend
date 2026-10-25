@@ -80,3 +80,13 @@ the unchanged 87-input root gate are explicitly reused, not rerun.
 This finishes source-bound gap identification. It does not discharge any of
 the seven missing implications, prove absence of all possible implementation
 defects, or certify the optimized application. No production behavior changed.
+
+## Checked positive-goal subcase
+
+The later [search-goal reflection](SEARCH-GOAL-REFLECTION.md) now proves that
+each actual profile's positive packed solved predicate implies packed identity,
+facelet solved equality and a zero-radius found result in the checked reference.
+Its fully sealed finish retains the failed resource run and fixes the finite
+input-seal gap. The converse over arbitrary raw packed words is explicitly false
+on padding examples. This closes a positive-goal subcase only. All seven broad
+implications in the table still need their remaining premises and refinements.

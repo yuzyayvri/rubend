@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "preserved": true,
+  "id": "u06-search-goal-v1",
+  "files": 60,
+  "observedTranslations": 2,
+  "partialModules": 2,
+  "checkerPassesClaimed": 0,
+  "sha256": "dc0bba6c03c493ebe8d0ea4a4a375c99da1471a25de0b63425f023aa07a7246e",
+  "compressedSha256": "e85656ead519d4eeac78404e6c83636102fb23b6a658970257354aa5d9556d94",
+  "bytes": 19899680
+}
