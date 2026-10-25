@@ -33,6 +33,14 @@ control and repeated semantics. No repeatable gain, so longer cost and profiling
 are skipped. Keep the ordinary-profile treatment private and unpromoted.
 This does not establish a CPU result or packed-small app acceptance.
 
+The U03 [binary checkpoint preflight](U03/BINARY-CHECKPOINT.md) verifies 2,951
+seals and three receipts, worker gone and no stop. All eighteen layer restarts,
+two repeats, two failures and 31 native or manifest controls pass. Every layer
+and both final four-edge tables match the audited references. The archive retains
+37 command CPU records and eighteen manifests. Main-workflow CPU is 5.79 s in
+one planning run, including seeds, repeats and crashes. Three-chunk transport
+is verified at 760,320 bytes. No six-edge costs, ETA, proof or production pruning.
+
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
 seals and two receipts, worker gone and no stop. All 464 native cases match the
@@ -140,7 +148,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U00. Controls and evidence | Command CPU observer verifies 2,821 seals/two receipts, actual direct/waited-child/failed-command calibration and eight malformed-record controls. General limiter unchanged. Earlier stable native A/A is diagnostic only. Historical mapper/browser noise remains unexplained and inconclusive. No speed promotion. |
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
-| U03. Six-edge PDB and compression | Complete four-edge audits and tiny native file restart pass. Latest screen verifies 2,842 seals/two receipts and all 53,004 entries. No added hypothetical cuts over three-edge maximum; only 32 raw entries can discriminate. Four-edge integration unpromoted, no larger-PDB rejection or speedup. Larger-format costs, NP04/NP05 and six-edge builds remain gated. |
+| U03. Six-edge PDB and compression | Binary checkpoint archive verifies 2,951 seals/three receipts, eighteen real layer restarts and both full four-edge table comparisons. Raw CPU and manifest records are preserved. Four-edge information adds no cuts over three-edge maximum and stays unpromoted. Full six-edge generation, scratch/audit costs and NP04/NP05 remain gated. No larger-PDB rejection or speedup. |
 | U04. Ordering, premoves, and phase-two projection | Product-order portfolio study verifies 2,952 seals and six receipts. All 168 guards and 480 requests pass. All 160 final-quality pairs tie, so longer cost and profile work are skipped. Keep it private and unpromoted. Earlier mapped helper timing remains inconclusive and is not retried unchanged. No new pruning or accepted whole-solver gain. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
 | U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Demand rendering and sampled desktop/fallback/failure review clips pass. Latest video archive verifies 2,860 seals/five receipts with real cleanup; corrected indexed previews match source. Seven proof implications, operator/final package and general-performance gates remain open. Retention stays inconclusive/private. |

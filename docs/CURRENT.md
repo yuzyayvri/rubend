@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The `u03-binary-checkpoint-v1` archive verifies 2,951 seals and three receipts,
+worker gone and no resource stop. All eighteen fresh layer restarts, two repeats,
+two crashes, thirteen native controls and eighteen manifest controls pass.
+Every intermediate cell and both complete four-edge tables match the audited
+distances. The pure helper passes BendTT. Thirty-seven raw CPU measurements and
+eighteen manifests are durably archived. The main 24-command workflow uses
+5.79 s CPU in one planning run, including seeds, repeats and failures.
+Native-command max RSS is 10,292 KiB; outer host-inclusive tree peak is 231,116 KiB.
+Accepted history payloads total 16,727,040 bytes, separately from control files.
+No full six-edge costs, generation ETA, new law, pruning, production or holdout.
+Read
+docs/verification/next-plan/U03/BINARY-CHECKPOINT.md.
+
 The `u04-product-study-v1` archive verifies 2,952 seals and six receipts,
 worker gone and no resource stop. All 168 guards and 480 fixed-work requests
 pass, with 90 and 180 independently replayed candidate events respectively.
