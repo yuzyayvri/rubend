@@ -1,6 +1,27 @@
 # Clipboard and download acceptance gap
 
-Status is open. This is a verification gap, not a confirmed product defect.
+Status is closed by `u01-file-acceptance-v2`. This was a verification gap,
+not a confirmed product defect. The historical failures below remain failures.
+
+The new hidden app run uses a real `clipboard-write=()` document policy and a
+read-only observer, without redefining the Clipboard API. The original write
+binding stays unchanged. Copy displays the actual clipboard-unavailable fallback.
+The source-bound native engine solves the four-move input, and an independent
+facelet replay checks the answer. The actual browser-created 397-byte download
+matches the displayed record exactly. Its path was absent before the click;
+the existing user download is restored byte-identically after preserving the
+new file. All fixture, server, native owners and IPC are gone.
+
+The canonical checker verifies 3,947 source seals and both resource receipts,
+with no resource stop and no remaining worker. See
+[the acceptance protocol](../verification/next-plan/U01/FILE-BACKED-ACCEPTANCE.md),
+[the raw archive](../verification/next-plan/U01/u01-file-acceptance-v2/index.json)
+and [actual screenshots](../verification/next-plan/U01/u01-file-acceptance-v2-media/index.json).
+This does not claim that the missing Blob download event now works. It uses the
+actual filesystem output, not a Blob or modal read, as the download witness.
+The original strict event-based driver and production handlers are unchanged.
+
+## Preserved earlier observations
 
 The in-app browser replaces the test fixture's `navigator.clipboard.writeText`
 method. A DOM diagnostic compares the current method with the fixture's exact

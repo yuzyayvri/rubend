@@ -1,0 +1,71 @@
+{
+  "format": "rubend-live-assertion-preservation-v1",
+  "preserved": true,
+  "passed": false,
+  "revision": "0776a92c2e28d79cc8281dc15475b22d75c0fcc5",
+  "sourceSeals": 141,
+  "resourcePassed": true,
+  "workerAndNativeOwnersGone": true,
+  "protectedDownloadUnchanged": true,
+  "failure": "Clipboard binding changed in automated text-entry context",
+  "cleanContextActualPolicyDenialObserved": true,
+  "downloadAcceptanceNotRun": true,
+  "dirtySourceFiles": 7,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u01-file-acceptance-v1-live-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/0-u01-file-acceptance-v1-live-plan.json.gz",
+      "bytes": 14733,
+      "compressedBytes": 6934,
+      "sha256": "9387c971705a3aacc0b0e9bc3a84b189f242112271568a25b985629b89a0f1d3",
+      "compressedSha256": "af334c2f4fcf5c0f937b9184cdbed835dd0de76e0962f503bcf97b2b8a910d59",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u01-file-acceptance-v1-live.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/1-u01-file-acceptance-v1-live.json.gz",
+      "bytes": 1069,
+      "compressedBytes": 646,
+      "sha256": "68734b86224cc93a89420282268345aa9c2b370f41adf88281d6cf1fe00c0f47",
+      "compressedSha256": "43423a9e1c859faff04b463c32ee81229aa57d36dfa4a645160cb06fa078cb23",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-file-acceptance-v1/session.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/2-session.json.gz",
+      "bytes": 12181,
+      "compressedBytes": 5747,
+      "sha256": "ace69a9d36baf9c86c588c7f00aebca745eca112398d6a379274456f787716ab",
+      "compressedSha256": "5924425ec99043485ce8bab95e2d5618e01981119fd655ebb90ce05636918470",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-file-acceptance-v1/failed-observation.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/3-failed-observation.json.gz",
+      "bytes": 328,
+      "compressedBytes": 221,
+      "sha256": "cef594a3a3d7eae394e7cdf5100f93f682e9a107e85740f268cae7046f8bf0f6",
+      "compressedSha256": "e5a1958de8f3d122e38fc6ddc8409b4f05b83eca68af35e8f5303101e39b0ace",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-file-acceptance-v1/fresh-context-observation.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/4-fresh-context-observation.json.gz",
+      "bytes": 2920,
+      "compressedBytes": 747,
+      "sha256": "6e56b1e6b9b6a5049ccdad7c7af26b6117e483c33032112c0a7efd6dcc3ba459",
+      "compressedSha256": "6f644db01412fd8813bd2f19d206d358012b4af2f4e002e18d1a5c67b9512e88",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-file-acceptance-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v1-failed/5-failed-sources.json.gz",
+      "bytes": 41441,
+      "compressedBytes": 11508,
+      "sha256": "d677d3a8308381d47d1919f418ee0c031eefdb350ce5bf1a938e697bfd8c27c2",
+      "compressedSha256": "ebe60bda217f9f042f3d26e85b8b9ad4da01897f51baf716d87af410f88c9aa2",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}

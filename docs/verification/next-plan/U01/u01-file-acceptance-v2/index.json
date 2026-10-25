@@ -1,0 +1,80 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u01-file-acceptance-v2",
+  "revision": "0776a92c2e28d79cc8281dc15475b22d75c0fcc5",
+  "sourceSeals": 3947,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-25T18:57:21.709Z",
+  "finishedAt": "2026-10-25T18:57:30.531Z",
+  "archives": [
+    {
+      "path": "0-u01-file-acceptance-v2-plan.json.gz",
+      "sha256": "c7592211c2b65215d2c0bbd3529f7d15c871e10a6e7cce463d1f8be5a0554074",
+      "compressedSha256": "2e421ec1fc238b2085f2583503ae85c519fba5284b37a6afc85469f47ba4d6d0"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "7f6d8cd78c3ae2c606eb8f0efebeb429a7662bfb9a73d366fe1330eabb4b479f",
+      "compressedSha256": "449072160d9567128a9f4cf4180f5e29a7669c25ead28bb10544e3f327f40d70"
+    },
+    {
+      "path": "2-u01-file-acceptance-v2-controls.json.gz",
+      "sha256": "dc0c27eaf931360003d2f3f5bd395eaae220d9ede78d0b05f4b244c97b62b268",
+      "compressedSha256": "fcae659560a317ee4e24f78ea78ee02b35f155a1b4618d7f5f4e0fbd62a67174"
+    },
+    {
+      "path": "3-u01-file-acceptance-v2-confirm.json.gz",
+      "sha256": "37d4aef149571527b47412bab6a1e7f8aed9327d6726dee6d21f5fbacbe0bf19",
+      "compressedSha256": "653591df88ecd64fbd098829a10dfa5a356e787ab70d6e0117092d9fbf20a9bb"
+    },
+    {
+      "path": "4-capability-probe.json.gz",
+      "sha256": "ce2dd33a78b76f050f055a71133bff4047edd9e3bdb7a8e2640f39181c85e1e3",
+      "compressedSha256": "99d5cca380f52aa15e9cbb2b5839249aad3e19278c8f6be65e55ba9f582dd475"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "8fa9a2fc3294c6890346de50d104f96647d015b61b7f13a8a0d0af571af4b35c",
+      "compressedSha256": "c75e9376d9766d14ea37e8f98d5f243c001f4d65b5c094af2642aff9ad24460f"
+    },
+    {
+      "path": "6-controls.json.gz",
+      "sha256": "a5b3d8f6ccfcc2a80b82b5ba348b15854f25d3aa81559b228895d9c52f63eba6",
+      "compressedSha256": "256c8d85339d134b1bc8787022ac823f9b0d77353a5c563533dcec09c9c9736f"
+    },
+    {
+      "path": "7-file-controls.json.gz",
+      "sha256": "e0b4fdcac93c4066133d7657a17377370c29eb3972a3815f5c74540f051b750d",
+      "compressedSha256": "b0a5a554f65a32f0d8475c878322a5447e7841abf36fa0083965b1f6c8b5cc71"
+    },
+    {
+      "path": "8-live-clipboard.json.gz",
+      "sha256": "60deafb0dde7bdcae0750fcb87746e78131d0198835ff65ea89a9df7c26081da",
+      "compressedSha256": "65fad41d3eb2bae89569e1e31585352c7675ec37082219f5695dea258ae51291"
+    },
+    {
+      "path": "9-live-download.json.gz",
+      "sha256": "389eac9352f8bd38b44709c1a3c49c7592a7c2d3121190a5728f2b021dd92954",
+      "compressedSha256": "c3f4166f9ff3211e31be22169913d52d0bb5effe0b41250c278155a1ef9ddd34"
+    },
+    {
+      "path": "10-live-result.json.gz",
+      "sha256": "012f4465bf6d472ed01592590853d6f0275607ba8453654bdb122fc57731503c",
+      "compressedSha256": "d185e933441cd1e70511740f3621e25a768e5c4d615bc9160a4a054fcc449f02"
+    },
+    {
+      "path": "11-live-session.json.gz",
+      "sha256": "26e35c5ecae7bc89ebd45ff432d514e39e185c119a53521d4cdfa9395280667d",
+      "compressedSha256": "105568cbfee571835541565cdbb3689cedcfe58b8963fb94382a6b41a7d63964"
+    },
+    {
+      "path": "12-live-source-plan.json.gz",
+      "sha256": "08987fee668bcb1d7ec2f6677c3e3b8ac12a797da559398f4abfc6efbf073bed",
+      "compressedSha256": "b0d9b8e995acd23b1adefc0f76a7f64e05699b11888b10254cb72a5710ca83e0"
+    }
+  ]
+}

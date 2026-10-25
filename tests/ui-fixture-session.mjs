@@ -9,7 +9,7 @@ import {deliveryPin} from "../bench/delivery-pins.mjs";
 assert.ok(process.argv.length===2||([3,4].includes(process.argv.length)&&process.argv[2]==="--delivered"));
 const deliveryRunId=process.argv[3]??"u01-delivery-v1";assert.match(deliveryRunId,/^u01-delivery-[a-z0-9-]+$/);
 const pinned=process.argv[2]==="--delivered"?deliveryPin(JSON.parse(readFileSync(resolve("build/experiments",deliveryRunId,"delivery.json"),"utf8")).pinName):null;
-const modes=process.argv[2]==="--delivered"?Array(3).fill("delivered"):["delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback"];
+const modes=process.argv[2]==="--delivered"?Array(3).fill("delivered"):["delayed","model-failure","rewind-failure","bad-protocol","acceptance","fallback","policy-only"];
 for(const mode of modes){
   const id="u01-live-fixture-"+randomBytes(8).toString("hex"),directory=resolve("build/evidence/next-plan/U01",id),child=spawn(process.execPath,["tests/ui-fixture-server.mjs",mode,id,...mode==="delivered"?[deliveryRunId]:[]],{stdio:["ignore","pipe","pipe"]});
   let stderr="";child.stderr.on("data",d=>stderr+=d);const stopped=new Promise(done=>child.once("close",(code,signal)=>done({code,signal})));
@@ -18,6 +18,7 @@ for(const mode of modes){
     const html=await(await fetch(origin)).text();assert.ok(html.includes('/__test/diagnostics.mjs'));const bridge=await fetch(origin+"/__test/diagnostics.mjs");assert.equal(bridge.status,200);assert.match(await bridge.text(),/rubend-dom-diagnostics-v1/);assert.equal((await fetch(origin,{headers:{Origin:"http://example.invalid"}})).status,403);
     if(["model-failure","rewind-failure"].includes(mode)){const worker=await(await fetch(origin+"/worker.js")).text();assert.match(worker,/Deliberate cube-worker fixture failure/);assert.ok(worker.includes("++rubendFixtureApplies==="+String(mode==="rewind-failure"?2:1)));}
     if(["acceptance","fallback"].includes(mode)){assert.equal((await fetch(origin)).headers.get("permissions-policy"),"clipboard-write=()");assert.ok(html.indexOf('/__test/setup.js')<html.indexOf('type="module"'));const setup=await(await fetch(origin+"/__test/setup.js")).text();assert.ok(setup.startsWith("const rubendTestFallback="+String(mode==="fallback")+";"));assert.match(setup,/WEBGL_lose_context/);}
+    if(mode==="policy-only"){assert.equal((await fetch(origin)).headers.get("permissions-policy"),"clipboard-write=()");assert.ok(html.includes('/__test/clipboard-policy.js'));assert.equal(html.includes('/__test/setup.js'),false);const setup=await(await fetch(origin+"/__test/clipboard-policy.js")).text();assert.ok(setup.includes("clipboardWriteUnchanged"));assert.equal(setup.includes("Object.defineProperty"),false);}
     if(["delayed","bad-protocol"].includes(mode)){
       let session;const deadline=performance.now()+3000;
       do{session=await(await fetch(origin+"/api/session")).json();if(mode==="delayed"||session.error)break;await new Promise(done=>setTimeout(done,20));}while(performance.now()<deadline);

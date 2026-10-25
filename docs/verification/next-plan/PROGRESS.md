@@ -119,6 +119,19 @@ the fixed 5% floor. Verdict is inconclusive, no scaling benefit or quantified
 regression claimed. Private initialization dominates the stage profiles.
 Keep serial execution selected and do not repeat unchanged for luck.
 
+The completed [file-backed U01 guard](U01/FILE-BACKED-ACCEPTANCE.md),
+`u01-file-acceptance-v2`, closes the named acceptance gap. Native clipboard
+policy denies writing with the original method unchanged, and the visible Copy
+fallback appears. The actual 397-byte downloaded record matches the modal text
+exactly and independently solves its original cube. The pre-existing file is
+restored and all server/native/IPC ownership cleans up. No production change.
+All seven fixture lifecycle modes and observer/file-event controls pass. The
+canonical checker verifies 3,947 seals, two receipts, no resource stops and the
+absent worker. The prototype timeout and first contaminated live context stay failed,
+not relabeled. Face-turn controls avoid text-entry clipboard interference.
+The old strict event-based driver is unchanged; actual file creation and bytes
+provide the new output witness. Final evaluation and competitor setup are pending.
+
 The completed [partition scaling queue](U05/PARTITION-SCALING.md), `u05-scaling-v2`,
 uses the same source-bound 1,124 native jobs with one owner versus two fixed
 shards. Two untimed readiness-phase profiles precede five alternating cohorts,

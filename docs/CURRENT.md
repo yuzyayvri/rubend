@@ -83,6 +83,22 @@ execution, preserve the failed attempt and do not rerun unchanged for luck.
 No whole-solver speed, production promotion, holdout use or push.
 Read docs/verification/next-plan/U05/PARTITION-SCALING.md.
 
+The completed queue `u01-file-acceptance-v2` closes the clipboard/download
+acceptance gap. Its source-sealed live app run passes genuine document-policy
+clipboard denial with the original write binding
+unchanged. The actual 397-byte browser-created download matches the displayed
+record exactly and independently replays to solved. A pre-existing download was
+restored unchanged; the server/native/IPC clean up normally. Production and its
+accepted app/native build are unchanged. All seven fixture lifecycle modes,
+read-only observation and file-event controls pass. The canonical checker verifies
+3,947 seals, both resource receipts, no resource stops and the absent worker.
+The capability prototype preserves its later resource timeout and its observed
+real files. The first filled live context's replaced clipboard binding is also
+preserved as a failure. The successful context uses face-turn controls only.
+No in-memory Blob or missing-event shortcut supplies a downloaded-file witness.
+The final holdout, competitor research, performance promotion and push remain
+untouched. Read docs/verification/next-plan/U01/FILE-BACKED-ACCEPTANCE.md.
+
 The completed queue `u05-scaling-v2` compares one and two unchanged native
 partition owners on the same 1,124 jobs. Two diagnostic readiness/RSS profiles
 are excluded from the five alternating ABBA/BAAB timing cohorts, twenty measured
