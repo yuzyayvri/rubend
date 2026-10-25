@@ -18,6 +18,17 @@ never invent success.
 
 ## Current boundary
 
+On 2026-10-25 Yuzy replied "I literally approve anything man. Just fucking do
+it." to the remaining roadmap approval request. The exact NP04–NP08 statements
+and necessary local generation, builds and full audits for this roadmap are
+approved. Do not ask again for these in-scope approvals. Resume the existing
+`continue-rubend-roadmap` automation. Keep engineering admission, source seals,
+checkpoints and every RESOURCE-POLICY.md limit, including thirty-minute batches,
+desktop reserve, no swap and low priority. Stay solo and never use Astra.
+This does not override the explicit later decision about pushing to main after
+the numerical report. No push, merge, release, deployment, cloud/GPU work or
+system change is authorized. Read docs/verification/next-plan/OCT25-AUTHORITY.md.
+
 On 2026-10-24 Yuzy required roadmap completion, then a primary-source research
 and local setup pass for additional 3x3 solvers, then controlled comparative
 benchmarks and a numerical report. Coordinate U07 with that final pass so the
@@ -41,8 +52,8 @@ source seals, resource admission, solo work, and the no-Astra restriction.
 The heartbeat checks every thirty minutes. Do not duplicate active work or
 spend model turns polling. Pause it if missing authority prevents all useful
 in-scope progress. Delete it only after the full workflow and report above are
-complete. NP04–NP08 and large table
-generation still need separate approval. The October 22 main push was a
+complete. NP04–NP08 and local generation were awaiting separate approval at
+that time; the October 25 grant above supersedes that gate. The October 22 main push was a
 completed specific request, not blanket publication authority for later units.
 
 After a queue reports passed, run `node bench/check-background-results.mjs RUN-ID`

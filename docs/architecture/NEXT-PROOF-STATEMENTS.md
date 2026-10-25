@@ -1,7 +1,10 @@
 # Proposed proof statements for the next implementation units
 
 Yuzy separately approved NP01–NP03 on October 23 by replying "Yeah. Approved."
-to the request naming those three statements. NP04–NP08 still await approval.
+to the request naming those three statements. NP04–NP08 were also approved by
+Yuzy's broad October 25 reply, "I literally approve anything man. Just fucking
+do it." The [authority record](../verification/next-plan/OCT25-AUTHORITY.md)
+preserves its scope and unchanged local resource and no-push boundaries.
 Approval permits proving the exact statements below, not assuming their data
 premises or enabling unchecked pruning. No statement replaces or weakens any
 of the existing 23 laws. NP01 now has a checked quantified typed-reference-group

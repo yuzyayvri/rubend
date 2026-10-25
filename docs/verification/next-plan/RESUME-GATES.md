@@ -1,6 +1,12 @@
 # Remaining authority gates
 
-Status on October 25, 2026. The roadmap and comparative report are incomplete.
+Historical pause record. Superseded by Yuzy's
+[October 25 broad approval](OCT25-AUTHORITY.md). NP04–NP08 and necessary local
+roadmap generation/audits are now approved, and the existing automation is
+active again. The technical gaps below remain until verified. Do not repeat
+these superseded approval requests.
+
+Status at the earlier October 25 pause. The roadmap and comparative report were incomplete.
 The existing `continue-rubend-roadmap` automation is paused, not deleted.
 Its prompt, schedule and target chat are preserved. No detached run is active.
 No push, merge, release or deployment is authorized or performed.
