@@ -18,6 +18,14 @@ slice recovery and begin bounded U03 feasibility/cost preparation. Keep unchecke
 pruning disabled and all proof gaps explicit. U04 ordering can be evaluated
 without a U03 winner. No new-law or large-build approval is inferred.
 
+U04's [product-informed sibling ordering](U04/PRODUCT-MOVE-ORDER.md) passes its
+preflight with 2,913 verified seals and three receipts, worker gone and no stop.
+All 4,800 actual child-set cases, 160 native scores, 80,640 maps, 15,609 saved
+queries and actual routing and helper-source controls pass. The existing cursor
+retains every column. Fresh helper and Search BendTT verdicts pass. Unchanged
+cursor coverage and root gates are reused. Whole-search quality and cost remain
+open. No new pruning, production integration or performance acceptance.
+
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
 seals and two receipts, worker gone and no stop. All 464 native cases match the

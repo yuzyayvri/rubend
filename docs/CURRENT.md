@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u04-product-order-v1` archive verifies 2,913 seals and three receipts,
+worker gone and no resource stop. All 4,800 actual child-set cases, 160 native
+scores, 80,640 map entries and 15,609 saved real queries pass. The actual
+goal-routing fault has 3,200 counterexamples. All 640 finite scores, 896 cursor
+cases, twelve fallbacks and three helper-source faults pass. Synthetic cursor
+order changes in 246 cases, without dropping a column. Changed pure definitions
+and Search pass fresh BendTT verdicts. The unchanged cursor and 87-input root
+gate are explicitly reused. Private Subgroup ordering only. Whole-search
+quality, cost and application acceptance remain open. No new pruning, law,
+distance generation, production change or holdout. Read
+docs/verification/next-plan/U04/PRODUCT-MOVE-ORDER.md.
+
 The `u06-review-video-v3` archive verifies 2,860 seals and five receipts,
 worker gone and no resource stop. Desktop, responsive fallback and worker-failure
 scenarios pass independent committed-state replay, serial frame capture and
