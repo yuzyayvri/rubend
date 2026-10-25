@@ -25,6 +25,13 @@ queries and actual routing and helper-source controls pass. The existing cursor
 retains every column. Fresh helper and Search BendTT verdicts pass. Unchanged
 cursor coverage and root gates are reused. Whole-search quality and cost remain
 open. No new pruning, production integration or performance acceptance.
+The [portfolio study](U04/PRODUCT-ORDER-STUDY.md) verifies 2,952 seals and six
+receipts, worker gone and no stop. All 168 guards and 480 fixed-work requests
+pass with 270 independently replayed candidate events. The quality run executes
+192 million steps. All 160 pairs tie on final length and lower bound, with stable
+control and repeated semantics. No repeatable gain, so longer cost and profiling
+are skipped. Keep the ordinary-profile treatment private and unpromoted.
+This does not establish a CPU result or packed-small app acceptance.
 
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
@@ -134,7 +141,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
 | U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Complete four-edge audits and tiny native file restart pass. Latest screen verifies 2,842 seals/two receipts and all 53,004 entries. No added hypothetical cuts over three-edge maximum; only 32 raw entries can discriminate. Four-edge integration unpromoted, no larger-PDB rejection or speedup. Larger-format costs, NP04/NP05 and six-edge builds remain gated. |
-| U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
+| U04. Ordering, premoves, and phase-two projection | Product-order portfolio study verifies 2,952 seals and six receipts. All 168 guards and 480 requests pass. All 160 final-quality pairs tie, so longer cost and profile work are skipped. Keep it private and unpromoted. Earlier mapped helper timing remains inconclusive and is not retried unchanged. No new pruning or accepted whole-solver gain. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
 | U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Demand rendering and sampled desktop/fallback/failure review clips pass. Latest video archive verifies 2,860 seals/five receipts with real cleanup; corrected indexed previews match source. Seven proof implications, operator/final package and general-performance gates remain open. Retention stays inconclusive/private. |
 | U07. Holdout and competitors | Cold pilot verifies 2,501 seals and three receipts. All60requests accounted for, clean exits and27scorer controls. Both anytime backends cover20/20requests on four reused roots. Rubend19/20/20/20 versus bundled min2phase21/20/20/21 in every cohort. Nissy exact0/20before deadline. Exploratory only. No speed promotion, final freeze or release holdout. |

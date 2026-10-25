@@ -2,6 +2,17 @@
 
 ## Latest checkpoint
 
+The `u04-product-study-v1` archive verifies 2,952 seals and six receipts,
+worker gone and no resource stop. All 168 guards and 480 fixed-work requests
+pass, with 90 and 180 independently replayed candidate events respectively.
+The quality run executes 192,000,000 Search.advance calls. All 160 pairs tie
+on final length and lower bound, with stable identical controls and repeated
+semantics. The frozen verdict is unconfirmed fixed-work benefit. Long-cost and
+profile jobs are skipped, not measured. Keep product ordering private and
+unpromoted. New wrapper verdict and owned-array checks pass; unchanged product,
+cursor and root gates are reused. No CPU, app, new pruning, law or holdout claim.
+Read docs/verification/next-plan/U04/PRODUCT-ORDER-STUDY.md.
+
 The `u04-product-order-v1` archive verifies 2,913 seals and three receipts,
 worker gone and no resource stop. All 4,800 actual child-set cases, 160 native
 scores, 80,640 map entries and 15,609 saved real queries pass. The actual
