@@ -127,3 +127,32 @@ from either the driver's backstop or Engine's internal timer now counts as
 forced cleanup. Only normal SIGTERM or exit zero can pass. The three behavior
 mutants still reject, with unchanged positive proofs and gate evidence reused.
 Native verification is still pending; no seventh-preflight timing is a benchmark.
+
+## Verified native result
+
+The [canonical archive](u02-forward-native-v1/index.json) verifies 4,073 source
+seals and all three resource receipts, with no resource stop and the worker gone.
+Both actual native workers build, emitted C retains owned-array mode, the
+candidate pure verdict passes and fresh `just check` passes all established gates.
+
+All 8,056 requests are accounted for. Each active side returns the exact optimum
+and matching lower bound on all 3,758 independently generated shallow roots.
+The 524 protected RawJoint rows agree exactly between control and candidate.
+All 8,040 emitted answers independently replay to the original solved cube.
+These are repeated configurations of the declared roots, not 8,040 independent
+cube inputs. The geometry BFS is complete through depth three; only the frozen
+first 256 distinct depth-four roots are used at depth four.
+
+All sixteen deeper runs, eight per side, consume the fixed 200,000-call budget
+with no answer, lower bound fourteen and running status. They remain fuel-
+censored, not exact solves or completed optimality proofs. They establish that
+both workers reach the same exclusion threshold before that budget on these
+particular cases. Every native owner exits by normal SIGTERM, without either
+backstop, and its actual PID identity and IPC directory are gone.
+
+This passes the finite functional guard. It is not a speed measurement, deadline
+quality result, loaded-bound theorem, universal optimized-search refinement or
+production promotion. The next comparison freezes equal completed-contour work
+at threshold fourteen, with separate initialization, real native CPU accounting,
+alternating duplicate controls and a non-scored profile. Keep inverse masking
+and stronger correctness obligations separate.

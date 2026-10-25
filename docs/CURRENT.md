@@ -2,20 +2,18 @@
 
 ## Latest checkpoint
 
-The next fixed batch is `u02-forward-native-v1`, a private forward-only
-complete-coverage candidate with no production changes. The pure preflight
-passes through v7, including three actual behavior mutants and source-identical reuse of
-v5's passing root/candidate verdicts, 61,440 triples, 240 goal/profile cases and
-52,584 saved entries. Five earlier preparation failures are preserved, not
-relabeled. The candidate passes a transient tightness flag through existing
-lookups without new table reads or stack fields; inverse masking stays separate.
-Native verification remains pending. The batch builds control/candidate, runs
-fresh `just check`, then checks 8,056 native requests against independent shallow
-geometry and original-root replay, protected-profile behavior and four owners'
-cleanup. Internal or outer SIGKILL cannot count as clean termination. The batch
-has a 24-minute total cap under 3 GiB, nice 10 and desktop reserve.
-Read its detached receipts before edits. No timing acceptance, concrete full
-target/data proof, holdout, competitor setup or push is claimed. Read
+`u02-forward-native-v1` passes canonical verification with 4,073 seals and three
+receipts, no stop and worker gone. All 8,056 requests are accounted for. Each
+active side returns all 3,758 shallow optima, and 524 protected RawJoint rows
+agree exactly. Every one of the 8,040 emitted answers independently replays.
+All sixteen deeper runs remain fuel-censored with no answer, lower bound
+fourteen and running status at 200,000 calls. They are not exact solves.
+All four native owners terminate normally by SIGTERM and remove their IPC.
+Fresh candidate verdict, owned-array C checks and `just check` pass. Production
+is unchanged. Next freeze an equal-contour cost comparison at threshold fourteen
+with separate initialization, native CPU accounting, alternating controls and
+profiling outside the scored runs. No accepted speedup, concrete full target/data
+proof, holdout, competitor setup or push. Read
 docs/verification/next-plan/U02/FORWARD-NATIVE.md.
 
 The October 26 roadmap reconciliation is in

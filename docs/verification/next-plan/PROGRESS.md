@@ -3,15 +3,15 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The next [private forward native guard](U02/FORWARD-NATIVE.md),
-`u02-forward-native-v1`, freezes the single forward complete-coverage treatment.
-Its sixth and seventh pure preflights pass. Passing root/candidate verdicts and positive
-controls from v5 are source-identically reused; all three valid behavior mutants
-reject as intended. Earlier generator, resource, environment and invalid-fixture
-failures remain preserved. The 24-minute 3-GiB batch still must build and check
-8,056 native requests, independent optima/replay, protected profile and cleanup.
-The final source freeze rejects internal as well as outer SIGKILL shutdowns.
-No native correctness, timing, production pruning or stronger proof claim yet.
+The completed [private forward native guard](U02/FORWARD-NATIVE.md),
+`u02-forward-native-v1`, verifies 4,073 seals and three receipts, worker gone and
+no stop. All 8,056 requests are retained, with all 3,758 known optima on each
+active side, 524 identical protected-profile rows and 8,040 independent replays.
+The sixteen deeper queries remain fuel-censored with no answer and lower bound
+fourteen, not exact solves. Four owners terminate normally and remove IPC.
+Fresh candidate verdict, C ownership and `just check` pass. Earlier preparation
+failures remain preserved. Equal-contour native cost is next; no speed verdict,
+production pruning or stronger proof claim follows from this finite guard.
 
 The [October 26 reconciliation](ROADMAP-RECONCILIATION.md) maps every treatment
 family to evidence, disposition and remaining obligations. U01 clipboard and
@@ -372,7 +372,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | --- | --- |
 | U00. Controls and evidence | Native engine CPU accounting verifies 3,290 seals/three receipts, eighty requests/replays and clock-on/off state equality. Short warm windows remain timing-inconclusive. Binary/helper/root proof reuse is explicit, with the raw fresh-flag erratum retained. Production protocol, whole-command observer and limiter are unchanged. Historical mapper/browser noise remains unexplained. No speed promotion. |
 | U01. Application and delivery | Redesign, lifecycle/profile browser matrix and actual CI-package import/launch pass. Actual policy denial and the 397-byte physical download now pass, with 3,947 seals/two receipts, restored user file and clean native/IPC ownership. Final source includes demand rendering, so U07 still needs its current delivery check. Operator review remains before merge. |
-| U02. Existing-bound inference and coordinate reuse | NP01–NP03, inverse/replay and post-certificate packed admission components pass. Cached-axis cost stays inconclusive/private. The 52,584-entry inference screen passes with a substantial hypothetical signal, not saved CPU. The private forward-only candidate passes pure preflight; its 8,056-request native guard is next. Concrete target/data/traversal work remains. No new production pruning or accepted performance gain. |
+| U02. Existing-bound inference and coordinate reuse | NP01–NP03, inverse/replay and post-certificate packed admission components pass. Cached-axis cost stays inconclusive/private. The private forward candidate passes its 8,056-request finite native guard with 4,073 seals/three receipts and 8,040 independent replays. Equal-contour cost and concrete target/data/traversal work remain. No new production pruning or accepted performance gain. |
 | U03. Six-edge PDB and compression | Both full six-edge tables and independent reference-graph audits pass. NP04 semantic and NP05 path components pass within their partial concrete-refinement boundary. The 53,004-entry screen verifies 3,682 seals/two receipts and finds only two extra nineteen-step raw cut spans. Retain the existing profile; no new pruning, compression or speed promotion. |
 | U04. Ordering, premoves, and phase-two projection | Product-order portfolio study verifies 2,952 seals and six receipts. All 168 guards and 480 requests pass. All 160 final-quality pairs tie, so longer cost and profile work are skipped. Keep it private and unpromoted. Earlier mapped helper timing remains inconclusive and is not retried unchanged. No new pruning or accepted whole-solver gain. |
 | U05. Exact-context failure cache and partitioned search | Native partitions, ledger and recovery pass. NP06/NP07 conditional semantic and actual typed-reference NP08 laws pass, latest safety archive 3,757 seals/three receipts. Scaling archive verifies 3,825 seals/four receipts and 22,480 measured results, but 8.23% duplicate-pair noise forces inconclusive. Retain cache-off and serial; no universal optimized witness or speed promotion. |
