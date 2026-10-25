@@ -2,6 +2,19 @@
 
 ## Latest checkpoint
 
+The next fixed batch is `u02-forward-cost-v1`. It reuses the exact verified
+control/candidate binaries and tests equal completed threshold-fourteen work
+on all eight prior deeper roots. Twenty alternating duplicate-control batches
+each contain 4,096 measured requests after warmup. Native process CPU, Node
+driver CPU, host batch wall, initialization and memory scopes stay separate.
+The CPU counter must first pass live/exited-thread calibration. Non-scored
+profiles use the exact accepted C. One-second windows and every-pair 5% noise
+gates are fixed before measurement; no result is accepted yet. The queue has a
+27-minute cap under 3 GiB, nice 10, matched CPU2 and desktop reserve. No new Bend,
+production engine, table, GUI, competitor or holdout work. Read its detached
+receipts before edits and inspect both profiles before interpreting any numeric
+signal. Read docs/verification/next-plan/U02/FORWARD-COST.md.
+
 `u02-forward-native-v1` passes canonical verification with 4,073 seals and three
 receipts, no stop and worker gone. All 8,056 requests are accounted for. Each
 active side returns all 3,758 shallow optima, and 524 protected RawJoint rows

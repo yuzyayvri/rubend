@@ -3,6 +3,16 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The next [equal-contour cost batch](U02/FORWARD-COST.md), `u02-forward-cost-v1`,
+freezes all eight prior deeper roots, threshold fourteen and the exact accepted
+binaries. It requires CPU-counter thread calibration, separate profiles, then
+five alternating duplicate-control cohorts. Twenty batches account for 81,920
+native requests, not independent cube samples. Native/driver CPU, host wall,
+initialization and memory are distinct. One-second duration and 5% duplicate
+noise gates stay fixed. Numeric gates remain pending and cannot by themselves
+promote a solver or certify optimality. The bounded queue uses at most 3 GiB
+and 27 minutes, with matched single-core measurement and all desktop guards.
+
 The completed [private forward native guard](U02/FORWARD-NATIVE.md),
 `u02-forward-native-v1`, verifies 4,073 seals and three receipts, worker gone and
 no stop. All 8,056 requests are retained, with all 3,758 known optima on each
