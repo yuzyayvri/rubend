@@ -1,5 +1,15 @@
 # Application and package acceptance
 
+## Latest acceptance boundary
+
+The [actual-policy and physical-file run](FILE-BACKED-ACCEPTANCE.md) now closes
+clipboard/download verification. Canonical checking verifies 3,947 seals and
+both receipts, no resource stop and no remaining worker. The older failures
+below remain historical failures. No production download or clipboard handler
+was changed. The later source-bound demand-rendering app is accepted separately;
+U07 still needs the final delivery check at that source. Operator interaction
+review remains required before merge, and no merge or push is authorized.
+
 ## Current artifact
 
 The [current import queue](u01-delivery-redesign-v1/index.json) passed all

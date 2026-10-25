@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The October 26 roadmap reconciliation is in
+docs/verification/next-plan/ROADMAP-RECONCILIATION.md. U01's actual clipboard and
+physical-download gap is closed in signed local checkpoint `7dfc405`. The next
+fixed unit is `u02-inference-information-v1`, an offline opportunity screen on
+all 52,584 saved actual RawInverseThree entries. It compares distinct forward
+final-move and inverse first-move exclusions without enabling pruning. This is
+a genuinely unfinished U02 disposition step, not a repeat of the rejected
+cached-axis, six-edge or two-worker comparisons. The 1.5-GiB CPU2 observation
+and 512-MiB confirmation have a five-minute total cap. No new native build,
+search, table, competitor or final holdout is used. Read its receipts before
+edits on the next wakeup. The whole roadmap and final report remain incomplete.
+
 Yuzy's October 25 broad approval removes the NP04–NP08 and necessary local
 generation/audit authority gates. The existing `continue-rubend-roadmap`
 automation is active again, with the grant in its prompt and the same schedule

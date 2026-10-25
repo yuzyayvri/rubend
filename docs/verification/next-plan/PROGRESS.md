@@ -3,6 +3,16 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [October 26 reconciliation](ROADMAP-RECONCILIATION.md) maps every treatment
+family to evidence, disposition and remaining obligations. U01 clipboard and
+physical-download acceptance is closed by signed checkpoint `7dfc405`.
+The next fixed unit, [U02 inference information](U02/INFERENCE-INFORMATION.md),
+checks all 52,584 actual saved post-pipeline entries without new pruning.
+The entire roadmap is not finished. U07 final research/setup, freeze, evaluation,
+current delivery/regression and report remain pending. Older chronological
+entries below retain their original narrower boundaries; they are not fresh
+approval requests or current statements that completed builds are still blocked.
+
 October 24 finish order. Complete the roadmap and its required verification,
 then research/build additional 3x3 competitors, run the final comparative pass,
 and deliver a reproducible numerical report. Coordinate this with U07 so the
@@ -347,11 +357,11 @@ comparisons. This is not a production integration or accepted performance gain.
 | Unit | Current state |
 | --- | --- |
 | U00. Controls and evidence | Native engine CPU accounting verifies 3,290 seals/three receipts, eighty requests/replays and clock-on/off state equality. Short warm windows remain timing-inconclusive. Binary/helper/root proof reuse is explicit, with the raw fresh-flag erratum retained. Production protocol, whole-command observer and limiter are unchanged. Historical mapper/browser noise remains unexplained. No speed promotion. |
-| U01. Application and delivery | Redesign and keyboard repair pass full local regression and hosted CI. The actual new CI package passes private-store import, installed HTTP/native solve, and hidden-browser desktop/mobile workflows. Owners and IPC stop cleanly. Saved-evidence consistency checks passed with 1,547 seals. Clipboard/download verification stays open. |
-| U02. Existing-bound inference and coordinate reuse | NP01–NP03 and post-certificate packed admission pass full guards. Latest verifies 2,751 seals and three receipts, 1,079 admissions/inverse checks, 10,240 bit refusals and 570 native packets. Target linkage, loaded bounds, general validator completeness and optimized traversal remain open. No production pruning or accepted performance gain. |
-| U03. Six-edge PDB and compression | Binary checkpoint archive verifies 2,951 seals/three receipts, eighteen real layer restarts and both full four-edge table comparisons. Raw CPU and manifest records are preserved. Four-edge information adds no cuts over three-edge maximum and stays unpromoted. Full six-edge generation, scratch/audit costs and NP04/NP05 remain gated. No larger-PDB rejection or speedup. |
+| U01. Application and delivery | Redesign, lifecycle/profile browser matrix and actual CI-package import/launch pass. Actual policy denial and the 397-byte physical download now pass, with 3,947 seals/two receipts, restored user file and clean native/IPC ownership. Final source includes demand rendering, so U07 still needs its current delivery check. Operator review remains before merge. |
+| U02. Existing-bound inference and coordinate reuse | NP01–NP03, inverse/replay and post-certificate packed admission components pass. Cached-axis cost stays inconclusive/private. The next actual-entry inference screen remains unfinished. Concrete target/data/traversal and validator-completeness gaps remain explicit; no new production pruning or accepted performance gain. |
+| U03. Six-edge PDB and compression | Both full six-edge tables and independent reference-graph audits pass. NP04 semantic and NP05 path components pass within their partial concrete-refinement boundary. The 53,004-entry screen verifies 3,682 seals/two receipts and finds only two extra nineteen-step raw cut spans. Retain the existing profile; no new pruning, compression or speed promotion. |
 | U04. Ordering, premoves, and phase-two projection | Product-order portfolio study verifies 2,952 seals and six receipts. All 168 guards and 480 requests pass. All 160 final-quality pairs tie, so longer cost and profile work are skipped. Keep it private and unpromoted. Earlier mapped helper timing remains inconclusive and is not retried unchanged. No new pruning or accepted whole-solver gain. |
-| U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
+| U05. Exact-context failure cache and partitioned search | Native partitions, ledger and recovery pass. NP06/NP07 conditional semantic and actual typed-reference NP08 laws pass, latest safety archive 3,757 seals/three receipts. Scaling archive verifies 3,825 seals/four receipts and 22,480 measured results, but 8.23% duplicate-pair noise forces inconclusive. Retain cache-off and serial; no universal optimized witness or speed promotion. |
 | U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Demand rendering and sampled desktop/fallback/failure review clips pass. Latest video archive verifies 2,860 seals/five receipts with real cleanup; corrected indexed previews match source. Seven proof implications, operator/final package and general-performance gates remain open. Retention stays inconclusive/private. |
 | U07. Holdout and competitors | Cold pilot verifies 2,501 seals and three receipts. All60requests accounted for, clean exits and27scorer controls. Both anytime backends cover20/20requests on four reused roots. Rubend19/20/20/20 versus bundled min2phase21/20/20/21 in every cohort. Nissy exact0/20before deadline. Exploratory only. No speed promotion, final freeze or release holdout. |
 
@@ -399,9 +409,10 @@ The latest completed delivery evidence is
 The latest browser evidence is
 [the installed redesigned-package archive](U01/u01-installed-redesign-gui-v1/index.json).
 The earlier delivered package remains historical and is not relabeled.
-Clipboard denial and downloaded-file verification are explicitly unverified.
+Those older package runs do not verify clipboard denial or downloaded files.
 The [recorded observation gap](../../issues/browser-clipboard-download-acceptance.md)
-must not be hidden by a passing fixture or proof check.
+is now closed by the separate actual-policy and physical-file run, not by a
+passing fixture or proof check. The earlier failures remain preserved.
 
 The earlier detached queue was `u01-ui-checks-v5`. It rechecked saved canonical
 browser records and cleanup, the focused fixture/model/playback/export tests,

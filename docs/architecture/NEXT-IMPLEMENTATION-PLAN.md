@@ -6,6 +6,14 @@ Preserve the Bend engine, small-memory tier, existing laws, and sealed evidence.
 Execute U00 through U07 as measured units, not one combined optimization rewrite.
 Research gains are hypotheses. The original 10x to 100x target remains unachieved.
 
+Execution status is recorded in
+[the October 26 obligation/disposition matrix](../verification/next-plan/ROADMAP-RECONCILIATION.md).
+The plan's original boxes are not blanket completion claims. Actual deeper-entry
+U02 inference screening and U07 final research/comparison remain unfinished.
+Measured rejected or inconclusive treatments are not successful optimizations.
+The later approved heartbeat and NP04–NP08 authority supersede the original
+no-wakeup and approval boundaries below, not resource limits or the no-push order.
+
 ## How to read this
 
 One box is one unit of work and names the evidence that checks it. Check a box only when its evidence exists. The body is a how-to. Appendices record alternatives, hypotheses, and sources.
