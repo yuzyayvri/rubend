@@ -2,6 +2,18 @@
 
 ## Latest checkpoint
 
+The `u03-storage-capacity-v1` archive verifies 3,026 seals and three receipts,
+worker gone and no resource stop. All 4,102 arithmetic cases, five stream sizes,
+five corruptions and both full 42,577,920-word payload checks pass. The synthetic
+writer and rewriter consume 1.00 and 1.53 s CPU respectively in one planning run.
+Maximum native RSS is 269,324 KiB. The outer host-inclusive job peaks at
+443,160 KiB tree RSS. Raw counters are archived, and both synthetic files remain
+under build, totaling 340,623,360 bytes. These words are invalid distances.
+No BFS or search executes. Pure pattern and unboxed owned-array checks pass;
+unchanged root87 evidence is reused. No full-BFS RSS, build/audit ETA, new law,
+database-build admission, production, holdout or speedup claim. Read
+docs/verification/next-plan/U03/STORAGE-CAPACITY.md.
+
 The `u03-build-admission-v1` archive verifies 3,013 seals and two receipts,
 worker gone and no resource stop. All six cardinalities, emitted unboxed U32
 storage checks and eight source/record controls pass. Six-edge geometry requires

@@ -45,6 +45,12 @@ receipts, worker gone and no stop. All six cardinalities, actual unboxed storage
 checks and eight corruptions pass. No large buffer is allocated. Full checkpoint
 geometry is 170,311,680 bytes in 650 chunks, not a measured RSS or ETA. The
 four-edge-only boundary and large-build, audit and proof gates remain closed.
+The [synthetic storage preflight](U03/STORAGE-CAPACITY.md) verifies 3,026 seals
+and three receipts, worker gone and no stop. Every word in both full-capacity
+payloads passes independent streaming checks. Writer and rewriter CPU are
+1.00 and 1.53 s in this single planning run, with 269,324 KiB max native RSS.
+Outer host-inclusive tree peak is 443,160 KiB. Raw counters are preserved.
+No cube distances, BFS, search, speed comparison or full-build ETA or authority.
 
 The certificate-derived reaching bridge passes its complete guard. Its
 [recovery archive](U02/u02-certificate-recovery-v2/index.json) verifies 2,691
