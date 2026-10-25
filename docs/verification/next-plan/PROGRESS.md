@@ -27,6 +27,16 @@ scalar/block/index and bounded-sum semantics are checked. Universal symbolic
 U32/bit-storage refinement, loaded-data validity and NP05 remain open.
 No production pruning or performance claim follows.
 
+The [six-edge checkpoint pilot](U03/SIX-EDGE-CHECKPOINT.md) verifies 3,467 seals
+and four receipts, worker gone and no stop. All eight full-capacity payloads,
+six restarts, one repeat, fifteen native/counter and twelve header controls pass.
+Both shallow oracles reach 3,052 states. Every word matches, with 383,201,280
+comparisons including the repeat. All raw files total 1,873,428,483 bytes.
+Single-planning-run native CPU is 44.16 s including controls; max native RSS
+271,412 KiB, outer tree peak 758,092 KiB. This is actual resumability, not a
+full-table or cost ETA result. Full data, NP05 and production pruning remain
+unverified, not unapproved.
+
 Scheduling correction. U02 remains incomplete and unpromoted, with inconclusive
 performance evidence. Complete closure of its expanding proof programme is not
 a blanket gate on the remaining roadmap. The approved U03 dependency requires

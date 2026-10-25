@@ -11,6 +11,19 @@ NP04 and continue U03/U05. The roadmap and final comparative report are not
 complete. The holdout is unopened and nothing is pushed. Read
 docs/verification/next-plan/OCT25-AUTHORITY.md.
 
+The `u03-six-checkpoint-v1` archive verifies 3,467 seals and four receipts,
+worker gone and no stop. All eight full-capacity checkpoints, six restarts,
+one repeat, fifteen native/counter controls and twelve header controls pass.
+The independent depth-three oracle reaches 3,052 states per pattern; every
+payload word agrees, totaling 383,201,280 comparisons with the repeat.
+The actual counter-admission fault is detected. All twelve raw files remain,
+totaling 1,873,428,483 bytes. Twenty-four native commands use 44.16 s CPU
+including controls, with 271,412 KiB max native RSS. Outer tree peak is
+758,092 KiB. No full-generation ETA, full graph audit, NP05 or pruning claim.
+Continue the pinned depth-three checkpoints under bounded engineering admission.
+Read
+docs/verification/next-plan/U03/SIX-EDGE-CHECKPOINT.md.
+
 The `u03-np04-v2` archive verifies 3,379 seals and three receipts, worker gone
 and no stop. Both positive proof entrypoints, twelve false-proof entrypoints
 and native compilation are source-identically reused. All 193,545 fresh scalar
