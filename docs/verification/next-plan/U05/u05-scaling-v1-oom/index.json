@@ -1,0 +1,63 @@
+{
+  "format": "rubend-kernel-oom-background-preservation-v1",
+  "id": "u05-scaling-v1",
+  "revision": "caadba5c95cee1191d6ea1b0f9a9b473c95c4a83",
+  "preserved": true,
+  "passed": false,
+  "sourceSeals": 3802,
+  "workerGone": true,
+  "executedJobs": 1,
+  "passedJobs": 0,
+  "kernelOomConfirmed": true,
+  "measuredRunsStarted": 0,
+  "nativeOwnersStarted": 0,
+  "dirtySourceFiles": 7,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u05-scaling-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-scaling-v1-oom/0-u05-scaling-v1-plan.json.gz",
+      "bytes": 529952,
+      "compressedBytes": 180680,
+      "sha256": "2930ba943f6b2eaf890ee5d5a86738ca3910f655ed42da46e1adf388bc2b3d57",
+      "compressedSha256": "cef6f2c211f6b5c1209fe1ba306ebfeaa8a8eeb7142a43e4c0de887b003b888e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-scaling-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-scaling-v1-oom/1-status.json.gz",
+      "bytes": 993,
+      "compressedBytes": 548,
+      "sha256": "4749dd8f3b0a2f89ca588a168f0def2a2a6496274803d227e618f71357132248",
+      "compressedSha256": "95e13ee8b4d8fc295e3087850a2e894791df665721f060bb0b2b75d09d731889",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u05-scaling-v1-prepare.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-scaling-v1-oom/2-u05-scaling-v1-prepare.json.gz",
+      "bytes": 993,
+      "compressedBytes": 597,
+      "sha256": "f2ca995994dbf4187aae3b484e43533e5186f584b757b803017819f01325ef60",
+      "compressedSha256": "7d1037477c6248f5fdc77e516914a09c09bd258db4e0c8c1d3622cdcee238068",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-scaling-v1/oom-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-scaling-v1-oom/3-oom-sources.json.gz",
+      "bytes": 188507,
+      "compressedBytes": 62803,
+      "sha256": "f228c325fb2ae9960e4ecef8fd53b2baadcae1e5512f7dbc7d09e93d0f6fa494",
+      "compressedSha256": "42dfacc8b068b65c50a62a0a2bda451bf2ef2c0ffbbb5457d4de0f5075e8ec68",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-scaling-v1/oom.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-scaling-v1-oom/4-oom.json.gz",
+      "bytes": 2182,
+      "compressedBytes": 1111,
+      "sha256": "524f810d7ad725b9ed479142502f697346f2cb850747c899846908756bfce3d0",
+      "compressedSha256": "7f14b528a90616023c2e1ed707a3dd1be28c631cddb20ac99546f7170dfff39c",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}

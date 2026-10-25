@@ -60,6 +60,42 @@ or performance promotion is manufactured. Keep the cache unselected and measure
 bounded one/two-worker scaling separately. No holdout or push.
 Read docs/verification/next-plan/U05/EXACT-WORK-SAFETY.md.
 
+The `u05-scaling-v1` preparation failed with a confirmed kernel cgroup OOM at
+512 MiB. All 3,802 seals, the actual resource receipt/journal and dead worker
+identity are preserved before edits. No native owner, diagnostic or measured
+run began. The cause is whole-buffer hashing of the 1,108,546,560-byte cache.
+The controller and queue source verifier now use a fixed 256-KiB hash buffer.
+The old helper reproduces SIGKILL; the new one passes on the same cache at
+68,536 KiB maximum process RSS under the unchanged cap. Boundary, descriptor
+and bad-large-seal refusal checks pass. No performance statistic exists yet.
+Read docs/issues/partition-scaling-input-oom.md.
+
+The `u05-scaling-v2` archive verifies 3,825 seals and four receipts, worker
+gone and no resource stop. Preparation passes at 215,464 KiB tree RSS under
+the unchanged 512-MiB cap. All twenty measured batches reproduce 22,480
+partition results and one hundred candidate answers replay; ten diagnostic
+answers also replay. One-owner makespan median is 2,082.704 ms, range
+2,057.787 to 2,114.128. Two-owner median is 2,219.649 ms, range 2,188.923 to
+2,406.964. One duplicate pair differs by 8.23%, exceeding the frozen 5% gate.
+The verdict is inconclusive, with no accepted scaling benefit or quantified
+slowdown. Diagnostics identify dominant private initialization. Retain serial
+execution, preserve the failed attempt and do not rerun unchanged for luck.
+No whole-solver speed, production promotion, holdout use or push.
+Read docs/verification/next-plan/U05/PARTITION-SCALING.md.
+
+The completed queue `u05-scaling-v2` compares one and two unchanged native
+partition owners on the same 1,124 jobs. Two diagnostic readiness/RSS profiles
+are excluded from the five alternating ABBA/BAAB timing cohorts, twenty measured
+runs. Fresh-process initialization stays inside the primary launch-to-last-close
+wall interval. Whole-command CPU, largest-child RSS, sampled direct-owner RSS
+and the outer aggregate limit have separate scopes. Every result must match;
+all five candidate answers per run are independently replayed. Duplicate-control
+noise above 5% forces an inconclusive result. This is bounded-batch scaling,
+not an engine or whole-solver speedup. The existing profile stays unchanged.
+The eight-minute fixed queue uses five GiB aggregate on CPU2/3 only with full
+desktop reserve. No native rebuild, table generation, holdout or publishing.
+Read docs/verification/next-plan/U05/PARTITION-SCALING.md.
+
 The completed queue `u05-safety-v2` checks the new NP06 exact-context/radius, NP07
 coverage/exhaustion and NP08 typed left-inverse/reconstruction statements pass
 their development BendTT verdict. The guard requires twenty-four rejected

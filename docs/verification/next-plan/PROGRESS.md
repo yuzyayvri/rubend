@@ -99,6 +99,36 @@ are checked. Four actual runtime units and root87 are reused unchanged.
 The optimized engine's witness/refinement gaps remain. No cache or stronger
 label is enabled. Next measure bounded one/two-worker scaling separately.
 
+The first scaling attempt fails before every native/diagnostic/measured run.
+Its [kernel-OOM archive](U05/u05-scaling-v1-oom/index.json) preserves 3,802
+seals, actual SIGKILL/receipt/journal and worker cleanup before edits. Hashing
+the 1.1-GB cache as one buffer exceeds the 512-MiB preparation cap. Bounded
+256-KiB hashing now covers both the controller and background source verifier.
+The unchanged-cap regression fails with the old helper and passes at 68,536 KiB
+process RSS with the fix. Boundary/descriptor and large wrong-seal rejection
+checks pass. Benchmark inputs, timer/gates and memory ceilings do not change.
+
+The [partition scaling archive](U05/u05-scaling-v2/index.json) verifies 3,825
+seals and four receipts, worker gone and no resource stop. The memory fix passes
+at 215,464 KiB aggregate preparation RSS under the unchanged 512-MiB cap.
+All twenty measured runs reproduce 22,480 results and one hundred candidate
+answers replay, plus ten diagnostic answers. One-owner makespan has median
+2,082.704 ms, range 2,057.787 to 2,114.128. Two-owner median is 2,219.649 ms,
+range 2,188.923 to 2,406.964. Duplicate-control noise reaches 8.23%, exceeding
+the fixed 5% floor. Verdict is inconclusive, no scaling benefit or quantified
+regression claimed. Private initialization dominates the stage profiles.
+Keep serial execution selected and do not repeat unchanged for luck.
+
+The completed [partition scaling queue](U05/PARTITION-SCALING.md), `u05-scaling-v2`,
+uses the same source-bound 1,124 native jobs with one owner versus two fixed
+shards. Two untimed readiness-phase profiles precede five alternating cohorts,
+ten measurements per configuration. Initialization is included; no false warm
+timer starts at the later readiness event. Every candidate is independently
+replayed, and partial probes remain partial. Duplicate-control noise above 5%
+blocks a benefit claim. Ten malformed-record tests and noise/tie gates pass
+development checks. Five-GiB/two-lane admission retains desktop reserve and
+no swap. No whole-solver speed, new engine profile, native rebuild or holdout.
+
 The completed [U05 safety guard](U05/EXACT-WORK-SAFETY.md), `u05-safety-v2`, checks
 the approved NP06 exact-key failure reuse, NP07 certified finite coverage and
 NP08 actual typed left-action/reconstruction statements. Their development
