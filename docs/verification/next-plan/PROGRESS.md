@@ -56,6 +56,28 @@ CPU is 928.44 s from depth three. First-audit whole-command CPU is 215.50 s,
 wall 59.93 s in one planning run. No solver-speed or scaling claim. Pattern-one
 audit, NP05 and concrete projection/refinement remain before pruning admission.
 
+The [NP05 path and second-audit archive](U03/u03-np05-path-v1/index.json)
+verifies 3,632 seals and three receipts, worker gone and no stop. Both proof
+entrypoints pass and all fourteen false-proof entrypoints reject. All 1,093
+maximum pairs, 12,529 bound comparisons and eighteen one-move Unit-quotient
+instances pass. Pattern one passes all 42,577,920 states and 766,402,560 edges
+with exact goal, diameter ten, complete coverage and cleanup. Both six-edge
+reference graphs are now audited. Second-audit command CPU is 265.91 s and wall
+75.76 s in one planning execution, not a speed verdict. Global concrete
+commutation and codec/storage/native refinements remain. NP05 is not complete.
+Next screen marginal information on saved actual contexts before more promotion
+work. No distance regeneration or holdout use.
+
+The completed [NP05 path and second-audit unit](U03/NP05-PROJECTION-PATH.md) has a
+passing development BendTT verdict. A finite structural commutation certificate
+lifts every supplied actual solving word to an equal-length projected path.
+The projected minimum has its own attaining witness and minimality, not an
+assumed full-cube bound. The fixed queue tests fourteen false-proof entrypoints
+and concrete Unit-quotient examples, then audits only the second table. Both
+builds, the first graph audit and root87 evidence are reused. This does not yet
+instantiate global six-edge commutation or universal codec/storage refinement.
+The initial affine-callback proof failure and source remain preserved.
+
 The completed [combined build/audit queue](U03/INDEPENDENT-SIX-AUDIT.md) continues
 pattern one with unchanged native code, then checks every pattern-zero graph
 edge using independent ranking and pinned KPuzzle actions. Development controls

@@ -22,6 +22,30 @@ planning run. No solver-speed or scaling claim. Pattern-one graph audit,
 NP05 and concrete projection/refinement remain. Pruning stays disabled.
 Read docs/verification/next-plan/U03/INDEPENDENT-SIX-AUDIT.md.
 
+The `u03-np05-path-v1` archive verifies 3,632 seals and three receipts, worker
+gone and no stop. Pattern one now passes its full 42,577,920-state,
+766,402,560-edge independent audit and the stated actual JavaScript codec
+reflections. Both complete reference graphs are audited. The finite-path
+kernel passes both proof entrypoints; all fourteen altered entrypoints reject.
+All 1,093 maximum pairs, 12,529 bounded comparisons and eighteen actual
+one-move Unit-quotient instances pass. Second-audit command CPU is 265.91 s
+and wall 75.76 s in one planning run, not a solver-speed comparison.
+NP05 remains partial pending global concrete commutation and codec/storage
+refinements. Screen the real six-edge marginal information next, without
+pruning or repeating completed builds/audits. The holdout is untouched.
+Read docs/verification/next-plan/U03/NP05-PROJECTION-PATH.md.
+
+The completed queue `u03-np05-path-v1` checks the finite-path projection kernel.
+It carries each commutation instance
+as one structural certificate node, preserving actual legal replay roots,
+projected endpoints and exact HTM length. The first affine-callback draft was
+rejected and its source is preserved. The fixed queue checks fourteen actual
+false-proof entrypoints and finite maximum/one-move examples, then audits only
+pattern one using the unchanged validator. First-audit, complete builds and
+root87 evidence are reused. The global six-edge projection, codec and storage
+refinements remain open. No pruning, performance or completion claim.
+Read docs/verification/next-plan/U03/NP05-PROJECTION-PATH.md.
+
 The completed queue `u03-six-cycle-v1` reuses the tested native binary to
 continue pattern one, then independently audits the complete pattern-zero
 distance graph. The auditor passes development controls on the fully audited

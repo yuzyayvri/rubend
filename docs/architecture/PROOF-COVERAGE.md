@@ -11,6 +11,14 @@ comparisons are finite reflection, not a universal U32 or bit-storage theorem.
 Loaded-data validity and optimized pruning remain outside this result.
 The original 23-law root graph is unchanged and its evidence is reused.
 
+The [NP05 finite-path kernel](../verification/next-plan/U03/NP05-PROJECTION-PATH.md)
+lifts an actual solving word using explicit commutation instances at its legal
+successive roots. Its typed projected minimum bounds that word's exact HTM length.
+Maximum composition and eighteen Unit-quotient one-move instances check.
+Both six-edge reference graphs pass full independent finite data audits.
+Global concrete six-edge commutation, universal codec and native/storage
+refinements are not discharged. This is not a production pruning admission.
+
 | Module | Checked obligation |
 | --- | --- |
 | Toolchain | Boolean flip roundtrip; setup plumbing only |
