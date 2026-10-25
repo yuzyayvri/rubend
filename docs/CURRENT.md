@@ -2,6 +2,17 @@
 
 ## Latest checkpoint
 
+The `u00-process-cpu-v1` archive verifies 3,237 seals and three receipts,
+worker gone and no resource stop. All fifteen windows, twenty commands, five
+actual clock/backend controls and fourteen model controls pass. Five consumed
+work checksums agree. Work-window CPU has median 55.164 ms, range 54.978 to
+55.685 ms. The 200-ms sleeps consume 0.092 to 0.640 ms CPU. Sampling-loop
+means range from 480 to 744 ns, so no constant observer correction is justified.
+This is clock calibration, not solver speed or raw syscall cost. The runtime-only
+effect stays outside the pure proof graph. Root87 evidence is reused unchanged.
+Solver instrumentation, production, search, peer setup and holdout are untouched.
+Read docs/verification/next-plan/U00/PROCESS-CPU-CLOCK.md.
+
 The `u06-search-goal-v3` sealed finish verifies 3,177 seals and three receipts,
 worker gone and no resource stop. All eight input-omission controls, 8,365 fresh
 JS profile checks, 3,661 reference-goal checks and both 1,195-case native executions
