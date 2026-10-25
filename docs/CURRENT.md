@@ -2,6 +2,20 @@
 
 ## Latest checkpoint
 
+The `u06-review-video-v3` archive verifies 2,860 seals and five receipts,
+worker gone and no resource stop. Desktop, responsive fallback and worker-failure
+scenarios pass independent committed-state replay, serial frame capture and
+actual tab/viewport/native/IPC cleanup. All three H.264 clips decode correctly
+with distinct frames and expected sampled durations, totaling 599,483 bytes.
+The corrected media archive is docs/verification/next-plan/U06/review-video-v3-indexed/.
+It preserves the accepted videos byte-for-byte and selects previews by frame
+index. SSIM checks exceed 0.996 against their source images. The original
+time-seek preview mismatch and failed parallel-capture run remain preserved.
+Product and renderer are unchanged. These are sampled review clips, not cadence
+or operator approval. Clipboard/download acceptance remains open. No data,
+new proof, holdout or publishing. Read
+docs/verification/next-plan/U06/REVIEW-VIDEOS.md.
+
 The `u03-four-conditional-v1` archive verifies 2,842 seals and both receipts,
 worker gone and no resource stop. All 53,004 saved entries, 212,016 independent
 projection checks, 106,008 prefix comparisons and old-policy counts reconcile.

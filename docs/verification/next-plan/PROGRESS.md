@@ -107,6 +107,15 @@ so this cannot reject a larger database. Keep four-edge integration unpromoted.
 The measured 800-ms CPU cost is offline analysis, not search or native probes.
 No search/data regeneration, new theorem, pruning or holdout.
 
+The [U06 sampled review task](U06/REVIEW-VIDEOS.md) passes canonical verification
+with 2,860 seals and five receipts, worker gone and no stop. All three hidden
+desktop/narrow-fallback/failure flows, replay, serial captures, decoded clips
+and real tab/viewport/native/IPC cleanup pass. Three videos total 599,483 bytes.
+[Corrected indexed previews](U06/review-video-v3-indexed/index.json) match source
+images with SSIM above 0.996. Original screenshot-channel failure and incorrect
+time-seek preview are preserved, not relabeled. No app change or cadence claim.
+Operator, clipboard/download and final package gates remain open.
+
 The recovery [passed with 1,858 verified seals](U02/u02-slice-finish-v1/index.json).
 Its private profile passes 495 codecs, 2,003 coordinate cases and 4,096 rank
 comparisons. This is not a production integration or accepted performance gain.
@@ -119,7 +128,7 @@ comparisons. This is not a production integration or accepted performance gain.
 | U03. Six-edge PDB and compression | Complete four-edge audits and tiny native file restart pass. Latest screen verifies 2,842 seals/two receipts and all 53,004 entries. No added hypothetical cuts over three-edge maximum; only 32 raw entries can discriminate. Four-edge integration unpromoted, no larger-PDB rejection or speedup. Larger-format costs, NP04/NP05 and six-edge builds remain gated. |
 | U04. Ordering, premoves, and phase-two projection | Cost archive verifies 2,632 seals and three receipts. All fifteen 32-million-query samples pass checksum/duration gates, but two A/A cohorts exceed five percent in both clocks. Cost remains inconclusive; no unchanged rerun or promotion. Correctness and actual-prefix information evidence stand. Pruning/refinement and whole-solver gains remain open. |
 | U05. Exact-context failure cache and partitioned search | Coordinator archive verifies2,470seals/four receipts. Concurrent workers reproduce1,124results. Real failure cannot commit243missing jobs; checkpoint/retry recovers244jobs with one duplicate. All five owners are gone. No NP06/NP07 theorem, production bound or scaling-speed promotion. |
-| U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Latest archive verifies 2,796 seals, both receipts, 54 reference queries, 36 independent packet replays and six mutation controls. Seven optimized-reference implications remain open. Root gate is explicitly reused across 87 identical inputs. Demand rendering passes scene/app gates. Retention remains inconclusive and private. Video/operator/package and general-performance gates remain open. |
+| U06. Proof bridges and UI efficiency | Complete bounded reference and seven-entrypoint gap identification pass. Demand rendering and sampled desktop/fallback/failure review clips pass. Latest video archive verifies 2,860 seals/five receipts with real cleanup; corrected indexed previews match source. Seven proof implications, operator/final package and general-performance gates remain open. Retention stays inconclusive/private. |
 | U07. Holdout and competitors | Cold pilot verifies 2,501 seals and three receipts. All60requests accounted for, clean exits and27scorer controls. Both anytime backends cover20/20requests on four reused roots. Rubend19/20/20/20 versus bundled min2phase21/20/20/21 in every cohort. Nissy exact0/20before deadline. Exploratory only. No speed promotion, final freeze or release holdout. |
 
 Autonomous continuation now uses the existing Codex thread heartbeat
