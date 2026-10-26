@@ -3,6 +3,19 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [private-store preflight](U07/PRIVATE-PACKAGE-PREFLIGHT.md) verifies 8,117
+seals and three receipts, worker gone and no stop. All 2,133 copied paths pass
+content checks. An actual sandboxed builder shares the resource cgroup, CPU2
+and nice 10, with 512 MiB and zero swap verified. No product output is built.
+
+The next [original Nix package build](U07/LOCAL-PACKAGE-BUILD.md) reuses that
+store and admits only two local derivations, the pinned npm cache and original
+package. Twenty small signed binary prerequisites total 15,012,592 unpacked
+NAR bytes. Actual build uses 4 GiB and four low-priority lanes, no remote builder,
+strict sandbox and the existing reserves. Full delivery/export/import, installed
+and hidden-browser checks, additional solvers, freeze, comparison and report
+remain. No final holdout evaluation, speed claim or push.
+
 The [fresh final regression](U07/FINAL-REGRESSION.md) verifies 8,068 seals and
 four receipts, worker gone and no stop. All 97 top-level test commands and all
 sixteen root toolchain/proof gates pass in the isolated checkout. The original

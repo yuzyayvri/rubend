@@ -2,6 +2,25 @@
 
 ## Latest checkpoint
 
+`u07-package-preflight-v1` verifies 8,117 seals and three receipts, worker gone
+and no resource stop. All 2,133 copied paths pass content and metadata checks.
+The real sandboxed builder shares its parent's cgroup, CPU2 and nice 10, with
+an independently read 512-MiB limit and zero swap. The private local-store
+mechanism is verified. It is not a built product or installed acceptance.
+Read docs/verification/next-plan/U07/PRIVATE-PACKAGE-PREFLIGHT.md.
+
+Next is `u07-package-build-v1`. Reuse the checked private store and freeze the
+original c7d74d6 package derivation whose application graph still matches current
+source and fresh regression. The read-only plan permits only the fixed-output
+npm cache and original package as local builds. Twenty small binary substitutes
+have 15,012,592 unpacked NAR bytes. Require their signatures and identities before
+the 4-GiB, four-lane, twenty-minute actual build. No remote builders, global
+settings or disabled sandbox. Keep the twenty-five-minute batch cap, desktop
+reserve and no swap. Package export/import, installed/hidden live checks,
+additional competitors, freeze, final comparison and numerical report still
+remain. No holdout evaluation or push. Read
+docs/verification/next-plan/U07/LOCAL-PACKAGE-BUILD.md.
+
 `u07-regression-v1` verifies 8,068 seals and four receipts, worker gone and no
 resource stop. The isolated checkout freshly passes all 97 top-level regression
 commands and sixteen toolchain/proof checks, with the original 23 laws unchanged.

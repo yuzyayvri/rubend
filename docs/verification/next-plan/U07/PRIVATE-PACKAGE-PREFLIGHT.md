@@ -91,3 +91,24 @@ its parser identity and caused `unrecognised flag '--query'`. No plan or worker
 was created. The focused real-CLI test fails before and passes after preserving
 the command alias; the underlying binary remains content-sealed. This is not a
 failed private-store build, and no resource receipt is fabricated for it.
+
+## Verified private-store result
+
+The [canonical archive](u07-package-preflight-v1/index.json) verifies 8,117 seals
+and three resource receipts, with no resource stop and the detached worker gone.
+All 2,133 copied paths pass actual content verification and match their NAR
+hashes, sizes and references. The admitted NAR sum is 2,551,086,424 bytes.
+Preparation takes 20,424 ms and peaks at 159,824 KiB sampled process-tree RSS.
+These are one-run planning observations, not a copy-speed comparison.
+
+The real sandboxed builder records exactly the parent's resource cgroup,
+CPU2 affinity and nice 10. The independently read parent limits are 536,870,912
+bytes and zero swap. Sandbox fallback is disabled. This verifies the chosen
+private local-store build mechanism without delegating a build to the host
+daemon or changing global settings. The product output remains absent.
+
+The four top-level missing outputs remain explicit. The next
+[original-package queue](LOCAL-PACKAGE-BUILD.md) admits only the original npm
+cache and package as local builds, with small signed binary prerequisites.
+The full product, export/import, installed HTTP and hidden-browser gates remain
+open. Do not repeat the unchanged copy or scope probe.

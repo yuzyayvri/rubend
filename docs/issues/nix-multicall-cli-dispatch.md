@@ -24,3 +24,9 @@ the real installed CLI, not a mocked parser or a fabricated version string.
 The dispatch defect is fixed. Actual private-store copying, sandbox probe and
 full package acceptance remain unverified until their separate receipts pass.
 No solver, law, package input, security setting, holdout or push changes.
+
+The later [preflight archive](../verification/next-plan/U07/u07-package-preflight-v1/index.json)
+now verifies 8,117 seals and three receipts, with worker gone and no stop. The
+real corrected CLI completes all copied-content checks and the actual sandbox
+probe. The focused failed-before record and passing real-CLI controls are
+archived. The original unstarted attempts remain unstarted, not relabeled runs.
