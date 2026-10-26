@@ -268,6 +268,21 @@ cohorts remain before the frozen uncertainty gates. Next is
 Its actors are default exact-request, H0, inverse, small and vcube108. Frozen
 sources, configurations, budgets, resources and report/no-push gates remain.
 
+The [fourth-cohort reverse timing group](u07-final-timing-c3-a-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 334 sessions settle. Five actors have
+separate measured cgroups and fourteen available warm-readiness PSS snapshots.
+Statuses are 48 `ok`, 588 `timeout` and four `error` observations. Raw streams
+confirm the same cancellation race in default exact-request, preserved inverse
+and preserved small configurations. All failures remain terminal. The exact-
+request error is a failed timing attempt, not an optimality completion.
+Timing accounts for 4,480 slots and eleven errors; the campaign for 54,480 slots.
+All five cohorts are still required before uncertainty gates and comparison
+verdicts. Next is `u07-final-timing-c3-b-p1`, with reversed actor order vcube104,
+Nissy H48h0, Muodov C, cubing min2phase and Rubend default, and warm-then-cold
+clock order. Frozen sources, resource limits and report/no-push gates remain.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

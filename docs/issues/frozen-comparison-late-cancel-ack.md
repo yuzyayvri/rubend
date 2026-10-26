@@ -62,6 +62,15 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [fourth-cohort reverse timing group](../verification/next-plan/U07/u07-final-timing-c3-a-p1/index.json)
+records four warm instances. Default exact-request affects `release-1895` in
+repeat one. Preserved inverse affects `release-1032` and `release-9590` in
+repeat zero. Preserved small affects `release-7993` in repeat one. All four
+raw streams contain the prior `done` and late `alreadySettled` acknowledgement,
+then next-ID assertion. All sessions settle. Eleven timing errors are now
+retained, separate from the 35 quality-stage errors. The exact-request failure
+does not become an optimality completion or a short successful latency.
+
 The [paired third-cohort timing group](../verification/next-plan/U07/u07-final-timing-c2-b-p1/index.json)
 records two small-profile instances, on warm `release-1032` in repeat zero and
 warm `release-7993` in repeat one. Raw streams show the prior `done`, late
