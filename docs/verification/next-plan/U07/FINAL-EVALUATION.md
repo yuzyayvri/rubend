@@ -254,6 +254,20 @@ inverse, H0 and default exact-request. All frozen limits and no-push gates remai
 The [recorded handoff gap](../../../issues/final-evaluation-handoff-gap.md)
 after this batch delays continuation only; no measurement or failed slot is rerun.
 
+The [paired third-cohort timing group](u07-final-timing-c2-b-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 331 sessions settle. Five separate measured
+cgroups and eleven warm-readiness PSS snapshots retain their stated scopes.
+Statuses are 42 `ok`, 596 `timeout` and two `error` observations in the preserved
+small profile. Both raw streams confirm the same prior-`done`, late-`alreadySettled`
+cause and remain failed attempts. Three cohorts account for 3,840 timing slots,
+including seven timing errors. Cumulative campaign slots are 53,840. Two more
+cohorts remain before the frozen uncertainty gates. Next is
+`u07-final-timing-c3-a-p1`, with reverse actor and warm-then-cold clock order.
+Its actors are default exact-request, H0, inverse, small and vcube108. Frozen
+sources, configurations, budgets, resources and report/no-push gates remain.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

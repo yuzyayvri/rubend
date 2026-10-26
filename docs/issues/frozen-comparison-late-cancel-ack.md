@@ -62,6 +62,13 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [paired third-cohort timing group](../verification/next-plan/U07/u07-final-timing-c2-b-p1/index.json)
+records two small-profile instances, on warm `release-1032` in repeat zero and
+warm `release-7993` in repeat one. Raw streams show the prior `done`, late
+`alreadySettled` cancellation, then assertions for requests 31 versus 32 and
+18 versus 19. Both sessions settle. Seven timing instances are retained in
+addition to the 35 quality-stage instances. No failed attempt is replaced.
+
 The [paired reverse-order timing group](../verification/next-plan/U07/u07-final-timing-c1-b-p1/index.json)
 records one Rubend-default instance on warm `release-7022`, repeat zero.
 The raw stream shows `done 23`, late `cancelled 23 alreadySettled`, then the
