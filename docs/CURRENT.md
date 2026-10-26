@@ -20,6 +20,13 @@ installed/hidden-browser acceptance, additional competitors, configuration
 freeze, final evaluation and report remain unfinished. No holdout evaluation
 or push. Read docs/verification/next-plan/U07/PRIVATE-PACKAGE-PREFLIGHT.md.
 
+Its first planner invocation stops before creating a plan or worker because
+`realpath` loses the `nix-store` multicall identity. The corrected boundary
+preserves the command alias while sealing the actual executable bytes. The
+focused actual query fails before and passes after, with the wrong-identity
+mutation still rejected. No private-store copy or package build has run yet.
+Read docs/issues/nix-multicall-cli-dispatch.md.
+
 `u02-forward-cost-v3` verifies 4,219 seals and three receipts, worker gone and
 no resource stop. All twenty owners clean up and all 20,480 requests complete
 the declared threshold on eight roots. Median warm native CPU per 1,024 requests

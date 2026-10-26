@@ -84,3 +84,10 @@ license audit, installed HTTP or hidden browser acceptance. Those gates remain
 open, followed by additional-solver setup, frozen evaluation and the final
 comparative report. No solver or law changes, new table, holdout evaluation,
 performance claim, publication or push occurs. Independent review is not run.
+
+The [CLI dispatch issue](../../../issues/nix-multicall-cli-dispatch.md) preserves
+a pre-queue launcher failure. Resolving the `nix-store` multicall alias changed
+its parser identity and caused `unrecognised flag '--query'`. No plan or worker
+was created. The focused real-CLI test fails before and passes after preserving
+the command alias; the underlying binary remains content-sealed. This is not a
+failed private-store build, and no resource receipt is fabricated for it.
