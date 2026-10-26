@@ -2,6 +2,23 @@
 
 ## Latest checkpoint
 
+`u07-package-build-v1` verifies 8,141 seals and three receipts, worker gone and
+no stop. The original frozen c7d74d6 Nix package builds with its check phase
+enabled. Installed manifest/native/module checks and all five notice/license
+file identities pass. The application graph matches current source and the
+fresh regression. The build uses 75,744 ms and peaks at 3,139,588 KiB sampled
+tree RSS under four GiB. These are planning observations, not a speed claim.
+Read docs/verification/next-plan/U07/LOCAL-PACKAGE-BUILD.md.
+
+Next is `u07-delivery-v1`. Export the actual 67-path runtime closure twice,
+verify identical streams, import into a new runtime-only private store and
+exercise the real installed entrypoint in three empty namespaces. Check source
+assets, independent answer replay, request guards, cancel/resubmit and process
+cleanup. Keep raw/compressed byte caps, one-GiB jobs on CPU2, nice 10, reserve,
+no swap and a twelve-minute queue cap. Hidden real-browser acceptance, additional
+competitors, final freeze/evaluation and numerical report still remain. No
+holdout evaluation or push. Read docs/verification/next-plan/U07/LOCAL-DELIVERY.md.
+
 `u07-package-preflight-v1` verifies 8,117 seals and three receipts, worker gone
 and no resource stop. All 2,133 copied paths pass content and metadata checks.
 The real sandboxed builder shares its parent's cgroup, CPU2 and nice 10, with

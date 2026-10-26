@@ -80,3 +80,30 @@ checks and hidden real-browser acceptance remain separate gates. Then complete
 additional-solver research/setup, configuration freeze, final comparison and
 the numerical report. Do not end the automation at compilation. No holdout
 evaluation, speed claim, publication, push or independent review occurs here.
+
+## Verified original package
+
+The [canonical archive](u07-package-build-v1/index.json) verifies 8,141 seals
+and all three resource receipts, with no stop and the detached worker gone.
+The twenty declared substitutes match their frozen identities. The original
+fixed-output npm cache and package both build. The original Nix check phase is
+enabled. The actual installed package checker passes after native ELF fixups.
+
+The installed application graph matches the final-source regression and current
+source. The native SHA256 is
+`2fcce66780c152906b9b32d4a14b7f8d04169aee77a0976efb29cedb8909637c`.
+All five source license/notice/document files match their installed bytes.
+The original Nix build log is retained. This verifies file preservation, not
+an independent legal or security review.
+
+The build job takes 75,744 ms and peaks at 3,139,588 KiB sampled aggregate RSS
+under its four-GiB cap. These are one-run resource observations, not solver or
+build-speed comparisons. The 191-ms confirmation has no nonzero sampled peak;
+do not interpret that missed short window as zero memory use.
+
+The product NAR is 7,385,992 bytes. Its runtime closure has 67 paths and
+276,999,368 NAR bytes. Neither is a RAM figure. The next
+[local-delivery queue](LOCAL-DELIVERY.md) exports and imports the actual artifact
+before installed HTTP and hidden-browser acceptance. The whole workflow,
+additional competitors and numerical report remain incomplete. No holdout
+evaluation or push follows from this build.

@@ -3,6 +3,18 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [original local package](U07/LOCAL-PACKAGE-BUILD.md) verifies 8,141 seals and
+three receipts, worker gone and no stop. Its original check phase and installed
+manifest/native/module checks pass. The five source notices/licenses match.
+Its 67-path runtime closure has 276,999,368 NAR bytes, not measured RAM use.
+No speed or full-delivery acceptance is claimed from the build.
+
+The next [delivery queue](U07/LOCAL-DELIVERY.md) exports the real artifact twice,
+imports it into a new runtime-only store and checks three actual installed HTTP
+sessions with independent replay and cleanup. Hidden real-browser lanes,
+additional-solver research/setup, final freeze, comparison and numerical report
+remain. No final holdout evaluation, publication or push.
+
 The [private-store preflight](U07/PRIVATE-PACKAGE-PREFLIGHT.md) verifies 8,117
 seals and three receipts, worker gone and no stop. All 2,133 copied paths pass
 content checks. An actual sandboxed builder shares the resource cgroup, CPU2

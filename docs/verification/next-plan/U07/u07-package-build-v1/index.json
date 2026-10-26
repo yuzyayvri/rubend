@@ -1,0 +1,75 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-package-build-v1",
+  "revision": "5f0df187497a1c88378bb4244ed95a6db3c15d7a",
+  "sourceSeals": 8141,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-26T03:53:18.271Z",
+  "finishedAt": "2026-10-26T03:54:46.493Z",
+  "archives": [
+    {
+      "path": "0-u07-package-build-v1-plan.json.gz",
+      "sha256": "db2e648420ccd30cf088dfc19fd61de5d3dceb6dd0c4c5a349d85e78ab5a1b14",
+      "compressedSha256": "bfb7d6bef9d1e8db5fe4332cfc28158f276088da6e5e816862924a0d36b5b410"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "4dfb79894a2bd6f1ba0e290038545789b52c5b011aeed590f41dd731b49e8285",
+      "compressedSha256": "6ecba01bb55bd155a47e55892a8b6821526f5753aa79e569e04fb11493bed00e"
+    },
+    {
+      "path": "2-u07-package-build-v1-admit.json.gz",
+      "sha256": "7b61c42895bb35ba78617ebf1719b45bf2aba098e533de204660fc366652b71e",
+      "compressedSha256": "f050db0fff577de384c008fbe289148bd126e8ae2f3540380da04899430433c9"
+    },
+    {
+      "path": "3-u07-package-build-v1-build.json.gz",
+      "sha256": "1b8e95a2c39fb98d636675ab2a5586cf7d690cf165d38edcbe5e479188dcd1ca",
+      "compressedSha256": "b6d9f083b47d4458bc3e36eb3361bbcc4207c0984f10e195b2060524b348de4a"
+    },
+    {
+      "path": "4-u07-package-build-v1-confirm.json.gz",
+      "sha256": "c82350d6a107479633ef9d43f94842aed256247919e0375ccb1939e2738e526f",
+      "compressedSha256": "8d76d8980d48f2ed34da5ef27fa3309568d17a5c27b533b2a969216073c18b7b"
+    },
+    {
+      "path": "5-admission.json.gz",
+      "sha256": "3bea407b92dd136e769b625a9a7066315921baa40d213ddc71b92abe1e9cc986",
+      "compressedSha256": "381716dc21781b9485f005a2d433ffbaaa10d2d5b6a953f7eef1ec458656e4e1"
+    },
+    {
+      "path": "6-commands-admit.json.gz",
+      "sha256": "7861d1e22c8c458b412ffd4eda952bdaa8b1ec67f216b29f2484c2ee4336f4e9",
+      "compressedSha256": "776111f0e3a1e79ea4765f71da4305ef9f80fb7204dfbcd9b5026714121e460e"
+    },
+    {
+      "path": "7-commands-build.json.gz",
+      "sha256": "e62917e8135d6cca61d046bd5482b49fa59c92180f5aae3c820fa1af86dc73fe",
+      "compressedSha256": "24f5784e9659b7f4bd42da32ed1354d457d9c33de606e6ff9f6723899911a60d"
+    },
+    {
+      "path": "8-commands-confirm.json.gz",
+      "sha256": "7a74b16c3b7dcabff0dc7977ee2526eabfbfdcf2c6d6eab1e3d0c2df486c9b1f",
+      "compressedSha256": "736c64abd04a156e4acd8bc2ad4bbea8ab5683a0315ed4505b8dfdcbce070546"
+    },
+    {
+      "path": "9-confirmation.json.gz",
+      "sha256": "928351abed7d4a7f7dbe70a93f8a9b29901e1037a2cc9fb7cd84622db5d3f45f",
+      "compressedSha256": "c9ee1f8f35150663703b8657f112a0dc386ebec70280f02f959811b68d70e0a3"
+    },
+    {
+      "path": "10-controls.json.gz",
+      "sha256": "f952707e22178d7b08feb720d0497f3c329f73e7ee76f64ddf7c3376bd24a938",
+      "compressedSha256": "4bccccabe37f7833b1bd451675838f801308673ae3314cb27bda1b97f244c1ee"
+    },
+    {
+      "path": "11-package.json.gz",
+      "sha256": "bd23a8044b4221c501f72660c3c138c35e88a22e176c2022229ac024a3eae75d",
+      "compressedSha256": "b3911303cd5b307334568d93124d0718ad8599a0c4657ff1b6d7ad98f5e5402a"
+    }
+  ]
+}
