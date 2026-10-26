@@ -2,18 +2,24 @@
 
 ## Latest checkpoint
 
-The next fixed batch is `u02-forward-cost-v1`. It reuses the exact verified
-control/candidate binaries and tests equal completed threshold-fourteen work
-on all eight prior deeper roots. Twenty alternating duplicate-control batches
-each contain 4,096 measured requests after warmup. Native process CPU, Node
-driver CPU, host batch wall, initialization and memory scopes stay separate.
-The CPU counter must first pass live/exited-thread calibration. Non-scored
-profiles use the exact accepted C. One-second windows and every-pair 5% noise
-gates are fixed before measurement; no result is accepted yet. The queue has a
-27-minute cap under 3 GiB, nice 10, matched CPU2 and desktop reserve. No new Bend,
-production engine, table, GUI, competitor or holdout work. Read its detached
-receipts before edits and inspect both profiles before interpreting any numeric
-signal. Read docs/verification/next-plan/U02/FORWARD-COST.md.
+The first `u02-forward-cost-v1` diagnostic profile times out after 4,000 of
+4,096 requests, before any scored batch. Calibration and both profile builds
+pass. All 4,107 seals, two receipts, source and partial data are preserved before
+edits; the worker and recorded native identity are gone. The outer resource
+guard did not stop it. No performance verdict exists. The failed IPC record has
+only a cleanup flag, not a path for later direct recheck; retain that limit.
+
+The next fixed batch is `u02-forward-cost-v2`. Reuse calibration by its complete
+unchanged import closure, model controls and exact release/profile binaries.
+Reduce only non-scored profiles to 128 repeats. The regression fails with
+`512 !== 128` before correction and now passes. Scored 512-repeat batches and
+all acceptance gates remain unchanged. Two unscored sizing probes first check
+the fixed scored workload's time and counter-resolution admission. If it fails,
+scoring is explicitly unmeasured, not a passed benchmark. New reports record IPC
+paths and directly check cleanup. The queue remains capped at 27 minutes and
+3 GiB, nice 10 and CPU2 for native work. No new Bend, compiler work, production
+change, table, competitor, holdout or push. Read
+docs/verification/next-plan/U02/FORWARD-COST.md.
 
 `u02-forward-native-v1` passes canonical verification with 4,073 seals and three
 receipts, no stop and worker gone. All 8,056 requests are accounted for. Each

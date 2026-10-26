@@ -40,6 +40,8 @@ A fixed local calibration compares that unchanged parser with independent
 threads are alive and again after they exit. A missing thread-group contribution,
 PID reuse, counter regression, wrong unit or discrepancy above forty milliseconds
 fails before profiling or measurement. Calibration is not solver performance.
+The original preparation passes this calibration. Recovery reuses its exact
+source import closure and raw record rather than repeating the unchanged work.
 
 For each real sample, native CPU is the counter difference from before the first
 measured request through the last observed result. Native input parsing, search,
@@ -96,9 +98,11 @@ Keep `performanceAcceptance:false` and production promotion closed.
 
 ## Separate profiles and resource admission
 
-Build non-scored `-O3 -g -pg` diagnostic executables from the exact accepted C,
-using pinned Nix tooling. Profile both arms on the same batch and require the
-same semantic digest as the release runs. Preserve compiler commands, hashes,
+The original preparation builds non-scored `-O3 -g -pg` diagnostic executables
+from the exact accepted C using pinned Nix tooling. Recovery reuses those
+unchanged executables and compiler records. Profile both arms on the same
+per-request cases and target, using 128 repetitions rather than the scored 512.
+Require the same per-root semantic digest as the release runs. Preserve compiler commands, hashes,
 raw gmon files and full line-level gprof output. Profiles include initialization
 and instrumentation; their absolute timings and shares are not release timings.
 
@@ -108,8 +112,9 @@ diagnostic-only path; retain that expected message explicitly. It is not GUI
 lifecycle acceptance. Scored owners use ordinary Engine close and normal SIGTERM.
 Either internal or outer SIGKILL, leaked owner or retained IPC fails the run.
 
-The fixed batch `u02-forward-cost-v1` requests at most 3 GiB. Preparation and
-profiling each have four minutes; scored work has fifteen minutes on CPU2.
+The fixed recovery batch `u02-forward-cost-v2` requests at most 3 GiB. Reuse
+preparation has sixty seconds under 512 MiB, and sizing has one hundred seconds.
+Profiling has four minutes; scored work has fifteen minutes on CPU2.
 Confirmation has sixty seconds under 512 MiB. The whole queue cap is 27 minutes.
 Keep nice 10, desktop reserve, no swap, memory-pressure guards and the artifact
 lease. A scored child has forty seconds; a diagnostic profile has ninety.
@@ -118,3 +123,40 @@ No native build overlaps a scored batch or browser preview.
 No new Bend/foreign code, table, application change, inverse-mask treatment,
 competitor setup, final holdout, publication or independent review occurs.
 Read detached receipts and the canonical checker before tracked edits.
+
+## Preserved diagnostic failure and recovery admission
+
+The [failed v1 archive](u02-forward-cost-v1-failed/index.json) verifies all 4,107
+seals and both resource receipts before edits. Calibration and profile builds
+pass, but the first instrumented sample times out at ninety seconds with 4,000
+of 4,096 entries retained. The native exits by SIGTERM and the detached worker
+is gone. No scored measurement starts, and the failed run gets no speed verdict.
+The original omitted IPC path remains a historical recording limit, not a
+fabricated direct recheck. See [the issue](../../../issues/forward-cost-profile-window.md).
+
+The calibration's live-worker process counter is 5,990 ms versus 5,993.577 ms
+from independent process CPU accounting. After worker exit it is 5,990 ms versus
+5,998.565 ms, within the fixed forty-millisecond allowance. These are Node
+checksum-work calibration numbers, not solver CPU. Recovery checks the complete
+unchanged calibration import closure and reuses the actual passed data.
+
+The corrected typed input format v2 separates measured, diagnostic and sizing
+workloads. The regression preserves its failing-before source and diagnostic
+`512 !== 128`, then passes the 128-repeat profile with 512-repeat scoring intact.
+Profiles contain 1,024 requests each. Scored batches still contain 4,096 each.
+No old output or binary is overwritten, and new samples record their actual IPC
+directory for direct cleanup validation.
+
+Before profiling and scoring, two non-scored release sizing probes each run
+64 repetitions, or 512 requests. Freeze the projection rule before running them.
+Scale each observed warm interval by eight. Require projected native CPU of at
+least 1,500 ms on both arms and projected warm host wall plus observed readiness
+of at most 30,000 ms on both arms. This is conservative workload admission,
+not a speed estimate, ratio comparison, algorithm selection or measured gain.
+It does not change the actual one-second or five-percent scoring gates.
+
+If the sizing gate fails, still retain the diagnostic profiles and all sizing
+data, but write an explicit unmeasured/inconclusive disposition instead of
+launching scored work. A passing execution receipt with that disposition is
+not a passed benchmark or a completed roadmap. Do not adapt the scored count
+after seeing timing ratios. Any later sizing change needs a distinct fixed plan.
