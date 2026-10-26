@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+`u07-regression-v1` verifies 8,068 seals and four receipts, worker gone and no
+resource stop. The isolated checkout freshly passes all 97 top-level regression
+commands and sixteen toolchain/proof checks, with the original 23 laws unchanged.
+All 163 shallow optimum cases and 34 engine requests pass. Original builds,
+caches and dependencies are unchanged, with no remaining snapshot-cwd processes.
+These are verification results, not a speed or full optimized-proof claim.
+Read docs/verification/next-plan/U07/FINAL-REGRESSION.md.
+
+Next is `u07-package-preflight-v1`, a private local-store admission and tiny real
+sandboxed build before the full Nix package. Four required outputs are missing,
+three npm hooks and the pinned npm dependency cache. Keep them open, not
+mistaken for realized outputs. Copy only admitted cached inputs, check their
+contents and verify actual builder cgroup/affinity under the ordinary limits.
+No global settings or host-daemon build. The full product build, license audit,
+installed/hidden-browser acceptance, additional competitors, configuration
+freeze, final evaluation and report remain unfinished. No holdout evaluation
+or push. Read docs/verification/next-plan/U07/PRIVATE-PACKAGE-PREFLIGHT.md.
+
 `u02-forward-cost-v3` verifies 4,219 seals and three receipts, worker gone and
 no resource stop. All twenty owners clean up and all 20,480 requests complete
 the declared threshold on eight roots. Median warm native CPU per 1,024 requests

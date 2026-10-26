@@ -3,6 +3,20 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [fresh final regression](U07/FINAL-REGRESSION.md) verifies 8,068 seals and
+four receipts, worker gone and no stop. All 97 top-level test commands and all
+sixteen root toolchain/proof gates pass in the isolated checkout. The original
+23 laws, 163 native shallow optimum cases and 34 engine cases pass. Original
+builds, caches and dependencies stay unchanged. No comparative speed, final
+installed package or overall completion is claimed.
+
+The next [private-package preflight](U07/PRIVATE-PACKAGE-PREFLIGHT.md) copies
+only admitted cached inputs and tests one actual tiny sandboxed builder under
+the resource cgroup. Three npm hooks and the fixed-output npm cache remain
+missing prerequisites, not accepted cached paths. Full package/license/installed
+and hidden-browser checks remain, then additional competitors, freeze, untouched
+evaluation and numerical report. No push or final holdout evaluation.
+
 The [scored U02 cost result](U02/FORWARD-COST-RESULT.md) verifies 4,219 seals and
 three receipts, worker gone and no stop. All twenty owners clean up and 20,480
 threshold requests complete on eight roots. Native CPU medians are 20,265 and

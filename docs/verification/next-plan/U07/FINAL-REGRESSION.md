@@ -67,3 +67,29 @@ Passing this queue is not installed Nix delivery, real-browser acceptance,
 additional-solver setup, the final comparative benchmark or a speed verdict.
 Those remaining U07 gates stay open. Work is solo, with independent review not
 run. The existing automation continues until the full report is delivered.
+
+## Verified result
+
+The [canonical archive](u07-regression-v1/index.json) verifies 8,068 source seals
+and four resource receipts, with no resource stop and the detached worker gone.
+The actual local fixture checkout contains 3,754 tracked files and 3,805 copied
+dependency files. Every original and copied digest remains unchanged after work.
+
+The complete unchanged 97-command `just test` passes freshly. The recorded core
+checks include 10,000 independent transitions, 1,000 arbitrary legal states and
+85,394 coordinate roundtrips. All 163 sampled native shallow optimum cases pass.
+The engine checks all 34 requests and verifies every returned solution. Its
+single cancellation observation is 11 ms, not a repeated latency or p95 claim.
+The HTTP guards, solve and abort recovery pass. Normal suite failure, export,
+keyboard, model, renderer, profile and owner/IPC checks also pass.
+
+Fresh `just check` passes all sixteen gates, including both root proof entrypoints,
+the original 23 laws and rejected false/open/unsafe fixtures. The regression job
+takes 502,171 ms and peaks at 2,467,376 KiB sampled aggregate RSS. The proof job
+takes 53,047 ms and peaks at 2,408,708 KiB. These are one-run resource observations,
+not a build speed comparison or solver gain. The observed snapshot-cwd process
+set is empty. Original builds, caches and dependencies remain sealed.
+
+The [private-package preflight](PRIVATE-PACKAGE-PREFLIGHT.md) is next. The final
+Nix artifact and installed/hidden live acceptance remain unverified. No final
+solver holdout is evaluated, and no overall completion or push follows.
