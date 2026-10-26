@@ -2,6 +2,33 @@
 
 ## Latest checkpoint
 
+`u02-forward-cost-v3` verifies 4,219 seals and three receipts, worker gone and
+no resource stop. All twenty owners clean up and all 20,480 requests complete
+the declared threshold on eight roots. Median warm native CPU per 1,024 requests
+is 20,265 ms for control and 15,650 ms for the private candidate. One control
+duplicate varies by 5.091448%, above the frozen 5% limit. The verdict is
+inconclusive, not an accepted speedup. Keep the candidate private and do not
+rerun unchanged for luck. Concrete target/data/traversal proofs stay open.
+Read docs/verification/next-plan/U02/FORWARD-COST-RESULT.md.
+
+U00 through U06 now have recorded treatment dispositions, not universal proof
+or performance acceptance. U07 still needs fresh final-source regression and
+delivery checks, then the coordinated additional-solver research/setup, frozen
+evaluation and numerical report. The next bounded unit isolates the full
+regression checkout so fresh builds cannot overwrite earlier sealed artifacts.
+No final holdout evaluation, competitor setup, push or overall completion yet.
+
+The next fixed queue is `u07-regression-v1`. Its fresh fixture checkout copies
+all tracked source and dependencies, then runs the unchanged 97-command
+`just test` and fresh sixteen-check `just check`. The latter checks the original
+23 laws through both proof entrypoints and rejects the existing false fixtures.
+Earlier approved-addition and table-audit evidence is reused by source identity.
+Preparation/confirmation use 512 MiB, regression uses 4 GiB and twenty minutes,
+proof uses 3 GiB and three minutes. Serial jobs stay inside twenty-seven minutes,
+with up to four nice-10 lanes, desktop reserve and no swap. Installed Nix
+delivery, hidden live checks, competitor setup/freeze/evaluation/report stay open.
+Read docs/verification/next-plan/U07/FINAL-REGRESSION.md.
+
 `u02-forward-cost-v2` passes canonical verification with 4,169 seals and five
 receipts, no stop and worker gone. Both shorter profiles complete, and all four
 sizing/profile native identities and IPC paths are directly gone. The diagnostic

@@ -1,5 +1,13 @@
 # Subgroup-exclusion preflight
 
+This page preserves the historical preflight below. Later NP01 through NP03
+reference proofs pass their stated contracts, followed by the finite
+[native candidate guard](FORWARD-NATIVE.md). Its
+[scored cost](FORWARD-COST-RESULT.md) is inconclusive under the frozen noise
+gate, so the candidate remains private. Concrete target/data/traversal bridges
+stay open. U01's clipboard/download gap is now closed. Historical approval and
+pending-run statements below are not the current execution queue.
+
 Yuzy approved NP01–NP03 on October 23. These statements are not yet proved in
 Bend, and no new pruning is enabled. The existing 23 laws remain unchanged.
 U00's raw timing gate is still inconclusive and U01's clipboard/download gap

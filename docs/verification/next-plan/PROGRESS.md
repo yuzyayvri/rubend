@@ -3,6 +3,20 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [scored U02 cost result](U02/FORWARD-COST-RESULT.md) verifies 4,219 seals and
+three receipts, worker gone and no stop. All twenty owners clean up and 20,480
+threshold requests complete on eight roots. Native CPU medians are 20,265 and
+15,650 ms per 1,024 requests. A 5.091448% control duplicate exceeds the frozen
+5% gate. The result remains inconclusive and private, with no default or proof
+promotion. Do not repeat it unchanged for luck. This is a disposition, not a
+successful optimization or an approved deferral of its open proof bridges.
+
+U07 fresh final-source regression and delivered artifact checks remain before
+the coordinated additional-solver research, freeze, untouched evaluation and
+numerical report. The full workflow is incomplete. The next test checkout is
+isolated to preserve every earlier sealed build and cache. No holdout evaluation
+or push is authorized by this transition.
+
 The [v2 cost recovery](U02/FORWARD-COST.md) verifies 4,169 seals and five receipts,
 worker gone and no stop. Both 1,024-request diagnostics complete and all four
 native PID/start identities and recorded IPC paths are gone. The diagnostic

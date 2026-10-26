@@ -31,12 +31,15 @@ move. A successful result from that call alone cannot justify an optimal label.
 | Loaded estimates | Connect projection semantics, universal admissibility and the file's validated values. Fingerprints and finite audits are evidence, not that theorem. |
 | Optimized contour | Relate frames, path normalization, cuts and exhaustion to the reference, including empty paths and U32 arithmetic. |
 | Portfolio and interruption | Preserve coverage through deduplication, shared incumbents, exact/improving scheduling and cancellation. |
-| Optional cache and partition | NP06/NP07 remain unapproved. Diagnostic receipts cannot supply their missing completed-failure and whole-contour premises. |
+| Optional cache and partition | NP06/NP07 semantic components are now approved and checked in the later U05 unit. Runtime completed-failure and whole-contour witnesses remain missing; diagnostic receipts cannot supply them. |
 | Exported status | Numeric flags and JSON contain no optimized exclusion proof. Keep search-established optimality separate from formal certification. |
 
 The existing reference subgroup theorems do not discharge these concrete
-premises by themselves. NP04/NP05 remain separately gated for U03. No new
-NP04–NP08 work, production pruning or stronger app label is included here.
+premises by themselves. The later October 25 grant approves NP04 through NP08.
+Their [U03](../U03/NP05-PROJECTION-PATH.md) and
+[U05](../U05/EXACT-WORK-SAFETY.md) records preserve checked semantic components
+and open concrete bridges. This earlier U06 unit does not complete those
+bridges, enable production pruning or add a stronger application label.
 
 ## Reproducible checks
 

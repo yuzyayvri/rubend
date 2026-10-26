@@ -1,5 +1,9 @@
 # Equal completed-contour cost of forward coverage
 
+The [completed scored result](FORWARD-COST-RESULT.md) is inconclusive because
+the frozen duplicate CPU gate fails. Production remains unchanged. The sections
+below preserve the protocol and its preparation history, not a pending rerun.
+
 The [finite native guard](FORWARD-NATIVE.md) passes. This experiment asks whether
 the same two verified native binaries consume less CPU to reach the same
 search-established exclusion threshold. It does not yet test deadline answers,

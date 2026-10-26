@@ -1,5 +1,9 @@
 # Private forward complete-coverage experiment
 
+The finite guard below passes. The later [scored cost](FORWARD-COST-RESULT.md)
+is inconclusive under the unchanged noise gate. The candidate stays private,
+with no production inference, proof completion or performance promotion.
+
 The [actual-entry screen](INFERENCE-INFORMATION.md) shows substantial candidate
 information. This next unit implements one isolated treatment, forward complete
 coverage only. It does not integrate production pruning or combine inverse

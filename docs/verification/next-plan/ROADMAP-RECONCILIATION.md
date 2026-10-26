@@ -21,7 +21,7 @@ called approved-deferred to avoid difficult work.
 | U00 stable timing and causal attribution | [Whole-command CPU observer](U00/CPU-OBSERVER.md), [helper A/A diagnostic](U00/NATIVE-AA-CPU.md), [process clock](U00/PROCESS-CPU-CLOCK.md) and [native windows](U00/NATIVE-CPU-WINDOWS.md) are verified. Historical mapper/browser noise is not explained; short warm windows remain unresolved. | Retain inconclusive historical verdicts. Final comparisons need their own frozen noise gates. No unchanged rerun to clear an old gate. |
 | U01 browser and installed CI delivery | [Profile/package/lifecycle matrix](U01/README.md), redesign regression and installed redesigned package are verified. [Actual clipboard and physical download](U01/FILE-BACKED-ACCEPTANCE.md) now close the last named observation gap. | U07 must check the final delivered source. Current source has the later demand-rendering change, so the older CI package is not its final package receipt. |
 | U01 interaction review | Screenshots and [three sampled videos](U06/REVIEW-VIDEOS.md) are retained. | Operator review remains a before-merge gate, not supplied by solo execution. No merge or push is authorized. |
-| U02 subgroup final/first exclusions | [Independent four-ply DAG](U02/README.md), NP01–NP03, packed inverse/replay/admission components pass their stated guards. The [private forward candidate](U02/FORWARD-NATIVE.md) now passes 8,056 finite native requests, all 3,758 shallow optima per active side, 8,040 independent answer replays and four normal owner/IPC cleanups. No production inference is enabled. | Equal-contour native cost and concrete target/data bridges remain. Keep inverse first-move masking separate. Do not call static intervals CPU savings, mark the missing proofs complete or quietly drop the candidate. |
+| U02 subgroup final/first exclusions | [Independent four-ply DAG](U02/README.md), NP01–NP03, packed inverse/replay/admission components pass their stated guards. The [private forward candidate](U02/FORWARD-NATIVE.md) now passes 8,056 finite native requests, all 3,758 shallow optima per active side, 8,040 independent answer replays and four normal owner/IPC cleanups. No production inference is enabled. | [Equal-contour cost](U02/FORWARD-COST-RESULT.md) completes twenty owners and 20,480 requests but a 5.091448% duplicate exceeds the frozen 5% gate. The disposition is inconclusive and private. Do not rerun unchanged for luck or promote. Concrete target/data bridges remain open for this unselected candidate. Inverse first-move masking stays separate and disabled. |
 | U02 retained rotated coordinates | [Actual source-isolated search](U02/CACHED-AXIS-SEARCH.md) matches states/work; [cost](U02/CACHED-AXIS-COST.md) and [development noise](U02/DEVELOPMENT-CONTROL-NOISE.md) keep performance inconclusive. | Keep private and unpromoted. No winning default or accepted general speedup. |
 | U02 probe order and dual inverse | [Conditional pipeline diagnostic](U02/PIPELINE-DIAGNOSTIC.md) informs lazy staged coordinate updates. Rejected corner-first/late policies remain rejected. [NP08 reference identity](U05/EXACT-WORK-SAFETY.md) proves left action. No new measured inversion limiter justifies an optimized dual-state treatment. | Do not mistake the reference identity for a dual-state engine or repeat rejected orderings unchanged. |
 | U03 six-edge data | Both 42,577,920-state tables are built; [both full reference-graph audits](U03/NP05-PROJECTION-PATH.md) pass with exact source/data identities. Checkpoints and independent corruption tests are retained. | Preserve completed tables and audits; no rebuild is needed. Concrete native/codec/storage proof boundaries remain explicit. |
@@ -39,11 +39,17 @@ called approved-deferred to avoid difficult work.
 
 ## Exit still open
 
-First finish the U02 native forward-coverage treatment and concrete correctness
-work warranted by its now verified opportunity signal. Do not call all
-pre-evaluation work finished before its disposition. Other candidate integration
-gates stay closed on the recorded negative,
-unconfirmed or inconclusive dispositions; they are not successful optimizations.
+The U02 native forward-coverage treatment now has a verified finite guard and
+an inconclusive scored cost disposition under the unchanged gate. It stays
+private. Concrete target/data and optimized traversal proofs are not marked
+complete. They remain closed integration gates for an unselected candidate,
+not an approved deferral or an enabled deduction. Other candidate integration
+gates likewise stay closed on their recorded negative, unconfirmed or
+inconclusive dispositions. These are not successful optimizations.
+
+U07 first needs fresh final-source regression and delivered-artifact checks.
+Those checks do not evaluate final solver holdout cases. Their builds must use
+an isolated checkout so earlier sealed artifacts and caches remain unchanged.
 
 Then perform the requested additional-solver research/setup and coordinate the
 final evaluation with U07. Freeze Rubend and competitors before opening untouched
