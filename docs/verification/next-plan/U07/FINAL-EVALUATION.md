@@ -152,9 +152,34 @@ All complete answers independently replay and twenty-four sessions settle.
 Its statuses are 2,081 `ok`, 2,915 `timeout` and four `error` observations.
 Each new raw sequence confirms the same prior-`done`, late-`alreadySettled`
 cancellation race. The first nine groups account for 45,000 campaign slots,
-including all twenty-four errors. The next fixed group is
-`u07-final-quality-09-p1`, the last quality group before the fixed timing cohorts.
-No frozen sources or configurations change.
+including all twenty-four errors.
+
+The [tenth quality group](u07-final-quality-09-p1/index.json) verifies 4,972 seals
+and two receipts, worker gone and no resource stop. All 5,000 slots on release
+inputs 9,000 through 9,999 are recorded, with no pending or uncertain slots.
+All complete answers independently replay and thirty-one sessions settle.
+Its statuses are 2,076 `ok`, 2,913 `timeout` and eleven `error` observations,
+each with the same prior-`done`, late-`alreadySettled` cancellation cause.
+
+All ten canonical indices, confirmation hashes and forty worker-output hashes
+are checked together after the last quality batch. They account for exactly
+50,000 unique slots, 10,000 per primary actor, with all 235 sessions settled
+and no pending or uncertain claims. Aggregate statuses are 20,494 `ok`,
+29,471 `timeout` and 35 `error`. Status is not coverage; timed-out requests can
+retain eligible answers. The full report computes quality, coverage and arrival
+metrics only under the unchanged contracts. No quality-stage latency ranking.
+
+The next group is `u07-final-timing-c0-a-p1`. Its five actor jobs run serially
+on CPU2, with four GiB each, nice 10, no swap and desktop reserve. Each task
+contains 128 slots, two cold and two warm repeats over the frozen thirty-two
+case IDs. Its hard cap is 240 seconds and its soft checkpoint is 210 seconds.
+The queue cap is 26 minutes. Later cohorts reverse actor and clock order.
+The full five-cohort duplicate/noise rules stay fixed. Cold means process-cold,
+not disk-cold; timed CPU includes its documented driver/descendant scope.
+The first group covers Rubend default, cubing min2phase, Muodov C, Nissy H48h0
+and vcube104. Other frozen configurations follow in its paired second group.
+All timing, structural and longer-budget groups, final U07 acceptance and report
+delivery remain unfinished. No frozen source or configuration changes.
 
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical

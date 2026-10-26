@@ -62,6 +62,15 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [tenth final quality group](../verification/next-plan/U07/u07-final-quality-09-p1/index.json)
+records eleven further instances on `release-9058`, `release-9097`,
+`release-9130`, `release-9540`, `release-9602`, `release-9696`, `release-9761`,
+`release-9762`, `release-9807`, `release-9837` and `release-9859`. All eleven raw
+streams show the same preceding `done`, late `alreadySettled` cancellation and
+next-ID assertion. All eleven sessions settle. The complete 50,000-slot quality
+population retains 35 errors. They belong to the pinned solver-plus-adapter
+contract, not an intrinsic native-search failure rate. No failed slot is rerun.
+
 The [ninth final quality group](../verification/next-plan/U07/u07-final-quality-08-p1/index.json)
 records four further instances on `release-8198`, `release-8392`, `release-8461`
 and `release-8823`. All four raw streams show the same preceding `done`, late

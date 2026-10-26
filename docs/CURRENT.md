@@ -2,19 +2,24 @@
 
 ## Latest checkpoint
 
-`u07-final-quality-08-p1` passes canonical verification with 4,972 source seals
+`u07-final-quality-09-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000
-planned slots on release inputs 8,000 through 8,999 are recorded, with zero pending
-or uncertain slots. All complete answers independently replay and all twenty-four
-actor sessions settle. The saved statuses are 2,081 `ok`, 2,915 `timeout` and four
+planned slots on release inputs 9,000 through 9,999 are recorded, with zero pending
+or uncertain slots. All complete answers independently replay and all thirty-one
+actor sessions settle. The saved statuses are 2,076 `ok`, 2,913 `timeout` and eleven
 `error`. A timeout can contain an eligible answer, so these are not coverage
 counts. No isolated quality latency or per-actor CPU ranking is inferred.
 
-The first nine quality groups account for 45,000 of 57,678 planned campaign slots.
-Twenty-four cumulative errors are the recorded benchmark-adapter cancellation race,
-not invalid returned solutions. All four additional raw session sequences show
+All ten quality groups account for 50,000 unique planned slots across 10,000
+release inputs and five actors. Every canonical output hash is rechecked.
+All 235 sessions settle, with zero pending or uncertain slots. Aggregate
+statuses are 20,494 `ok`, 29,471 `timeout` and 35 `error`. These are not answer
+coverage or solution-quality results. The full numerical report remains pending.
+
+Thirty-five cumulative errors are the recorded benchmark-adapter cancellation race,
+not invalid returned solutions. All eleven additional raw session sequences show
 the prior request's `done` followed by its `alreadySettled` cancellation
-acknowledgement while the next request is active. All four sessions settle.
+acknowledgement while the next request is active. All eleven sessions settle.
 Read docs/issues/frozen-comparison-late-cancel-ack.md. Keep all terminal errors
 and the seal unchanged. Do not rerun completed slots or tune on these cases.
 The report must retain this limitation.
@@ -22,8 +27,11 @@ The report must retain this limitation.
 After verifying that queue and before the next group, the October 24 order
 remains binding. Finish the roadmap, comparative report and delivery of numbers
 before automation deletion. Yuzy separately decides any later push to main.
-The next fixed group is `u07-final-quality-09-p1`, using the same frozen metadata,
-four-GiB shared ceiling, CPU2 through CPU5, nice 10, no swap and desktop reserve.
+The next fixed group is `u07-final-timing-c0-a-p1`, using the same frozen metadata.
+Five actor jobs run serially on CPU2, each with four GiB, nice 10, no swap and
+desktop reserve. Each has 128 cold/warm duplicate slots, a 240-second hard cap
+and a 210-second soft checkpoint. The queue cap is 26 minutes. All five cohorts,
+both repeats, exact/anytime distinctions and noise gates remain unchanged.
 The final report and remaining U07 acceptance are still unfinished.
 
 On October 27 Yuzy resumed continuation after the usage-limit pause. The sixth
