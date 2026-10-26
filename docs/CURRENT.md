@@ -2,6 +2,28 @@
 
 ## Latest checkpoint
 
+`u07-installed-gui-v1` passes canonical verification with 8,326 seals and two
+receipts, no resource stop and the worker gone. Fifteen browser observations
+and fifteen screenshots are retained. Eleven solution/state checks and 27 raw
+candidate-packet checks independently replay through integer sticker geometry.
+The four-HTM known optimum, export, playback, cancel/resubmit, invalid/solved
+input, reload/theme persistence, narrow layout and sticker editor pass. Ten
+post-live fixture lifecycles and focused controls pass. All recorded live and
+fixture namespace processes are gone. The browser was hidden and outside the
+server resource cgroup, not CPU/memory-capped. Read
+docs/verification/next-plan/U07/INSTALLED-BROWSER.md.
+
+U00 through U06 treatment dispositions, fresh source-identical full regression,
+original Nix package, real artifact export/import, installed HTTP and known-case
+browser acceptance are recorded. This is not overall roadmap completion.
+The explicit October24 order now requires additional-solver primary-source
+research and local setup as prerequisites to the single coordinated U07 final
+evaluation. Freeze all actor revisions, configurations and licenses before
+untouched solver cases. Complete and deliver the numerical report, then delete
+the existing automation. Yuzy decides separately on any later push to main.
+No push, merge, publication or final holdout solve is authorized by this handoff.
+Read docs/verification/next-plan/U07/ADDITIONAL-SOLVERS.md.
+
 `u07-delivery-http-v1` passes canonical verification with 8,248 seals and three
 receipts, worker gone and no resource stop. The unchanged real exports and
 runtime-only import pass all 67 content and metadata checks. Three installed

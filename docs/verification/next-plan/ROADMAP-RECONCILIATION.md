@@ -1,6 +1,6 @@
 # Roadmap evidence and remaining work
 
-Reconciled October 26, 2026, Asia/Manila, after signed checkpoint `7dfc405`.
+Reconciled October 26, 2026, Asia/Manila, after signed checkpoint `966d1d3`.
 The entire roadmap is not complete. This record separates actual unfinished
 work from measured negative or inconclusive treatments. It does not mark an
 unchecked test, proof, performance target or review passed.
@@ -47,11 +47,17 @@ not an approved deferral or an enabled deduction. Other candidate integration
 gates likewise stay closed on their recorded negative, unconfirmed or
 inconclusive dispositions. These are not successful optimizations.
 
-U07 first needs fresh final-source regression and delivered-artifact checks.
-Those checks do not evaluate final solver holdout cases. Their builds must use
-an isolated checkout so earlier sealed artifacts and caches remain unchanged.
+U07's [fresh isolated regression](U07/FINAL-REGRESSION.md), [original local Nix
+package](U07/LOCAL-PACKAGE-BUILD.md), [actual export/import and installed
+HTTP](U07/LOCAL-DELIVERY.md), and [known-case hidden browser
+acceptance](U07/INSTALLED-BROWSER.md) now pass their recorded checks. The browser
+unit verifies 8,326 seals and two receipts, fifteen observations, eleven
+solution/state replays, 27 raw candidate replays and ten fixture lifecycles.
+Source-identical prior proof, failure, renderer, clipboard and download evidence
+is reused within its stated boundaries. No final solver holdout evaluation
+occurs in these integration checks.
 
-Then perform the requested additional-solver research/setup and coordinate the
+Now perform the requested additional-solver research/setup and coordinate the
 final evaluation with U07. Freeze Rubend and competitors before opening untouched
 cases. Do not duplicate the final holdout or tune on it. Reuse source-identical
 passing evidence; the final integration suite and delivery must describe the

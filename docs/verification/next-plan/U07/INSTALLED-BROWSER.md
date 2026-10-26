@@ -44,7 +44,20 @@ It is not relabelled as freshly rerun against the installed artifact. The
 post-live fixed queue checks ten fixture lifecycles plus focused package,
 model, playback, export, origin, historical-pin and settlement controls.
 
-The actual browser session and post-live checks are pending. This is not the
+The actual browser session and post-live checks pass canonical verification
+with 8,326 seals and two resource receipts, no resource stop and the worker gone.
+The source-bound archive is [u07-installed-gui-v1](u07-installed-gui-v1/index.json).
+It retains fifteen observations, eleven solution/state replay checks and 27
+raw candidate-packet replay checks. These include repeated snapshots and are
+not 27 distinct benchmark inputs. Ten fixture lifecycles and focused package,
+model, playback, export, origin, historical-pin and settlement controls pass.
+All recorded processes and PID-root IPC paths are gone. The original
+[post-live planner defect](../../../issues/installed-browser-resource-field.md)
+and all live seals are preserved before its analysis-only correction.
+Fifteen [screenshots](u07-installed-gui-v1-media/index.json) remain available.
+The hidden tab is closed and its temporary viewport override is reset.
+
+This is not the
 final ten-lane U07 matrix. Tier, hard censored, release-answer and competitor
 lanes remain coordinated with one later frozen evaluation. No final holdout
 case is solved before all configurations are frozen. Additional competitor

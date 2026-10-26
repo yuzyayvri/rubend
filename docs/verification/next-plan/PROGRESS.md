@@ -3,6 +3,21 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [known-case installed browser unit](U07/INSTALLED-BROWSER.md) passes canonical
+verification with 8,326 seals and two receipts, no stop and its worker gone.
+Fifteen observations and screenshots, eleven solution/state replays and 27 raw
+candidate replays pass. Ten post-live fixture lifecycles pass. All recorded
+processes and PID-root IPC paths are gone. Browser CPU/memory are not capped by
+the server's cgroup. No comparative performance or full final matrix is claimed.
+
+The [additional-solver pass](U07/ADDITIONAL-SOLVERS.md) is now the required input
+to the coordinated final U07 freeze and evaluation. Pre-comparison roadmap
+implementation/dispositions and final-source regression/delivery are recorded,
+but the whole roadmap and requested numerical report remain incomplete. The
+October24 order stays binding. Research/setup precedes the single frozen
+comparison, report delivery precedes automation deletion, and Yuzy reviews that
+report before any separate push approval. No final holdout solve or push yet.
+
 The [installed HTTP recovery](U07/LOCAL-DELIVERY.md) now passes canonical
 verification with 8,248 seals and three receipts, no stop and the worker gone.
 Three installed sessions answer 22 known queries and independently replay all

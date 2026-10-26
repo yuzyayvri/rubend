@@ -21,5 +21,9 @@ Every other original live source seal and all captured artifact hashes must
 still match. The original source bytes and revision remain preserved, and the
 new revision must descend from the live revision. No browser workflow, app,
 fixture, driver, imported artifact or observed result is changed or rerun.
-The planner failure is not relabelled as passed. Complete post-live validation
-and fixed controls remain pending.
+The planner failure is not relabelled as passed. The corrected planner passes
+on the unchanged captured evidence. The subsequent fixed queue passes canonical
+verification with 8,326 seals and two resource receipts, no stop and the worker
+gone. All fifteen required browser observations, eleven solution/state replays,
+27 candidate-packet replays and ten fixture lifecycles pass. No browser rerun
+or solver/app change is needed. The comparative report remains incomplete.

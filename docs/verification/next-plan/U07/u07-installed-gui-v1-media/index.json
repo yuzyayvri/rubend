@@ -1,0 +1,67 @@
+{
+  "screenshots": [
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/dark-desktop.jpg",
+      "sha256": "33e03f2396c82adb7800264fe926e4cf675dd06b11313aee36578dc1a4d52851"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-cancelled.jpg",
+      "sha256": "fb9a97231146f871cc6a304524787fd738432be6dd95da7696d96fa2baccf9db"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-invalid.jpg",
+      "sha256": "6ccb3d09b19f377dccdea4aeec2f03aa82e6c19bda0442e197e2e46c4f7a2139"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-keyboard-step-2.jpg",
+      "sha256": "b654cbde77866ea612954404ab170082d12bdf8bd38eb7f33b761bbe3955abf4"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-playback-complete.jpg",
+      "sha256": "f73d15ba96fed00e6c0017e9f52984c7956b320003572f8d45c1bae0e0551875"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-resubmitted.jpg",
+      "sha256": "d63f466bb433b9d062c94e4ed59c5547258ddc3bbbef30c1c805c39827b8a302"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-rewind.jpg",
+      "sha256": "6138c0922d67c152e33c9cb55ecf61e353493cd943a2241379c84ae9223a8ead"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-solved.jpg",
+      "sha256": "aed6cb6ee48dfcaf3148faf089ed77edf1e81c83be2dcc17ca84c794bb7c1a9c"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-step-1.jpg",
+      "sha256": "300dce4341c38e48cfc2c4cd8e1d613b965044f88ffe0be7f6ec62df355f55c3"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/installed-export.jpg",
+      "sha256": "e748d4285486addedd1791a4360fd3961c4b14b7d6a02456974ea212abadbede"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/installed-shallow.jpg",
+      "sha256": "6138c0922d67c152e33c9cb55ecf61e353493cd943a2241379c84ae9223a8ead"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/mobile-editor-saved.jpg",
+      "sha256": "56801c67a5ecb6a18180228481897478c032979a7d65afe79e6f3edd5f7a2755"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/mobile-sticker-net.jpg",
+      "sha256": "7a161d70fe977271dc5260c44449a685d60a2f4a7a0970a5cf9ce557f6cdec07"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/narrow-layout.jpg",
+      "sha256": "4d58dd7f8eebe06cc9a43e82dcf9e3339625bc4bcdf139229c58e51f5b6e2d16"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/saved-state-reloaded.jpg",
+      "sha256": "07b5ebdef02af9423bd22c8d2ed69f0455a4872ccc7c7f4497b171ad40cdde99"
+    }
+  ],
+  "browserPreviewHidden": true,
+  "operatorReview": false,
+  "independentReview": false
+}

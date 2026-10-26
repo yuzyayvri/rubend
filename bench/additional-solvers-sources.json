@@ -1,0 +1,48 @@
+{
+  "format": "rubend-additional-solver-sources-v1",
+  "researchedOn": "2026-10-26",
+  "maximumTrackedBytesPerSource": 134217728,
+  "maximumFileBytes": 16777216,
+  "minimumDiskReserveBytes": 8589934592,
+  "sources": [
+    {
+      "id": "muodov-kociemba",
+      "url": "https://github.com/muodov/kociemba.git",
+      "revision": "e2690493b43921732960cd5eeee2b1ee91922a7b",
+      "primaryDocumentation": "https://github.com/muodov/kociemba/blob/e2690493b43921732960cd5eeee2b1ee91922a7b/README.md",
+      "licenseFile": "LICENSE",
+      "licenseMetadata": "GPL-2.0; inspect file-level grants before the build",
+      "requiredFiles": ["README.md", "LICENSE", "kociemba/ckociemba/Makefile", "kociemba/ckociemba/solve.c", "kociemba/ckociemba/search.c", "kociemba/ckociemba/coordcube.c", "kociemba/ckociemba/cubiecube.c", "kociemba/ckociemba/facecube.c", "kociemba/ckociemba/prunetable_helpers.c"],
+      "candidateContract": "Standalone C two-phase first returned answer, not an optimality-completion contract. No Python fallback or relabelled bundled min2phase.",
+      "initialSelection": "Native additional implementation with an explicit facelet API and small-table path. Build and exact source notices still need inspection.",
+      "buildOrSolveDuringAcquisition": false
+    },
+    {
+      "id": "vcube",
+      "url": "https://github.com/Voltara/vcube.git",
+      "revision": "9f5bc2cce18f29437879ace825f22917f6705378",
+      "primaryDocumentation": "https://github.com/Voltara/vcube/blob/9f5bc2cce18f29437879ace825f22917f6705378/README.md",
+      "licenseFile": "LICENSE",
+      "licenseMetadata": "GPL-3.0-or-later source notices; retain LICENSE and file-level notices",
+      "requiredFiles": ["README.md", "LICENSE", "CMakeLists.txt", "src/vc-optimal.cpp", "src/nxprune.h", "src/nxprune_generator.h", "src/nxprune.cpp", "src/nxsolve.cpp", "src/alloc.cpp", "src/cube.cpp", "src/util.cpp"],
+      "candidateContract": "Native HTM optimal solver, one worker, explicit coordinate and no persistent shared-memory mode. Exact completion remains an upstream algorithm claim, not a Rubend formal proof.",
+      "initialSelection": "Independent SIMD implementation. Default308 is out of budget. Inspect upstream commented104/108 instantiations and enabled112/304 before a separately admitted smaller-table build/generation; do not silently change the base or tune on holdout.",
+      "buildOrSolveDuringAcquisition": false
+    }
+  ],
+  "consideredNotAcquired": [
+    {
+      "id": "nxopt",
+      "url": "https://github.com/rokicki/cube20src",
+      "revision": "f430921a48306874864b9f2ac8a059b43492fd3a",
+      "primaryDocumentation": "https://github.com/rokicki/cube20src/blob/f430921a48306874864b9f2ac8a059b43492fd3a/nxopt.md",
+      "disposition": "Related exact design reference. vcube implements this coset family in a separate SIMD engine; avoid adding a near-duplicate solely to inflate solver count. Keep as an alternative if vcube cannot be admitted. No local build or performance verdict."
+    },
+    {
+      "id": "twips",
+      "url": "https://github.com/cubing/twips",
+      "primaryDocumentation": "https://github.com/cubing/twips/blob/main/README.md",
+      "disposition": "General puzzle engine; current upstream redirects from cubing/twsearch and requires a Rust build/dependency pass. Prefer the two focused additional native implementations first. Not acquired or benchmarked."
+    }
+  ]
+}
