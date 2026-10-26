@@ -1,0 +1,203 @@
+{
+  "preserved": true,
+  "passed": false,
+  "id": "u07-installed-gui-v1",
+  "revision": "978e5e53c6e9443783968632ce29c83f2410d7c3",
+  "allLiveSourceSealsVerifiedBeforeEdits": true,
+  "sourceSeals": 8268,
+  "liveResourcePassed": true,
+  "allObservedProcessesGone": true,
+  "actualBrowserRerun": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u07-installed-gui-v1-live-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/0-u07-installed-gui-v1-live-plan.json.gz",
+      "bytes": 1153721,
+      "compressedBytes": 391514,
+      "sha256": "29bd04a8ecf123200e2ecf6ab7e733906ec008c002b8675ef0f738f8be387462",
+      "compressedSha256": "e09a2b03371d4c4574a44ffd41f0d0eeb83e04c4674b587efa9295384b5aac09",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u07-installed-gui-v1-live.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/1-u07-installed-gui-v1-live.json.gz",
+      "bytes": 1103,
+      "compressedBytes": 650,
+      "sha256": "46002a96d7fa25f00f12c48df1eeafaff955b5c1902ab362f9fca9f064e97957",
+      "compressedSha256": "72bb38a530836ca4e8233d47b0fe7d7686a29ff19204522c2eb3cd5c708a2d23",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u07-installed-gui-v1-plan-admission.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/2-u07-installed-gui-v1-plan-admission.json.gz",
+      "bytes": 1550,
+      "compressedBytes": 880,
+      "sha256": "42536dc00dcda8299cc58d002a238db577198ccc2df865c7613a0c030f50d393",
+      "compressedSha256": "5cd07e0b5ec234399db657bc61ed3c23405efb892815550def0d1b66439401b3",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u07-installed-gui-v1-live-preservation.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/3-u07-installed-gui-v1-live-preservation.json.gz",
+      "bytes": 20451,
+      "compressedBytes": 6744,
+      "sha256": "bac9edfeedf0a897bb517a083954cbbf2aba64e62ab1a0b87b0332fe3c50af5d",
+      "compressedSha256": "fc0003490cc32f99fb806f130c89da637a05c8b649363c4633e3a0fa33f78043",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/dark-desktop.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/4-dark-desktop.json.gz",
+      "bytes": 22,
+      "compressedBytes": 42,
+      "sha256": "27dafb2742d0da69a49cc8d206fc9cc429feff09cc3738addcf590d9c4358f97",
+      "compressedSha256": "d3b9c905fe49b68c00818d6bcfedc90f54cae5eb7f817ecdebec878fc59a5309",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-cancelled.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/5-head-cancelled.json.gz",
+      "bytes": 3475,
+      "compressedBytes": 713,
+      "sha256": "5c43c48c8c6d7a69caf9d771533923ba32df526e1a179dd02c6a4fd4ce778cdd",
+      "compressedSha256": "6234b4973685840fd2251b1926499a8060b5827d34cd3da67b7bdb0dcee86f7a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-invalid.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/6-head-invalid.json.gz",
+      "bytes": 2272,
+      "compressedBytes": 560,
+      "sha256": "96e86291fe71b5cf61f24e366a90aaa41a31c905c0ede952c4b5ca7c0fe6c0c6",
+      "compressedSha256": "8ed2d5958d704e5eab093770b527a742d02b314e99efd89b822218c688ab5847",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-keyboard-step-2.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/7-head-keyboard-step-2.json.gz",
+      "bytes": 2276,
+      "compressedBytes": 573,
+      "sha256": "2f32970d4208aa9be7587d5dcec2e5ac2c8c1999eaf7bc8a3aca438248f9b53a",
+      "compressedSha256": "516e41c19f08315139a3291295dd9e195f5e8838c71a55ab1b250566318dd718",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-playback-complete.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/8-head-playback-complete.json.gz",
+      "bytes": 2276,
+      "compressedBytes": 564,
+      "sha256": "6214291d7ec5a310afa0341bd8deb49d5ed4606926012da5d871f9c68b83ef54",
+      "compressedSha256": "ba90a936760500e1d162fc2dbad82e2e09732d87f733be5ceabec97172cf8ba8",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-resubmitted.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/9-head-resubmitted.json.gz",
+      "bytes": 2272,
+      "compressedBytes": 560,
+      "sha256": "fbc85824a932d632c8c0ad8bd2b99a88272dfc2fc0e360f489f9bd3845f0887e",
+      "compressedSha256": "78b323f16ccb41428dd00211074800500055a2e46ec08ef02f37201760759345",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-rewind.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/10-head-rewind.json.gz",
+      "bytes": 2276,
+      "compressedBytes": 558,
+      "sha256": "6a72f9d04b0b5cbb439ac9a30efb130f15c1853155777516bd84f9ea9d56d776",
+      "compressedSha256": "3eafca313cff38ab4b03efc99575ba5f5acf316505c5e2294707a6622542803f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-solved.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/11-head-solved.json.gz",
+      "bytes": 1767,
+      "compressedBytes": 492,
+      "sha256": "60ec61b8e171252c978cb6122ca7a66e19e2c0a4690bb11e2ee7b843dd7152f2",
+      "compressedSha256": "936cbdfbaac874aeda31cc5c53e56242eca2bfb376cd32afe22314d08f897fc7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/head-step-1.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/12-head-step-1.json.gz",
+      "bytes": 2274,
+      "compressedBytes": 570,
+      "sha256": "21a58c5e194688cba36e877d34473a423c10632cbd6faa7bfad30a70ee02954e",
+      "compressedSha256": "5d44e533de64c9a6b362fb6de155805eedcef05f93b58f85763435021d6f9d5f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/installed-export.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/13-installed-export.json.gz",
+      "bytes": 397,
+      "compressedBytes": 267,
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/installed-shallow.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/14-installed-shallow.json.gz",
+      "bytes": 2273,
+      "compressedBytes": 559,
+      "sha256": "023fa3c30613925605c9ae812f0cdd91afa927bc41a4b4dc98d1fffb7ca329e6",
+      "compressedSha256": "f91224d52cdf063b66e05fc13dbdc6286aa5cfdb9f16b61b6ca236baca6e2b42",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/mobile-editor-saved.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/15-mobile-editor-saved.json.gz",
+      "bytes": 624,
+      "compressedBytes": 318,
+      "sha256": "16732d56ec09a673ded1e87a47080f808eb32cb3d988fb7a149f929f3c4dca88",
+      "compressedSha256": "e5bf21257225aa3b5d82423dec73525be051e53d1d751dc93e7077756f5a58f9",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/mobile-sticker-net.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/16-mobile-sticker-net.json.gz",
+      "bytes": 762,
+      "compressedBytes": 360,
+      "sha256": "dad7e8d8703b7854731369cf753735b3d7018d7a80189367e35944b1c7a09618",
+      "compressedSha256": "a74f3029859b541b385679e3bce533f469f020102b6ec0713ebdb43fc7232fa5",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/narrow-layout.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/17-narrow-layout.json.gz",
+      "bytes": 749,
+      "compressedBytes": 352,
+      "sha256": "7f170485b9b5e1b7b44512b04f2374eab19e7d79e8711a75049f0ae459e9e379",
+      "compressedSha256": "f12c5d2e33478dd117bfee3402765a60d20ac84ac6a4c778f00fbea9ce37bb19",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/saved-state-reloaded.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/18-saved-state-reloaded.json.gz",
+      "bytes": 2626,
+      "compressedBytes": 548,
+      "sha256": "8dd8e0cdff2b91cf4c8faba211412d1fb0e5da9907737ab0addfed73d1cf967d",
+      "compressedSha256": "3cc8552bf5dbadaf266aa9c2b52bd2b04b774e9b5cea72d201d4edfbd2e65e0f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/session.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/19-session.json.gz",
+      "bytes": 14800,
+      "compressedBytes": 6343,
+      "sha256": "06f9919e148c1ac54456997549c981f10d1e9033e3df7b7b1fff61f2738e505c",
+      "compressedSha256": "abd372e61b23da23db7d7338641ba630f3d2c7934fb25cb4ffe172a6aaac8477",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/next-plan/U01/u01-live-u07-installed-gui-v1/theme-contract.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-planner-failed/20-theme-contract.json.gz",
+      "bytes": 84,
+      "compressedBytes": 76,
+      "sha256": "aefa08800b6128d902439c3155a268b85b43d3b2f7a82dba8167ed40e0cef301",
+      "compressedSha256": "25c702c3b9af2fdae731f326da5d0d12e6962eced6fffb92b846b9cda259e524",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}
