@@ -91,3 +91,13 @@ reserve, no swap, aggregate RSS checks and eight GiB disk reserve beyond scratch
 Actual namespace, native-format, generation and calibration results are pending.
 There is no final configuration freeze, holdout evaluation, numerical winner,
 whole-solver speedup, general exact-completion or formal-proof claim here.
+
+The actual queue now passes canonical verification with8,622 seals and six
+receipts, no resource stop and the worker gone. All21 planned rows verify in
+Bend and independent geometry, with no not-run rows. Both tables pass exact
+size/hash and depth-pass checks. Actual namespace isolation, resource-cgroup
+membership, read-only mounts, repository absence and147 native move/Reid
+agreements pass. All observed identities settle. The known Muodov solved-input
+13-HTM answer is preserved. No calibration time is scored as a comparison.
+The [retained native-request adapter preflight](NATIVE-REQUEST-ADAPTERS.md)
+remains before final measured-record admission and configuration freeze.

@@ -1,0 +1,5 @@
+import assert from "node:assert/strict";
+import {faceletsToReid} from "./facelets-reid.mjs";
+
+const cornerPositions=[0,2,5,7,3,1,4,6],cornerPieces=["UFR","UBL","DFL","DBR","ULF","URB","DRF","DLB"],edgePositions=[0,2,6,4,1,3,7,5,8,9,11,10],edgePieces=["UF","UB","DB","DF","UR","UL","DL","DR","FR","FL","BL","BR"],b32=n=>String.fromCharCode(n<26?65+n:97+n-26);
+export function faceletsToNissy(facelets){const tokens=faceletsToReid(facelets).split(" "),corners=cornerPositions.map(i=>{const t=tokens[12+i];for(let p=0;p<8;p++)for(let o=0;o<3;o++)if(cornerPieces[p].slice(o)+cornerPieces[p].slice(0,o)===t)return b32(p+8*o);assert.fail("Unrecognized corner");}),edges=edgePositions.map(i=>{const t=tokens[i];for(let p=0;p<12;p++){if(edgePieces[p]===t)return b32(p);if([...edgePieces[p]].reverse().join("")===t)return b32(p+16);}assert.fail("Unrecognized edge");});assert.equal(new Set(corners.map(c=>{const n=c<="Z"?c.charCodeAt(0)-65:c.charCodeAt(0)-97+26;return n&7;})).size,8);return corners.join("")+"="+edges.join("")+"=A";}

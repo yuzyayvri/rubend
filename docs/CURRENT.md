@@ -2,6 +2,25 @@
 
 ## Latest checkpoint
 
+`u07-competitor-calibration-v1` passes canonical verification with8,622 seals
+and six receipts, no stop and the worker gone. All21 shallow calibration rows
+replay in Bend and independent geometry. Both vcube tables are generated and
+sealed at20,336,640 and325,386,240 bytes. All147 native convention checks and
+actual namespace/cgroup checks pass. Muodov's valid13-HTM solved-input answer is
+retained. No final holdout case or scored comparison runs.
+
+Next is `u07-native-adapters-v1`. Preflight comparison-only retained-table
+native services so exact deadlines do not force table reloads into warm-search
+measurements. Eight actual process controls pass locally, including timeout,
+partial output, orphan cleanup and recovery; eleven protocol negatives pass.
+Build thin Muodov/vcube/Nissy library services against unchanged pinned sources,
+reuse every cache, check Nissy input conventions against its native API and
+replay known requests. The14-minute queue has at most four GiB/four low-priority
+lanes, reserve and no swap. Actual service checks, final measurement model,
+configuration freeze, single untouched evaluation and numerical report remain.
+The October24 outcome/report/no-push order is unchanged. Read
+docs/verification/next-plan/U07/NATIVE-REQUEST-ADAPTERS.md.
+
 `u07-competitor-build-v1` passes canonical verification with 8,486 seals and
 four receipts, no stop and the worker gone. Muodov C and vcube are built at the
 pinned revisions/configurations. Twelve supplied C caches total 4,368,335 bytes

@@ -3,6 +3,20 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [additional solver setup](U07/COMPETITOR-CALIBRATION.md) passes canonical
+verification with8,622 seals and six receipts, no stop and the worker gone.
+All21 known-case rows independently replay; both vcube tables and147 native
+format checks pass. The first-returned Muodov solved answer remains13HTM.
+No final holdout, speed claim or configuration freeze follows from calibration.
+
+The next [native warm-request preflight](U07/NATIVE-REQUEST-ADAPTERS.md) separates
+retained table initialization from deadline-bound request workers. Eight real
+process controls and eleven protocol negatives pass locally. Source-bound native
+services and Nissy input conversion still need their actual checks. The fixed
+queue cap is14 minutes with at most four GiB/four nice10 lanes, reserve and no
+swap. Parent-clock/scoring adapters, final freeze/evaluation/report remain open.
+No table regeneration, push, publication or independent review.
+
 The [two native competitor builds](U07/COMPETITOR-BUILDS.md) pass canonical
 verification with 8,486 seals and four receipts, no stop and the worker gone.
 Both binaries link, all twelve supplied C-cache ABI sizes match and vcube's
