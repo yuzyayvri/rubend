@@ -62,6 +62,13 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [fifth final quality group](../verification/next-plan/U07/u07-final-quality-04-p1/index.json)
+records the fifth instance, on `release-4509`, slot
+`e8ec12ab102892bb09d6a16ab5f53e0d07b278f54c08423fde8052c5b25c201a`.
+Its raw sequence is `done 127`, `cancelled 127 alreadySettled`, then `bound 128`.
+The assertion difference is `127 !== 128`; the session settles. Five errors
+remain terminal among 25,000 planned attempts. No repair or rerun.
+
 The configuration seal precedes all final cases. This campaign explicitly keeps
 errors and never repeats completed attempts. Changing the adapter now would
 change a frozen measurement configuration after holdout access. The campaign
