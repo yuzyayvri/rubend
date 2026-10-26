@@ -2,6 +2,32 @@
 
 ## Latest checkpoint
 
+`u07-native-adapters-v1` passes canonical verification with 8,754 seals and
+three receipts. The worker is gone and no resource stop occurred. All 147 Nissy
+convention cases and 36 native request/recovery rows pass, including four
+timeouts. Every complete answer replays through Bend and integer geometry.
+The retained parents recover after deadlines. Muodov's solved answer remains
+13 HTM. Native request CPU and single-child RSS are not whole-solver totals.
+Read docs/verification/next-plan/U07/NATIVE-REQUEST-ADAPTERS.md.
+
+The common comparison adapter locally passes 68 known requests across nine
+configurations, with five cold starts. Sixteen lifecycle controls, 24 observation
+negatives and eight sandbox refusals pass. An early-cancellation timer-rounding
+bug fails before its fix. A wrong test expectation that every valid fast answer
+must include optimality is corrected without changing the solver or inventing
+proof. The fixed `u07-clock-adapters-v1` queue verifies the final adapter sources
+and archives raw evidence. Its serial CPU2 jobs use at most four GiB, nice 10,
+desktop reserve, no swap and an eight-minute queue cap. Read
+docs/verification/next-plan/U07/PARENT-CLOCK-ADAPTERS.md.
+
+The October 24 order remains binding. Finish roadmap verification/dispositions,
+additional-solver setup, one coordinated frozen U07 comparison and its numerical
+report. Deliver the report and numbers before deleting the existing automation.
+Yuzy separately decides any later push to main. Resource accounting, final
+measured-record admission, configuration freeze, untouched evaluation and report
+remain open. No holdout input is evaluated, no push or merge occurs, and no
+independent review is claimed.
+
 `u07-competitor-calibration-v1` passes canonical verification with8,622 seals
 and six receipts, no stop and the worker gone. All21 shallow calibration rows
 replay in Bend and independent geometry. Both vcube tables are generated and

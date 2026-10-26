@@ -1,5 +1,20 @@
 # Native warm-request adapter preflight
 
+## Verified result
+
+The [canonical result](u07-native-adapters-v1/index.json) verifies all 8,754
+source seals and three resource receipts. The worker is gone and no resource
+stop occurred. All 147 native Nissy convention cases and 36 request/recovery
+rows pass. Four timeouts are retained. Every complete answer independently
+replays in Bend and integer geometry. Eight real process controls and eleven
+protocol negatives pass. Muodov's valid solved-input answer remains 13 HTM.
+No table is regenerated or original source modified. Per-request waited-child
+CPU and maximum single-child RSS keep their limited scopes. Final parent-clock
+admission, whole-solver resource accounting, freeze, evaluation and report remain
+open. The plan below records the pre-run design, not an additional pending run.
+
+## Pre-run plan
+
 The [additional calibration](u07-competitor-calibration-v1/index.json) passes
 canonical verification with8,622 source seals and six resource receipts, no
 stop and the worker gone. All21 planned rows across seven known cases and

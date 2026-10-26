@@ -3,6 +3,26 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [native request services](U07/NATIVE-REQUEST-ADAPTERS.md) pass canonical
+verification with 8,754 seals and three receipts, worker gone and no stop.
+All 147 Nissy format cases and 36 request/recovery rows pass. Four deadline
+timeouts remain in the raw evidence. Every complete answer independently
+replays. This establishes retained-parent request functionality, not speed or
+formal optimized-search completeness.
+
+The [common parent-clock adapter](U07/PARENT-CLOCK-ADAPTERS.md) locally passes
+68 known requests across nine configurations. Sixteen actual lifecycle controls,
+24 observation negatives and eight sandbox refusals pass. The source-bound
+eight-minute queue remains pending. The early cancellation regression is fixed;
+unproven fast answers, late candidates, failures and unknown bounds remain
+distinct. No final configuration freeze or untouched evaluation occurs here.
+
+The October 24 completion/report/no-push order is recorded before this next
+unit. Finish the whole roadmap and single coordinated numerical report before
+automation deletion. Yuzy reviews that report before any separate push decision.
+Resource scopes, final measured-record admission, freeze and final comparison
+remain unfinished. Work stays solo and no independent-review gate is claimed.
+
 The [additional solver setup](U07/COMPETITOR-CALIBRATION.md) passes canonical
 verification with8,622 seals and six receipts, no stop and the worker gone.
 All21 known-case rows independently replay; both vcube tables and147 native

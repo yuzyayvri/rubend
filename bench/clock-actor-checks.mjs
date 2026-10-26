@@ -1,0 +1,17 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {resolve} from "node:path";
+import {ComparisonActor} from "./comparison-actor.mjs";
+import {collectComparisonActors,actorPayload} from "./comparison-actor-registry.mjs";
+import {apply,solved} from "./fixed-work-model.mjs";
+import {apply as bendApply} from "../apps/model.mjs";
+import {analyzeClockObservation} from "./clock-observation.mjs";
+
+assert.equal(process.argv.length,3);const output=resolve(process.argv[2]),registry=collectComparisonActors(),spec=JSON.parse(readFileSync("bench/reference-calibration-cases.json","utf8")),rows=[],sessions=[],report={passed:false,registry,rows,sessions,errors:[],scoredTimings:false,releaseHoldoutOpened:false};
+try{
+  for(const config of registry.actors){const actor=new ComparisonActor(config);try{await actor.start();for(const item of spec.cases){const facelets=apply(solved,item.scramble),row=await actor.request({caseId:item.id,facelets,payload:actorPayload(config,facelets),budgetMs:250,mode:"fast"});rows.push(row);assert.ok(["ok","timeout"].includes(row.status),JSON.stringify(row));assert.ok(row.candidates.length>0,config.id+" failed shallow answer");for(const c of row.candidates){assert.equal(apply(facelets,c.moves),solved);assert.equal(bendApply(facelets,c.moves),solved);}if(config.kind==="native"&&config.canProve)assert.ok(row.proof);assert.ok(row.candidates.every(c=>c.atMs>=0&&c.atMs<=row.finishedMs));}}finally{const s=await actor.close();sessions.push({solver:config.id,...s});assert.equal(s.forced,false);assert.equal(s.exitCode,0);assert.equal(s.signal,null);assert.equal(s.errors.length,0);}}
+  for(const config of registry.actors.filter(c=>["rubend-default","cubing-min2phase","muodov-c","nissy-h48h0","vcube-108"].includes(c.id))){const actor=new ComparisonActor(config),facelets=apply(solved,[3,0,5,2]);const row=await actor.coldRequest({caseId:"cold-known-commutator",facelets,payload:actorPayload(config,facelets),budgetMs:3000,mode:"fast"});rows.push(row);assert.ok(row.candidates.length>0);for(const c of row.candidates){assert.equal(apply(facelets,c.moves),solved);assert.equal(bendApply(facelets,c.moves),solved);}sessions.push({solver:config.id,clock:"cold",...await actor.close()});}
+  report.censoredCold=[];for(const config of registry.actors.filter(c=>["rubend-u00-h0","cubing-min2phase"].includes(c.id))){const actor=new ComparisonActor(config),facelets=apply(solved,[3,0,5,2]),row=await actor.coldRequest({caseId:"cold-known-commutator",facelets,payload:actorPayload(config,facelets),budgetMs:100,mode:"fast"});assert.ok(["ok","timeout"].includes(row.status),JSON.stringify(row));report.censoredCold.push({row,session:await actor.close(),analysis:analyzeClockObservation(row,{id:row.caseId,facelets},config)});}assert.equal(report.censoredCold[1].row.status,"timeout");
+  report.analysis=rows.map(row=>{const item=spec.cases.find(c=>c.id===row.caseId),facelets=apply(solved,item?item.scramble:[3,0,5,2]);return analyzeClockObservation(row,{id:row.caseId,facelets},registry.actors.find(a=>a.id===row.solver));});
+  report.passed=true;
+}catch(error){report.errors.push(String(error.stack??error));}finally{mkdirSync(resolve(output,".."),{recursive:true});writeFileSync(output,JSON.stringify(report,null,2)+"\n",{flag:"wx"});}console.log(JSON.stringify({passed:report.passed,actorConfigurations:registry.actors.length,requests:rows.length,errors:report.errors,scoredTimings:false}));if(!report.passed)process.exitCode=1;
