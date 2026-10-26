@@ -2,19 +2,19 @@
 
 ## Latest checkpoint
 
-`u07-final-quality-06-p1` passes canonical verification with 4,972 source seals
+`u07-final-quality-07-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000
-planned slots on release inputs 6,000 through 6,999 are recorded, with zero pending
-or uncertain slots. All complete answers independently replay and all twenty-nine
-actor sessions settle. The saved statuses are 2,095 `ok`, 2,896 `timeout` and nine
+planned slots on release inputs 7,000 through 7,999 are recorded, with zero pending
+or uncertain slots. All complete answers independently replay and all twenty-six
+actor sessions settle. The saved statuses are 2,089 `ok`, 2,905 `timeout` and six
 `error`. A timeout can contain an eligible answer, so these are not coverage
 counts. No isolated quality latency or per-actor CPU ranking is inferred.
 
-The first seven quality groups account for 35,000 of 57,678 planned campaign slots.
-Fourteen cumulative errors are the recorded benchmark-adapter cancellation race,
-not invalid returned solutions. All nine additional raw session sequences show
+The first eight quality groups account for 40,000 of 57,678 planned campaign slots.
+Twenty cumulative errors are the recorded benchmark-adapter cancellation race,
+not invalid returned solutions. All six additional raw session sequences show
 the prior request's `done` followed by its `alreadySettled` cancellation
-acknowledgement while the next request is active. All nine sessions settle.
+acknowledgement while the next request is active. All six sessions settle.
 Read docs/issues/frozen-comparison-late-cancel-ack.md. Keep all terminal errors
 and the seal unchanged. Do not rerun completed slots or tune on these cases.
 The report must retain this limitation.
@@ -22,7 +22,7 @@ The report must retain this limitation.
 After verifying that queue and before the next group, the October 24 order
 remains binding. Finish the roadmap, comparative report and delivery of numbers
 before automation deletion. Yuzy separately decides any later push to main.
-The next fixed group is `u07-final-quality-07-p1`, using the same frozen metadata,
+The next fixed group is `u07-final-quality-08-p1`, using the same frozen metadata,
 four-GiB shared ceiling, CPU2 through CPU5, nice 10, no swap and desktop reserve.
 The final report and remaining U07 acceptance are still unfinished.
 

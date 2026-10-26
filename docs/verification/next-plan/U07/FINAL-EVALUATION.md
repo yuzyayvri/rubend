@@ -134,8 +134,17 @@ slots. All complete answers independently replay and twenty-nine sessions
 settle. Its statuses are 2,095 `ok`, 2,896 `timeout` and nine `error` observations.
 All nine new raw sequences have the same prior-`done`, late-`alreadySettled`
 cancellation cause. The first seven groups account for 35,000 campaign slots
-and retain all fourteen errors. The next fixed group is
-`u07-final-quality-07-p1`. No frozen sources or configurations change.
+and retain all fourteen errors.
+
+The [eighth quality group](u07-final-quality-07-p1/index.json) verifies 4,972
+seals and two receipts, worker gone and no resource stop. All 5,000 slots on
+release inputs 7,000 through 7,999 are recorded, with no pending or uncertain
+slots. All complete answers independently replay and twenty-six sessions
+settle. Its statuses are 2,089 `ok`, 2,905 `timeout` and six `error` observations.
+Each new raw sequence confirms the same prior-`done`, late-`alreadySettled`
+cancellation race. The first eight groups account for 40,000 campaign slots,
+including all twenty errors. The next fixed group is
+`u07-final-quality-08-p1`. No frozen sources or configurations change.
 
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical

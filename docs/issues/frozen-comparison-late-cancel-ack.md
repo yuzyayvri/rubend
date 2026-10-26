@@ -62,6 +62,13 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [eighth final quality group](../verification/next-plan/U07/u07-final-quality-07-p1/index.json)
+records six further instances on `release-7087`, `release-7154`, `release-7187`,
+`release-7457`, `release-7575` and `release-7884`. All six raw streams show the
+same preceding `done`, late `alreadySettled` cancellation and next-ID assertion.
+All six sessions settle. Twenty errors remain terminal among 40,000 planned
+attempts. Frozen configurations and failure-retention rules remain unchanged.
+
 The [seventh final quality group](../verification/next-plan/U07/u07-final-quality-06-p1/index.json)
 records nine further instances on `release-6057`, `release-6113`, `release-6119`,
 `release-6237`, `release-6681`, `release-6696`, `release-6747`, `release-6822` and
