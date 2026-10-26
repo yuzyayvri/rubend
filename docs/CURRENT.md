@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+`u07-delivery-v1` fails its immediate helper-cleanup check after export and
+import pass. All 8,176 seals and three receipts are preserved, with no resource
+stop and the worker gone. The first installed session passes twenty known
+queries and independently replays 59 query candidates before the shutdown
+assertion. The application and native are already gone. Later inspection finds
+every recorded identity gone. Read docs/issues/installed-http-descendant-close.md.
+
+An actual installed shutdown probe reproduces a short-lived reparented helper
+after the outer child's close event. The driver now observes bounded settlement
+without extra signals. A real-process regression fails before and passes after
+the fix, while a persistent owner still remains incomplete. The distinct
+`u07-delivery-http-v1` queue reuses the exact passed exports and runtime-only
+import, verifies their bytes and all runtime contents, then runs three fresh
+HTTP sessions. Its cap is eight minutes, one-GiB jobs on CPU2, nice10, no swap
+and desktop reserve. Same-package integration is pending. Hidden browser lanes,
+additional solvers, freeze, comparison and final report remain. No final holdout
+evaluation, overall completion, publication or push.
+
 `u07-package-build-v1` verifies 8,141 seals and three receipts, worker gone and
 no stop. The original frozen c7d74d6 Nix package builds with its check phase
 enabled. Installed manifest/native/module checks and all five notice/license

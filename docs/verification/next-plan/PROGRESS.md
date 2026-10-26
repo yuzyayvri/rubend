@@ -3,6 +3,22 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [delivery queue](U07/LOCAL-DELIVERY.md) passes export and import, then fails
+its immediate helper-cleanup check. Its 8,176 seals and three receipts are
+preserved, with no resource stop and the worker gone. The application and native
+have exited, and later inspection finds all recorded identities gone. The
+[new driver's wrong timing assumption](../../issues/installed-http-descendant-close.md)
+is reproduced on the installed package. Real-process controls fail before and
+pass after bounded settlement, without ignoring persistent owners or sending
+extra signals. Same-package integration remains pending.
+
+The next `u07-delivery-http-v1` queue reuses the unchanged exports and import.
+It checks hashes and all runtime contents before three fresh installed HTTP
+sessions and confirmation. The fixed cap is eight minutes with one-GiB CPU2
+jobs, nice10, reserve and no swap. Hidden installed-browser acceptance, new
+competitors, freeze, final comparison and numerical report remain. No holdout
+evaluation, publication, push or overall completion.
+
 The [original local package](U07/LOCAL-PACKAGE-BUILD.md) verifies 8,141 seals and
 three receipts, worker gone and no stop. Its original check phase and installed
 manifest/native/module checks pass. The five source notices/licenses match.

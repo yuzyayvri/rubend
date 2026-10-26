@@ -72,6 +72,26 @@ engine lifecycle evidence is retained separately.
 
 ## Fixed queue and remaining gates
 
+The original queue fails at its immediate descendant-cleanup assertion after
+export, import and the first HTTP session's requests pass. Its full failed
+evidence is [preserved](u07-delivery-v1-failed/index.json), with 8,176 source
+seals, three resource receipts and the detached worker gone. All observed
+processes are gone at later inspection. The [root cause and executable
+regression](../../../issues/installed-http-descendant-close.md) record the
+outer-child-close timing mistake without relabelling the failed run.
+
+The distinct `u07-delivery-http-v1` recovery reuses the exact exports and import.
+It verifies the preserved records, artifact hashes, current application graph,
+installed native and modules, and all 67 runtime metadata and content records.
+No export, import or build is duplicated. Three fresh HTTP sessions use bounded
+one-second owner settlement, retaining first and final identities. A persistent
+owner or IPC path still fails. Normal wrapper exit and no forced kill remain.
+
+Recovery has three serial nice-10 CPU2 jobs. Check and HTTP each use one GiB
+and at most three minutes. Confirmation uses 512 MiB and sixty seconds. The
+queue cap is eight minutes, with a two-minute estimate. No performance claim
+follows from settlement observations. Actual installed integration is pending.
+
 `u07-delivery-v1` has four serial nice-10 CPU2 jobs. Export, import and installed
 HTTP each use one GiB and at most three minutes. Confirmation uses 512 MiB and
 sixty seconds. The whole queue cap is twelve minutes, with a three-minute

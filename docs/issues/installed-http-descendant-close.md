@@ -31,5 +31,17 @@ The existing no-forced-kill and normal-wrapper-exit checks remain unchanged.
 the finite limit and must remain incomplete. Another handles SIGTERM, waits
 sixty milliseconds and exits normally. The settlement check must observe its
 exit without sending a second signal. The initial immediate-snapshot helper
-fails this delayed-exit expectation. The fix and same-installed-package recovery
-are not yet verified.
+fails with `false !== true` before the fix. The bounded implementation passes
+both real-process controls and rejects four invalid limits. These checks have
+saved 512-MiB resource receipts. They are behavioral controls, not timing claims.
+
+The HTTP driver now waits at most one second for all recorded identities and
+PID-root IPC paths to disappear after wrapper close. It retains both the first
+and final snapshots, the sample count and the configured limit. It sends no
+extra cleanup signal. Same-installed-package integration is still pending.
+
+`u07-delivery-http-v1` reuses the unchanged exports and import. A fresh check
+compares all 67 runtime metadata records and runs actual Nix content verification.
+The queue runs three fresh installed HTTP sessions and only then writes a new
+local-delivery receipt. The old failed run remains failed. No application,
+engine, law, package build, CI artifact pin or holdout case changes.
