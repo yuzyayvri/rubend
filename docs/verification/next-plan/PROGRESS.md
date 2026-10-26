@@ -3,16 +3,16 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [first reverse-order timing group](U07/u07-final-timing-c1-a-p1/index.json)
+The [paired reverse-order timing group](U07/u07-final-timing-c1-b-p1/index.json)
 verifies 4,977 seals and six receipts, worker gone and no resource stop.
 All 640 slots are recorded, with no pending or uncertain claims. Complete
-answers independently replay and all 332 sessions settle. Five separate actor
-cgroups and twelve available warm-readiness PSS snapshots retain their stated
-measurement scopes. Two preserved-small-profile attempts hit the known late
-cancellation race and remain terminal errors. There is no noise-gate or speed
-verdict before all five cohorts. Cumulative accounted slots are 51,920 of 57,678.
+answers independently replay and all 331 sessions settle. Five separate actor
+cgroups and eleven available warm-readiness PSS snapshots retain their stated
+measurement scopes. One Rubend-default attempt hits the known late cancellation
+race and remains a terminal error. There is no noise-gate or speed verdict
+before all five cohorts. Cumulative accounted slots are 52,560 of 57,678.
 The October 24 report-before-automation-deletion and no-push order remains
-binding before `u07-final-timing-c1-b-p1`, with the same reversed actor/clock order.
+binding before forward-order `u07-final-timing-c2-a-p1`.
 
 The [tenth frozen quality group](U07/u07-final-quality-09-p1/index.json) passes
 canonical verification with 4,972 seals and two receipts, worker gone and no stop.
@@ -32,7 +32,7 @@ recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
 The fixed serial timing groups have five separately capped four-GiB CPU2 actor
-jobs and 640 planned slots each. Seven timing groups, the structural group and both long-budget groups remain,
+jobs and 640 planned slots each. Six timing groups, the structural group and both long-budget groups remain,
 followed by final U07 acceptance and report delivery. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.

@@ -62,6 +62,13 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [paired reverse-order timing group](../verification/next-plan/U07/u07-final-timing-c1-b-p1/index.json)
+records one Rubend-default instance on warm `release-7022`, repeat zero.
+The raw stream shows `done 23`, late `cancelled 23 alreadySettled`, then the
+assertion against request 24. The session settles. This is the fifth retained
+timing instance, separate from the 35 quality-stage instances. Its short failed
+duration cannot support a successful-answer or native-search speed claim.
+
 The [first reverse-order timing group](../verification/next-plan/U07/u07-final-timing-c1-a-p1/index.json)
 records two instances in `rubend-u00-small`. They affect warm `release-9590` in
 repeat zero and warm `release-7022` in repeat one. The raw streams show completed

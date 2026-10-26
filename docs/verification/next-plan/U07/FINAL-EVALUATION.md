@@ -226,6 +226,20 @@ Muodov C, cubing min2phase and Rubend default. It keeps this odd cohort's warm-
 then-cold order and the same four-GiB CPU2, 240-second jobs and 26-minute cap.
 No source, configuration, analysis or no-push boundary changes.
 
+The [paired reverse-order timing group](u07-final-timing-c1-b-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 331 sessions settle. Five separate measured
+cgroups and eleven warm-readiness PSS snapshots retain their different scopes.
+Statuses are 266 `ok`, 373 `timeout` and one `error` observation. The raw default
+profile stream confirms the same prior-`done`, late-`alreadySettled` race. The
+error stays terminal. The first two cohorts account for 2,560 timing slots,
+including five timing errors. Cumulative campaign slots are 52,560. Three more
+cohorts remain before uncertainty gates and comparison verdicts. Next is
+`u07-final-timing-c2-a-p1`, with forward actor and cold-then-warm clock order.
+Its actors are default, cubing min2phase, Muodov C, Nissy H48h0 and vcube104.
+All frozen sources, resources, contracts, no-rerun and report/no-push gates remain.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing
