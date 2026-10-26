@@ -3,6 +3,26 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [common-clock preflight](U07/PARENT-CLOCK-ADAPTERS.md) verifies 8,819 seals
+and three receipts, worker gone and no stop. All 70 requests and analyses pass,
+including two censored cold starts. Sixteen lifecycle controls, 24 observation
+negatives, eight sandbox refusals and all sixteen session cleanups pass. No
+speed, final measured admission or formal optimized-search claim is made.
+
+Before the resource-accounting unit, the October 24 order stays binding.
+Complete the roadmap and single frozen numerical report before automation
+deletion, and never push before Yuzy's separate later approval. Read-only kernel
+CPU, charged-memory and process-memory observations come next. Final freeze and
+untouched solver evaluation remain unopened. Independent review is not run.
+
+The [read-only resource preflight](U07/RESOURCE-SCOPES.md) locally passes twelve
+snapshot negatives, eight window negatives, an actual two-process allocation/CPU
+fixture and six delivered Rubend requests. The fixed twenty-minute queue checks
+nine separately capped actor jobs and 49 known requests. It retains kernel
+charged lifetime peak, sampled RSS and idle proportional memory separately.
+No final memory ranking or solver speed claim follows. Canonical verification,
+final measured admission, freeze and report remain pending.
+
 The [native request services](U07/NATIVE-REQUEST-ADAPTERS.md) pass canonical
 verification with 8,754 seals and three receipts, worker gone and no stop.
 All 147 Nissy format cases and 36 request/recovery rows pass. Four deadline

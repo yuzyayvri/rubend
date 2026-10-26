@@ -1,5 +1,18 @@
 # Common comparison clocks
 
+## Verified result
+
+The [canonical result](u07-clock-adapters-v1/index.json) verifies all 8,819 seals
+and three resource receipts. Its worker is gone and no stop occurred. All
+68 ordinary requests and two short cold controls pass, along with all 70
+independent analyses. Sixteen lifecycle controls, 24 observation negatives,
+eight sandbox refusals and all sixteen session cleanups pass. Muodov's solved
+answer remains 13 HTM. Resource accounting and final measured admission remain
+open. The following pre-run design does not describe an additional pending
+clock run.
+
+## Pre-run design
+
 The [native preflight](u07-native-adapters-v1/index.json) passes canonical
 verification with 8,754 seals and three receipts. It checks 147 Nissy conventions,
 36 native request/recovery rows and all process cleanup. Four timeouts are

@@ -2,6 +2,33 @@
 
 ## Latest checkpoint
 
+`u07-clock-adapters-v1` passes canonical verification with 8,819 seals and
+three receipts, worker gone and no resource stop. All 68 ordinary requests and
+two short cold controls pass across nine configurations. All 70 observation
+analyses, sixteen lifecycle controls, 24 model negatives and eight sandbox
+refusals pass. Fourteen normal sessions and both censored cold sessions clean
+up. The unchanged sixteen-gate proof evidence is source-bound reused, not
+claimed fresh. No measured solver ranking or formal optimality follows.
+
+The October 24 completion/report/no-push order is recorded before the resource
+accounting unit. Finish the full roadmap, additional solver setup and single
+coordinated frozen comparison; deliver its numerical report before automation
+deletion. Yuzy separately decides any later push to main. Whole-scope CPU and
+memory accounting, frozen measured admission, final protocol, untouched cases
+and report remain unfinished. The next unit uses read-only kernel counters and
+isolated actor jobs, with no global changes or holdout evaluation.
+
+The resource decoder locally passes twelve malformed-snapshot and eight
+window-negative controls. A real two-process allocation/CPU fixture passes
+after supporting the kernel's dotted counter name. The instrumented delivered
+Rubend passes six requests, including exact mode. The fixed
+`u07-resource-scope-v1` queue uses twelve serial jobs, at most four GiB on CPU2,
+nice 10, reserve, no swap and a twenty-minute queue cap. Nine distinct actor
+scopes cover 49 existing known/pilot/recovery requests. CPU includes the driver
+and descendants; charged lifetime peak, sampled RSS and idle PSS remain distinct.
+No comparative ranking is inferred from calibration. Read
+docs/verification/next-plan/U07/RESOURCE-SCOPES.md.
+
 `u07-native-adapters-v1` passes canonical verification with 8,754 seals and
 three receipts. The worker is gone and no resource stop occurred. All 147 Nissy
 convention cases and 36 native request/recovery rows pass, including four
