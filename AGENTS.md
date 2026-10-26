@@ -18,6 +18,15 @@ never invent success.
 
 ## Current boundary
 
+On 2026-10-26 Yuzy asked to shorten completion time as much as possible after
+the thirty-minute handoff gaps were explained. The existing heartbeat now
+checks every minute. This changes scheduling only. Frozen benchmark sources,
+configurations, slots, order, budgets and resource limits stay unchanged.
+An active check reads the compact saved queue status and worker identity once,
+then ends quietly without polling, edits or duplicate work. Completed queues
+still require canonical verification before tracked edits and the next batch.
+Keep handoff bookkeeping concise. No push or merge before report review.
+
 On 2026-10-25 Yuzy replied "I literally approve anything man. Just fucking do
 it." to the remaining roadmap approval request. The exact NP04–NP08 statements
 and necessary local generation, builds and full audits for this roadmap are
@@ -49,7 +58,8 @@ This supersedes the older no-heartbeat/no-wakeup instruction for this task.
 Use the existing Codex heartbeat `continue-rubend-roadmap`, not a custom
 message-injection script or a second automation. Keep fixed detached batches,
 source seals, resource admission, solo work, and the no-Astra restriction.
-The heartbeat checks every thirty minutes. Do not duplicate active work or
+The original heartbeat checked every thirty minutes; the October 26 order
+above shortens that interval. Do not duplicate active work or
 spend model turns polling. Pause it if missing authority prevents all useful
 in-scope progress. Delete it only after the full workflow and report above are
 complete. NP04–NP08 and local generation were awaiting separate approval at

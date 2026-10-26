@@ -2,18 +2,18 @@
 
 ## Latest checkpoint
 
-`u07-final-quality-01-p1` passes canonical verification with 4,972 source seals
+`u07-final-quality-02-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000
-planned slots on release inputs 1,000 through 1,999 are recorded, with zero pending
+planned slots on release inputs 2,000 through 2,999 are recorded, with zero pending
 or uncertain slots. All complete answers independently replay and all twenty-one
-actor sessions settle. The saved statuses are 2,021 `ok`, 2,978 `timeout` and one
+actor sessions settle. The saved statuses are 2,024 `ok`, 2,975 `timeout` and one
 `error`. A timeout can contain an eligible answer, so these are not coverage
 counts. No isolated quality latency or per-actor CPU ranking is inferred.
 
-The first two quality groups account for 10,000 of 57,678 planned campaign slots.
-Three cumulative errors are the recorded benchmark-adapter cancellation race,
-not invalid returned solutions. The new case is `release-1550`; raw session
-events show `done 137`, `cancelled 137 alreadySettled`, then `bound 138`.
+The first three quality groups account for 15,000 of 57,678 planned campaign slots.
+Four cumulative errors are the recorded benchmark-adapter cancellation race,
+not invalid returned solutions. The new case is `release-2411`; raw session
+events show `done 102`, `cancelled 102 alreadySettled`, then `bound 103`.
 Read docs/issues/frozen-comparison-late-cancel-ack.md. Keep all terminal errors
 and the seal unchanged. Do not rerun completed slots or tune on these cases.
 The report must retain this limitation.
@@ -21,9 +21,14 @@ The report must retain this limitation.
 After verifying that queue and before the next group, the October 24 order
 remains binding. Finish the roadmap, comparative report and delivery of numbers
 before automation deletion. Yuzy separately decides any later push to main.
-The next fixed group is `u07-final-quality-02-p1`, using the same frozen metadata,
+The next fixed group is `u07-final-quality-03-p1`, using the same frozen metadata,
 four-GiB shared ceiling, CPU2 through CPU5, nice 10, no swap and desktop reserve.
 The final report and remaining U07 acceptance are still unfinished.
+
+After canonical verification, Yuzy's October 26 request to shorten handoff gaps
+is recorded. The existing automation now checks every minute instead of thirty.
+This changes scheduling only. Active checks stay compact and quiet. All frozen
+configurations, slot order, resources, verification and no-push gates remain.
 
 The final comparison configuration is sealed at
 `build/experiments/u07-final-evaluation-v1/freeze.json`. Its canonical metadata

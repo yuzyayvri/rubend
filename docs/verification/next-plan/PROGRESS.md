@@ -3,12 +3,12 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [second frozen quality group](U07/u07-final-quality-01-p1/index.json) passes
+The [third frozen quality group](U07/u07-final-quality-02-p1/index.json) passes
 canonical verification with 4,972 seals and two receipts, worker gone and no stop.
 All 5,000 planned attempts are retained, with no pending or uncertain slots.
 All complete answers independently replay. All twenty-one sessions settle.
-The first two quality groups account for 10,000 planned campaign slots.
-Three cumulative [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
+The first three quality groups account for 15,000 planned campaign slots.
+Four cumulative [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
 remain terminal observations. The latest raw events match the same cause.
 The frozen code and configurations do not change and no attempt is repeated.
 No final solver ranking is inferred.
@@ -16,6 +16,10 @@ No final solver ranking is inferred.
 After that verification, the October 24 completion/report/no-push order is
 recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
+
+Yuzy's October 26 handoff acceleration is recorded after canonical verification.
+The existing heartbeat now checks every minute. No frozen source, configuration,
+slot order, budget or resource limit changes. Active checks remain quiet.
 
 The [final comparison metadata](U07/FINAL-EVALUATION.md) is sealed before any
 holdout solve. Its final-stage loader checks 4,963 files and ten configurations.

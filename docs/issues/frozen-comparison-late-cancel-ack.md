@@ -53,6 +53,13 @@ remain subject to the unchanged independent replay checks. The two failed
 requests still belong in coverage denominators, and their durations cannot
 support a speed claim.
 
+The [third final quality group](../verification/next-plan/U07/u07-final-quality-02-p1/index.json)
+records the fourth instance, on `release-2411`, slot
+`69e22aa7286c4cee401309ebe8a6ef0ea4d464f20166bdf83fad7acc2190dfd1`.
+Its raw sequence is `done 102`, `cancelled 102 alreadySettled`, then `bound 103`.
+The assertion difference is `102 !== 103`; the session settles. All four errors
+remain terminal among the first 15,000 planned attempts. No repair or rerun.
+
 ## Frozen-campaign disposition
 
 The configuration seal precedes all final cases. This campaign explicitly keeps

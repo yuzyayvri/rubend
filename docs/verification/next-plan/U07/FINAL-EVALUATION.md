@@ -93,8 +93,23 @@ on release inputs 1,000 through 1,999 are recorded, with no pending or uncertain
 slots. All complete answers independently replay and twenty-one sessions settle.
 Its statuses are 2,021 `ok`, 2,978 `timeout` and one `error`. The error has the
 same recorded cancellation-acknowledgement cause. The first two groups account
-for 10,000 campaign slots, including all three errors. The next fixed group is
-`u07-final-quality-02-p1`. The frozen configurations remain unchanged.
+for 10,000 campaign slots, including all three errors.
+
+The [third quality group](u07-final-quality-02-p1/index.json) verifies 4,972 seals
+and two receipts, worker gone and no resource stop. All 5,000 slots on release
+inputs 2,000 through 2,999 are recorded, with no pending or uncertain slots.
+All complete answers independently replay and twenty-one sessions settle.
+Its statuses are 2,024 `ok`, 2,975 `timeout` and one `error`, with the same
+recorded cancellation-acknowledgement cause. The first three groups account for
+15,000 campaign slots, including all four errors. The next fixed group is
+`u07-final-quality-03-p1`. The frozen configurations remain unchanged.
+
+On October 26 Yuzy asked to shorten handoff delays as much as possible. After
+canonical verification of the active queue, that authorization is recorded here.
+The existing heartbeat now checks every minute rather than thirty. Only the
+scheduling interval changes. Active checks read compact saved status and worker
+identity once, then end quietly. The same frozen protocol, resources, no-rerun
+policy, canonical verification, signing and report-before-push gates remain.
 
 The current queue pointer is `build/evidence/u07-final-current.json`.
 The campaign and durable slot ledgers are under
