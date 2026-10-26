@@ -3,6 +3,21 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [v2 cost recovery](U02/FORWARD-COST.md) verifies 4,169 seals and five receipts,
+worker gone and no stop. Both 1,024-request diagnostics complete and all four
+native PID/start identities and recorded IPC paths are gone. The diagnostic
+issue is resolved. The oversized scored workload is explicitly unmeasured after
+sizing refuses it, with zero scored requests. All 641/550 flat-profile entries
+and hot C excerpts are inspected without a release-speed claim.
+
+The next distinct v3 plan freezes 1,024 requests per batch before any scoring.
+Reuse exact sizing, full profiles and the unchanged calibration closure.
+Twenty fresh owners, five alternating duplicate cohorts and all eight roots
+remain. The sample deadline and one-second CPU, five-percent noise and
+ten-percent numerical gates do not change. The batch cap is twenty minutes and
+3 GiB, with CPU2, nice 10 and desktop reserve. No production or proof change,
+competitor, final holdout or push. The roadmap and report remain incomplete.
+
 The first [cost batch](U02/FORWARD-COST.md), `u02-forward-cost-v1`, passes
 calibration/builds but its diagnostic hits ninety seconds after 4,000 of 4,096
 requests. No scored work starts. All 4,107 seals, two resource receipts, partial

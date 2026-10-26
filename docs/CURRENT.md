@@ -2,6 +2,25 @@
 
 ## Latest checkpoint
 
+`u02-forward-cost-v2` passes canonical verification with 4,169 seals and five
+receipts, no stop and worker gone. Both shorter profiles complete, and all four
+sizing/profile native identities and IPC paths are directly gone. The diagnostic
+issue is resolved. The old scored workload fails its time-admission projection,
+so zero scored samples or measured requests run. This is unmeasured, not a
+benchmark pass. All 641/550 flat-profile entries and hot C source excerpts are
+reviewed. Packed reads and nibble decoding dominate sampled native work;
+instrumented timings are not release speed or hardware memory-stall evidence.
+
+The distinct next plan `u02-forward-cost-v3` freezes 128 repetitions and 1,024
+requests per sample before any scoring. Reuse exact successful v2 sizing and
+profiles and the unchanged twelve-file calibration closure. Five alternating
+duplicate cohorts total twenty owners and 20,480 requests on eight roots.
+Existing deadlines and one-second/five-percent/ten-percent gates do not change.
+The fixed batch uses at most 3 GiB, nice 10 and CPU2 under a twenty-minute queue
+cap. No solver, law, table, production default, competitor, holdout or push
+changes. Cost results, candidate disposition and the full workflow remain open.
+Read docs/verification/next-plan/U02/FORWARD-COST.md.
+
 The first `u02-forward-cost-v1` diagnostic profile times out after 4,000 of
 4,096 requests, before any scored batch. Calibration and both profile builds
 pass. All 4,107 seals, two receipts, source and partial data are preserved before

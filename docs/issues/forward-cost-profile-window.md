@@ -1,6 +1,6 @@
 # Forward-cost diagnostic profile admission
 
-Status is open pending recovery evidence. This is a benchmark preparation and
+Status is resolved by the verified v2 diagnostic recovery. This is a benchmark preparation and
 recording defect, not a solver failure or rejected performance treatment.
 
 `u02-forward-cost-v1` passes counter calibration and both instrumented builds.
@@ -35,3 +35,12 @@ tests, existing release and profile binaries and compiler records. New profile
 output directories keep the failed run immutable. Close this issue only after
 both shorter profiles and direct cleanup checks complete. The full roadmap,
 actual cost result, proof bridges and final comparative report remain unfinished.
+
+The canonical [v2 archive](../verification/next-plan/U02/u02-forward-cost-v2/index.json)
+verifies 4,169 seals and five receipts, no resource stop and the absent worker.
+Both 1,024-request profiles complete. All sizing and profiling native identities
+and their recorded IPC directories are directly absent. The omitted v1 path
+remains a historical limit. No scored run starts because the old scored workload
+fails sizing admission. That unmeasured disposition is retained, not a speed
+verdict. A distinct v3 plan freezes 128 scored repetitions before any scoring,
+reuses the successful diagnostics and keeps every acceptance gate unchanged.

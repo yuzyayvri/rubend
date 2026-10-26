@@ -1,0 +1,4 @@
+import assert from "node:assert/strict";
+import {inspectFlatProfile} from "../bench/forward-cost-profile-review.mjs";
+
+const text="Flat profile:\n 60.00 0.60 0.60 spin_16 (control.c:2 @ ab)\n 40.00 1.00 0.40 blk_read (control.c:3 @ cd)\nIndex by function name",source="one\ntwo\nthree\nfour",r=inspectFlatProfile(text,source,"control.c");assert.equal(r.flatEntries,2);assert.equal(r.packedNibbleDecodePercent,60);assert.equal(r.blockAccessPercent,40);assert.equal(r.top[0].source,source);for(const bad of[text.replace("Flat profile:","missing"),text.replace("Index by function name","missing"),text.replace("control.c:2","other.c:2"),text.replace("control.c:2","control.c:99"),text.replace("60.00","6.00"),"Flat profile:\nIndex by function name"]){assert.throws(()=>inspectFlatProfile(bad,source,"control.c"),assert.AssertionError);}console.log(JSON.stringify({passed:true,malformedControls:6,sourceAndTotalsChecked:true}));

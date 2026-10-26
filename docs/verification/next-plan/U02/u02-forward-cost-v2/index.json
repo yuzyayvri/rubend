@@ -1,0 +1,145 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-forward-cost-v2",
+  "revision": "d33a44325a3345e83db733a5bc1675b0d35378e1",
+  "sourceSeals": 4169,
+  "jobs": 5,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-26T00:37:33.441Z",
+  "finishedAt": "2026-10-26T00:39:05.201Z",
+  "archives": [
+    {
+      "path": "0-u02-forward-cost-v2-plan.json.gz",
+      "sha256": "b367081ab8680e4e1621969dd8b5bf4a4a93260ab35158b3ead3d0627f304ac9",
+      "compressedSha256": "06c780e34b28ce19b079db0924333369dd4099b0fd8e79ac2c3f77abb83fd1d6"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "d57a43c826496eb154b54c91d32c50384460265d1c4fc0847649990c654eb067",
+      "compressedSha256": "219c6bf24c7181c07b00b5b0b9284f121ec93d5a2a75ce78188f92de5943d22b"
+    },
+    {
+      "path": "2-u02-forward-cost-v2-prepare.json.gz",
+      "sha256": "99ae9bae1e6c4c6bd1db4cb5e6552ae67cdc09070eef7e7e22d73a3c30d7661c",
+      "compressedSha256": "3c2232c49e72f0bbcffa259575141d58c86a36589fc60c7aa5049ee3e97367cc"
+    },
+    {
+      "path": "3-u02-forward-cost-v2-sizing.json.gz",
+      "sha256": "1ea4782c714a411f9460027c483c1fc320fbb6fcdb588d5e3826f05cac00f9b4",
+      "compressedSha256": "cad27b5d401f1f4ddeb0ee9e0e6fc3b10e6b0c30dd735bd8bcf8a1a8cc2ed79f"
+    },
+    {
+      "path": "4-u02-forward-cost-v2-profile.json.gz",
+      "sha256": "3ca8dfa5d744d06193122e22ee1918f68ce43fc17d9f90d27b43466c359fac7a",
+      "compressedSha256": "129b95e19df9614caf7d6d4e867aefc588a282169a6f42691643beca9baebc20"
+    },
+    {
+      "path": "5-u02-forward-cost-v2-measure.json.gz",
+      "sha256": "018721e4410f1557e480943495af112900b9510a08d88a3ae7deca95cd50f27f",
+      "compressedSha256": "242634a4b39aab8e93d594041917430cf64df46508c943c70929f66e9502c78a"
+    },
+    {
+      "path": "6-u02-forward-cost-v2-confirm.json.gz",
+      "sha256": "f33cf8dafc52eeceb43f285b1731c5029d9797cc33e0cd299c9b563ba86e02f8",
+      "compressedSha256": "08a71bc79cb0f57b326070af16a6b8b832d1b7261ea468f345b25d96a37f0330"
+    },
+    {
+      "path": "7-calibration.json.gz",
+      "sha256": "62ae3e2054744409635dda97844a7bebd4c6d8615b8fe69df6a5c63ee15c64dd",
+      "compressedSha256": "8a82922bf4e70d81000e18aa778dcde8f22be8862c692cfcbb86fc6d234555bc"
+    },
+    {
+      "path": "8-compile.json.gz",
+      "sha256": "c5b0e58feb28a25f2f4434f1ada77b696dec48ae3145956d1b1f3069e0e2cea7",
+      "compressedSha256": "d0fe6535ab74cfd67f6c8af4810c9efaffce8516e1f18c43005472732d11deea"
+    },
+    {
+      "path": "9-confirmation.json.gz",
+      "sha256": "75d83a45b53fc2df4afca0e374c51bf1a00e8bc89db2d548bcc9bad510ec4ff0",
+      "compressedSha256": "42a6c6b1e48ab2395cafe51f88567e950d51a8936823da7d80b847dc84c1dee5"
+    },
+    {
+      "path": "10-input.json.gz",
+      "sha256": "6545468def3095f891c3e438cd7c399956d487ea519313d4c4559e7a76035de3",
+      "compressedSha256": "b666d5771f5d90623fe087f17774f3a44bc9fe9d458987aa36dd044b66b6bee2"
+    },
+    {
+      "path": "11-model.json.gz",
+      "sha256": "ddfa627abd704ecb0d5331388e03b2744a58da3ddf9de60ae1c59ce7d442c425",
+      "compressedSha256": "8004e1072a3c99122c70272a3d030c968928576ef3d99a17c3139f062e4a6d09"
+    },
+    {
+      "path": "12-observation.json.gz",
+      "sha256": "25a5e7878ce630a23440b66a495518578dc6ded3150fb2e787c54eea7d539f34",
+      "compressedSha256": "a3e378270af71ed379ee63b1ada29e8625be1873a83e9b5fdd71f8df69849ff4"
+    },
+    {
+      "path": "13-profile-candidate-cpu.json.gz",
+      "sha256": "0d848672e9e4f03429c7976ee293945b3ec3044f72ddf6e016d6268a82753d08",
+      "compressedSha256": "c3e90d869bc9a3f3368aedb774a47346fcd6e5941fc81246d8fd5ad4e064b023"
+    },
+    {
+      "path": "14-profile-candidate.json.gz",
+      "sha256": "d76734ef11fc857dd2fd7fce95f1d00a476ad8e9f319b16932c7c525d24e8aff",
+      "compressedSha256": "245b4ead8a6104be56276195a750a0f4c584ffccea7d8a525f52d67117a61fd5"
+    },
+    {
+      "path": "15-profile-control-cpu.json.gz",
+      "sha256": "2594337a26e5aefedb885607236e853cd9f1816a1819c5cc5baddaed0e6a926d",
+      "compressedSha256": "253ca06477cb621fc572eaffd5b28846542ba0766500ed2c1dc3a8384c091cf8"
+    },
+    {
+      "path": "16-profile-control.json.gz",
+      "sha256": "51e4fdc9664f7178227d1cda74e7bf30c7ec82dd614c88913925c687e27ec787",
+      "compressedSha256": "4ff6fff014260652e7420b982a88bfe72b199b1ea1f78d9dd505de330cfd8a61"
+    },
+    {
+      "path": "17-profiles.json.gz",
+      "sha256": "f49b185c98fe3ff93db4600431f6add6b4ecbe3446aecbb991a530d29c3105be",
+      "compressedSha256": "08fc931ae4d24cfa35fb1163489d868df1c54b0732a3be158cc65c4dcb62983b"
+    },
+    {
+      "path": "18-red-regression.json.gz",
+      "sha256": "86a03f7b9319ab77384077d4ed2bcf94c20c35e97fba5eb1f3afe2fb44e2895b",
+      "compressedSha256": "effc786fdcf346c758a21d6fb6fa38705abc24dbafe49dfb65c6bc17140fe9d1"
+    },
+    {
+      "path": "19-reuse.json.gz",
+      "sha256": "31e57ddf471347d8133165bb94f80cfc52fbfe1bbfeccc63f9798cf2a7b4739c",
+      "compressedSha256": "e64c3727baadb682caa6df96f5eac53233b08c38e29bbd8dd832e16d528d8ae0"
+    },
+    {
+      "path": "20-sizing-candidate-cpu.json.gz",
+      "sha256": "9341942052921243828b70c102ea1875df0e02112d34c9bad05b35a40ed8755a",
+      "compressedSha256": "854d8d1bc701ae24dff82067732061a00338f8d35e860914cafcbe28a2f2e878"
+    },
+    {
+      "path": "21-sizing-candidate.json.gz",
+      "sha256": "777ba5813feb002dc3f5d4478cb81d8c81c2501d32919a3cfcc7056338e112c4",
+      "compressedSha256": "389218a766c0838961722e3f09121bd361ef299b52d955b3f2a2909a2cbc8141"
+    },
+    {
+      "path": "22-sizing-control-cpu.json.gz",
+      "sha256": "a6ddedc1e994a38b33a8bdcd4f888c670f668aaf310f833f9e06916693240077",
+      "compressedSha256": "fdf347bdec9ddc348aa94302c02593377d82634dd74331991dbf7011a53e2e84"
+    },
+    {
+      "path": "23-sizing-control.json.gz",
+      "sha256": "30df22b824180b4b0eb3f76548b265882e1b817c5c34b1dba611f89a25da6acf",
+      "compressedSha256": "763f0637a4e62b4be559a5259f4c064a2da11cc2e67f853eb44d282cfae024d4"
+    },
+    {
+      "path": "24-sizing.json.gz",
+      "sha256": "0162538192b64c7fc9807e740181702e26acfc62a95fcb37906fedb386b7ea46",
+      "compressedSha256": "eb981d13f01a5a2c7c7478b36b672b56b373759fdffde0a9c0078639b6774036"
+    },
+    {
+      "path": "25-workload-controls.json.gz",
+      "sha256": "04b884fec8a8b779e950e519c4c4944ca04a561f6b177c27bdd45f857f883dc9",
+      "compressedSha256": "720737f9859b22b86012450ec59a4ed91e6ba5f965d32827bbb1529075b1b5e8"
+    }
+  ]
+}

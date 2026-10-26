@@ -10,6 +10,12 @@ warm batch of completed threshold-fourteen requests on the eight declared
 pilot/development roots. The claim remains unmeasured until the fixed batch,
 profile review and noise gates pass. A numeric gate is not a product promotion.
 
+The current fixed plan is `u02-forward-cost-v3`. Its scored workload is 128
+repetitions, or 1,024 requests per owner. The earlier v2 workload remains
+explicitly unmeasured after sizing refused it. No scored sample or ratio informed
+the new count. Acceptance gates, cases, binaries, target and deadlines do not
+change. Preserve the v1 failure and v2 admission record.
+
 ## Ownership and alternatives
 
 Use the exact control and candidate binaries and generated C from
@@ -71,8 +77,8 @@ advances in both accepted workers. Select threshold fourteen to compare complete
 work instead of mixing unequal fuel-censored trees. No input is discarded based
 on observed timing and no release input is opened.
 
-Each fresh owner runs one untimed eight-request warmup, then 512 repetitions
-of all eight inputs. Every one of the 4,096 measured requests must reach lower
+Each fresh owner runs one untimed eight-request warmup, then 128 repetitions
+of all eight inputs. Every one of the 1,024 measured requests must reach lower
 bound fourteen with no answer and running status. This is completed work for
 the requested exclusion threshold, not a solved cube or completed optimality
 proof. Keep every request and any failure. Repeated per-root results and node
@@ -81,7 +87,7 @@ counts must be identical within each arm, including under reversed input order.
 Run five alternating ABBA/BAAB cohorts, twenty batches and ten per arm.
 Cases reverse on odd cohorts. Both arms use the same one-core affinity, limits,
 file-cache warming, fresh-process initialization and warmup. Repetitions are
-timing trials on eight roots, not 81,920 independent cube inputs.
+timing trials on eight roots, not 20,480 independent cube inputs.
 
 Require every measured native CPU window to span at least one second. Every
 same-arm duplicate CPU pair must differ by at most five percent. A native-CPU
@@ -112,7 +118,7 @@ diagnostic-only path; retain that expected message explicitly. It is not GUI
 lifecycle acceptance. Scored owners use ordinary Engine close and normal SIGTERM.
 Either internal or outer SIGKILL, leaked owner or retained IPC fails the run.
 
-The fixed recovery batch `u02-forward-cost-v2` requests at most 3 GiB. Reuse
+The preserved recovery batch `u02-forward-cost-v2` requests at most 3 GiB. Reuse
 preparation has sixty seconds under 512 MiB, and sizing has one hundred seconds.
 Profiling has four minutes; scored work has fifteen minutes on CPU2.
 Confirmation has sixty seconds under 512 MiB. The whole queue cap is 27 minutes.
@@ -160,3 +166,61 @@ data, but write an explicit unmeasured/inconclusive disposition instead of
 launching scored work. A passing execution receipt with that disposition is
 not a passed benchmark or a completed roadmap. Do not adapt the scored count
 after seeing timing ratios. Any later sizing change needs a distinct fixed plan.
+
+## Verified recovery and diagnostic review
+
+The [v2 archive](u02-forward-cost-v2/index.json) verifies 4,169 seals and five
+receipts, with no resource stop and the detached worker gone. All four sizing
+and diagnostic owners pass direct PID/start and IPC-path absence checks. Both
+profiles complete all 1,024 requests with the expected per-arm semantic digest.
+The diagnostic timeout and missing-path recording defect are resolved. The
+failed v1's historical missing path stays a limitation.
+
+The two release sizing samples each contain 512 completed requests. Their native
+CPU is 10,300 and 7,800 ms. Host warm wall is 11,421.151 and 8,473.362 ms, while
+driver CPU is 193.299 and 179.396 ms. These are single unscored planning probes,
+not repeated comparison results. Scaling to the old 4,096-request workload
+projects 93,300.322 ms for the larger host interval plus readiness. That exceeds
+the frozen 30,000-ms admission limit. Scored samples and measured requests are
+both zero. A passed queue does not turn this into a passed benchmark.
+
+`bench/forward-cost-profile-review.mjs` reads all 641 control and 550 candidate
+flat-profile entries. The generated C maps `spin_16` to packed nibble decoding
+and the top command locations to table indices and block reads. The instrumented
+whole-process self-time shares for `spin_16` are 28.12% and 42.70%. Block access
+shares are 25.30% and 13.15%. Initialization and instrumentation are included.
+These symbol associations identify the main sampled native work, not hardware
+memory stalls or a release-build speed ratio. The full profiles, source hashes,
+top source excerpts and raw gmon bytes remain evidence. The profile parser has
+six malformed-input controls. The main agent inspected the hot source excerpts.
+This is solo review, not an independent verdict.
+
+## Distinct scored plan after admission
+
+V3 freezes 128 repetitions before any scored work. Reuse the exact v2 sizing
+samples and complete diagnostic profiles by their canonical archive identities.
+Do not rebuild or rerun unchanged native diagnostics. The factor-two projection
+has a 15,600-ms minimum native CPU interval and 24,773.417-ms maximum host warm
+interval plus readiness. Both meet the existing admission bounds. Projection
+is still not measurement or a speed claim.
+
+The new fixed-count summary accepts exactly 1,024 completed requests per row.
+Its eleven synthetic controls retain rejection of missing rows, errors in work
+counts, answers, cleanup, ordering, semantic identity and counter units. The
+old CPU parser, event contract, calibration and 23 controls remain unchanged.
+Their complete twelve-file calibration closure is checked for exact reuse.
+An isolated count-specific summary avoids changing that accepted closure.
+
+V3 runs twenty fresh owners in five ABBA/BAAB cohorts, ten per arm. All 20,480
+scored requests remain threshold-fourteen exclusions on eight distinct roots.
+The forty-second sample deadline, one-second actual native CPU floor, every-pair
+five-percent noise limit and ten-percent median numerical gate stay fixed.
+Profiles and sizing are excluded from these samples. Separate diagnostic source
+review does not replace post-measurement scope and uncertainty review.
+
+The fixed queue has three serial jobs. Preparation and confirmation each use
+512 MiB and sixty seconds. Scoring uses 3 GiB, CPU2 and at most fifteen minutes.
+The whole queue is capped at twenty minutes, with nice 10, no swap, desktop
+reserve, aggregate memory checks and the artifact lease unchanged. The planning
+estimate is eight minutes. Any timeout, invalid output or forced owner exit
+remains a failure, never a faster result. No holdout or competitor is opened.
