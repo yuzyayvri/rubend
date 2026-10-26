@@ -2,6 +2,38 @@
 
 ## Latest checkpoint
 
+`u07-resource-scope-v1` passes canonical verification with 8,853 seals and twelve
+receipts, worker gone and no resource stop. All 49 requests across nine distinct
+actor scopes pass. Whole-cgroup CPU includes exited descendants. Charged job
+lifetime peak, sampled RSS and idle PSS remain separately labeled. All nine
+readiness PSS snapshots are available in this calibration, not promised on every
+future run. Twelve snapshot and eight window negatives pass. No comparative
+speed or physical-memory ranking follows from these observations.
+
+Before final protocol/admission work, the October 24 order remains binding.
+Finish the roadmap and additional solver setup, freeze configurations before
+untouched evaluation, then deliver the full numerical report before automation
+deletion. Yuzy separately decides any push to main. The next unit encodes the
+complete population, sample IDs, clock/resource contracts, duplicate cohorts,
+deadline eligibility, failures and source-bound measured admission. No holdout
+input is evaluated or tuned on. The final comparison/report remain incomplete.
+
+The proposed protocol checks all 57,678 planned slot identities using only case
+IDs. It covers full release quality, five alternating duplicate timing cohorts,
+longer budgets and structured oracle cases. Eight protocol, seven slot,
+nineteen record and eleven freeze-admission negatives pass locally. Actual
+source-bound admission passes 40 known-case requests across ten configurations.
+The post-run checker refactor reproduces all 70 earlier clock analyses without
+rerunning those solver jobs. Both older fixture/calibration-only public guards
+remain closed to measured records.
+
+The fixed `u07-final-admission-v1` queue verifies the record domain, not the final
+evaluation. It has an eight-minute cap with serial CPU2 jobs, at most four GiB,
+nice 10, reserve and no swap. The complete controller, checkpointing, structural
+artifact, statistics gates and actual final configuration freeze remain pending.
+Read docs/verification/next-plan/U07/FINAL-ADMISSION.md. No holdout case is opened,
+and no comparative numerical result or overall completion is claimed.
+
 `u07-clock-adapters-v1` passes canonical verification with 8,819 seals and
 three receipts, worker gone and no resource stop. All 68 ordinary requests and
 two short cold controls pass across nine configurations. All 70 observation

@@ -3,6 +3,28 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [resource preflight](U07/RESOURCE-SCOPES.md) verifies 8,853 seals and twelve
+receipts, worker gone and no stop. All 49 requests, nine separate actor scopes,
+readiness PSS snapshots, whole-scope CPU windows and cleanup checks pass. Twelve
+snapshot negatives and eight window negatives pass. Native child CPU, kernel
+charged lifetime peak, sampled RSS and idle PSS retain their different scopes.
+No solver ranking or formal optimized-search claim is made.
+
+The October 24 completion/report/no-push order is recorded before final
+protocol and measured-admission work. The full roadmap and report remain
+unfinished. Freeze the complete configuration and analysis rules before opening
+untouched solver cases. Deliver the numerical report before deleting the
+existing automation; any push still needs Yuzy's separate later approval.
+
+The [final admission domain](U07/FINAL-ADMISSION.md) locally passes 40 actual
+known-case requests across ten configurations, including a separate same-binary
+exact-request contract. Eight protocol, seven slot, nineteen record and eleven
+freeze-admission negatives pass. All 57,678 proposed final slot IDs are checked
+without reading case contents. All 70 previous clock analyses recompute without
+solver reruns. The fixed source-bound queue is pending. The final controller,
+structural artifact, statistics, freeze and untouched evaluation remain open.
+The record-domain result cannot authorize final input access by itself.
+
 The [common-clock preflight](U07/PARENT-CLOCK-ADAPTERS.md) verifies 8,819 seals
 and three receipts, worker gone and no stop. All 70 requests and analyses pass,
 including two censored cold starts. Sixteen lifecycle controls, 24 observation

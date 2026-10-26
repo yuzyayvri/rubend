@@ -1,5 +1,19 @@
 # Resource measurement scopes
 
+## Verified result
+
+The [canonical result](u07-resource-scope-v1/index.json) verifies 8,853 seals and
+twelve receipts, worker gone and no resource stop. All 49 known/pilot/recovery
+requests and their independent analyses pass across nine separate actor scopes.
+All readiness PSS snapshots are available on this run. Twelve snapshot negatives,
+eight window negatives and the actual two-process allocation/CPU fixture pass.
+Every observed owner is gone. Whole-cgroup CPU includes exited descendants;
+charged lifetime peak, sampled RSS and idle PSS remain separately labeled.
+No comparative speed or physical-memory ranking follows. The design below is
+the pre-run plan, not another pending resource run.
+
+## Pre-run plan
+
 The [common-clock result](u07-clock-adapters-v1/index.json) verifies 8,819 seals
 and three receipts, worker gone and no resource stop. All 70 known-case requests
 and analyses pass. Its adapter sources stay unchanged during this unit.
