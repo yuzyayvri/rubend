@@ -62,6 +62,15 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [paired first-cohort timing group](../verification/next-plan/U07/u07-final-timing-c0-b-p1/index.json)
+records two instances in `rubend-u00-inverse`, both warm requests in repeat zero.
+They affect `release-4391` and `release-9332`. The raw streams show `done 7`,
+late `cancelled 7 alreadySettled`, then the assertion against request 8, and the
+same sequence for requests 3 and 4. Both sessions settle. These two timing errors
+remain distinct from the 35 broad-quality errors and stay in timing denominators.
+The race therefore affects this preserved Rubend profile too. It is not an
+intrinsic native-search failure or a successful short-latency observation.
+
 The [tenth final quality group](../verification/next-plan/U07/u07-final-quality-09-p1/index.json)
 records eleven further instances on `release-9058`, `release-9097`,
 `release-9130`, `release-9540`, `release-9602`, `release-9696`, `release-9761`,

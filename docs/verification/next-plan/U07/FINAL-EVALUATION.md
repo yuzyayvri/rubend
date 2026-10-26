@@ -196,6 +196,21 @@ and the same delivered binary's exact-request contract. Its five jobs keep
 four GiB, CPU2, 240 seconds each and the 26-minute queue cap. All five cohorts,
 both clocks and repeats, frozen noise rules and report/no-push gates remain.
 
+The [paired first-cohort timing group](u07-final-timing-c0-b-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 332 sessions settle. Five actors have
+distinct measured cgroups. Twelve warm-readiness PSS snapshots are available.
+Statuses are 34 `ok`, 604 `timeout` and two `error` observations, both from the
+known late cancellation acknowledgement in the preserved inverse profile.
+They remain failed observations, not short successful latencies. The first
+timing cohort accounts for 1,280 slots across all ten configurations.
+Cumulative campaign slots are 51,280. Four more cohorts remain before the frozen
+uncertainty gates can be applied. The next group is `u07-final-timing-c1-a-p1`.
+Its actor order is default exact-request, H0, inverse, small and vcube108.
+This odd cohort also reverses clock order. No source, configuration, slot,
+resource, censoring or failure-retention rule changes. No speed claim or push.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing
