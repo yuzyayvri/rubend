@@ -2,6 +2,21 @@
 
 ## Latest checkpoint
 
+`u07-final-timing-c0-a-p1` passes canonical verification with 4,977 seals and
+six receipts, worker gone and no resource stop. All 640 planned timing slots
+are recorded, with no pending or uncertain claims. All complete answers replay
+independently and all 330 sessions settle. Five actors have distinct measured
+cgroups. All ten warm-readiness PSS snapshots are available in this group.
+Statuses are 266 `ok` and 374 `timeout`, with no errors. These are not coverage
+counts, a passed noise gate or a performance verdict. All five cohorts remain
+required. Cumulative accounted campaign slots are 50,640 of 57,678.
+
+After this verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-timing-c0-b-p1`. Its five serial CPU2 jobs cover
+vcube108, the preserved U00 small/inverse/H0 profiles and default exact-request
+mode. Each has four GiB and 240 seconds, nice 10, no swap and desktop reserve.
+The queue cap remains 26 minutes. Frozen settings and analysis rules do not change.
+
 `u07-final-quality-09-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000
 planned slots on release inputs 9,000 through 9,999 are recorded, with zero pending
@@ -27,7 +42,7 @@ The report must retain this limitation.
 After verifying that queue and before the next group, the October 24 order
 remains binding. Finish the roadmap, comparative report and delivery of numbers
 before automation deletion. Yuzy separately decides any later push to main.
-The next fixed group is `u07-final-timing-c0-a-p1`, using the same frozen metadata.
+The fixed timing groups use the same frozen metadata.
 Five actor jobs run serially on CPU2, each with four GiB, nice 10, no swap and
 desktop reserve. Each has 128 cold/warm duplicate slots, a 240-second hard cap
 and a 210-second soft checkpoint. The queue cap is 26 minutes. All five cohorts,

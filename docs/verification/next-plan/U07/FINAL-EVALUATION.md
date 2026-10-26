@@ -181,6 +181,21 @@ and vcube104. Other frozen configurations follow in its paired second group.
 All timing, structural and longer-budget groups, final U07 acceptance and report
 delivery remain unfinished. No frozen source or configuration changes.
 
+The [first timing group](u07-final-timing-c0-a-p1/index.json) now verifies 4,977
+seals and six receipts, worker gone and no resource stop. All 640 slots are
+recorded, with no pending or uncertain claims. Each of the five actors has
+128 observations in a separate measured cgroup and 66 settled sessions.
+All complete answers independently replay. The ten warm-readiness PSS snapshots
+are available in this group, not promised for all future runs. Whole-cgroup CPU,
+charged lifetime peak, sampled RSS and idle PSS keep their different scopes.
+Statuses are 266 `ok` and 374 `timeout`, with no errors. No duplicate-noise gate,
+coverage rank, optimality-completion or speed verdict is inferred from one group.
+Cumulative accounted campaign slots are 50,640. The next fixed group is
+`u07-final-timing-c0-b-p1`, covering vcube108, the three preserved U00 profiles
+and the same delivered binary's exact-request contract. Its five jobs keep
+four GiB, CPU2, 240 seconds each and the 26-minute queue cap. All five cohorts,
+both clocks and repeats, frozen noise rules and report/no-push gates remain.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

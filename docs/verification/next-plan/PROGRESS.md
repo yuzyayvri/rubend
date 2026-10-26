@@ -3,6 +3,16 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [first frozen timing group](U07/u07-final-timing-c0-a-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop.
+All 640 slots are recorded, with no pending or uncertain claims. Complete
+answers independently replay and all 330 sessions settle. Five separate actor
+cgroups and ten available warm-readiness PSS snapshots retain their stated
+measurement scopes. No errors occur. There is no noise-gate or speed verdict
+before all five cohorts. Cumulative accounted slots are 50,640 of 57,678.
+The October 24 report-before-automation-deletion and no-push order remains
+binding before the paired `u07-final-timing-c0-b-p1` group.
+
 The [tenth frozen quality group](U07/u07-final-quality-09-p1/index.json) passes
 canonical verification with 4,972 seals and two receipts, worker gone and no stop.
 All 5,000 planned attempts are retained, with no pending or uncertain slots.
@@ -20,9 +30,8 @@ After that verification, the October 24 completion/report/no-push order is
 recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
-Next is the first fixed serial timing group, `u07-final-timing-c0-a-p1`.
-It has five separately capped four-GiB CPU2 actor jobs and 640 planned slots.
-All ten timing groups, the structural group and both long-budget groups remain,
+The fixed serial timing groups have five separately capped four-GiB CPU2 actor
+jobs and 640 planned slots each. Nine timing groups, the structural group and both long-budget groups remain,
 followed by final U07 acceptance and report delivery. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.
