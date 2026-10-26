@@ -240,6 +240,20 @@ cohorts remain before uncertainty gates and comparison verdicts. Next is
 Its actors are default, cubing min2phase, Muodov C, Nissy H48h0 and vcube104.
 All frozen sources, resources, contracts, no-rerun and report/no-push gates remain.
 
+The [third-cohort forward timing group](u07-final-timing-c2-a-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 330 sessions settle. Five distinct measured
+cgroups and ten available warm-readiness PSS snapshots retain their stated
+scopes. Statuses are 273 `ok` and 367 `timeout`, with no errors. Timing accounts
+for 3,200 slots, with the five earlier timing errors still retained. Cumulative
+campaign slots are 53,200. No uncertainty gate or performance verdict follows
+before all five cohorts. The next group is `u07-final-timing-c2-b-p1`, keeping
+forward actor and cold-then-warm clock order. Its actors are vcube108, small,
+inverse, H0 and default exact-request. All frozen limits and no-push gates remain.
+The [recorded handoff gap](../../../issues/final-evaluation-handoff-gap.md)
+after this batch delays continuation only; no measurement or failed slot is rerun.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

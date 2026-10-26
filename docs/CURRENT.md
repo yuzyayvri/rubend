@@ -2,23 +2,26 @@
 
 ## Latest checkpoint
 
-`u07-final-timing-c1-b-p1` passes canonical verification with 4,977 seals and
+`u07-final-timing-c2-a-p1` passes canonical verification with 4,977 seals and
 six receipts, worker gone and no resource stop. All 640 planned timing slots
 are recorded, with no pending or uncertain claims. All complete answers replay
-independently and all 331 sessions settle. Five actors have distinct measured
-cgroups. All eleven warm-readiness PSS snapshots are available in this group.
-Statuses are 266 `ok`, 373 `timeout` and one `error` observation. The error is
-the known late cancellation acknowledgement in Rubend default and remains
-terminal. These are not coverage
+independently and all 330 sessions settle. Five actors have distinct measured
+cgroups. All ten warm-readiness PSS snapshots are available in this group.
+Statuses are 273 `ok` and 367 `timeout`, with no errors. These are not coverage
 counts, a passed noise gate or a performance verdict. All five cohorts remain
-required. Cumulative accounted campaign slots are 52,560 of 57,678.
+required. Cumulative accounted campaign slots are 53,200 of 57,678.
 
 After this verification, the October 24 completion/report/no-push order remains
-binding before `u07-final-timing-c2-a-p1`. Cohort two returns to forward actor
-and cold-then-warm clock order. Its five serial CPU2 jobs cover Rubend default,
-cubing min2phase, Muodov C, Nissy H48h0 and vcube104. Each has four GiB and 240 seconds, nice 10,
+binding before `u07-final-timing-c2-b-p1`. Cohort two keeps its forward actor
+and cold-then-warm clock order. Its five serial CPU2 jobs cover vcube108,
+small, inverse, H0 and default exact-request. Each has four GiB and 240 seconds, nice 10,
 no swap and desktop reserve.
 The queue cap remains 26 minutes. Frozen settings and analysis rules do not change.
+
+A roughly three-hour continuation gap follows this batch's saved completion at
+`2026-10-26T20:07:20.345Z`; the next recorded handoff check is the 23:00 heartbeat.
+The cause is not established. Results, resources and seals pass canonical checks.
+Read docs/issues/final-evaluation-handoff-gap.md. No attempt is repeated.
 
 `u07-final-quality-09-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000

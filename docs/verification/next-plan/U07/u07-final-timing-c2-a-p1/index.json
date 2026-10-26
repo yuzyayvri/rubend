@@ -1,0 +1,135 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-final-timing-c2-a-p1",
+  "revision": "685785ff96276d72b03eb3d425da33054a059e8d",
+  "sourceSeals": 4977,
+  "jobs": 6,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-26T20:00:00.855Z",
+  "finishedAt": "2026-10-26T20:07:20.345Z",
+  "archives": [
+    {
+      "path": "0-u07-final-timing-c2-a-p1-plan.json.gz",
+      "sha256": "7181b484e4a7f8cef303ed76305ee9d832151ad1f13323384a916c805a1f2d48",
+      "compressedSha256": "70aebb01a910273a59b745aa4c439ce22bc589223039d24db9e5241625c66af0"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "55c066cb9a6e1f166b7f6e5c22da0eadd4ac5662dc3786a9b5197686f774abd3",
+      "compressedSha256": "8eab452c30dab89f356edaa22e651ceaefd1c3522a82c0f680527b7e3ff117c5"
+    },
+    {
+      "path": "2-u07-final-timing-c2-a-p1-rubend-default.json.gz",
+      "sha256": "4fea47d418ba8fa2a9ee6b474ff04b87a85405435d711b3e99906ecf8eea800a",
+      "compressedSha256": "0d30ddcfbab7d974c68a78994460b2ef1502034bafd2bf847fcc494a705fefa7"
+    },
+    {
+      "path": "3-u07-final-timing-c2-a-p1-cubing-min2phase.json.gz",
+      "sha256": "181b7706eea1e7c85d46f802e675496264f22d43ca35d0929bb6733c5590cddd",
+      "compressedSha256": "bfb20472a8254814b4e030b13576447db3226b023fc28a11d0e11c29c80ea009"
+    },
+    {
+      "path": "4-u07-final-timing-c2-a-p1-muodov-c.json.gz",
+      "sha256": "d546221efc64b4528ebf2d2a31dfdcf85e6972138767d09d2c56d191986b0c6c",
+      "compressedSha256": "ebc2fddb7ba6fec320daf6a146a28556b634932935e8c433bc202b2ebf8b4bbb"
+    },
+    {
+      "path": "5-u07-final-timing-c2-a-p1-nissy-h48h0.json.gz",
+      "sha256": "72a9f73e116a77681c7e57a6e15c7b1232d47300f6badc929ba110cfc6d25096",
+      "compressedSha256": "02d2601adf5a9f7c2f23e9e7e0c76295eebb26e23712bfc85217e13a20001129"
+    },
+    {
+      "path": "6-u07-final-timing-c2-a-p1-vcube-104.json.gz",
+      "sha256": "df4044971d789505d1de0a558dc2c8ccca5805b24116994cb03be1bc946bf5a1",
+      "compressedSha256": "7ecd28c054c6368e65b14f77f979ac5141b88adc2e504d5f00b2b0d5747f8d06"
+    },
+    {
+      "path": "7-u07-final-timing-c2-a-p1-confirm.json.gz",
+      "sha256": "a466e0cd3550dddc4003f82249a6e9163bdf1517055c805f765aff54574ec87e",
+      "compressedSha256": "2710c66dfcd205fb17e868d318a1288f66fb5323e9a55376e343536737cd4ce6"
+    },
+    {
+      "path": "8-commands-cubing-min2phase.json.gz",
+      "sha256": "0a4a87db4297479ac44a11e3efa497666864b9f04dabba4c8ea2b0288c5da3d4",
+      "compressedSha256": "22dc050069530bff67d22914a27914e69ebd068a368f83d2d189d55cee30c1d9"
+    },
+    {
+      "path": "9-commands-muodov-c.json.gz",
+      "sha256": "dbcef48f4c8161b34a80dece215c015b25bfc273c10cc7dc0f90b7183d895525",
+      "compressedSha256": "3b0eb088128671fbbc1abd1a83692a8596f0dda9acdb9def738c1865862fbdd8"
+    },
+    {
+      "path": "10-commands-nissy-h48h0.json.gz",
+      "sha256": "7d2fcc96dc53801588de6e7cdd02392c6d2d01fa52255265438882aa4fc5f3ed",
+      "compressedSha256": "9a6bd4b5d8163fe3dc9aae83df6a91b4eafbe0ec08de9cf50cd2fe808fae75de"
+    },
+    {
+      "path": "11-commands-rubend-default.json.gz",
+      "sha256": "2cc072d7811b0b6cd7c5b45e8ad05992acc093d01f9efa35bc88bd95d0c0abc1",
+      "compressedSha256": "4acc83690482ec492b980ad732c7359d688e70f7e06125fa3fd38c49656b073c"
+    },
+    {
+      "path": "12-commands-vcube-104.json.gz",
+      "sha256": "a3e8d983bc001378ce55ae5239a1e3532fb6c3773f62906c040bc868b7e6c81c",
+      "compressedSha256": "b28b3dfe9786eae52c07af7b412c428affb0a2746db13f0d316558d50247df50"
+    },
+    {
+      "path": "13-confirmation.json.gz",
+      "sha256": "3972212243a57b6736e8ad0f9c23729ac80b219de737459ce2dbfcc70839af48",
+      "compressedSha256": "c47233178291e7fb961fa662579d758f0a87e10c9c5e0c72d1895fd0f49aefbe"
+    },
+    {
+      "path": "14-cubing-min2phase-cubing-min2phase-input.json.gz",
+      "sha256": "2437bc771d68b3afff7d5c71beec32dcabdc85e4efa40bd4cdfb49ca4de214ce",
+      "compressedSha256": "87c6d1f862dcf4fec7cdfe6f00c4f2831c06b831763dbfb0abc764b050f50002"
+    },
+    {
+      "path": "15-cubing-min2phase-cubing-min2phase.json.gz",
+      "sha256": "f936691481c179c8ca588a1f8dd9f5a77e24b5399851650cebf289f771ef58d6",
+      "compressedSha256": "3a6101393104dd342903b9e6c55c52fca7e5173fd4504ca1f91329a41d49e574"
+    },
+    {
+      "path": "16-muodov-c-muodov-c-input.json.gz",
+      "sha256": "268cd834dd59ae100f97599fe4ee1fcc79141f4dad77c55048fbdbc6cf654b26",
+      "compressedSha256": "94c28bbd4d67812f617d5af7d8d47968d58b037a264a6048c17abd1a4a370730"
+    },
+    {
+      "path": "17-muodov-c-muodov-c.json.gz",
+      "sha256": "3c722b91ce2e53b6a4b73aa437bcd0dbeb8d24bd32df5d66ced07ff4813ae208",
+      "compressedSha256": "764afc02a79729eb14333a3f5e18f8580059b83cb9c2f407f15c1b299c73b0ad"
+    },
+    {
+      "path": "18-nissy-h48h0-nissy-h48h0-input.json.gz",
+      "sha256": "b3eb2e9625407d7b0229c8af538284b07ffa10ab5bdc69379f22481daa7b8501",
+      "compressedSha256": "861ab028bbf011d2c24cf80f18b50a595f6343da51d0adf5598dc9ca3f6ea5ac"
+    },
+    {
+      "path": "19-nissy-h48h0-nissy-h48h0.json.gz",
+      "sha256": "bb5c2423cc1577efd97ece1ec1d7c5ecd13a9fd350448c5b5ec0971ac76d9794",
+      "compressedSha256": "523d43a3ec0dd67a71767a3af4eb5425cc00afba5f3f31eb1ab338c14fa9c37c"
+    },
+    {
+      "path": "20-rubend-default-rubend-default-input.json.gz",
+      "sha256": "f19b8d26396b5a92fa29df04e6a2b0ce861920f0585d1496ebd9c714145ea1b2",
+      "compressedSha256": "35e8d2dd0b0e083887ce209fa1701da168e5b588895f67faa6eecf2207862388"
+    },
+    {
+      "path": "21-rubend-default-rubend-default.json.gz",
+      "sha256": "e55d7ee392bc5e3773ea2f056b305475ecd6629b3a73f40330f9284a831d3b83",
+      "compressedSha256": "1c432655c02e478b10ec931ec663d60b9c98db4b413f7e2cac36b23a85580e6c"
+    },
+    {
+      "path": "22-vcube-104-vcube-104-input.json.gz",
+      "sha256": "10d7379c6315637f2cd5e0d20bb8ece1515c27d0051490bbf0e600dc88b933ca",
+      "compressedSha256": "c513732fa142ec36a20ccdcdff144b44e430f3110a9eba831abd2cd340adb610"
+    },
+    {
+      "path": "23-vcube-104-vcube-104.json.gz",
+      "sha256": "913d88fd6dbc7828a23549d758a73f9724d88acc0230a651b76661fc138da93c",
+      "compressedSha256": "2d57b66c12a394a467a8105144f39bc6fc43b55943293fd1eff3b78e342b6554"
+    }
+  ]
+}
