@@ -31,6 +31,14 @@ stdout, under the canonical index above. The ledger preserves exact slot IDs
 
 ## Cause and scope
 
+The [second final quality group](../verification/next-plan/U07/u07-final-quality-01-p1/index.json)
+records one more instance on `release-1550`, slot
+`86e1d7e6ecb4828fb937318cca17bfdbbd93b090f7c271af712be86450b2c58d`.
+Its raw session stdout ends with `done 137`, `cancelled 137 alreadySettled`,
+then `bound 138`. The assertion difference is `137 !== 138`. The session
+settles. This raises the preserved count to three across 10,000 planned slots.
+The additional observation does not change the frozen-campaign disposition.
+
 `bench/comparison-node-child.mjs` can emit an `alreadySettled` cancellation
 acknowledgement after a request completes. That is a legitimate child event.
 `ComparisonActor.line` in `bench/comparison-actor.mjs` ignores an old cancellation

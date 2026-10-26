@@ -85,8 +85,16 @@ No wrong-request candidate is accepted. Both observations remain failed. The
 seal stays unchanged, the affected slots are never repeated, and no post-holdout
 configuration repair is substituted into this campaign. The final report must
 identify the adapter limitation, rather than call it an invalid cube solution
-or hide it in conditional latency statistics. The next fixed group is
-`u07-final-quality-01-p1`.
+or hide it in conditional latency statistics.
+
+The [second quality group](u07-final-quality-01-p1/index.json) also verifies
+4,972 seals and two receipts, worker gone and no resource stop. All 5,000 slots
+on release inputs 1,000 through 1,999 are recorded, with no pending or uncertain
+slots. All complete answers independently replay and twenty-one sessions settle.
+Its statuses are 2,021 `ok`, 2,978 `timeout` and one `error`. The error has the
+same recorded cancellation-acknowledgement cause. The first two groups account
+for 10,000 campaign slots, including all three errors. The next fixed group is
+`u07-final-quality-02-p1`. The frozen configurations remain unchanged.
 
 The current queue pointer is `build/evidence/u07-final-current.json`.
 The campaign and durable slot ledgers are under
