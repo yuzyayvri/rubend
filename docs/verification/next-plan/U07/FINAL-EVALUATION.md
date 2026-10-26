@@ -125,8 +125,17 @@ inputs 5,000 through 5,999 are recorded, with no pending or uncertain slots.
 All complete answers independently replay and twenty sessions settle.
 Its statuses are 2,025 `ok`, 2,975 `timeout` and no errors. The first six groups
 account for 30,000 campaign slots, with the five earlier errors retained.
-The next fixed group is `u07-final-quality-06-p1`. Frozen sources,
-configurations, budgets and analysis rules remain unchanged.
+Frozen sources, configurations, budgets and analysis rules remain unchanged.
+
+The [seventh quality group](u07-final-quality-06-p1/index.json) verifies 4,972
+seals and two receipts, worker gone and no resource stop. All 5,000 slots on
+release inputs 6,000 through 6,999 are recorded, with no pending or uncertain
+slots. All complete answers independently replay and twenty-nine sessions
+settle. Its statuses are 2,095 `ok`, 2,896 `timeout` and nine `error` observations.
+All nine new raw sequences have the same prior-`done`, late-`alreadySettled`
+cancellation cause. The first seven groups account for 35,000 campaign slots
+and retain all fourteen errors. The next fixed group is
+`u07-final-quality-07-p1`. No frozen sources or configurations change.
 
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
