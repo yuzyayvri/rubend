@@ -3,6 +3,25 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [final comparison metadata](U07/FINAL-EVALUATION.md) is sealed before any
+holdout solve. Its final-stage loader checks 4,963 files and ten configurations.
+The fixed campaign has 50,000 quality, 6,400 timing, 192 long-budget and 1,086
+structural slots. These are planned counts, not results. Completed failures or
+noisy observations cannot be repeated. The first bounded quality group follows
+the signed evidence commit. The report and remaining U07 acceptance stay open.
+
+The [controller admission result](U07/u07-final-controller-v1/index.json)
+verifies 8,958 seals and four receipts, worker gone and no resource stop.
+All 47 known requests pass and thirty completed slots resume without execution.
+The campaign covers 57,678 slots across 23 bounded groups. The structural
+artifact has 181 cases and 171 justified optima. No holdout solver case runs.
+
+After that verification and before final sealing, the October 24 order remains
+binding. Complete the roadmap and comparative report, deliver the numbers, then
+delete the existing automation. Freeze all configurations before untouched
+inputs. Yuzy separately decides any later push to main. Final evaluation,
+remaining U07 acceptance and report delivery remain open.
+
 The [record-admission unit](U07/FINAL-ADMISSION.md) verifies 8,912 seals and three
 receipts, worker gone and no stop. All 40 known requests and twenty cleanups pass.
 Eight protocol, seven slot, nineteen record and eleven metadata negatives pass.

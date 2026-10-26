@@ -134,5 +134,7 @@ every ledger envelope to match canonical batch evidence. It recomputes independe
 replays and metrics, preserves exact/anytime and proof-kind distinctions, and
 produces raw JSON plus a numerical Markdown report. It cannot authorize a push.
 The final report, remaining U07 acceptance and delivery of numbers in chat still
-precede automation deletion. This controller queue is pending; no untouched
-evaluation or overall completion is claimed.
+precede automation deletion. The [controller queue](u07-final-controller-v1/index.json)
+passes canonical verification with 8,958 seals and four receipts. Its worker is
+gone and no resource stop occurred. No untouched evaluation or overall
+completion is claimed by that result.

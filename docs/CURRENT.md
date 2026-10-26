@@ -2,6 +2,32 @@
 
 ## Latest checkpoint
 
+The final comparison configuration is sealed at
+`build/experiments/u07-final-evaluation-v1/freeze.json`. Its canonical metadata
+digest is `7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d`.
+All 4,963 frozen file hashes, ten configurations and canonical admission evidence
+pass the final-stage loader. The full metadata is archived in
+docs/verification/next-plan/U07/final-evaluation-freeze.json.gz.
+No code, binary, table or input changes follow this seal. The first fixed group
+is `u07-final-quality-00-p1`, with a 29-minute queue cap and four low-priority
+lanes sharing four GiB. Read docs/verification/next-plan/U07/FINAL-EVALUATION.md
+for continuation commands and the current pointer. Actual comparison results,
+final U07 acceptance and numerical report delivery remain unfinished.
+
+`u07-final-controller-v1` passes canonical verification with 8,958 source seals
+and four resource receipts. The worker is gone and no resource stop occurred.
+All 47 known controller and queue-executor requests pass, with thirty completed
+slots resumed without new solver sessions. The 23-group campaign covers all
+57,678 planned slots. Its 181 structural cases retain 171 justified optima.
+Read docs/verification/next-plan/U07/u07-final-controller-v1/index.json.
+
+After checking that result and before final sealing, the October 24 order is
+recorded again. Finish the full roadmap and the coordinated comparative report,
+deliver its numbers, then delete the existing automation. Freeze configurations
+before untouched cases. Yuzy separately decides any later push to main.
+The next unit seals the admitted metadata and launches fixed final groups.
+No holdout case has been evaluated and no overall completion is claimed.
+
 `u07-final-admission-v1` passes canonical verification with 8,912 seals and three
 receipts, worker gone and no stop. All 40 known-case requests and twenty session
 cleanups pass across ten configurations. Eight protocol, seven slot, nineteen

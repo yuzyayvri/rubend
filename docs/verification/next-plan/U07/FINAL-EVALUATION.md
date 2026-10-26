@@ -1,0 +1,113 @@
+# Frozen final comparison
+
+The [controller admission](u07-final-controller-v1/index.json) verifies 8,958
+source seals and four receipts. Its worker is gone and no resource stop occurred.
+All 47 known requests pass. Thirty completed slots reopen without execution.
+The [controller description](FINAL-CONTROLLER.md) records the checkpoint,
+structural, statistics and report controls.
+
+After that verification, the October 24 completion/report/no-push order is
+recorded before sealing. Finish the entire roadmap and the coordinated numerical
+report, deliver the numbers, then delete the existing automation. Yuzy separately
+decides any later push to main. No push, merge, publication or independent review
+is claimed or authorized by this evaluation.
+
+## Configuration seal
+
+The final seal was created at `2026-10-26T13:59:17.020Z`, before any holdout solve.
+Its measurement-source revision is `8fe1f2cdc2eb88d4c1ef0042bdb377791ca4d9fa`.
+The final-stage loader verifies all 4,963 frozen file hashes, ten configuration
+signatures and canonical admission evidence. No source, executable, dependency,
+table, structural artifact or analysis rule changes follow this seal.
+
+The active metadata path is
+`build/experiments/u07-final-evaluation-v1/freeze.json`.
+The [archived metadata](final-evaluation-freeze.json.gz) preserves its exact
+1,953,187 bytes. Compression roundtrip verification passes.
+
+- Canonical metadata digest used by the loader is
+  `7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d`.
+- Exact JSON file SHA256 is
+  `d31b593526a70c1d45414501ed01895ab1d71c8f2bf1eeca39ee6444f09b3402`.
+- Compressed file SHA256 is
+  `c65579ef2c8fa42e95f05c9ec6159fd2cf218c9c99b2b8dc5d519eb012711b6b`.
+
+The canonical digest hashes sorted metadata values. It is not the JSON file
+hash. The archive contains every actor configuration, source hash and identity,
+protocol, selected integer case ID, upstream revision, license and notice.
+The delivered default binary also has a separate exact-request configuration.
+That is a different contract, not an additional solver implementation.
+
+## Planned observations
+
+The immutable protocol contains 57,678 slots across 23 groups and 102 worker
+tasks. These counts describe the plan, not successful observations.
+
+| Population | Planned slots | Inputs and contracts |
+| --- | ---: | --- |
+| Quality | 50,000 | All 10,000 release cases across five primary actors, warm one-second requests. |
+| Timing | 6,400 | Thirty-two ID-selected cases, ten configurations, five alternating cohorts, two repeats, cold and warm one-second requests. |
+| Long budget | 192 | The same thirty-two cases across six configurations, warm ten-second requests. |
+| Structural | 1,086 | All 181 structural entries across six configurations, warm one-second requests. |
+
+Selection uses integer IDs only, before reading facelets. Timing cohorts reverse
+actor and clock order. Cold means process-cold, not disk-cold. Quality lanes
+share a batch scope and have no isolated latency rank or per-actor CPU claim.
+Timing actors each have a fresh resource job on CPU2. All jobs use a four-GiB
+ceiling, one search thread, nice 10, zero swap and the required desktop reserve.
+Quality uses four disjoint CPU lanes, CPU2 through CPU5. Every queue cap stays
+below thirty minutes. No host security mitigation changes are made.
+
+The intended report describes coverage, HTM, justified optimum gaps, answer and
+optimality arrival times, initialization, CPU and distinct memory measurements
+under these exact contracts. It does not promise a winner. Duplicate noise above
+five percent, CPU windows below one second, missing work or coverage drift keep
+performance conclusions inconclusive. Case-bootstrap intervals keep an input's
+cohorts and repeats together. Missing results stay in denominators.
+
+Every complete candidate replays through Bend and independent integer geometry.
+The report repeats those checks and rejects any claimed optimum contradicted by
+a shorter verified answer or a justified known optimum. Non-exact algorithms do
+not receive censored exact-completion durations. Search-established events are
+not universal formal certificates. The original 23 laws remain unchanged.
+
+## Continue without rerunning completed attempts
+
+The current queue pointer is `build/evidence/u07-final-current.json`.
+The campaign and durable slot ledgers are under
+`build/experiments/u07-final-evaluation-v1`. The first group is
+`u07-final-quality-00-p1`. Its work job has a 27-minute hard cap and a 25-minute
+soft checkpoint. Its queue cap is 29 minutes.
+
+On a scheduled continuation, read the pointer and its saved status first.
+If the worker is active, end the turn without polling or duplicating it.
+If the queue passes, run the canonical checker before tracked edits.
+
+```sh
+node bench/check-background-results.mjs RUN-ID
+```
+
+Archive the verified result and record the checkpoint. Commit focused signed
+subject-only evidence before planning the next group. Use the same seal.
+
+```sh
+node bench/final-evaluation-queue.mjs plan build/experiments/u07-final-evaluation-v1/freeze.json 7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d build/experiments/u07-final-evaluation-v1
+node bench/background-tests.mjs start RETURNED-PLAN-PATH
+```
+
+Do not precreate a batch run directory. The planner selects only never-claimed
+slots. Completed errors, timeouts and noisy attempts remain terminal. An
+interrupted claim becomes an explicit unavailable outcome and cannot run again.
+A failed queue requires preserved failure evidence and diagnosis, not a blind
+retry. No configuration tuning follows holdout access.
+
+When every slot is accounted for and every queue is canonically verified, run
+the report writer under the resource runner. Its output directory must be new.
+
+```sh
+node bench/run-limited.mjs u07-final-report-v1 4096 600 2 /nix/store/m0256z6rrjwmvxkbymm7a28n0nw2zll9-nodejs-slim-24.21.0/bin/node bench/final-comparative-report.mjs build/experiments/u07-final-evaluation-v1/freeze.json 7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d build/experiments/u07-final-evaluation-v1 build/experiments/u07-final-report-v1
+```
+
+Final U07 acceptance, saved numerical report and raw evidence, delivery of the
+numbers and limitations in chat, and only then automation deletion remain
+required. The roadmap is not complete at configuration freeze or implementation.
