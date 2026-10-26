@@ -2,6 +2,26 @@
 
 ## Latest checkpoint
 
+`u07-final-quality-00-p1` passes canonical verification with 4,972 source seals
+and two receipts. Its worker is gone and no resource stop occurred. All 5,000
+planned slots on release inputs 0 through 999 are recorded, with zero pending
+or uncertain slots. All complete answers independently replay and all twenty-two
+actor sessions settle. The saved statuses are 2,026 `ok`, 2,972 `timeout` and two
+`error`. A timeout can contain an eligible answer, so these are not coverage
+counts. No isolated quality latency or per-actor CPU ranking is inferred.
+
+Both errors are benchmark-adapter cancellation-acknowledgement races, not
+invalid returned solutions. Read docs/issues/frozen-comparison-late-cancel-ack.md.
+Keep both terminal errors and the configuration seal unchanged. Do not rerun
+completed slots or tune on these cases. The report must retain this limitation.
+
+After verifying that queue and before the next group, the October 24 order
+remains binding. Finish the roadmap, comparative report and delivery of numbers
+before automation deletion. Yuzy separately decides any later push to main.
+The next fixed group is `u07-final-quality-01-p1`, using the same frozen metadata,
+four-GiB shared ceiling, CPU2 through CPU5, nice 10, no swap and desktop reserve.
+The final report and remaining U07 acceptance are still unfinished.
+
 The final comparison configuration is sealed at
 `build/experiments/u07-final-evaluation-v1/freeze.json`. Its canonical metadata
 digest is `7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d`.

@@ -73,6 +73,21 @@ not universal formal certificates. The original 23 laws remain unchanged.
 
 ## Continue without rerunning completed attempts
 
+The [first quality group](u07-final-quality-00-p1/index.json) passes canonical
+verification with 4,972 seals and two receipts. All 5,000 planned slots are
+recorded, with no pending or uncertain slots. All complete answers independently
+replay and all twenty-two actor sessions settle. The saved statuses are 2,026
+`ok`, 2,972 `timeout` and two `error`. A timeout can retain an eligible solution,
+so these statuses are not answer-coverage counts.
+
+The two errors come from a [late cancellation acknowledgement in the adapter](../../../issues/frozen-comparison-late-cancel-ack.md).
+No wrong-request candidate is accepted. Both observations remain failed. The
+seal stays unchanged, the affected slots are never repeated, and no post-holdout
+configuration repair is substituted into this campaign. The final report must
+identify the adapter limitation, rather than call it an invalid cube solution
+or hide it in conditional latency statistics. The next fixed group is
+`u07-final-quality-01-p1`.
+
 The current queue pointer is `build/evidence/u07-final-current.json`.
 The campaign and durable slot ledgers are under
 `build/experiments/u07-final-evaluation-v1`. The first group is

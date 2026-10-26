@@ -3,6 +3,18 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [first frozen quality group](U07/u07-final-quality-00-p1/index.json) passes
+canonical verification with 4,972 seals and two receipts, worker gone and no stop.
+All 5,000 planned attempts are retained, with no pending or uncertain slots.
+All complete answers independently replay. All twenty-two sessions settle.
+Two [adapter cancellation races](../../issues/frozen-comparison-late-cancel-ack.md)
+remain terminal errors. The frozen code and configurations do not change and
+neither attempt is repeated. No final solver ranking is inferred.
+
+After that verification, the October 24 completion/report/no-push order is
+recorded before the next fixed quality group. Report delivery still precedes
+automation deletion. Yuzy separately decides any later push to main.
+
 The [final comparison metadata](U07/FINAL-EVALUATION.md) is sealed before any
 holdout solve. Its final-stage loader checks 4,963 files and ten configurations.
 The fixed campaign has 50,000 quality, 6,400 timing, 192 long-budget and 1,086
