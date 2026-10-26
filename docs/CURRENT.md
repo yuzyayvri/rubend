@@ -2,18 +2,17 @@
 
 ## Latest checkpoint
 
-`u07-final-quality-04-p1` passes canonical verification with 4,972 source seals
+`u07-final-quality-05-p1` passes canonical verification with 4,972 source seals
 and two receipts. Its worker is gone and no resource stop occurred. All 5,000
-planned slots on release inputs 4,000 through 4,999 are recorded, with zero pending
-or uncertain slots. All complete answers independently replay and all twenty-one
-actor sessions settle. The saved statuses are 2,027 `ok`, 2,972 `timeout` and one
+planned slots on release inputs 5,000 through 5,999 are recorded, with zero pending
+or uncertain slots. All complete answers independently replay and all twenty
+actor sessions settle. The saved statuses are 2,025 `ok`, 2,975 `timeout` and no
 `error`. A timeout can contain an eligible answer, so these are not coverage
 counts. No isolated quality latency or per-actor CPU ranking is inferred.
 
-The first five quality groups account for 25,000 of 57,678 planned campaign slots.
+The first six quality groups account for 30,000 of 57,678 planned campaign slots.
 Five cumulative errors are the recorded benchmark-adapter cancellation race,
-not invalid returned solutions. The new `release-4509` error has the same raw
-`done 127`, `cancelled 127 alreadySettled`, then `bound 128` sequence.
+not invalid returned solutions. This group adds no new errors.
 Read docs/issues/frozen-comparison-late-cancel-ack.md. Keep all terminal errors
 and the seal unchanged. Do not rerun completed slots or tune on these cases.
 The report must retain this limitation.
@@ -21,9 +20,14 @@ The report must retain this limitation.
 After verifying that queue and before the next group, the October 24 order
 remains binding. Finish the roadmap, comparative report and delivery of numbers
 before automation deletion. Yuzy separately decides any later push to main.
-The next fixed group is `u07-final-quality-05-p1`, using the same frozen metadata,
+The next fixed group is `u07-final-quality-06-p1`, using the same frozen metadata,
 four-GiB shared ceiling, CPU2 through CPU5, nice 10, no swap and desktop reserve.
 The final report and remaining U07 acceptance are still unfinished.
+
+On October 27 Yuzy resumed continuation after the usage-limit pause. The sixth
+batch finished while automatic wakeups were paused. Its saved results are
+verified before advancing. Resume the same one-minute heartbeat without changing
+the benchmark, resources or no-push order. No batch or failed slot is repeated.
 
 After canonical verification, Yuzy's October 26 request to shorten handoff gaps
 is recorded. The existing automation now checks every minute instead of thirty.
