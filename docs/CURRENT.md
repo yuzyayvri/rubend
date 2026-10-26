@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+`u07-competitor-sources-v1` passes canonical verification with 8,373 seals and
+two receipts, no stop and the worker gone. Muodov Kociemba C and vcube are
+locally acquired at exact pinned commits. All 93 files match Git blobs and
+SHA256 hashes, and both checkouts are clean. Licenses and raw commands remain
+preserved. No upstream code or solver/table generation has run.
+
+Next is `u07-competitor-build-v1`. Build the unchanged Muodov C CLI and a separate
+vcube CLI enabling upstream104/108 declarations with their existing bases and
+a dated notice. Retain original checkouts. Reuse the twelve provided C cache
+files, checking every compiled ABI size and hash, with read-only runtime copies.
+Check vcube help only, not table generation or solving. Use pinned Clang21.1.8,
+fixed flags and four serial resource jobs under a sixteen-minute cap, at most
+four GiB/four nice10 lanes with reserve and no swap. Upstream CppUTest is not
+claimed run. Later vcube execution needs isolated IPC and generation admission.
+Calibration, configuration freeze, final U07 comparison and numerical report
+remain. The October24 report-before-automation-end/no-push order is unchanged.
+Read docs/verification/next-plan/U07/COMPETITOR-BUILDS.md.
+
 `u07-installed-gui-v1` passes canonical verification with 8,326 seals and two
 receipts, no resource stop and the worker gone. Fifteen browser observations
 and fifteen screenshots are retained. Eleven solution/state checks and 27 raw

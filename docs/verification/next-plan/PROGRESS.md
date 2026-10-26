@@ -3,6 +3,19 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [additional-source acquisition](U07/ADDITIONAL-SOLVERS.md) passes canonical
+verification with 8,373 seals and two receipts, no stop and the worker gone.
+Both pinned upstream checkouts and all 93 files match their Git blobs and
+SHA256 hashes. No upstream code, generator or solver case executes.
+
+The next [native build queue](U07/COMPETITOR-BUILDS.md) builds unchanged Muodov
+C and a noticed vcube CLI copy enabling upstream104/108 coordinates with their
+supplied bases. Reuse twelve existing C caches with exact ABI/hash checks. No
+new tables or solver cases run in this build. The sixteen-minute queue uses
+at most four GiB/four low-priority lanes, reserve and no swap. Independent
+calibration, generation admission, configuration freeze, final comparison and
+report remain. No final holdout evaluation, publication or push.
+
 The [known-case installed browser unit](U07/INSTALLED-BROWSER.md) passes canonical
 verification with 8,326 seals and two receipts, no stop and its worker gone.
 Fifteen observations and screenshots, eleven solution/state replays and 27 raw

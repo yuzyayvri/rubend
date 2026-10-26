@@ -41,6 +41,14 @@ release or deployment is authorized now. Independent review remains not run.
 Primary-source selection and local build admission are in progress. No new
 competitor has yet been built, calibrated, frozen or benchmarked in this pass.
 
+The source-only queue now passes canonical verification with 8,373 seals and
+two receipts, no stop and the worker gone. All 93 acquired files and both
+checkouts retain their exact revisions and hashes. No upstream code, table
+generator or solver case runs. The [native build unit](COMPETITOR-BUILDS.md)
+next reuses Muodov's existing twelve C caches and compiles vcube with its
+upstream small coordinate declarations enabled in a separately noticed CLI
+copy. No generation or comparison is admitted by compilation alone.
+
 ## Selected source acquisition
 
 | Candidate | Pinned upstream | Intended additional contract | Admission boundary |
