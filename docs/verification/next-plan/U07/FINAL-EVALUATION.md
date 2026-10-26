@@ -101,8 +101,16 @@ inputs 2,000 through 2,999 are recorded, with no pending or uncertain slots.
 All complete answers independently replay and twenty-one sessions settle.
 Its statuses are 2,024 `ok`, 2,975 `timeout` and one `error`, with the same
 recorded cancellation-acknowledgement cause. The first three groups account for
-15,000 campaign slots, including all four errors. The next fixed group is
-`u07-final-quality-03-p1`. The frozen configurations remain unchanged.
+15,000 campaign slots, including all four errors.
+
+The [fourth quality group](u07-final-quality-03-p1/index.json) verifies 4,972
+seals and two receipts, worker gone and no resource stop. All 5,000 slots on
+release inputs 3,000 through 3,999 are recorded, with no pending or uncertain
+slots. All complete answers independently replay and twenty sessions settle.
+Its statuses are 2,030 `ok`, 2,970 `timeout` and no errors. The first four groups
+account for 20,000 campaign slots, with the four earlier errors still retained.
+The next fixed group is `u07-final-quality-04-p1`. All frozen sources and
+configurations remain unchanged.
 
 On October 26 Yuzy asked to shorten handoff delays as much as possible. After
 canonical verification of the active queue, that authorization is recorded here.
