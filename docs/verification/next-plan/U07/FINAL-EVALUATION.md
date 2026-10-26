@@ -211,6 +211,21 @@ Its actor order is default exact-request, H0, inverse, small and vcube108.
 This odd cohort also reverses clock order. No source, configuration, slot,
 resource, censoring or failure-retention rule changes. No speed claim or push.
 
+The [first reverse-order timing group](u07-final-timing-c1-a-p1/index.json)
+verifies 4,977 seals and six receipts, worker gone and no resource stop. All
+640 slots are recorded, with no pending or uncertain claims. All complete
+answers independently replay and all 332 sessions settle. Five actors have
+separate measured cgroups and twelve available warm-readiness PSS snapshots.
+Statuses are 40 `ok`, 598 `timeout` and two `error` observations, both known
+late-cancellation instances in the preserved small profile. Raw session streams
+confirm the prior-`done`, late-`alreadySettled` cause. All failures remain terminal.
+Timing accounts for 1,920 slots and the campaign for 51,920. All five cohorts
+are still required before uncertainty gates or comparison verdicts. The next
+group is `u07-final-timing-c1-b-p1`, with actor order vcube104, Nissy H48h0,
+Muodov C, cubing min2phase and Rubend default. It keeps this odd cohort's warm-
+then-cold order and the same four-GiB CPU2, 240-second jobs and 26-minute cap.
+No source, configuration, analysis or no-push boundary changes.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

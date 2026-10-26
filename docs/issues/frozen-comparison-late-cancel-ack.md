@@ -62,6 +62,14 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [first reverse-order timing group](../verification/next-plan/U07/u07-final-timing-c1-a-p1/index.json)
+records two instances in `rubend-u00-small`. They affect warm `release-9590` in
+repeat zero and warm `release-7022` in repeat one. The raw streams show completed
+request 8 followed by late `cancelled 8 alreadySettled` during request 9, and
+the same sequence for requests 23 and 24. Both sessions settle. These remain
+failed timing observations. There are now four timing instances in addition to
+the 35 quality-stage instances. No repair or replacement run is substituted.
+
 The [paired first-cohort timing group](../verification/next-plan/U07/u07-final-timing-c0-b-p1/index.json)
 records two instances in `rubend-u00-inverse`, both warm requests in repeat zero.
 They affect `release-4391` and `release-9332`. The raw streams show `done 7`,

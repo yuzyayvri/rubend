@@ -3,16 +3,16 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [paired first-cohort timing group](U07/u07-final-timing-c0-b-p1/index.json)
+The [first reverse-order timing group](U07/u07-final-timing-c1-a-p1/index.json)
 verifies 4,977 seals and six receipts, worker gone and no resource stop.
 All 640 slots are recorded, with no pending or uncertain claims. Complete
 answers independently replay and all 332 sessions settle. Five separate actor
 cgroups and twelve available warm-readiness PSS snapshots retain their stated
-measurement scopes. Two preserved-inverse-profile attempts hit the known late
+measurement scopes. Two preserved-small-profile attempts hit the known late
 cancellation race and remain terminal errors. There is no noise-gate or speed
-verdict before all five cohorts. Cumulative accounted slots are 51,280 of 57,678.
+verdict before all five cohorts. Cumulative accounted slots are 51,920 of 57,678.
 The October 24 report-before-automation-deletion and no-push order remains
-binding before `u07-final-timing-c1-a-p1`, which reverses actor and clock order.
+binding before `u07-final-timing-c1-b-p1`, with the same reversed actor/clock order.
 
 The [tenth frozen quality group](U07/u07-final-quality-09-p1/index.json) passes
 canonical verification with 4,972 seals and two receipts, worker gone and no stop.
@@ -22,7 +22,7 @@ The complete quality population accounts for 50,000 unique slots, with 10,000
 inputs per primary actor and all 235 sessions settled. Every canonical output
 hash is rechecked. Aggregate statuses are 20,494 `ok`, 29,471 `timeout` and
 35 `error`, not answer-coverage counts or a solver ranking.
-Thirty-five cumulative [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
+Thirty-five quality-stage [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
 remain terminal observations. All eleven new raw sequences match the same cause.
 The frozen code and configurations do not change and no attempt is repeated.
 No final solver ranking is inferred.
@@ -32,7 +32,7 @@ recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
 The fixed serial timing groups have five separately capped four-GiB CPU2 actor
-jobs and 640 planned slots each. Eight timing groups, the structural group and both long-budget groups remain,
+jobs and 640 planned slots each. Seven timing groups, the structural group and both long-budget groups remain,
 followed by final U07 acceptance and report delivery. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.
