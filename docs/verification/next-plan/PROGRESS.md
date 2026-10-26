@@ -3,13 +3,13 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [eighth frozen quality group](U07/u07-final-quality-07-p1/index.json) passes
+The [ninth frozen quality group](U07/u07-final-quality-08-p1/index.json) passes
 canonical verification with 4,972 seals and two receipts, worker gone and no stop.
 All 5,000 planned attempts are retained, with no pending or uncertain slots.
-All complete answers independently replay. All twenty-six sessions settle.
-The first eight quality groups account for 40,000 planned campaign slots.
-Twenty cumulative [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
-remain terminal observations. All six new raw sequences match the same cause.
+All complete answers independently replay. All twenty-four sessions settle.
+The first nine quality groups account for 45,000 planned campaign slots.
+Twenty-four cumulative [adapter cancellation errors](../../issues/frozen-comparison-late-cancel-ack.md)
+remain terminal observations. All four new raw sequences match the same cause.
 The frozen code and configurations do not change and no attempt is repeated.
 No final solver ranking is inferred.
 
