@@ -2,6 +2,25 @@
 
 ## Latest checkpoint
 
+`u07-competitor-build-v1` passes canonical verification with 8,486 seals and
+four receipts, no stop and the worker gone. Muodov C and vcube are built at the
+pinned revisions/configurations. Twelve supplied C caches total 4,368,335 bytes
+and match the compiled ABI. Vcube exposes104/108 without changing its default.
+Original sources, copies, hashes and licenses are preserved. No solver case
+or vcube table generation runs in that build.
+
+Next is `u07-competitor-calibration-v1`, a fixed28-minute setup batch. Verify
+actual private IPC/network/PID namespaces and native move/Reid agreement on
+147 deterministic legal states. Generate the20,336,640-byte vcube104 table in
+isolation, then independently replay the seven declared shallow cases for both
+solvers. Generate325,386,240-byte108 only if the frozen small-table setup estimate
+admits it; otherwise retain all seven not-run rows. At most two GiB/four low-
+priority lanes, reserve and no swap. Keep exact/first-answer contracts distinct.
+This is setup, not scored timing. The October24 completion/report/no-push order
+is unchanged. Final configuration freeze, untouched U07 comparison, numerical
+report and automation completion remain. Read
+docs/verification/next-plan/U07/COMPETITOR-CALIBRATION.md.
+
 `u07-competitor-sources-v1` passes canonical verification with 8,373 seals and
 two receipts, no stop and the worker gone. Muodov Kociemba C and vcube are
 locally acquired at exact pinned commits. All 93 files match Git blobs and

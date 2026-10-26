@@ -75,3 +75,11 @@ license texts and change notices in repository evidence. Builds, metadata and
 ABI checks are pending. There is no solver calibration, table generation,
 holdout evaluation, configuration freeze, comparative speed or formal-optimality
 claim from this unit. Independent review remains not run under solo work.
+
+The actual build now passes canonical verification with8,486 seals and four
+resource receipts, worker gone and no stop. Both native executables, the
+sizeof-only probe and vcube help pass. All twelve C-cache sizes match, totaling
+4,368,335 bytes. Original/copy/cache/license hashes remain unchanged. The
+small-variant modification notice is retained separately from upstream source.
+No solver case or vcube table is generated. [Isolated setup and convention
+calibration](COMPETITOR-CALIBRATION.md) remain next, not a performance verdict.

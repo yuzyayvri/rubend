@@ -3,6 +3,19 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [two native competitor builds](U07/COMPETITOR-BUILDS.md) pass canonical
+verification with 8,486 seals and four receipts, no stop and the worker gone.
+Both binaries link, all twelve supplied C-cache ABI sizes match and vcube's
+small variants appear in actual help. No solver case or table generation runs.
+
+Next is [isolated setup and calibration](U07/COMPETITOR-CALIBRATION.md). Verify
+native conventions and namespace/cgroup boundaries, generate the small104 table,
+then replay the seven existing shallow cases. A predeclared conservative sizing
+gate controls whether the325-MB108 table and its calibration run. Keep skipped
+cases and all errors. The queue cap is28 minutes, at most two GiB/four nice10
+lanes with desktop/disk reserve and no swap. No scored comparison, final holdout,
+configuration freeze, publication or push. Full roadmap/report remain unfinished.
+
 The [additional-source acquisition](U07/ADDITIONAL-SOLVERS.md) passes canonical
 verification with 8,373 seals and two receipts, no stop and the worker gone.
 Both pinned upstream checkouts and all 93 files match their Git blobs and
