@@ -3,16 +3,16 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [paired fourth-cohort timing group](U07/u07-final-timing-c3-b-p1/index.json)
+The [final-cohort forward timing group](U07/u07-final-timing-c4-a-p1/index.json)
 verifies 4,977 seals and six receipts, worker gone and no resource stop.
 All 640 slots are recorded, with no pending or uncertain claims. Complete
 answers independently replay and all 331 sessions settle. Five separate actor
 cgroups and eleven available warm-readiness PSS snapshots retain their stated
 measurement scopes. One default-profile error has the recorded cancellation
 cause and remains terminal. There is no noise-gate or speed verdict before all
-five cohorts. Cumulative accounted slots are 55,120 of 57,678.
+five cohorts. Cumulative accounted slots are 55,760 of 57,678.
 The October 24 report-before-automation-deletion and no-push order remains
-binding before final-cohort forward-order `u07-final-timing-c4-a-p1`.
+binding before the last timing group, `u07-final-timing-c4-b-p1`.
 
 The c2-a batch finishes at 20:07 UTC, but the next recorded handoff check is
 the 23:00 heartbeat. This [continuation gap](../../issues/final-evaluation-handoff-gap.md)
@@ -36,7 +36,7 @@ recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
 The fixed serial timing groups have five separately capped four-GiB CPU2 actor
-jobs and 640 planned slots each. Two timing groups, the structural group and both long-budget groups remain,
+jobs and 640 planned slots each. One timing group, the structural group and both long-budget groups remain,
 followed by final U07 acceptance and report delivery. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.

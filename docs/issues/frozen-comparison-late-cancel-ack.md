@@ -62,6 +62,13 @@ remain terminal among the first 15,000 planned attempts. No repair or rerun.
 
 ## Frozen-campaign disposition
 
+The [final-cohort forward timing group](../verification/next-plan/U07/u07-final-timing-c4-a-p1/index.json)
+records one default-profile instance on warm `release-8932`, repeat one.
+The raw stream shows `done 13`, late `cancelled 13 alreadySettled`, then the
+assertion against request 14. The session settles. Thirteen timing errors remain
+failed observations, separate from the 35 quality-stage errors. No failed
+duration is treated as a successful-answer latency and no attempt is repeated.
+
 The [paired fourth-cohort timing group](../verification/next-plan/U07/u07-final-timing-c3-b-p1/index.json)
 records one default-profile instance on warm `release-8453`, repeat one.
 The raw stream shows `done 22`, late `cancelled 22 alreadySettled`, then the
