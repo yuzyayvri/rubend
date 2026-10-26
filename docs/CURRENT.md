@@ -2,21 +2,21 @@
 
 ## Latest checkpoint
 
-`u07-final-timing-c3-a-p1` passes canonical verification with 4,977 seals and
+`u07-final-timing-c3-b-p1` passes canonical verification with 4,977 seals and
 six receipts, worker gone and no resource stop. All 640 planned timing slots
 are recorded, with no pending or uncertain claims. All complete answers replay
-independently and all 334 sessions settle. Five actors have distinct measured
-cgroups. All fourteen warm-readiness PSS snapshots are available in this group.
-Statuses are 48 `ok`, 588 `timeout` and four `error` observations. All errors
-have the known late-cancellation cause in exact-request, inverse and small configurations and remain
+independently and all 331 sessions settle. Five actors have distinct measured
+cgroups. All eleven warm-readiness PSS snapshots are available in this group.
+Statuses are 272 `ok`, 367 `timeout` and one `error` observation. The error
+has the known late-cancellation cause in Rubend default and remains
 terminal. These are not coverage
 counts, a passed noise gate or a performance verdict. All five cohorts remain
-required. Cumulative accounted campaign slots are 54,480 of 57,678.
+required. Cumulative accounted campaign slots are 55,120 of 57,678.
 
 After this verification, the October 24 completion/report/no-push order remains
-binding before `u07-final-timing-c3-b-p1`. Cohort three keeps its reversed actor
-and clock order. Its five serial CPU2 jobs cover vcube104, Nissy H48h0, Muodov C,
-cubing min2phase and Rubend default. Each has four GiB and 240 seconds, nice 10,
+binding before `u07-final-timing-c4-a-p1`. The final cohort returns to forward
+actor and cold-then-warm clock order. Its five serial CPU2 jobs cover default,
+cubing min2phase, Muodov C, Nissy H48h0 and vcube104. Each has four GiB and 240 seconds, nice 10,
 no swap and desktop reserve.
 The queue cap remains 26 minutes. Frozen settings and analysis rules do not change.
 
