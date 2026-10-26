@@ -3,6 +3,26 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [record-admission unit](U07/FINAL-ADMISSION.md) verifies 8,912 seals and three
+receipts, worker gone and no stop. All 40 known requests and twenty cleanups pass.
+Eight protocol, seven slot, nineteen record and eleven metadata negatives pass.
+All 57,678 proposed IDs are checked without release contents. The older guards
+remain closed to measured records and all 70 previous raw analyses recompute.
+This is record-domain admission, not final evaluation admission or completion.
+
+The October 24 completion/report/no-push order is recorded before the complete
+controller, checkpointing, structural artifact and statistics unit. No holdout
+case is opened, no independent review is claimed, and the automation remains
+active until the genuine full roadmap and comparative report are delivered.
+
+The [complete controller](U07/FINAL-CONTROLLER.md) locally passes 39 actor requests
+and eight exact-queue-executor requests, four CPU lanes, durable checkpoint
+resume and interrupted-claim recovery. Twelve checkpoint, ten statistics and
+three renderer controls pass. All 57,678 slots are covered once by the campaign
+model. The source-bound 181-case structural artifact has 171 justified optima.
+The fixed fifteen-minute admission queue remains pending. The final seal and
+untouched comparison follow canonical verification, not implementation alone.
+
 The [resource preflight](U07/RESOURCE-SCOPES.md) verifies 8,853 seals and twelve
 receipts, worker gone and no stop. All 49 requests, nine separate actor scopes,
 readiness PSS snapshots, whole-scope CPU windows and cleanup checks pass. Twelve

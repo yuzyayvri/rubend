@@ -2,6 +2,39 @@
 
 ## Latest checkpoint
 
+`u07-final-admission-v1` passes canonical verification with 8,912 seals and three
+receipts, worker gone and no stop. All 40 known-case requests and twenty session
+cleanups pass across ten configurations. Eight protocol, seven slot, nineteen
+record and eleven freeze-admission negative controls pass. All 57,678 proposed
+slot identities are valid and distinct; no release contents are read. The older
+fixture/calibration guards remain closed, and all 70 earlier clock analyses
+recompute without solver reruns. This admits the record domain, not the final
+evaluation or configuration freeze.
+
+Before controller, checkpoint, structural and statistics work, the October 24
+completion/report/no-push order remains binding. Finish the full roadmap and
+single coordinated comparative report before deleting the existing automation.
+Freeze configurations before untouched inputs. Yuzy separately decides any
+later push to main. The next unit must prove bounded resume without repeating
+completed slots, complete known structural provenance and test uncertainty gates.
+No final holdout solver case or push occurs here.
+
+The complete controller now locally passes 39 requests, four CPU lanes,
+soft-stop/resume and interrupted-claim recovery. Thirty completed slots reopen
+without a new solver session. The exact final queue executor passes eight
+additional known requests. Twelve checkpoint, ten statistics and three renderer
+controls pass. The campaign model covers 57,678 unique slots across 23 bounded
+groups. The structural artifact has 181 cases and 171 explicitly justified
+shallow optima; other gaps, including superflip here, stay null.
+
+`u07-final-controller-v1` is the last pre-freeze admission batch. It has four
+serial jobs, at most four GiB/four low-priority lanes, reserve, no swap and a
+fifteen-minute cap. A successful canonical result permits sealing the final
+metadata and launching fixed comparison groups. The template remains preflight
+until that separate seal. Read
+docs/verification/next-plan/U07/FINAL-CONTROLLER.md. Full evaluation, final U07
+acceptance, numerical report delivery and automation deletion remain unfinished.
+
 `u07-resource-scope-v1` passes canonical verification with 8,853 seals and twelve
 receipts, worker gone and no resource stop. All 49 requests across nine distinct
 actor scopes pass. Whole-cgroup CPU includes exited descendants. Charged job

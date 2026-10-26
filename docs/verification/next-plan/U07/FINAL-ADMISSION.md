@@ -1,5 +1,17 @@
 # Final protocol and record admission
 
+## Verified result
+
+The [canonical result](u07-final-admission-v1/index.json) verifies 8,912 seals
+and three receipts, worker gone and no stop. All 40 requests, twenty cleanups,
+eight protocol, seven slot, nineteen record and eleven metadata negative
+controls pass. The older guards remain closed. All 70 earlier clock analyses
+recompute without solver reruns. This admits the record domain only. The final
+controller and source freeze follow separately. The design below is historical
+pre-run context, not another pending copy of this unit.
+
+## Pre-run design
+
 The [resource result](u07-resource-scope-v1/index.json) verifies 8,853 seals and
 twelve receipts. Its worker is gone and no resource stop occurred. All 49
 requests across nine actor scopes pass. CPU windows, charged lifetime peaks,
