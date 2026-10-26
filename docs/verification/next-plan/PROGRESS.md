@@ -3,6 +3,21 @@
 Updated October 26, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [installed HTTP recovery](U07/LOCAL-DELIVERY.md) now passes canonical
+verification with 8,248 seals and three receipts, no stop and the worker gone.
+Three installed sessions answer 22 known queries and independently replay all
+69 candidates. Every recorded process identity and PID-root IPC path is gone
+after normal shutdown. The exact exports and import are reused unchanged.
+All 67 runtime paths pass fresh metadata and content checks. The old failed
+run remains preserved and failed, not replaced by a passing label.
+
+The [hidden installed-browser unit](U07/INSTALLED-BROWSER.md) uses a distinct
+strict local receipt mode, with the old CI pins unchanged. Three local fixture
+lifecycles pass before the live session. Known-case browser acceptance and
+post-live controls remain, followed by new solver research/setup and the frozen
+U07 comparison and report. Final release/tier/competitor screenshot lanes wait
+for that coordinated pass. No holdout evaluation, publication or push.
+
 The [delivery queue](U07/LOCAL-DELIVERY.md) passes export and import, then fails
 its immediate helper-cleanup check. Its 8,176 seals and three receipts are
 preserved, with no resource stop and the worker gone. The application and native

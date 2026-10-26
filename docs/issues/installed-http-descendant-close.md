@@ -45,3 +45,11 @@ compares all 67 runtime metadata records and runs actual Nix content verificatio
 The queue runs three fresh installed HTTP sessions and only then writes a new
 local-delivery receipt. The old failed run remains failed. No application,
 engine, law, package build, CI artifact pin or holdout case changes.
+
+The same-package recovery now passes canonical verification with 8,248 seals,
+three resource receipts, no resource stop and the worker gone. All three actual
+sessions pass, with 69 independently replayed candidates and every recorded
+identity and PID-root IPC path gone. Two sessions observe a helper present at
+outer close and absent during bounded settlement. The integration regression
+is resolved without an application or solver change. The original failure is
+still preserved and failed. Browser and final comparative acceptance are separate.

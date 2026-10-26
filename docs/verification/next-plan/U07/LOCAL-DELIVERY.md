@@ -92,6 +92,27 @@ and at most three minutes. Confirmation uses 512 MiB and sixty seconds. The
 queue cap is eight minutes, with a two-minute estimate. No performance claim
 follows from settlement observations. Actual installed integration is pending.
 
+## Verified HTTP-only recovery
+
+`u07-delivery-http-v1` passes the canonical checker with 8,248 source seals,
+three resource receipts, no resource stop and its worker gone. Check, HTTP and
+confirmation all pass. The original two exports and imported store are reused,
+not regenerated. Fresh Nix metadata and content verification covers all 67 paths.
+
+The three actual installed sessions answer 22 known queries. All 69 retained
+candidates independently replay through sticker geometry. Every one of twelve
+recorded namespace process identities and all three PID-root IPC paths is gone
+after normal wrapper exit. No driver-forced kill occurs. The second and third
+sessions observe a helper still present at wrapper close and then gone during
+bounded settlement. This verifies the correction on the same installed package.
+
+The [canonical archive](u07-delivery-http-v1/index.json) retains all records.
+The [hidden installed-browser unit](INSTALLED-BROWSER.md) remains separate.
+The planner writes its valid immutable plan, then its outer resource wrapper
+hits a receipt-name collision with that plan path. No saved planner resource
+receipt is claimed. The three queue jobs have distinct verified resource
+receipts, and the canonical checker verifies the actual frozen plan and sources.
+
 `u07-delivery-v1` has four serial nice-10 CPU2 jobs. Export, import and installed
 HTTP each use one GiB and at most three minutes. Confirmation uses 512 MiB and
 sixty seconds. The whole queue cap is twelve minutes, with a three-minute

@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+`u07-delivery-http-v1` passes canonical verification with 8,248 seals and three
+receipts, worker gone and no resource stop. The unchanged real exports and
+runtime-only import pass all 67 content and metadata checks. Three installed
+sessions answer 22 known queries with 69 independently replayed candidates.
+All twelve recorded namespace process identities and PID-root IPC paths are
+gone after normal shutdown. The bounded helper-settlement fix is verified on
+the same installed package. The old failed run remains failed and preserved.
+
+Next is known-fixture hidden-browser acceptance through a distinct strict
+`local-delivered` fixture, with historical CI pins unchanged. Three local fixture
+lifecycles already pass. The live server/native tree uses one GiB, CPU2, nice10
+and ten minutes with reserve and no swap. The browser is outside that cgroup,
+not CPU/memory-capped, and remains hidden. Source-bound observations, independent
+replay and fixed post-live controls follow. The final U07 tier/release/competitor
+matrix waits for the coordinated frozen evaluation. New solver research/setup,
+final numerical report and automation completion remain. No holdout evaluation
+or push. Read docs/verification/next-plan/U07/INSTALLED-BROWSER.md.
+
 `u07-delivery-v1` fails its immediate helper-cleanup check after export and
 import pass. All 8,176 seals and three receipts are preserved, with no resource
 stop and the worker gone. The first installed session passes twenty known
