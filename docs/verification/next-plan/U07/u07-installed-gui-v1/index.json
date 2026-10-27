@@ -1,0 +1,135 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-installed-gui-v1",
+  "revision": "966d1d3b3e6670437d2d08aab78875b2d4134541",
+  "sourceSeals": 8326,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-26T05:43:50.009Z",
+  "finishedAt": "2026-10-26T05:44:06.794Z",
+  "archives": [
+    {
+      "path": "0-u07-installed-gui-v1-plan.json.gz",
+      "sha256": "5fe2f7de273cb641d1b7baf05141de0c54cc69b045acb3fb92d20583acb885ac",
+      "compressedSha256": "58638723c3165bf71e5d16216127b28814d6718a29f8afe4d1dec5aaae3147b8"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "699fa9e765780c55a39e6b68a2d0bc523a45e1fe253892ff2b3aa2f499ba6ec4",
+      "compressedSha256": "fb76f73322ef3b1d2ac1a370e916ff77aabfa91fb551a6e91701d7315a4621bc"
+    },
+    {
+      "path": "2-u07-installed-gui-v1-controls.json.gz",
+      "sha256": "aec5a6a6171e83b505a5c75a425875b14c91ad0526538a6c4b22b00494cd39e3",
+      "compressedSha256": "8c83de7b119492882c711a9d9784140c23d09dc4672b3b879a5ec0854f2594ca"
+    },
+    {
+      "path": "3-u07-installed-gui-v1-confirm.json.gz",
+      "sha256": "56a49a7a2d31b5a304ba2ccf1e6fd5fbf5553b8d1888761c84a6251c89ae1a20",
+      "compressedSha256": "8894a092cfd5716116a60aa7d06f1fa1c8008e443b6aa26621f5f991f4f4422e"
+    },
+    {
+      "path": "4-confirmation.json.gz",
+      "sha256": "2de0dddcbebe27d04c55202f559911b7aa291bbfdcca115c2ea3ba44f8776b2a",
+      "compressedSha256": "55e7e91e64719fdae3040cfe30fc64a0461b70bde332a7352eefa9c399aea324"
+    },
+    {
+      "path": "5-controls.json.gz",
+      "sha256": "278a4d14dc4c6201e0c0de2ef59532b9b9f0d6cadf17d34c05878a6b2776267a",
+      "compressedSha256": "93b792d64aff4e29927c45fff6db836d6535bca8ce4d9049813222addcdae1f8"
+    },
+    {
+      "path": "6-live-head-cancelled.json.gz",
+      "sha256": "5c43c48c8c6d7a69caf9d771533923ba32df526e1a179dd02c6a4fd4ce778cdd",
+      "compressedSha256": "6234b4973685840fd2251b1926499a8060b5827d34cd3da67b7bdb0dcee86f7a"
+    },
+    {
+      "path": "7-live-head-invalid.json.gz",
+      "sha256": "96e86291fe71b5cf61f24e366a90aaa41a31c905c0ede952c4b5ca7c0fe6c0c6",
+      "compressedSha256": "8ed2d5958d704e5eab093770b527a742d02b314e99efd89b822218c688ab5847"
+    },
+    {
+      "path": "8-live-head-keyboard-step-2.json.gz",
+      "sha256": "2f32970d4208aa9be7587d5dcec2e5ac2c8c1999eaf7bc8a3aca438248f9b53a",
+      "compressedSha256": "516e41c19f08315139a3291295dd9e195f5e8838c71a55ab1b250566318dd718"
+    },
+    {
+      "path": "9-live-head-playback-complete.json.gz",
+      "sha256": "6214291d7ec5a310afa0341bd8deb49d5ed4606926012da5d871f9c68b83ef54",
+      "compressedSha256": "ba90a936760500e1d162fc2dbad82e2e09732d87f733be5ceabec97172cf8ba8"
+    },
+    {
+      "path": "10-live-head-resubmitted.json.gz",
+      "sha256": "fbc85824a932d632c8c0ad8bd2b99a88272dfc2fc0e360f489f9bd3845f0887e",
+      "compressedSha256": "78b323f16ccb41428dd00211074800500055a2e46ec08ef02f37201760759345"
+    },
+    {
+      "path": "11-live-head-rewind.json.gz",
+      "sha256": "6a72f9d04b0b5cbb439ac9a30efb130f15c1853155777516bd84f9ea9d56d776",
+      "compressedSha256": "3eafca313cff38ab4b03efc99575ba5f5acf316505c5e2294707a6622542803f"
+    },
+    {
+      "path": "12-live-head-solved.json.gz",
+      "sha256": "60ec61b8e171252c978cb6122ca7a66e19e2c0a4690bb11e2ee7b843dd7152f2",
+      "compressedSha256": "936cbdfbaac874aeda31cc5c53e56242eca2bfb376cd32afe22314d08f897fc7"
+    },
+    {
+      "path": "13-live-head-step-1.json.gz",
+      "sha256": "21a58c5e194688cba36e877d34473a423c10632cbd6faa7bfad30a70ee02954e",
+      "compressedSha256": "5d44e533de64c9a6b362fb6de155805eedcef05f93b58f85763435021d6f9d5f"
+    },
+    {
+      "path": "14-live-installed-export.json.gz",
+      "sha256": "253c7490529e3a38319df10232e4953dceb04ccc51fc5a44262efefe54bb309c",
+      "compressedSha256": "7a9c67cfbf297f6d2feb18920a5f770417af9fac819cfdcc4955f79b80f3a59f"
+    },
+    {
+      "path": "15-live-installed-shallow.json.gz",
+      "sha256": "023fa3c30613925605c9ae812f0cdd91afa927bc41a4b4dc98d1fffb7ca329e6",
+      "compressedSha256": "f91224d52cdf063b66e05fc13dbdc6286aa5cfdb9f16b61b6ca236baca6e2b42"
+    },
+    {
+      "path": "16-live-mobile-editor-saved.json.gz",
+      "sha256": "16732d56ec09a673ded1e87a47080f808eb32cb3d988fb7a149f929f3c4dca88",
+      "compressedSha256": "e5bf21257225aa3b5d82423dec73525be051e53d1d751dc93e7077756f5a58f9"
+    },
+    {
+      "path": "17-live-mobile-sticker-net.json.gz",
+      "sha256": "dad7e8d8703b7854731369cf753735b3d7018d7a80189367e35944b1c7a09618",
+      "compressedSha256": "a74f3029859b541b385679e3bce533f469f020102b6ec0713ebdb43fc7232fa5"
+    },
+    {
+      "path": "18-live-narrow-layout.json.gz",
+      "sha256": "7f170485b9b5e1b7b44512b04f2374eab19e7d79e8711a75049f0ae459e9e379",
+      "compressedSha256": "f12c5d2e33478dd117bfee3402765a60d20ac84ac6a4c778f00fbea9ce37bb19"
+    },
+    {
+      "path": "19-live-resource.json.gz",
+      "sha256": "46002a96d7fa25f00f12c48df1eeafaff955b5c1902ab362f9fca9f064e97957",
+      "compressedSha256": "72bb38a530836ca4e8233d47b0fe7d7686a29ff19204522c2eb3cd5c708a2d23"
+    },
+    {
+      "path": "20-live-saved-state-reloaded.json.gz",
+      "sha256": "8dd8e0cdff2b91cf4c8faba211412d1fb0e5da9907737ab0addfed73d1cf967d",
+      "compressedSha256": "3cc8552bf5dbadaf266aa9c2b52bd2b04b774e9b5cea72d201d4edfbd2e65e0f"
+    },
+    {
+      "path": "21-live-session.json.gz",
+      "sha256": "06f9919e148c1ac54456997549c981f10d1e9033e3df7b7b1fff61f2738e505c",
+      "compressedSha256": "abd372e61b23da23db7d7338641ba630f3d2c7934fb25cb4ffe172a6aaac8477"
+    },
+    {
+      "path": "22-live-source-plan.json.gz",
+      "sha256": "29bd04a8ecf123200e2ecf6ab7e733906ec008c002b8675ef0f738f8be387462",
+      "compressedSha256": "e09a2b03371d4c4574a44ffd41f0d0eeb83e04c4674b587efa9295384b5aac09"
+    },
+    {
+      "path": "23-live-theme-contract.json.gz",
+      "sha256": "aefa08800b6128d902439c3155a268b85b43d3b2f7a82dba8167ed40e0cef301",
+      "compressedSha256": "25c702c3b9af2fdae731f326da5d0d12e6962eced6fffb92b846b9cda259e524"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "screenshots": {
+    "clipboard": {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v2-media/clipboard.jpg",
+      "sha256": "2f65331acec9243cc62b3e908f8545bd997e451a6bc5ce30ca200270ab89d020",
+      "mimeType": "image/jpeg"
+    },
+    "export": {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U01/u01-file-acceptance-v2-media/export.jpg",
+      "sha256": "d5a40ecc093df866596cfa0eed6be1d153159244ab3e59398440865e435a0765",
+      "mimeType": "image/jpeg"
+    }
+  },
+  "productionUnchanged": true,
+  "operatorReview": false,
+  "independentReview": false
+}

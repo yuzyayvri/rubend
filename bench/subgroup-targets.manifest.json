@@ -1,0 +1,106 @@
+{
+  "format": "rubend-reference-subgroup-targets-v1",
+  "sourceHashes": {
+    "src/model.bend": "985d64d66aeefbdaf93b66a21526603b4ed7317daf1a7097bf26fbdc8db956e9",
+    "src/symmetry.bend": "f49888b831abca4ad0672db7cca012d1643f240a33138bedba354f86ee6e5cfd",
+    "bench/subgroup-target-logic.bend": "9a084617c670abd84b6377571c3d3d6c1e12002f88bd6c582c9ac4f31f6f25d4",
+    "bench/subgroup-proof-kernel.bend": "7366d34061473a6fbbc01e2a7d6785c00a6ad48d5023f6b00c5049f630ad1de9",
+    "bench/subgroup-exclusion.bend": "908891c22b588abba4498eba17600ef3c298b1f11824a0547913f3677b88325a"
+  },
+  "outputSha256": "74ead50d222e7ee6648050f3f19f5f638b14ace243cdc55775fa2972526da697",
+  "slots": [
+    {
+      "at": 0,
+      "color": "ud"
+    },
+    {
+      "at": 1,
+      "color": "ud"
+    },
+    {
+      "at": 2,
+      "color": "ud"
+    },
+    {
+      "at": 3,
+      "color": "ud"
+    },
+    {
+      "at": 5,
+      "color": "ud"
+    },
+    {
+      "at": 6,
+      "color": "ud"
+    },
+    {
+      "at": 7,
+      "color": "ud"
+    },
+    {
+      "at": 8,
+      "color": "ud"
+    },
+    {
+      "at": 27,
+      "color": "ud"
+    },
+    {
+      "at": 28,
+      "color": "ud"
+    },
+    {
+      "at": 29,
+      "color": "ud"
+    },
+    {
+      "at": 30,
+      "color": "ud"
+    },
+    {
+      "at": 32,
+      "color": "ud"
+    },
+    {
+      "at": 33,
+      "color": "ud"
+    },
+    {
+      "at": 34,
+      "color": "ud"
+    },
+    {
+      "at": 35,
+      "color": "ud"
+    },
+    {
+      "at": 21,
+      "color": "fb"
+    },
+    {
+      "at": 23,
+      "color": "fb"
+    },
+    {
+      "at": 48,
+      "color": "fb"
+    },
+    {
+      "at": 50,
+      "color": "fb"
+    }
+  ],
+  "acceptedUDMoves": [
+    "U",
+    "U2",
+    "Ui",
+    "R2",
+    "F2",
+    "D",
+    "D2",
+    "Di",
+    "L2",
+    "B2"
+  ],
+  "proofScope": "Reference target identity, member closure, inverse member closure and masks. Does not certify packed coordinates, loaded bounds or inverse reconstruction."
+}

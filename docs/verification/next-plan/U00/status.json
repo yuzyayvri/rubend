@@ -24,13 +24,15 @@
   },
   "rejectedPromotions": ["segmented", "owned-continuations", "fused-h0", "short-first", "exact-reserve", "cooperative-search-latency"],
   "openProofStatements": "../../../architecture/NEXT-PROOF-STATEMENTS.md",
-  "newDomainLawsApproved": false,
+  "newDomainLawsApproved": true,
+  "approvedLawStatements": ["NP01", "NP02", "NP03"],
+  "unapprovedLawStatements": ["NP04", "NP05", "NP06", "NP07", "NP08"],
   "establishedLawsChanged": false,
   "performancePromotion": false,
   "independentReview": "not run, explicit solo instruction",
   "remaining": [
     "Resolve or explicitly disposition the raw release timing acceptance gate without lowering its floor.",
-    "Complete U01 renderer, failure, persistence, clipboard, download, and actual delivered-package acceptance.",
-    "Obtain separate approval before adding proposed domain laws."
+    "Close U01 clipboard denial and actual downloaded-file observation gaps; other recorded browser/package checks remain source-bound.",
+    "Prove approved NP01–NP03 without assuming their loaded-data premises. Obtain separate approval before adding NP04–NP08."
   ]
 }

@@ -1,0 +1,6 @@
+import assert from "node:assert/strict";
+import {readFileSync} from "node:fs";
+import {vcubeSmallVariants} from "../bench/vcube-small-variants.mjs";
+import {fileHash} from "../bench/bounded-file-hash.mjs";
+
+const record=JSON.parse(readFileSync("build/experiments/u07-competitor-sources-v1/source-vcube.json","utf8")),path=record.path+"/src/vc-optimal.cpp",source=readFileSync(path,"utf8");assert.equal(fileHash(path),record.files.find(f=>f.path==="src/vc-optimal.cpp").sha256);const result=vcubeSmallVariants(source);let restored=result.source.slice(result.notice.length);for(const[before,after]of result.changes)restored=restored.replace(after,before);assert.equal(restored,source);assert.ok(result.source.includes("static constexpr int DEFAULT_VARIANT = 308;"));assert.ok(result.source.includes("Copyright (C) 2018 Andrew Skalski"));assert.equal(result.searchLogicModified,false);for(const mutated of["",source.replace("7>(104)","8>(104)"),source.replace("8>(108)","9>(108)"),source.replace("//solver_variant::S<nx::EP1, nx::EO4", "solver_variant::S<nx::EP1, nx::EO4"),result.source])assert.throws(()=>vcubeSmallVariants(mutated));console.log(JSON.stringify({passed:true,actualPinnedSource:true,exactTwoDeclarationChanges:true,originalLicenseRetained:true,changeNoticePresent:true,defaultNotSilentlyChanged:true,mutationsRejected:5,noGenerationOrSolve:true}));

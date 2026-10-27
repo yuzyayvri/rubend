@@ -1,0 +1,260 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-competitor-calibration-v1",
+  "revision": "01d5f1c51c4548fac0269debd4a179919e07fc43",
+  "sourceSeals": 8622,
+  "jobs": 6,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-26T07:22:05.957Z",
+  "finishedAt": "2026-10-26T07:22:54.313Z",
+  "archives": [
+    {
+      "path": "0-u07-competitor-calibration-v1-plan.json.gz",
+      "sha256": "c685101ce64c3cfd459e13ed62ab4de3684eb891e22ca2d1fdbc8ecc99e0dee3",
+      "compressedSha256": "477e1d0b20e0fec49f77555b2e66b9e48abfa16c02f30d48894859389f671835"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "b789b8c8b2a01e024820761f93ee23531f85f4cc6f253b865ed2f4cba9c88400",
+      "compressedSha256": "f370fb49a55385fe2ddf50c406dcf2fcea965bf6b220f6f74c90fc7511c51967"
+    },
+    {
+      "path": "2-u07-competitor-calibration-v1-prepare.json.gz",
+      "sha256": "31d5fe1f82cf3f371483a5ecf5a5b713effe9ea260168ce3e02603ece4007fca",
+      "compressedSha256": "68edace0896e815231a1c329d345a044706ea4e50aa9d5d1b609057a5c8fdc4c"
+    },
+    {
+      "path": "3-u07-competitor-calibration-v1-generate104.json.gz",
+      "sha256": "f27007e1e81d3472b26487b06da142260c73a4a681f92cc01a71a9bac1b2de04",
+      "compressedSha256": "7b867978dd15e8953c984e6d45a95b37f73822e0cc070d03ba4c73a3f525a274"
+    },
+    {
+      "path": "4-u07-competitor-calibration-v1-calibrate104.json.gz",
+      "sha256": "c03310b0123aae8d2a396e57379f6554e6869b5b75b2c87d14293696aeafb31b",
+      "compressedSha256": "9546b203c6c29db5936c32a5172d6248b614168478c6b0562d23e7b30db75771"
+    },
+    {
+      "path": "5-u07-competitor-calibration-v1-generate108.json.gz",
+      "sha256": "ca6b8620adf3efc789855e6929868d5f41bea1a52622573c8ab393dbfb194d66",
+      "compressedSha256": "ad31a447767087e13da3753263dd92a18ea790327db5e99ca686787ac784189e"
+    },
+    {
+      "path": "6-u07-competitor-calibration-v1-calibrate108.json.gz",
+      "sha256": "23a9b85f0c51afac4ae53aa50b0fb15a7b86acb23eab7dfe4e4fb9e2987c6467",
+      "compressedSha256": "decd99103480f843898e071808107904b6ad8c886f29cb10eea68b070eb3dbcb"
+    },
+    {
+      "path": "7-u07-competitor-calibration-v1-confirm.json.gz",
+      "sha256": "23c935c4b3637eff4f0f380b65c1c4aa40891a0db2934ab125601ba71d39c41a",
+      "compressedSha256": "d268c39692fc93ba045ccbf5007f61fd1a6c16ace491a7259f72a202b367f655"
+    },
+    {
+      "path": "8-actor-generate-104.json.gz",
+      "sha256": "409db7c60aa1f43c886978bab35c9ecb60631a7d3e8491fee03d7b8d00bc00c3",
+      "compressedSha256": "b53dd62facd8109dce86ed537646f4ae8c8e2c9cf0ef53fe073a3223d7a7d5ef"
+    },
+    {
+      "path": "9-actor-generate-108.json.gz",
+      "sha256": "af306ccd89dcd39a86d788cff4bdcd9b9d1df3ed80b4e66c54db8e48fbaebfb9",
+      "compressedSha256": "69872d3cafe3e5f8aa51db57d46d0c82f6f6204cb6289d517b006878dbd88419"
+    },
+    {
+      "path": "10-actor-muodov-c-calibration-Fi.json.gz",
+      "sha256": "eb3d3d7cb8b98f6ff819a6cb347353c9e85227a45699f64687d8dec0892e2463",
+      "compressedSha256": "82434e66d3dd490249e8a060c2dcb6244eea6130f4de56067db5a86e6af681a4"
+    },
+    {
+      "path": "11-actor-muodov-c-calibration-R-U-F2.json.gz",
+      "sha256": "8a3b5a64080e75d5998ff3dc481d32105ee1f90b14fa933e20e2a636342a6995",
+      "compressedSha256": "086cfd326b0ca03762f26fc9c5a7800ad63860bc7cad5c966e90d5a6be7c9086"
+    },
+    {
+      "path": "12-actor-muodov-c-calibration-R2.json.gz",
+      "sha256": "acfd103f7e33bb2f8361bf1ebf7dcfd47883a8be7cc4dedd88c32f19e8787246",
+      "compressedSha256": "7e5d8569300c127aee3d02442e8313d4c9d4edcd78948722128a6f9eb652b4a8"
+    },
+    {
+      "path": "13-actor-muodov-c-calibration-U-R.json.gz",
+      "sha256": "25429e8b9766b20a801891a8949f291f38aee279be81242a6b6f4fb916220c14",
+      "compressedSha256": "7e8600aa4a8766cf17cce44490cc8cb774ae3da12bf52723ed700177ca068700"
+    },
+    {
+      "path": "14-actor-muodov-c-calibration-U.json.gz",
+      "sha256": "cfcff022a629bb12e798864645cd25a0a736d4aa0ff5239ea05a3aa59446717f",
+      "compressedSha256": "d5661ec35312dc009e31c010994efdaeed79b7d416ab44e5860b038eeaabb063"
+    },
+    {
+      "path": "15-actor-muodov-c-calibration-commutator.json.gz",
+      "sha256": "93411d2e193e264260f5c4239841609a8bd1e54d2f818a512ca1a6e89ac41ffe",
+      "compressedSha256": "c1b35404b07aee7409d4ef3fd5483b06d4ef68403af30faf38b4726d3bd1f98e"
+    },
+    {
+      "path": "16-actor-muodov-c-calibration-solved.json.gz",
+      "sha256": "2722189a9e7609ab773a608de21ede039db5fb638ebe513b13ff8cafdf154cca",
+      "compressedSha256": "3c16c48ae03406ae7a7e1dfec733c6bbb1c044ab8ede31699294131f68a36d12"
+    },
+    {
+      "path": "17-actor-namespace-probe.json.gz",
+      "sha256": "2e4f0b8a9c586dbadd3a6c9d6c48bcebbf47b2234c516741db9756f3f08cd3b0",
+      "compressedSha256": "2e25a8a2fe10815570cb835ff9ed144507e5c74dae8e5cdc7744bba69bb72f97"
+    },
+    {
+      "path": "18-actor-vcube-104-calibration-Fi.json.gz",
+      "sha256": "211160c71c960ccfdf64a2b20822894aaee0569438fe6239e6847951917038d0",
+      "compressedSha256": "65eb3fb3e0c00e0de650642285b73aab8d9590df1ecbab65a908166bcdb29b22"
+    },
+    {
+      "path": "19-actor-vcube-104-calibration-R-U-F2.json.gz",
+      "sha256": "6828035365b9eb55e5d589e7a263f042113710c5cb1520e0f8725e549e08e134",
+      "compressedSha256": "f234f7fc1d3ed4f1baf903ce69f643a8e0c125e6121d068c890b23415910bf99"
+    },
+    {
+      "path": "20-actor-vcube-104-calibration-R2.json.gz",
+      "sha256": "6ce8ccb1bf8c68ab7dc4f6eb85ca2cf13338715a8a7ef2e6d0b6851ddbecc147",
+      "compressedSha256": "fb89a95904fca4d1acc8601f15cc2e259a8b326ff6fbe5e9d437d57858436c38"
+    },
+    {
+      "path": "21-actor-vcube-104-calibration-U-R.json.gz",
+      "sha256": "d7f2c1d15fbb61336a4514b2010674313bfa93a36ce7633d8482e23b6809d91b",
+      "compressedSha256": "534ba336f6734525a2a1f20dd8db678f74dc008cc8dd75b34aad6ed235f926b0"
+    },
+    {
+      "path": "22-actor-vcube-104-calibration-U.json.gz",
+      "sha256": "16546fb1d67105d90d06a35cc174be727a9d2c4e22eb509ac10b50b4e152c2c1",
+      "compressedSha256": "153bc8d325eedf8b8b59fac43dbd699825da12c38dbf81112338a2731e20ce0f"
+    },
+    {
+      "path": "23-actor-vcube-104-calibration-commutator.json.gz",
+      "sha256": "a8e53d4686f9e112a02d177feda653ad4eb1897738a00cd6316bfefc62641a50",
+      "compressedSha256": "c81f047a21ec8e3752e59cb05d78e19167d0c563941413d6dd8da7c856f22054"
+    },
+    {
+      "path": "24-actor-vcube-104-calibration-solved.json.gz",
+      "sha256": "9639e1d07b5890183982a3bd1ac05efaecb350a12c9b18b528c5aa2cdd736c3e",
+      "compressedSha256": "5b5d1c73e0be1af3751c74d426539bcb23c561b6e2a887a741275c06e815fe9e"
+    },
+    {
+      "path": "25-actor-vcube-108-calibration-Fi.json.gz",
+      "sha256": "3b150bc6681900e7248226db7ac154fb40d0528208dfb7f220fdd73aba9815a8",
+      "compressedSha256": "805c02e68f87317b9248dca68d92b8d48fc158f6e11f8172f63d1e9572b89f06"
+    },
+    {
+      "path": "26-actor-vcube-108-calibration-R-U-F2.json.gz",
+      "sha256": "078b424e799d26d781011a289c25931ea11c851e976ae179cb937e5cef7ad465",
+      "compressedSha256": "9f4dce924ab14b6fb5a9dce3b5b27f5b99989e3c147665e0ce9a888e15915d2e"
+    },
+    {
+      "path": "27-actor-vcube-108-calibration-R2.json.gz",
+      "sha256": "8291678cae52fcda5518073bb1d6c9ad740a908a27a12c4b5d255328780d6bea",
+      "compressedSha256": "d8160bf3ee11a127a7659117872cba454b736ed5ac166cd59e694c46bbb12ef4"
+    },
+    {
+      "path": "28-actor-vcube-108-calibration-U-R.json.gz",
+      "sha256": "2c98a74cfd060feb38479271315cd13379b2c682355ecd776c88fed34da79b49",
+      "compressedSha256": "07f428171f4ae88361c9e4920723647b704b6c546bf9911e34de7a0ddbe49505"
+    },
+    {
+      "path": "29-actor-vcube-108-calibration-U.json.gz",
+      "sha256": "c9015f2f47e9e24888ace31d74e5258f895a3e19e4211a405d93fc5188fbc41c",
+      "compressedSha256": "72c4ed33e57fd16e50a7b76a565426f40f7cd0d80776e7cf99f4fd319db108f8"
+    },
+    {
+      "path": "30-actor-vcube-108-calibration-commutator.json.gz",
+      "sha256": "dcbfce0c881763dc1f5de682a219521a165df759c4333347722ecf9c4f493028",
+      "compressedSha256": "4f33309048d6c912b22e1820bd5235ece1352bbc7b127e1cabbf23a1ff36eb92"
+    },
+    {
+      "path": "31-actor-vcube-108-calibration-solved.json.gz",
+      "sha256": "0afdf01de418a7c0349bf9de6b8ca7ab9f60e6c587b4178675e8d986f073bf47",
+      "compressedSha256": "799d95d3db65c70577c4e37f2dabf91564dbd2e62c8725b0e270839346fc0007"
+    },
+    {
+      "path": "32-admission-108.json.gz",
+      "sha256": "86914e3ae1e25204a5dd8449da99c9efc18a3e15b0ca0b7a5553e96edba4be82",
+      "compressedSha256": "7e709d9aa578c5df71d2f694944808aeda6d9b3f73d9c698e468c6916a261059"
+    },
+    {
+      "path": "33-calibration-104.json.gz",
+      "sha256": "447c8e60df6591fb10740c0560f68014469eea596129622546872c178f77fb79",
+      "compressedSha256": "c8bed2d4f313a26a056250886e581b64876b990788e0c53389bc90d79e77771b"
+    },
+    {
+      "path": "34-calibration-108.json.gz",
+      "sha256": "6344711caae3f0dd821dd4d9a4b8d4559bce9356e50ca06c9b71a3a6f188875b",
+      "compressedSha256": "d503e25d1d62b5a5c50297687a201d4ad1e292d4d02d0c3ef84bfb52f8d6c320"
+    },
+    {
+      "path": "35-commands-calibrate104.json.gz",
+      "sha256": "e7d1345b737db0d71efc1ebb93985bbbf210fb62bff50be343c1d795f1d322ae",
+      "compressedSha256": "95ef3eb3abbdbae74f2710b3ab137a3a21dc3b1b01be0290208fcdf725cc9ad0"
+    },
+    {
+      "path": "36-commands-calibrate108.json.gz",
+      "sha256": "f658859180a775ade383dff00ed7bf7e8c583134c7bb5208e49f6a7f0762a6ac",
+      "compressedSha256": "01bcb3a63e32f0889ee599b4f6636d288b8c5011c6a1b42a81f91e5e10952e07"
+    },
+    {
+      "path": "37-commands-confirm.json.gz",
+      "sha256": "aa7d48c218f4b62eb4bf5fff38b377b184e1c2e654799c72e51177ccd006e2bf",
+      "compressedSha256": "405166e3b9be18162d7892b2046845bb9f51fccdb91423ec678d30688025de54"
+    },
+    {
+      "path": "38-commands-generate104.json.gz",
+      "sha256": "c652764f8f4e2953bf31bd7e4e5167c71ac335a770951301fdbebc9d31d5a428",
+      "compressedSha256": "b76d958111bfb49349c0b4ef9a6c8db114b5ad50609006d3d0e55aecfbecf987"
+    },
+    {
+      "path": "39-commands-generate108.json.gz",
+      "sha256": "c6a215d08a254961e8a2b700a321a2444b1dd96ad6180d4b4bef602e4ca33561",
+      "compressedSha256": "7a6bbcf52b34e1a7ade19f14beb11431690f310831094471ca604afb27aee7c4"
+    },
+    {
+      "path": "40-commands-prepare.json.gz",
+      "sha256": "88f18234cdaeb830da3beae3fac28fc829ce3efa62574fca85628bc8790a82be",
+      "compressedSha256": "5e8f6fea2209fc938b99a5e04cf1b1a483b0253ab449a967d5f524f76822d8c9"
+    },
+    {
+      "path": "41-confirmation.json.gz",
+      "sha256": "8fc24a2f79af6ed9e5cccc53249bbc89752816945153929ad0c707db6dde3773",
+      "compressedSha256": "d7dbe4cf22899925df1a63070ab3e7fd6609f0de71eb5c2586a3e9109156a7bb"
+    },
+    {
+      "path": "42-controls-competitor-sandbox.json.gz",
+      "sha256": "2533b291e84993555b457a8f1677588b5e5210975fa7d523f87255a39ee6d317",
+      "compressedSha256": "7d41803b67342025318bb76ee07422e71871dea62930191b3a2cc570a5ab0ff9"
+    },
+    {
+      "path": "43-controls-facelets-reid.json.gz",
+      "sha256": "9f1327b781cec5103283d8ec865b27c168f22a4c533b2eeab453841378fec217",
+      "compressedSha256": "b20c9bf2eefdf6dc46d9176c29c2489c599190814dfb81e4e06105623ce76666"
+    },
+    {
+      "path": "44-format-probe.json.gz",
+      "sha256": "0163750f718870169e9bada4bcdcf6229969892d921cd92f271dbf203fc51a9e",
+      "compressedSha256": "81897bbda76cf6935c6e360c904839346755594a19bcd49ce53087b90e1d85de"
+    },
+    {
+      "path": "45-generation-104.json.gz",
+      "sha256": "0502af8061207bf970986cc1b51e5e5fc88d5fbfa6979582274870d7295b5757",
+      "compressedSha256": "866459d5007bde3f2a3984a775a5ec83365009fe594d331d4333b2e8b228ec5c"
+    },
+    {
+      "path": "46-generation-108.json.gz",
+      "sha256": "4efd76361ba7428c2ecc463d410147e1338802608dbe73b46f7bf701665f066a",
+      "compressedSha256": "62a40e2d0c9052df78cd7a21ae89ea8a96f5654ea8d260472ef8a3fbe7d37b56"
+    },
+    {
+      "path": "47-namespace-probe.json.gz",
+      "sha256": "52ec92e5d6529583bfba1b168b8fe46ae48a91c67d4a47093a8b696224011477",
+      "compressedSha256": "cd00a51b859c7f139d4ea69836c3ff103ab0ac80c4bbe973a24a7bfd2cf10ea1"
+    },
+    {
+      "path": "48-preparation.json.gz",
+      "sha256": "9a644120f9ad99d06b9bc1417a8c0444eb2bbad354a8fd2e9ef61041e83ce13d",
+      "compressedSha256": "d380f94b500eb8d24cf1cf350876655be850cd1a158ed311f1760cf4fdf6e2f5"
+    }
+  ]
+}

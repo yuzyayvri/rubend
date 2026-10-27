@@ -1,0 +1,4 @@
+import assert from "node:assert/strict";
+import {compareQuality} from "../bench/prior-order-score.mjs";
+
+const base={length:22,lower:10,nodes:100,status:0},pair=(control,prior)=>({id:"fixture",budget:100,control,prior});assert.equal(compareQuality([pair(base,{...base,length:21})]).wins,1);assert.equal(compareQuality([pair(base,{...base,lower:9,length:21})]).losses,1);assert.equal(compareQuality([pair(base,{...base,length:31})]).losses,1);assert.equal(compareQuality([pair({...base,length:31,lower:0},base)]).wins,1);assert.equal(compareQuality([pair(base,base)]).ties,1);assert.equal(compareQuality([pair({...base,length:10,lower:10,nodes:50,status:1},{...base,length:10,lower:9})]).losses,1);assert.throws(()=>compareQuality([pair(base,{...base,nodes:99})]));assert.throws(()=>compareQuality([pair(base,null)]));console.log(JSON.stringify({passed:true,qualityCases:6,invalidBudgetsAndMissingCasesRejected:2,lowerBoundLossCannotHideBehindShorterAnswer:true}));

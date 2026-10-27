@@ -1,0 +1,20 @@
+{
+  "format": "rubend-render-demand-spec-v1",
+  "cohorts": 5,
+  "settleMs": 500,
+  "idleMs": 2000,
+  "orbitMs": 1200,
+  "turnMs": 100,
+  "turns": [0, 3, 6, 9],
+  "setUpdates": 16,
+  "hostWidth": 720,
+  "hostHeight": 520,
+  "arms": ["control", "aa", "demand"],
+  "minimumIdleReduction": 0.9,
+  "maximumActiveP95Ratio": 1.05,
+  "minimumActiveRateRatio": 0.95,
+  "maximumPaintMs": 50,
+  "controlRevision": "616f7d5",
+  "meshRetention": false,
+  "performanceAcceptance": false
+}

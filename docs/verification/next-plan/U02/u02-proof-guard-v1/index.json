@@ -1,0 +1,19 @@
+{
+  "format": "rubend-subgroup-proof-guard-v1",
+  "passed": true,
+  "checkers": ["Bend", "BendTT"],
+  "existingRootVerdict": true,
+  "supportKernels": ["target_final_exclusion", "covered_forward_radius", "inverse_first_exclusion"],
+  "referenceReplayLengthAndInvolution": true,
+  "translatedClaimHeadersPreserved": 8,
+  "positiveReferenceTargetInstance": true,
+  "negativeFixtures": ["subgroup-zero-bound-proof", "subgroup-false-admissibility"],
+  "rejectedPublicCheckEntrypoints": 4,
+  "concreteJointSubgroups": false,
+  "loadedDataBridge": false,
+  "concreteInverseBridge": false,
+  "formalNp01To03Complete": false,
+  "productionIntegrated": false,
+  "independentReview": false,
+  "archives": ["0-u02-proof-v1-guard.json.gz", "1-u02-proof-v1-guard-resource.json.gz"]
+}

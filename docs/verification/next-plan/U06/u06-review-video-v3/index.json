@@ -1,0 +1,90 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u06-review-video-v3",
+  "revision": "3493dc8ab4df1dab3968bd3cc2d31c46bf06f91e",
+  "sourceSeals": 2860,
+  "jobs": 5,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T23:46:55.693Z",
+  "finishedAt": "2026-10-24T23:49:42.116Z",
+  "archives": [
+    {
+      "path": "0-u06-review-video-v3-plan.json.gz",
+      "sha256": "d46c64893ae7615bcb176c0f70d80e15d02b6de7e5b14c2a134197e912424ff3",
+      "compressedSha256": "e5f019c8d70e412f43c3783ef8e923a23bfbafc3438fa95a5bb6d0b98fca83e5"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "6b9e6e9e4d9125692961db4c4967aa716b71f1d87d7be6ed505975f4a422203c",
+      "compressedSha256": "16eb43d9d86c76cc08131ffd0ee3ccad9da06e425e38effd23cb9eb2ed7984e2"
+    },
+    {
+      "path": "2-u06-review-video-v3-desktop.json.gz",
+      "sha256": "f11a94d708adf6da5222a1e1c85dab923cfc2eb5411b8406f17560e4d2ea0104",
+      "compressedSha256": "b4298c204b50eb24cbb9ed5183511c2a4999813178fec4fb07299b6bec46c415"
+    },
+    {
+      "path": "3-u06-review-video-v3-fallback.json.gz",
+      "sha256": "053164418bdfcac3ae1414d7b950a630f20ada7c75ddb49708920cae014477f7",
+      "compressedSha256": "a2b3b8cba990bb7ef7551de984d8b10dfd56f40588360efe3a0cac986afc8c2e"
+    },
+    {
+      "path": "4-u06-review-video-v3-failure.json.gz",
+      "sha256": "ad5df07fe53f8ff94e4e0ef8a0b33390d3caebba4c15232ce6af3c029a221264",
+      "compressedSha256": "83360056796dff570b9b20101bbe32abb69c40da9242e25ed0c2b992168f330d"
+    },
+    {
+      "path": "5-u06-review-video-v3-encode.json.gz",
+      "sha256": "118bd34c2ecd53a899a306431297ec03984b28bed52abbcb383e729bc8a1d209",
+      "compressedSha256": "ce82cc8744d9ef7fd9f245a391d3bfb57010e300cfd55c6cc476f31eed55c052"
+    },
+    {
+      "path": "6-u06-review-video-v3-confirm.json.gz",
+      "sha256": "e122d56ce2d0279f8593fbc8db3330b34e6f65a81308c7cb145d222234fdfea9",
+      "compressedSha256": "ddbc5e5cde2bcc6dba82297696b5ddeb43450b6dcce498a1d37e673acae129d4"
+    },
+    {
+      "path": "7-confirmation.json.gz",
+      "sha256": "20185a13d0d69d1cde81f611ce1214e4ec0aa54eb65463de63a804f12268b780",
+      "compressedSha256": "df88f4e6d21a5a458226b24868d7a379fa47714db9b1b750dc129bc689c56c66"
+    },
+    {
+      "path": "8-desktop-ready.json.gz",
+      "sha256": "13bb0b98a34adc42bfc19df39a690c9385e992e9da6ade6afed01aa8199440bc",
+      "compressedSha256": "c62c0047c8c8c3856d64f63d05bb6680feba688ba341091fc1ab49f3507128d5"
+    },
+    {
+      "path": "9-desktop.json.gz",
+      "sha256": "b1f9c38d9a0fc0cbf11630752dea7e4c05483b8badcc393e8abb6b288be9a8a5",
+      "compressedSha256": "64cd77fbad86a8375a5b4c3e4e747b521ebc7e41bb6a98e2ebabcd7559b80f00"
+    },
+    {
+      "path": "10-encoded.json.gz",
+      "sha256": "d4ea02e25bf2be5acdb98285199bd14f674547cd701ffafcd17f1014fcbbdcc1",
+      "compressedSha256": "0c4bc5af4a65189f2f931751843f54aa9f07815082e3e8a31c22d4d35494734e"
+    },
+    {
+      "path": "11-failure-ready.json.gz",
+      "sha256": "e1cafceab747c98687bfc7ba18bef4a7837956ed4645c053cc03bb024a50a952",
+      "compressedSha256": "8f5b1d9db26b7e18597ce5e367e3dd78ed897b97c72402b22b77d4e2d467c824"
+    },
+    {
+      "path": "12-failure.json.gz",
+      "sha256": "bbf840b3fa81a2e25d94a8594d88f977e44615f91df37248f8a3c7fed8f4a1e2",
+      "compressedSha256": "d68a41e768830878e197fb2d252648eb4c0d71dee67917ba0d9c0b3b7fb96ce6"
+    },
+    {
+      "path": "13-fallback-ready.json.gz",
+      "sha256": "371ab7a4bc7aa1908e482cf6ff2e537b2a56d06efa650405813167c44f01b658",
+      "compressedSha256": "ad8d0b5eafebdeca96890cde4d967e876951c4556f9fa378e0a5b80918ac2082"
+    },
+    {
+      "path": "14-fallback.json.gz",
+      "sha256": "6e8d4b2b65eab74540bfc82222bb3b9a8696724b0ab8b91edb25302bafc465d6",
+      "compressedSha256": "7152eb262f748ecc434f24e00cc5f29e258939fb44dd0980dbf3b270fdc2e52d"
+    }
+  ]
+}

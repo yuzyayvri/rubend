@@ -1,0 +1,23 @@
+{
+  "format": "rubend-redesign-regression-v1",
+  "passed": true,
+  "revision": "369f480ca8a0af485c2c7b2c885bc9f09f8dc869",
+  "sourceSeals": 1493,
+  "startedAt": "2026-10-22T11:40:33.010Z",
+  "finishedAt": "2026-10-22T11:49:59.897Z",
+  "jobs": ["focused", "regression", "proof"],
+  "checks": ["frozen-source rejection", "saved live-browser replay and cleanup", "full just test", "sixteen just check gates"],
+  "resourceStops": false,
+  "workerGone": true,
+  "independentReview": false,
+  "archives": [
+    "0-u01-redesign-v1-plan.json.gz",
+    "1-status.json.gz",
+    "2-u01-redesign-v1-focused.json.gz",
+    "3-u01-redesign-v1-regression.json.gz",
+    "4-u01-redesign-v1-proof.json.gz",
+    "5-focused.json.gz",
+    "6-failing-before.json.gz"
+  ],
+  "publication": "Yuzy explicitly requested pushing to main after the run. Main fast-forwarded to this revision. GitHub confirmed all 23 pushed commits verified. No new publication authority is inferred."
+}

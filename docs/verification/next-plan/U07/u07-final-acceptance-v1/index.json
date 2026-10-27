@@ -1,0 +1,105 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-final-acceptance-v1",
+  "revision": "fc96b5a038f198783b7d5c4a5223daa95585af04",
+  "sourceSeals": 5141,
+  "jobs": 4,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-27T05:14:36.300Z",
+  "finishedAt": "2026-10-27T05:14:55.494Z",
+  "archives": [
+    {
+      "path": "0-u07-final-acceptance-v1-plan.json.gz",
+      "sha256": "05d6103737ff6d1b8fad983d773a635eda07ce6a73534f90f8665c7fb305e3ac",
+      "compressedSha256": "1fd6cfc8df6d257fb327f22ed081e5c1abaa769b57a23e940d7ec31178000829"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "a3fec888cec89c0ee9dc0ec01938ad59f5047bece2f7281a333debdd5137b0bb",
+      "compressedSha256": "d2e229d665c194fa4b270f5ed17d2d9da43d43b4846bf058e082ab9d9d3ef632"
+    },
+    {
+      "path": "2-u07-final-acceptance-v1-guards.json.gz",
+      "sha256": "4ed190a7342366915e92985212558d837b1291a4f40bdf917f627f08b84f0bbb",
+      "compressedSha256": "3cc87722ab5d3eecf736c8d74e2f3c75725cd2f08db7871e2a111fea38ac8500"
+    },
+    {
+      "path": "3-u07-final-acceptance-v1-file-controls.json.gz",
+      "sha256": "bf91a6b450ef3a86c186862f10180401eb7f81f0e3c6d224aeb7fa5817b3e7f9",
+      "compressedSha256": "35dd097f9bf885b3598dcd3f987cc8517ee4e6318f2b8df182c4962e8fe62abc"
+    },
+    {
+      "path": "4-u07-final-acceptance-v1-history.json.gz",
+      "sha256": "13abc1cade2f040000f20e422785dde746597ae3992786a41bb0d15ba847dc48",
+      "compressedSha256": "293bb648ea4b7a3eae612ca7ee7d9ab9e1c620b6d46572058ce8fa5dd681a98d"
+    },
+    {
+      "path": "5-u07-final-acceptance-v1-audit.json.gz",
+      "sha256": "28448bd2273634636e9c9961f41d0fd174343e98be5309ca85621dab64ed6c88",
+      "compressedSha256": "3723255b3e670d729036a0328a7fd5965ba702862e6474c4b97ac0285abdfc16"
+    },
+    {
+      "path": "6-acceptance.json.gz",
+      "sha256": "eaf31c3c2b3f3e74ac256c592b16b2c217cea6e85efc3c4ea52011a9ef5f6d7e",
+      "compressedSha256": "594b24deec742c9701106c2cf25d2dfcdf6da69ca837164ac692e9fd7e037f21"
+    },
+    {
+      "path": "7-browser-cleanup.json.gz",
+      "sha256": "22b1467bdd22d47a2ff5beaee2c9c6f8be31c89988871fd85997d46a339b0776",
+      "compressedSha256": "1a8855d30fb888ff9b48e8c9724a868b22851d37695046c8d86f6be92b373e3b"
+    },
+    {
+      "path": "8-download-live-plan.json.gz",
+      "sha256": "d436cf5a22136a383468c13ea87a206d6bb1b089774f6c23a87a2f074a77d19a",
+      "compressedSha256": "6bdf17dffe93cd177c0e42c6a4cfb05f39b98d43e6d5c70bf0e26015005da875"
+    },
+    {
+      "path": "9-download-live-resource.json.gz",
+      "sha256": "28871c5f73fa9b444bcfae6133b6b2d6425faa6c4ec9af1eb0c2b07bc7f3231f",
+      "compressedSha256": "1ea9cce3e92bfd96849b84f689d2953782c994c9bbf7aa3560e3d8ed4b18b2ae"
+    },
+    {
+      "path": "10-download-live-session.json.gz",
+      "sha256": "1517e5acfeee0a0425417b0de21589954889d2f94b06d5da8af37fd64d80d97a",
+      "compressedSha256": "083e8bad3f4c7879aa84f0c4e1dccdffa9c48957498d3fbaba13a3db69fb09e4"
+    },
+    {
+      "path": "11-download-live-verification.json.gz",
+      "sha256": "08d81312b91aee641253b5d7f0ee9e14c7c1e2619e57ed8545bfc9a1546ed539",
+      "compressedSha256": "af85352f5e30ed77de8113539aaa7e7b0baad594d07ff0afab895c930033414b"
+    },
+    {
+      "path": "12-download.json.gz",
+      "sha256": "461cb2fcbc2bab696a9dc874e8d726d2a7cff565bc4711b12649408275dfcfe8",
+      "compressedSha256": "7d8f4b4003c2ddbd6f85977a2ace5b9106b908bf3d2dbbb25788192117c574b9"
+    },
+    {
+      "path": "13-downloaded-record.json.gz",
+      "sha256": "d56b48f27430653337094abc99c8879c577ed48c69dc0434a90da257ffa65bbb",
+      "compressedSha256": "4f417fb9723ac0fb145ea3afad18728a02fa526c8aa390a72de5946d4dbaa3b9"
+    },
+    {
+      "path": "14-file-observer-controls.json.gz",
+      "sha256": "e0b4fdcac93c4066133d7657a17377370c29eb3972a3815f5c74540f051b750d",
+      "compressedSha256": "b0a5a554f65a32f0d8475c878322a5447e7841abf36fa0083965b1f6c8b5cc71"
+    },
+    {
+      "path": "15-guard-controls.json.gz",
+      "sha256": "7e6199e1abf500d6f0d310cc8b21d4cb780f840fd49422e830a4c8da1e21434b",
+      "compressedSha256": "3b0c0be4ed65563f3059b6f23948b219933aa0038f153033f9944e9c5811d7aa"
+    },
+    {
+      "path": "16-history.json.gz",
+      "sha256": "f941284a80fdc29ec5dde704f9c7b963858b60f15fd13a08d9214f388ae752be",
+      "compressedSha256": "e58f7364df83833debfd5ed8a53ac95b600327c48f85fb34e614a1a53ebcc6f6"
+    },
+    {
+      "path": "17-protected-download.json.gz",
+      "sha256": "77591656359077d8f7a83f89553e8aaafb4fc717766317e78295719be4eb3ea3",
+      "compressedSha256": "7c56de6219480bc0ff19e5547ef079deb7aa8183162879a87e5856cd8595f1fd"
+    }
+  ]
+}

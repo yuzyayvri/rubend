@@ -1,0 +1,55 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u02-certificate-recovery-v1",
+  "revision": "443689189e60129a6b5bf6648c8118b123b81b8a",
+  "sourceSeals": 2674,
+  "workerGone": true,
+  "executedJobs": 1,
+  "plannedJobs": 2,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read native.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 8,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-certificate-recovery-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U02/u02-certificate-recovery-v1-failed/0-u02-certificate-recovery-v1-plan.json.gz",
+      "bytes": 363750,
+      "compressedBytes": 127702,
+      "sha256": "7222175429e6d7ffbc98708497b56aed72706641d3238c77696dac29b28dcb91",
+      "compressedSha256": "fd3bea01db134e32142894e779d8484b59a1765fbf5494b4db068814575afb1f",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-certificate-recovery-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U02/u02-certificate-recovery-v1-failed/1-status.json.gz",
+      "bytes": 1003,
+      "compressedBytes": 554,
+      "sha256": "e6c572f5fa260e5564f95ea2cd34119a313cc68d706a7ac89f675c14b1cc2826",
+      "compressedSha256": "c7c128e6ff1d9d79860177a3c132b2464e9b8f3c16ca37da8fb72833bb998c8d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-certificate-recovery-v1-native.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U02/u02-certificate-recovery-v1-failed/2-u02-certificate-recovery-v1-native.json.gz",
+      "bytes": 1920,
+      "compressedBytes": 1019,
+      "sha256": "ddb12bee7a2450039ca8357a842a58fd43c975dc07bc3947e7a637689ecda74f",
+      "compressedSha256": "8326e0e5211607539a560f8f13fd771d50d0c4f4ab0c333065f8defb2b146e98",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-certificate-recovery-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U02/u02-certificate-recovery-v1-failed/3-failed-sources.json.gz",
+      "bytes": 146603,
+      "compressedBytes": 48079,
+      "sha256": "03ba7e83f948accae3a2ab9772848d9acd8f046fdb3c6a2d0f3142bacfb5b239",
+      "compressedSha256": "efc33a9ee6dc8ebd2c82f15ff370df91ad2ec12f2a3aa037fd65f23ee62cf37d",
+      "roundtripPassed": true
+    }
+  ]
+}

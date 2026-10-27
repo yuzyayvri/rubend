@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {resolve,relative} from "node:path";
+import {createHash} from "node:crypto";
+import {withArtifactLease} from "../scripts/artifact-lease.mjs";
+
+withArtifactLease();assert.equal(process.argv.length,3);const directory=resolve(process.argv[2]);assert.ok(directory.startsWith(resolve("build")+"/"));mkdirSync(directory,{recursive:true});const prior="build/experiments/u04-move-v2/generated",compile=JSON.parse(readFileSync("build/experiments/u04-move-v2/compile.json","utf8")),hash=x=>createHash("sha256").update(x).digest("hex"),sourceHashes={},paths={};
+function relocate(source,base,overrides={}){return source.replace(/^import (\.[^\s]+\.bend) as (\w+)$/gm,(_,p,alias)=>{const target=overrides[p]??resolve(base,p),name=relative(directory,target);return"import "+(name.startsWith(".")?name:"./"+name)+" as "+alias;});}
+function save(name,text){const path=resolve(directory,name);writeFileSync(path,text,{flag:"wx"});paths[path]=hash(text);return path;}
+for(const name of["search-base.bend","order-base.bend"]){const path=resolve(prior,name),bytes=readFileSync(path);assert.equal(hash(bytes),compile.artifacts[path]);sourceHashes[path]=hash(bytes);}
+const search=save("ordered-search.bend",relocate(readFileSync(resolve(prior,"search-base.bend"),"utf8"),resolve(prior))),portfolio=save("ordered-portfolio.bend",relocate(readFileSync("src/portfolio.bend","utf8"),resolve("src"),{"./search.bend":search})),bounded=readFileSync("bench/bounded-portfolio.bend","utf8"),control=save("bounded-control.bend",relocate(bounded,resolve("bench"))),ordered=save("bounded-ordered.bend",relocate(bounded,resolve("bench"),{"../src/search.bend":search,"../src/portfolio.bend":portfolio})),overrides={"./LOCAL-SEARCH.bend":search,"./LOCAL-PORTFOLIO.bend":portfolio,"./LOCAL-CONTROL.bend":control,"./LOCAL-ORDERED.bend":ordered};save("worker.bend",relocate(readFileSync("bench/move-order-worker.bend.in","utf8"),resolve("bench"),overrides));
+writeFileSync(resolve(directory,"generation.json"),JSON.stringify({passed:true,format:"rubend-move-order-study-generation-v1",sourceHashes,artifacts:paths,sameNativeBinary:true,controlArmsShareImplementation:true,onlyOrderedSearchImportDiffers:true,existingBoundedPortfolioReused:true,productionChanged:false})+"\n",{flag:"wx"});console.log(JSON.stringify({generated:true,files:Object.keys(paths).length,sameNativeBinary:true}));

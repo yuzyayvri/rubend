@@ -1,0 +1,65 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-inference-information-v1",
+  "revision": "3d5a381c3ae72ee2d4f7d27627fbb54d4991c082",
+  "sourceSeals": 3988,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-25T19:13:29.592Z",
+  "finishedAt": "2026-10-25T19:13:43.297Z",
+  "archives": [
+    {
+      "path": "0-u02-inference-information-v1-plan.json.gz",
+      "sha256": "f59f8443aa7ea818d445b8df6146abc63b6b8a2d955b2a6e28d64001d2f20f71",
+      "compressedSha256": "dd55e30c8297cb9d0df2936c780f46d227b08939de0ec39b3d2a1ab2b4ebe2aa"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "407c38fb899684c1ff32b454f1ed649722ce002d1729fd3a20bafa40dbe9b6ce",
+      "compressedSha256": "e3b7e59af4685d90b6d9f4cbafa9fd5b13a5623e748a200afaf251bdb8aa6566"
+    },
+    {
+      "path": "2-u02-inference-information-v1-observe.json.gz",
+      "sha256": "026fa03563ef7e7f6ffcc8687e45074d4fbc9f842fd9695585aeac4d46480b76",
+      "compressedSha256": "d8e34ad603449dd38c9f8bdc76ec2c74fd189fc0eff6c38dd40aa7e6b878ec17"
+    },
+    {
+      "path": "3-u02-inference-information-v1-confirm.json.gz",
+      "sha256": "fb598c1d8c7770884327ec14638a820ce54d7745a29e6c2c36e84dfc46cd2334",
+      "compressedSha256": "aafd579b882c13eac7ab3f3e04e32921bd35476734ba4ab6e284d4a0010dd349"
+    },
+    {
+      "path": "4-analysis-cpu.json.gz",
+      "sha256": "a8bbaddd8a4d8a5153bf057066752c1d4b4841841c64f341fee914cdfe683529",
+      "compressedSha256": "0c5e6742445d2e468c55130c709f5280c729e2de13826264b80cad591eb1a38c"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "5448c4ce581d935957655784609e78368752ef3c988d10234f20d7f36cde71eb",
+      "compressedSha256": "5e5fc24b2eeb5d86ab9712fc82e719009e1960504b2363705c0f00fc8dbae728"
+    },
+    {
+      "path": "6-input.json.gz",
+      "sha256": "3611b5853b35bb122ac3b5bf2af501a3e573b13095897b81e12ab5d825694811",
+      "compressedSha256": "a2a820c56f68a94b82104b6ba76dcad4c4a28d3e155aac06344fafd98637a7a3"
+    },
+    {
+      "path": "7-model.json.gz",
+      "sha256": "dc0a7e362d19811d0a23be885664bf8f01e41d5d103d1bcc2b447db854e6c6e1",
+      "compressedSha256": "2a60d0212f9b0a1e77cccbaa34ff88347e16a9e83a9eef32625d56578fd07fbc"
+    },
+    {
+      "path": "8-observation.json.gz",
+      "sha256": "aa0aaed7659ab6307416d22797979c394ae09369d92b79465a19e8b5f50aeaa9",
+      "compressedSha256": "ab5c4f8591345682185d1bf6a8c48ababcf43a79ba9890874ed1328c39e47cac"
+    },
+    {
+      "path": "9-query-results.json.gz",
+      "sha256": "f7624ccd01b196ec2658c1200ea1ba91d59ba1f486b1ddca1d3eddf1fc440bdf",
+      "compressedSha256": "c0ccc0f45b8de30b304faa7f56590d9099956e3fd0f57b1f7d18aa9551a8cdb3"
+    }
+  ]
+}

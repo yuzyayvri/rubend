@@ -1,0 +1,65 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u03-storage-capacity-v1",
+  "revision": "ddf89565e4b067acc7c66cfecfa7779d919d1deb",
+  "sourceSeals": 3026,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-25T06:21:52.400Z",
+  "finishedAt": "2026-10-25T06:22:03.595Z",
+  "archives": [
+    {
+      "path": "0-u03-storage-capacity-v1-plan.json.gz",
+      "sha256": "202e8f7f0499dfaea06a950207ed733dde9fdf46743a63b8814873d806017d28",
+      "compressedSha256": "d8fc1a8c8266dc0babb17a50e427c47bb26bfc9cf7938e50afc4abd663d9ef86"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "9ff94ee17e78a8bb2b6ad261dcee09bf1cde00d368153c86d85e67eeb4d61d00",
+      "compressedSha256": "3dbe27943c2ded6276c3433c84e53127edb94526642e9cef3aa55ced7804d478"
+    },
+    {
+      "path": "2-u03-storage-capacity-v1-compile.json.gz",
+      "sha256": "165957031e1aff61560c27a64e5c7aee841c0a38c3285a0271fc14de539730fd",
+      "compressedSha256": "873e24c689c33ac7cd486be43dbc685c966629f3ea228fe8c3332d85f3a9591e"
+    },
+    {
+      "path": "3-u03-storage-capacity-v1-storage.json.gz",
+      "sha256": "79445f4e0e82bdae605ea1ad9ae102f674ca8fe767bc24c7411091cb8231c02e",
+      "compressedSha256": "f4a1856ab0cf2f9b2b17b965ffd34856e96e5329008670a0fd607153be2469a7"
+    },
+    {
+      "path": "4-u03-storage-capacity-v1-confirm.json.gz",
+      "sha256": "c4bf8af99c1216de3c4969e32c8b7b681618e1d2447bb47d552eb79495698998",
+      "compressedSha256": "77cf0630e3ae9d7895efc641c66b28b880de34a76a9029769ca4419039c931f4"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "281b3c2a3f80da3496b1abe6fa18fbf4a8f16681a9e5c46e2add4cf626ceff1f",
+      "compressedSha256": "99857e0d64d6fa80ce7f497da6aca569585f2303c6b4301476e0152bbfa7ea9f"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "2e6ef0ce3a5068dddca97234d80c84d9683370d9597000fd3ff22ea5a6e605f1",
+      "compressedSha256": "6797a7bd2912fe9e0a05f99d8b65b62d62883c977c5f56f912bfce5331d4ec75"
+    },
+    {
+      "path": "7-controls.json.gz",
+      "sha256": "a41532e57f5b499376bafe30e2236ff24cfdb820e222d2b3993e7b3c8afb088e",
+      "compressedSha256": "7536e9551e19ebf7fa763386a62f35d532b3caace1adf03289a139b366750534"
+    },
+    {
+      "path": "8-native.json.gz",
+      "sha256": "aef5ba3b8cf938e2303b3e9c2fb41c1d6f5588523c77d3d7b5685f6563270697",
+      "compressedSha256": "a94a82450202a54c15bcfa6b905bc4442eee4d8c022370f6d22fde7ff080731d"
+    },
+    {
+      "path": "9-storage.json.gz",
+      "sha256": "58b1517e2322149e277ddc57d43a5cc8befed8a2128407e0e6afac32679e83f0",
+      "compressedSha256": "a600809c68a81f53c0af868973dc7b807da484add87ccc5cc8dbedb659a9e742"
+    }
+  ]
+}

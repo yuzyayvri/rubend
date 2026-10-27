@@ -1,0 +1,13 @@
+{
+  "format": "rubend-fast-seed-refinement-v1",
+  "candidateSeed": 3,
+  "exactSeed": 18,
+  "budgets": [160000, 640000],
+  "slices": 32,
+  "cohorts": 5,
+  "developmentOffset": 512,
+  "developmentCases": 8,
+  "postHocHypothesis": true,
+  "pilotRerun": false,
+  "promotion": false
+}

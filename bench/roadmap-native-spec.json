@@ -1,0 +1,5 @@
+{
+  "format": "rubend-roadmap-native-spec-v1",
+  "edge": {"iterations": 100000, "cycles": 5, "profileCycles": 1},
+  "ordering": {"split": "pilot", "cases": 4, "superflip": true, "slices": 32, "tier": "raw", "profile": "inverse-three"}
+}

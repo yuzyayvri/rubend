@@ -1,0 +1,12 @@
+{
+  "format": "rubend-interior-trace-spec-v1",
+  "roots": 4,
+  "stepsPerRoot": 250000,
+  "quantum": 60000,
+  "profile": "raw-inverse-three",
+  "goal": "FullCube",
+  "mode": "ExactContour",
+  "sourceBaseline": "u03-native-feasibility-v1",
+  "cachePruning": false,
+  "performanceAcceptance": false
+}

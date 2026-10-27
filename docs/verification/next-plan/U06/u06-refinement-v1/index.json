@@ -1,0 +1,50 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u06-refinement-v1",
+  "revision": "995de7acc86e94bb91f440e34cd223d9e6f09ddb",
+  "sourceSeals": 2796,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T19:24:00.021Z",
+  "finishedAt": "2026-10-24T19:24:01.133Z",
+  "archives": [
+    {
+      "path": "0-u06-refinement-v1-plan.json.gz",
+      "sha256": "44365d55c313f131d6fef0d6862c4060f50d56b0b778acfd722ce9efac19f485",
+      "compressedSha256": "2ea899d1d1ade38c499fb69422eb48fcb47ec97f09fdbb5a756a5a87517d867c"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "d4c9434add3b54f0957bc44385e2a5b057ca1d70ccc4c900d2f853a42f490a9b",
+      "compressedSha256": "9e4f5d68c6addcbc4d9eba0ab087858921855350dfa018a6e617b2287f312da3"
+    },
+    {
+      "path": "2-u06-refinement-v1-inventory.json.gz",
+      "sha256": "063b4a5507a64d7d5a76bf0aac1c4d5b4859187bb4f38d104a614107e3de63a5",
+      "compressedSha256": "ef7215b0472975d67abace00f3fa6cf4f5692c03b4eac06b30459dbe3c9a104c"
+    },
+    {
+      "path": "3-u06-refinement-v1-confirm.json.gz",
+      "sha256": "2b161e7ab0ccd77942752614107e4e7a4115952da974e1538b98fcd254cee9b8",
+      "compressedSha256": "67d34edd58cf821e4cdf13b502d31e298f4ae94b592f519303f687fcc8c2c28c"
+    },
+    {
+      "path": "4-confirmation.json.gz",
+      "sha256": "acb9197427b2d0467ceca52362f604a79c394956b41f8da7786c0155e3bd6a42",
+      "compressedSha256": "7071503041fc28c6bf2beaa5fb8a8bb1b546de021f45f04b1d07e54ceb5002aa"
+    },
+    {
+      "path": "5-inventory.json.gz",
+      "sha256": "a3a1d3e3f30f66c969fd471817b1274d1ee1b4c262729f956520e2ed32a3ddc4",
+      "compressedSha256": "05ffa61f1534471cbad72abfc804a0bba6d5705f12dd82471324da724f4ad137"
+    },
+    {
+      "path": "6-label-boundary.json.gz",
+      "sha256": "a8ee025c3533b328007570332fcc9bb7868e3672922659dcd7f3f8a3161f709a",
+      "compressedSha256": "72948425dd5a9a6e7f7368be1cfa00ac4e0dcfb5727cbfa0ef4a7bda11556545"
+    }
+  ]
+}

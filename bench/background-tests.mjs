@@ -4,6 +4,7 @@ import {resolve} from "node:path";
 import {spawn,spawnSync} from "node:child_process";
 import {createHash} from "node:crypto";
 import {fileURLToPath} from "node:url";
+import {fileHash} from "./bounded-file-hash.mjs";
 
 const root=resolve(fileURLToPath(new URL("..",import.meta.url))),self=fileURLToPath(import.meta.url),hash=bytes=>createHash("sha256").update(bytes).digest("hex");process.chdir(root);
 const [mode,argument]=process.argv.slice(2);assert.ok(["start","run","status"].includes(mode));assert.ok(argument);assert.equal(process.argv.length,4);
@@ -14,7 +15,7 @@ for(const job of plan.jobs){assert.match(job.id,/^[a-z0-9-]+$/);assert.equal(job
 assert.equal(new Set(plan.jobs.map(job=>job.id)).size,plan.jobs.length);
 function identity(pid){try{const raw=readFileSync("/proc/"+pid+"/stat","utf8"),fields=raw.slice(raw.lastIndexOf(")")+2).trim().split(/\s+/);return{pid,startTicks:fields[19]};}catch{return null;}}
 function status(){const value=JSON.parse(readFileSync(statusPath,"utf8"));assert.equal(value.planSha256,planSha256,"Existing run belongs to another plan");const live=value.worker&&identity(value.worker.pid);return{...value,workerAlive:Boolean(live&&live.startTicks===value.worker.startTicks)};}
-function verify(){const result=spawnSync("git",["rev-parse","HEAD"],{encoding:"utf8"});assert.equal(result.status,0);assert.equal(result.stdout.trim(),plan.revision,"Revision changed during unattended checks");for(const [path,expected]of Object.entries(plan.sourceHashes))assert.equal(hash(readFileSync(resolve(root,path))),expected,"Source changed during unattended checks: "+path);}
+function verify(){const result=spawnSync("git",["rev-parse","HEAD"],{encoding:"utf8"});assert.equal(result.status,0);assert.equal(result.stdout.trim(),plan.revision,"Revision changed during unattended checks");for(const [path,expected]of Object.entries(plan.sourceHashes))assert.equal(fileHash(resolve(root,path)),expected,"Source changed during unattended checks: "+path);}
 if(mode==="status"){console.log(JSON.stringify(status(),null,2));process.exit();}
 if(mode==="start"){
   if(existsSync(directory)){assert.ok(existsSync(statusPath),"Incomplete launch directory preserved; use a fresh run id");console.log(JSON.stringify(status(),null,2));process.exit();}

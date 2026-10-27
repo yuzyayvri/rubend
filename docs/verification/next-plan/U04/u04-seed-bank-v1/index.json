@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u04-seed-bank-v1",
+  "revision": "1fa597dd34fb0578da3b6fe2e9db6397290c643d",
+  "sourceSeals": 1963,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T11:02:19.406Z",
+  "finishedAt": "2026-10-23T11:03:36.510Z",
+  "archives": [
+    {
+      "path": "0-u04-seed-bank-v1-plan.json.gz",
+      "sha256": "3f4ce5c171ff2cd78fd6791bfe53831e8bdd7ed142057e2866840ad557a64ced",
+      "compressedSha256": "d4a5fd2cc544efba41f9063439b5a2e20b523e5da85ba547ba609c21b0380f12"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "6ad9fcc1617e60ffacb2fb47c475b2e799a026c40de37e02e0210b05880053b0",
+      "compressedSha256": "cae85c683c12cf5c29927567a4d3734024fbf229356c4dae56b522b493f17cd1"
+    },
+    {
+      "path": "2-u04-seed-bank-v1-compile.json.gz",
+      "sha256": "7963dc1101fc37a7ed77e2e44a6f9923299632de3f0f06027a08c859cc39729d",
+      "compressedSha256": "70bd549ef924cebac1b25ff21f0add4a7c23889e04e55367909af13bd29b6548"
+    },
+    {
+      "path": "3-u04-seed-bank-v1-guard.json.gz",
+      "sha256": "0ce52d40cd6c73d0069aa7b53c4ac8c978b1ce8f0e5d01aa9c8bc37dc6c5e31b",
+      "compressedSha256": "5460d800a3323d0d50432a240bd80ce3f12e11c185fd6c3acab8a94ae70d7086"
+    },
+    {
+      "path": "4-u04-seed-bank-v1-confirm.json.gz",
+      "sha256": "e80f9e52c6bdb1dacf76af3221f2236ee6b9cb519e61c74ba79e9f811fd07ad2",
+      "compressedSha256": "b9d3a55a59e76162967f9d13a7865200cc331117fbc420c1ae210e185cc68bcc"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "7c92569f4cf1c418668bc96f12bd5787124846aa4993ffddb73055365bfe9b64",
+      "compressedSha256": "cedc26f4f5e48c96ed9c204fdbecb039b899e7a214b25cdafce8457df0a82f30"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "bf5bb22c5d3ff60d87e31d44b75e399465a9cd9cc64cc6ca05f648fe120471b4",
+      "compressedSha256": "aab64cd81bb388f3acf2ad6b191ff00e8ce07b8a254f89f8d8eb28bc85d570ef"
+    },
+    {
+      "path": "7-guard.json.gz",
+      "sha256": "5b4e16e16e28e9f11ad4c64757cd225fe243c9f68aa6b759f6dc6a200dd7d83f",
+      "compressedSha256": "b4061538154fda711af44d9d4fc28784c5c1dc468e5f39b5084386c5b347ca30"
+    }
+  ]
+}

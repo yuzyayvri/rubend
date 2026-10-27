@@ -1,0 +1,65 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u05-ledger-v2",
+  "revision": "533857506dfa716ffa833ffbc0e63236b6299c0c",
+  "sourceSeals": 2318,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T21:36:48.570Z",
+  "finishedAt": "2026-10-23T21:38:09.206Z",
+  "archives": [
+    {
+      "path": "0-u05-ledger-v2-plan.json.gz",
+      "sha256": "11b491848d3f787fe2c807edb095b217d1ce18664e1c573ede5e7b254a3a5bf7",
+      "compressedSha256": "486f1e07236df0eefa879d802d8797a0661778f8c82c780a6c14a78b67f9d4a0"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "c372050f5e535343288d2b61511f61c9d43405cc18b5f280326f4e6df295313d",
+      "compressedSha256": "31bbc73880ecfda56fd774d11f3c22e9bd09f0dc7e8411af1c9993f16b0db47a"
+    },
+    {
+      "path": "2-u05-ledger-v2-compile.json.gz",
+      "sha256": "97d31fd04f1a8a1698426ab7cc7e860bf7b73d6d3424ecf5a748ce9afca0fb87",
+      "compressedSha256": "6fbc76583c0afc384679d55517172664f484491deba49e4c749762cd7bf58670"
+    },
+    {
+      "path": "3-u05-ledger-v2-oracle.json.gz",
+      "sha256": "9354b77388b172030c8bcf72fa404e231e4721a0ec7741ce239b4b6dc831e64e",
+      "compressedSha256": "c41073f15bb6890c7fefbf820aa9a1b2c6ccb988a5fd203ed60b58587437d963"
+    },
+    {
+      "path": "4-u05-ledger-v2-confirm.json.gz",
+      "sha256": "e95cc2d202f38be051ec61a99cd51842896ee3ec9a59187920fe57231db3444e",
+      "compressedSha256": "8bc915db4617fa0142ae8a25c5402b2d31f8e2556719088741d0dca8f3629ca9"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "0c5b3157125020f611eb86b62def53cb61d9f8c6d4c524729c52cb0c8816711d",
+      "compressedSha256": "8f3df8bde58f2d89ba6f16d8619b7aeeade33ca3a4a70533e4770989e65c398e"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "719a1ced3eba15d79a0dc4726df3ee762e4a1cb8b2bf01414a8f86d2e1af7730",
+      "compressedSha256": "0740188b4e94714f71bc7c820f711ec7d6f90d1002a56ebaf75ba45223a8d35e"
+    },
+    {
+      "path": "7-ledger-native.json.gz",
+      "sha256": "3d31110208ee7c56edf26cb4df84cb6d0ca7a019ec724423659bad633c9cbe68",
+      "compressedSha256": "7b1168ea04267eb117e2d195a1d84c0ad18eadc8ac18a6246622c4935ecf5ae6"
+    },
+    {
+      "path": "8-native.json.gz",
+      "sha256": "cd755cb69f626a0b0533d6c69da899d40673a0d1fd5c8acdd5f10bda23448dad",
+      "compressedSha256": "8278df5caddbb5040c936ded1ed56965b81e41e8abe13ea1be95d477af50d821"
+    },
+    {
+      "path": "9-oracle.json.gz",
+      "sha256": "113f62092b5e62933ebcabf50eb120e66a009d62cc1b836a1bbf334c65734554",
+      "compressedSha256": "81ac7a79055bdf8dde11da54c96f2a35085ad2f033f0908de0a0cff0811f4c27"
+    }
+  ]
+}

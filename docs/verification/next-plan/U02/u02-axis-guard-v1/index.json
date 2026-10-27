@@ -1,0 +1,22 @@
+{
+  "format": "rubend-axis-correctness-guard-v1",
+  "passed": true,
+  "existingRootVerdict": true,
+  "candidateTypeTerminationVerdict": true,
+  "nativeCoordinateSteps": 100000,
+  "transitionEntriesChecked": 85140,
+  "javascriptCoordinateComparisons": 38000,
+  "uniformRoots": 999,
+  "ownedArrayMode": true,
+  "wrongRotationCounterexample": true,
+  "corruptedTransitionCounterexample": true,
+  "nativeBufferPayloadBytes": 524288,
+  "payloadEvidence": "Emitted C fresh allocation uses blk_new(e,0,17,...); blk_wcls packs two U32 per U64 and blk_write stores U32. This is payload, not process RSS.",
+  "formalCoordinateRefinement": false,
+  "extraFrameAllocationMeasured": false,
+  "conditionalProbeCostMeasured": false,
+  "performanceClaim": false,
+  "productionIntegrated": false,
+  "independentReview": false,
+  "archives": ["0-u02-axis-v1-guard.json.gz", "1-u02-axis-v1-guard-resource.json.gz", "2-samples.json.gz"]
+}

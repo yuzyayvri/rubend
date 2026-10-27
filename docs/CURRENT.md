@@ -2,6 +2,1751 @@
 
 ## Latest checkpoint
 
+After report delivery, Yuzy explicitly requests push and merge while preserving
+every commit. The [October 27 authority](verification/next-plan/OCT27-PUBLICATION.md)
+supersedes the earlier publication gate for this landing. Work remains solo,
+and independent review is not run. Use a signed subject-only regular merge,
+preserve original commit IDs and verify remote ancestry and GitHub signatures.
+The following scheduled-workflow records describe their original checkpoints.
+No new measurement or implementation follows from publication.
+
+The scheduled roadmap/comparison workflow reaches its checked local handoff.
+Read docs/verification/next-plan/FINAL-HANDOFF.md for results and limitations.
+`u07-final-acceptance-v1` passes canonical verification of 5,141 seals and four
+receipts, worker gone and no resource stop. Its eighteen archives bind all 23
+measurement groups, 57,678 attempts, 102 task outputs, 49 retained adapter
+errors, the unchanged report, laws/regression reuse, package, application matrix,
+actual downloaded file, restoration, cleanup and signed subject-only history.
+
+The frozen performance verdict stays inconclusive. The 10x to 100x objective
+is unmet, no new default/larger exact tier is promoted and universal optimized
+completeness/optimality is not formally certified. Independent review is not
+run under solo work. Operator review and any push/merge remain separate later
+user decisions. Nothing is pushed or merged.
+
+There is no next queue. The existing `continue-rubend-roadmap` heartbeat is
+deleted through the native app control, with its receipt in
+docs/verification/next-plan/U07/AUTOMATION-COMPLETION.json.
+Do not recreate it or repeat measurements
+for a stale queued heartbeat. The final audit is canonical at its recorded
+revision; this closing documentation-only checkpoint does not rerun solvers
+or reinterpret an old run against a different HEAD. Preserve all evidence.
+
+The post-live `u07-final-browser-v1` queue passes canonical verification with
+5,157 seals and two receipts, worker gone and no stop. Seven required browser
+observations pass seven replay checks. The later actual 547-byte release-answer
+download exactly matches the displayed JSON and replays through Bend and geometry.
+The protected download is restored byte-identically; no private backup remains.
+Both owned tabs and both replay servers are closed. No solver or holdout attempt
+is rerun. Read docs/verification/next-plan/U07/FINAL-APPLICATION.md for the ten-lane
+matrix and its native-reuse, stored-replay and unselected-tier boundaries.
+
+The final audit passes locally with 16 rejection controls. It binds the original
+4,963 frozen files, 23 groups/57,678 attempts, retained 49 errors, root 23 laws,
+regression reuse, actual package, application matrix, physical file and cleanup.
+The final source-bound queue still requires canonical verification before closure.
+The October 24 completion/report/no-push order remains binding. The numerical
+report is already delivered. No winning default, larger exact tier, universal
+formal certificate or 10x to 100x gain is claimed. Independent/operator review
+and any push or merge remain separate gates.
+
+`u07-final-app-data-v2` passes canonical verification of 5,140 seals and two
+receipts, worker gone and no stop. Four stored records bind all seven frozen
+installed web assets and pass 32 negative controls. The original empty-map
+artifact remains preserved and excluded. The replay HTTP path also passes
+seven-asset byte checks, eight refusals, completed/cancelled stream cleanup and
+read-only matched-record inspection under one-GiB CPU2 limits. These are not
+browser observations. The October 24 completion/report/no-push order remains
+binding before the source-sealed hidden-browser session. No solver rerun,
+product change, new tier selector or larger exact-tier promotion is authorized.
+
+`u07-final-app-data-v1` passes canonical verification of 5,140 seals and two
+receipts, worker gone and no stop. Inspection before browser use finds its
+web-asset map empty. The original artifact remains preserved and is not allowed
+to serve the frontend. Read docs/issues/final-application-empty-assets.md.
+The new regression fails against that artifact with a missing-main.js error.
+The correction derives all seven assets from the original freeze, not the model-
+module manifest. Four saved records and 32 controls now pass locally. No browser
+or solver executes. The October 24 completion/report/no-push order remains
+binding before the fresh `u07-final-app-data-v2` queue, with unchanged one-GiB
+CPU2 limits and a five-minute queue cap. Canonically verify before browser use.
+
+Final application record preparation locally admits four saved observations
+and passes 28 negative controls under one-GiB CPU2 limits. It checks the original
+freeze, canonical raw report, every projected answer through Bend and geometry,
+installed package assets and existing screenshot hashes. No solver executes.
+Read docs/verification/next-plan/U07/FINAL-APPLICATION.md. Browser acceptance
+is not yet passed. The October 24 completion/report/no-push order remains
+binding before the fixed `u07-final-app-data-v1` admission queue. Canonically
+verify that queue before browser work or further tracked edits. It has two
+serial one-GiB CPU2 jobs, 120/60-second caps, nice 10, no swap and reserve.
+The report stays unchanged and no holdout solve repeats.
+
+`u07-final-report-v1` passes canonical verification with 5,136 source/input
+seals and one receipt, worker gone and no resource stop. All 57,678 planned
+attempts remain accounted for and every answer independently replays again.
+The empirical optimality consistency audit checks 1,061 claims and finds no
+disagreement. The frozen performance gate is inconclusive, not a speedup win.
+Read docs/verification/next-plan/U07/COMPARATIVE-RESULTS.md and its full tables
+and compressed raw report. Rubend broad coverage is 9,962/10,000 with median
+best length 19 HTM. Cubing min2phase and Muodov C each cover all 10,000, with
+median 21 HTM. All 49 adapter errors remain retained. No default is changed.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before final U07 application acceptance. The report queue is already
+verified and archived at its recorded revision. Reuse that evidence after this
+documentation-only commit instead of trying to canonically recheck it against
+a changed HEAD. No detached experiment is active. Next complete the application
+matrix using source-identical installed evidence and stored final records for
+hard-censored display, release-answer playback/export and competitor inspection.
+Do not repeat holdout solves. Reconcile supported and unselected tiers honestly.
+The final local handoff and acceptance remain open. Keep the existing automation
+until that work and numerical report delivery are complete. No push or merge.
+
+`u07-final-long-b-p1` passes canonical verification with 4,973 seals and four
+receipts, worker gone and no resource stop. All 96 slots are recorded, with no
+pending or uncertain claims. Complete answers independently replay and all
+three sessions settle. Three actors have distinct measured cgroups and three
+available readiness PSS snapshots. Statuses are ten `ok` and 86 `timeout`, with
+no errors. The planner reports all 57,678 slots accounted across all 23 groups.
+The 49 earlier adapter errors remain retained. Status is not answer coverage.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-report-v1`. This analysis-only queue uses the frozen
+report writer, four GiB, CPU2, nice 10, no swap, desktop reserve and a ten-minute
+job cap. It rechecks raw evidence, replay and uncertainty without running any
+solver again. Final U07 acceptance, numerical report verification and delivery
+remain open. No frozen source or configuration changes.
+
+`u07-final-long-a-p1` passes canonical verification with 4,973 seals and four
+receipts, worker gone and no resource stop. All 96 slots are recorded, with no
+pending or uncertain claims. Complete answers independently replay and all
+three sessions settle. Three actors have distinct measured cgroups and all
+three readiness PSS snapshots are available. Statuses are 69 `ok` and 27
+`timeout`, with no errors. These are not coverage counts or a speed verdict.
+Cumulative accounted campaign slots are 57,582 of 57,678.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before the last fixed group, `u07-final-long-b-p1`. Its 96 slots use
+the same selected IDs and warm ten-second budget for Nissy H48h0, vcube108
+and default exact-request. Three serial CPU2 jobs each retain four GiB,
+420-second hard and 380-second soft limits, nice 10, no swap and desktop reserve.
+The queue cap is 26 minutes. No frozen setting changes. Final U07 acceptance
+and numerical report delivery remain open even after the last measurement.
+
+`u07-final-structural-p1` passes canonical verification with 4,979 seals and
+seven receipts, worker gone and no resource stop. All 1,086 slots across six
+configurations and 181 structural entries are recorded, with no pending or
+uncertain claims. Complete answers independently replay and all seven sessions
+settle. Six actors have distinct measured cgroups and all seven readiness PSS
+snapshots are available. Statuses are 1,028 `ok` and 58 `timeout`, with no errors.
+These are not coverage counts or an optimality verdict. Cumulative accounted
+campaign slots are 57,486 of 57,678.
+
+After this verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-long-a-p1`. Its 96 slots cover the same frozen thirty-
+two selected release IDs for default, cubing min2phase and Muodov C, with warm
+ten-second requests. Three serial CPU2 jobs each retain four GiB, 420-second
+hard and 380-second soft limits, nice 10, no swap and desktop reserve. The queue
+cap is 26 minutes. No frozen setting changes. The paired long-budget group,
+final U07 acceptance and numerical report delivery remain open.
+
+`u07-final-timing-c4-b-p1` passes canonical verification with 4,977 seals and
+six receipts, worker gone and no resource stop. All 640 planned timing slots
+are recorded, with no pending or uncertain claims. All complete answers replay
+independently and all 331 sessions settle. Five actors have distinct measured
+cgroups. All eleven warm-readiness PSS snapshots are available in this group.
+Statuses are 40 `ok`, 599 `timeout` and one `error` observation. The preserved
+small-profile error has the known late-cancellation cause and remains terminal.
+All ten timing groups account for 6,400 unique slots across five cohorts.
+Their output hashes are rechecked and all 3,313 sessions settle. Aggregate
+statuses are 1,550 `ok`, 4,836 `timeout` and fourteen `error`, not coverage
+counts, a passed noise gate or a performance verdict. Cumulative accounted
+campaign slots are 56,400 of 57,678.
+
+After this verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-structural-p1`. Its six serial CPU2 jobs cover all
+181 structural entries for the five primary actors and default exact-request.
+Each has four GiB and 240 seconds, nice 10, no swap and desktop reserve.
+The queue cap is 28 minutes. Frozen settings and analysis rules do not change.
+Both long-budget groups, final U07 acceptance and report delivery remain open.
+
+A roughly three-hour continuation gap follows `u07-final-timing-c2-a-p1`'s saved completion at
+`2026-10-26T20:07:20.345Z`; the next recorded handoff check is the 23:00 heartbeat.
+The cause is not established. Results, resources and seals pass canonical checks.
+Read docs/issues/final-evaluation-handoff-gap.md. No attempt is repeated.
+
+`u07-final-quality-09-p1` passes canonical verification with 4,972 source seals
+and two receipts. Its worker is gone and no resource stop occurred. All 5,000
+planned slots on release inputs 9,000 through 9,999 are recorded, with zero pending
+or uncertain slots. All complete answers independently replay and all thirty-one
+actor sessions settle. The saved statuses are 2,076 `ok`, 2,913 `timeout` and eleven
+`error`. A timeout can contain an eligible answer, so these are not coverage
+counts. No isolated quality latency or per-actor CPU ranking is inferred.
+
+All ten quality groups account for 50,000 unique planned slots across 10,000
+release inputs and five actors. Every canonical output hash is rechecked.
+All 235 sessions settle, with zero pending or uncertain slots. Aggregate
+statuses are 20,494 `ok`, 29,471 `timeout` and 35 `error`. These are not answer
+coverage or solution-quality results. The full numerical report remains pending.
+
+Thirty-five quality-stage errors are the recorded benchmark-adapter cancellation race,
+not invalid returned solutions. All eleven additional raw session sequences show
+the prior request's `done` followed by its `alreadySettled` cancellation
+acknowledgement while the next request is active. All eleven sessions settle.
+Read docs/issues/frozen-comparison-late-cancel-ack.md. Keep all terminal errors
+and the seal unchanged. Do not rerun completed slots or tune on these cases.
+The report must retain this limitation.
+
+After verifying that queue and before the next group, the October 24 order
+remains binding. Finish the roadmap, comparative report and delivery of numbers
+before automation deletion. Yuzy separately decides any later push to main.
+The fixed timing groups use the same frozen metadata.
+Five actor jobs run serially on CPU2, each with four GiB, nice 10, no swap and
+desktop reserve. Each has 128 cold/warm duplicate slots, a 240-second hard cap
+and a 210-second soft checkpoint. The queue cap is 26 minutes. All five cohorts,
+both repeats, exact/anytime distinctions and noise gates remain unchanged.
+The final report and remaining U07 acceptance are still unfinished.
+
+On October 27 Yuzy resumed continuation after the usage-limit pause. The sixth
+batch finished while automatic wakeups were paused. Its saved results are
+verified before advancing. Resume the same one-minute heartbeat without changing
+the benchmark, resources or no-push order. No batch or failed slot is repeated.
+
+After canonical verification, Yuzy's October 26 request to shorten handoff gaps
+is recorded. The existing automation now checks every minute instead of thirty.
+This changes scheduling only. Active checks stay compact and quiet. All frozen
+configurations, slot order, resources, verification and no-push gates remain.
+
+The final comparison configuration is sealed at
+`build/experiments/u07-final-evaluation-v1/freeze.json`. Its canonical metadata
+digest is `7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d`.
+All 4,963 frozen file hashes, ten configurations and canonical admission evidence
+pass the final-stage loader. The full metadata is archived in
+docs/verification/next-plan/U07/final-evaluation-freeze.json.gz.
+No code, binary, table or input changes follow this seal. The first fixed group
+is `u07-final-quality-00-p1`, with a 29-minute queue cap and four low-priority
+lanes sharing four GiB. Read docs/verification/next-plan/U07/FINAL-EVALUATION.md
+for continuation commands and the current pointer. Actual comparison results,
+final U07 acceptance and numerical report delivery remain unfinished.
+
+`u07-final-controller-v1` passes canonical verification with 8,958 source seals
+and four resource receipts. The worker is gone and no resource stop occurred.
+All 47 known controller and queue-executor requests pass, with thirty completed
+slots resumed without new solver sessions. The 23-group campaign covers all
+57,678 planned slots. Its 181 structural cases retain 171 justified optima.
+Read docs/verification/next-plan/U07/u07-final-controller-v1/index.json.
+
+After checking that result and before final sealing, the October 24 order is
+recorded again. Finish the full roadmap and the coordinated comparative report,
+deliver its numbers, then delete the existing automation. Freeze configurations
+before untouched cases. Yuzy separately decides any later push to main.
+The next unit seals the admitted metadata and launches fixed final groups.
+No holdout case has been evaluated and no overall completion is claimed.
+
+`u07-final-admission-v1` passes canonical verification with 8,912 seals and three
+receipts, worker gone and no stop. All 40 known-case requests and twenty session
+cleanups pass across ten configurations. Eight protocol, seven slot, nineteen
+record and eleven freeze-admission negative controls pass. All 57,678 proposed
+slot identities are valid and distinct; no release contents are read. The older
+fixture/calibration guards remain closed, and all 70 earlier clock analyses
+recompute without solver reruns. This admits the record domain, not the final
+evaluation or configuration freeze.
+
+Before controller, checkpoint, structural and statistics work, the October 24
+completion/report/no-push order remains binding. Finish the full roadmap and
+single coordinated comparative report before deleting the existing automation.
+Freeze configurations before untouched inputs. Yuzy separately decides any
+later push to main. The next unit must prove bounded resume without repeating
+completed slots, complete known structural provenance and test uncertainty gates.
+No final holdout solver case or push occurs here.
+
+The complete controller now locally passes 39 requests, four CPU lanes,
+soft-stop/resume and interrupted-claim recovery. Thirty completed slots reopen
+without a new solver session. The exact final queue executor passes eight
+additional known requests. Twelve checkpoint, ten statistics and three renderer
+controls pass. The campaign model covers 57,678 unique slots across 23 bounded
+groups. The structural artifact has 181 cases and 171 explicitly justified
+shallow optima; other gaps, including superflip here, stay null.
+
+`u07-final-controller-v1` is the last pre-freeze admission batch. It has four
+serial jobs, at most four GiB/four low-priority lanes, reserve, no swap and a
+fifteen-minute cap. A successful canonical result permits sealing the final
+metadata and launching fixed comparison groups. The template remains preflight
+until that separate seal. Read
+docs/verification/next-plan/U07/FINAL-CONTROLLER.md. Full evaluation, final U07
+acceptance, numerical report delivery and automation deletion remain unfinished.
+
+`u07-resource-scope-v1` passes canonical verification with 8,853 seals and twelve
+receipts, worker gone and no resource stop. All 49 requests across nine distinct
+actor scopes pass. Whole-cgroup CPU includes exited descendants. Charged job
+lifetime peak, sampled RSS and idle PSS remain separately labeled. All nine
+readiness PSS snapshots are available in this calibration, not promised on every
+future run. Twelve snapshot and eight window negatives pass. No comparative
+speed or physical-memory ranking follows from these observations.
+
+Before final protocol/admission work, the October 24 order remains binding.
+Finish the roadmap and additional solver setup, freeze configurations before
+untouched evaluation, then deliver the full numerical report before automation
+deletion. Yuzy separately decides any push to main. The next unit encodes the
+complete population, sample IDs, clock/resource contracts, duplicate cohorts,
+deadline eligibility, failures and source-bound measured admission. No holdout
+input is evaluated or tuned on. The final comparison/report remain incomplete.
+
+The proposed protocol checks all 57,678 planned slot identities using only case
+IDs. It covers full release quality, five alternating duplicate timing cohorts,
+longer budgets and structured oracle cases. Eight protocol, seven slot,
+nineteen record and eleven freeze-admission negatives pass locally. Actual
+source-bound admission passes 40 known-case requests across ten configurations.
+The post-run checker refactor reproduces all 70 earlier clock analyses without
+rerunning those solver jobs. Both older fixture/calibration-only public guards
+remain closed to measured records.
+
+The fixed `u07-final-admission-v1` queue verifies the record domain, not the final
+evaluation. It has an eight-minute cap with serial CPU2 jobs, at most four GiB,
+nice 10, reserve and no swap. The complete controller, checkpointing, structural
+artifact, statistics gates and actual final configuration freeze remain pending.
+Read docs/verification/next-plan/U07/FINAL-ADMISSION.md. No holdout case is opened,
+and no comparative numerical result or overall completion is claimed.
+
+`u07-clock-adapters-v1` passes canonical verification with 8,819 seals and
+three receipts, worker gone and no resource stop. All 68 ordinary requests and
+two short cold controls pass across nine configurations. All 70 observation
+analyses, sixteen lifecycle controls, 24 model negatives and eight sandbox
+refusals pass. Fourteen normal sessions and both censored cold sessions clean
+up. The unchanged sixteen-gate proof evidence is source-bound reused, not
+claimed fresh. No measured solver ranking or formal optimality follows.
+
+The October 24 completion/report/no-push order is recorded before the resource
+accounting unit. Finish the full roadmap, additional solver setup and single
+coordinated frozen comparison; deliver its numerical report before automation
+deletion. Yuzy separately decides any later push to main. Whole-scope CPU and
+memory accounting, frozen measured admission, final protocol, untouched cases
+and report remain unfinished. The next unit uses read-only kernel counters and
+isolated actor jobs, with no global changes or holdout evaluation.
+
+The resource decoder locally passes twelve malformed-snapshot and eight
+window-negative controls. A real two-process allocation/CPU fixture passes
+after supporting the kernel's dotted counter name. The instrumented delivered
+Rubend passes six requests, including exact mode. The fixed
+`u07-resource-scope-v1` queue uses twelve serial jobs, at most four GiB on CPU2,
+nice 10, reserve, no swap and a twenty-minute queue cap. Nine distinct actor
+scopes cover 49 existing known/pilot/recovery requests. CPU includes the driver
+and descendants; charged lifetime peak, sampled RSS and idle PSS remain distinct.
+No comparative ranking is inferred from calibration. Read
+docs/verification/next-plan/U07/RESOURCE-SCOPES.md.
+
+`u07-native-adapters-v1` passes canonical verification with 8,754 seals and
+three receipts. The worker is gone and no resource stop occurred. All 147 Nissy
+convention cases and 36 native request/recovery rows pass, including four
+timeouts. Every complete answer replays through Bend and integer geometry.
+The retained parents recover after deadlines. Muodov's solved answer remains
+13 HTM. Native request CPU and single-child RSS are not whole-solver totals.
+Read docs/verification/next-plan/U07/NATIVE-REQUEST-ADAPTERS.md.
+
+The common comparison adapter locally passes 68 known requests across nine
+configurations, with five cold starts. Sixteen lifecycle controls, 24 observation
+negatives and eight sandbox refusals pass. An early-cancellation timer-rounding
+bug fails before its fix. A wrong test expectation that every valid fast answer
+must include optimality is corrected without changing the solver or inventing
+proof. The fixed `u07-clock-adapters-v1` queue verifies the final adapter sources
+and archives raw evidence. Its serial CPU2 jobs use at most four GiB, nice 10,
+desktop reserve, no swap and an eight-minute queue cap. Read
+docs/verification/next-plan/U07/PARENT-CLOCK-ADAPTERS.md.
+
+The October 24 order remains binding. Finish roadmap verification/dispositions,
+additional-solver setup, one coordinated frozen U07 comparison and its numerical
+report. Deliver the report and numbers before deleting the existing automation.
+Yuzy separately decides any later push to main. Resource accounting, final
+measured-record admission, configuration freeze, untouched evaluation and report
+remain open. No holdout input is evaluated, no push or merge occurs, and no
+independent review is claimed.
+
+`u07-competitor-calibration-v1` passes canonical verification with8,622 seals
+and six receipts, no stop and the worker gone. All21 shallow calibration rows
+replay in Bend and independent geometry. Both vcube tables are generated and
+sealed at20,336,640 and325,386,240 bytes. All147 native convention checks and
+actual namespace/cgroup checks pass. Muodov's valid13-HTM solved-input answer is
+retained. No final holdout case or scored comparison runs.
+
+Next is `u07-native-adapters-v1`. Preflight comparison-only retained-table
+native services so exact deadlines do not force table reloads into warm-search
+measurements. Eight actual process controls pass locally, including timeout,
+partial output, orphan cleanup and recovery; eleven protocol negatives pass.
+Build thin Muodov/vcube/Nissy library services against unchanged pinned sources,
+reuse every cache, check Nissy input conventions against its native API and
+replay known requests. The14-minute queue has at most four GiB/four low-priority
+lanes, reserve and no swap. Actual service checks, final measurement model,
+configuration freeze, single untouched evaluation and numerical report remain.
+The October24 outcome/report/no-push order is unchanged. Read
+docs/verification/next-plan/U07/NATIVE-REQUEST-ADAPTERS.md.
+
+`u07-competitor-build-v1` passes canonical verification with 8,486 seals and
+four receipts, no stop and the worker gone. Muodov C and vcube are built at the
+pinned revisions/configurations. Twelve supplied C caches total 4,368,335 bytes
+and match the compiled ABI. Vcube exposes104/108 without changing its default.
+Original sources, copies, hashes and licenses are preserved. No solver case
+or vcube table generation runs in that build.
+
+Next is `u07-competitor-calibration-v1`, a fixed28-minute setup batch. Verify
+actual private IPC/network/PID namespaces and native move/Reid agreement on
+147 deterministic legal states. Generate the20,336,640-byte vcube104 table in
+isolation, then independently replay the seven declared shallow cases for both
+solvers. Generate325,386,240-byte108 only if the frozen small-table setup estimate
+admits it; otherwise retain all seven not-run rows. At most two GiB/four low-
+priority lanes, reserve and no swap. Keep exact/first-answer contracts distinct.
+This is setup, not scored timing. The October24 completion/report/no-push order
+is unchanged. Final configuration freeze, untouched U07 comparison, numerical
+report and automation completion remain. Read
+docs/verification/next-plan/U07/COMPETITOR-CALIBRATION.md.
+
+`u07-competitor-sources-v1` passes canonical verification with 8,373 seals and
+two receipts, no stop and the worker gone. Muodov Kociemba C and vcube are
+locally acquired at exact pinned commits. All 93 files match Git blobs and
+SHA256 hashes, and both checkouts are clean. Licenses and raw commands remain
+preserved. No upstream code or solver/table generation has run.
+
+Next is `u07-competitor-build-v1`. Build the unchanged Muodov C CLI and a separate
+vcube CLI enabling upstream104/108 declarations with their existing bases and
+a dated notice. Retain original checkouts. Reuse the twelve provided C cache
+files, checking every compiled ABI size and hash, with read-only runtime copies.
+Check vcube help only, not table generation or solving. Use pinned Clang21.1.8,
+fixed flags and four serial resource jobs under a sixteen-minute cap, at most
+four GiB/four nice10 lanes with reserve and no swap. Upstream CppUTest is not
+claimed run. Later vcube execution needs isolated IPC and generation admission.
+Calibration, configuration freeze, final U07 comparison and numerical report
+remain. The October24 report-before-automation-end/no-push order is unchanged.
+Read docs/verification/next-plan/U07/COMPETITOR-BUILDS.md.
+
+`u07-installed-gui-v1` passes canonical verification with 8,326 seals and two
+receipts, no resource stop and the worker gone. Fifteen browser observations
+and fifteen screenshots are retained. Eleven solution/state checks and 27 raw
+candidate-packet checks independently replay through integer sticker geometry.
+The four-HTM known optimum, export, playback, cancel/resubmit, invalid/solved
+input, reload/theme persistence, narrow layout and sticker editor pass. Ten
+post-live fixture lifecycles and focused controls pass. All recorded live and
+fixture namespace processes are gone. The browser was hidden and outside the
+server resource cgroup, not CPU/memory-capped. Read
+docs/verification/next-plan/U07/INSTALLED-BROWSER.md.
+
+U00 through U06 treatment dispositions, fresh source-identical full regression,
+original Nix package, real artifact export/import, installed HTTP and known-case
+browser acceptance are recorded. This is not overall roadmap completion.
+The explicit October24 order now requires additional-solver primary-source
+research and local setup as prerequisites to the single coordinated U07 final
+evaluation. Freeze all actor revisions, configurations and licenses before
+untouched solver cases. Complete and deliver the numerical report, then delete
+the existing automation. Yuzy decides separately on any later push to main.
+No push, merge, publication or final holdout solve is authorized by this handoff.
+Read docs/verification/next-plan/U07/ADDITIONAL-SOLVERS.md.
+
+`u07-delivery-http-v1` passes canonical verification with 8,248 seals and three
+receipts, worker gone and no resource stop. The unchanged real exports and
+runtime-only import pass all 67 content and metadata checks. Three installed
+sessions answer 22 known queries with 69 independently replayed candidates.
+All twelve recorded namespace process identities and PID-root IPC paths are
+gone after normal shutdown. The bounded helper-settlement fix is verified on
+the same installed package. The old failed run remains failed and preserved.
+
+Next is known-fixture hidden-browser acceptance through a distinct strict
+`local-delivered` fixture, with historical CI pins unchanged. Three local fixture
+lifecycles already pass. The live server/native tree uses one GiB, CPU2, nice10
+and ten minutes with reserve and no swap. The browser is outside that cgroup,
+not CPU/memory-capped, and remains hidden. Source-bound observations, independent
+replay and fixed post-live controls follow. The final U07 tier/release/competitor
+matrix waits for the coordinated frozen evaluation. New solver research/setup,
+final numerical report and automation completion remain. No holdout evaluation
+or push. Read docs/verification/next-plan/U07/INSTALLED-BROWSER.md.
+
+`u07-delivery-v1` fails its immediate helper-cleanup check after export and
+import pass. All 8,176 seals and three receipts are preserved, with no resource
+stop and the worker gone. The first installed session passes twenty known
+queries and independently replays 59 query candidates before the shutdown
+assertion. The application and native are already gone. Later inspection finds
+every recorded identity gone. Read docs/issues/installed-http-descendant-close.md.
+
+An actual installed shutdown probe reproduces a short-lived reparented helper
+after the outer child's close event. The driver now observes bounded settlement
+without extra signals. A real-process regression fails before and passes after
+the fix, while a persistent owner still remains incomplete. The distinct
+`u07-delivery-http-v1` queue reuses the exact passed exports and runtime-only
+import, verifies their bytes and all runtime contents, then runs three fresh
+HTTP sessions. Its cap is eight minutes, one-GiB jobs on CPU2, nice10, no swap
+and desktop reserve. Same-package integration is pending. Hidden browser lanes,
+additional solvers, freeze, comparison and final report remain. No final holdout
+evaluation, overall completion, publication or push.
+
+`u07-package-build-v1` verifies 8,141 seals and three receipts, worker gone and
+no stop. The original frozen c7d74d6 Nix package builds with its check phase
+enabled. Installed manifest/native/module checks and all five notice/license
+file identities pass. The application graph matches current source and the
+fresh regression. The build uses 75,744 ms and peaks at 3,139,588 KiB sampled
+tree RSS under four GiB. These are planning observations, not a speed claim.
+Read docs/verification/next-plan/U07/LOCAL-PACKAGE-BUILD.md.
+
+Next is `u07-delivery-v1`. Export the actual 67-path runtime closure twice,
+verify identical streams, import into a new runtime-only private store and
+exercise the real installed entrypoint in three empty namespaces. Check source
+assets, independent answer replay, request guards, cancel/resubmit and process
+cleanup. Keep raw/compressed byte caps, one-GiB jobs on CPU2, nice 10, reserve,
+no swap and a twelve-minute queue cap. Hidden real-browser acceptance, additional
+competitors, final freeze/evaluation and numerical report still remain. No
+holdout evaluation or push. Read docs/verification/next-plan/U07/LOCAL-DELIVERY.md.
+
+`u07-package-preflight-v1` verifies 8,117 seals and three receipts, worker gone
+and no resource stop. All 2,133 copied paths pass content and metadata checks.
+The real sandboxed builder shares its parent's cgroup, CPU2 and nice 10, with
+an independently read 512-MiB limit and zero swap. The private local-store
+mechanism is verified. It is not a built product or installed acceptance.
+Read docs/verification/next-plan/U07/PRIVATE-PACKAGE-PREFLIGHT.md.
+
+Next is `u07-package-build-v1`. Reuse the checked private store and freeze the
+original c7d74d6 package derivation whose application graph still matches current
+source and fresh regression. The read-only plan permits only the fixed-output
+npm cache and original package as local builds. Twenty small binary substitutes
+have 15,012,592 unpacked NAR bytes. Require their signatures and identities before
+the 4-GiB, four-lane, twenty-minute actual build. No remote builders, global
+settings or disabled sandbox. Keep the twenty-five-minute batch cap, desktop
+reserve and no swap. Package export/import, installed/hidden live checks,
+additional competitors, freeze, final comparison and numerical report still
+remain. No holdout evaluation or push. Read
+docs/verification/next-plan/U07/LOCAL-PACKAGE-BUILD.md.
+
+`u07-regression-v1` verifies 8,068 seals and four receipts, worker gone and no
+resource stop. The isolated checkout freshly passes all 97 top-level regression
+commands and sixteen toolchain/proof checks, with the original 23 laws unchanged.
+All 163 shallow optimum cases and 34 engine requests pass. Original builds,
+caches and dependencies are unchanged, with no remaining snapshot-cwd processes.
+These are verification results, not a speed or full optimized-proof claim.
+Read docs/verification/next-plan/U07/FINAL-REGRESSION.md.
+
+Next is `u07-package-preflight-v1`, a private local-store admission and tiny real
+sandboxed build before the full Nix package. Four required outputs are missing,
+three npm hooks and the pinned npm dependency cache. Keep them open, not
+mistaken for realized outputs. Copy only admitted cached inputs, check their
+contents and verify actual builder cgroup/affinity under the ordinary limits.
+No global settings or host-daemon build. The full product build, license audit,
+installed/hidden-browser acceptance, additional competitors, configuration
+freeze, final evaluation and report remain unfinished. No holdout evaluation
+or push. Read docs/verification/next-plan/U07/PRIVATE-PACKAGE-PREFLIGHT.md.
+
+Its first planner invocation stops before creating a plan or worker because
+`realpath` loses the `nix-store` multicall identity. The corrected boundary
+preserves the command alias while sealing the actual executable bytes. The
+focused actual query fails before and passes after, with the wrong-identity
+mutation still rejected. No private-store copy or package build has run yet.
+Read docs/issues/nix-multicall-cli-dispatch.md.
+
+`u02-forward-cost-v3` verifies 4,219 seals and three receipts, worker gone and
+no resource stop. All twenty owners clean up and all 20,480 requests complete
+the declared threshold on eight roots. Median warm native CPU per 1,024 requests
+is 20,265 ms for control and 15,650 ms for the private candidate. One control
+duplicate varies by 5.091448%, above the frozen 5% limit. The verdict is
+inconclusive, not an accepted speedup. Keep the candidate private and do not
+rerun unchanged for luck. Concrete target/data/traversal proofs stay open.
+Read docs/verification/next-plan/U02/FORWARD-COST-RESULT.md.
+
+U00 through U06 now have recorded treatment dispositions, not universal proof
+or performance acceptance. U07 still needs fresh final-source regression and
+delivery checks, then the coordinated additional-solver research/setup, frozen
+evaluation and numerical report. The next bounded unit isolates the full
+regression checkout so fresh builds cannot overwrite earlier sealed artifacts.
+No final holdout evaluation, competitor setup, push or overall completion yet.
+
+The next fixed queue is `u07-regression-v1`. Its fresh fixture checkout copies
+all tracked source and dependencies, then runs the unchanged 97-command
+`just test` and fresh sixteen-check `just check`. The latter checks the original
+23 laws through both proof entrypoints and rejects the existing false fixtures.
+Earlier approved-addition and table-audit evidence is reused by source identity.
+Preparation/confirmation use 512 MiB, regression uses 4 GiB and twenty minutes,
+proof uses 3 GiB and three minutes. Serial jobs stay inside twenty-seven minutes,
+with up to four nice-10 lanes, desktop reserve and no swap. Installed Nix
+delivery, hidden live checks, competitor setup/freeze/evaluation/report stay open.
+Read docs/verification/next-plan/U07/FINAL-REGRESSION.md.
+
+`u02-forward-cost-v2` passes canonical verification with 4,169 seals and five
+receipts, no stop and worker gone. Both shorter profiles complete, and all four
+sizing/profile native identities and IPC paths are directly gone. The diagnostic
+issue is resolved. The old scored workload fails its time-admission projection,
+so zero scored samples or measured requests run. This is unmeasured, not a
+benchmark pass. All 641/550 flat-profile entries and hot C source excerpts are
+reviewed. Packed reads and nibble decoding dominate sampled native work;
+instrumented timings are not release speed or hardware memory-stall evidence.
+
+The distinct next plan `u02-forward-cost-v3` freezes 128 repetitions and 1,024
+requests per sample before any scoring. Reuse exact successful v2 sizing and
+profiles and the unchanged twelve-file calibration closure. Five alternating
+duplicate cohorts total twenty owners and 20,480 requests on eight roots.
+Existing deadlines and one-second/five-percent/ten-percent gates do not change.
+The fixed batch uses at most 3 GiB, nice 10 and CPU2 under a twenty-minute queue
+cap. No solver, law, table, production default, competitor, holdout or push
+changes. Cost results, candidate disposition and the full workflow remain open.
+Read docs/verification/next-plan/U02/FORWARD-COST.md.
+
+The first `u02-forward-cost-v1` diagnostic profile times out after 4,000 of
+4,096 requests, before any scored batch. Calibration and both profile builds
+pass. All 4,107 seals, two receipts, source and partial data are preserved before
+edits; the worker and recorded native identity are gone. The outer resource
+guard did not stop it. No performance verdict exists. The failed IPC record has
+only a cleanup flag, not a path for later direct recheck; retain that limit.
+
+The next fixed batch is `u02-forward-cost-v2`. Reuse calibration by its complete
+unchanged import closure, model controls and exact release/profile binaries.
+Reduce only non-scored profiles to 128 repeats. The regression fails with
+`512 !== 128` before correction and now passes. Scored 512-repeat batches and
+all acceptance gates remain unchanged. Two unscored sizing probes first check
+the fixed scored workload's time and counter-resolution admission. If it fails,
+scoring is explicitly unmeasured, not a passed benchmark. New reports record IPC
+paths and directly check cleanup. The queue remains capped at 27 minutes and
+3 GiB, nice 10 and CPU2 for native work. No new Bend, compiler work, production
+change, table, competitor, holdout or push. Read
+docs/verification/next-plan/U02/FORWARD-COST.md.
+
+`u02-forward-native-v1` passes canonical verification with 4,073 seals and three
+receipts, no stop and worker gone. All 8,056 requests are accounted for. Each
+active side returns all 3,758 shallow optima, and 524 protected RawJoint rows
+agree exactly. Every one of the 8,040 emitted answers independently replays.
+All sixteen deeper runs remain fuel-censored with no answer, lower bound
+fourteen and running status at 200,000 calls. They are not exact solves.
+All four native owners terminate normally by SIGTERM and remove their IPC.
+Fresh candidate verdict, owned-array C checks and `just check` pass. Production
+is unchanged. Next freeze an equal-contour cost comparison at threshold fourteen
+with separate initialization, native CPU accounting, alternating controls and
+profiling outside the scored runs. No accepted speedup, concrete full target/data
+proof, holdout, competitor setup or push. Read
+docs/verification/next-plan/U02/FORWARD-NATIVE.md.
+
+The October 26 roadmap reconciliation is in
+docs/verification/next-plan/ROADMAP-RECONCILIATION.md. U01's actual clipboard and
+physical-download gap is closed in signed local checkpoint `7dfc405`.
+`u02-inference-information-v1` passes canonical verification with 3,988 seals,
+two receipts, no resource stop and worker gone. All 52,584 actual saved entries
+and 61,440 classifier triples pass. Forward masks cover all moves at 13,213
+entries, inverse masks at 14,326; these overlap. Partial first masks hypothetically
+exclude 473,974 of 702,165 predecessor-permitted moves. The complete-mask static
+interval union is 420,710 steps, not measured saved work or CPU. No pruning is
+enabled. This signal warrants an isolated forward-only native treatment, with
+inverse masking and concrete target/data proof gaps kept separate. No new table,
+competitor or final holdout was used. The whole roadmap/report remain incomplete.
+Read docs/verification/next-plan/U02/INFERENCE-INFORMATION.md.
+
+Yuzy's October 25 broad approval removes the NP04–NP08 and necessary local
+generation/audit authority gates. The existing `continue-rubend-roadmap`
+automation is active again, with the grant in its prompt and the same schedule
+and target. Do not ask again for those approvals. Resource limits, source seals,
+resumable admission and truthful proof/data boundaries remain. Continue the
+approved U03/U05 units. The roadmap and final comparative report are not
+complete. The holdout is unopened and nothing is pushed. Read
+docs/verification/next-plan/OCT25-AUTHORITY.md.
+
+The `u03-six-cycle-v1` archive verifies 3,577 seals and four receipts, worker
+gone and no stop. Pattern one completes all 42,577,920 entries at terminal
+depth ten in eight accepted continuations. Pattern zero passes all 766,402,560
+independent reference-graph edges, distance domains, unique goal and decreasing
+successors. All codec endpoint and zero-orientation transition reflections pass.
+Pattern-one native CPU is 928.44 s from depth three, not a fresh seed.
+The first audit consumes 215.50 s whole-command CPU and 59.93 s wall in one
+planning run. No solver-speed or scaling claim. Pattern-one graph audit,
+NP05 and concrete projection/refinement remain. Pruning stays disabled.
+Read docs/verification/next-plan/U03/INDEPENDENT-SIX-AUDIT.md.
+
+The `u03-np05-path-v1` archive verifies 3,632 seals and three receipts, worker
+gone and no stop. Pattern one now passes its full 42,577,920-state,
+766,402,560-edge independent audit and the stated actual JavaScript codec
+reflections. Both complete reference graphs are audited. The finite-path
+kernel passes both proof entrypoints; all fourteen altered entrypoints reject.
+All 1,093 maximum pairs, 12,529 bounded comparisons and eighteen actual
+one-move Unit-quotient instances pass. Second-audit command CPU is 265.91 s
+and wall 75.76 s in one planning run, not a solver-speed comparison.
+NP05 remains partial pending global concrete commutation and codec/storage
+refinements. Screen the real six-edge marginal information next, without
+pruning or repeating completed builds/audits. The holdout is untouched.
+Read docs/verification/next-plan/U03/NP05-PROJECTION-PATH.md.
+
+The `u03-six-conditional-v1` archive verifies 3,682 seals and two receipts,
+worker gone and no stop. All 318,024 projection comparisons, 212,016 prefix
+comparisons, twelve malformed-record controls and old policy/radius totals
+pass. All 53,004 joined rows are retained. The raw inverse-three population
+gets only two extra candidate cuts among 52,584 entries, one per pattern.
+Both have nineteen-step completed intervals, a static union of 38 steps.
+The structured small-Light population gets no extra cuts. There is no measured
+CPU benefit or performance acceptance. Retain the existing profile and keep
+six-edge pruning and compression unpromoted. Both full tables and their audits
+remain preserved; unselected production refinement gaps stay explicit.
+Continue approved U05 safety work. No holdout, competitor setup or push.
+Read docs/verification/next-plan/U03/SIX-EDGE-CONDITIONAL.md.
+
+The `u05-safety-v2` archive verifies 3,757 seals and three receipts, worker
+gone and no stop. Both proof entrypoints and all twenty-four rejected source
+variants pass. All 4,225 radius pairs, 4,225 index pairs, 1,494 actual reference
+move cases, 4,482 packets and 2,988 independent replays pass, checksum
+2,661,727,883. NP06 exact-key/radius and NP07 conditional coverage/exclusion
+are checked; NP08 uses the actual typed inverse-snoc/composition identity and
+reconstruction. Four unchanged runtime units and root87 are reused.
+No optimized exhaustion/coverage witness, cache, new dual state, global label
+or performance promotion is manufactured. Keep the cache unselected and measure
+bounded one/two-worker scaling separately. No holdout or push.
+Read docs/verification/next-plan/U05/EXACT-WORK-SAFETY.md.
+
+The `u05-scaling-v1` preparation failed with a confirmed kernel cgroup OOM at
+512 MiB. All 3,802 seals, the actual resource receipt/journal and dead worker
+identity are preserved before edits. No native owner, diagnostic or measured
+run began. The cause is whole-buffer hashing of the 1,108,546,560-byte cache.
+The controller and queue source verifier now use a fixed 256-KiB hash buffer.
+The old helper reproduces SIGKILL; the new one passes on the same cache at
+68,536 KiB maximum process RSS under the unchanged cap. Boundary, descriptor
+and bad-large-seal refusal checks pass. No performance statistic exists yet.
+Read docs/issues/partition-scaling-input-oom.md.
+
+The `u05-scaling-v2` archive verifies 3,825 seals and four receipts, worker
+gone and no resource stop. Preparation passes at 215,464 KiB tree RSS under
+the unchanged 512-MiB cap. All twenty measured batches reproduce 22,480
+partition results and one hundred candidate answers replay; ten diagnostic
+answers also replay. One-owner makespan median is 2,082.704 ms, range
+2,057.787 to 2,114.128. Two-owner median is 2,219.649 ms, range 2,188.923 to
+2,406.964. One duplicate pair differs by 8.23%, exceeding the frozen 5% gate.
+The verdict is inconclusive, with no accepted scaling benefit or quantified
+slowdown. Diagnostics identify dominant private initialization. Retain serial
+execution, preserve the failed attempt and do not rerun unchanged for luck.
+No whole-solver speed, production promotion, holdout use or push.
+Read docs/verification/next-plan/U05/PARTITION-SCALING.md.
+
+The completed queue `u01-file-acceptance-v2` closes the clipboard/download
+acceptance gap. Its source-sealed live app run passes genuine document-policy
+clipboard denial with the original write binding
+unchanged. The actual 397-byte browser-created download matches the displayed
+record exactly and independently replays to solved. A pre-existing download was
+restored unchanged; the server/native/IPC clean up normally. Production and its
+accepted app/native build are unchanged. All seven fixture lifecycle modes,
+read-only observation and file-event controls pass. The canonical checker verifies
+3,947 seals, both resource receipts, no resource stops and the absent worker.
+The capability prototype preserves its later resource timeout and its observed
+real files. The first filled live context's replaced clipboard binding is also
+preserved as a failure. The successful context uses face-turn controls only.
+No in-memory Blob or missing-event shortcut supplies a downloaded-file witness.
+The final holdout, competitor research, performance promotion and push remain
+untouched. Read docs/verification/next-plan/U01/FILE-BACKED-ACCEPTANCE.md.
+
+The completed queue `u05-scaling-v2` compares one and two unchanged native
+partition owners on the same 1,124 jobs. Two diagnostic readiness/RSS profiles
+are excluded from the five alternating ABBA/BAAB timing cohorts, twenty measured
+runs. Fresh-process initialization stays inside the primary launch-to-last-close
+wall interval. Whole-command CPU, largest-child RSS, sampled direct-owner RSS
+and the outer aggregate limit have separate scopes. Every result must match;
+all five candidate answers per run are independently replayed. Duplicate-control
+noise above 5% forces an inconclusive result. This is bounded-batch scaling,
+not an engine or whole-solver speedup. The existing profile stays unchanged.
+The eight-minute fixed queue uses five GiB aggregate on CPU2/3 only with full
+desktop reserve. No native rebuild, table generation, holdout or publishing.
+Read docs/verification/next-plan/U05/PARTITION-SCALING.md.
+
+The completed queue `u05-safety-v2` checks the new NP06 exact-context/radius, NP07
+coverage/exhaustion and NP08 typed left-inverse/reconstruction statements pass
+their development BendTT verdict. The guard requires twenty-four rejected
+false-proof entrypoints, 8,450 radius/index cases, 1,494 actual reference move
+cases and independent replay, including a wrong-right-action counterexample.
+Four unchanged interior/partition runtime evidence sets and the root87 gate
+are reused by exact source/artifact identities. No runtime cache, new dual
+state, global completion label, native build or performance claim is enabled.
+Proof and runtime witness/refinement boundaries remain separate. The fixed
+queue is capped at eight minutes. The final holdout and publication are untouched.
+Read docs/verification/next-plan/U05/EXACT-WORK-SAFETY.md.
+
+The completed queue `u03-six-conditional-v1` screens all 53,004 unchanged
+saved FullCube contexts using both complete audited six-edge tables. Six nested
+projections per entry must match the actual Bend projector and independent
+ranking; all earlier three/four totals and radius strata must reconcile.
+Every joined query is retained. Raw entry/exhaustion spans are matched by full
+context, with overlapping spans unioned and unfinished entries right-censored.
+Those are static trace counts, not saved work or CPU. Twelve model corruptions
+and overlap/censoring/range/equality controls pass development checks.
+The five-minute fixed queue does not rerun search, generation or graph audits,
+enable pruning, instantiate the remaining production proofs or open the holdout.
+Read docs/verification/next-plan/U03/SIX-EDGE-CONDITIONAL.md.
+
+The completed queue `u03-np05-path-v1` checks the finite-path projection kernel.
+It carries each commutation instance
+as one structural certificate node, preserving actual legal replay roots,
+projected endpoints and exact HTM length. The first affine-callback draft was
+rejected and its source is preserved. The fixed queue checks fourteen actual
+false-proof entrypoints and finite maximum/one-move examples, then audits only
+pattern one using the unchanged validator. First-audit, complete builds and
+root87 evidence are reused. The global six-edge projection, codec and storage
+refinements remain open. No pruning, performance or completion claim.
+Read docs/verification/next-plan/U03/NP05-PROJECTION-PATH.md.
+
+The completed queue `u03-six-cycle-v1` reuses the tested native binary to
+continue pattern one, then independently audits the complete pattern-zero
+distance graph. The auditor passes development controls on the fully audited
+four-edge table and detects both actual edge/successor source faults. Four
+fixed local processes cover all 42,577,920 states and 766,402,560 directed edges,
+with separate actual Bend codec/transition reflection and serial histogram
+checks. Pattern-one build cap twenty-two minutes, first audit cap four minutes,
+whole queue thirty minutes. Raw evidence and cleanup are mandatory. No pruning,
+NP05, formal app certification, final holdout or solver-speed claim is inferred.
+Read docs/verification/next-plan/U03/INDEPENDENT-SIX-AUDIT.md.
+
+The `u03-six-build-p0-v1` archive verifies 3,529 seals and three receipts,
+worker gone and no stop. Eight accepted native continuations reach and expand
+all 42,577,920 entries at terminal depth ten. Every input/output word satisfies
+monotonicity, goal/range and actual-counter checks. Final payload SHA is
+87f57eb05d6e1ec226212d523a4ba63f5fdb63e6de133602537daa566a8ac492.
+Native CPU is 954.60 s from the already built depth-three checkpoint, not from
+a fresh seed. Max native RSS is 271,412 KiB; outer job takes 976.371 s with
+421,152 KiB tree peak. Eight ignored payloads total 1,362,493,440 bytes.
+The table is built-unverified, not eligible for pruning. Pattern one, independent
+full graph audits and NP05/refinement remain. No solver speed or optimality
+claim follows. Read
+docs/verification/next-plan/U03/SIX-EDGE-BUILD.md.
+
+The `u03-six-checkpoint-v1` archive verifies 3,467 seals and four receipts,
+worker gone and no stop. All eight full-capacity checkpoints, six restarts,
+one repeat, fifteen native/counter controls and twelve header controls pass.
+The independent depth-three oracle reaches 3,052 states per pattern; every
+payload word agrees, totaling 383,201,280 comparisons with the repeat.
+The actual counter-admission fault is detected. All twelve raw files remain,
+totaling 1,873,428,483 bytes. Twenty-four native commands use 44.16 s CPU
+including controls, with 271,412 KiB max native RSS. Outer tree peak is
+758,092 KiB. No full-generation ETA, full graph audit, NP05 or pruning claim.
+Continue the pinned depth-three checkpoints under bounded engineering admission.
+Read
+docs/verification/next-plan/U03/SIX-EDGE-CHECKPOINT.md.
+
+The `u03-np04-v2` archive verifies 3,379 seals and three receipts, worker gone
+and no stop. Both positive proof entrypoints, twelve false-proof entrypoints
+and native compilation are source-identically reused. All 193,545 fresh scalar
+checks and 71 list lookups pass; native/host checksum is 256,391,068. The real
+artifact-collision regression passes, old failure remains preserved, and
+metadata is unchanged. The proof translation and mutation sources are bundled.
+This checks quantified Nat scalar/block/index and overflow semantics, with
+finite U32 reflection. Universal symbolic U32/bit-storage and loaded-data proofs
+remain separate. No production pruning, performance or holdout change. Read
+docs/verification/next-plan/U03/NP04-CONSERVATIVE.md. Older authority statuses
+below are historical; the October 25 grant above is current.
+
+The `u00-native-cpu-v2` archive verifies 3,290 seals and three receipts,
+worker gone and no stop. All eighty requests and independent candidate replays,
+forty measured warm windows, ten record mutations and every shallow optimum
+pass. Clock-on/off and repeated-order search states agree. Initialization CPU
+has median 218.041 ms over five observations. All warm requests are below the
+100-ms timing floor, so performance remains unresolved. Max native RSS is
+44,028 KiB; host-inclusive observation tree peak is 254,572 KiB.
+The original one-slice failure remains preserved and reproducibly rejected.
+Binary, pure-helper proof and root87 evidence are reused, not rerun. The raw
+confirmation's incorrect fresh-proof flag has a checked archived erratum;
+the producer now derives that flag. No engine, public protocol, first-answer
+CPU, peer or holdout change. Read
+docs/verification/next-plan/U00/NATIVE-CPU-WINDOWS.md.
+
+The `u00-process-cpu-v1` archive verifies 3,237 seals and three receipts,
+worker gone and no resource stop. All fifteen windows, twenty commands, five
+actual clock/backend controls and fourteen model controls pass. Five consumed
+work checksums agree. Work-window CPU has median 55.164 ms, range 54.978 to
+55.685 ms. The 200-ms sleeps consume 0.092 to 0.640 ms CPU. Sampling-loop
+means range from 480 to 744 ns, so no constant observer correction is justified.
+This is clock calibration, not solver speed or raw syscall cost. The runtime-only
+effect stays outside the pure proof graph. Root87 evidence is reused unchanged.
+Solver instrumentation, production, search, peer setup and holdout are untouched.
+Read docs/verification/next-plan/U00/PROCESS-CPU-CLOCK.md.
+
+The `u06-search-goal-v3` sealed finish verifies 3,177 seals and three receipts,
+worker gone and no resource stop. All eight input-omission controls, 8,365 fresh
+JS profile checks, 3,661 reference-goal checks and both 1,195-case native executions
+pass. Both native checksums are 704,264,323. The seven actual profile verdicts
+and sixteen false-proof entrypoints are reused from verified v2 evidence.
+The actual positive Search.solved predicate now yields packed identity, facelet
+solved equality and a real zero-radius empty-word reference witness. Fifty-two
+padding examples refute a raw-word converse. Earlier stopped and provisional
+evidence remains preserved, not relabeled. This is not optimized completeness,
+input reachability, loaded-data proof, production integration or a stronger label.
+NP04–NP07 and large build authority remain open. Read
+docs/verification/next-plan/U06/SEARCH-GOAL-REFLECTION.md.
+
+The `u03-storage-capacity-v1` archive verifies 3,026 seals and three receipts,
+worker gone and no resource stop. All 4,102 arithmetic cases, five stream sizes,
+five corruptions and both full 42,577,920-word payload checks pass. The synthetic
+writer and rewriter consume 1.00 and 1.53 s CPU respectively in one planning run.
+Maximum native RSS is 269,324 KiB. The outer host-inclusive job peaks at
+443,160 KiB tree RSS. Raw counters are archived, and both synthetic files remain
+under build, totaling 340,623,360 bytes. These words are invalid distances.
+No BFS or search executes. Pure pattern and unboxed owned-array checks pass;
+unchanged root87 evidence is reused. No full-BFS RSS, build/audit ETA, new law,
+database-build admission, production, holdout or speedup claim. Read
+docs/verification/next-plan/U03/STORAGE-CAPACITY.md.
+
+The `u03-build-admission-v1` archive verifies 3,013 seals and two receipts,
+worker gone and no resource stop. All six cardinalities, emitted unboxed U32
+storage checks and eight source/record controls pass. Six-edge geometry requires
+67,108,864 capacity cells and a 170,311,680-byte raw checkpoint in 650 chunks.
+These are static counts, not an RSS estimate or allocation. The current native
+checkpoint still admits four edges only. Full build, generation and audit costs,
+proof approval and large-run authority remain open. Existing helper and checkpoint
+evidence is reused, not extrapolated or rerun. Read
+docs/verification/next-plan/U03/BUILD-ADMISSION.md.
+
+The `u03-binary-checkpoint-v1` archive verifies 2,951 seals and three receipts,
+worker gone and no resource stop. All eighteen fresh layer restarts, two repeats,
+two crashes, thirteen native controls and eighteen manifest controls pass.
+Every intermediate cell and both complete four-edge tables match the audited
+distances. The pure helper passes BendTT. Thirty-seven raw CPU measurements and
+eighteen manifests are durably archived. The main 24-command workflow uses
+5.79 s CPU in one planning run, including seeds, repeats and failures.
+Native-command max RSS is 10,292 KiB; outer host-inclusive tree peak is 231,116 KiB.
+Accepted history payloads total 16,727,040 bytes, separately from control files.
+No full six-edge costs, generation ETA, new law, pruning, production or holdout.
+Read
+docs/verification/next-plan/U03/BINARY-CHECKPOINT.md.
+
+The `u04-product-study-v1` archive verifies 2,952 seals and six receipts,
+worker gone and no resource stop. All 168 guards and 480 fixed-work requests
+pass, with 90 and 180 independently replayed candidate events respectively.
+The quality run executes 192,000,000 Search.advance calls. All 160 pairs tie
+on final length and lower bound, with stable identical controls and repeated
+semantics. The frozen verdict is unconfirmed fixed-work benefit. Long-cost and
+profile jobs are skipped, not measured. Keep product ordering private and
+unpromoted. New wrapper verdict and owned-array checks pass; unchanged product,
+cursor and root gates are reused. No CPU, app, new pruning, law or holdout claim.
+Read docs/verification/next-plan/U04/PRODUCT-ORDER-STUDY.md.
+
+The `u04-product-order-v1` archive verifies 2,913 seals and three receipts,
+worker gone and no resource stop. All 4,800 actual child-set cases, 160 native
+scores, 80,640 map entries and 15,609 saved real queries pass. The actual
+goal-routing fault has 3,200 counterexamples. All 640 finite scores, 896 cursor
+cases, twelve fallbacks and three helper-source faults pass. Synthetic cursor
+order changes in 246 cases, without dropping a column. Changed pure definitions
+and Search pass fresh BendTT verdicts. The unchanged cursor and 87-input root
+gate are explicitly reused. Private Subgroup ordering only. Whole-search
+quality, cost and application acceptance remain open. No new pruning, law,
+distance generation, production change or holdout. Read
+docs/verification/next-plan/U04/PRODUCT-MOVE-ORDER.md.
+
+The `u06-review-video-v3` archive verifies 2,860 seals and five receipts,
+worker gone and no resource stop. Desktop, responsive fallback and worker-failure
+scenarios pass independent committed-state replay, serial frame capture and
+actual tab/viewport/native/IPC cleanup. All three H.264 clips decode correctly
+with distinct frames and expected sampled durations, totaling 599,483 bytes.
+The corrected media archive is docs/verification/next-plan/U06/review-video-v3-indexed/.
+It preserves the accepted videos byte-for-byte and selects previews by frame
+index. SSIM checks exceed 0.996 against their source images. The original
+time-seek preview mismatch and failed parallel-capture run remain preserved.
+Product and renderer are unchanged. These are sampled review clips, not cadence
+or operator approval. Clipboard/download acceptance remains open. No data,
+new proof, holdout or publishing. Read
+docs/verification/next-plan/U06/REVIEW-VIDEOS.md.
+
+The `u03-four-conditional-v1` archive verifies 2,842 seals and both receipts,
+worker gone and no resource stop. All 53,004 saved entries, 212,016 independent
+projection checks, 106,008 prefix comparisons and old-policy counts reconcile.
+Eight model controls and the max-versus-sum witness pass. Four-edge maximum
+adds no hypothetical cuts over three-edge maximum on either dataset.
+The raw set has 32 radius-seven entries eligible for an eight-step table and
+52,552 entries outside that discriminatory range. Neither pattern cuts those
+32. The structured small set remains 420/420 cuts with either maximum.
+Keep four-edge integration unpromoted. This does not reject a larger six-edge
+database. The 800-ms CPU observation is offline analysis, not native probe or
+search savings. No search/data regeneration, new law, pruning or holdout. Read
+docs/verification/next-plan/U03/FOUR-EDGE-CONDITIONAL.md.
+
+The `u00-cpu-observer-v1` archive verifies 2,821 seals and both receipts,
+worker gone and no resource stop. Direct and waited-child CPU calibration,
+failed exit seven, stdout/stderr retention, eight malformed records and
+preexisting-output refusal all pass. Observed fixture CPU is 270/450/120 ms,
+agreeing with independent Node counters within the declared quantization.
+These are calibration fixtures, not solver performance. Existing GNU Time
+identity is checked. Resource runner and root inputs are unchanged.
+Whole-command CPU remains distinct from inner/warm intervals, and its maximum
+RSS is not aggregate tree RSS. Earlier missing counters stay unavailable.
+No solver, new proof, holdout or publishing. Read
+docs/verification/next-plan/U00/CPU-OBSERVER.md.
+
+The `u03-four-edge-v1` archive verifies 2,805 seals and four receipts, worker
+gone and no resource stop. Every 190,080-state codec and 3,421,440 transitions
+pass. Both complete table audits cover 380,160 states and 6,842,880 edges,
+with diameter eight for both frozen patterns. The actual half-capacity native
+mutation refuses before seed, and all three altered-data controls reject.
+Raw 380,160-byte payloads stay ignored. One planning run took 2.984/2.839 seconds
+inside generation, excluding serialization. Generation and audit job wall/RSS
+are recorded separately. Those receipts do not contain measured CPU time.
+Their archived plan's CPU-record wording is corrected in the report, not by
+inventing missing data. No speed comparison, six-edge ETA, new law or pruning.
+Read docs/verification/next-plan/U03/FOUR-EDGE-PILOT.md.
+
+The `u03-native-checkpoint-v1` archive verifies 2,791 seals and three receipts,
+worker gone and no resource stop. All 34 native file restarts, six native
+crashes after read/close, six repeats and eleven malformed native controls
+pass. Six completed tiny tables exactly match the audited native references.
+The largest payload is 42,246 bytes within the 65,536-byte cap. Every fresh
+native owner reads the payload from disk and exits. Source/payload/result hashes
+and owned-array mode pass. Pure and 87-input root gates are explicitly reused.
+Short reads fail closed. Larger chunking, scratch/cost admission and NP04/NP05
+remain open. No large six-edge build, pruning, production change or speedup.
+Read
+docs/verification/next-plan/U03/NATIVE-CHECKPOINT.md.
+
+The `u03-checkpoint-v3` archive verifies 2,779 seals and three receipts, worker
+gone and no resource stop. All 34 fresh-process restarts, six repeated inputs,
+six real worker exits and nine corrupted-checkpoint controls pass. All six
+completed tiny tables exactly match uninterrupted Bend and the previously
+audited native references. Four native in-memory restore checksums agree.
+The changed pure adapter passes a fresh verdict. Both earlier UI-list-limit
+and Base List.length stack failures reproduce in regression checks and remain
+preserved as failed runs. Product limits, default stack and builder are unchanged.
+The 87-input root gate is source-identically reused. Native file IO and larger
+scratch/cost estimates remain open. No large build, new law, speedup or pruning.
+Read
+docs/verification/next-plan/U03/CHECKPOINT-PREFLIGHT.md.
+
+The `u06-refinement-v1` archive verifies 2,796 seals and both receipts, worker
+gone and no resource stop. All seven native entrypoints' import/type inventories
+pass, including the owned profile's continuation-failure constructor. Three
+altered-source inventories and three actual export-source mutations reject.
+All 54 actual reference queries and 36 independent packet replays pass.
+A U root at radius two returns the valid two-move answer U U2 despite its
+one-move optimum. The export/progress boundary keeps that distinction.
+Seven concrete optimized-reference implications remain open and are named
+in the report. This completes gap identification, not those missing proofs.
+Checked reference and 87-input root/toolchain evidence is explicitly reused.
+No new theorem, production change, performance result, holdout or independent review.
+Read docs/verification/next-plan/U06/REFINEMENT-GAPS.md.
+
+The `u03-low-range-v1` archive verifies 2,791 seals and three receipts, worker
+gone and no resource stop. Its 24 distinct independently optimum-three roots
+produce 420 actual fresh FullCube entries, all with remaining radius one.
+The unchanged packed-small Light control and observer agree at all 192
+checkpoints. All 564 position checks, 2,520 independent projection checks and
+5,880 conservative lookups pass. The maximum of both one-, two- and three-edge
+references would exclude 225, 409 and 420 of those recorded entries respectively.
+These are hypothetical entry cuts, not saved subtree work or CPU savings.
+The roots are deliberately structured and seeded with certified incumbents,
+not uniform inputs or a first-answer benchmark. All three collector faults,
+eight record corruptions and 17,496 filter cases pass. Candidate payloads are
+reused, and the unchanged root gate is explicitly reused across 87 exact inputs.
+No pruning, new candidate PDB, NP04–NP08 proof, speedup, holdout or publishing.
+Read
+docs/verification/next-plan/U03/LOW-RANGE-NATIVE.md.
+
+This pass requests separate approval of the exact NP04–NP07 statements in
+docs/architecture/NEXT-PROOF-STATEMENTS.md to finish the gated U03/U05 proofs.
+They cover conservative decode, six-edge projection bounds, completed-failure
+cache reuse and fully covered partition exhaustion. Keep them unimplemented
+until that specific human approval. Large builds and pushing remain separate.
+Other approved work and the existing automation continue while that is pending.
+
+The complete bounded unpruned reference is verified and archived under
+`u06-bounded-reference-v4`. Canonical verification checks 2,800 seals and its
+current resource receipt, worker gone and no new resource stop. Both proof
+checkers and sixteen false-proof entrypoints pass. The independent oracle
+checks 3,502 states and 4,716 edges. All 153 bound queries, 36 raw-center controls,
+three packet corruptions and 189 native packets agree, checksum2582377809.
+Found results carry within-radius replay evidence. Excluded results refute every
+solving word within the radius, including the empty path and all eighteen moves.
+The unchanged 23-law/toolchain gate is explicitly reused from its actual archived
+passing execution after all 87 current inputs and execution provenance match.
+Six corrupted reuse records fail. No fresh root-gate execution is claimed.
+Earlier inspector failure, unadmitted finite job and resource-stopped confirmation
+remain preserved in their original states. Read
+docs/verification/next-plan/U06/BOUNDED-REFERENCE.md. Optimized traversal and
+loaded-data refinement remain open. No stronger app label or speedup is claimed.
+The separate low-radius U03 screen now supplies relevant diagnostic support.
+Larger tables and NP04–NP08 remain gated.
+
+The `u02-packed-certificate-v2` archive verifies 2,751 seals and three receipts,
+worker gone and no resource stop. All 1,079 actual validator-output admissions
+and inverse checks, 10,240 bit refusals, 64 root mismatches, 64 failed
+certificates, 256 raw equality cases and three padding refusals pass. All five
+comparison-kernel mutations have counterexamples. The 570 native packets match
+checksum141886355. Sixteen bad-proof entrypoints and the actual primitive-Bool
+regression pass. Unchanged 23-law/toolchain gates pass. The failed initial
+run and its proof/source snapshot remain preserved. Read
+docs/verification/next-plan/U02/PACKED-CERTIFICATE.md. An admitted actual packed
+root now has checked forward and actual-inverse reference views, tied to the
+original accepted certificate. Target/data and optimized traversal bridges
+remain open. Pruning is off. No speedup, holdout or publication is claimed.
+
+The `u02-certificate-recovery-v2` archive verifies 2,691 seals and two receipts,
+worker gone and no resource stop. All 464 native cases match checksum3997635194.
+Both faulty-template controls reproduce their exact parser and kind diagnostics.
+The unchanged 23-law and toolchain gates pass. The run took about 56 seconds.
+It reuses checked proofs, twelve false-proof rejections, 6,431 word-derived
+witnesses, 55 saved answers, 488 refusals, 256 arbitrary-U32 cancellations and
+three runtime corruptions. The two earlier fixture failures stay preserved as
+failed runs, including compressed source and record snapshots.
+An actual accepted certificate now supplies an exact typed reaching word for
+its original facelet input. Read
+docs/verification/next-plan/U02/CERTIFICATE-REACHING.md. Packed-root admission,
+target/data linkage, traversal and general validator completeness remain open.
+No production pruning, performance gain or independent review is claimed.
+
+The `u02-np02-family-v1` archive verifies 2,615 seals and three receipts, worker
+gone and no resource stop. Both generic finite-family forms and the complete
+eight-stabilizer instance pass. All twelve bad-proof entrypoints, 4,225 index
+checks, 4,225 order checks, 6,431 words and 51,448 bound checks pass. Deterministic
+generation preserves the first stabilizer block. The public `R U` instance has
+a proved lower bound and independently checked solution of two moves. Existing
+23 laws and toolchain gates remain unchanged. NP01–NP03 reference formulations
+are checked, not connected to production pruning. Read
+docs/verification/next-plan/U02/NP02-FAMILY.md. Input, loaded-data, target and
+optimized traversal bridges remain open. No performance or independent-review
+claim follows.
+
+October 24 completion order. Finish the roadmap implementation and required
+verification, then research and locally set up additional 3x3 solvers and run
+the final comparative benchmark/report. Coordinate the U07 closing evaluation
+with that pass rather than duplicating or tuning on the holdout. Preserve raw
+records, revisions, licenses, fair resources, censored failures and uncertainty.
+Deliver the numerical report here, then delete the existing scheduled task.
+Yuzy will review the report and separately authorize any push to main. Earlier
+push authority does not apply. No publishing, merge, release or deployment now.
+Existing approval gates for new laws, large/costly builds and system changes
+remain unchanged. The scheduler prompt already records this order.
+
+U06 demand rendering is committed as signed `9dc6454`. Its scene-only comparison
+passes. The rebuilt app's complete 97-command test recipe is now covered by a
+source-checked 48-command prefix plus the repaired 49-command remainder.
+The recovery archive verifies 2,119 seals/two receipts, worker gone/no stop:
+docs/verification/next-plan/U06/u06-app-recovery-v1/index.json.
+
+Actual rebuilt-app acceptance passed in `u06-gui-demand-v1`. Canonical archive
+verifies 2,132 seals/four receipts, worker gone/no stop. Desktop, no-WebGL and
+model-failure workflows pass. Viewport reset, owned tabs closed and all native,
+server and IPC owners cleaned up. Review images are saved at
+docs/verification/next-plan/U06/review-demand/index.json.
+
+Retained-scene preflight passed canonical verification with 2,152 seals/two
+receipts, worker gone/no stop. All eighteen animations and 23 final pose/color
+checks pass. Candidate identities stay stable; all three actual corruptions fail
+for expected reasons. The accepted app is unchanged. Read
+docs/verification/next-plan/U06/MESH-RETENTION-PREFLIGHT.md and
+docs/verification/next-plan/U06/u06-retain-preflight-v1/index.json.
+
+Retained-scene browser comparison passed evidence verification with 2,171 seals,
+three receipts and fifteen partial records. Pose/color/identity/recovery and
+zero-idle checks pass, but cadence acceptance is inconclusive. Three of five A/A
+cohorts exceed the noise floor, up to16.37percent; candidate cadence also misses
+some floors. Keep retention private/unpromoted. Do not rerun unchanged cohorts
+for luck. Accepted app unchanged. Read
+docs/verification/next-plan/U06/MESH-RETENTION-COMPARISON.md and
+docs/verification/next-plan/U06/u06-render-retain-v1/index.json.
+
+The private phase-two projection passed `u04-phase2-v1`. Canonical verification
+checks 2,196 seals/three receipts, worker gone/no resource stop. All 40,320 corner
+codecs, 403,200 class actions, 2,240 decodes and 5,120 sampled child projections
+pass. All three actual corruptions have counterexamples. The pure module,
+native/JavaScript checksum parity and unchanged laws pass. The actual Goal guard
+admits restricted Subgroup finishing only. No distance table, pruning or
+production change. Read docs/verification/next-plan/U04/PHASE2-PROJECTION.md
+and docs/verification/next-plan/U04/u04-phase2-v1/index.json.
+The mapper preflight passed `u04-mapper-v1`, canonically verified with 2,209 seals
+and four receipts, worker gone/no resource stop. Every entry, both actual data
+corruptions, 30 work guards and native checksums pass. The timing comparison is
+inconclusive. All samples are below 100 ms and two A/A cohorts exceed the noise
+limit. The separate `u04-mapper-long-v1` archive verifies 2,231 seals/four receipts.
+All counts, checksums and gates pass. Its samples clear 100 ms, but two A/A
+cohorts still exceed five percent. Timing remains inconclusive. The longer
+profile identifies the packed corner calculation as the dominant helper work.
+No promotion or unchanged rerun. Read
+docs/verification/next-plan/U04/PHASE2-MAPPER-LONG.md and
+docs/verification/next-plan/U04/u04-mapper-long-v1/index.json.
+U03's `u03-two-bit-v1` archive verifies 2,242 seals/three receipts, worker gone/no
+resource stop. All 154,368 entry/base comparisons, 188 boundary checks, 99 refusals
+and three actual corruptions pass. Twenty-one synthetic native checksums agree.
+The pure module and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U03/TWO-BIT-PREFLIGHT.md and
+docs/verification/next-plan/U03/u03-two-bit-v1/index.json.
+U03's saved-context screen passed canonical verification with 2,265 seals/three
+receipts, worker gone/no stop. All 52,584 cubes, 315,504 projection ranks and
+736,176 codec lookups pass. Its information result is inconclusive. Every saved
+radius is 7–13, above the six-step maximum reference distance. Zero hypothetical
+cuts is guaranteed by that mismatch. Do not infer a negative larger-PDB result
+or a performance result. Read
+docs/verification/next-plan/U03/CONDITIONAL-INFORMATION.md and
+docs/issues/small-edge-screen-range.md. The range guard passed canonical
+verification with 2,271 seals/two receipts, worker gone/no stop. Its regression,
+twelve corruption controls and unchanged gates pass. Original counts are
+unchanged; no cube/rank/codec work was repeated. Read
+docs/verification/next-plan/U03/RANGE-GUARD.md and
+docs/verification/next-plan/U03/u03-range-v1/index.json.
+The `u05-prefix-v1` queue failed at the test adapter's application move-list
+limit while reading 43,254 valid prefix IDs. All 2,284 source seals, executed
+receipts, twenty native rows and eleven frozen Bend sources are preserved under
+docs/verification/next-plan/U05/u05-prefix-v1-failed/. The app limit is unchanged.
+A separate depth-bounded census reader passes the failing-before regression and
+thirteen boundary/malformed controls. The `u05-prefix-recovery-v1` archive verifies
+2,307 seals/three receipts, worker gone/no stop. All twenty censuses, twelve finite
+endpoint-orbit comparisons, four compiled corruptions, two missing-endpoint
+controls and native checksum parity pass. Unchanged compile/native data was
+reused and unchanged proof/toolchain gates pass. The original run stays failed.
+Read docs/verification/next-plan/U05/PARTITION-PREFLIGHT.md and
+docs/issues/partition-prefix-list-adapter.md. The ledger `u05-ledger-v2` archive
+verifies 2,318 seals/three receipts, worker gone/no stop. All forty transitions,
+24 scope changes, 21 refusals, four malformed packets, twelve full ledgers and
+five actual corruptions pass. Ten native packets agree; both pure modules and
+unchanged gates pass. Prefix evidence was reused. Read
+docs/verification/next-plan/U05/LEDGER-PREFLIGHT.md and
+docs/verification/next-plan/U05/u05-ledger-v2/index.json. No actual worker
+partitions, certified exhaustion, NP07 proof or production/global-bound change.
+U07's comparison-record archive verifies 2,332 seals/two receipts, worker gone/no
+stop. All 45 fixture rows, fifteen record corruptions, ten aggregate corruptions,
+seven notation refusals and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U07/COMPARISON-RECORDS.md and
+docs/verification/next-plan/U07/u07-records-v1/index.json. No actual solver
+comparison, release holdout or final configuration freeze occurred.
+The reference-calibration archive verifies 2,460 seals/three receipts, worker
+gone/no stop. All fourteen planned paths replay; cubing also passes KPuzzle
+input/output checks and its process exits normally. The staged cache is read-only
+and original artifacts/115runtime source hashes are unchanged. Twelve provenance
+controls and unchanged proof gates pass. Explicit Nissy slack is zero, not the
+CLI default twenty. No relative-speed or formal-optimality result. Read
+docs/verification/next-plan/U07/REFERENCE-CALIBRATION.md and
+docs/verification/next-plan/U07/u07-reference-v1/index.json and
+docs/issues/nissy-optimal-slack.md. The cold-lifecycle archive verifies 2,481 seals
+and three receipts, worker gone/no resource stop. All six process controls and
+nine real shallow calibrations pass with replay-valid paths. Real children exit
+without forced termination; all three Rubend native owners and IPC directories
+are gone. Unchanged proof/toolchain gates pass. The owned-stdin shutdown defect
+and its failing source are preserved. Read
+docs/verification/next-plan/U07/COLD-LIFECYCLE.md. No pilot/release evaluation or
+relative-performance acceptance is included.
+The `u07-pilot-v1` archive verifies 2,501 seals and three receipts, worker gone/no
+resource stop. All sixty serial requests are retained, with no errors, unavailable
+backends, forced stops or surviving native/IPC owners. Both anytime backends cover
+20/20 requests on four reused pilot roots. Every cohort has Rubend lengths
+19/20/20/20 and bundled min2phase lengths21/20/20/21. Nissy's zero-slack exact
+configuration is censored in20/20 requests. The 27 scorer corruption controls,
+fixture-only regression and unchanged gates pass. Read
+docs/verification/next-plan/U07/COLD-PILOT.md. Four roots repeated five times are
+not twenty independent inputs. No tuned winner, exact-work comparison, kernel
+speed, CPU/RSS gain, new default, final freeze or release holdout follows.
+The `u04-move-v2` archive verifies2,401seals/three receipts, worker gone/no stop.
+All59,049bucket assignments,123boundaries,eleven resume points,fourteen refusals
+and two actual cursor corruptions pass. Generated Search matches4,800native
+child sets and160independent scores. Goal-routing corruption has3,200counterexamples.
+All128native cursor packets agree withJavaScript. The pure module, generated
+Search and unchanged proof/toolchain gates pass. Production search stays unchanged.
+Read docs/verification/next-plan/U04/PHASE2-MOVE-ORDER.md. No new pruning or table,
+policy promotion, full-search quality/cost result, new law or release case.
+The `u04-move-study-v1` archive verifies2,422seals/six receipts, worker gone/no stop.
+All168guards and480fresh development528–535requests pass with285candidate replays.
+Quality work accounts for192,000,000Search.advance calls. A/A and repeated states
+are stable. All160control/treatment pairs tie on length and lower bound, so the
+frozen rule skips long-cost and profile runs. They are not measured performance
+results. Keep ordering private and unpromoted, with no unchanged lucky rerun.
+Read docs/verification/next-plan/U04/MOVE-ORDER-STUDY.md. Existing proof/toolchain
+gates pass. No new default, law, native-deadline or application-speed claim.
+The `u05-worker-v1` archive verifies2,447seals/four receipts, worker gone/no stop.
+All1,124jobs, five real replay-certified hits and two partial probes pass.
+The independent oracle checks213,933states. One no-hit scope closes only after
+all244required jobs exhaust. Five hit scopes retire without exclusion.323exact
+receipt retries and twelve record/two manifest-scope corruptions pass. The actual
+early-exhaustion native corruption fails admission. Existing raw cache hash and
+identity, pure wrapper verdict and unchanged proof/toolchain gates pass. Read
+docs/verification/next-plan/U05/PARTITION-WORKER.md. No NP07 proof, production/global
+bound update, worker-pool/scaling result, new data/law or performance promotion.
+The `u05-pool-v1` archive verifies2,470seals/four receipts, worker gone/no stop.
+Both normal and retry worker pairs are ready concurrently onCPU2/3under the5GiB
+aggregate ceiling. Every1,124result and ledger outcome matches the single-worker
+reference. A worker exits2after one valid job;243missing jobs prevent commitment.
+Checkpoint replay and244-job retry recover with exactly one identical duplicate.
+All five owners are gone, process groups stay inside the resource runner, cache
+and source seals hold, and fixture/actual corruption/proof gates pass. Read
+docs/verification/next-plan/U05/PARTITION-POOL.md. No scaling speedup, NP07 proof,
+production/global bound or application change is established.
+The `u00-aa-cpu-v1` archive verifies 2,485 seals and three receipts, worker gone
+and no resource stop. All ten identical-helper processes match the independent
+50-million-probe checksums. All five pairs stay within five percent for both
+whole-process CPU and wall time. Native work ranges from 1,444 to 1,524 ms.
+Fourteen sample and three aggregate corruption controls and unchanged gates pass.
+The disposition is stable in this diagnostic only. Historical noise remains
+unexplained; mapper and browser acceptance stay inconclusive. Read
+docs/verification/next-plan/U00/NATIVE-AA-CPU.md. No engine-speed claim follows.
+The `u04-ep4-ccp-v1` archive verifies 2,510 seals and three receipts, worker gone
+and no resource stop. All 235,200 product distances, 2,352,000 directed edges,
+1,680 codecs, 16,800 transitions, 10,240 actual-cube child projections and three
+source corruptions pass. The maximum projected distance is ten. Its 228,449
+strict improvements over separate EP4/corner-class distances do not establish
+improvement over Rubend's existing phase-two bounds. Generated payloads stay
+outside Git. Read docs/verification/next-plan/U04/SMALL-PRODUCT.md. No actual
+existing-bound cut, universal admissibility proof, production integration, or
+speed gain is claimed. Clipboard/download acceptance remains open because the only connected
+browser still has the recorded observation limitations. The temporary capability
+check tab is closed; no unsupported browser connection or test hook was added.
+The `u04-small-conditional-v1` archive verifies 2,539 seals and three receipts,
+worker gone and no resource stop. All 640 child facts and 8,960 actual Search
+admission masks reconcile on 64 distinct restricted-walk roots. Two actual
+source corruptions, malformed cache input, sixteen record corruptions and thirty
+residual-boundary checks pass. The product hypothetically excludes 376 of 23,932
+admitted children across twenty roots. These synthetic radius/history contexts
+are not actual visit frequencies. Distances are reused; unchanged gates pass.
+Read docs/verification/next-plan/U04/SMALL-CONDITIONAL.md. No CPU or quality gain,
+universal admissibility proof, production pruning or speed acceptance follows.
+The `u04-small-observe-v1` archive verifies 2,569 seals and three receipts, worker
+gone and no resource stop. All six control/observed continuations and metadata
+match at exact work counts. All 15,609 actual phase-two points pass. The product
+would exclude 6,828 entries, not independent saved subtrees. Three pilot prefixes
+reach the point cap, commutator/pilot1 reach the work cap, and solved input exits
+normally. Eight candidate replays, two source faults, ten record controls, pure
+observer verdict and unchanged gates pass. Read
+docs/verification/next-plan/U04/SMALL-OBSERVATION.md. No pruning, portfolio
+frequency, timing, CPU or quality gain is claimed.
+The `u04-small-mapped-v1` archive verifies 2,601 seals and three receipts, worker
+gone and no resource stop. All 80,640 maps and 15,609 saved point queries agree
+with their oracles. Native checksum 957906193, three actual source faults,
+eighteen refusals, loaded-distance preservation, both pure checkers, owned-array
+mode and unchanged gates pass. No cube rerank or new frame field. Read
+docs/verification/next-plan/U04/COORDINATE-MAPPED-PROBE.md. The product bytes are
+unchanged, old mapper timing stays inconclusive, and no pruning is enabled.
+Cost, refinement and integration remain open.
+The `u04-small-cost-v1` archive verifies 2,632 seals and three receipts, worker
+gone and no resource stop. All fifteen 32-million-query samples match independent
+checksums, with zero mismatches and sufficient duration. Both separate profiles
+and unchanged gates pass. The verdict is inconclusive A/A noise: two cohorts
+exceed five percent in both clocks. Descriptive native wall medians are 235.92ns
+direct and 48.81ns mapped, not an accepted speedup. Profiles confirm query-time
+projection is removed. Do not rerun unchanged work or promote either path.
+Read docs/verification/next-plan/U04/PRODUCT-PROBE-COST.md. CPU-side variation,
+refinement and actual solver benefit remain open; no pruning is enabled.
+The `u02-np01-group-v1` archive verifies 2,573 seals and three receipts, worker
+gone and no resource stop. Both checkers accept the quantified NP01 reference
+law, genuine typed-word subgroup/global Nat bound, positive-word decomposition
+and concrete identity instance. All eight false-proof entrypoints, 6,430 split
+and prefix-recovery cases, 6,431 bound checks and unchanged gates pass. Read
+docs/verification/next-plan/U02/NP01-GROUP.md. Validator reachability, optimized
+target/data bridges and NP02/03 remain open; no pruning or stronger label.
+The `u02-np03-group-v1` archive verifies 2,593 seals and three receipts, worker
+gone and no resource stop. Both checkers accept NP03 with actual inverse-word
+reconstruction and no inverse callback premise. All eight wrong-source
+entrypoints and 6,431 inverse/transfer cases pass. The proper U4 subgroup
+counterexample verifies sixteen products, four inverses, 856 oracle states and
+1,152 edges. Forward distance two differs from inverse distance one. Unchanged
+gates pass. Read docs/verification/next-plan/U02/NP03-GROUP.md. NP02 and
+application/data bridges remain open; no pruning or incremental inverse update.
+The next fixed queue is `u02-np02-family-v1`, expected three minutes and capped
+at twelve. Generic NP02 finite-family and numeric lower-bound forms pass both
+focused checkers. Bound packages tie global functions and subgroup witnesses to
+exact root values; every move must choose a valid finite-family index. One
+corner stabilizer and then a complete eight-stabilizer family also pass focused
+checks, including all eighteen coverage choices and the public R U lower-bound
+two instance. The full guard adds twelve bad-proof entrypoints, deterministic
+generation, index/order/bound/backend coverage controls and unchanged gates.
+Read docs/verification/next-plan/U02/NP02-FAMILY.md. No optimized/data bridge,
+actual pruning or stronger application certificate is implied.
+The existing raw cache is unchanged. No full six-edge database or production
+pruning. Only approved NP01–NP03 are being formalized; other new laws remain
+separately gated.
+Do not rerun the short comparison unchanged. Read
+docs/verification/next-plan/U04/PHASE2-MAPPER-COST.md and
+docs/verification/next-plan/U04/u04-mapper-v1/index.json.
+U06 video/operator/package/general-performance gates remain open.
+No push/merge/deploy authority. NP04–NP08 and large/costly builds need separate
+approval.
+
+## Current unit evidence
+
+The fast-only R refinement confirms fixed-work answer coverage gains on three
+of sixteen fast request/budget pairs, involving two fresh development roots.
+There are no losses. All eighty exact paired runs preserve every saved state.
+Canonical archive: docs/verification/next-plan/U04/u04-fast-only-v1/index.json,
+2,010seals/four receipts, worker gone, no resource stop. No application deadline,
+latency, CPU or default promotion is established. U05's non-pruning collector
+passes its pure kernel and fourteen context guards in the same archive.
+
+U05 native observation passed and was canonically archived with 2,026 seals,
+three receipts, worker gone and no resource stop. Every saved control/observer
+state matches. All 48 incumbent replays and 2,048 sampled cube roundtrips pass.
+One repeat among 52,567 completed spans has a 19-step repeated span. This does
+not justify a cache probe on the current workload. No cache/pruning or NP06/NP07
+approval. Read docs/verification/next-plan/U05/NATIVE-DUPLICATE-OBSERVATION.md
+and docs/verification/next-plan/U05/u05-interior-v1/index.json.
+
+The native deadline queue `u04-deadline-v1` passed canonical verification with
+2,041 seals, three receipts, worker gone and no stop. Its 236 requests and 552
+candidate replays pass, but the treatment fails the frozen quality floor.
+Fresh confirmation has zero wins and four longer answers among 80 paired runs.
+Coverage and lower bounds hold. Same-binary p95 spreads exceed five percent, so
+no latency gain follows. Keep the default unchanged and do not rerun this policy
+unchanged for luck. Read docs/verification/next-plan/U04/DEADLINE-SEED-PROBE.md
+and docs/verification/next-plan/U04/u04-deadline-v1/index.json.
+
+U06 baseline passed canonical verification with 2,056 seals, three receipts,
+worker gone and no stop. All five visible-document idle samples submit 120 frames
+in two seconds. Each measured set creates 80 new meshes and 26 groups. All 101
+canonical-color checks pass. Temporary server stopped, renderer disposed and
+owned hidden tab closed. Read docs/verification/next-plan/U06/RENDERING-BASELINE.md
+and docs/verification/next-plan/U06/u06-render-baseline-v1/index.json.
+
+U06 demand rendering passed canonical verification with 2,075 seals, three
+receipts and all fifteen partial records, worker gone and no resource stop.
+Control submits 113–117 idle frames per two seconds; demand submits zero in all
+five samples. A/A and active cadence floors pass, with no general speed claim.
+All 303 canonical-color checks, 315 repaint checks and fifteen WebGL recovery
+cycles pass. Normal candidate repaint peaks at 19 ms. Mesh rebuilding remains
+unchanged. `just check` and focused tests pass. Owned hidden tab is closed.
+Read docs/verification/next-plan/U06/DEMAND-RENDERING.md and
+docs/verification/next-plan/U06/u06-render-demand-v2/index.json.
+
+V1 failed its 240-second browser completion deadline. All 2,073 source seals,
+executed receipts and uncommitted candidate sources are preserved under
+docs/verification/next-plan/U06/u06-render-demand-v1-failed/index.json.
+It has no captured browser result and no performance verdict. The v2 recovery
+saves completed samples incrementally and uses bounded browser milestone waits.
+Workload, resource caps and acceptance floors are unchanged.
+
+V1 app regression rebuilt the actual app and passed 48 top-level recipe commands,
+then failed linking the keyboard fixture's missing renderLabel export. The failure
+and built artifact hashes are preserved with 2,105 source seals at
+docs/verification/next-plan/U06/u06-app-regression-v1-failed/index.json.
+The fixture now re-exports the real helper; all nine keyboard scenarios pass.
+
+The `u06-app-recovery-v1` queue passed and was canonically archived. All 49
+remaining commands pass; the unchanged 48-command prefix and actual rebuilt
+artifacts match. All 97 top-level commands are covered across both runs, while
+the original process remains failed. No browser benchmark is repeated. Run
+hidden full-app acceptance next. Operator review and performance promotion
+remain open. Keep mesh retention separate.
+The app browser is outside the server's resource cgroup. No browser CPU/RSS
+enforcement claim. No new law or proof label.
+
+U04 move ordering/phase-two projection, U06 bridges/UI efficiency and U07 final
+comparisons remain open. No default, application/CPU gain, publication or large
+build is authorized by this probe.
+
+## Earlier checkpoints
+
+Execution priority correction on October 23. U02 has expanded into a broader
+proof programme without an accepted performance gain. Do not treat closing all
+of those proof gaps as a blanket prerequisite for U03–U07. The approved plan
+allows U03 after U02's measured disposition even without a win. U02 remains
+incomplete and unpromoted; its current performance disposition is inconclusive.
+Keep unchecked pruning off and preserve every open proof obligation.
+
+The `u02-slice-finish-v1` recovery passed and was canonically verified with
+1,858 seals, worker gone and no resource stop. The private profile passes
+495 codec cases, 2,003 coordinate cases and 4,096 rank comparisons. Production
+coordinates and native-cost acceptance remain unchanged. Read
+docs/verification/next-plan/U02/u02-slice-finish-v1/index.json.
+
+The checked private-profile/runtime-strip checkpoint and U02 non-promotion
+disposition are recorded in docs/verification/next-plan/U02/DISPOSITION.md.
+Continue with U03's bounded feasibility and cost preparation. Do not extend
+the U02 proof chain by default. U04's
+bounded ordering work does not require a U03 winner. U05 and final U07
+integration retain their actual dependencies. NP04–NP08, full database builds,
+publication and all other existing authority gates remain unchanged.
+
+U03's coordinate/action preflight passed with 1,865 matching seals, worker gone
+and no resource stop. The one-to-six-edge prototype passes 11,112 exhaustive
+small codecs, 200,016 small transitions, 18,432 sampled six-edge transitions
+and 22,800 full-cube projections against KPuzzle. Three actual corruptions
+have counterexamples. The archive is
+docs/verification/next-plan/U03/u03-edge-pattern-v1/index.json.
+No database was generated or new law assumed. Read
+docs/verification/next-plan/U03/EDGE-PATTERN-PREFLIGHT.md.
+The native-feasibility queue also passed, canonically verified with 1,885 seals,
+all four receipts, worker gone and no resource stop. Its six-edge helper median
+was 117 ms per 100,000 calls across five samples, range 116–120 ms. This is not
+a database ETA or engine improvement. Several smaller helpers were noisy.
+U04's unchanged round-robin baseline passed 330 snapshots and 228 independent
+candidate replays. All 6,960,000 work steps reconcile, but the 115 observed
+crossings remain coarse. Next, prepare small native one-to-three-edge table
+generation and exact contour-change observation, preserving baseline states.
+Read docs/verification/next-plan/U03/NATIVE-COST-PLAN.md and
+docs/verification/next-plan/U04/ORDERING-OBSERVATION.md. Archive is
+docs/verification/next-plan/U03/u03-native-feasibility-v1/index.json.
+
+The small-table/exact-observer batch passed canonical verification with 1,911
+seals, four receipts, no resource stop and worker gone. Six native tables pass
+22,224 entry comparisons and 400,032 directed-edge/decreasing-path audits, plus
+three native refusal and three corruption controls. The U04 observer preserves
+all 330 canonical snapshots, replays 228 candidates, and measures 843 completed
+contours separately from 179 censored spans. These are work-step counts, not
+tree-node visits or completeness certificates. No speed promotion follows.
+Both pure modules pass BendTT and unchanged proof/toolchain checks pass. Read
+docs/verification/next-plan/U03/SMALL-TABLE-PILOT.md and
+docs/verification/next-plan/U04/EXACT-CONTOUR-OBSERVATION.md. Inspect and
+canonically archive completed results before tracked edits. Archive is
+docs/verification/next-plan/U03/u03-pilot-u04-events-v1/index.json. The next U04
+step is a bounded task-order treatment with fairness and unchanged work quanta.
+U05 remains unstarted, U06 proof bridges partial and U07 holdout unopened.
+
+The prior-contour ordering queue passed and its canonical archive verifies
+1,921 seals, five receipts, worker gone and no resource stop. All control states
+match. The pilot improves two distinct case/budget/request pairs with no losses;
+all thirty-two disjoint development pairs tie across five cohorts. The pilot
+gain is not confirmed. Fifteen of twenty A/A timing pairs exceed five-percent
+spread. Keep round robin. No speed, deadline-quality or promotion claim.
+The complete original large traces were preserved through a bounded streaming
+archive recovery, then verified by the unchanged canonical checker. Read
+docs/verification/next-plan/U04/PRIOR-CONTOUR-ORDER.md and
+docs/verification/next-plan/U04/u04-prior-order-v1/index.json. Next, check
+one-move premove path composition and independent replay before a candidate
+generation treatment. Do not repeat unchanged ordering cohorts for luck.
+
+The premove path preflight passed with 1,943 verified seals, four receipts,
+worker gone and no resource stop. It passes 7,296 frame cases, 14,592 independent
+replays, 2,375 normalization cases, three actual corruption counterexamples and
+native packet checksum parity. Pure definitions pass BendTT. Bounded large
+archival, eight original receipt/seal negatives and unchanged gates also pass.
+No candidate search or strength result follows. Read
+docs/verification/next-plan/U04/PREMOVE-PATHS.md and
+docs/verification/next-plan/U04/u04-premove-paths-v1/index.json. Next, implement
+a bounded seeded candidate bank with original-root certificate validation and
+an untouched original exact-search authority.
+
+The seed-bank guard passed and is canonically archived with 1,963 seals, three
+receipts, worker gone and no stop. All 330 disabled control states match. Its
+1,056 snapshots, 646 original candidate events, 75 child replays and 13,756,750
+work steps reconcile. The bank did 740,000 seeded steps but admitted no better
+original answer in this guard. Certificate, bound-isolation, budget tails,
+shallow, owned-array, cache and unchanged proof gates pass. Read
+docs/verification/next-plan/U04/SEED-BANK.md and
+docs/verification/next-plan/U04/u04-seed-bank-v1/index.json. Next, freeze U/R/F
+single-bank arms and run family validation plus matched-work pilot comparison.
+Reuse the unchanged binary; do not claim strength from the functional guard.
+
+The seed-quality screen passed canonical verification with 1,990 seals, five
+receipts, no stop and worker gone. All three arms fail the frozen quality floor.
+U/F have zero distinct wins and two losses; R has one fast-mode20-to19 win and
+the same two exact-bound losses,13-to0 and14-to13. Development was skipped.
+The pilot reconciles14,520snapshots,9,078original replays,1,840child replays and
+176million work steps. Nineteen of twenty A/A pairs are noisy. No promotion.
+Read docs/verification/next-plan/U04/SEED-BANK-QUALITY.md and
+docs/verification/next-plan/U04/u04-seed-quality-v1/index.json. Next, freeze a
+separate fast-only R refinement, reuse its saved pilot strata and confirm on
+development512–519 without seeding exact requests. Begin non-pruning U05
+duplicate-work preparation separately; U04 move ordering/projection stay open.
+
+The `u04-fast-only-v1` batch passed and was canonically verified. The separate
+post-hoc refinement gains coverage on three fresh fast budget pairs with no
+losses; all eighty exact paired runs preserve full state equality. The original
+all-request matrix remains rejected. U05's typed collector, BendTT and fourteen
+context guards pass; native duplicate-rate collection and any cache remain
+unimplemented. Read
+docs/verification/next-plan/U04/FAST-SEED-REFINEMENT.md and
+docs/verification/next-plan/U05/DUPLICATE-PREFLIGHT.md. No new law, pruning,
+default or publication. Inspect completed results before edits.
+
+Yuzy approved NP01–NP03 on October 23 and requested autonomous end-to-end
+roadmap execution with scheduled continuations in this same chat. Codex heartbeat
+`continue-rubend-roadmap` is active every thirty minutes. This supersedes the
+earlier no-wakeup boundary for this task. Detached batches, source seals,
+resource caps, signed subject-only local commits, hidden previews, solo work
+and no Astra remain. NP04–NP08, new large-table generation and publication
+remain separately gated. Do not create another automation or a message script.
+
+The installed-package consistency queue passed at 02:07:04 Manila on October 23.
+All 1,547 source seals and its receipt digest match. Saved canonical GUI
+states, ZIP/assets, cleanup, focused tests and all sixteen proof/toolchain gates
+pass with no resource stop; the worker is gone. Read
+docs/verification/next-plan/U01/u01-installed-checks-v1/index.json.
+
+U02's isolated exclusion preflight passed all 46,741 states through depth four,
+63,036 independent transitions and four actual mutation counterexamples.
+All 1,541 source seals and both resource-receipt hashes match; the worker is
+gone and the joint cache is unchanged. No extra bound increase was observed
+on this shallow set, so no speed benefit is claimed. Read
+docs/verification/next-plan/U02/u02-exclusion-v1/index.json.
+
+Supporting subgroup proof kernels now pass both Bend and BendTT, including
+reference word replay/length/involution, final-move exclusion under explicit
+target/admissibility witnesses, positive coverage and inverse first-move
+transfer under an explicit reconstruction bridge. A reference target instance
+passes. Two invalid proof fixtures are rejected by both public entrypoints.
+Translated claim headers are preserved so the remaining premises are visible.
+Exact NP01–NP03 are not complete. Concrete packed/joint target refinement,
+loaded-data and inverse reconstruction bridges remain open. Production
+search and the established 23 laws are unchanged. Read
+docs/verification/next-plan/U02/PROOF-KERNEL.md.
+
+The `u02-proof-v1` confirmation passed with 1,555 matching seals, unchanged
+proof/toolchain gates, no resource stop and its worker gone. Read
+docs/verification/next-plan/U02/u02-proof-v1/index.json.
+
+The concrete reference UD/FB/RL predicates now have Bend/BendTT proofs of
+identity membership, selected-move closure, inverse-member closure and exact
+18-bit mask correspondence. An axis-indexed witness instantiates the generic
+coverage kernel with these actual targets. Its admissibility premise is still
+explicit. A deterministic generator reads the model's sticker permutations;
+11,502 reference/packed samples and 6,000 preserving transitions pass, with a
+real slice-orientation mutation counterexample. A deliberately swapped proof
+witness fails on the expected s6 versus observed s3 mismatch. Two earlier
+verifier failures are preserved. Read
+docs/verification/next-plan/U02/REFERENCE-TARGETS.md.
+
+The reference target confirmation passed with 1,577 matching seals, no resource
+stop and its worker gone. Its archive is
+docs/verification/next-plan/U02/u02-target-v3/index.json.
+
+The separate U02 forward-coordinate reuse prototype now passes 100,000 native
+whole-vector checks, all 85,140 transition entries, and 38,000 JavaScript vector
+comparisons. The wrong-frame and corrupted-transition controls have actual
+counterexamples. Its owned-array mode is checked. This does not measure extra
+frame allocation, conditional probe costs or solver speed. Production sources
+and established laws remain unchanged. Read
+docs/verification/next-plan/U02/COORDINATE-REUSE.md.
+
+The coordinate confirmation passed with 1,591 matching seals, no resource stop
+and its worker gone. The canonical checker now verifies and archives completed
+queues with one command: `node bench/check-background-results.mjs RUN-ID`.
+It rejects eight bad receipt/source/lifecycle cases, is in `just test`, and
+verified the actual completed queue twice without changing its archive. Read
+docs/verification/next-plan/U02/u02-axis-v1/index.json.
+
+The conditional pipeline queue passed with 1,604 matching seals, no resource
+stop and its worker gone. Read
+docs/verification/next-plan/U02/u02-pipeline-v2/index.json. Its root-near counts
+guide a new source-isolated sixteen-field cached-axis Search, which updates FB
+and RL only after the preceding bound passes. Candidate and audit pure modules
+pass both checkers. The native equivalence queue passed all 179 cases across
+control, candidate and audit workers. Every original stack field, metadata and
+answer agrees, and 34,159 audited advances have consistent coordinates. All
+1,618 seals match, there is no resource stop, and the worker is gone. Read
+docs/verification/next-plan/U02/u02-axis-search-v1/index.json. The pilot native
+cost queue passed with 1,631 matching seals and no resource stop. Fresh pilot
+A/A meets its gate. The observed A/B paired native-time ratio has median 0.8947,
+but its profiler mainly measures initialization. Overall performance acceptance
+is inconclusive; deadline quality is unmeasured. Read
+docs/verification/next-plan/U02/CACHED-AXIS-PILOT.md. Development confirmation
+is archived with 1,645 matching seals. One same-binary cohort differs by 5.33
+percent, so A/B was skipped under the unchanged gate. Additional on-CPU time
+means scheduler delay alone does not explain it. The longer profile points
+to lookup/read code but does not identify the noise cause. The control-only
+diagnostic passed with 1,673 matching seals. Its 24 requests show no major faults
+or large runnable-wait spikes; the timing cause remains unproved. The failed
+acceptance gate is not retried. Work returns to the reference proof bridge.
+Finite-cell confirmation passed with 1,681 matching seals. A field-wise proof
+connects every typed whole-state move and finite replay word to the existing
+facelet specification. Its guard and post-commit confirmation pass with 1,691
+matching seals. Embedding injectivity and word-cancellation confirmation passed
+with 1,703 matching seals. A constructed reference state-inversion bridge now
+passes both pure checkers for roots presented by reaching words. It connects
+the kernel's exact word convention and instantiates its first-move theorem
+without assuming inversion. Confirmation passed with 1,725 matching seals.
+Inspection of the pinned Base shows proof-visible `U32` Boolean words, enabling
+the first actual packed-field proofs. Corner routing confirmation passed with
+1,741 matching seals. A 72-statement module now proves corner labels, both
+edge-label words and edge-orientation flips for all eighteen moves and arbitrary
+32-bit words. Confirmation passed with 1,762 matching seals. Typed cell packing
+now has forty proved component readbacks and an actual `Cubie.to_facelets`
+view theorem. Both checkers, six expected rejection controls and 80,000 backend
+component comparisons pass. The shared bit compiler reproduces all 72 existing
+routing proofs byte-for-byte, so their evidence is reused. Packing confirmation
+passed with 1,776 matching seals. Corner-orientation arithmetic now proves
+typed packing is preserved by all eighteen actual packed moves. Both checkers,
+six rejection controls, 36,000 move cases, 18,000 legacy comparisons and direct
+delta/layout checks pass. Its confirmation passed with 1,790 matching seals,
+no resource stop and its worker gone. The archive is
+docs/verification/next-plan/U02/u02-corner-orientation-v1/index.json.
+The complete five-field move, facelet and finite-word refinement now passes
+both pure checkers and its fixed guard. All 1,786 source seals match, no resource
+stop occurred and the worker is gone. The guard passes 36,000 complete moves,
+18,000 legacy comparisons, 6,000 facelet checks and 256 replay words. Three
+actual corrupt operations have backend counterexamples and six expected
+proof rejections. A required explicit equality connects the two corner-word
+projections; the first rejected probe is preserved. Read
+docs/verification/next-plan/U02/PACKED-MOVE.md and
+docs/verification/next-plan/U02/u02-packed-move-v1/index.json.
+Packed inverse, input reachability and loaded admissibility remain open.
+The packed replay extension also passed its fixed guard, with 1,798 matching
+seals, no resource stop and its worker gone. Both pure checkers prove packing
+injectivity, actual packed move/word cancellation, reaching-word root
+correspondence, inverted solutions and the reference kernel bridge on packed
+replay. All 1,024 roots, cancellations and inverted solutions pass the backend
+driver. Two wrong conventions have actual counterexamples and four expected
+proof rejections. `Cubie.inverse` remains a separate obligation. The batch also
+rechecked the complete move module after its signed commit and reused its
+unchanged backend/rejection evidence. Read
+docs/verification/next-plan/U02/PACKED-REPLAY.md and
+docs/verification/next-plan/U02/u02-packed-replay-v1/index.json.
+All twenty actual packed position lookups passed the fixed guard with 1,812
+matching seals, no resource stop and its worker gone. Both pure checkers
+connect each lookup to its inverse-word label for every reaching word.
+Two-sided reference composition derives match equivalence rather than assuming
+unique positions. The backend passes 20,480 root and 20,060 raw-word lookups.
+Both actual-source weight corruptions have counterexamples and four expected
+proof rejections. The full inverse orientation/assembly remains open. Read
+docs/verification/next-plan/U02/INVERSE-POSITIONS.md and
+docs/verification/next-plan/U02/u02-inverse-positions-v1/index.json.
+The complete actual `Cubie.inverse` and reconstruction bridge passed their
+fixed guard with 1,823 matching seals, no resource stop and the worker gone.
+Both pure checkers prove inverse-word correspondence for every reaching-word
+root. All five words agree on 1,024 backend roots. Three actual-source
+corruptions and a wrong-root claim have counterexamples and eight expected
+proof rejections. The bit-name collision is reproduced and now rejected;
+all previous routing, packing and packed-move proof bytes stay identical.
+Read docs/verification/next-plan/U02/PACKED-INVERSE.md and
+docs/verification/next-plan/U02/u02-packed-inverse-v1/index.json.
+The source-prefix diagnostic passed collection with 1,832 matching seals,
+worker gone and no resource stop. This is not proof acceptance. The first five
+definitions pass both checkers; native BendTT reports `coordinate_shape: out
+of fuel`. The pinned conversion budget is 400,000,000 steps and is unchanged.
+The existing coordinate module passes its standalone verdict. Both direct
+reflexivity and congruence-form shape proofs hit the normalization gate.
+The normalization controls passed with 1,829 verified seals and the worker gone.
+All alias depths and the exact reflexive control pass, ruling out the loop
+alone. The constructor-guard prototype passes both checkers and all 4,096
+low-mask backend comparisons. A private full coordinate profile with that
+boundary now passes an initial universal typed mask verdict too.
+The private profile passed both checkers for the universal mask relation and
+all four 495-placement codec statements. The guard then failed in runtime
+fixture extraction, which removed adjacent type declarations. Before edits,
+all 1,847 original seals, failed receipts and successful formal artifacts were
+verified and captured. The focused regression fails with `unknown: First`
+before the type-preserving strip fix and passes afterward.
+The next queue is `u02-slice-finish-v1`, estimated three minutes with a
+ten-minute cap. It verifies the captured exact formal artifacts and unchanged
+code dependencies, then finishes source-corruption controls, backend and
+toolchain gates. It reuses the four passing formal stages instead of repeating
+them. The original failed guard remains failed.
+Production coordinate source and checker fuel remain unchanged. Native cost
+and integration are not accepted by these proof checks. The earlier flat
+placement probe's SIGKILL remains unexplained; the smaller branching type is
+prepared, not yet verified. Read
+docs/issues/slice-mask-verdict-mismatch.md and
+docs/verification/next-plan/U02/u02-slice-verdict-v1/index.json.
+New slice implementation and runtime harness fix remain uncommitted. Inspect
+and archive the next completed guard before source edits.
+There is no general speed claim, production change,
+new PDB or release-holdout use. Validated-input refinement, loaded-data
+admissibility remain open. The packed inverse bridge no longer assumes the
+inverse function for reaching-word roots.
+Actual native allocation, latency and stable matched controls still need
+measurement before integration or promotion.
+
+The following entries preserve the preceding U01 checkpoints.
+
+On October 23 the completed redesign queue was rechecked before edits. All
+1,493 source seals and three resource-receipt digests match. Focused checks,
+full `just test`, and all sixteen `just check` gates passed without resource
+stops. Its worker is gone. The compressed records are
+docs/verification/next-plan/U01/u01-redesign-v1/index.json.
+Yuzy explicitly requested pushing after the run on October 22. Main
+fast-forwarded to 369f480, and GitHub confirmed all 23 outgoing commits Verified.
+GitHub CI run 39787894581 subsequently passed at that same revision.
+
+The `u01-delivery-redesign-v1` queue passed with 1,479 matching seals, 67 imported
+closure paths, six delivery checksums, installed web assets, HTTP/native replay,
+and three clean supervisor shutdowns. Artifact 12429624367 is the actual
+redesigned package from successful CI run 39787894581. Read
+docs/verification/next-plan/U01/u01-delivery-redesign-v1/index.json.
+The actual installed entrypoint now also passes hidden-browser solve/export,
+canonical playback, cancellation/resubmission, invalid input isolation, theme
+persistence, search-time keyboard locking, repeated seeks, mobile move-rail
+tracking, and sticker-editor checks. It runs without the host store or repository
+mounted. All owners and IPC stop cleanly; the temporary tab closes and viewport
+resets. Read docs/verification/next-plan/U01/u01-installed-redesign-gui-v1/index.json.
+
+The next queue is `u01-installed-checks-v1`, expected two minutes with a
+three-minute cap. It rechecks ZIP/assets, saved browser replay and cleanup,
+focused tests, and unchanged proof gates. No package rebuild, large table,
+full regression repeat, or new browser run is needed. Read its saved results
+before further tracked edits. Production sources remain unchanged from the
+fully tested redesigned build.
+Clipboard/download and raw timing remain open. New law statements still need
+separate approval. No new push, merge, release, or deployment is authorized by
+the completed October 22 push request.
+
+The following October 22 entry records the pre-queue redesign checkpoint.
+
 On October 22 Yuzy requested a full UI/UX redesign. The paper-workbench layout
 is implemented locally after two working visual prototypes. Actual rebuilt
 desktop/narrow checks pass for solve/export/playback, theme persistence, sticker

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "scope": "Pure gate and source freeze with strengthened native SIGKILL refusal, native work remains pending",
+  "resourceStop": false,
+  "rootVerdictFresh": false,
+  "candidateKernelVerdictFresh": false,
+  "rootAndCandidateVerdictsSourceIdenticallyReusedFromV5": true,
+  "classifierTriples": 61440,
+  "scopeCases": 240,
+  "savedEntries": 52584,
+  "recordControls": 12,
+  "actualBehaviorMutants": 3,
+  "allBehaviorMutantsCompile": true,
+  "nativeGuardPending": true,
+  "productionPruningEnabled": false,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "path": "resource.json.gz",
+      "sha256": "59c17de864bbbfda69cf5052162cfcb87f1be1bad5d45a8a36e52cebfb8f1156",
+      "compressedSha256": "0c76835e37c2eb7f02ee8a76b4141998440b3a1276027b24a712a7464a2ee7ce"
+    },
+    {
+      "path": "result.json.gz",
+      "sha256": "7d93270e20a55039c862fa49e2b7fb237cd3f03213875aa913ed59749df82593",
+      "compressedSha256": "efc6f080d8ac57df72a1d9591d44997bdc4e18b948139dbe3d1e45e877ca66d9"
+    },
+    {
+      "path": "archiver.mjs.gz",
+      "sha256": "36865b167543da9a42326ac39c5c8cada91fbcbbc41603c1babc1d600d0da969",
+      "compressedSha256": "8207e9a23a2fba522440abf9e5f71a05ae6f14cb7665d2d7c057ba859c92909b"
+    }
+  ]
+}

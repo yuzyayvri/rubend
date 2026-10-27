@@ -2,9 +2,10 @@ import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import vm from "node:vm";
 import {build} from "esbuild";
+import {fileURLToPath} from "node:url";
 
 const source=readFileSync(process.argv[2]??"apps/web/main.mjs","utf8");
-const bundled=await build({stdin:{contents:source,resolveDir:process.cwd()+"/apps/web",sourcefile:"main.mjs"},bundle:true,write:false,format:"esm",define:{"import.meta.url":JSON.stringify("file:///apps/web/main.mjs")},plugins:[{name:"scene-fixture",setup(api){api.onResolve({filter:/^\.\/scene\.mjs$/},()=>({path:"scene",namespace:"fixture"}));api.onLoad({filter:/.*/,namespace:"fixture"},()=>({contents:'export const faceColors=[];export class CubeScene{set(){} async turn(){} stats(){return null}}'}));}}]});
+const bundled=await build({stdin:{contents:source,resolveDir:process.cwd()+"/apps/web",sourcefile:"main.mjs"},bundle:true,write:false,format:"esm",define:{"import.meta.url":JSON.stringify("file:///apps/web/main.mjs")},plugins:[{name:"scene-fixture",setup(api){api.onResolve({filter:/^\.\/scene\.mjs$/},()=>({path:"scene",namespace:"fixture"}));api.onResolve({filter:/^rubend:real-scene$/},()=>({path:fileURLToPath(new URL("../apps/web/scene.mjs",import.meta.url))}));api.onLoad({filter:/.*/,namespace:"fixture"},()=>({contents:'export {renderLabel} from "rubend:real-scene";export const faceColors=[];export class CubeScene{set(){} async turn(){} stats(){return null} dispose(){}}'}));}}]});
 const program=new vm.Script(`(async()=>{${bundled.outputFiles[0].text}\n})()`);
 const solved="UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB";
 let checks=0;

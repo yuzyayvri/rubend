@@ -1,0 +1,13 @@
+{
+  "format": "rubend-reference-calibration-cases-v1",
+  "role": "Shallow convention/replay calibration, not a benchmark corpus",
+  "cases": [
+    {"id": "calibration-solved", "scramble": []},
+    {"id": "calibration-U", "scramble": [0]},
+    {"id": "calibration-R2", "scramble": [4]},
+    {"id": "calibration-Fi", "scramble": [8]},
+    {"id": "calibration-U-R", "scramble": [0, 3]},
+    {"id": "calibration-R-U-F2", "scramble": [3, 0, 7]},
+    {"id": "calibration-commutator", "scramble": [3, 0, 5, 2]}
+  ]
+}

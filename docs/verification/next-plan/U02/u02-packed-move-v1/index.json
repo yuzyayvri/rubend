@@ -1,0 +1,40 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-packed-move-v1",
+  "revision": "970f72473654886cd4f3d6efd330df744d9f00e1",
+  "sourceSeals": 1786,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T04:28:09.470Z",
+  "finishedAt": "2026-10-23T04:30:14.158Z",
+  "archives": [
+    {
+      "path": "0-u02-packed-move-v1-plan.json.gz",
+      "sha256": "67cdfb1e4450a0dc75c72e8a7143eb00793639b59d333a54dcc475253fc050a1",
+      "compressedSha256": "0a1745c8531d0f6022854ad8f251faa1862c643b8aa1b0ada279916367c07ec5"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "8ca6b7df1d03dbdbd09727a4818b577981397ef1796abc93a7d1b914c5a58ac5",
+      "compressedSha256": "bf2278c5d518431a0b709e333c3de48c690d92f77ec20f0d1a0b3b735fd645df"
+    },
+    {
+      "path": "2-u02-packed-move-v1-guard.json.gz",
+      "sha256": "4eb048580ed61bbfd1123ffafe50db1235eeef293631e1ddff9b6f55b65e940f",
+      "compressedSha256": "53db84b76488e7823ff58e9ccd2c1aadda3041d0c00b5c2c997ffcda51e56d96"
+    },
+    {
+      "path": "3-guard.json.gz",
+      "sha256": "ffe08f90b36d5434244054ca01f150a5461a0218044a38d03725261cd68189bc",
+      "compressedSha256": "27b338dce2fcf910ae98df2ba7bf7ee2b7c16bc0226ba282bf6be73ed5fe7f89"
+    },
+    {
+      "path": "4-samples.json.gz",
+      "sha256": "b14007e7b6a33854e0b54f9ebe590e2aa6899cb25e80d7981fd6987bc410519c",
+      "compressedSha256": "9a50d6860baee79eb0b2af9307c5aefd70ef259249d6e7a221b9aab00a0e52ca"
+    }
+  ]
+}

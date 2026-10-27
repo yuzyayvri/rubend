@@ -1,0 +1,198 @@
+{
+  "passed": true,
+  "format": "rubend-ui-review-media-archive-v1",
+  "sourceRun": "u06-review-video-v3",
+  "canonicalArchive": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-review-video-v3/index.json",
+  "canonicalArchiveSha256": "8fd1c08cb59e11fc01ba7397de4d5a7ce1b61c5027df6d6c89ecfaa47cf81fca",
+  "encodedRecordSha256": "d4ea02e25bf2be5acdb98285199bd14f674547cd701ffafcd17f1014fcbbdcc1",
+  "clips": [
+    {
+      "scenario": "desktop",
+      "video": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/desktop.mp4",
+      "videoSha256": "41d00ef969b889199fd94300de416b74a8b67b2edcfea51124f2ab55d9905fa3",
+      "bytes": 339304,
+      "poster": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/desktop.png",
+      "posterSha256": "36a675fcde370b2a60eecd9d937616f67bfb67481516270cedb038a6bb4f7bbc",
+      "posterDecodedFromVideo": true,
+      "posterTargetSourceLabel": "native-answer",
+      "posterSeekSeconds": 4.23662039,
+      "posterCommand": [
+        "/nix/store/x3z5lz0xv3jxw3ka05ifaajl0w8lhrw8-ffmpeg-headless-9.0.1-bin/bin/ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-threads",
+        "1",
+        "-ss",
+        "4.236620",
+        "-i",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/desktop.mp4",
+        "-frames:v",
+        "1",
+        "-threads",
+        "1",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/desktop.png"
+      ],
+      "decodedChecksums": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/desktop-decoded-framemd5.txt",
+      "decodedChecksumsSha256": "dbe798578ac760184eb44cc901910a3d3c06736bc941fed839efebb3c63f0dff",
+      "sourceFrames": 11,
+      "decodedFrames": 12,
+      "distinctDecodedFrames": 12,
+      "durationSeconds": 22.92,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1264,
+            "height": 778,
+            "duration": "22.920000",
+            "nb_read_frames": "12",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "22.920000",
+          "size": "339304"
+        }
+      },
+      "sampledReviewNotRealTimeCapture": true
+    },
+    {
+      "scenario": "fallback",
+      "video": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/fallback.mp4",
+      "videoSha256": "b5790a206c8706a2a431d077c24d117ac81b2f9eb789cc6fdb54d63682cce3a9",
+      "bytes": 104879,
+      "poster": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/fallback.png",
+      "posterSha256": "d6985acdad17f3133685b6e3bfa02f8eeb6dc9c6b8bbcefb75a6ff8039d73080",
+      "posterDecodedFromVideo": true,
+      "posterTargetSourceLabel": "fallback-native-answer",
+      "posterSeekSeconds": 4.3382986589999994,
+      "posterCommand": [
+        "/nix/store/x3z5lz0xv3jxw3ka05ifaajl0w8lhrw8-ffmpeg-headless-9.0.1-bin/bin/ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-threads",
+        "1",
+        "-ss",
+        "4.338299",
+        "-i",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/fallback.mp4",
+        "-frames:v",
+        "1",
+        "-threads",
+        "1",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/fallback.png"
+      ],
+      "decodedChecksums": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/fallback-decoded-framemd5.txt",
+      "decodedChecksumsSha256": "0eda6b84af525c2d29d76ff88d8a1b7cfc827488cdd9090053bc34e8ee532c0b",
+      "sourceFrames": 8,
+      "decodedFrames": 9,
+      "distinctDecodedFrames": 9,
+      "durationSeconds": 11.48,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 322,
+            "height": 1200,
+            "duration": "11.480000",
+            "nb_read_frames": "9"
+          }
+        ],
+        "format": {
+          "duration": "11.480000",
+          "size": "104879"
+        }
+      },
+      "sampledReviewNotRealTimeCapture": true
+    },
+    {
+      "scenario": "failure",
+      "video": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/failure.mp4",
+      "videoSha256": "3eadf42a40df21bea69f4dc952d02daa3c8eea893aa73a491dd2d773b8aabcd7",
+      "bytes": 155300,
+      "poster": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/failure.png",
+      "posterSha256": "ef56da98b0628683751df2c7280263d7d10a8458d31575ff48deae3510b8a0b3",
+      "posterDecodedFromVideo": true,
+      "posterTargetSourceLabel": "native-answer-before-failure",
+      "posterSeekSeconds": 1.2530980249999994,
+      "posterCommand": [
+        "/nix/store/x3z5lz0xv3jxw3ka05ifaajl0w8lhrw8-ffmpeg-headless-9.0.1-bin/bin/ffmpeg",
+        "-nostdin",
+        "-hide_banner",
+        "-loglevel",
+        "error",
+        "-n",
+        "-threads",
+        "1",
+        "-ss",
+        "1.253098",
+        "-i",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/failure.mp4",
+        "-frames:v",
+        "1",
+        "-threads",
+        "1",
+        "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/failure.png"
+      ],
+      "decodedChecksums": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3/failure-decoded-framemd5.txt",
+      "decodedChecksumsSha256": "9589ad8496fdc3f46f1496e99ec1ad7845eff5cc95a896a0f6c764a4b9e05034",
+      "sourceFrames": 7,
+      "decodedFrames": 8,
+      "distinctDecodedFrames": 8,
+      "durationSeconds": 2.72,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1264,
+            "height": 754,
+            "duration": "2.720000",
+            "nb_read_frames": "8",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "2.720000",
+          "size": "155300"
+        }
+      },
+      "sampledReviewNotRealTimeCapture": true
+    }
+  ],
+  "tools": {
+    "ffmpeg": {
+      "path": "/nix/store/x3z5lz0xv3jxw3ka05ifaajl0w8lhrw8-ffmpeg-headless-9.0.1-bin/bin/ffmpeg",
+      "sha256": "b75077aa3a76e3654820e57c94d95e76e207a75d5ecdb10c0a75326741558adc",
+      "version": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    "ffprobe": {
+      "path": "/nix/store/x3z5lz0xv3jxw3ka05ifaajl0w8lhrw8-ffmpeg-headless-9.0.1-bin/bin/ffprobe",
+      "sha256": "62bbf834f16639cbb21e2271a7a549930cd065d50b834ee55673ea4c0d9e1a59",
+      "version": "ffprobe version 9.0.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    }
+  },
+  "archiveScriptSha256": "43ed224c995c40b3f4114979025fe651aa293f450124ffe54131e15dd34d514e",
+  "uiSourceChanged": false,
+  "operatorReview": false,
+  "frameCadencePerformanceMeasured": false,
+  "clipboardDenial": "unverified",
+  "downloadedFile": "unverified",
+  "releaseHoldoutOpened": false,
+  "independentReview": false
+}

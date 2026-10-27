@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u04-ep4-ccp-v1",
+  "revision": "e61cc7c12ce4add85ddb6605918c828ceca591ba",
+  "sourceSeals": 2510,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T03:59:59.132Z",
+  "finishedAt": "2026-10-24T04:01:00.337Z",
+  "archives": [
+    {
+      "path": "0-u04-ep4-ccp-v1-plan.json.gz",
+      "sha256": "27e7bde4067b119564c0a99c0b3f8c20d92a6b947b52927676a9d67fea52a0ba",
+      "compressedSha256": "dbfd757b264de399e1691d49701117274a15c4858a2a92cbf8d19d1da1e0a8c6"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "4140eae56b2bdb261399d85350c1b696abfd76f50709755729b2ba46d975cdc3",
+      "compressedSha256": "0464919b07a4ca8ac5f982d8ae48fce502e9ad5e421fc9a9aa4ebbcefe3dd563"
+    },
+    {
+      "path": "2-u04-ep4-ccp-v1-compile.json.gz",
+      "sha256": "a92c35b8674dac385c1aadac932469928c008a803f4c671bd9197d9b2d583c98",
+      "compressedSha256": "ce6214c7de3d3c1432f3d8d9c99fdc70048cd6558f642cd6912502cda1b40433"
+    },
+    {
+      "path": "3-u04-ep4-ccp-v1-audit.json.gz",
+      "sha256": "0c5553e6be2f8b89afc6af5697e0b49fb0def737060678447a1297de4ed78dec",
+      "compressedSha256": "e9865ff30533e06dd541024ecc08385c57d0c0eb905aebde28ab3b095394691c"
+    },
+    {
+      "path": "4-u04-ep4-ccp-v1-confirm.json.gz",
+      "sha256": "1425596eb3d4416127eb3e7e95a1cef68ac97c15e24f9ffabad3179ebd74db88",
+      "compressedSha256": "db0beec9aed04de4ab60ff391e865c79102678c0f0cee766d5746ba468104778"
+    },
+    {
+      "path": "5-audit.json.gz",
+      "sha256": "a41d2ccc264c037f9ded485ac07a74209f0b553ab943f3108c50c319c95192af",
+      "compressedSha256": "20494247b13389e88e22d997bf2ae6fb016d2fcc50b57d37ecb0f2bad4caa642"
+    },
+    {
+      "path": "6-compile.json.gz",
+      "sha256": "fc22694ddf1ebd842da1883491f007bbc071681816c4c441b07854de946d5b8f",
+      "compressedSha256": "0975e359dc1469f1ab8cafb0f3a905c1d7d88fee1d5493144840d66db15b052b"
+    },
+    {
+      "path": "7-confirmation.json.gz",
+      "sha256": "09509d7e42b0aa76e9d57b4bce61e3ccff5ce520385ae3183457141348022c73",
+      "compressedSha256": "b993fbe329b4c686f9b95de1734514e733b2a20ec47f1bafc47479ceac618543"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u04-mapper-long-v1",
+  "revision": "44948c9b2331136ab86cb026d208c375d93d7106",
+  "sourceSeals": 2231,
+  "jobs": 4,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T18:23:56.719Z",
+  "finishedAt": "2026-10-23T18:25:06.464Z",
+  "archives": [
+    {
+      "path": "0-u04-mapper-long-v1-plan.json.gz",
+      "sha256": "36ed722c579fd57ab4e4256dea3e58a5d563c714355afccea1d66cd22e40a072",
+      "compressedSha256": "24cddff3667ab924a8b7d1e4e4a2106233ef5e8db7bc6c5e7df506ae7b4be458"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "570a822c18f9cde8a1315916d1a25b1f9e6e0de19c844679afcf2c17a187046d",
+      "compressedSha256": "9b59df38a9d30788821dbef8ee4ae905c791f4a7ca5b7d0a0db9862701d9e144"
+    },
+    {
+      "path": "2-u04-mapper-long-v1-compile.json.gz",
+      "sha256": "a273740e61077022e57caf6573c3309f529489ceaf2e34349324837a9d6d14a4",
+      "compressedSha256": "1fbef251838545a72d89f7f348f13a61695c65e117536ed0a32ec94952262a71"
+    },
+    {
+      "path": "3-u04-mapper-long-v1-oracle.json.gz",
+      "sha256": "30c61d3a2dbb09a4a2ee2fcbfd45b97e17898da8c26523a9c67330b498f51861",
+      "compressedSha256": "76bc6751d646a8f13eba55c30916da442b2991ec2bdace018bed2105aa9de199"
+    },
+    {
+      "path": "4-u04-mapper-long-v1-native.json.gz",
+      "sha256": "2dd6fab78627411c41b4522f8a47f070c3cad0275f44e63a71ae7bb507d34115",
+      "compressedSha256": "891c44cb58daf9fbe76b4cc81045ee1b9c02bd6519fee33e09709d62a9b06184"
+    },
+    {
+      "path": "5-u04-mapper-long-v1-confirm.json.gz",
+      "sha256": "c155971fd03068cd5c9b80e2639e3813d55ffdb4228ab05d6b189638e0bcbb41",
+      "compressedSha256": "9c565f8b437811942bdcd0b8d9ffc75e13953d38c93c4f842fe05201179b84f1"
+    },
+    {
+      "path": "6-compile.json.gz",
+      "sha256": "aebffb3e9791a9fdf2511f50c020ff38e5070d7f96fe01be7d6d789eb231b1bb",
+      "compressedSha256": "596524e8499e0e5281699d09f045119a2271050179de86e9dc8be2b16d377e4e"
+    },
+    {
+      "path": "7-confirmation.json.gz",
+      "sha256": "2e30c8e1d499968b83dd72f3cfdb9d08ec97137a9780028df7f31d012a0f34ab",
+      "compressedSha256": "8df776d164bc945968889bf8541cfb42a0af37cc9cae4928f9ce7dbd683a30ce"
+    },
+    {
+      "path": "8-mapper-native.json.gz",
+      "sha256": "f514ec49bd55835cd2113751ddaf3b0757b5c02b81f9888102c51d367fc68f9e",
+      "compressedSha256": "bcd957931b5b221513ce3953aee075e7271c6ba73563787957ab47a0a3bcc0e4"
+    },
+    {
+      "path": "9-native.json.gz",
+      "sha256": "e7dae357c056d114ca631340f888e6a3dc8ff348e5623eab64b17eb04b6b6c80",
+      "compressedSha256": "63237cb23b8b1f92c832db54cac2ed34fdbf81d1337621c40a7eece490c4d8bc"
+    },
+    {
+      "path": "10-oracle.json.gz",
+      "sha256": "b2ad8e2eb6202a354c72f31a1df877d700bdae772a67e7945c37a4f5202e0729",
+      "compressedSha256": "ab288264f15b2c12733c040a4e6fba19df732a774c5a0515ef0f8605a86a69a2"
+    }
+  ]
+}

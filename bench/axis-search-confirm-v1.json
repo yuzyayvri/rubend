@@ -1,0 +1,9 @@
+{
+  "format": "rubend-axis-search-cost-spec-v1",
+  "split": "development",
+  "fuel": 5000000,
+  "profileFuel": 20000000,
+  "target": 20,
+  "count": 4,
+  "iterations": 5
+}

@@ -1,0 +1,55 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u06-review-video-v2",
+  "revision": "3493dc8ab4df1dab3968bd3cc2d31c46bf06f91e",
+  "sourceSeals": 2849,
+  "workerGone": true,
+  "executedJobs": 1,
+  "plannedJobs": 5,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read desktop.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 6,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-review-video-v2-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-review-video-v2-failed/0-u06-review-video-v2-plan.json.gz",
+      "bytes": 389711,
+      "compressedBytes": 136173,
+      "sha256": "fa6155cf8f7656465a6b08e78e57f336f2db9d8f6449319f0f7a6eee052a0ef3",
+      "compressedSha256": "8205bb68988154d8bcd843fdb18226ec3e839d59ccf036b5fb993afc50d04b17",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-review-video-v2/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-review-video-v2-failed/1-status.json.gz",
+      "bytes": 998,
+      "compressedBytes": 550,
+      "sha256": "b9879f28503150a7a46bf06e5fc73d83eff3e979371ca48dcfcd70bf76a978fd",
+      "compressedSha256": "6ac7e446ddd1874a9c03e594a94ca2d518975b6af474ffb419ecaf74f5406dcd",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-review-video-v2-desktop.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-review-video-v2-failed/2-u06-review-video-v2-desktop.json.gz",
+      "bytes": 2160,
+      "compressedBytes": 1128,
+      "sha256": "1e59b066d826cbca707a9f44c4aa1f38cb0b1c7c6558b997053b0dc2744bf448",
+      "compressedSha256": "4c739998f12ddf95e3c886f06efca866b3ea2a9ee0de6338e6026a3dfff1f923",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-review-video-v2/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-review-video-v2-failed/3-failed-sources.json.gz",
+      "bytes": 151141,
+      "compressedBytes": 50659,
+      "sha256": "80cf7c698a2817bf06444491e7ac3d124ae266a397bef44154b502180ac71d11",
+      "compressedSha256": "1b397ea6d2286386251fe22f16c86843a8f60a1d85e74b6e12aebe1a940eaead",
+      "roundtripPassed": true
+    }
+  ]
+}

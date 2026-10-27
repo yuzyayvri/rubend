@@ -1,0 +1,21 @@
+import Base
+import {{MODEL}} as M
+import {{REACHING}} as R
+
+def mix(values: +List<U32>, sum: U32) -> U32:
+  match values:
+    case Nil{}: sum
+    case Con{value, rest}: mix(rest, ((sum * 16777619 : U32) .^. value : U32))
+
+def parsed(solution: +List<U32>, sum: U32, cube: Maybe<&2, M.Cube>) -> U32:
+  match cube:
+    case None{}: 0
+    case Some{cube}: mix(R.test_witness(cube, solution), sum)
+
+def run(cases: List<(+List<U32> & +List<U32>)>, sum: U32) -> U32:
+  match cases:
+    case Nil{}: sum
+    case Con{Tuple{values, solution}, rest}: run(rest, parsed(solution, sum, M.from_list(values)))
+
+def main() -> IO(Unit):
+  IO.print(U32.show(run({{CASES}}, 17)))

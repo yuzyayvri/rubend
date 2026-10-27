@@ -1,0 +1,83 @@
+import Base
+import ../src/search.bend as A
+import ./SEARCH.bend as B
+import ../src/cubie.bend as C
+import ../src/coordinates.bend as Q
+import ../src/tables.bend as T
+import ./phase2-move-order.bend as O
+
+type Scan is Type:
+  Scan{table: Array<U32>, cursor: U32, mask: U32, checksum: U32, count: U32, live: Bool, ok: Bool}
+
+type Trial is Type:
+  Trial{table: Array<U32>, mismatches: U32, checksum: U32}
+
+def choose_coord(ok: Bool, yes: Q.Coord, no: Q.Coord) -> Q.Coord:
+  match ok:
+    case True{}: yes
+    case False{}: no
+
+__SCANNERS__
+
+def compared(state: Scan, +mask: U32, +checksum: U32, +count: U32, +live: Bool, +ok: Bool, errors: U32, acc: U32) -> Trial:
+  match state:
+    case Scan{table, cursor, bm, bc, bn, bl, bo}:
+      Trial{table, (errors + Bool.to_u32(Bool.not(ok && bo && Bool.not(live) && Bool.not(bl) && U32.is_eq(mask, bm) && U32.is_eq(checksum, bc) && U32.is_eq(count, bn))) : U32), (acc + mask + checksum + count : U32)}
+
+def first(state: Scan, cube: C.Cubie, kind: U32, radius: U32, previous: U32, errors: U32, acc: U32) -> Trial:
+  match state:
+    case Scan{table, cursor, mask, checksum, count, live, ok}:
+      compared(b_scan(table, cube, kind, radius, previous), mask, checksum, count, live, ok, errors, acc)
+
+def root_walk(fuel: Nat, +seed: U32, cube: C.Cubie) -> C.Cubie:
+  match fuel:
+    case 0n: cube
+    case 1n+p: root_walk(p, (seed * 1664525 + 1013904223 : U32), C.turn(Q.phase2_move((seed % 10 : U32)), cube))
+
+def root(seed: U32) -> C.Cubie:
+  root_walk(12n, seed, C.Cubie{1985229328, 0, 1985229328, 47768, 0})
+
+def trials(fuel: Nat, state: Trial, +index: U32) -> Trial:
+  match fuel state:
+    case 0n state: state
+    case 1n+p Trial{table, errors, acc}:
+      +cube = root((index / 300 + 7 : U32))
+      +kind = ((index / 100) % 3 : U32)
+      +radius = (index % 10 + 1 : U32)
+      +previous = ((index / 10) % 10 : U32)
+      trials(p, first(a_scan(table, cube, kind, radius, previous), cube, kind, radius, previous, errors, acc), (index + 1 : U32))
+
+def score_final(read: Array<U32> & U32, +hx: U32, observed: U32, errors: U32) -> Trial:
+  match read:
+    case Tuple{table, +hy}: Trial{table, (errors + Bool.to_u32(U32.is_ne(observed, C.pick(U32.is_ge(hx, hy), hx, hy))) : U32), 0}
+
+def score_first(read: Array<U32> & U32, +b: U32, +c: U32, observed: U32, errors: U32) -> Trial:
+  match read:
+    case Tuple{table, hx}: score_final(table[(3955785 + b * 24 + c : U32)], hx, observed, errors)
+
+def score_observed(read: Array<U32> & U32, +child: C.Cubie, errors: U32) -> Trial:
+  match read:
+    case Tuple{table, observed}:
+      a = Q.encode(Q.Corners{}, child)
+      b = Q.encode(Q.Edges{}, child)
+      +c = Q.encode(Q.Middle{}, child)
+      score_first(table[(2988105 + a * 24 + c : U32)], b, c, observed, errors)
+
+def score_trials(fuel: Nat, state: Trial, +index: U32) -> Trial:
+  match fuel state:
+    case 0n state: state
+    case 1n+p Trial{table, errors, acc}:
+      +cube = root((index / 10 + 7 : U32))
+      +column = (index % 10 : U32)
+      a = Q.encode(Q.Corners{}, cube)
+      b = Q.encode(Q.Edges{}, cube)
+      c = Q.encode(Q.Middle{}, cube)
+      score_trials(p, score_observed(O.score(table, a, b, c, column), C.turn(Q.phase2_move(column), cube), errors), (index + 1 : U32))
+
+def output(state: Trial) -> IO(Unit):
+  match state:
+    case Trial{table, errors, checksum}:
+      IO.print("{\"format\":\"rubend-phase2-move-native-v1\",\"cases\":4800,\"scoreChecks\":160,\"mismatches\":" ++ U32.show(errors) ++ ",\"checksum\":" ++ U32.show(checksum) ++ ",\"cursorPackets\":128,\"cursorChecksum\":" ++ U32.show(O.test_checksum(7)) ++ "}")
+
+def main() -> IO(Unit):
+  output(trials(4800n, score_trials(160n, Trial{T.generate(), 0, 0}, 0), 0))

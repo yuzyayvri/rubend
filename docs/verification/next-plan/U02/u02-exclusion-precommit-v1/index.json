@@ -1,0 +1,15 @@
+{
+  "format": "rubend-subgroup-precommit-v1",
+  "passed": true,
+  "rootProofVerdict": true,
+  "candidateTypeAndTerminationVerdict": true,
+  "nativeSyntheticChecks": true,
+  "emittedCandidateSharedArrayMode": 0,
+  "wrongMaskTypeRejected": true,
+  "formalNp01To03Proofs": false,
+  "exhaustiveOracle": "queued separately",
+  "productionIntegrated": false,
+  "performanceClaim": false,
+  "independentReview": false,
+  "archives": ["0-u02-exclusion-precommit-v1.json.gz", "1-u02-exclusion-precommit-v1-resource.json.gz"]
+}

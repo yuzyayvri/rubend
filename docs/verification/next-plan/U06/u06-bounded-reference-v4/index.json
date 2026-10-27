@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u06-bounded-reference-v4",
+  "revision": "5455938481947c932fcaa715ff128febabef14fb",
+  "sourceSeals": 2800,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T16:15:50.706Z",
+  "finishedAt": "2026-10-24T16:15:51.606Z",
+  "archives": [
+    {
+      "path": "0-u06-bounded-reference-v4-plan.json.gz",
+      "sha256": "84a31d5c64a512ee666ec7996e183b3d670206295e70015ce2e269ab47825d6e",
+      "compressedSha256": "0241a859f4646490ed864840a8e7e18560923e51b29b7c1e93ab0461004f32f6"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "3355fe6219ae024d799a203bb7040578fbaec4897e155ecd2804751c8ef43685",
+      "compressedSha256": "350127c5d424d12e6545aaf459ba80a766be67403f2e552498ed000d85e46d2a"
+    },
+    {
+      "path": "2-u06-bounded-reference-v4-verify.json.gz",
+      "sha256": "e29129c2055e7899eb3f90373a7ff78364fa9942411f845079c281291fd11227",
+      "compressedSha256": "f738905ef470810779de3ab8a6a14b7d5060b5774bec24eb3351ce10d13e1e8b"
+    },
+    {
+      "path": "3-confirmation.json.gz",
+      "sha256": "efc6256bce4f42bfce082a48e9f7a941e00151f820aa21067c66d21a291e1d68",
+      "compressedSha256": "6642f9b04588c4c7a91102b65e05b248cffa8c151082e33999a39738560d3881"
+    },
+    {
+      "path": "4-finite.json.gz",
+      "sha256": "364ee273148ff11d4f57be32f19d00655faa793a82d7534eb123b78cf9a61463",
+      "compressedSha256": "91711fc51c9b792046bef4565ead37c4eec00ba9cc1c634b9df0b3f7d60c3ad6"
+    },
+    {
+      "path": "5-gate-reuse.json.gz",
+      "sha256": "369ef35534e719e8ccbd8cb6dcfb8bb946ad601007b0fba3871368b4dc4b7806",
+      "compressedSha256": "23e1970f73ea55dba8845f641e2dc36ce9b730b7ac45f0ff54a36b4e503618c6"
+    },
+    {
+      "path": "6-native.json.gz",
+      "sha256": "44e5faf307e1fe792038ee05c75e7f0570619dd54a26e80032cbaea5ca77bbd0",
+      "compressedSha256": "6fd690ffc7404f722a06dc3d82357111db6919961ffadf835e76867ac65bb8dd"
+    },
+    {
+      "path": "7-proof.json.gz",
+      "sha256": "87504f53e10e92217d87f7772e6e7d38585e6b796c4e8622f2d8014774e5dbe6",
+      "compressedSha256": "fca20cb28b3102dc8a67287d1d641523cc8e0b8363f8c8f5fce8a109e9e6b49b"
+    }
+  ]
+}

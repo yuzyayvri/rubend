@@ -1,8 +1,49 @@
 # Proof coverage and remaining trust
 
+## Final evaluation boundary
+
+The [final comparative report](../verification/next-plan/U07/COMPARATIVE-RESULTS.md)
+accounts for 57,678 measured attempts, with every returned answer independently
+replayed again. Its empirical consistency audit finds no contradiction among
+1,061 recorded optimality claims. This does not prove optimized search
+completeness, loaded-table refinement or universal optimality. Exported JSON
+and stored-event browser replay do not serialize those missing formal proofs.
+
+The source-identical U07 full regression and root gate remain reusable. That
+root record has 23 laws, sixteen toolchain checks and 74 recorded source inputs.
+The later fixture changes are covered separately by the installed application's
+ten lifecycle checks. The final audit rechecks those source and artifact bindings
+instead of rerunning unchanged laws or rebuilding sealed binaries. Approved
+NP01 through NP08 retain exactly the scoped obligations and open bridges below.
+No stronger application label is enabled. Independent review remains not run
+under the solo restriction, and operator review remains a before-merge gate.
+
 `bend PROOF.bend --verdict` currently checks 23 laws through the normal checker
 and the independently built BendTT kernel. This is not a proof of the entire
 application or compiler.
+
+The separate approved [NP04 component](../verification/next-plan/U03/NP04-CONSERVATIVE.md)
+checks quantified Nat conservative decoding, finite-block valid-index semantics,
+inherited admissibility and bounded-sum arithmetic. Its 193,545 actual U32/native
+comparisons are finite reflection, not a universal U32 or bit-storage theorem.
+Loaded-data validity and optimized pruning remain outside this result.
+The original 23-law root graph is unchanged and its evidence is reused.
+
+The [NP05 finite-path kernel](../verification/next-plan/U03/NP05-PROJECTION-PATH.md)
+lifts an actual solving word using explicit commutation instances at its legal
+successive roots. Its typed projected minimum bounds that word's exact HTM length.
+Maximum composition and eighteen Unit-quotient one-move instances check.
+Both six-edge reference graphs pass full independent finite data audits.
+Global concrete six-edge commutation, universal codec and native/storage
+refinements are not discharged. This is not a production pruning admission.
+
+The [exact-work safety record](../verification/next-plan/U05/EXACT-WORK-SAFETY.md)
+checks approved NP06 exact-context completed-failure reuse, NP07 finite
+coverage/exhaustion exclusion and NP08 typed-reference left inverse action and
+reconstruction. Both checkers, twenty-four false-proof entrypoints and independent
+reference replay checks pass. The actual optimized enumerator must still supply
+its failure and coverage witnesses. No cache, new global label or optimized
+dual-state refinement is certified by naming those predicates.
 
 | Module | Checked obligation |
 | --- | --- |
@@ -22,6 +63,33 @@ completeness theorem.
 
 ## Actual candidate boundary
 
+The separately checked [NP01 reference-group formulation](../verification/next-plan/U02/NP01-GROUP.md)
+quantifies explicit subgroups and global Nat bounds over word-presented typed
+legal states. The [NP03 formulation](../verification/next-plan/U02/NP03-GROUP.md)
+uses the actual inverse-word solution transfer without an inverse callback
+premise. The [NP02 formulation](../verification/next-plan/U02/NP02-FAMILY.md)
+checks finite indexed families, exact evaluated root values and complete move
+coverage. Its eight oriented-corner stabilizers provide a concrete complete
+instance. All three pass their complete source, negative and backend guards. These are
+additional approved reference statements, not changes to the 23 root laws.
+Validated-input reachability, optimized target correspondence, loaded-data
+admissibility and complete optimized-search certification remain open.
+
+The separately checked [certificate-reaching bridge](../verification/next-plan/U02/CERTIFICATE-REACHING.md)
+recovers a typed reaching word from the actual `Certificate<cube>`. It proves
+that the current 54-field Boolean solved predicate implies equality with solved,
+then applies arbitrary-facelet word cancellation and typed replay refinement.
+The result's equality is tied to the original input. Both proof checkers,
+negative sources, independent replay and 464 native packet cases pass.
+The [packed admission bridge](../verification/next-plan/U02/PACKED-CERTIFICATE.md)
+compares all five words of an actual packed root with that witness's checked
+packing. Successful admission carries exact equality, including every padding
+bit. Its forward and actual `Cubie.inverse` facelet views are checked. Both
+checkers and negative sources pass, with 1,079 finite admissions/inverse checks,
+10,240 bit refusals and 570 native packet checks. This is a post-certificate
+admission contract, not universal validator completeness. Target, loaded-data
+and optimized traversal bridges remain open. No pruning is enabled.
+
 The native engine calls `Certificate.certify` before it emits an answer. This
 returns an accepted value only with evidence that Bend model replay is solved.
 The bridge independently replays the emitted numeric move list through
@@ -31,6 +99,41 @@ law can use it. Exported JSON records a checked result; it is not a serialized
 formal optimality proof.
 
 ## Executable evidence beyond the laws
+
+The separately checked [bounded reference](../verification/next-plan/U06/BOUNDED-REFERENCE.md)
+instantiates original S04 without pruning, tables, caches or partial traversal.
+For every natural radius and arbitrary facelet cube, its completed result
+contains either a replay-proved solving word within that radius or a function
+excluding every such solving word. The empty word and all eighteen first moves
+are covered. Both checkers accept the exact result type and structural search.
+Sixteen false-proof entrypoints, an independent 3,502-state oracle, 153 bound
+queries, 36 raw-center controls and 189 native packets pass.
+
+This proves the reference's completed outcomes, not that optimized search
+refines it. Its numeric packets do not serialize formal proof objects, and one
+found result at a larger radius is not automatically shortest. The existing
+23-law/toolchain gate is reused from an actual archived passing execution with
+all 87 inputs unchanged, with six altered-record controls. No fresh root-gate
+run or stronger application label is claimed. Optimized pruning, loaded data,
+scheduling and completion refinement remain open.
+
+The supporting [actual search-goal reflection](../verification/next-plan/U06/SEARCH-GOAL-REFLECTION.md)
+checks each of the seven real profile predicates. For every five-word packed
+value, a true predicate implies equality with `Cubie.solved`, facelet equality
+with the model's solved cube and a real zero-radius reference result containing
+the empty replay-proved word. The raw-word converse is not claimed. Fifty-two
+padding counterexamples show why it would be false. All seven profile verdicts,
+sixteen negative checker entrypoints, 8,365 sealed JavaScript checks and two
+native checksums pass. This is a positive goal bridge, not a contour-exhaustion
+theorem, validator proof or stronger application label.
+
+The [optimized-reference gap inventory](../verification/next-plan/U06/REFINEMENT-GAPS.md)
+names seven missing implications, including the pre-search input boundary,
+concrete targets, loaded data, contour simulation and interruption. Its fixed
+guard inspects actual entrypoints and checks the export distinction against
+real reference packets. It does not prove any missing implication or enable
+a stronger label. In particular, a bounded found result can exceed the true
+optimum. Numeric packets do not serialize the reference's proof fields.
 
 - 10,000 moves cross-checked against independent cubing.js KPuzzle semantics.
 - 1,000 arbitrary legal states, 18,000 packed/specification move comparisons,

@@ -1,0 +1,60 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u00-aa-cpu-v1",
+  "revision": "411254c7cdf4836b9193187bc6e1c2c6245e5a61",
+  "sourceSeals": 2485,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T03:18:13.587Z",
+  "finishedAt": "2026-10-24T03:19:15.984Z",
+  "archives": [
+    {
+      "path": "0-u00-aa-cpu-v1-plan.json.gz",
+      "sha256": "981e8b8721664488908d2f435d74287d8a852e5b2b80650c529c5dd21a8303ef",
+      "compressedSha256": "a7564fd0c2e3563ff2afa97230dcf4644af27547bc2bc4b06ba490776f4ccade"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "9074fcae2420aa0daa260d9082363bb64fbf5e60eca3848199eb2ad27f66de51",
+      "compressedSha256": "1bab1ff10790cf7ab05e9b5718e374dd250efc0fda941d873dffb36d5d9c53e2"
+    },
+    {
+      "path": "2-u00-aa-cpu-v1-compile.json.gz",
+      "sha256": "14a08929abd81d7ae1a05d74fa4df293d007835005b97edf34d5c2a369d336bd",
+      "compressedSha256": "3670a5e262ac3f4f0b361b16521c6d5e67ca696065397522e26b64f9f8439694"
+    },
+    {
+      "path": "3-u00-aa-cpu-v1-measure.json.gz",
+      "sha256": "b2efcb127a507dc4d925c82f357dbf10de3b8bc785c04adfc60fc00234453792",
+      "compressedSha256": "dc6467aa900b13247a2023b55e3f96ff655034e4a320f4c5c7a4e7b83d5d6454"
+    },
+    {
+      "path": "4-u00-aa-cpu-v1-confirm.json.gz",
+      "sha256": "63a52cd52c14e4be9b76f2624b0f8068dc06106ee0047aa5a7a3eff98f566728",
+      "compressedSha256": "32f250e4e2ac99ea23122efdf4db43b832d73d8ee67aab233b26c895fa79e596"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "42e13c53da43052030309a96262ba63c73ee09bfdce4d00251b808221616823d",
+      "compressedSha256": "ced480de4dc4a4b190c6aad58d2aa3460c55d68af24cf7935101af0783258a81"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "ed892ecac93f3d7f14240006ff2fa19444132e7a98c8787c0121b5524511a225",
+      "compressedSha256": "4effd98c3a998ce72c8aef8d81480e2384d838c9fe5f84143ad20380584b1d6d"
+    },
+    {
+      "path": "7-controls.json.gz",
+      "sha256": "8f63fc9ce89dfcbc11ffb4c72c11c74b1cf007a5febb6bb7fdbb2b4e76132211",
+      "compressedSha256": "0452fde24cc1d8dd0ce39e26c871d4792060a2f23f51f767a01f08244c51b2bf"
+    },
+    {
+      "path": "8-observation.json.gz",
+      "sha256": "9aa12dd4edade09831b85ade4b4265e1e088ebb8237465ccf02061b6abb37de6",
+      "compressedSha256": "98bb549d3ed32256fb272b6745ed981654afacd6c320b17a66a8c66b5754ea97"
+    }
+  ]
+}

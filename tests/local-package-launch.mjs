@@ -1,0 +1,4 @@
+import assert from "node:assert/strict";
+import {localPackageLaunch} from "../bench/local-package-launch.mjs";
+
+const root="/fixture",store=root+"/build/experiments/u07-delivery-fixture/runtime-store",path="/nix/store/"+"0".repeat(32)+"-rubend-0.0.0",r=localPackageLaunch(root,store,path);assert.equal(r.program,"bwrap");assert.ok(r.args.includes("--clearenv"));assert.equal(r.args.at(-1),path+"/bin/rubend");assert.equal(r.args[r.args.indexOf("--ro-bind")+1],store+"/nix");assert.equal(r.args.includes(root),false);let rejected=0;for(const[s,p]of[["/nix",path],[root,path],[store+"/nested",path],[store.replace("u07-delivery","u01-delivery"),path],[store,"/nix/store/../../outside"],[store,path+"/bin/other"],[store,path.replace("-rubend-","-other-")]]){assert.throws(()=>localPackageLaunch(root,s,p),assert.AssertionError);rejected++;}console.log(JSON.stringify({passed:true,rejectedNamespaceTargets:rejected,runtimeOnlyReadOnlyMount:true,noBrowserOrActualNamespace:true}));

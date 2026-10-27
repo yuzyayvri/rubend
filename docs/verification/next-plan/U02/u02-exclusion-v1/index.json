@@ -1,0 +1,21 @@
+{
+  "format": "rubend-subgroup-exclusion-results-v1",
+  "passed": true,
+  "revision": "f146a9a",
+  "sourceSeals": 1541,
+  "finishedAt": "2026-10-22T18:30:36.610Z",
+  "independentOracleStates": 46741,
+  "oracleTransitions": 63036,
+  "shortestDagEdges": 51480,
+  "actualMutationCounterexamples": 4,
+  "knownShallowBoundIncreases": 0,
+  "cacheUnchanged": true,
+  "proofToolchainChecks": 16,
+  "workerGone": true,
+  "resourceStops": false,
+  "formalNp01To03Complete": false,
+  "productionIntegrated": false,
+  "performanceClaim": false,
+  "independentReview": false,
+  "archives": ["0-u02-exclusion-v1-plan.json.gz", "1-status.json.gz", "2-u02-exclusion-v1-oracle.json.gz", "3-u02-exclusion-v1-confirm.json.gz", "4-oracle.json.gz", "5-confirmation.json.gz"]
+}

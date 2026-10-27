@@ -1,0 +1,65 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-final-browser-v1",
+  "revision": "e09633bd56d01444ebd5a3ffb664f8f61fcfed08",
+  "sourceSeals": 5157,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-27T04:37:45.904Z",
+  "finishedAt": "2026-10-27T04:37:57.067Z",
+  "archives": [
+    {
+      "path": "0-u07-final-browser-v1-plan.json.gz",
+      "sha256": "f8d69d24dea3d448d197ca7d7ff2a33095b77238e9995eef8a86773583613c7b",
+      "compressedSha256": "95b8110321f9a7fda548ec97a96de6114eb45992daa5bfed5cc963a6d93381f5"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "bae6cec76be3f88d3e12d94fb51aebc3ca4ca5503c224f6b99cfea9549041087",
+      "compressedSha256": "fc23bbf5a4f1a06d69f503d971f4445971711cec3db03cf0bf3151d3583887a7"
+    },
+    {
+      "path": "2-u07-final-browser-v1-http-controls.json.gz",
+      "sha256": "3d0e5f45187d46e14ff2b407f06143c7421d67dd8cae11aa7d24659d8c9461f9",
+      "compressedSha256": "648d95f15479d434112b4fe4e92c6bcf1d7f8ec1f93d602d63afc47dd9829823"
+    },
+    {
+      "path": "3-u07-final-browser-v1-confirm.json.gz",
+      "sha256": "86ffaebd19e55764b6e9ca7a13397768dbc6327cb4a4e9f585fb0a3f56bd70b1",
+      "compressedSha256": "45f8b1cec30af7e0cf164e88815c6f33edd8bbc30f08a07bb7d25fb636420f96"
+    },
+    {
+      "path": "4-browser-observations.json.gz",
+      "sha256": "79e7d14c63195f162f84a7247818618fb6f59cd7dc8ec3e819dc5bcbb810bf99",
+      "compressedSha256": "3837b81d99992eb17ba18abebc736af2c52c96b6bf1f28aebd4814fc2586dd95"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "c353853b009af5849508ee304d3d15900f57f5bdffdac873344c29c4d2f755ff",
+      "compressedSha256": "bba8b2a0fa6f8b5db783ba44b75e701919f2801224997f327f18d5c77e0a1fd4"
+    },
+    {
+      "path": "6-http-controls.json.gz",
+      "sha256": "cbe64975dadb3e671319665e1278583e29b86cf0a5f0f465a4903bc2738b2564",
+      "compressedSha256": "4a5c4458693baf91faa38b5789aab833b3e8341bf3c455132185ded67ab7ad0c"
+    },
+    {
+      "path": "7-live-plan.json.gz",
+      "sha256": "ef40c2ff68f8dae59e7caeb948ed791db0a0b7cc8ecc0f8592c5a1526a007fb2",
+      "compressedSha256": "02027c8983fea4a56cb91ce2f70d5fb896a5b1ff08716e7c6bb8b79ee905d381"
+    },
+    {
+      "path": "8-live-resource.json.gz",
+      "sha256": "44d0f6cf01be2b46b1408f44c0cb467bdd19ee50057e2b77b38de5262f1832a9",
+      "compressedSha256": "27f6b036d3418438d9aa9e77e2fb6deb70d81eb60ba586ac84a2e09062d7b791"
+    },
+    {
+      "path": "9-live-session.json.gz",
+      "sha256": "ee6448470aecde1f4df444e9c942a6d08128609bc9da7c38533344c7ec4314bf",
+      "compressedSha256": "fdf02ffe8d56f9189bfaba38c84539e8f582f56b99b6826c0dc1a68cea3e62fa"
+    }
+  ]
+}

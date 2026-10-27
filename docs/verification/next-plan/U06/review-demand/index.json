@@ -1,0 +1,30 @@
+{
+  "format": "rubend-demand-review-images-v1",
+  "images": [
+    {
+      "path": "docs/verification/next-plan/U06/review-demand/context-restored.jpg",
+      "sha256": "5d8f3548c364fa59f08cf8a559ea7230a48d965d640c877eb810b9fbfbc5c5c6"
+    },
+    {
+      "path": "docs/verification/next-plan/U06/review-demand/narrow.jpg",
+      "sha256": "e2b7bff8313ef003224d3697646333f9291e0e01e963266dbf8baf0fe3d7bc19"
+    },
+    {
+      "path": "docs/verification/next-plan/U06/review-demand/worker-failure.jpg",
+      "sha256": "f45d365933b73fda032e3f252b0183e9f75cfcfa4a21d5d3a3c6d109764fd368"
+    },
+    {
+      "path": "docs/verification/next-plan/U06/review-demand/camera-before.png",
+      "sha256": "dd91c962d46f5b19ecf535ae76292954aece09a72acd79ce0dc65b658b8be334"
+    },
+    {
+      "path": "docs/verification/next-plan/U06/review-demand/camera-after.png",
+      "sha256": "d02fd58e8f36ca26726e2d314c6467ed8e86f14989d0b1bad1054f5a6d74c27a"
+    }
+  ],
+  "sourceEvidence": "../u06-gui-demand-v1/index.json",
+  "videoRecorded": false,
+  "operatorReview": false,
+  "performanceAcceptance": false,
+  "independentReview": false
+}

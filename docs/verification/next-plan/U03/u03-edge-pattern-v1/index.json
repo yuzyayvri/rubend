@@ -1,0 +1,40 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u03-edge-pattern-v1",
+  "revision": "5f347d6fe428f133baf7eb4b64728a63523ea49b",
+  "sourceSeals": 1865,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T08:35:10.618Z",
+  "finishedAt": "2026-10-23T08:36:26.904Z",
+  "archives": [
+    {
+      "path": "0-u03-edge-pattern-v1-plan.json.gz",
+      "sha256": "b20db382a951dc3826769606e93dbcd1ab58e38429649de013ea9f39cdd45531",
+      "compressedSha256": "41ef545e7654075b576b8c4670cd97825dca568905fef97b2e7fe46d78925db2"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "aeac2619e1a54bbf3698df3f8aa28f6996b3bac8330449878467039816df0c2a",
+      "compressedSha256": "65498a5e2d6ad65f4d0610521b7fb79ecb3b5d41374aad7cac580d916ae4c272"
+    },
+    {
+      "path": "2-u03-edge-pattern-v1-preflight.json.gz",
+      "sha256": "ac28a28ba1201a0c8d0657fc8e346849955b933f1f2d0a7001f7667fee89d46d",
+      "compressedSha256": "7f27187671b08eac9c8ff1fd6cbd3ee03002ceea05a46b579c3547cad2878b63"
+    },
+    {
+      "path": "3-guard.json.gz",
+      "sha256": "6581c7080115ecd9e9aea417fb17e2ab50a49ad29115e103abd75a0151316227",
+      "compressedSha256": "03f70d5af9ec65c4102a81ea7fa74dd1e8606e69651ed4fbf11c133de6e23a3b"
+    },
+    {
+      "path": "4-samples.json.gz",
+      "sha256": "e27bcc98802814d34607c95cb73854036d360be5181e658dede89b2fa63c0a1f",
+      "compressedSha256": "d72834995c116403fb32f557846322f33cb62b5b63809a24e3e9c3f1adf16590"
+    }
+  ]
+}

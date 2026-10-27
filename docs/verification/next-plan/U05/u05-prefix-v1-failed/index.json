@@ -1,0 +1,73 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u05-prefix-v1",
+  "revision": "fa8dd8be1db26788d0979a1bc5312b95321d02ce",
+  "sourceSeals": 2284,
+  "workerGone": true,
+  "executedJobs": 2,
+  "plannedJobs": 3,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read oracle.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 6,
+  "browserResultCaptured": false,
+  "partialSamples": 0,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u05-prefix-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/0-u05-prefix-v1-plan.json.gz",
+      "bytes": 310303,
+      "compressedBytes": 108967,
+      "sha256": "608efc4d66f55b193bae6b02b8fb5b2e166ef8017dfbb47fc22ce1fa9164505b",
+      "compressedSha256": "40db5d2beb93417dba9f89ad332506ac6b6784ec2981f863f550b180741916d2",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/1-status.json.gz",
+      "bytes": 1357,
+      "compressedBytes": 636,
+      "sha256": "87c45b6772f88c9275d7477fbe8ae38e932b4b0d475fd6d75a5c6ca1fe83bf9b",
+      "compressedSha256": "748b4d7cb38ece5ce56c1f2f7b25bca35e413def7275d5804440037fed1c067a",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u05-prefix-v1-compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/2-u05-prefix-v1-compile.json.gz",
+      "bytes": 1154,
+      "compressedBytes": 703,
+      "sha256": "7e7581b2478dd341cbfed422a406f719e2cbac25b981ba9bba7c1cab7c910522",
+      "compressedSha256": "96ddae1449689f92e9989ccf4c3275fc42ecc7d8d43f4502d86fb1ccc144e760",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u05-prefix-v1-oracle.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/3-u05-prefix-v1-oracle.json.gz",
+      "bytes": 3254,
+      "compressedBytes": 1289,
+      "sha256": "2e10b70d8d2eccfecad0b3472a2060960168eab6d63d7b6c95e52e25abaf3c11",
+      "compressedSha256": "e12cf9aac3294fc172f97c0786a32f62c3a6d178934582ecbb9af9b06c4b6408",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/4-failed-sources.json.gz",
+      "bytes": 115017,
+      "compressedBytes": 39719,
+      "sha256": "cf15c6f92f7c66188bb607f575e2da3f3566b4df1bfc4354089adf500b7d72cd",
+      "compressedSha256": "4fab64eec44704b30b97a1979ff7714a5e90ebec740b4317ec7026a58f44d759",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u05-prefix-v1/compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U05/u05-prefix-v1-failed/5-compile.json.gz",
+      "bytes": 13883,
+      "compressedBytes": 6693,
+      "sha256": "451309783a51acc59f7f45cb1c117882246f06f26fd806797d93665af555bff4",
+      "compressedSha256": "62645b8808d14ba78cbfa115cb86af7317d6a26d40ebb779567ff11c2bb179e0",
+      "roundtripPassed": true
+    }
+  ]
+}

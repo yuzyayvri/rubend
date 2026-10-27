@@ -1,0 +1,5 @@
+import assert from "node:assert/strict";
+
+const positions=[[7,19],[5,10],[1,46],[3,37],[28,25],[32,16],[34,52],[30,43],[23,12],[21,41],[48,14],[50,39],[8,20,9],[2,11,45],[0,47,36],[6,38,18],[29,15,26],[27,24,44],[33,42,53],[35,51,17]],faces="URFDLB";
+export function faceletsToReid(facelets){assert.match(facelets,/^[URFDLB]{54}$/);for(let f=0;f<6;f++){assert.equal(facelets[9*f+4],faces[f]);assert.equal([...facelets].filter(c=>c===faces[f]).length,9);}return positions.map(indices=>indices.map(i=>facelets[i]).join("")).join(" ");}
+export function reidToFacelets(reid){assert.equal(typeof reid,"string");const parts=reid.trim().split(/\s+/);assert.equal(parts.length,20);const result=Array(54);for(let f=0;f<6;f++)result[9*f+4]=faces[f];for(let i=0;i<20;i++){assert.equal(parts[i].length,positions[i].length);assert.match(parts[i],/^[URFDLB]+$/);for(let k=0;k<positions[i].length;k++){assert.equal(result[positions[i][k]],undefined);result[positions[i][k]]=parts[i][k];}}const facelets=result.join("");assert.equal(facelets.length,54);assert.equal(faceletsToReid(facelets),parts.join(" "));return facelets;}

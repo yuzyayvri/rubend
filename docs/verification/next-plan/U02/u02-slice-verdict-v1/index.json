@@ -1,0 +1,35 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-slice-verdict-v1",
+  "revision": "8d2758c11e959c6497c3e5606ab1cf29ceee511a",
+  "sourceSeals": 1832,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T06:38:19.346Z",
+  "finishedAt": "2026-10-23T06:42:51.405Z",
+  "archives": [
+    {
+      "path": "0-u02-slice-verdict-v1-plan.json.gz",
+      "sha256": "77599abb15870d794829c73cd52a81ab6d0c3068a563885d8c59d8fff7060a22",
+      "compressedSha256": "f5bae210bcbde562594fb340e2e1c789db1fd16e5bd54c8772c7062bbcef3717"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "358158dbd8802474cde919dd3979828969804e8544c2a71d71093d5b6d321590",
+      "compressedSha256": "522891c83dad31699597a359003904365ef8711008784caf2e046dda206299e2"
+    },
+    {
+      "path": "2-u02-slice-verdict-v1-diagnose.json.gz",
+      "sha256": "e6e4fa8b4fd767bf41dc66451099efb09e9cff8eef31c033d852cac5181b114e",
+      "compressedSha256": "3f49ffcc80915df4045f4f284f289edb23f7d11d1b38bc514f356997b9d7a151"
+    },
+    {
+      "path": "3-diagnostic.json.gz",
+      "sha256": "7c4035550ae4fda310b66556fd224a779b62e5966d488579ecadf328080c4b75",
+      "compressedSha256": "d5d14998a93600b36ca37253215f81ff9dfc425ce3566c53021324ad32889122"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync} from "node:fs";
+import {validateFinalEvidence} from "../bench/final-roadmap-audit.mjs";
+
+const read=p=>JSON.parse(readFileSync(p,"utf8")),evidence={report:read("build/experiments/u07-final-report-v1/report.json"),browser:read("build/experiments/u07-final-browser-v1/confirmation.json"),fileWitness:read("build/evidence/u07-final-download-v1-live-verification.json"),matrix:read("docs/verification/next-plan/U07/FINAL-APPLICATION-MATRIX.json")};assert.equal(validateFinalEvidence(evidence),true);
+const mutations=[e=>e.report.aggregate.slots--,e=>e.report.formalOptimality=true,e=>e.report.holdoutTuning=true,e=>e.report.publicationOrPushAuthorized=true,e=>e.report.performanceAcceptance=true,e=>e.browser.solverExecution=true,e=>e.browser.largerExactTierSelected=true,e=>e.browser.observations=0,e=>e.browser.sourceIdenticalInstalledAssets=false,e=>e.fileWitness.actualFileBytes=0,e=>e.fileWitness.protectedDownloadRestored=false,e=>e.fileWitness.solverExecution=true,e=>e.fileWitness.ownerGone=false,e=>e.matrix.allLanesFresh=true,e=>e.matrix.lanes.pop(),e=>e.matrix.lanes[4].kind="fresh-native-larger-exact"];
+for(const mutate of mutations){const changed=structuredClone(evidence);mutate(changed);assert.throws(()=>validateFinalEvidence(changed));}
+const result={passed:true,negativeControls:mutations.length,rejectsMissingWork:true,rejectsFormalProofInflation:true,rejectsNativeReplayRelabel:true,rejectsUnrestoredFile:true,rejectsLargeTierPromotion:true,solverRuns:0};if(process.argv[2])writeFileSync(process.argv[2],JSON.stringify(result,null,2)+"\n",{flag:"wx"});console.log(JSON.stringify(result));

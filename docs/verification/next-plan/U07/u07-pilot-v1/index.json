@@ -1,0 +1,70 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-pilot-v1",
+  "revision": "54dcc92ec7a5e10b3f2fce475f3c105dc8bf46d4",
+  "sourceSeals": 2501,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T23:54:44.626Z",
+  "finishedAt": "2026-10-23T23:58:20.940Z",
+  "archives": [
+    {
+      "path": "0-u07-pilot-v1-plan.json.gz",
+      "sha256": "aa35c68899e2f3e4d6afaa81923edbdfbb1afd5c81b8019f810386f93094d50c",
+      "compressedSha256": "e7b234108f208f467c202a76aed0191a3bfc1478dcd92e5cf3f68079eaea2a90"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "9786f4aa8cb6225f5444a0bfb3f6a9b9ebae7b0bef72a9b5da8b16ddad054aa7",
+      "compressedSha256": "0261d2ce03a62f34ab09d1a376e7692407a857ac650c9e8568c98bcc9dfcb9eb"
+    },
+    {
+      "path": "2-u07-pilot-v1-preflight.json.gz",
+      "sha256": "d4130a66678dcc49425c7c782b9d04734a4c55fe972c63b66801779f99a2757c",
+      "compressedSha256": "fa91d8f556a0210a085b78fa046072254d196574cdd2ac4378ac4c4bd77b8e96"
+    },
+    {
+      "path": "3-u07-pilot-v1-pilot.json.gz",
+      "sha256": "1f6a4f299b4a4123e5c4aeed2ab5ec86de0293a9d6ea88a43f87f978583549f7",
+      "compressedSha256": "ce08da1a2423caf3121478d2b30765881f74ba8e8e282763b48ec9883d0c9ba9"
+    },
+    {
+      "path": "4-u07-pilot-v1-confirm.json.gz",
+      "sha256": "26f4e70440803b68af29d8742be999806c814857fcced24420efffcf46dbbf03",
+      "compressedSha256": "61218fab7075a4257327763b642bf30b20af373294d4e61fd71b7050195015a0"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "ac9b16b8ae50980dce71971fd153ec01a6c4e401e4152aa4d14144c26b18d299",
+      "compressedSha256": "ce55197fa62e54b4d072b4e997daa833f49290cd5859928032961183965648c0"
+    },
+    {
+      "path": "6-controls.json.gz",
+      "sha256": "a8b0d3e2ecff04a61c0963ba145c5bc2cb828d838fb539aa6d6c5029d17c9230",
+      "compressedSha256": "6d5104b05079ba3086ba2c052c806e10d4d9e7f256665fbc3ccbcfd5bead3866"
+    },
+    {
+      "path": "7-fixture-regression.json.gz",
+      "sha256": "32c813129457b3cbfa59a924ba4b5473e3c23c38b94e3ae092f12641123d59bc",
+      "compressedSha256": "5b461156fff7eaab6fcb53a176d92a384f1eecde562e8be1a2a6e4121b9426ab"
+    },
+    {
+      "path": "8-freeze.json.gz",
+      "sha256": "a022a7e25667fa7fa90c0511c2f5cd68a227a8ded818aa2133f5c401f6040737",
+      "compressedSha256": "8207fe39b988061a13816a6ec9f025bb41642ca93869cfad848caab15c6a26c9"
+    },
+    {
+      "path": "9-observation.json.gz",
+      "sha256": "6f7774ee945f32d4a21cafdfe67f0360546f2aa7706f4884d3afc2e068def567",
+      "compressedSha256": "cf82445327de6b14bda2e68002cc869defab02213a60dfb35caadc07a5e628f5"
+    },
+    {
+      "path": "10-ready.json.gz",
+      "sha256": "ba25e6a14f69501774a3c0c6bf8e4b64e134917dd3e523a686d2d475d78a7e84",
+      "compressedSha256": "23398648d8e6480ed6fe3f676f73573013c205b17ad380f92d1fa2130b8b65d4"
+    }
+  ]
+}

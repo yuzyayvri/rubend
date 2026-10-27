@@ -1,0 +1,107 @@
+{
+  "passed": false,
+  "preserved": true,
+  "id": "u02-forward-cost-v1",
+  "revision": "d0ddaf525f86440d32df571acecf22fd4026bd96",
+  "sourceSeals": 4107,
+  "resourceReceipts": 2,
+  "workerGone": true,
+  "actualRecordedNativeOwnerGone": true,
+  "recordedIpcGone": true,
+  "ipcDirectoryPathMissingInFailedRecord": true,
+  "directIpcRecheckAvailable": false,
+  "resourceStops": false,
+  "diagnosticSampleTimedOut": true,
+  "diagnosticCompletedRequests": 4000,
+  "diagnosticPlannedRequests": 4096,
+  "scoredBatchesStarted": 0,
+  "preparationAndCalibrationPassed": true,
+  "profileBinariesBuilt": true,
+  "noPerformanceVerdict": true,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-forward-cost-v1-plan.json",
+      "path": "0-u02-forward-cost-v1-plan.json.gz",
+      "sha256": "260903e857b367df63ac434d04cba0328d928161768489746a681d0fb4133537",
+      "compressedSha256": "e9c32361176c59e0b033294f02226963e944390dbb98e72667239eed36ed4c8e"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-forward-cost-v1-prepare.json",
+      "path": "1-u02-forward-cost-v1-prepare.json.gz",
+      "sha256": "9e3dfdfa06fdea9bd76824f040aea37a026e4f05ba6c7004948c7e44044fc4bf",
+      "compressedSha256": "78f8be2605c0fbfc5491a7d2302b30f46697b1ae08cb98fae0515a0a9f18cde1"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-forward-cost-v1-profile.json",
+      "path": "2-u02-forward-cost-v1-profile.json.gz",
+      "sha256": "f334f9b4a05617933501f74b61dc1fa409ab985cf6daedf021ecea81ecd476a3",
+      "compressedSha256": "02e7c2aa7b3b3c1995cbc921164dd5acf30f11519199a1f21766680def8b3a45"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/calibration.json",
+      "path": "3-calibration.json.gz",
+      "sha256": "62ae3e2054744409635dda97844a7bebd4c6d8615b8fe69df6a5c63ee15c64dd",
+      "compressedSha256": "73cdfba75db6233d5568135cf8faa40df899425139e6b20e64bc28b31f35ade2"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/compile.json",
+      "path": "4-compile.json.gz",
+      "sha256": "cdc0895a6fc4661ddfd20ce69f6fbde416f4345ed0916ce20f03f7537e2b8474",
+      "compressedSha256": "bc97acc3fc4aaa023c46bb119d755588b9460ff0f16e8285e7d86ed881b1a4f1"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/cpu-observer-cLRnmh/usage.json",
+      "path": "5-usage.json.gz",
+      "sha256": "0928fe9dead4ab709031b5c31b32c52e4685eb3dbc2beb79470b50bf3588e53d",
+      "compressedSha256": "d1dc117cde7e6aae4b23910995e4ef5338dc1a711cdb0e41bbaa81ef461241ee"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/input.json",
+      "path": "6-input.json.gz",
+      "sha256": "45b6f6d4cd6b5271904701c6a3b6123fc5720f84079419543c6d651132d28fd1",
+      "compressedSha256": "b8d91e5766d5270e5a3ef0ef9e4e6307a7e649ec9cb36006290c5218a495b2f6"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/model.json",
+      "path": "7-model.json.gz",
+      "sha256": "ddfa627abd704ecb0d5331388e03b2744a58da3ddf9de60ae1c59ce7d442c425",
+      "compressedSha256": "c719e5023ff5ddea95568489eda01e275efe0f97a934819e0ad30259b2ea92a1"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/plan.json",
+      "path": "8-plan.json.gz",
+      "sha256": "260903e857b367df63ac434d04cba0328d928161768489746a681d0fb4133537",
+      "compressedSha256": "e9c32361176c59e0b033294f02226963e944390dbb98e72667239eed36ed4c8e"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/profile-control-cpu.json",
+      "path": "9-profile-control-cpu.json.gz",
+      "sha256": "227d8b26e48132b148faa0c53b50d91ead8bf1de49a0ac5aadc6eab8fdadb492",
+      "compressedSha256": "84e328719e235fb0886aaf6c9ba6e715c5f4b6d5c35b9f5dad3369c9d1cfebe6"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/profile-control.json",
+      "path": "10-profile-control.json.gz",
+      "sha256": "5fd2b795d4ce4cec0bda1228df2c1ceb755304e91cec04158d0482248b8eaf67",
+      "compressedSha256": "478846f6f0542a40753db876ead6ab37688760376d4a90c21c28ed6881e4265f"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u02-forward-cost-v1/status.json",
+      "path": "11-status.json.gz",
+      "sha256": "e6ffcdf9b35be9123300b711ea139ae5bfc67afd1f566070cb0c8103880b5e7e",
+      "compressedSha256": "7e8a997b3d7bbf05e1df8590c51d4b02b2047b6c706eef72d9f8f3cf3de77a1d"
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u02-forward-cost-v1-failed-sources.json",
+      "path": "12-u02-forward-cost-v1-failed-sources.json.gz",
+      "sha256": "94838a7e4f902dc99e40b54982d519dd54c541141c53b6cb0fe6f5c2cf093054",
+      "compressedSha256": "99e21f8d715ed873d964dd38c889bcea3aa27cc6c22652b160988830593b5d73"
+    },
+    {
+      "source": "/home/yuzy/rubend/.audit/preserve-forward-cost-v1.mjs",
+      "path": "13-preserve-forward-cost-v1.mjs.gz",
+      "sha256": "9a9edd62c12c3052522da54cd93f44a2d605e9a82182f8c17ef7029183d3f63a",
+      "compressedSha256": "08654d198958625a4a18b82239f728827dfd84dad2331d4bb883ae470840cb0a"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-np03-group-v1",
+  "revision": "aa334cf51d39983ab7c42fa8bc70574db32e2aca",
+  "sourceSeals": 2593,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-24T07:07:22.061Z",
+  "finishedAt": "2026-10-24T07:08:15.762Z",
+  "archives": [
+    {
+      "path": "0-u02-np03-group-v1-plan.json.gz",
+      "sha256": "385b0a7fdadadee1934e59b022df289f1d33020c31a4fa26ea9b56dbf4763f0d",
+      "compressedSha256": "fb1140348b45de41f21e4bfabade0b83d74531a7fb9120cfb6a481dea2e35a23"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "43b56986abcccf37d91b9f60282e2b96635a0193edab0b44b76ff29337e704e9",
+      "compressedSha256": "08c603ecc44906c2cb45f5ee7b8576e99c4540e6d22114b69f6af33d4b4ab7b9"
+    },
+    {
+      "path": "2-u02-np03-group-v1-proof.json.gz",
+      "sha256": "302a9967d8122c39f4788639f565104873f24515dc99acf309441687251e981a",
+      "compressedSha256": "3b59d87e17e03e20c666b724a805aed827df6dd3969eaa79f75eb367d980000b"
+    },
+    {
+      "path": "3-u02-np03-group-v1-finite.json.gz",
+      "sha256": "9d9b82b60531edbbaa91f7cc0844f40bebf5227428083d187819a053d8c870cd",
+      "compressedSha256": "e0ffd1413c4531d200211323c47abcdc548adc0d5c9d51a9f9c69f095d070de9"
+    },
+    {
+      "path": "4-u02-np03-group-v1-confirm.json.gz",
+      "sha256": "db9d896085c18cfa46cc5f0a4c8a3790773be3112bfcd9e4f38470b9ef00a0ff",
+      "compressedSha256": "36595448cf85d9eb49dded76367edab332aa941265e9b0e493b04e084e178556"
+    },
+    {
+      "path": "5-confirmation.json.gz",
+      "sha256": "b9b0d620b13b5f45cb78fc217b99d55e04a64e8265161a75980ffc2f8a84bf5b",
+      "compressedSha256": "2f6c29a434b2a86abcf44ddb8588e314a05bfdf2bf98bc4fbd9cf23c50db3d88"
+    },
+    {
+      "path": "6-finite.json.gz",
+      "sha256": "1afbb526b956400e331248c297057976eb98a1add0679ee599e26a51f56c9653",
+      "compressedSha256": "51561cebecb7975d79fc7425f5fcf2ea5da520d83f94b293d419f5367f2ad178"
+    },
+    {
+      "path": "7-proof.json.gz",
+      "sha256": "543fd7a777af7af038e023cca78c67dd83818ff2d0be56d3b7ad1a61dc85366c",
+      "compressedSha256": "f38670f97debdd27535c0e41bb7195e24ac21f63b625152625e1f01e3c9f2771"
+    }
+  ]
+}

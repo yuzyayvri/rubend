@@ -1,0 +1,19 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync} from "node:fs";
+import {resolve} from "node:path";
+import {measureCpu} from "./cpu-measure.mjs";
+import {fileHash} from "./reference-provenance.mjs";
+import {inspectNativeCpuWindows,nativeCpuWindowFaults} from "./native-cpu-windows-model.mjs";
+
+assert.equal(process.argv.length,4);const directory=resolve(process.argv[2]),output=resolve(process.argv[3]),spec=JSON.parse(readFileSync(resolve(directory,"cases.json"),"utf8")),compiled=JSON.parse(readFileSync(resolve(directory,"compile.json"),"utf8")),binary=compiled.binaryPath,records=[],observations=[],controls=[];assert.equal(typeof binary,"string");assert.equal(fileHash(binary),compiled.artifacts[binary]);mkdirSync(resolve(directory,"measurements"));const semantic=s=>{const{id,...rest}=s;return rest;},history=new Map();let serial=0;
+for(let cohort=0;cohort<5;cohort++){
+  const cases=cohort%2?[...spec.cases].reverse():spec.cases,path=resolve(directory,"requests-"+cohort+".txt"),text=cases.map(c=>[c.id,c.facelets,c.request,c.slices].join("\t")).join("\n")+"\n";writeFileSync(path,text,{flag:"wx"});const pair=[];
+  for(const enabled of(cohort%2?[false,true]:[true,false])){
+    const index=serial++,recordPath=resolve(directory,"measurements/command-"+index+".json"),record=measureCpu([binary,"--threads","1","--gpu","off",enabled?"on":"off",path],recordPath);records.push({path:recordPath,sha256:fileHash(recordPath),record});writeFileSync(resolve(directory,"progress-"+String(index).padStart(2,"0")+".json"),JSON.stringify({index,cohort,enabled,requestPath:path,requestSha256:fileHash(path),measurement:records.at(-1)})+"\n",{flag:"wx"});const result=inspectNativeCpuWindows(record,cases,enabled);observations.push({cohort,enabled,...result});pair.push(result);
+    for(let i=0;i<cases.length;i++){const c=cases[i],state=semantic(result.snapshots[i]),key=c.semanticKey;const before=history.get(key);if(before)assert.deepEqual(state,before,"Clock/order/repetition changed actual search state for "+key);else history.set(key,state);}
+    if(cohort===0&&enabled)controls.push(...nativeCpuWindowFaults(record,cases));
+  }
+  assert.deepEqual(pair[0].snapshots,pair[1].snapshots,"Clock instrumentation changed a native snapshot");
+}
+const summary={};for(const c of spec.cases){const xs=observations.filter(r=>r.enabled).map(r=>r.windows.find(w=>w.id===c.id)),values=xs.map(w=>w.cpuMs).sort((a,b)=>a-b),wall=xs.map(w=>w.wallMs).sort((a,b)=>a-b),minimum=values[0],maximum=values[4];summary[c.id]={count:5,cpuMs:{minimum,median:values[2],maximum},wallMs:{minimum:wall[0],median:wall[2],maximum:wall[4]},atLeast100ms:minimum>=100,maxMinRatio:minimum===0?null:maximum/minimum,withinFivePercent:minimum>=100&&maximum/minimum<=1.05};}
+const init=observations.filter(r=>r.enabled).map(r=>r.windows[0].cpuMs).sort((a,b)=>a-b);writeFileSync(output,JSON.stringify({passed:true,format:"rubend-native-cpu-windows-v1",spec,records,observations,controls,counts:{cohorts:5,commands:records.length,requests:observations.reduce((n,r)=>n+r.snapshots.length,0),measuredRequestWindows:observations.filter(r=>r.enabled).reduce((n,r)=>n+r.snapshots.length,0),independentCandidateReplays:observations.reduce((n,r)=>n+r.replays,0),actualRecordMutations:controls.length},initializationCpuMs:{count:5,minimum:init[0],median:init[2],maximum:init[4]},summary,clockOnOffSemanticEquality:true,repeatedOrderSemanticEquality:true,firstAnswerCpuMeasured:false,publicTimingAdapterChanged:false,productionChanged:false,performanceAcceptance:false,historicalAaCauseEstablished:false,releaseHoldoutOpened:false,independentReview:false},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({passed:true,commands:records.length,requests:80,recordMutations:controls.length,clockOnOffSemanticEquality:true,summary}));

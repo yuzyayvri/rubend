@@ -1,0 +1,30 @@
+{
+  "format": "rubend-installed-redesign-gui-v1",
+  "passed": true,
+  "session": "u01-live-delivered-redesign-v1",
+  "artifactId": 12429624367,
+  "actualInstalledEntrypoint": true,
+  "developmentServerUsed": false,
+  "hostStoreMounted": false,
+  "repositoryMounted": false,
+  "checks": {
+    "knownFourMoveOptimumAndExport": true,
+    "canonicalPlaybackAndRewind": true,
+    "cancelAndResubmit": true,
+    "invalidInputIsolation": true,
+    "searchKeyboardStep": 0,
+    "repeatedSeekSettlement": true,
+    "themePersistence": true,
+    "savedState": true,
+    "mobileRailBothEnds": true,
+    "narrowControlsFit": true,
+    "stickerEditor54CellsAndFixedCenters": true
+  },
+  "jsonArchiveCount": 24,
+  "images": ["desktop.jpg", "mobile.jpg", "sticker-net.jpg"],
+  "cleanup": "Wrapper, namespace server, installed application and native owner gone. IPC removed. No forced stop. Resource receipt exits zero without stop. Temporary tab closed and viewport reset.",
+  "clipboardDenial": "unverified",
+  "downloadedFile": "unverified",
+  "performanceClaim": false,
+  "independentReview": false
+}

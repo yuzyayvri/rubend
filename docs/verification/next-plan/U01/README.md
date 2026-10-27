@@ -1,5 +1,58 @@
 # Application and package acceptance
 
+## Latest acceptance boundary
+
+The [actual-policy and physical-file run](FILE-BACKED-ACCEPTANCE.md) now closes
+clipboard/download verification. Canonical checking verifies 3,947 seals and
+both receipts, no resource stop and no remaining worker. The older failures
+below remain historical failures. No production download or clipboard handler
+was changed. The later source-bound demand-rendering app is accepted separately;
+U07 still needs the final delivery check at that source. Operator interaction
+review remains required before merge, and no merge or push is authorized.
+
+## Current artifact
+
+The [current import queue](u01-delivery-redesign-v1/index.json) passed all
+1,479 seals, 67 closure paths, six checksums, installed HTTP/native replay,
+three supervisor shutdowns, and unchanged proof gates. The
+[actual installed-package GUI](u01-installed-redesign-gui-v1/index.json) then
+passed solve/export, playback/rewind, cancellation/resubmission, invalid input,
+theme/saved state, search-lock keys, repeated seeks, mobile rail, narrow controls,
+and sticker editor. Preview cleanup is complete. Clipboard denial and actual
+downloaded-file acceptance remain unverified. No independent review ran.
+
+The October 22 redesigned build passed local full regression and hosted CI at
+369f480. The completed local run is in
+[the redesign regression archive](u01-redesign-v1/index.json).
+The `redesign` pin in `bench/delivery-pins.mjs` identifies successful run
+39787894581, package artifact 12429624367, its SHA256 ZIP digest, and byte size.
+The legacy pin and its original artifact remain intact. No historical receipt
+is relabeled as a redesigned-package result.
+
+Use a fresh run id after committing source:
+
+```sh
+nix develop --command node bench/u01-delivery.mjs plan u01-delivery-redesign-v1 redesign
+nix develop --command node bench/background-tests.mjs start build/evidence/u01-delivery-redesign-v1-plan.json
+```
+
+The serial queue requests three GiB and low-priority CPU 2. It retains the
+eight-GiB desktop reserve. The two job caps total twelve minutes; expected
+duration is five minutes. It downloads about 89 MB and caps the import stream
+at two GiB. It checks delivered HTML, CSS, and favicon against the manifest's
+source hashes, then installed native HTTP replay/cancellation and three
+supervisor starts/stops. No package rebuild or new table is needed.
+
+After the queue passes, the new private-store entrypoint can be driven through
+the hidden browser with `tests/ui-fixture-server.mjs delivered RUN-ID
+u01-delivery-redesign-v1`. `tests/ui-fixture-session.mjs --delivered
+u01-delivery-redesign-v1` checks its supervisor only, not browser interaction.
+The fixture rejects mismatched artifact identity, store path, native binary, or
+current source graph. It does not weaken the old-source guard. Clipboard
+denial, actual file download, and raw timing remain open.
+
+## Historical acceptance records
+
 U01 is not complete. The full programme remains at U00's unresolved raw timing
 acceptance gate. Preparatory browser checks can establish functional behavior
 without promoting the lifecycle policy or changing solver defaults.

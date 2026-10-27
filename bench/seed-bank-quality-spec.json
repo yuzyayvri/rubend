@@ -1,0 +1,16 @@
+{
+  "format": "rubend-seed-bank-quality-spec-v1",
+  "controlSeed": 18,
+  "candidateSeeds": [0, 3, 6],
+  "budgets": [160000, 640000],
+  "slices": 32,
+  "aaCohorts": 2,
+  "cohorts": 5,
+  "pilotCases": 4,
+  "publicSuperflip": true,
+  "developmentOffset": 512,
+  "developmentCases": 8,
+  "selection": "Require no paired quality-floor loss and at least one unique fixed-work gain. Rank eligible arms by coverage gains, HTM saved among jointly answered cases, new completed optima, lower-bound gain, then smaller seed id.",
+  "allocation": "Seven original quanta, then one seeded Fast quantum. One candidate bank per configuration.",
+  "promotion": false
+}

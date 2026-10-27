@@ -1,0 +1,124 @@
+{
+  "format": "rubend-stopped-background-preservation-v1",
+  "id": "u06-bounded-reference-v3",
+  "revision": "5455938481947c932fcaa715ff128febabef14fb",
+  "preserved": true,
+  "passed": false,
+  "sourceSeals": 2760,
+  "workerGone": true,
+  "repositoryCheckProcessesGone": true,
+  "executedJobs": 3,
+  "passedJobs": 2,
+  "stopped": {
+    "jobId": "confirm",
+    "wrapperExitCode": 1,
+    "commandExitCode": null,
+    "commandSignal": "SIGKILL",
+    "reason": "aggregate-rss-limit",
+    "peakTreeRssKiB": 2158884,
+    "memoryMiB": 2048
+  },
+  "dirtySourceFiles": 16,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v3-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/0-u06-bounded-reference-v3-plan.json.gz",
+      "bytes": 377558,
+      "compressedBytes": 131736,
+      "sha256": "9cb93e13c4a36b17cec3774c017a3f5a93642788562172d748ab73c11dfa9314",
+      "compressedSha256": "2a30f7a827f89328bd4c2a3e27d460b3b68605be1574f12be87fcedd943d43bd",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/1-status.json.gz",
+      "bytes": 1757,
+      "compressedBytes": 715,
+      "sha256": "49a473b8bbdfcd1169b216c321b3257bc674eeece7a93bd437ba28ef2e1d33d9",
+      "compressedSha256": "96efb2d20433c83730e51a3ca74e65ee110c1988e1e20fc2cc6a81b89ba2911b",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v3-reuse.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/2-u06-bounded-reference-v3-reuse.json.gz",
+      "bytes": 1011,
+      "compressedBytes": 590,
+      "sha256": "8b7b41470c6008650b8ed945fab3b9f3e918d85379d4fb209aa60a6360735c0a",
+      "compressedSha256": "f5c8f91567a42c9990c1962a609d1ca1e9c239dbdb6ea3e9fe36daf3d410d9ac",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v3-finite.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/3-u06-bounded-reference-v3-finite.json.gz",
+      "bytes": 1614,
+      "compressedBytes": 907,
+      "sha256": "03894b44d994c48d434eb40e2d63081a646744392d4e8abcc973db47909f35ae",
+      "compressedSha256": "4a2cd78b9f9b77f14d0e76f1a2926ef59cc6bdff03f3c0fe884d50a1c53ed09e",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u06-bounded-reference-v3-confirm.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/4-u06-bounded-reference-v3-confirm.json.gz",
+      "bytes": 1074,
+      "compressedBytes": 629,
+      "sha256": "c18baaede65bdfa9dddf8a59f6e1f75cbe0702e0451b33d7df8ef543169f274b",
+      "compressedSha256": "67cd6575df478664c839772fefe33bd9c3265571e367c9e2e1a4d8d9a0cc5916",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/proof.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/5-proof.json.gz",
+      "bytes": 77595,
+      "compressedBytes": 13980,
+      "sha256": "47ed2e660400a101c95584d39a3e7ad0a3a160d6227e82a309988ce28ea60c24",
+      "compressedSha256": "6854eca5a1498b26133dcdbb07134263502afd344ac1e1a0fbe8a1448a541c57",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/finite.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/6-finite.json.gz",
+      "bytes": 1201,
+      "compressedBytes": 588,
+      "sha256": "49c3616f8cf237a4da3860b76d4d134896a2d14933765840dc17a4e3ef10ff13",
+      "compressedSha256": "f12243757c390cd479beb6f91575237281d24cc4d7ae6b37994d105bc0ec3329",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/native.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/7-native.json.gz",
+      "bytes": 590,
+      "compressedBytes": 332,
+      "sha256": "b1a357c89692bf04596f9b9b3d03810050a20a5e934de1b5dd8a5996c95b6157",
+      "compressedSha256": "936149d3813ea2edf92158d612868eed9961d0500c6232e9343cd17a28c891ef",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/native-cases.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/8-native-cases.json.gz",
+      "bytes": 31654,
+      "compressedBytes": 1828,
+      "sha256": "ecea5d301e8986e8c46f629df06ea3814e7917faa09b7bbaf2c4a983aa2a848e",
+      "compressedSha256": "126ab0e9157992916cd25187920cfbefd4bd809f3b2c82e99fa071300aaa7ed7",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/reuse.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/9-reuse.json.gz",
+      "bytes": 1084,
+      "compressedBytes": 510,
+      "sha256": "476d74b35a76cb7c32ac73b17d53a5b9da5d0d2f8105112a1e85355509eb647e",
+      "compressedSha256": "647be02837026cc67a611975b6e0a07c105485d1f97a7d34da795597e4e299da",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u06-bounded-reference-v3/stopped-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U06/u06-bounded-reference-v3-stopped/10-stopped-sources.json.gz",
+      "bytes": 177709,
+      "compressedBytes": 57648,
+      "sha256": "3508e99bc4002ddb60525b5e593eafbde85522a7a2b1b239a9df2788c6f05ca3",
+      "compressedSha256": "be2e25cd4e7dc050f2482701087aa68d8eb14acfe11f878faa9a9a5bf2a23f31",
+      "roundtripPassed": true
+    }
+  ],
+  "independentReview": false
+}

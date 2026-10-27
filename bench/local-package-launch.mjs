@@ -1,0 +1,4 @@
+import assert from "node:assert/strict";
+import {resolve,relative} from "node:path";
+
+export function localPackageLaunch(root,runtimeStore,packagePath){const base=resolve(root),store=resolve(runtimeStore);assert.match(relative(base,store),/^build\/experiments\/u07-delivery-[a-z0-9-]+\/runtime-store$/);assert.match(packagePath,/^\/nix\/store\/[0-9a-z]{32}-rubend-[A-Za-z0-9._+-]+$/);return{program:"bwrap",args:["--unshare-user","--uid","0","--gid","0","--unshare-pid","--die-with-parent","--new-session","--ro-bind",store+"/nix","/nix","--proc","/proc","--dev","/dev","--tmpfs","/tmp","--dir","/work","--chdir","/work","--clearenv","--setenv","HOME","/tmp","--setenv","TMPDIR","/tmp","--setenv","PORT","0",packagePath+"/bin/rubend"],logicalStorePath:packagePath,privateStore:store,hostStoreMounted:false,repositoryMounted:false,environmentCleared:true};}

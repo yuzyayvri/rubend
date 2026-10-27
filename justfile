@@ -76,8 +76,14 @@ test: build
     node tests/ui-acceptance-setup.mjs
     node tests/u01-native-failure.mjs
     node tests/u01-check-plan.mjs
+    node tests/delivery-pins.mjs
+    node tests/background-result-check.mjs
     node tests/keyboard-playback.mjs
     node tests/ui-design.mjs
+    node tests/frame-driver.mjs
+    node tests/render-baseline-model.mjs
+    node tests/render-demand-model.mjs
+    node tests/render-demand-fixture.mjs
     node tests/contour-protocol.mjs
     node bench/corpus.mjs --check
     node tests/corpus.mjs

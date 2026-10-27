@@ -1,0 +1,14 @@
+{
+  "format": "rubend-six-edge-checkpoint-spec-v1",
+  "count": 6,
+  "patterns": [[0, 2, 4, 6, 8, 10], [1, 3, 5, 7, 9, 11]],
+  "goals": [399936, 4307008],
+  "size": 42577920,
+  "capacity": 67108864,
+  "payloadBytes": 170311680,
+  "maximumPilotDepth": 3,
+  "maximumPayloadFiles": 12,
+  "freeDiskReserveBytes": 2147483648,
+  "completeDatabaseBuild": false,
+  "productionPruning": false
+}

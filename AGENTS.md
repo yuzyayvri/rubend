@@ -18,6 +18,84 @@ never invent success.
 
 ## Current boundary
 
+On October 27, after report delivery, Yuzy explicitly requested push and merge
+while maintaining all commits. Read
+docs/verification/next-plan/OCT27-PUBLICATION.md. This authorizes the completed
+roadmap branch's history-preserving landing and supersedes the earlier no-push
+and no-merge gate for this request only. Do not squash, rebase, rewrite original
+commits, bypass protections or fabricate review. Work remains solo. Independent
+review is not run. Preserve signed subject-only commits and verify GitHub's
+signature status after publication. No release or deployment is authorized.
+
+The October 27 scheduled roadmap/comparison workflow reaches its checked local
+handoff in docs/verification/next-plan/FINAL-HANDOFF.md. The canonical final audit
+is `u07-final-acceptance-v1`. Accepted, rejected and inconclusive dispositions
+are recorded; the 10x to 100x target is unmet and no stronger formal certificate,
+new default or larger exact-tier promotion is claimed. No next batch is needed.
+The existing `continue-rubend-roadmap` heartbeat is deleted through the native
+app control. Its receipt is
+docs/verification/next-plan/U07/AUTOMATION-COMPLETION.json.
+Do not resume or recreate that completed schedule without a new human request. Any
+queued stale heartbeat must not repeat measurements or reopen implementation.
+The handoff originally left operator review and any push or merge for Yuzy's
+separate later decision. The publication request above now grants this landing.
+Independent review remains not run under
+the solo restriction. Preserve all sealed and failed evidence.
+
+On 2026-10-26 Yuzy asked to shorten completion time as much as possible after
+the thirty-minute handoff gaps were explained. The existing heartbeat now
+checks every minute. This changes scheduling only. Frozen benchmark sources,
+configurations, slots, order, budgets and resource limits stay unchanged.
+An active check reads the compact saved queue status and worker identity once,
+then ends quietly without polling, edits or duplicate work. Completed queues
+still require canonical verification before tracked edits and the next batch.
+Keep handoff bookkeeping concise. No push or merge before report review.
+
+On 2026-10-25 Yuzy replied "I literally approve anything man. Just fucking do
+it." to the remaining roadmap approval request. The exact NP04–NP08 statements
+and necessary local generation, builds and full audits for this roadmap are
+approved. Do not ask again for these in-scope approvals. Resume the existing
+`continue-rubend-roadmap` automation. Keep engineering admission, source seals,
+checkpoints and every RESOURCE-POLICY.md limit, including thirty-minute batches,
+desktop reserve, no swap and low priority. Stay solo and never use Astra.
+This does not override the explicit later decision about pushing to main after
+the numerical report. No push, merge, release, deployment, cloud/GPU work or
+system change is authorized. Read docs/verification/next-plan/OCT25-AUTHORITY.md.
+
+On 2026-10-24 Yuzy required roadmap completion, then a primary-source research
+and local setup pass for additional 3x3 solvers, then controlled comparative
+benchmarks and a numerical report. Coordinate U07 with that final pass so the
+holdout is opened only after configurations are frozen and no final evaluation
+is duplicated. Keep solution quality, coverage, time, CPU, memory, initialization,
+timeouts and proof limits explicit. Preserve competitor revisions and licenses.
+Only after the full roadmap and report are complete, delete the existing
+`continue-rubend-roadmap` automation. Do not stop at implementation alone.
+Yuzy will read the report and decide separately whether to approve a push to
+main. This supersedes every earlier standing push authorization. No push,
+merge, release or deployment is authorized now. Existing gates for unapproved
+laws, large/costly builds, cloud/GPU work and system changes remain in force.
+
+On 2026-10-23 Yuzy approved the exact NP01–NP03 statements in
+`docs/architecture/NEXT-PROOF-STATEMENTS.md` and requested autonomous roadmap
+execution with automatic messages to this same chat after detached runs.
+This supersedes the older no-heartbeat/no-wakeup instruction for this task.
+Use the existing Codex heartbeat `continue-rubend-roadmap`, not a custom
+message-injection script or a second automation. Keep fixed detached batches,
+source seals, resource admission, solo work, and the no-Astra restriction.
+The original heartbeat checked every thirty minutes; the October 26 order
+above shortens that interval. Do not duplicate active work or
+spend model turns polling. Pause it if missing authority prevents all useful
+in-scope progress. Delete it only after the full workflow and report above are
+complete. NP04–NP08 and local generation were awaiting separate approval at
+that time; the October 25 grant above supersedes that gate. The October 22 main push was a
+completed specific request, not blanket publication authority for later units.
+
+After a queue reports passed, run `node bench/check-background-results.mjs RUN-ID`
+before editing sources. It checks revision, source seals, resource commands,
+limits and receipts, verifies the worker is gone, and preserves compressed
+records. A passed status alone is not that verification. If the queue is still
+active, end the turn instead of polling or starting duplicate work.
+
 On 2026-10-17 Yuzy approved `docs/architecture/OPTIMIZATION-ROADMAP.md`, requested
 autonomous implementation, and authorized pushing verified changes when done.
 This supersedes the older no-push boundary below. It does not authorize PR

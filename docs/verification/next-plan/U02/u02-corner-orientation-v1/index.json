@@ -1,0 +1,35 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u02-corner-orientation-v1",
+  "revision": "74903203f8f1cb58e737cc6aa98188caa0651342",
+  "sourceSeals": 1790,
+  "jobs": 1,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T04:17:50.848Z",
+  "finishedAt": "2026-10-23T04:18:00.858Z",
+  "archives": [
+    {
+      "path": "0-u02-corner-orientation-v1-plan.json.gz",
+      "sha256": "8dbd95672beb85b7b38a643d4b3ca9011f6e631f040d45385fbd3a88b7f3a2ff",
+      "compressedSha256": "52b56f35714297c4dd511fade7355d73c6aa2a303538e02386375c7a91b5fe16"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "eb38c4449af9cd16ba883b11ba7563a3fe336033ad10f4615a037fd105b57112",
+      "compressedSha256": "f8dd395d2ec78c80f099acd2117eb47e85910525871de86bc0d054e1850fcc04"
+    },
+    {
+      "path": "2-u02-corner-orientation-v1-confirm.json.gz",
+      "sha256": "aa46a14091f267a1bb3f9d421eccee1a13728ea0964af073731aec12ebc594ea",
+      "compressedSha256": "ad4fdf35c79f083edb8ec79b6d2e6f12ff866ef0d954380f5cb2bafab3931e3d"
+    },
+    {
+      "path": "3-confirmation.json.gz",
+      "sha256": "d969547c364a19701c8aceba8f93995aa9e619090c378b3cbd4fe5568cc00aca",
+      "compressedSha256": "07998989bb1e69d14ff3518c4cdd4378479757656a8c4a93e6ef60e3b82a4a29"
+    }
+  ]
+}

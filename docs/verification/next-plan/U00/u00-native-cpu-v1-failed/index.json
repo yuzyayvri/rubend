@@ -1,0 +1,82 @@
+{
+  "format": "rubend-failed-background-preservation-v1",
+  "passed": false,
+  "preserved": true,
+  "id": "u00-native-cpu-v1",
+  "revision": "62ac9736e9b60c8343bf962a5f224b6c5d5e0217",
+  "sourceSeals": 3278,
+  "workerGone": true,
+  "executedJobs": 2,
+  "plannedJobs": 3,
+  "failure": "AssertionError [ERR_ASSERTION]: Job failed; read observe.log\n\n1 !== 0\n\n    at file:///home/yuzy/rubend/bench/background-tests.mjs:35:133\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+  "dirtySourceFiles": 7,
+  "browserResultCaptured": false,
+  "partialSamples": 1,
+  "performanceAcceptance": false,
+  "independentReview": false,
+  "archives": [
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-native-cpu-v1-plan.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/0-u00-native-cpu-v1-plan.json.gz",
+      "bytes": 453875,
+      "compressedBytes": 155652,
+      "sha256": "862a8f5fa8d52cc280d66a5ad2c5e8d78bf806c4846c4932c0046aa2d8e3b8cd",
+      "compressedSha256": "7bc180e698cf896700627d1c42bad89490fad4acc73eea3375502dd8e31a0e9d",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-native-cpu-v1/status.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/1-status.json.gz",
+      "bytes": 1369,
+      "compressedBytes": 641,
+      "sha256": "9b564be0d3c98056db9d4c92a1800a8f42d50799269d74b6da81f8c22acf818b",
+      "compressedSha256": "b581d4f0d3b3ba3e4d8036c2a548afbc464b553143d88f24680d028014dc6920",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-native-cpu-v1-compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/2-u00-native-cpu-v1-compile.json.gz",
+      "bytes": 1062,
+      "compressedBytes": 628,
+      "sha256": "3e202ef0153ccd39b75712a9c7f3d890f7801cfbcacd3663bfa206f9bf1a8169",
+      "compressedSha256": "811352a227bb31f763d9239a2a0ad7bf0021680d47bc648f377fe941332c8c74",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/evidence/u00-native-cpu-v1-observe.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/3-u00-native-cpu-v1-observe.json.gz",
+      "bytes": 2324,
+      "compressedBytes": 985,
+      "sha256": "61c5410178145e370fcee0884a6f280eb9a3382449284974038ce4b699d13793",
+      "compressedSha256": "d85f037b46662ac4976553e5732132b3d77fbc279f80bb1b08dd268541743b56",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-native-cpu-v1/failed-sources.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/4-failed-sources.json.gz",
+      "bytes": 163150,
+      "compressedBytes": 54956,
+      "sha256": "95c8d2e2fc89930d7782890260a9cb7a5f27df89803906fd8d4eaad5b0bd272e",
+      "compressedSha256": "a4e2bc148cb688aaaeaffcc27a96349a042fa83c05fcc4e89dfc0c796b86d285",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-native-cpu-v1/compile.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/5-compile.json.gz",
+      "bytes": 692,
+      "compressedBytes": 394,
+      "sha256": "fe6edad2d8aa64957da562bd278e31a985fa6d1eb025ba24f11acebf696174b9",
+      "compressedSha256": "d4fa5821bdcc13307856c7acd5e08ccd1283ad6a66cfa063534efb47012739cf",
+      "roundtripPassed": true
+    },
+    {
+      "source": "/home/yuzy/rubend/build/experiments/u00-native-cpu-v1/progress-00.json",
+      "destination": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-native-cpu-v1-failed/6-progress-00.json.gz",
+      "bytes": 25444,
+      "compressedBytes": 5294,
+      "sha256": "ec3e5ab7f07679e1493876c3a8cbd76760ae10e3dca3e7ffd02ba209cb627de5",
+      "compressedSha256": "038762d76640e9ae2cda250490f9057f7505634e3fad51b3d0e3bedd93f966c8",
+      "roundtripPassed": true
+    }
+  ]
+}

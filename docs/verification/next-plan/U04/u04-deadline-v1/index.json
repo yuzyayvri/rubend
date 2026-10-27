@@ -1,0 +1,55 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u04-deadline-v1",
+  "revision": "1fa350be86c6abd08f3a143b7bb5704fb5ec77ee",
+  "sourceSeals": 2041,
+  "jobs": 3,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-23T13:07:31.314Z",
+  "finishedAt": "2026-10-23T13:10:53.943Z",
+  "archives": [
+    {
+      "path": "0-u04-deadline-v1-plan.json.gz",
+      "sha256": "f2bcbaaec8c4b640906806e222245e44a32757553f5c0d60091fd7a306d28e92",
+      "compressedSha256": "c69d1d960520ce30f8d8ea104ba878ab7dd7c2d310b310e3574fde7e82c2b386"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "80df17db6c5e45908e13418b12f385d0af4c6d308177fc0b7ff4fa3bc2030179",
+      "compressedSha256": "5c1f3851504aab4992ddcdda6a122cf2aa0a488ff6eb9074e5381218a1e435c2"
+    },
+    {
+      "path": "2-u04-deadline-v1-compile.json.gz",
+      "sha256": "5434cbeeeb3644d8fbd589bf89b6a9d45b226976a3c0c75b6cbf974814a82d9c",
+      "compressedSha256": "c2aae64af2ee4c655e106f4caddbf31736dd5794f4c67f34c3c2f7f83d03d478"
+    },
+    {
+      "path": "3-u04-deadline-v1-measure.json.gz",
+      "sha256": "cb5f295aed1ad9debd22d86bc9f4fd27256f43e89488bf017d666098c12c61bd",
+      "compressedSha256": "61ee6a6889dda9ab1cb51d302f0aff420aaf439e5cdcd49199081d0115739cbd"
+    },
+    {
+      "path": "4-u04-deadline-v1-confirm.json.gz",
+      "sha256": "d05374f5f538d858ef77c31b3e32d94fb6df7107369a7db638661669590e5972",
+      "compressedSha256": "ee042dd22800766b507ab2fb03a2379c586c431689c58dc736a04dc611f3a6d7"
+    },
+    {
+      "path": "5-compile.json.gz",
+      "sha256": "18992bc74878624aa9ccd5cef68403af709d783d721f7e944b41f7c70442e92e",
+      "compressedSha256": "a80675ec4af9a5ebc36febaece577a2ce2bf0f778df5a2ef4e6d94bfac46af67"
+    },
+    {
+      "path": "6-confirmation.json.gz",
+      "sha256": "bc695413e66e25937a65a8c337b3c822a2086a11188f58c29162ee3e7735ec63",
+      "compressedSha256": "402fcabe4b0f9aca1399894c038b9c3580d4862a3663bc8e6632939348a6b4ae"
+    },
+    {
+      "path": "7-observation.json.gz",
+      "sha256": "18aa84f025ac5fcd253768780d6d33622b8d567ee106ec2cf4d37aaa9b425b14",
+      "compressedSha256": "5600b77ec17954e7adad8a6f0c7b8d3fde006ac097924599127d98a5e1fbfee4"
+    }
+  ]
+}
