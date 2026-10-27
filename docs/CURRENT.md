@@ -2,6 +2,17 @@
 
 ## Latest checkpoint
 
+Final application record preparation locally admits four saved observations
+and passes 28 negative controls under one-GiB CPU2 limits. It checks the original
+freeze, canonical raw report, every projected answer through Bend and geometry,
+installed package assets and existing screenshot hashes. No solver executes.
+Read docs/verification/next-plan/U07/FINAL-APPLICATION.md. Browser acceptance
+is not yet passed. The October 24 completion/report/no-push order remains
+binding before the fixed `u07-final-app-data-v1` admission queue. Canonically
+verify that queue before browser work or further tracked edits. It has two
+serial one-GiB CPU2 jobs, 120/60-second caps, nice 10, no swap and reserve.
+The report stays unchanged and no holdout solve repeats.
+
 `u07-final-report-v1` passes canonical verification with 5,136 source/input
 seals and one receipt, worker gone and no resource stop. All 57,678 planned
 attempts remain accounted for and every answer independently replays again.

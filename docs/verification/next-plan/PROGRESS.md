@@ -3,6 +3,13 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [final application preparation](U07/FINAL-APPLICATION.md) locally admits
+four saved records and passes 28 negative controls without executing a solver.
+The next source-bound admission queue uses two serial one-GiB CPU2 jobs with
+120/60-second caps and a five-minute queue cap. Canonical verification still
+precedes browser work. Actual application acceptance remains open. The October 24
+completion/report/no-push order stays binding and the frozen report is unchanged.
+
 The [frozen numerical report](U07/COMPARATIVE-RESULTS.md) passes
 [canonical analysis verification](U07/u07-final-report-v1/index.json), with
 5,136 seals, one receipt, worker gone and no stop. All 57,678 attempts and 49
