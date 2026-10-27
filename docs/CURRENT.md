@@ -2,6 +2,23 @@
 
 ## Latest checkpoint
 
+`u07-final-structural-p1` passes canonical verification with 4,979 seals and
+seven receipts, worker gone and no resource stop. All 1,086 slots across six
+configurations and 181 structural entries are recorded, with no pending or
+uncertain claims. Complete answers independently replay and all seven sessions
+settle. Six actors have distinct measured cgroups and all seven readiness PSS
+snapshots are available. Statuses are 1,028 `ok` and 58 `timeout`, with no errors.
+These are not coverage counts or an optimality verdict. Cumulative accounted
+campaign slots are 57,486 of 57,678.
+
+After this verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-long-a-p1`. Its 96 slots cover the same frozen thirty-
+two selected release IDs for default, cubing min2phase and Muodov C, with warm
+ten-second requests. Three serial CPU2 jobs each retain four GiB, 420-second
+hard and 380-second soft limits, nice 10, no swap and desktop reserve. The queue
+cap is 26 minutes. No frozen setting changes. The paired long-budget group,
+final U07 acceptance and numerical report delivery remain open.
+
 `u07-final-timing-c4-b-p1` passes canonical verification with 4,977 seals and
 six receipts, worker gone and no resource stop. All 640 planned timing slots
 are recorded, with no pending or uncertain claims. All complete answers replay

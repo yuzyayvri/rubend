@@ -331,6 +331,24 @@ the same 210-second soft checkpoint. Its queue cap is 28 minutes. Both long-
 budget groups, final acceptance and numerical report delivery remain open.
 No source, configuration, slot, resource or analysis rule changes.
 
+The [structural group](u07-final-structural-p1/index.json) verifies 4,979 seals
+and seven receipts, worker gone and no resource stop. All 1,086 slots across
+six configurations and 181 entries are recorded, with no pending or uncertain
+claims. Complete answers independently replay and all seven sessions settle.
+Six distinct measured cgroups and seven available readiness PSS snapshots
+retain their stated scopes. Statuses are 1,028 `ok` and 58 `timeout`, with no
+errors. These are not coverage counts or an optimality verdict. The report
+retains the structural artifact's justified optima and correlated entries.
+Cumulative campaign slots are 57,486 of 57,678.
+
+After canonical verification and before `u07-final-long-a-p1`, the October 24
+completion/report/no-push order remains binding. Its 96 slots use warm ten-
+second requests on the same frozen thirty-two selected release IDs for Rubend
+default, cubing min2phase and Muodov C. Three serial CPU2 jobs each keep four
+GiB, 420-second hard limits, 380-second soft checkpoints, nice 10, no swap and
+desktop reserve. The queue cap is 26 minutes. The paired long-budget group,
+final acceptance and numerical report delivery remain open. No frozen change.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing
