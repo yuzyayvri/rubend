@@ -311,6 +311,26 @@ actor and cold-then-warm clock order. Its actors are vcube108, small, inverse,
 H0 and default exact-request. No frozen source, contract, resource or analysis
 rule changes. Structural, long-budget, final acceptance and report work remain.
 
+The [last timing group](u07-final-timing-c4-b-p1/index.json) verifies 4,977
+seals and six receipts, worker gone and no resource stop. All 640 slots are
+recorded, with no pending or uncertain claims. Complete answers independently
+replay and all 331 sessions settle. Five distinct actor cgroups and eleven
+available warm-readiness PSS snapshots retain their stated scopes. Statuses
+are 40 `ok`, 599 `timeout` and one `error`. The small-profile raw stream confirms
+the known late-cancellation race, and the failed attempt remains terminal.
+
+All ten timing groups account for 6,400 unique slots across five cohorts.
+Every canonical output hash is rechecked and all 3,313 sessions settle.
+Aggregate statuses are 1,550 `ok`, 4,836 `timeout` and fourteen `error`.
+These are not coverage counts or a passed uncertainty gate. The frozen report
+still computes those results. Cumulative campaign slots are 56,400 of 57,678.
+After canonical verification and before `u07-final-structural-p1`, the October 24
+completion/report/no-push order remains binding. The structural group has
+1,086 slots across six serial CPU2 jobs, each four GiB and 240 seconds with
+the same 210-second soft checkpoint. Its queue cap is 28 minutes. Both long-
+budget groups, final acceptance and numerical report delivery remain open.
+No source, configuration, slot, resource or analysis rule changes.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

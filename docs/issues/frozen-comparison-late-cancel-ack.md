@@ -31,6 +31,13 @@ stdout, under the canonical index above. The ledger preserves exact slot IDs
 
 ## Cause and scope
 
+The [last timing group](../verification/next-plan/U07/u07-final-timing-c4-b-p1/index.json)
+records one preserved small-profile instance on warm `release-1032`, repeat one.
+The raw stream shows `done 21`, late `cancelled 21 alreadySettled`, then the
+assertion against request 22. The session settles. All five timing cohorts
+retain fourteen adapter errors, separate from the 35 quality-stage errors.
+No failed attempt is rerun or counted as a successful short latency.
+
 The [second final quality group](../verification/next-plan/U07/u07-final-quality-01-p1/index.json)
 records one more instance on `release-1550`, slot
 `86e1d7e6ecb4828fb937318cca17bfdbbd93b090f7c271af712be86450b2c58d`.

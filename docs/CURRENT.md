@@ -2,23 +2,25 @@
 
 ## Latest checkpoint
 
-`u07-final-timing-c4-a-p1` passes canonical verification with 4,977 seals and
+`u07-final-timing-c4-b-p1` passes canonical verification with 4,977 seals and
 six receipts, worker gone and no resource stop. All 640 planned timing slots
 are recorded, with no pending or uncertain claims. All complete answers replay
 independently and all 331 sessions settle. Five actors have distinct measured
 cgroups. All eleven warm-readiness PSS snapshots are available in this group.
-Statuses are 269 `ok`, 370 `timeout` and one `error` observation. The error
-has the known late-cancellation cause in Rubend default and remains
-terminal. These are not coverage
-counts, a passed noise gate or a performance verdict. All five cohorts remain
-required. Cumulative accounted campaign slots are 55,760 of 57,678.
+Statuses are 40 `ok`, 599 `timeout` and one `error` observation. The preserved
+small-profile error has the known late-cancellation cause and remains terminal.
+All ten timing groups account for 6,400 unique slots across five cohorts.
+Their output hashes are rechecked and all 3,313 sessions settle. Aggregate
+statuses are 1,550 `ok`, 4,836 `timeout` and fourteen `error`, not coverage
+counts, a passed noise gate or a performance verdict. Cumulative accounted
+campaign slots are 56,400 of 57,678.
 
 After this verification, the October 24 completion/report/no-push order remains
-binding before `u07-final-timing-c4-b-p1`, the last timing group. It keeps forward
-actor and cold-then-warm clock order. Its five serial CPU2 jobs cover vcube108,
-small, inverse, H0 and default exact-request. Each has four GiB and 240 seconds, nice 10,
-no swap and desktop reserve.
-The queue cap remains 26 minutes. Frozen settings and analysis rules do not change.
+binding before `u07-final-structural-p1`. Its six serial CPU2 jobs cover all
+181 structural entries for the five primary actors and default exact-request.
+Each has four GiB and 240 seconds, nice 10, no swap and desktop reserve.
+The queue cap is 28 minutes. Frozen settings and analysis rules do not change.
+Both long-budget groups, final U07 acceptance and report delivery remain open.
 
 A roughly three-hour continuation gap follows `u07-final-timing-c2-a-p1`'s saved completion at
 `2026-10-26T20:07:20.345Z`; the next recorded handoff check is the 23:00 heartbeat.

@@ -3,16 +3,20 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
-The [final-cohort forward timing group](U07/u07-final-timing-c4-a-p1/index.json)
+The [last timing group](U07/u07-final-timing-c4-b-p1/index.json)
 verifies 4,977 seals and six receipts, worker gone and no resource stop.
 All 640 slots are recorded, with no pending or uncertain claims. Complete
 answers independently replay and all 331 sessions settle. Five separate actor
 cgroups and eleven available warm-readiness PSS snapshots retain their stated
-measurement scopes. One default-profile error has the recorded cancellation
-cause and remains terminal. There is no noise-gate or speed verdict before all
-five cohorts. Cumulative accounted slots are 55,760 of 57,678.
+measurement scopes. One preserved small-profile error has the recorded
+cancellation cause and remains terminal. All ten timing groups account for
+6,400 unique slots across five cohorts, with every output hash rechecked and
+all 3,313 sessions settled. Aggregate statuses are 1,550 `ok`, 4,836 `timeout`
+and fourteen `error`. These are not coverage counts or a performance verdict.
+Cumulative accounted slots are 56,400 of 57,678.
 The October 24 report-before-automation-deletion and no-push order remains
-binding before the last timing group, `u07-final-timing-c4-b-p1`.
+binding before `u07-final-structural-p1`. Its six serial four-GiB CPU2 jobs
+retain 240-second hard limits and a 28-minute queue cap. No frozen change.
 
 The c2-a batch finishes at 20:07 UTC, but the next recorded handoff check is
 the 23:00 heartbeat. This [continuation gap](../../issues/final-evaluation-handoff-gap.md)
@@ -36,7 +40,7 @@ recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
 The fixed serial timing groups have five separately capped four-GiB CPU2 actor
-jobs and 640 planned slots each. One timing group, the structural group and both long-budget groups remain,
+jobs and 640 planned slots each. The structural group and both long-budget groups remain,
 followed by final U07 acceptance and report delivery. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.
