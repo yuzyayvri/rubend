@@ -3,6 +3,18 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [frozen numerical report](U07/COMPARATIVE-RESULTS.md) passes
+[canonical analysis verification](U07/u07-final-report-v1/index.json), with
+5,136 seals, one receipt, worker gone and no stop. All 57,678 attempts and 49
+adapter failures remain accounted for. Every answer independently replays again,
+and 1,061 recorded optimality claims have no observed contradiction. The frozen
+performance verdict is inconclusive. No general speedup or new default follows.
+Full tables, raw distributions, uncertainty, memory scopes and provenance are
+saved. Final U07 application acceptance and the checked local handoff remain
+open. After this documentation-only checkpoint, reuse the archived report rather
+than rerunning solvers or rechecking its old revision against the new HEAD.
+The October 24 report/no-push order remains binding before application work.
+
 The [last measurement group](U07/u07-final-long-b-p1/index.json) verifies
 4,973 seals and four receipts, worker gone and no resource stop. All 96 slots
 are recorded, with no pending or uncertain claims. Complete answers independently

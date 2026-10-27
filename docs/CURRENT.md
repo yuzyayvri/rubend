@@ -2,6 +2,27 @@
 
 ## Latest checkpoint
 
+`u07-final-report-v1` passes canonical verification with 5,136 source/input
+seals and one receipt, worker gone and no resource stop. All 57,678 planned
+attempts remain accounted for and every answer independently replays again.
+The empirical optimality consistency audit checks 1,061 claims and finds no
+disagreement. The frozen performance gate is inconclusive, not a speedup win.
+Read docs/verification/next-plan/U07/COMPARATIVE-RESULTS.md and its full tables
+and compressed raw report. Rubend broad coverage is 9,962/10,000 with median
+best length 19 HTM. Cubing min2phase and Muodov C each cover all 10,000, with
+median 21 HTM. All 49 adapter errors remain retained. No default is changed.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before final U07 application acceptance. The report queue is already
+verified and archived at its recorded revision. Reuse that evidence after this
+documentation-only commit instead of trying to canonically recheck it against
+a changed HEAD. No detached experiment is active. Next complete the application
+matrix using source-identical installed evidence and stored final records for
+hard-censored display, release-answer playback/export and competitor inspection.
+Do not repeat holdout solves. Reconcile supported and unselected tiers honestly.
+The final local handoff and acceptance remain open. Keep the existing automation
+until that work and numerical report delivery are complete. No push or merge.
+
 `u07-final-long-b-p1` passes canonical verification with 4,973 seals and four
 receipts, worker gone and no resource stop. All 96 slots are recorded, with no
 pending or uncertain claims. Complete answers independently replay and all

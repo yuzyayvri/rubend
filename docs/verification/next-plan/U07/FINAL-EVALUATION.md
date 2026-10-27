@@ -430,6 +430,21 @@ the report writer under the resource runner. Its output directory must be new.
 node bench/run-limited.mjs u07-final-report-v1 4096 600 2 /nix/store/m0256z6rrjwmvxkbymm7a28n0nw2zll9-nodejs-slim-24.21.0/bin/node bench/final-comparative-report.mjs build/experiments/u07-final-evaluation-v1/freeze.json 7db44c8dd10f127bcaee094bd35ffeb7b63f75ab9e6d326c0804c49b01b1db0d build/experiments/u07-final-evaluation-v1 build/experiments/u07-final-report-v1
 ```
 
-Final U07 acceptance, saved numerical report and raw evidence, delivery of the
-numbers and limitations in chat, and only then automation deletion remain
-required. The roadmap is not complete at configuration freeze or implementation.
+The [canonical report analysis](u07-final-report-v1/index.json) passes with
+5,136 source/input seals and one resource receipt, worker gone and no stop.
+All answers independently replay again. The 1,061 recorded optimality claims
+have no observed contradiction. The [numerical results](COMPARATIVE-RESULTS.md),
+[complete tables](COMPARATIVE-TABLES.md) and raw report are saved. The frozen
+performance verdict is inconclusive. No source change, tuning, failed-attempt
+replacement or general speedup claim follows. A separate bounded analysis of
+the existing RSS samples adds only descriptive memory reporting and retains
+its exact command and resource receipt.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before final U07 application acceptance. No detached experiment is
+active at this documentation-only checkpoint. Reuse the canonical archived
+report at its recorded revision, not a fresh solver run. Complete the remaining
+application matrix from source-identical installed evidence and stored final
+records, with replay-fixture checks distinguished from fresh native execution.
+Final U07 acceptance, delivery of the numbers and limitations in chat, and only
+then automation deletion remain required. No push or merge is authorized.
