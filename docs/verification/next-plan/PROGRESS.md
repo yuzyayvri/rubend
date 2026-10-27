@@ -3,6 +3,17 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [last measurement group](U07/u07-final-long-b-p1/index.json) verifies
+4,973 seals and four receipts, worker gone and no resource stop. All 96 slots
+are recorded, with no pending or uncertain claims. Complete answers independently
+replay and all three sessions settle. Statuses are ten `ok` and 86 `timeout`,
+with no errors. The planner reports all 57,678 slots accounted across 23 groups.
+All 49 earlier adapter errors remain retained. These are not coverage results.
+After verification, the October 24 completion/report/no-push order remains
+binding before the frozen analysis-only `u07-final-report-v1` queue. It uses
+four GiB, CPU2 and a ten-minute job cap without repeating any solver attempt.
+Final U07 acceptance, numerical report verification and delivery remain open.
+
 The [first long-budget group](U07/u07-final-long-a-p1/index.json) verifies
 4,973 seals and four receipts, worker gone and no resource stop. All 96 slots
 are recorded, with no pending or uncertain claims. Complete answers independently
@@ -63,8 +74,8 @@ recorded before the next fixed quality group. Report delivery still precedes
 automation deletion. Yuzy separately decides any later push to main.
 
 The fixed serial timing groups have five separately capped four-GiB CPU2 actor
-jobs and 640 planned slots each. The paired long-budget group remains,
-followed by final U07 acceptance and report delivery. No frozen rule changes.
+jobs and 640 planned slots each. All measurement groups are accounted for.
+Final U07 acceptance and report delivery remain. No frozen rule changes.
 
 On October 27 Yuzy resumed automatic continuation after the usage-limit pause.
 Verify the already-completed sixth batch before advancing to the seventh.

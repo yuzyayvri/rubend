@@ -364,6 +364,24 @@ hard limits, 380-second soft checkpoints, nice 10, no swap and desktop reserve.
 The queue cap is 26 minutes. No frozen setting changes. Final U07 acceptance
 and report delivery remain required after measurements finish.
 
+The [last measurement group](u07-final-long-b-p1/index.json) verifies 4,973
+seals and four receipts, worker gone and no resource stop. All 96 slots are
+recorded, with no pending or uncertain claims. Complete answers independently
+replay and all three sessions settle. Three distinct measured cgroups and three
+available readiness PSS snapshots retain their scopes. Statuses are ten `ok`
+and 86 `timeout`, with no errors. The campaign planner reports all 57,678 slots
+accounted across all 23 groups. All 49 earlier adapter failures remain terminal.
+These status counts are not answer coverage or a performance verdict.
+
+After canonical verification, the October 24 completion/report/no-push order
+remains binding before `u07-final-report-v1`. That fixed analysis-only queue
+runs the unchanged report writer under four GiB, CPU2, nice 10, no swap and
+desktop reserve, with a ten-minute job cap and twelve-minute queue cap. It
+rechecks canonical raw evidence, every answer and the frozen statistics without
+starting a solver. The current pointer now follows report analysis. Preserve
+any failed analysis and diagnose it without rerunning the measurements.
+Final U07 acceptance, report verification and chat delivery remain required.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing

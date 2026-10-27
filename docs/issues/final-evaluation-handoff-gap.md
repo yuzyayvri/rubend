@@ -18,3 +18,11 @@ input, timer, budget or resource contract. Preserve the actual chronology in
 the final report rather than promise a one-minute handoff guarantee. No cause
 is assigned to the app, account limits, model service or local worker without
 further evidence. At the resumed inspection, ordinary usage is available.
+
+Report preparation has a second recorded gap. The last measurement group ends
+at `2026-10-27T00:33:58.426Z` and receives canonical verification during the
+00:35 heartbeat. Preparation tools run through the 00:36 inspection, then the
+next recorded tool call is at `2026-10-27T04:01:22+00:00`. It confirms that all
+23 groups are accounted for. Report analysis has not launched during that gap.
+The cause is not established. The completed solver attempts and frozen method
+remain unchanged. Report preparation resumes without repeating measurements.

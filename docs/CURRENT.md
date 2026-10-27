@@ -2,6 +2,21 @@
 
 ## Latest checkpoint
 
+`u07-final-long-b-p1` passes canonical verification with 4,973 seals and four
+receipts, worker gone and no resource stop. All 96 slots are recorded, with no
+pending or uncertain claims. Complete answers independently replay and all
+three sessions settle. Three actors have distinct measured cgroups and three
+available readiness PSS snapshots. Statuses are ten `ok` and 86 `timeout`, with
+no errors. The planner reports all 57,678 slots accounted across all 23 groups.
+The 49 earlier adapter errors remain retained. Status is not answer coverage.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before `u07-final-report-v1`. This analysis-only queue uses the frozen
+report writer, four GiB, CPU2, nice 10, no swap, desktop reserve and a ten-minute
+job cap. It rechecks raw evidence, replay and uncertainty without running any
+solver again. Final U07 acceptance, numerical report verification and delivery
+remain open. No frozen source or configuration changes.
+
 `u07-final-long-a-p1` passes canonical verification with 4,973 seals and four
 receipts, worker gone and no resource stop. All 96 slots are recorded, with no
 pending or uncertain claims. Complete answers independently replay and all
