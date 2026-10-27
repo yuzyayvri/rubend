@@ -2,6 +2,22 @@
 
 ## Latest checkpoint
 
+`u07-final-long-a-p1` passes canonical verification with 4,973 seals and four
+receipts, worker gone and no resource stop. All 96 slots are recorded, with no
+pending or uncertain claims. Complete answers independently replay and all
+three sessions settle. Three actors have distinct measured cgroups and all
+three readiness PSS snapshots are available. Statuses are 69 `ok` and 27
+`timeout`, with no errors. These are not coverage counts or a speed verdict.
+Cumulative accounted campaign slots are 57,582 of 57,678.
+
+After verification, the October 24 completion/report/no-push order remains
+binding before the last fixed group, `u07-final-long-b-p1`. Its 96 slots use
+the same selected IDs and warm ten-second budget for Nissy H48h0, vcube108
+and default exact-request. Three serial CPU2 jobs each retain four GiB,
+420-second hard and 380-second soft limits, nice 10, no swap and desktop reserve.
+The queue cap is 26 minutes. No frozen setting changes. Final U07 acceptance
+and numerical report delivery remain open even after the last measurement.
+
 `u07-final-structural-p1` passes canonical verification with 4,979 seals and
 seven receipts, worker gone and no resource stop. All 1,086 slots across six
 configurations and 181 structural entries are recorded, with no pending or

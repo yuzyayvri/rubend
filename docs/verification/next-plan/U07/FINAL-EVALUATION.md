@@ -349,6 +349,21 @@ GiB, 420-second hard limits, 380-second soft checkpoints, nice 10, no swap and
 desktop reserve. The queue cap is 26 minutes. The paired long-budget group,
 final acceptance and numerical report delivery remain open. No frozen change.
 
+The [first long-budget group](u07-final-long-a-p1/index.json) verifies 4,973
+seals and four receipts, worker gone and no resource stop. All 96 slots are
+recorded, with no pending or uncertain claims. Complete answers independently
+replay and all three sessions settle. Three distinct measured cgroups and three
+available readiness PSS snapshots retain their stated scopes. Statuses are
+69 `ok` and 27 `timeout`, with no errors. These are not coverage counts or a
+speed verdict. Cumulative accounted campaign slots are 57,582 of 57,678.
+After verification and before the final fixed group, `u07-final-long-b-p1`, the
+October 24 completion/report/no-push order remains binding. Its 96 slots use
+the same frozen IDs and warm ten-second budget for Nissy H48h0, vcube108 and
+default exact-request. Three serial CPU2 jobs each keep four GiB, 420-second
+hard limits, 380-second soft checkpoints, nice 10, no swap and desktop reserve.
+The queue cap is 26 minutes. No frozen setting changes. Final U07 acceptance
+and report delivery remain required after measurements finish.
+
 The sixth batch finishes during Yuzy's explicit usage-limit pause. On October 27
 Yuzy requests continuation after the reset. Its saved output receives canonical
 verification before any tracked edits or new group. Resume the same existing
