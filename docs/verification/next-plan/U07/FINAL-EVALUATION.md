@@ -454,6 +454,7 @@ cleanup and 162 unpublished signed subject-only commits. Its eighteen archives
 preserve these checks. The [final handoff](../FINAL-HANDOFF.md) records closure
 with accepted, rejected and inconclusive dispositions, not a stronger solver.
 The numerical report and limitations are delivered. There is no next batch.
-Remove only the existing heartbeat as the terminal cleanup. No push or merge
+The existing heartbeat is deleted through the native app control, as recorded in
+AUTOMATION-COMPLETION.json. No push or merge
 is authorized. The 10x to 100x target and universal optimized formal certificate
 remain unachieved.

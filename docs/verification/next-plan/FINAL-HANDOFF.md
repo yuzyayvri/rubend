@@ -76,7 +76,7 @@ Sixteen acceptance mutations reject missing work, formal-proof inflation,
 native/replay relabeling, unselected-tier promotion and failed restoration.
 Existing file-observer controls reject partial, wrong and pre-existing files.
 All 162 unpublished commits through the audited checkpoint pass local signature
-and subject-only checks. The closing documentation commit is checked separately
+and subject-only checks. The closing documentation commits are checked separately
 under the same policy. No fresh GitHub verification before a push is claimed.
 
 ## Remaining boundaries
@@ -94,7 +94,9 @@ No push, merge, release, deployment, cloud/GPU work or system change follows fro
 this handoff.
 
 There is no next fixed batch or selected implementation step. Preserve the
-sealed binaries, caches, raw records and failed evidence. Remove the existing
-`continue-rubend-roadmap` heartbeat as the authorized terminal cleanup. Do not
-restart it or repeat the evaluation without a new user request. A queued stale
+sealed binaries, caches, raw records and failed evidence. The existing
+`continue-rubend-roadmap` heartbeat is deleted as the authorized terminal cleanup.
+The [native deletion is confirmed](U07/AUTOMATION-COMPLETION.json), and no
+replacement automation is created. Do not restart it or repeat the evaluation
+without a new user request. A queued stale
 heartbeat after removal is not permission to start new work.

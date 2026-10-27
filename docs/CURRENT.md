@@ -16,8 +16,10 @@ completeness/optimality is not formally certified. Independent review is not
 run under solo work. Operator review and any push/merge remain separate later
 user decisions. Nothing is pushed or merged.
 
-There is no next queue. Delete only the existing `continue-rubend-roadmap`
-heartbeat as the terminal cleanup. Do not recreate it or repeat measurements
+There is no next queue. The existing `continue-rubend-roadmap` heartbeat is
+deleted through the native app control, with its receipt in
+docs/verification/next-plan/U07/AUTOMATION-COMPLETION.json.
+Do not recreate it or repeat measurements
 for a stale queued heartbeat. The final audit is canonical at its recorded
 revision; this closing documentation-only checkpoint does not rerun solvers
 or reinterpret an old run against a different HEAD. Preserve all evidence.

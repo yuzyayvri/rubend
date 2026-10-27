@@ -23,8 +23,10 @@ handoff in docs/verification/next-plan/FINAL-HANDOFF.md. The canonical final aud
 is `u07-final-acceptance-v1`. Accepted, rejected and inconclusive dispositions
 are recorded; the 10x to 100x target is unmet and no stronger formal certificate,
 new default or larger exact-tier promotion is claimed. No next batch is needed.
-Removing `continue-rubend-roadmap` is the authorized terminal cleanup. Do not
-resume or recreate that completed schedule without a new human request. Any
+The existing `continue-rubend-roadmap` heartbeat is deleted through the native
+app control. Its receipt is
+docs/verification/next-plan/U07/AUTOMATION-COMPLETION.json.
+Do not resume or recreate that completed schedule without a new human request. Any
 queued stale heartbeat must not repeat measurements or reopen implementation.
 Operator review and any push or merge still require Yuzy's separate later
 decision after reading the report. Independent review remains not run under

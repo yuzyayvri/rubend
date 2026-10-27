@@ -14,8 +14,9 @@ signed subject-only commits pass their stated checks. Eighteen compressed
 records retain the final proof of those checks. No solver reruns occur.
 
 The numerical report and limitations are saved and delivered. There is no next
-selected implementation or batch. Remove the existing heartbeat at final
-handoff. No default or larger exact tier is promoted. Universal optimized formal
+selected implementation or batch. The existing heartbeat is deleted at final
+handoff through the native control, with its receipt in U07/AUTOMATION-COMPLETION.json.
+No default or larger exact tier is promoted. Universal optimized formal
 certification, independent review and operator before-merge review are not
 invented. No push or merge is authorized by completion of this investigation.
 

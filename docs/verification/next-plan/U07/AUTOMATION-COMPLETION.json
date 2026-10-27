@@ -1,0 +1,12 @@
+{
+  "format": "rubend-roadmap-automation-completion-v1",
+  "automationId": "continue-rubend-roadmap",
+  "mode": "delete",
+  "deleteStatus": "deleted",
+  "recordedAt": "2026-10-27T05:29:08.898Z",
+  "finalAuditIndex": "docs/verification/next-plan/U07/u07-final-acceptance-v1/index.json",
+  "verifiedSourceCheckpoint": "fc96b5a038f198783b7d5c4a5223daa95585af04",
+  "checkedHandoffCheckpoint": "0a250daf0598c19de36bbf25a3a79baa87bff2b0",
+  "newAutomationCreated": false,
+  "pushOrMergePerformed": false
+}
