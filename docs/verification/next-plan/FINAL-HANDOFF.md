@@ -1,5 +1,10 @@
 # Final roadmap and comparison handoff
 
+After this report's delivery, Yuzy explicitly requested push and merge while
+preserving all commits. The [October 27 publication authority](OCT27-PUBLICATION.md)
+supersedes this handoff's original no-push and no-merge gate for that landing.
+It does not supply an independent-review verdict or change the results below.
+
 The scheduled experimental workflow is complete with its recorded accepted,
 rejected and inconclusive dispositions. The original 10x to 100x performance
 objective is not achieved. No new default or larger exact tier is promoted.
@@ -88,10 +93,11 @@ disabled. The pinned benchmark adapter's cancellation race remains a report
 limitation; no post-holdout repair or favorable replacement result changes this
 campaign.
 
-Independent review is not run under the solo restriction. Operator review is
-still required before merge. The user separately decides any later push to main.
-No push, merge, release, deployment, cloud/GPU work or system change follows from
-this handoff.
+Independent review is not run under the solo restriction. At this handoff,
+operator review and any publication were still separate user decisions. The
+later request linked above grants push and merge without asserting that code
+review occurred. No release, deployment, cloud/GPU experiment or system change
+follows from this handoff.
 
 There is no next fixed batch or selected implementation step. Preserve the
 sealed binaries, caches, raw records and failed evidence. The existing

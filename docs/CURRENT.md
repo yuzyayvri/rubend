@@ -2,6 +2,14 @@
 
 ## Latest checkpoint
 
+After report delivery, Yuzy explicitly requests push and merge while preserving
+every commit. The [October 27 authority](verification/next-plan/OCT27-PUBLICATION.md)
+supersedes the earlier publication gate for this landing. Work remains solo,
+and independent review is not run. Use a signed subject-only regular merge,
+preserve original commit IDs and verify remote ancestry and GitHub signatures.
+The following scheduled-workflow records describe their original checkpoints.
+No new measurement or implementation follows from publication.
+
 The scheduled roadmap/comparison workflow reaches its checked local handoff.
 Read docs/verification/next-plan/FINAL-HANDOFF.md for results and limitations.
 `u07-final-acceptance-v1` passes canonical verification of 5,141 seals and four

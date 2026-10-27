@@ -18,6 +18,15 @@ never invent success.
 
 ## Current boundary
 
+On October 27, after report delivery, Yuzy explicitly requested push and merge
+while maintaining all commits. Read
+docs/verification/next-plan/OCT27-PUBLICATION.md. This authorizes the completed
+roadmap branch's history-preserving landing and supersedes the earlier no-push
+and no-merge gate for this request only. Do not squash, rebase, rewrite original
+commits, bypass protections or fabricate review. Work remains solo. Independent
+review is not run. Preserve signed subject-only commits and verify GitHub's
+signature status after publication. No release or deployment is authorized.
+
 The October 27 scheduled roadmap/comparison workflow reaches its checked local
 handoff in docs/verification/next-plan/FINAL-HANDOFF.md. The canonical final audit
 is `u07-final-acceptance-v1`. Accepted, rejected and inconclusive dispositions
@@ -28,8 +37,9 @@ app control. Its receipt is
 docs/verification/next-plan/U07/AUTOMATION-COMPLETION.json.
 Do not resume or recreate that completed schedule without a new human request. Any
 queued stale heartbeat must not repeat measurements or reopen implementation.
-Operator review and any push or merge still require Yuzy's separate later
-decision after reading the report. Independent review remains not run under
+The handoff originally left operator review and any push or merge for Yuzy's
+separate later decision. The publication request above now grants this landing.
+Independent review remains not run under
 the solo restriction. Preserve all sealed and failed evidence.
 
 On 2026-10-26 Yuzy asked to shorten completion time as much as possible after
