@@ -18,6 +18,18 @@ never invent success.
 
 ## Current boundary
 
+The October 27 scheduled roadmap/comparison workflow reaches its checked local
+handoff in docs/verification/next-plan/FINAL-HANDOFF.md. The canonical final audit
+is `u07-final-acceptance-v1`. Accepted, rejected and inconclusive dispositions
+are recorded; the 10x to 100x target is unmet and no stronger formal certificate,
+new default or larger exact-tier promotion is claimed. No next batch is needed.
+Removing `continue-rubend-roadmap` is the authorized terminal cleanup. Do not
+resume or recreate that completed schedule without a new human request. Any
+queued stale heartbeat must not repeat measurements or reopen implementation.
+Operator review and any push or merge still require Yuzy's separate later
+decision after reading the report. Independent review remains not run under
+the solo restriction. Preserve all sealed and failed evidence.
+
 On 2026-10-26 Yuzy asked to shorten completion time as much as possible after
 the thirty-minute handoff gaps were explained. The existing heartbeat now
 checks every minute. This changes scheduling only. Frozen benchmark sources,

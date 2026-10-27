@@ -1,7 +1,7 @@
 # Final application acceptance
 
-Stored-event browser acceptance now passes canonical verification. Final source,
-history and evidence audit remains pending. The numerical report is verified
+Stored-event browser acceptance and the [final source/history audit](u07-final-acceptance-v1/index.json)
+pass canonical verification. The numerical report is verified
 and delivered. The October 24 completion/report/no-push order remains binding.
 No frozen source or selected configuration changes. No holdout solver attempt
 repeats. Not every lane is fresh native execution or a promoted feature.
@@ -164,3 +164,10 @@ absent before clicking Download. Never substitute writing expected bytes for
 observing the browser-created file. Close owned tabs and stop the server normally.
 The final audit preserves the live plans, controller source, file witness,
 source identities, screenshots, resource receipts and cleanup records.
+
+The final audit verifies 5,141 source/input seals and four resource receipts,
+worker gone and no stop. It retains the actual downloaded record, restoration
+witness, all application evidence bindings and three sampled review clips.
+Ten lanes are accounted for without relabeling every lane as fresh native
+execution or a newly promoted tier. The scheduled workflow reaches its checked
+handoff. Operator review and any push/merge remain separate later decisions.

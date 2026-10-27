@@ -2,6 +2,26 @@
 
 ## Latest checkpoint
 
+The scheduled roadmap/comparison workflow reaches its checked local handoff.
+Read docs/verification/next-plan/FINAL-HANDOFF.md for results and limitations.
+`u07-final-acceptance-v1` passes canonical verification of 5,141 seals and four
+receipts, worker gone and no resource stop. Its eighteen archives bind all 23
+measurement groups, 57,678 attempts, 102 task outputs, 49 retained adapter
+errors, the unchanged report, laws/regression reuse, package, application matrix,
+actual downloaded file, restoration, cleanup and signed subject-only history.
+
+The frozen performance verdict stays inconclusive. The 10x to 100x objective
+is unmet, no new default/larger exact tier is promoted and universal optimized
+completeness/optimality is not formally certified. Independent review is not
+run under solo work. Operator review and any push/merge remain separate later
+user decisions. Nothing is pushed or merged.
+
+There is no next queue. Delete only the existing `continue-rubend-roadmap`
+heartbeat as the terminal cleanup. Do not recreate it or repeat measurements
+for a stale queued heartbeat. The final audit is canonical at its recorded
+revision; this closing documentation-only checkpoint does not rerun solvers
+or reinterpret an old run against a different HEAD. Preserve all evidence.
+
 The post-live `u07-final-browser-v1` queue passes canonical verification with
 5,157 seals and two receipts, worker gone and no stop. Seven required browser
 observations pass seven replay checks. The later actual 547-byte release-answer

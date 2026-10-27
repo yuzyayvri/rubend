@@ -1,7 +1,23 @@
 # Approved roadmap progress
 
-Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
-is claimed. Work stays solo, local, signed, and subject-only.
+Updated October 27, 2026, Asia/Manila. The scheduled experimental workflow is
+complete with recorded dispositions and the [checked final handoff](FINAL-HANDOFF.md).
+This is not a stronger-solver or general speedup claim. Work stays solo, local,
+signed and subject-only. The 10x to 100x objective is unmet.
+
+The [canonical final audit](U07/u07-final-acceptance-v1/index.json) verifies
+5,141 source/input seals and four receipts, worker gone and no resource stop.
+All 23 groups, 57,678 attempts, 102 output hashes and 49 retained errors are
+accounted for. Root-law/regression reuse, local package, ten mixed-evidence
+application lanes, actual file export/restoration, cleanup and 162 unpublished
+signed subject-only commits pass their stated checks. Eighteen compressed
+records retain the final proof of those checks. No solver reruns occur.
+
+The numerical report and limitations are saved and delivered. There is no next
+selected implementation or batch. Remove the existing heartbeat at final
+handoff. No default or larger exact tier is promoted. Universal optimized formal
+certification, independent review and operator before-merge review are not
+invented. No push or merge is authorized by completion of this investigation.
 
 The [post-live browser archive](U07/u07-final-browser-v1/index.json) verifies
 5,157 seals and two receipts, worker gone and no stop. Seven required observations

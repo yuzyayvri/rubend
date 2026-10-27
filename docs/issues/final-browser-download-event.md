@@ -41,4 +41,6 @@ resource fields are checked before tracked edits and saved in
 
 This closes the physical-file observation gap for the new stored release answer.
 The first event wait remains unobserved and is not relabeled passed. No new
-solver or holdout measurement runs. The final canonical audit remains required.
+solver or holdout measurement runs. The [final canonical audit](../verification/next-plan/U07/u07-final-acceptance-v1/index.json)
+verifies the actual-file witness, exact bytes, restoration, source bindings and
+normal cleanup. The original unobserved event remains recorded separately.

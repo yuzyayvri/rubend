@@ -1,6 +1,8 @@
 # Roadmap evidence and final dispositions
 
-Reconciled October 27, 2026, Asia/Manila. Final source/history audit is pending.
+Reconciled October 27, 2026, Asia/Manila. The [final source/history audit](U07/u07-final-acceptance-v1/index.json)
+passes canonical verification and the [checked handoff](FINAL-HANDOFF.md) closes
+the scheduled workflow with the dispositions below.
 The experiment, comparative report and application evidence now have recorded
 outcomes. This record separates accepted work from rejected, unselected and
 inconclusive treatments. It does not mark an unmet performance target, open
@@ -36,7 +38,7 @@ called approved-deferred to avoid difficult work.
 | U05 scaling | [Five alternating cohorts](U05/PARTITION-SCALING.md) preserve 22,480 measured results. One duplicate pair has 8.23% noise, above 5%. Private initialization dominates diagnostic stages. | Inconclusive scaling; retain serial. No accepted multicore gain or quantified slowdown. Do not rerun unchanged for luck. |
 | U06 bounded reference and optimized refinement | [Complete bounded reference](U06/BOUNDED-REFERENCE.md), [positive solved reflection](U06/SEARCH-GOAL-REFLECTION.md) and [seven-gap inventory](U06/REFINEMENT-GAPS.md) pass their actual guards. | Full optimized completeness, loaded-data and coverage implications remain unproved. The plan allows exact gap identification and forbids the stronger application label until all bridges hold. Keep it disabled. |
 | U06 rendering | [Demand rendering](U06/DEMAND-RENDERING.md) reduces submitted idle work on a valid rendering surface. [Mesh retention](U06/MESH-RETENTION-COMPARISON.md) remains private/inconclusive, not bundled into that accepted change. Actual rebuilt-app recovery, replay and cleanup pass. | U07 checks the final package and application evidence. Operator before-merge review remains. No native strength or general CPU/GPU claim follows from idle frames. |
-| U07 final research and comparison | [Primary-source solver setup](U07/COMPARATIVE-RESULTS.md), pinned builds/notices, the unchanged freeze, all 57,678 attempts and the verified numerical report are saved and delivered. The [application matrix](U07/FINAL-APPLICATION.md) identifies reused native checks, stored-record UI replay and actual file export. | The frozen performance verdict is inconclusive and the 10x to 100x objective is unmet. No new larger exact tier or default is promoted. Final source/history/evidence audit remains before scheduled-workflow closure. |
+| U07 final research and comparison | [Primary-source solver setup](U07/COMPARATIVE-RESULTS.md), pinned builds/notices, the unchanged freeze, all 57,678 attempts and the verified numerical report are saved and delivered. The [application matrix](U07/FINAL-APPLICATION.md) identifies reused native checks, stored-record UI replay and actual file export. | Final audit passes. The frozen performance verdict is inconclusive and the 10x to 100x objective is unmet. No new larger exact tier or default is promoted. Operator review and any publication decision remain separate. |
 
 ## Outcome and remaining boundaries
 
@@ -73,10 +75,11 @@ release-answer file. No larger exact tier was selected before freeze. Prior H0
 exact smoke and final H0 fast-control measurements are not relabeled as a new
 larger exact benchmark. The checked larger-tier promotion gate stays closed.
 
-The last bounded audit must bind sources, report outputs, law/regression reuse,
-package, screenshots, file restoration, cleanup and signed subject-only history.
-After it is canonically verified and the checked final handoff is delivered,
-delete only `continue-rubend-roadmap`. Completion of this investigation is not a
-stronger-solver claim. The original 10x to 100x target remains unachieved.
+The last bounded audit canonically verifies 5,141 seals and four receipts, with
+its worker gone and no resource stop. It binds sources, report outputs,
+law/regression reuse, package, screenshots, file restoration, cleanup and signed
+subject-only history. Deliver the checked final handoff and delete only
+`continue-rubend-roadmap`. Completion of this investigation is not a stronger-
+solver claim. The original 10x to 100x target remains unachieved.
 Independent review is not run under the solo restriction. Operator review and
 any push, merge, release or deployment remain separate later decisions.

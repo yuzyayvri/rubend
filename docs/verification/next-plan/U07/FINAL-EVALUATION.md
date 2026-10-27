@@ -446,5 +446,14 @@ active at this documentation-only checkpoint. Reuse the canonical archived
 report at its recorded revision, not a fresh solver run. Complete the remaining
 application matrix from source-identical installed evidence and stored final
 records, with replay-fixture checks distinguished from fresh native execution.
-Final U07 acceptance, delivery of the numbers and limitations in chat, and only
-then automation deletion remain required. No push or merge is authorized.
+The [canonical final audit](u07-final-acceptance-v1/index.json) now verifies
+5,141 source/input seals and four receipts, worker gone and no resource stop.
+It binds all 23 measurement groups, 102 output hashes, the report, law/regression
+reuse, actual package, application matrix, physical-file witness, restoration,
+cleanup and 162 unpublished signed subject-only commits. Its eighteen archives
+preserve these checks. The [final handoff](../FINAL-HANDOFF.md) records closure
+with accepted, rejected and inconclusive dispositions, not a stronger solver.
+The numerical report and limitations are delivered. There is no next batch.
+Remove only the existing heartbeat as the terminal cleanup. No push or merge
+is authorized. The 10x to 100x target and universal optimized formal certificate
+remain unachieved.
