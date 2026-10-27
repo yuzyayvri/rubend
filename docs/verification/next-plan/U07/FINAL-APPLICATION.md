@@ -77,3 +77,12 @@ request controls. No solver executes. These are data-admission tests, not browse
 acceptance. The source-bound `u07-final-app-data-v1` queue follows the signed
 implementation checkpoint with two serial one-GiB CPU2 jobs and a five-minute
 queue cap. Canonical verification precedes further tracked edits and browser use.
+
+The first queue verifies 5,140 seals and two receipts, with worker cleanup and
+no stop. It does not admit browser use. Subsequent boundary inspection catches
+an [empty web-asset map](../../../issues/final-application-empty-assets.md).
+The original queue and artifact stay preserved. A focused regression rejects
+that artifact before the preparer changes. The corrected local artifact binds
+seven installed web files from the unchanged freeze and passes 32 negative
+controls. The fresh `u07-final-app-data-v2` queue retains the same resource caps.
+Actual browser acceptance remains pending its canonical result.

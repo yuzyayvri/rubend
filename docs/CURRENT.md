@@ -2,6 +2,17 @@
 
 ## Latest checkpoint
 
+`u07-final-app-data-v1` passes canonical verification of 5,140 seals and two
+receipts, worker gone and no stop. Inspection before browser use finds its
+web-asset map empty. The original artifact remains preserved and is not allowed
+to serve the frontend. Read docs/issues/final-application-empty-assets.md.
+The new regression fails against that artifact with a missing-main.js error.
+The correction derives all seven assets from the original freeze, not the model-
+module manifest. Four saved records and 32 controls now pass locally. No browser
+or solver executes. The October 24 completion/report/no-push order remains
+binding before the fresh `u07-final-app-data-v2` queue, with unchanged one-GiB
+CPU2 limits and a five-minute queue cap. Canonically verify before browser use.
+
 Final application record preparation locally admits four saved observations
 and passes 28 negative controls under one-GiB CPU2 limits. It checks the original
 freeze, canonical raw report, every projected answer through Bend and geometry,

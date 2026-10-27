@@ -10,6 +10,13 @@ import {apply,solved} from "./fixed-work-model.mjs";
 import {apply as bendApply} from "../apps/model.mjs";
 import {inputs} from "../scripts/manifest.mjs";
 
+export function validateReplayAssets(assets){
+  assert(assets&&typeof assets==="object"&&!Array.isArray(assets));
+  for(const name of["index.html","main.js","worker.js","style.css","favicon.svg"])assert.match(assets[name]??"",/^[a-f0-9]{64}$/,"Missing admitted installed web asset "+name);
+  for(const[name,hash]of Object.entries(assets)){assert.match(name,/^[a-z0-9][a-z0-9.-]*$/);assert.match(hash,/^[a-f0-9]{64}$/);}
+  return true;
+}
+
 export function projectSavedRecord(envelope,item,actor){
   assert.equal(envelope.format,"rubend-measured-evaluation-envelope-v1");
   assert.equal(envelope.slot.actorId,actor.id);assert.equal(envelope.slot.caseId,item.id);
@@ -42,7 +49,8 @@ export function prepareFinalAppRecords(output){
   }
   const deliveryPath=resolve("build/experiments/u07-delivery-http-v1/delivery.json"),delivery=JSON.parse(readFileSync(deliveryPath)),installedBuild=delivery.privateStore+delivery.logicalStorePath+"/share/rubend/build",manifest=JSON.parse(readFileSync(installedBuild+"/manifest.json"));assert.deepEqual(delivery.sourceHashes,inputs());assert.deepEqual(manifest.sourceHashes,inputs());assert.equal(fileHash(installedBuild+"/rubend"),delivery.nativeSha256);for(const[p,h]of Object.entries(manifest.artifacts))assert.equal(fileHash(installedBuild+"/"+p),h);
   const guiIndexPath=resolve("docs/verification/next-plan/U07/u07-installed-gui-v1/index.json"),guiIndex=JSON.parse(readFileSync(guiIndexPath)),mediaPath=resolve("docs/verification/next-plan/U07/u07-installed-gui-v1-media/index.json"),media=JSON.parse(readFileSync(mediaPath));assert(guiIndex.passed&&guiIndex.workerGone&&!guiIndex.resourceStops);for(const m of media.screenshots)assert.equal(fileHash(m.path),m.sha256);
-  const artifact={format:"rubend-final-app-records-v1",records,freezePath,freezeSha256:digest,reportPath,reportSha256:fileHash(reportPath),reportIndexPath,reportIndexSha256:fileHash(reportIndexPath),installedBuild,installedManifestSha256:fileHash(installedBuild+"/manifest.json"),webAssets:Object.fromEntries(Object.entries(manifest.artifacts).filter(([p])=>p.startsWith("web/")).map(([p,h])=>[p.slice(4),h])),deliveryPath,deliverySha256:fileHash(deliveryPath),guiReuse:{indexPath:guiIndexPath,indexSha256:fileHash(guiIndexPath),mediaPath,mediaSha256:fileHash(mediaPath),nativeSourceIdentical:true,freshNativeBrowserSolve:false},browserPreviewHidden:true,solverExecution:false,performanceAcceptance:false,formalOptimality:false,independentReview:false};
+  const prefix=installedBuild+"/web/",webAssets=Object.fromEntries(Object.entries(freeze.sourceHashes).filter(([p])=>p.startsWith(prefix)).map(([p,h])=>[p.slice(prefix.length),h]));validateReplayAssets(webAssets);for(const[name,hash]of Object.entries(webAssets))assert.equal(fileHash(prefix+name),hash);
+  const artifact={format:"rubend-final-app-records-v1",records,freezePath,freezeSha256:digest,reportPath,reportSha256:fileHash(reportPath),reportIndexPath,reportIndexSha256:fileHash(reportIndexPath),installedBuild,installedManifestSha256:fileHash(installedBuild+"/manifest.json"),webAssets,deliveryPath,deliverySha256:fileHash(deliveryPath),guiReuse:{indexPath:guiIndexPath,indexSha256:fileHash(guiIndexPath),mediaPath,mediaSha256:fileHash(mediaPath),nativeSourceIdentical:true,freshNativeBrowserSolve:false},browserPreviewHidden:true,solverExecution:false,performanceAcceptance:false,formalOptimality:false,independentReview:false};
   artifact.valueDigest=valueDigest(artifact);mkdirSync(resolve(output,".."),{recursive:true});writeFileSync(output,JSON.stringify(artifact,null,2)+"\n",{flag:"wx"});return{passed:true,records:records.length,output,solverExecution:false};
 }
 

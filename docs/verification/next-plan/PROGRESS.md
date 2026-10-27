@@ -3,6 +3,15 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The first application data queue verifies 5,140 seals and two receipts, worker
+gone and no stop. Before browser use, inspection catches an empty web-asset map
+that its original controls missed. The [recorded gap](../../issues/final-application-empty-assets.md)
+is reproduced by a failing missing-main.js check against the preserved artifact.
+The correction uses the original frozen installed web hashes. Four records,
+seven assets and 32 rejection controls pass locally. The fresh bounded v2 queue
+is still pending canonical verification. No browser or solver runs, no frozen
+measurement changes and no overall completion is claimed.
+
 The [final application preparation](U07/FINAL-APPLICATION.md) locally admits
 four saved records and passes 28 negative controls without executing a solver.
 The next source-bound admission queue uses two serial one-GiB CPU2 jobs with

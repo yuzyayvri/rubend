@@ -1,0 +1,45 @@
+{
+  "format": "rubend-background-archive-v1",
+  "passed": true,
+  "id": "u07-final-app-data-v1",
+  "revision": "8d2ce791ba5a79925f40b40443e94bf4da2c6c6b",
+  "sourceSeals": 5140,
+  "jobs": 2,
+  "workerGone": true,
+  "resourceStops": false,
+  "independentReview": false,
+  "startedAt": "2026-10-27T04:21:53.296Z",
+  "finishedAt": "2026-10-27T04:22:03.035Z",
+  "archives": [
+    {
+      "path": "0-u07-final-app-data-v1-plan.json.gz",
+      "sha256": "b19099cadcd4b17c448bd5eea36c875487b89cb3fc894420a406e01de12246a8",
+      "compressedSha256": "211d8dbee5ac741213352229e0e66a8c705fa7bb150a7d8fed4efd85fb8c93c0"
+    },
+    {
+      "path": "1-status.json.gz",
+      "sha256": "58c29b7036562657a0946b5e751999310073bcb38eb38f8060d32699e9f19131",
+      "compressedSha256": "5377b9453efb9b08d9bcfd30963a94980c9012f43296e0333447d2d05b52511c"
+    },
+    {
+      "path": "2-u07-final-app-data-v1-records.json.gz",
+      "sha256": "0d6ac1cb59be0bcd0515a53e0e015a8fb3f32a14089d0129be3554701cf57e77",
+      "compressedSha256": "4de8b3875289a2bf80dc5d645ed14573316e9527c44843ead2b385e14f1101a3"
+    },
+    {
+      "path": "3-u07-final-app-data-v1-controls.json.gz",
+      "sha256": "ec255488620db8eb4b9c30ce3f2032fe623e0a324eb04c4d667544157088e4c7",
+      "compressedSha256": "6df5c7ac05aa606588d18adf4b7b0c75ecb72249a2067bccfedc271a0b5f726f"
+    },
+    {
+      "path": "4-controls.json.gz",
+      "sha256": "9d850261d6ab93fba092b55043a2f65ec091a86903e04dc22b6461d1541d2d1e",
+      "compressedSha256": "2a9771045da6b252b309952496919c7e378ea8e0c2128bddd247baea239e1b6f"
+    },
+    {
+      "path": "5-records.json.gz",
+      "sha256": "09b61249204d5a534d50f6016e53794df0e5474340a3200453761dd346931d83",
+      "compressedSha256": "e7320b06f8a2412c3b9c533962b46dc8b34e8c7850eba8feb3e3e5a695ee2b3a"
+    }
+  ]
+}
