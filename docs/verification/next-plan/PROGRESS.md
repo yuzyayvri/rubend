@@ -3,6 +3,13 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The corrected application data queue canonically verifies 5,140 seals and two
+receipts, worker gone and no stop. All four records, seven frozen installed web
+assets and 32 negative controls pass. The stored-event HTTP fixture locally
+checks byte-identical assets, eight refusals and completed/cancelled stream
+cleanup without running a solver. Browser acceptance is next and remains open.
+The October 24 report/no-push order and frozen measurement seal are unchanged.
+
 The first application data queue verifies 5,140 seals and two receipts, worker
 gone and no stop. Before browser use, inspection catches an empty web-asset map
 that its original controls missed. The [recorded gap](../../issues/final-application-empty-assets.md)

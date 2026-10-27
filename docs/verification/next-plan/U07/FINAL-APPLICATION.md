@@ -86,3 +86,11 @@ that artifact before the preparer changes. The corrected local artifact binds
 seven installed web files from the unchanged freeze and passes 32 negative
 controls. The fresh `u07-final-app-data-v2` queue retains the same resource caps.
 Actual browser acceptance remains pending its canonical result.
+
+The corrected v2 result canonically verifies 5,140 seals and two receipts,
+worker gone and no resource stop. Four records, seven frozen web files and all
+32 rejection controls pass. The stored-event HTTP fixture serves unchanged
+packaged frontend bytes, injects a visible replay-provenance banner and replays
+only admitted input/mode/budget requests. It has no native backend. Local checks
+verify all asset bytes, eight refusals, completed and cancelled streams, and
+normal cleanup. Actual browser observations still remain.

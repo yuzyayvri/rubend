@@ -2,6 +2,16 @@
 
 ## Latest checkpoint
 
+`u07-final-app-data-v2` passes canonical verification of 5,140 seals and two
+receipts, worker gone and no stop. Four stored records bind all seven frozen
+installed web assets and pass 32 negative controls. The original empty-map
+artifact remains preserved and excluded. The replay HTTP path also passes
+seven-asset byte checks, eight refusals, completed/cancelled stream cleanup and
+read-only matched-record inspection under one-GiB CPU2 limits. These are not
+browser observations. The October 24 completion/report/no-push order remains
+binding before the source-sealed hidden-browser session. No solver rerun,
+product change, new tier selector or larger exact-tier promotion is authorized.
+
 `u07-final-app-data-v1` passes canonical verification of 5,140 seals and two
 receipts, worker gone and no stop. Inspection before browser use finds its
 web-asset map empty. The original artifact remains preserved and is not allowed
