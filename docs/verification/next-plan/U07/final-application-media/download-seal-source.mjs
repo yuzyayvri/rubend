@@ -1,0 +1,8 @@
+import assert from "node:assert/strict";
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from "node:fs";
+import {resolve} from "node:path";
+import {execFileSync} from "node:child_process";
+import {fileHash} from "../bench/bounded-file-hash.mjs";
+import {loadReplayArtifact} from "../bench/u07-final-replay-server.mjs";
+
+const id="u07-final-download-v1",live=resolve("build/experiments/u07-final-download-live-v1"),artifactPath=resolve("build/experiments/u07-final-app-data-v2/records.json"),artifact=loadReplayArtifact(artifactPath),previous=JSON.parse(readFileSync("build/evidence/u07-final-browser-v1-live-plan.json")),path=resolve("build/evidence",id+"-live-plan.json");assert(!existsSync(path)&&!existsSync(live));for(const[p,h]of Object.entries(previous.sourceHashes))assert.equal(fileHash(p),h,p);const paths=new Set([...Object.keys(previous.sourceHashes),"tests/u01-file-backed-acceptance.mjs","tests/file-download-observer.mjs",resolve(import.meta.filename)]),command=[process.execPath,"bench/u07-final-replay-server.mjs","serve",artifactPath,resolve(live,"session.json")],limits={memoryMiB:1024,seconds:600,cpus:[2]};mkdirSync(live);writeFileSync(path,JSON.stringify({id,revision:execFileSync("git",["rev-parse","HEAD"],{encoding:"utf8"}).trim(),live,artifactPath,artifactSha256:fileHash(artifactPath),sourceHashes:Object.fromEntries([...paths].sort().map(p=>[p,fileHash(p)])),command,limits,downloadPath:"/home/yuzy/rubend-solve.json",protectedDownloadMustBeRestored:true,filesystemObserver:"tests/u01-file-backed-acceptance.mjs#waitForExactDownloadedFile",solverExecution:false,browserResourcesEnforced:false,browserPreviewHidden:true,reportSha256:artifact.reportSha256},null,2)+"\n",{flag:"wx"});console.log(JSON.stringify({path,live,command,limits}));

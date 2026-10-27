@@ -7,9 +7,10 @@ Execute U00 through U07 as measured units, not one combined optimization rewrite
 Research gains are hypotheses. The original 10x to 100x target remains unachieved.
 
 Execution status is recorded in
-[the October 26 obligation/disposition matrix](../verification/next-plan/ROADMAP-RECONCILIATION.md).
-The plan's original boxes are not blanket completion claims. The U02 native
-inference disposition and U07 final research/comparison remain unfinished.
+[the final obligation/disposition matrix](../verification/next-plan/ROADMAP-RECONCILIATION.md).
+The plan's original boxes are not blanket completion claims. U02 retains its
+inconclusive private disposition. U07's frozen numerical report and application
+evidence are recorded; the final source/history audit remains pending.
 Measured rejected or inconclusive treatments are not successful optimizations.
 The later approved heartbeat and NP04–NP08 authority supersede the original
 no-wakeup and approval boundaries below, not resource limits or the no-push order.

@@ -3,6 +3,20 @@
 Updated October 27, 2026, Asia/Manila. No overall completion or new speedup
 is claimed. Work stays solo, local, signed, and subject-only.
 
+The [post-live browser archive](U07/u07-final-browser-v1/index.json) verifies
+5,157 seals and two receipts, worker gone and no stop. Seven required observations
+pass seven replay checks. The [file-backed release export](U07/FINAL-APPLICATION.md)
+also verifies an actual 547-byte browser-created file, exact displayed bytes,
+Bend/geometry replay, protected-file restoration and normal tab/server cleanup.
+No solver executes. All ten application lanes are accounted for with explicit
+reuse, replay and unselected-tier boundaries, not an all-fresh-native claim.
+
+The final audit locally passes its 16 rejection controls and source/evidence
+checks. A last bounded queue still must pass canonical verification, including
+signed subject-only history, before the scheduled workflow is closed. The
+comparative report is delivered; its performance gate remains inconclusive.
+The October 24 report/no-push order and original proof boundaries remain binding.
+
 The corrected application data queue canonically verifies 5,140 seals and two
 receipts, worker gone and no stop. All four records, seven frozen installed web
 assets and 32 negative controls pass. The stored-event HTTP fixture locally

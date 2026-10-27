@@ -1,5 +1,23 @@
 # Proof coverage and remaining trust
 
+## Final evaluation boundary
+
+The [final comparative report](../verification/next-plan/U07/COMPARATIVE-RESULTS.md)
+accounts for 57,678 measured attempts, with every returned answer independently
+replayed again. Its empirical consistency audit finds no contradiction among
+1,061 recorded optimality claims. This does not prove optimized search
+completeness, loaded-table refinement or universal optimality. Exported JSON
+and stored-event browser replay do not serialize those missing formal proofs.
+
+The source-identical U07 full regression and root gate remain reusable. That
+root record has 23 laws, sixteen toolchain checks and 74 recorded source inputs.
+The later fixture changes are covered separately by the installed application's
+ten lifecycle checks. The final audit rechecks those source and artifact bindings
+instead of rerunning unchanged laws or rebuilding sealed binaries. Approved
+NP01 through NP08 retain exactly the scoped obligations and open bridges below.
+No stronger application label is enabled. Independent review remains not run
+under the solo restriction, and operator review remains a before-merge gate.
+
 `bend PROOF.bend --verdict` currently checks 23 laws through the normal checker
 and the independently built BendTT kernel. This is not a proof of the entire
 application or compiler.

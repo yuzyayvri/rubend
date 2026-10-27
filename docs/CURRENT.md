@@ -2,6 +2,24 @@
 
 ## Latest checkpoint
 
+The post-live `u07-final-browser-v1` queue passes canonical verification with
+5,157 seals and two receipts, worker gone and no stop. Seven required browser
+observations pass seven replay checks. The later actual 547-byte release-answer
+download exactly matches the displayed JSON and replays through Bend and geometry.
+The protected download is restored byte-identically; no private backup remains.
+Both owned tabs and both replay servers are closed. No solver or holdout attempt
+is rerun. Read docs/verification/next-plan/U07/FINAL-APPLICATION.md for the ten-lane
+matrix and its native-reuse, stored-replay and unselected-tier boundaries.
+
+The final audit passes locally with 16 rejection controls. It binds the original
+4,963 frozen files, 23 groups/57,678 attempts, retained 49 errors, root 23 laws,
+regression reuse, actual package, application matrix, physical file and cleanup.
+The final source-bound queue still requires canonical verification before closure.
+The October 24 completion/report/no-push order remains binding. The numerical
+report is already delivered. No winning default, larger exact tier, universal
+formal certificate or 10x to 100x gain is claimed. Independent/operator review
+and any push or merge remain separate gates.
+
 `u07-final-app-data-v2` passes canonical verification of 5,140 seals and two
 receipts, worker gone and no stop. Four stored records bind all seven frozen
 installed web assets and pass 32 negative controls. The original empty-map

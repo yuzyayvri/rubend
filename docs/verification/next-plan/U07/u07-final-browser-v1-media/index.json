@@ -1,0 +1,41 @@
+{
+  "screenshots": [
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/hard-censored.jpg",
+      "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/small-control.jpg",
+      "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/h0-control.jpg",
+      "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/known-exact.jpg",
+      "sha256": "57b42bfa52f383bd1fe7c1e1042dddeaec489bd92dc81a099f0cf7a9168e7a84",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/release-playback.jpg",
+      "sha256": "26c38702520b4ddacf8471ca673f93ca51971c0053846e98c571aba0863c82ef",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/release-export.jpg",
+      "sha256": "57a5d7c11cbb739fa123ce1dc7593aec773e0e719b4a49b7ae46df3ea488639a",
+      "evidenceKind": "stored-ui-replay"
+    },
+    {
+      "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/matched-records.jpg",
+      "sha256": "1c8464d9d36baaf1fb280c552bdaaf6c738933b403c3e2001f79364a737d2df4",
+      "evidenceKind": "stored-ui-replay"
+    }
+  ],
+  "operatorReview": false,
+  "independentReview": false
+}

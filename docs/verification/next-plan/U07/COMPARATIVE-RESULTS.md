@@ -4,7 +4,8 @@ The performance-promotion verdict is inconclusive. Rubend returns shorter
 solutions on the broad population, but has lower answer coverage than the two
 first-returned competitors. This does not establish a whole-solver speedup,
 universal solver ranking or the roadmap's 10x to 100x target. The default stays
-unchanged. Final U07 application acceptance is still open.
+unchanged. Application evidence is recorded; the final source/history audit
+remains pending.
 
 The [canonical analysis](u07-final-report-v1/index.json) verifies 5,136 source
 and input seals and one resource receipt, with the worker gone and no stop.
@@ -170,4 +171,4 @@ no solver rerun. Do not overwrite the original output directory.
 
 Independent review is not run under the solo restriction. Operator review,
 merge, push, release and deployment are not authorized by these results.
-Final U07 application acceptance and the checked local handoff still remain.
+The final source/history audit and checked local handoff still remain.

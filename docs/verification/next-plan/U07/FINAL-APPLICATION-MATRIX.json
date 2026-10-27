@@ -1,0 +1,202 @@
+{
+  "format": "rubend-final-application-matrix-v1",
+  "lanes": [
+    {
+      "lane": 1,
+      "scenario": "Regression and installed solve",
+      "kind": "source-identical-actual-native-reuse",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/installed-shallow.jpg",
+          "sha256": "6138c0922d67c152e33c9cb55ecf61e353493cd943a2241379c84ae9223a8ead"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-regression-v1/index.json",
+        "docs/verification/next-plan/U07/u07-installed-gui-v1/index.json"
+      ],
+      "limitation": "No fresh trunk/head browser timing comparison."
+    },
+    {
+      "lane": 2,
+      "scenario": "Known optimum and certification level",
+      "kind": "actual-native-reuse-and-stored-record-replay",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/installed-export.jpg",
+          "sha256": "e748d4285486addedd1791a4360fd3961c4b14b7d6a02456974ea212abadbede"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/known-exact.jpg",
+          "sha256": "57b42bfa52f383bd1fe7c1e1042dddeaec489bd92dc81a099f0cf7a9168e7a84"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-installed-gui-v1/index.json",
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json"
+      ],
+      "limitation": "Four through four is search-established and replay checked, not a universal formal certificate."
+    },
+    {
+      "lane": 3,
+      "scenario": "Hard censored result",
+      "kind": "stored-record-replay",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/hard-censored.jpg",
+          "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/final-application-media/hard-provenance.jpg",
+          "sha256": "caa91684d2d4dfc9be0e793426e4291e4f1dffcbd98f41a830db4f29e8e63f08"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json"
+      ],
+      "limitation": "Original one-second timeout, interval zero through nineteen. Fixture terminal projection is explicit and non-optimal."
+    },
+    {
+      "lane": 4,
+      "scenario": "Low-memory control",
+      "kind": "prior-native-smoke-final-measurements-and-stored-ui-replay",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/small-control.jpg",
+          "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U00/u00-browser-profiles-v1/index.json",
+        "docs/verification/next-plan/U07/COMPARATIVE-RESULTS.md",
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json"
+      ],
+      "limitation": "Preserved small profile is a benchmark control, not a newly shipped GUI tier selector."
+    },
+    {
+      "lane": 5,
+      "scenario": "Larger exact tier",
+      "kind": "unselected-no-new-promotion",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-browser-profiles-v1/h0-shallow.jpg",
+          "sha256": "6097716f2b16fec6b41577786ddc19ef9d7a6ede6a0b7d401aa8e01c6a4030d5"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/h0-control.jpg",
+          "sha256": "5127dba25216898eb82d3b7645ccbcf89e36d2cb78ac8714b6fb19c2d2ef2da9"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U00/u00-browser-profiles-v1/index.json",
+        "docs/verification/next-plan/U07/COMPARATIVE-RESULTS.md"
+      ],
+      "limitation": "Prior H0 exact known-case smoke is reused. Final H0 holdout control is fast/improvement, not a larger exact benchmark. No new larger exact tier was selected before freeze or promoted."
+    },
+    {
+      "lane": 6,
+      "scenario": "Failure and cancellation",
+      "kind": "source-identical-actual-native-reuse",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-cancelled.jpg",
+          "sha256": "fb9a97231146f871cc6a304524787fd738432be6dd95da7696d96fa2baccf9db"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/head-resubmitted.jpg",
+          "sha256": "d63f466bb433b9d062c94e4ed59c5547258ddc3bbbef30c1c805c39827b8a302"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U00/u00-browser-profiles-v1/worker-failure-responsive.jpg",
+          "sha256": "1202a92944a5499a6e5f88bae4d04ed837f9a6f156b605b1c84dc7e9022e614c"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-installed-gui-v1/index.json",
+        "docs/verification/next-plan/U06/review-video-v3-indexed/index.json"
+      ],
+      "limitation": "Fixture-induced worker failure and capability refusal are not an arbitrary hardware-fault guarantee."
+    },
+    {
+      "lane": 7,
+      "scenario": "Release-answer playback and physical export",
+      "kind": "stored-record-browser-replay-and-actual-file",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/release-playback.jpg",
+          "sha256": "26c38702520b4ddacf8471ca673f93ca51971c0053846e98c571aba0863c82ef"
+        },
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/final-application-media/release-file-export.jpg",
+          "sha256": "6f67efc39de06742a757770c7a607ce66064916cefa72760dee332eaaaa0cee8"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json",
+        "build/evidence/u07-final-download-v1-live-verification.json"
+      ],
+      "limitation": "No new solver run. Actual547-byte browser-created file equals the displayed JSON and independently replays. A pre-existing download was restored."
+    },
+    {
+      "lane": 8,
+      "scenario": "Narrow layout, fallback and reduced motion",
+      "kind": "source-identical-live-reuse-and-reduced-motion-stored-playback",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/narrow-layout.jpg",
+          "sha256": "4d58dd7f8eebe06cc9a43e82dcf9e3339625bc4bcdf139229c58e51f5b6e2d16"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-installed-gui-v1/index.json",
+        "docs/verification/next-plan/U06/review-video-v3-indexed/index.json",
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json"
+      ],
+      "limitation": "Browser resources are outside the local server cgroup. These are functional checks, not frame-cadence or CPU measurements."
+    },
+    {
+      "lane": 9,
+      "scenario": "Imported final delivery",
+      "kind": "source-identical-actual-installed-native-reuse",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-installed-gui-v1-media/installed-shallow.jpg",
+          "sha256": "6138c0922d67c152e33c9cb55ecf61e353493cd943a2241379c84ae9223a8ead"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-delivery-http-v1/index.json",
+        "docs/verification/next-plan/U07/u07-installed-gui-v1/index.json"
+      ],
+      "limitation": "Actual local export/import and runtime namespace are verified. This is not a new remote CI artifact or publication."
+    },
+    {
+      "lane": 10,
+      "scenario": "Matched competitor records",
+      "kind": "read-only-frozen-record-inspection",
+      "images": [
+        {
+          "path": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1-media/matched-records.jpg",
+          "sha256": "1c8464d9d36baaf1fb280c552bdaaf6c738933b403c3e2001f79364a737d2df4"
+        }
+      ],
+      "evidence": [
+        "docs/verification/next-plan/U07/u07-final-report-v1/index.json",
+        "docs/verification/next-plan/U07/u07-final-browser-v1/index.json"
+      ],
+      "limitation": "Exact-return and anytime contracts stay distinct. Failed promotion gates and missing answers remain visible."
+    }
+  ],
+  "lanesAccounted": 10,
+  "allLanesFresh": false,
+  "allProposedTiersPromoted": false,
+  "largerExactTierSelected": false,
+  "shippedGuiTierSelector": false,
+  "performanceAcceptance": false,
+  "formalOptimality": false,
+  "independentReview": false,
+  "operatorReview": false,
+  "rawBrowserEvidence": "/home/yuzy/rubend/docs/verification/next-plan/U07/u07-final-browser-v1/index.json",
+  "fileVerification": "/home/yuzy/rubend/build/evidence/u07-final-download-v1-live-verification.json",
+  "reviewMedia": "/home/yuzy/rubend/docs/verification/next-plan/U06/review-video-v3-indexed/index.json"
+}

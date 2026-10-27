@@ -1,5 +1,31 @@
 # Advanced exact-search profile: bounded experiments
 
+## Final selected status, October 27
+
+The [frozen comparison](../verification/next-plan/U07/COMPARATIVE-RESULTS.md)
+retains the delivered default and preserved optional controls. It does not
+promote a new default, GUI tier selector or larger exact tier. Existing optional
+profiles have prior native exact known-case smoke evidence. The final H0 and
+inverse holdout controls use fast/improvement contracts, not a newly measured
+larger exact contract. The same delivered default binary has a separately
+reported exact-request contract.
+
+| Configuration | Warm initialization median ms | Whole-job charged peak median MiB | Idle ready PSS median MiB |
+| --- | ---: | ---: | ---: |
+| Delivered default | 283.121 | 171.926 | 62.687 |
+| Preserved small | 377.016 | 143.820 | 34.720 |
+| Preserved H0 | 1,924.333 | 2,223.754 | 2,111.917 |
+
+These are five-cohort timing-job measurements under a four-GiB cap, not unique
+physical-memory peaks or native-only CPU figures. PSS is an idle snapshot.
+All 320 process-cold H0 and inverse requests exhaust their one-second budget
+before readiness. The frozen noise/work gate is inconclusive, so warm first-
+answer observations do not establish a general speedup or justify promotion.
+Reuse the source-bound binaries, caches and evidence. No rebuild is needed.
+
+The remainder preserves the earlier rationale, probes and optional build recipe.
+Those historical observations do not replace the final report's scopes or gates.
+
 Yuzy approved the envelope below on 2026-10-17 with “Yes. Keep working.”
 Approval covers local experiments within these limits, not publication or
 system changes. The earlier probe below remains a historical measurement.

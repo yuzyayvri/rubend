@@ -1,9 +1,10 @@
-# Roadmap evidence and remaining work
+# Roadmap evidence and final dispositions
 
-Reconciled October 26, 2026, Asia/Manila, after signed checkpoint `966d1d3`.
-The entire roadmap is not complete. This record separates actual unfinished
-work from measured negative or inconclusive treatments. It does not mark an
-unchecked test, proof, performance target or review passed.
+Reconciled October 27, 2026, Asia/Manila. Final source/history audit is pending.
+The experiment, comparative report and application evidence now have recorded
+outcomes. This record separates accepted work from rejected, unselected and
+inconclusive treatments. It does not mark an unmet performance target, open
+formal bridge or unperformed review passed.
 
 The controlling plan is [NEXT-IMPLEMENTATION-PLAN.md](../../architecture/NEXT-IMPLEMENTATION-PLAN.md).
 U07 explicitly depends on U00 through U06 dispositions, not on every optimization
@@ -15,11 +16,11 @@ called approved-deferred to avoid difficult work.
 
 ## Unit disposition matrix
 
-| Unit and obligation | Current evidence and disposition | Remaining useful work |
+| Unit and obligation | Current evidence and disposition | Final boundary |
 | --- | --- | --- |
-| U00 source, history, profile inventory and scorecards | [Control inventory, same-binary runs, ten live lanes and profile receipts](U00/README.md) exist. Original source/table identities are preserved. | Final source and selected controls must be reconciled again in U07. |
+| U00 source, history, profile inventory and scorecards | [Control inventory, same-binary runs, ten live lanes and profile receipts](U00/README.md) exist. Original source/table identities are preserved. | The U07 freeze and report reconcile final source and selected controls. History is checked in the last bounded audit. |
 | U00 stable timing and causal attribution | [Whole-command CPU observer](U00/CPU-OBSERVER.md), [helper A/A diagnostic](U00/NATIVE-AA-CPU.md), [process clock](U00/PROCESS-CPU-CLOCK.md) and [native windows](U00/NATIVE-CPU-WINDOWS.md) are verified. Historical mapper/browser noise is not explained; short warm windows remain unresolved. | Retain inconclusive historical verdicts. Final comparisons need their own frozen noise gates. No unchanged rerun to clear an old gate. |
-| U01 browser and installed CI delivery | [Profile/package/lifecycle matrix](U01/README.md), redesign regression and installed redesigned package are verified. [Actual clipboard and physical download](U01/FILE-BACKED-ACCEPTANCE.md) now close the last named observation gap. | U07 must check the final delivered source. Current source has the later demand-rendering change, so the older CI package is not its final package receipt. |
+| U01 browser and installed CI delivery | [Profile/package/lifecycle matrix](U01/README.md), redesign regression and installed redesigned package are verified. [Actual clipboard and physical download](U01/FILE-BACKED-ACCEPTANCE.md) close their named gap. | U07 checks the later final source through original local Nix build, actual export/import and installed HTTP/browser evidence. The older CI receipt is not substituted for that package. |
 | U01 interaction review | Screenshots and [three sampled videos](U06/REVIEW-VIDEOS.md) are retained. | Operator review remains a before-merge gate, not supplied by solo execution. No merge or push is authorized. |
 | U02 subgroup final/first exclusions | [Independent four-ply DAG](U02/README.md), NP01–NP03, packed inverse/replay/admission components pass their stated guards. The [private forward candidate](U02/FORWARD-NATIVE.md) now passes 8,056 finite native requests, all 3,758 shallow optima per active side, 8,040 independent answer replays and four normal owner/IPC cleanups. No production inference is enabled. | [Equal-contour cost](U02/FORWARD-COST-RESULT.md) completes twenty owners and 20,480 requests but a 5.091448% duplicate exceeds the frozen 5% gate. The disposition is inconclusive and private. Do not rerun unchanged for luck or promote. Concrete target/data bridges remain open for this unselected candidate. Inverse first-move masking stays separate and disabled. |
 | U02 retained rotated coordinates | [Actual source-isolated search](U02/CACHED-AXIS-SEARCH.md) matches states/work; [cost](U02/CACHED-AXIS-COST.md) and [development noise](U02/DEVELOPMENT-CONTROL-NOISE.md) keep performance inconclusive. | Keep private and unpromoted. No winning default or accepted general speedup. |
@@ -34,10 +35,10 @@ called approved-deferred to avoid difficult work.
 | U05 partition accounting and workers | [Finite partitions](U05/PARTITION-PREFLIGHT.md), [ledger](U05/LEDGER-PREFLIGHT.md), [native workers](U05/PARTITION-WORKER.md), [coordinator recovery](U05/PARTITION-POOL.md) and conditional NP07 pass their stated guards. Missing/failed work cannot commit a contour. | Runtime finite correctness is not a universal optimized coverage/exhaustion theorem. Keep those proof gaps explicit. |
 | U05 scaling | [Five alternating cohorts](U05/PARTITION-SCALING.md) preserve 22,480 measured results. One duplicate pair has 8.23% noise, above 5%. Private initialization dominates diagnostic stages. | Inconclusive scaling; retain serial. No accepted multicore gain or quantified slowdown. Do not rerun unchanged for luck. |
 | U06 bounded reference and optimized refinement | [Complete bounded reference](U06/BOUNDED-REFERENCE.md), [positive solved reflection](U06/SEARCH-GOAL-REFLECTION.md) and [seven-gap inventory](U06/REFINEMENT-GAPS.md) pass their actual guards. | Full optimized completeness, loaded-data and coverage implications remain unproved. The plan allows exact gap identification and forbids the stronger application label until all bridges hold. Keep it disabled. |
-| U06 rendering | [Demand rendering](U06/DEMAND-RENDERING.md) reduces submitted idle work on a valid rendering surface. [Mesh retention](U06/MESH-RETENTION-COMPARISON.md) remains private/inconclusive, not bundled into that accepted change. Actual rebuilt-app recovery, replay and cleanup pass. | U07 final app/package check and operator before-merge review remain. No native strength or general CPU/GPU claim follows from idle frames. |
-| U07 final research and comparison | [Reference calibration](U07/REFERENCE-CALIBRATION.md), [record contracts](U07/COMPARISON-RECORDS.md), [cold lifecycle](U07/COLD-LIFECYCLE.md) and [exploratory pilot](U07/COLD-PILOT.md) exist. These are not the requested final benchmark. | Research and locally set up meaningful additional solvers from primary upstream sources. Freeze all revisions/configs/licenses before opening untouched cases. Then complete matched repeated comparisons, every-answer replay, full final regression/package checks, numerical Pareto report and chat delivery. |
+| U06 rendering | [Demand rendering](U06/DEMAND-RENDERING.md) reduces submitted idle work on a valid rendering surface. [Mesh retention](U06/MESH-RETENTION-COMPARISON.md) remains private/inconclusive, not bundled into that accepted change. Actual rebuilt-app recovery, replay and cleanup pass. | U07 checks the final package and application evidence. Operator before-merge review remains. No native strength or general CPU/GPU claim follows from idle frames. |
+| U07 final research and comparison | [Primary-source solver setup](U07/COMPARATIVE-RESULTS.md), pinned builds/notices, the unchanged freeze, all 57,678 attempts and the verified numerical report are saved and delivered. The [application matrix](U07/FINAL-APPLICATION.md) identifies reused native checks, stored-record UI replay and actual file export. | The frozen performance verdict is inconclusive and the 10x to 100x objective is unmet. No new larger exact tier or default is promoted. Final source/history/evidence audit remains before scheduled-workflow closure. |
 
-## Exit still open
+## Outcome and remaining boundaries
 
 The U02 native forward-coverage treatment now has a verified finite guard and
 an inconclusive scored cost disposition under the unchanged gate. It stays
@@ -57,15 +58,25 @@ Source-identical prior proof, failure, renderer, clipboard and download evidence
 is reused within its stated boundaries. No final solver holdout evaluation
 occurs in these integration checks.
 
-Now perform the requested additional-solver research/setup and coordinate the
-final evaluation with U07. Freeze Rubend and competitors before opening untouched
-cases. Do not duplicate the final holdout or tune on it. Reuse source-identical
-passing evidence; the final integration suite and delivery must describe the
-actual selected source. Keep exact and anytime contracts, first/best answers,
-censored optimality completion, initialization, CPU and aggregate memory distinct.
+The requested additional-solver setup and single coordinated final comparison
+are now recorded. Four external solver families and ten configurations are
+pinned before release access. All 23 fixed measurement groups are canonically
+archived. Every answer replays again in the report. All 49 adapter failures stay
+in denominators. No failed or noisy measurement is repeated. The final report
+keeps exact/anytime contracts, first/best answers, censored completion,
+initialization, CPU and distinct memory scopes separate.
 
-Only after the entire roadmap and reproducible comparative numerical report are
-complete and delivered, delete `continue-rubend-roadmap`. The original 10x to
-100x target remains unachieved. Independent review is not run under the solo
-restriction. No push, merge, release or deployment is authorized. Yuzy reviews
-the report before deciding on any later push to main.
+The final application matrix accounts for ten lanes without calling all of them
+fresh native execution. It supplements source-identical installed checks with
+labeled stored-event replay, a read-only record view and an actual downloaded
+release-answer file. No larger exact tier was selected before freeze. Prior H0
+exact smoke and final H0 fast-control measurements are not relabeled as a new
+larger exact benchmark. The checked larger-tier promotion gate stays closed.
+
+The last bounded audit must bind sources, report outputs, law/regression reuse,
+package, screenshots, file restoration, cleanup and signed subject-only history.
+After it is canonically verified and the checked final handoff is delivered,
+delete only `continue-rubend-roadmap`. Completion of this investigation is not a
+stronger-solver claim. The original 10x to 100x target remains unachieved.
+Independent review is not run under the solo restriction. Operator review and
+any push, merge, release or deployment remain separate later decisions.

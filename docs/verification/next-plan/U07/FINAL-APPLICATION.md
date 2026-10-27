@@ -1,9 +1,10 @@
 # Final application acceptance
 
-Status is preparation, not passed browser acceptance. The numerical report is
-verified and delivered. The October 24 completion/report/no-push order remains
-binding before this last application unit. No frozen source or selected
-configuration changes. No holdout solver attempt repeats.
+Stored-event browser acceptance now passes canonical verification. Final source,
+history and evidence audit remains pending. The numerical report is verified
+and delivered. The October 24 completion/report/no-push order remains binding.
+No frozen source or selected configuration changes. No holdout solver attempt
+repeats. Not every lane is fresh native execution or a promoted feature.
 
 ## Existing ownership
 
@@ -93,4 +94,73 @@ worker gone and no resource stop. Four records, seven frozen web files and all
 packaged frontend bytes, injects a visible replay-provenance banner and replays
 only admitted input/mode/budget requests. It has no native backend. Local checks
 verify all asset bytes, eight refusals, completed and cancelled streams, and
-normal cleanup. Actual browser observations still remain.
+normal cleanup. Actual browser observations still remain at that checkpoint.
+
+## Verified browser result
+
+The [post-live canonical archive](u07-final-browser-v1/index.json) verifies
+5,157 seals and two receipts, worker gone and no resource stop. Seven required
+observations pass seven independent state/solution replay checks. There are eight
+saved snapshots including the additional provenance view. All seven admitted web
+files retain their frozen bytes. HTTP controls reject eight invalid requests and
+verify completed/cancelled stream cleanup. The server has no native backend.
+
+The hard stored observation retains interval zero through nineteen HTM after its
+original one-second timeout. Playback reaches solved at step nineteen. Export
+retains the original input, nineteen checked moves, lower zero and no optimal
+claim. The exact known case retains four through four with its empirical search-
+established label, not a universal certificate. Small and H0 controls retain
+their original actor provenance. A read-only comparison view shows matched HTM,
+coverage, contracts, errors, limits and the failed performance gate.
+
+The browser download-event API does not observe the first Blob download. That
+attempt stays unverified. The subsequent [file-backed check](../../../issues/final-browser-download-event.md)
+observes an actual 547-byte browser-created file equal to the displayed release
+JSON. Both Bend and geometry independently replay it. The pre-existing download
+is restored exactly, with no private backup retained. All 5,146 live source seals,
+receipt fields, owner cleanup and tab cleanup pass before tracked edits. This
+is new physical-file evidence for a stored answer, not a new solver execution.
+
+## Ten-lane matrix
+
+The [machine-readable matrix](FINAL-APPLICATION-MATRIX.json) binds fifteen source
+image paths and explicitly identifies evidence kind and limitations. Images are
+actual JPEG captures, not files renamed to PNG. Source-identical native tests and
+earlier review clips are reused within their stated scope. Current stored-event
+checks supplement them and do not turn a replay into a fresh native run.
+
+| Lane | Evidence | Boundary |
+| --- | --- | --- |
+| 1. Regression and installed solve | [Installed solve](u07-installed-gui-v1-media/installed-shallow.jpg), [regression](u07-regression-v1/index.json). | Actual installed/native evidence reused. No fresh trunk timing claim. |
+| 2. Known optimum | [Installed export](u07-installed-gui-v1-media/installed-export.jpg), [stored exact result](u07-final-browser-v1-media/known-exact.jpg). | Four through four, search-established and replay checked. No universal formal certificate. |
+| 3. Hard censored result | [Incumbent](u07-final-browser-v1-media/hard-censored.jpg), [visible provenance](final-application-media/hard-provenance.jpg). | Stored original timeout, interval zero through nineteen. Fixture terminal projection is explicit. |
+| 4. Low-memory control | [Small control](u07-final-browser-v1-media/small-control.jpg), [actual prior profile checks](../U00/u00-browser-profiles-v1/index.json), [final resources](COMPARATIVE-RESULTS.md). | Measured preserved profile and prior native smoke, current UI record replay. No newly shipped selector. |
+| 5. Larger exact tier | [Actual prior H0 smoke](../U00/u00-browser-profiles-v1/h0-shallow.jpg), [stored H0 fast control](u07-final-browser-v1-media/h0-control.jpg). | No new larger exact tier selected or promoted. Final H0 holdout contract is fast/improvement, not a larger exact benchmark. |
+| 6. Failures and cancellation | [Cancelled](u07-installed-gui-v1-media/head-cancelled.jpg), [resubmitted](u07-installed-gui-v1-media/head-resubmitted.jpg), [worker failure](../U00/u00-browser-profiles-v1/worker-failure-responsive.jpg). | Actual source-identical installed/native and fixture-failure checks reused. |
+| 7. Release playback/export | [Solved playback](u07-final-browser-v1-media/release-playback.jpg), [physical-file export](final-application-media/release-file-export.jpg). | Stored answer, independently replayed actual downloaded bytes. No repeated holdout solve. |
+| 8. Narrow, fallback, reduced motion | [Narrow layout](u07-installed-gui-v1-media/narrow-layout.jpg), [sampled fallback clip](../U06/review-video-v3-indexed/fallback.mp4). | Functional evidence and stored reduced-motion playback, not browser performance or operator approval. |
+| 9. Final delivery | [Installed application](u07-installed-gui-v1-media/installed-shallow.jpg), [actual delivery](u07-delivery-http-v1/index.json). | Local Nix export/import and confined runtime, not a new remote CI artifact. |
+| 10. Matched records | [Frozen record inspection](u07-final-browser-v1-media/matched-records.jpg), [numerical report](COMPARATIVE-RESULTS.md). | Exact/anytime distinctions, failures and inconclusive gates remain explicit. |
+
+The [three sampled review clips](../U06/REVIEW-VIDEOS.md) remain available for
+operator review. They are not real-time capture or frame-cadence benchmarks.
+Operator review and independent review are not supplied by this solo execution.
+The before-merge review gate remains closed.
+
+## Reproduction
+
+Use the admitted `u07-final-app-data-v2/records.json` artifact with the unchanged
+`bench/u07-final-replay-server.mjs` under the resource runner. Its four visible
+links select only captured records. Apply the displayed facelets, choose the
+recorded mode and one-second budget, then press Solve. The banner identifies
+the original slot, status, contract and configuration. Ordinary playback and
+export controls exercise the packaged frontend. The exact record needs Exact
+mode. The matched-record link is read-only.
+
+Keep the preview hidden and use no DOM-state injection. Read diagnostics through
+the observer output only. For physical-file verification, reuse the existing
+exact-byte filesystem observer, preserve the pre-existing path, and require it
+absent before clicking Download. Never substitute writing expected bytes for
+observing the browser-created file. Close owned tabs and stop the server normally.
+The final audit preserves the live plans, controller source, file witness,
+source identities, screenshots, resource receipts and cleanup records.
